@@ -1,0 +1,21 @@
+---
+width: 512px
+height: 512px
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <link href='<%= baseUrl %>/templates/social-media/stylesheets/main.css' rel='stylesheet'>
+  </head>
+  <body class='{{ background-theme }} {{ avatar-option }}' style='width: 512px; height: 512px'>
+    <div class='text-content'>
+      {{{ message }}}
+    </div>
+    <div class='logo-content'>
+      <% include ../shared/logos/rh-logo-no-fill.svg %>
+    </div>
+  </body>
+</html>

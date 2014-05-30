@@ -1,0 +1,4 @@
+.DS_Store
+.awspublish-red-hat-assets
+node_modules
+build

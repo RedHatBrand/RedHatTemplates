@@ -1,0 +1,32 @@
+@import 'base_color_palette';
+
+$flat-color-themes:       "rh-color-theme-white-red" $color-white $color-rh-red 'negative',
+                          "rh-color-theme-red-white" $color-rh-red $color-white 'positive',
+                          "rh-color-theme-white-red-dark" $color-white  $color-rh-red-dark 'negative',
+                          "rh-color-theme-red-light-grey" $color-rh-red $color-rh-grey-light 'positive',
+                          "rh-color-theme-light-grey-red" $color-rh-grey-light $color-rh-red 'positive',
+                          "rh-color-theme-white-black" $color-white $color-black 'positive',
+                          "rh-color-theme-red-grey-lighter" $color-rh-red $color-grey-lighter 'positive',
+                          "rh-color-theme-red-grey-dark" $color-rh-red $color-grey-dark 'positive';
+
+@each $flat-theme in $flat-color-themes {
+  .#{nth($flat-theme, 1)} {
+    color:                nth($flat-theme, 2);
+    fill:                 nth($flat-theme, 2);
+    background-color:     nth($flat-theme, 3);
+
+    @if nth($flat-theme, 4) == 'negative' {
+      #hat { fill: $color-rh-red; }
+      #shadowman-face { fill: $color-white; }
+      #background { fill: $color-black; }
+      #registered,
+      #text { fill: $color-white; }
+    } @else {
+      #hat { fill: $color-rh-red; }
+      #shadowman-face { fill: $color-white; }
+      #background { fill: $color-black; }
+      #registered,
+      #text { fill: $color-black; }
+    }
+  }
+}

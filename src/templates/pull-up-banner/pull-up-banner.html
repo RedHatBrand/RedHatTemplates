@@ -1,0 +1,35 @@
+---
+width: 600mm
+height: 1500mm
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <link href='<%= baseUrl %>/templates/pull-up-banner/stylesheets/main.css' rel='stylesheet'>
+  </head>
+  <body class='rh-theme-{{ category }}' style='width: {{ width }}mm; height: {{ height }}mm'>
+    <div class='brand'>
+      <% include ../shared/backgrounds/brand.svg %>
+    </div>
+    <div class='campaign'>
+      <% include ../shared/backgrounds/campaign.svg %>
+    </div>
+
+    <div class='title'>
+      <h1>{{ title }}</h1>
+      <h2>{{ final-line-title }}</h2>
+    </div>
+    <div class='long-copy'>
+      {{{ long-copy }}}
+    </div>
+    <div class='cta'>
+      <h3>{{ sub-title }}</h3>
+    </div>
+    <div class='rh-logos'>
+      <% include ../shared/logos/rh-logo.svg %>
+    </div>
+  </body>
+</html>

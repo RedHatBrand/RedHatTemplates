@@ -1,0 +1,170 @@
+@import '../../../global-assets/scss/fonts/overpass';
+@import '../../../global-assets/scss/colors/flat_color_themes';
+
+$directions:  'top' 'right',
+              'bottom' 'right',
+              'top' 'left',
+              'bottom' 'left';
+
+$color: #444;
+
+body {
+  @extend %canvas;
+  margin: 0;
+  font-family: 'Overpass', 'Interstate', sans-serif;
+  overflow: hidden;
+  font-size: 16px;
+  line-height: 1.25em;
+  text-align: center;
+  box-sizing: border-box;
+  color: $color-white;
+  fill: $color-white;
+  background: white;
+}
+
+.brand,
+.campaign {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index:-1;
+}
+.brand,
+.campaign { display: none }
+.rh-theme-brand .brand { display: block; }
+.rh-theme-campaign .campaign { display: block; }
+
+h1 {
+  line-height: 1.2em;
+}
+
+.primary-content {
+  position: relative;
+  overflow: hidden;
+
+  width: 70.7070707%;
+  height: 100%;
+}
+
+.content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  h1 {
+    margin-bottom: 0;
+    font-size: 2.5em;
+    font-weight: 400;
+  }
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.bg-image-color {
+  background: $color;
+}
+
+.bg-image-shape {
+  opacity: .5;
+}
+
+.rh-logo {
+  height: 30%;
+  width: 70%;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.product-logo {
+  height: 30%;
+  width: 70%;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.corner-logo {
+  position: absolute;
+  bottom: 2.5%;
+  right: 5%;
+  width: 25%;
+  height: 25%;
+}
+
+// Direction Arrow
+
+.direction {
+  position: absolute;
+  box-sizing: border-box;
+  border-color: $color;
+  border-width: 5mm;
+
+  margin: 15% 13.666%;
+  height: 13.666%;
+  width: 10%;
+}
+
+@each $direction in $directions {
+
+  .direction-#{nth($direction, 1)}-#{nth($direction, 2)} {
+    .direction {
+      #{nth($direction, 1)}: 0;
+      #{nth($direction, 2)}: 0;
+      border-#{nth($direction, 1)}-style: solid;
+      border-#{nth($direction, 2)}-style: solid;
+    }
+  }
+}
+
+.direction-bottom-left,
+.direction-middle-left,
+.direction-top-left {
+  .primary-content {
+    left: 30%;
+  }
+}
+
+.direction-middle-left .direction,
+.direction-middle-right .direction {
+  top: 22%;
+}
+
+
+.direction-middle-left .direction  {
+  left: 0;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  transform: rotate(135deg);
+}
+
+.direction-middle-right .direction {
+  right: 0;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  transform: rotate(-45deg);
+}
+
+
+.direction-top-right .direction:before {
+  transform: rotate(-45deg);
+  top: 0;
+  bottom: auto;
+  margin: -5mm;
+  left: -25%;
+}

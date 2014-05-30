@@ -1,0 +1,41 @@
+---
+height: 327mm
+width: 450mm
+---
+
+<!DOCTYPE html>
+<html style='height:{{#add}}{{height}}+{{#multiply}}{{bleed}}*4{{/multiply}}{{/add}}mm; width:{{#add}}{{width}}+{{#multiply}}{{bleed}}*4{{/multiply}}{{/add}}mm; padding: {{bleed}}mm'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <link href='<%= baseUrl %>/templates/poster/stylesheets/main.css' rel='stylesheet'>
+  </head>
+  <body class='rh-theme-{{ category }}' style='height:{{#add}}{{height}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm; width:{{#add}}{{width}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm; padding: {{bleed}}mm'>
+    <div class='brand'>
+      <% include ../shared/backgrounds/brand.svg %>
+    </div>
+    <div class='campaign'>
+      <% include ../shared/backgrounds/campaign.svg %>
+    </div>
+    <div class='title'>
+      <h1>{{ title }}</h1>
+    </div>
+    <div class='cta'>
+      <h2>{{ sub-title }}</h2>
+    </div>
+    <div class='long-copy'>
+      {{{ long-copy }}}
+    </div>
+    <div class='rh-logos'>
+      <% include ../shared/logos/rh-logo.svg %>
+    </div>
+    <div class='crop-mark top-left'></div>
+    <div class='crop-mark top-right'></div>
+    <div class='crop-mark bottom-left'></div>
+    <div class='crop-mark bottom-right'></div>
+
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/FitText.js/1.1/jquery.fittext.min.js'></script>
+    <script src='<%= baseUrl %>/templates/poster/javascripts/main.js'></script>
+  </body>
+</html>

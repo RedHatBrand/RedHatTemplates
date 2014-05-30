@@ -1,0 +1,36 @@
+---
+width: 240px
+height: 400px
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <link href='<%= baseUrl %>/templates/web-advertisement/stylesheets/main.css' rel='stylesheet'>
+  </head>
+  <body class='size-240-400 rh-theme-{{ category }}' style='width: 240px; height: 400px'>
+    <div class='brand'>
+      <% include ../shared/backgrounds/brand.svg %>
+    </div>
+    <div class='campaign'>
+      <% include ../shared/backgrounds/campaign.svg %>
+    </div>
+    <main class='outer-wrapper'>
+      <div class='branding'>
+        <div class='rh-logo'>
+          <% include ../shared/logos/rh-logo.svg %>
+        </div>
+      </div>
+      <div class='text-wrapper'>
+        <div class='text'>
+          {{{ long-message }}}
+          <div class='call-to-action'>
+            {{ call-to-action }}
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+---
+width: 100%
+height: 100vh
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <link href='<%= baseUrl %>/templates/email/stylesheets/main.css' rel='stylesheet'>
+  </head>
+  <body class='rh-theme-{{ category }}'>
+    <table align='center' cellpadding='0' cellspacing='0' class='container' width='100%'>
+      <tr>
+        <td>
+          <table align='center' style="margin: 0 auto" cellpadding='0' cellspacing='0' class='main' height='1000px' width='600px'>
+            <thead>
+              <tr>
+                <td colspan='2'>
+                  <div class='brand'>
+                    <% include ../shared/backgrounds/brand.svg %>
+                  </div>
+                  <div class='campaign'>
+                    <% include ../shared/backgrounds/brand.svg %>
+                  </div>
+                  <h1>{{ title }}</h1>
+                  <% include ../shared/logos/rh-logo.svg %>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class='divider'>
+                <td colspan='2'>
+                  {{{ sub-title }}}
+                </td>
+              </tr>
+              <tr>
+                <td class='column'>
+                  <div class='long-copy'>
+                    {{{ column-1 }}}
+                  </div>
+                </td>
+                <td class='column'>
+                  <div class='long-copy'>
+                    {{{ column-2 }}}
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td class='footer' colspan='2'>
+                  <div class='links'>
+                    {{ #footer-link }}
+                    <a href='{{{ url }}}'>{{text}}</a>
+                    {{/ footer-link }}
+                  </div>
+                  <div class='first-footer'>
+                    {{{ first-footer }}}
+                  </div>
+                  <div class='second-footer'>
+                    {{{ second-footer }}}
+                  </div>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

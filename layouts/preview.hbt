@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{title}}</title>
+  <style>
+    body { margin: 0; }
+    article {
+      padding: 0.5em;
+    }
+    .preview {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0.5em;
+    }
+    .preview-frame { border: 0; }
+  </style>
+</head>
+  <body>
+    <article>
+      {{#each this.siblings}}
+      <div class='preview' style='height: {{ this.height }}; width: {{ this.width  }}'>
+        <iframe class='preview-frame' data-xml-url="{{this.url}}" height='100%' width='100%'></iframe>
+      </div>
+      {{/each}}
+      <div id="data" data-template-data="{{ json data }}"></div>
+    </article>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script src="/global-assets/javascripts/previews.js" type="text/javascript"></script>
+  </body>
+</html>

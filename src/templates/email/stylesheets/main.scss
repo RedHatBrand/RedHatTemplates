@@ -1,0 +1,191 @@
+@import '../../../global-assets/scss/reset';
+@import '../../../global-assets/scss/fonts/overpass';
+@import '../../../global-assets/scss/colors/base_color_palette';
+
+body {
+  font-family:'Overpass', 'Interstate', sans-serif;
+}
+
+
+a {
+  text-decoration: none;
+  color:$color-rh-red;
+  font-weight:bolder;
+
+  }
+
+a:hover {
+  color:$color-rh-red-dark;
+  }
+
+strong {
+  font-weight:bold;
+  color:$color-rh-red;
+  text-transform:uppercase;
+
+
+}
+
+
+
+
+/*--------DIVS-----------------*/
+
+table.container {
+  td {
+    padding:0;
+    position: relative;
+  }
+
+}
+
+table.main {
+  background-color:$color-grey-dark;
+  border-collapse:collapse;
+  -moz-box-shadow:    0 0 3px 0 $color-grey-dark;
+  -webkit-box-shadow: 0 0 3px 0 $color-grey-dark;
+  box-shadow:         0 0 3px 0 $color-grey-dark;
+}
+
+thead {
+  text-align:center;
+
+    tr {
+      height:250px;
+
+          td {
+            padding:0;
+
+            .brand,
+            .campaign {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+
+                svg {
+                  width:100%;
+                  height:250px;
+                  z-index:0;
+                }
+
+            }
+
+            .brand,
+            .campaign { display: none }
+
+
+
+            h1 {
+              color:white;
+              text-transform:uppercase;
+              font-size:60px;
+              line-height:0.9em;
+              text-align:center;
+              padding:30px 20px 20px 20px;
+              font-weight:bold;
+              position: relative;
+              z-index: 1;
+            }
+
+            svg {
+                    width:110px;
+                    height:35px;
+                    float:right;
+                    vertical-align:bottom;
+
+                  }
+
+
+            }
+          }
+
+
+
+}
+
+.rh-theme-brand .brand { display: block; }
+.rh-theme-campaign .campaign { display: block; }
+
+tr.divider {
+  background-color:$color-grey-dark;
+
+    td {
+      height:80px;
+      color:white;
+      font-weight:300;
+      letter-spacing:0.18em;
+      font-size:16px;
+      text-align:center;
+      text-transform:uppercase;
+      vertical-align:middle;
+      z-index:10;
+    }
+}
+
+tbody {
+
+    td.column {
+      width:50%;
+      color:white;
+      line-height:1.6em;
+      letter-spacing:0.02em;
+      font-weight: 300;
+      vertical-align:top;
+      padding:10px 20px 20px 20px;
+      font-size:15px;
+
+    }
+
+    img {
+    max-width:90%;
+    }
+
+}
+
+
+tfoot {
+  background:url("../images/svg/svg-backgrounds/background-red03.svg") no-repeat center;
+  background-size:cover;
+  color:white;
+  text-align:center;
+  line-height:1.5em;
+
+    tr {
+      height:170px;
+
+      td.footer {
+        padding:20px;
+        font-size:12px;
+
+            .links {
+              font-weight:bolder;
+              letter-spacing:0.05em;
+              font-size:14px;
+              }
+
+                a {
+                  text-decoration: none;
+                  color:white;
+                  }
+
+                a:hover {
+                  color:$color-grey-lighter;
+                  }
+
+
+
+            .first-footer {
+              padding-top:10px;
+              font-weight: 300;
+            }
+
+            .second-footer {
+              padding-top:10px;
+              font-weight: 300;
+            }
+        }
+    }
+
+}
