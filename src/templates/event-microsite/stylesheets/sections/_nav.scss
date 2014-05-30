@@ -1,0 +1,103 @@
+.nav-toggle { display: none; }
+
+.nav-menu {
+  background: white;
+  position: fixed;
+
+  .container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  li {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+
+    a {
+      padding: 1.5em .5em;
+      text-transform: uppercase;
+      display: block;
+      color: $gray;
+      font-weight: 700;
+      font-size: .85em;
+
+      &:hover { color: $color-primary; }
+
+      &.active { background-color: $color-primary; color:white; }
+    }
+
+    ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      z-index: 10;
+
+      li {
+        display: block;
+
+        a {
+          text-transform: none;
+        }
+      }
+    }
+  }
+}
+
+.nav-menu,
+.nav-toggle {
+  transition: all 0.3s ease;
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .nav-menu {
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 .3em .2em -.3em rgba($black, 0.3);
+  }
+}
+
+
+@media screen and (max-width: $breakpoint-medium) {
+  .nav-menu { position: fixed; }
+  .nav-toggle {
+    display: block;
+    background-color: transparent;
+    &.active { background-color: rgba($white, 0.5); }
+    &:hover {
+      background-color: rgba($white, 0.75);
+    }
+  }
+  .nav-toggle-overlay {
+    @include animatableHide;
+    width: 100%;
+    height: 100%;
+    background: rgba(black, .5);
+    opacity: 0;
+    transition: opacity .5s ease;
+  }
+
+  .menu-push-toright {
+    overflow: hidden;
+
+    .nav-toggle-overlay {
+      top: 0;
+      left: 0;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .menu-push-toright .nav-toggle {
+    left: $vertical-nav-width;
+
+    @media screen and (max-width: $breakpoint-small) {
+      left: 100%;
+      margin-left: -3.5em;
+    }
+  }
+}

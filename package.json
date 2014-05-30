@@ -24,6 +24,7 @@
     "metalsmith": "~0.8.0",
     "metalsmith-autoprefixer": "^0.1.2",
     "metalsmith-collections": "~0.4.1",
+    "metalsmith-ignore": "^0.1.2",
     "metalsmith-sass": "~0.1.1",
     "metalsmith-templates": "~0.5.0",
     "metalsmith-watch": "~0.1.1",

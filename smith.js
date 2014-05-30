@@ -1,4 +1,5 @@
 var MetalSmith         = require('metalsmith'),
+    ignore             = require('metalsmith-ignore'),
     collection         = require('metalsmith-collections'),
     templates          = require('metalsmith-templates'),
     sass               = require('metalsmith-sass'),
@@ -52,6 +53,7 @@ MetalSmith(__dirname)
   .use(collection({
     templates: 'templates/**/index.html'
   }))
+  .use(ignore('**/_*.scss'))
   .use(sass())
   .use(autoprefixer())
   .use(templates({

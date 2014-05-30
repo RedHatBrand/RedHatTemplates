@@ -1,0 +1,93 @@
+.header {
+
+  .container {
+    position: relative;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  .event-logo {
+    position: absolute;
+    top: 8em;
+    right: 0;
+    width: 40%;
+    max-width: 24em;
+
+    @media screen and (max-width: $breakpoint-medium) {
+      position: static;
+      width: auto;
+      margin-bottom: $line-height / 2;
+    }
+  }
+
+  .logo {
+    position: absolute;
+    bottom: $line-height * 2.5;
+    right: $gutter;
+    width: 140px;
+    height: 46px;
+    margin: 0.25em;
+    padding: 1.6em 2.5em;
+
+    img { margin: 0; }
+
+    &:hover {
+      background-color: rgba(255,255,255,.3);
+      overflow: visible;
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+      bottom: auto;
+      right: auto;
+      top: 0;
+      margin-top: 0;
+      padding-top: $line-height;
+      left: $gutter/2;
+      margin: 0;
+      padding: 1.6em $gutter;
+      &:hover {
+        background: rgba(darken($color-shade, 10%), 1);
+      }
+    }
+  }
+
+  .box {
+    top: $line-height * 1.8;
+    padding: 0;
+    a {
+      color: $white;
+      font-family: $font-family-input;
+      font-size: 1.2em;
+      padding: .5em;
+      display: block;
+      background-color: rgba(0,0,0,.3);
+      overflow: visible;
+
+      &:hover {
+        background-color: rgba(0,0,0,.7);
+      }
+    }
+    @media screen and (max-width: $breakpoint-small) {
+      right: $line-height;
+      a {
+        position: relative;
+        text-indent: 9999em;
+        width: $line-height; height: $line-height;
+        line-height: $line-height;
+        white-space: nowrap;
+        overflow: hidden;
+
+        &:before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          text-align: center;
+          width: $line-height; height: $line-height;
+          line-height: $line-height;
+          text-indent: 0;
+          margin: -($line-height / 2);
+        }
+      }
+    }
+  }
+}
