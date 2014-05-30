@@ -22,10 +22,12 @@ Then run
 gulp
 ```
 
-You should now have a ./build folder containing the built template and stylesheets
-You should also have a server on port 4000
+You should now have a ./build folder containing the built templates and stylesheets
 
-The default build env in development to build for produciton pass the flag
+You should also have a local server on port 4000
+
+
+The default build env is 'development' to build for produciton just pass the flag
 ```
 gulp build --type production
 ```
