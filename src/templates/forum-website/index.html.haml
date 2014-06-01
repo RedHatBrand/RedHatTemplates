@@ -1,19 +1,26 @@
 ---
 title: Forum Website
+template: preview.hbt
+data:
+  title: Example event title
+  hero-image: http://www.successfulworkplace.org/wp-content/uploads/2013/11/Chulture-change-is-a-bear.jpg
+  section:
+    -
+      name: Lorem
+      slug: lorem
+      content: <h1>Lorem</h1><p>Ipsum</p>
+    -
+      name: Ipsum
+      slug: ipsum
+      content: <h1>Ipsum</h1><p>Lorem</p>
+      section-theme: light-grey-background
+
+  total-days: 2
+  day:
+    -
+      day-name: Monday
+      time-table: <table><tr><th>Timing</th><th>Duration</th><th>Topic</th></tr><tr><td>08:00</td><td></td><td>Arrivals & Registration</td></tr></table>
+    -
+      day-name: Tuesday
+      time-table: <table><tr><th>Timing</th><th>Duration</th><th>Topic</th></tr><tr><td>08:00</td><td></td><td>Arrivals & Registration</td></tr></table>
 ---
-
-- for page in current_page.children
-  - template_data = { |
-    'title' => 'Put your custom title here', |
-    'sub-title' => 'Subtitle goes here Subtitle goes here subtitle', |
-    'long-copy' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet.</p>', |
-    'units' => 'px', |
-    'product' => 'RHEL', |
-    'group' => 'corporate', |
-    'category' => 'campaign', |
-    'image' => '/assets/images/photo/clouds-web.jpg', |
-    'partner-logo' => [{ logo: '<h1>Hey Hey</h1>' }] |
-    } |
-
-  .preview{ style: "width: #{page.data.width}; height: #{page.data.height}" }
-    %iframe.preview-frame{ width: '100%', height: '100%', data: { xml_url: page.url, template_data: template_data.to_json } }
