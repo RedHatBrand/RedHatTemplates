@@ -459,7 +459,7 @@ ul.inside{
 
 /* 44px height */
 
-
+/*
 .event .date.june_3 { background-position: -1.91em 0; }
 .event .date.june_4 { background-position: -1.91em -2.75em; }
 .event .date.june_5 { background-position: -1.91em 6.25em; }
@@ -475,10 +475,10 @@ ul.inside{
 .event .date.june_25 { background-position: -1.91em -33em; }
 
 
-.event .location .a { background-position: 0 1em; }
-.event .location .b { background-position: 0 -88px; }
-.event .location .c { background-position: 0 -132px; }
-.event .location .d { background-position: 0 -176px; }
+.event .location .a { background-position: 0 -1em; }
+.event .location .b { background-position: 0 -4.5em; }
+.event .location .c { background-position: 0 -6.75em; }
+.event .location .d { background-position: 0 -9em; }
 .event .location .e { background-position: 0 -220px; }
 .event .location .f { background-position: 0 -264px; }
 .event .location .g { background-position: 0 -308px; }
@@ -501,51 +501,52 @@ ul.inside{
 .event .location .x { background-position: 0 -1056px; }
 .event .location .y { background-position: 0 -1100px; }
 .event .location .z { background-position: 0 -1144px; }
-
+*/
 
 
 /* 36px height */
 
-.event .date.june_3 { background-position: -26px 0; }
-.event .date.june_4 { background-position: -26px -36px; }
-.event .date.june_5 { background-position: -26px -72px; }
-.event .date.june_10 { background-position: -26px -108px; }
-.event .date.june_11 { background-position: -26px -144px; }
-.event .date.june_12 { background-position: -26px -180px; }
-.event .date.june_16 { background-position: -26px -216px; }
-.event .date.june_17 { background-position: -26px -252px; }
-.event .date.june_18 { background-position: -26px -288px; }
-.event .date.june_19 { background-position: -26px -324px; }
-.event .date.june_23 { background-position: -26px -360px; }
-.event .date.june_24 { background-position: -26px -396px; }
-.event .date.june_25 { background-position: -26px -432px; }
+.event .date.june_3 { background-position: -1.91em -0.19em; }
+.event .date.june_4 { background-position: -1.91em -2.75em; }
+.event .date.june_5 { background-position: -1.91em -5.25em; }
+.event .date.june_10 { background-position: -1.91em -7.87em; }
+.event .date.june_11 { background-position: -1.91em -10.4em; }
+.event .date.june_12 { background-position: -1.91em -12.98em; }
+.event .date.june_16 { background-position: -1.91em -14em; }
+.event .date.june_17 { background-position: -1.91em -18.1em; }
+.event .date.june_18 { background-position: -1.91em -20.66em; }
+.event .date.june_19 { background-position: -1.91em -23.2em; }
+.event .date.june_23 { background-position: -1.91em -25.78em; }
+.event .date.june_24 { background-position: -1.91em -28.37em; }
+.event .date.june_25 { background-position: -1.91em -30.89em; }
 
-.event .location .a { background-position: 0 -36px; }
-.event .location .b { background-position: 0 -72px; }
-.event .location .c { background-position: 0 -108px; }
-.event .location .d { background-position: 0 -144px; }
-.event .location .e { background-position: 0 -180px; }
-.event .location .f { background-position: 0 -216px; }
-.event .location .g { background-position: 0 -252px; }
-.event .location .h { background-position: 0 -288px; }
-.event .location .i { background-position: 0 -324px; }
-.event .location .j { background-position: 0 -360px; }
-.event .location .k { background-position: 0 -396px; }
-.event .location .l { background-position: 0 -432px; }
-.event .location .m { background-position: 0 -468px; }
-.event .location .n { background-position: 0 -504px; }
-.event .location .o { background-position: 0 -540px; }
-.event .location .p { background-position: 0 -576px; }
-.event .location .q { background-position: 0 -612px; }
-.event .location .r { background-position: 0 -648px; }
-.event .location .s { background-position: 0 -684px; }
-.event .location .t { background-position: 0 -720px; }
-.event .location .u { background-position: 0 -756px; }
-.event .location .v { background-position: 0 -792px; }
-.event .location .w { background-position: 0 -828px; }
-.event .location .x { background-position: 0 -864px; }
-.event .location .y { background-position: 0 -900px; }
-.event .location .z { background-position: 0 -936px; }
+
+.event .location .a { background-position: 0 -2.75em; }
+.event .location .b { background-position: 0 -5.29em; }
+.event .location .c { background-position: 0 -7.88em; }
+.event .location .d { background-position: 0 -10.4em; }
+.event .location .e { background-position: 0 -12.95em; }
+.event .location .f { background-position: 0 -15.5em; }
+.event .location .g { background-position: 0 -18.1em; }
+.event .location .h { background-position: 0 -20.66em; }
+.event .location .i { background-position: 0 -23.2em; }
+.event .location .j { background-position: 0 -25.78em; }
+.event .location .k { background-position: 0 -28.34em; }
+.event .location .l { background-position: 0 -30.9em; }
+.event .location .m { background-position: 0 -33.45em; }
+.event .location .n { background-position: 0 -36em; }
+.event .location .o { background-position: 0 -38.55em; }
+.event .location .p { background-position: 0 -41.13em; }
+.event .location .q { background-position: 0 -43.65em; }
+.event .location .r { background-position: 0 -46.25em; }
+.event .location .s { background-position: 0 -48.79em; }
+.event .location .t { background-position: 0 -51.35em; }
+.event .location .u { background-position: 0 -53.9em; }
+.event .location .v { background-position: 0 -55.5em; }
+.event .location .w { background-position: 0 -59em; }
+.event .location .x { background-position: 0 -61.55em; }
+.event .location .y { background-position: 0 -64.1em; }
+.event .location .z { background-position: 0 -66.65em; }
 
 
 /*	====================================
