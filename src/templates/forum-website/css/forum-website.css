@@ -431,8 +431,9 @@ ul.inside{
     vertical-align: top;
 }
 
+
 .event .date, .event .location span {
-	background: url("../img/destination_sprite.png") no-repeat scroll 0 0 #fff;
+	background: url("../images/destination_sprite.svg") no-repeat scroll 0 0 #fff;
     /* width: 32px; */
     width: 26px;
     -webkit-transition: background 100ms ease-out;
