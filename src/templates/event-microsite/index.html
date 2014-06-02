@@ -1,6 +1,8 @@
 ---
 title: Event Microsite
 template: preview.hbt
+template-partials:
+  time-table: "<table><tr><th>Timing</th><th>Duration</th><th>Topic</th></tr>{{#times}}<tr><td>{{time}}</td><td>{{duration}}</td><td>{{topic}}</td></tr>{{/times}}</table>"
 data:
   title: Example event title
   hero-image: http://www.successfulworkplace.org/wp-content/uploads/2013/11/Chulture-change-is-a-bear.jpg
@@ -14,13 +16,24 @@ data:
       slug: ipsum
       content: <h1>Ipsum</h1><p>Lorem</p>
       section-theme: light-grey-background
-
   total-days: 2
   day:
     -
       day-name: Monday
-      time-table: <table><tr><th>Timing</th><th>Duration</th><th>Topic</th></tr><tr><td>08:00</td><td></td><td>Arrivals & Registration</td></tr></table>
+      times:
+        -
+          time: 08:00
+          duration: 60
+          topic: 'Arrivals & Registration'
+        -
+          time: 09:00
+          duration: 60
+          topic: 'Breakfast'
     -
       day-name: Tuesday
-      time-table: <table><tr><th>Timing</th><th>Duration</th><th>Topic</th></tr><tr><td>08:00</td><td></td><td>Arrivals & Registration</td></tr></table>
+      times:
+        -
+          time: 08:00
+          duration: 60
+          description: 'Arrivals & Registration'
 ---
