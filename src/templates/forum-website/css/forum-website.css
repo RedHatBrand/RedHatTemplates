@@ -275,6 +275,8 @@ footer {
     padding: 0 0 0 15px;
 }
 
+.infobox .teaser .destinationboard .pure-g {float:left;}
+
 .infobox {
 	position: relative;
 	box-sizing: border-box;
@@ -407,7 +409,7 @@ ul.inside{
 .destinationboard.tablet { display: none; }
 
 .destinationboard > div {
-	width: 33.3333%;
+	width: 32%;
 	padding: 10px 0 10px 15px;
 }
 
@@ -433,7 +435,7 @@ ul.inside{
 
 
 .event .date, .event .location span {
-	background: url("../images/destination_sprite.svg") no-repeat scroll 0 0 #fff;
+	background: url("../images/destination_sprite.svg") no-repeat scroll 0 0;
     /* width: 32px; */
     width: 26px;
     -webkit-transition: background 100ms ease-out;
@@ -442,6 +444,7 @@ ul.inside{
 	-o-transition: background 100ms ease-out;
 	transition: background 100ms ease-out;
 }
+
 
 .event .date {
 	margin-right: 5px;
@@ -456,23 +459,23 @@ ul.inside{
 
 /* 44px height */
 
-/*
-.event .date.june_3 { background-position: -32px 0; }
-.event .date.june_4 { background-position: -32px -44px; }
-.event .date.june_5 { background-position: -32px -88px; }
-.event .date.june_10 { background-position: -32px -132px; }
-.event .date.june_11 { background-position: -32px -176px; }
-.event .date.june_12 { background-position: -32px -220px; }
-.event .date.june_16 { background-position: -32px -264px; }
-.event .date.june_17 { background-position: -32px -308px; }
-.event .date.june_18 { background-position: -32px -352px; }
-.event .date.june_19 { background-position: -32px -396px; }
-.event .date.june_23 { background-position: -32px -440px; }
-.event .date.june_24 { background-position: -32px -484px; }
-.event .date.june_25 { background-position: -32px -528px; }
+
+.event .date.june_3 { background-position: -1.91em 0; }
+.event .date.june_4 { background-position: -1.91em -2.75em; }
+.event .date.june_5 { background-position: -1.91em 6.25em; }
+.event .date.june_10 { background-position: -1.91em 0; }
+.event .date.june_11 { background-position: -1.91em -11em; }
+.event .date.june_12 { background-position: -1.91em -13.75em; }
+.event .date.june_16 { background-position: -1.91em -16.5em; }
+.event .date.june_17 { background-position: -1.91em -19.25em; }
+.event .date.june_18 { background-position: -1.91em -22em; }
+.event .date.june_19 { background-position: -1.91em -25.75em; }
+.event .date.june_23 { background-position: -1.91em -27.5em; }
+.event .date.june_24 { background-position: -1.91em -30.25em; }
+.event .date.june_25 { background-position: -1.91em -33em; }
 
 
-.event .location .a { background-position: 0 -44px; }
+.event .location .a { background-position: 0 1em; }
 .event .location .b { background-position: 0 -88px; }
 .event .location .c { background-position: 0 -132px; }
 .event .location .d { background-position: 0 -176px; }
@@ -498,7 +501,7 @@ ul.inside{
 .event .location .x { background-position: 0 -1056px; }
 .event .location .y { background-position: 0 -1100px; }
 .event .location .z { background-position: 0 -1144px; }
-*/
+
 
 
 /* 36px height */
@@ -556,6 +559,7 @@ ul.inside{
 .training-tab .sidebar-left { width: 16.6667%; padding-top: 19px; }
 .training-tab .content { width: 58.3333%; padding: 0 70px; }
 .training-tab .sidebar-right { width: 25%; }
+
 
 .pure-u-1 .content {
 	padding-left: 30px;
