@@ -12,9 +12,7 @@ height: 100vh
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width; initial-scale=1">
 
-    <link href='<%= baseUrl %>/templates/forum-website/css/normalize.min.css' media='screen' rel='stylesheet'>
     <link href='<%= baseUrl %>/templates/forum-website/css/pure-grids.min.css' media='screen' rel='stylesheet'>
-    <link href='<%= baseUrl %>/templates/forum-website/css/flexslider.css' media='screen' rel='stylesheet'>
     <link href='<%= baseUrl %>/templates/forum-website/css/forum-website.css' media='screen' rel='stylesheet'>
     
     
@@ -22,254 +20,144 @@ height: 100vh
   </head>
   <body>
 
-    <header class="pure-g">
-      <div class="pure-u-1-3">
-        <img src="img/logo_redhatforum.png">
-        
-      </div>
-      <div class="pure-u-2-3 right">
-        
-        <menu class="top lang right hidden-phone">
-        <li><a class="en ir active" href="en/home">en</a></li><li><a class="de ir" href="de/home">de</a></li><li><a class="es ir" href="http://madrid.redhat-forum.com/" target="_blank">es</a></li><li><a class="fr ir" href="http://paris.redhat-forum.com/" target="_blank">fr</a></li><li><a class="it ir" href="http://milan.redhat-forum.com/" target="_blank">it</a></li></menu>       <img src="img/logo_redhat.png">
-              </div>
-            </header>
-            
-            <article>
-            
-              <header>
-          <nav>
-            
-        <select class="nav phone">
-        <option selected value="en/home">Home</option><option value="en/certified-professionals">Certified Professionals</option><option value="en/reserve-your-seat">Reserve your seat</option></select>
 
-
-        <menu class="nav desktop">
-        <li class="active"><a href="en/home">Home</a></li><li><a href="en/certified-professionals">Certified Professionals</a></li><li class=" highlight"><a href="en/reserve-your-seat">Reserve your seat</a></li></menu>  </nav>
-          
-        <div class="infobox teaser destinationboard pure-g desktop">
-          <div class="pure-u">
-            <a class="event" data-location="Dubai" href="http://dubai.redhat-forum.com/" target="_blank">
-              <div class="date june_3 ir">June 3</div>
-              <div class="location">Dubai</div>
-            </a>
-            <a class="event" data-location="Paris" href="http://paris.redhat-forum.com/" target="_blank">
-              <div class="date june_4 ir">June 4</div>
-              <div class="location">Paris</div>
-            </a>
-            <a class="event" data-location="Stockholm" href="http://stockholm.redhat-forum.com/" target="_blank">
-              <div class="date june_4 ir">June 4</div>
-              <div class="location">Stockholm</div>
-            </a>
-            <a class="event" data-location="Moscow" href="http://moscow.redhat-forum.com/" target="_blank">
-              <div class="date june_10 ir">June 10</div>
-              <div class="location">Moscow</div>
-            </a>
-            <a class="event" data-location="Helsinki" href="http://helsinki.redhat-forum.com/" target="_blank">
-              <div class="date june_11 ir">June 11</div>
-              <div class="location">Helsinki</div>
-            </a>
-          </div>
-          <div class="pure-u">
-            <a class="event" data-location="Zurich" href="http://zurich.redhat-forum.com/" target="_blank">
-              <div class="date june_11 ir">June 11</div>
-              <div class="location">Zurich</div>
-            </a>
-            <a class="event" data-location="Madrid" href="http://madrid.redhat-forum.com/" target="_blank">
-              <div class="date june_12 ir">June 12</div>
-              <div class="location">Madrid</div>
-            </a>
-            <a class="event" data-location="Istanbul" href="http://istanbul.redhat-forum.com/" target="_blank">
-              <div class="date june_17 ir">June 17</div>
-              <div class="location">Istanbul</div>
-            </a>
-            <a class="event" data-location="Prague" href="http://prague.redhat-forum.com/" target="_blank">
-              <div class="date june_18 ir">June 18</div>
-              <div class="location">Prague</div>
-            </a>
-            <a class="event" data-location="London" href="http://london.redhat-forum.com/" target="_blank">
-              <div class="date june_19 ir">June 19</div>
-              <div class="location">London</div>
-            </a>
-          </div>
-          <div class="pure-u">
-            <a class="event" data-location="Antwerpen" href="http://antwerp.redhat-forum.com/" target="_blank">
-              <div class="date june_23 ir">June 23</div>
-              <div class="location">Antwerp</div>
-            </a>
-            <a class="event" data-location="Johannesburg" href="http://johannesburg.redhat-forum.com/" target="_blank">
-              <div class="date june_24 ir">June 24</div>
-              <div class="location">Joburg</div>
-            </a>
-            <a class="event" data-location="Milan" href="http://milan.redhat-forum.com/" target="_blank">
-              <div class="date june_24 ir">June 24</div>
-              <div class="location">Milan</div>
-            </a>
-            <a class="event" data-location="Munich" href="http://munich.redhat-forum.com/" target="_blank">
-              <div class="date june_25 ir">June 25</div>
-              <div class="location">Munich</div>
-            </a>
-            <a class="event">
-              <div class="date ir"> </div>
-              <div class="location"> </div>
-            </a>
-          </div>
+            
+    <header>
+        
+      <div class="infobox teaser destinationboard pure-g desktop">
+        <div class="pure-u">
+          <a class="event" data-location="Dubai" href="http://dubai.redhat-forum.com/" target="_blank">
+            <div class="date june_3 ir">June 3</div>
+            <div class="location">Dubai</div>
+          </a>
+          <a class="event" data-location="Paris" href="http://paris.redhat-forum.com/" target="_blank">
+            <div class="date june_4 ir">June 4</div>
+            <div class="location">Paris</div>
+          </a>
+          <a class="event" data-location="Stockholm" href="http://stockholm.redhat-forum.com/" target="_blank">
+            <div class="date june_4 ir">June 4</div>
+            <div class="location">Stockholm</div>
+          </a>
+          <a class="event" data-location="Moscow" href="http://moscow.redhat-forum.com/" target="_blank">
+            <div class="date june_10 ir">June 10</div>
+            <div class="location">Moscow</div>
+          </a>
+          <a class="event" data-location="Helsinki" href="http://helsinki.redhat-forum.com/" target="_blank">
+            <div class="date june_11 ir">June 11</div>
+            <div class="location">Helsinki</div>
+          </a>
         </div>
+        <div class="pure-u">
+          <a class="event" data-location="Zurich" href="http://zurich.redhat-forum.com/" target="_blank">
+            <div class="date june_11 ir">June 11</div>
+            <div class="location">Zurich</div>
+          </a>
+          <a class="event" data-location="Madrid" href="http://madrid.redhat-forum.com/" target="_blank">
+            <div class="date june_12 ir">June 12</div>
+            <div class="location">Madrid</div>
+          </a>
+          <a class="event" data-location="Istanbul" href="http://istanbul.redhat-forum.com/" target="_blank">
+            <div class="date june_17 ir">June 17</div>
+            <div class="location">Istanbul</div>
+          </a>
+          <a class="event" data-location="Prague" href="http://prague.redhat-forum.com/" target="_blank">
+            <div class="date june_18 ir">June 18</div>
+            <div class="location">Prague</div>
+          </a>
+          <a class="event" data-location="London" href="http://london.redhat-forum.com/" target="_blank">
+            <div class="date june_19 ir">June 19</div>
+            <div class="location">London</div>
+          </a>
+        </div>
+        <div class="pure-u">
+          <a class="event" data-location="Antwerpen" href="http://antwerp.redhat-forum.com/" target="_blank">
+            <div class="date june_23 ir">June 23</div>
+            <div class="location">Antwerp</div>
+          </a>
+          <a class="event" data-location="Johannesburg" href="http://johannesburg.redhat-forum.com/" target="_blank">
+            <div class="date june_24 ir">June 24</div>
+            <div class="location">Joburg</div>
+          </a>
+          <a class="event" data-location="Milan" href="http://milan.redhat-forum.com/" target="_blank">
+            <div class="date june_24 ir">June 24</div>
+            <div class="location">Milan</div>
+          </a>
+          <a class="event" data-location="Munich" href="http://munich.redhat-forum.com/" target="_blank">
+            <div class="date june_25 ir">June 25</div>
+            <div class="location">Munich</div>
+          </a>
+          <a class="event">
+            <div class="date ir"> </div>
+            <div class="location"> </div>
+          </a>
+        </div>
+      </div>
 
-        <div class="infobox teaser destinationboard pure-g tablet">
-          <div class="pure-u">
-            <a class="event" data-location="Dubai" href="http://dubai.redhat-forum.com/" target="_blank">
-              <div class="date june_3 ir">June 3</div>
-              <div class="location">Dubai</div>
+      <div class="infobox teaser destinationboard pure-g tablet">
+        <div class="pure-u">
+          <a class="event" data-location="Dubai" href="http://dubai.redhat-forum.com/" target="_blank">
+            <div class="date june_3 ir">June 3</div>
+            <div class="location">Dubai</div>
 
-            </a>
-            <a class="event" data-location="Paris" href="http://paris.redhat-forum.com/" target="_blank">
-              <div class="date june_4 ir">June 4</div>
-              <div class="location">Paris</div>
-            </a>
-            <a class="event" data-location="Stockholm" href="http://stockholm.redhat-forum.com/" target="_blank">
-              <div class="date june_4 ir">June 4</div>
-              <div class="location">Stockholm</div>
-            </a>
-            <a class="event" data-location="Moscow" href="http://moscow.redhat-forum.com/" target="_blank">
-              <div class="date june_10 ir">June 10</div>
-              <div class="location">Moscow</div>
-            </a>
-            <a class="event" data-location="Helsinki" href="http://helsinki.redhat-forum.com/" target="_blank">
-              <div class="date june_11 ir">June 11</div>
-              <div class="location">Helsinki</div>
-            </a>
-            <a class="event" data-location="Zurich" href="http://zurich.redhat-forum.com/" target="_blank">
-              <div class="date june_11 ir">June 11</div>
-              <div class="location">Zurich</div>
-            </a>
-            <a class="event" data-location="Madrid" href="http://madrid.redhat-forum.com/" target="_blank">
-              <div class="date june_12 ir">June 12</div>
-              <div class="location">Madrid</div>
-            </a>
-          </div>
-          <div class="pure-u">
-            <a class="event" data-location="Istanbul" href="http://istanbul.redhat-forum.com/" target="_blank">
-              <div class="date june_17 ir">June 17</div>
-              <div class="location">Istanbul</div>
-            </a>
-            <a class="event" data-location="Prague" href="http://prague.redhat-forum.com/" target="_blank">
-              <div class="date june_18 ir">June 18</div>
-              <div class="location">Prague</div>
-            </a>
-            <a class="event" data-location="London" href="http://london.redhat-forum.com/" target="_blank">
-              <div class="date june_19 ir">June 19</div>
-              <div class="location">London</div>
-            </a>
-            <a class="event" data-location="Antwerpen" href="http://antwerp.redhat-forum.com/" target="_blank">
-              <div class="date june_23 ir">June 23</div>
-              <div class="location">Antwerp</div>
-            </a>
-            <a class="event" data-location="Johannesburg" href="http://johannesburg.redhat-forum.com/" target="_blank">
-              <div class="date june_24 ir">June 24</div>
-              <div class="location">Joburg</div>
-            </a>
-            <a class="event" data-location="Milan" href="http://milan.redhat-forum.com/" target="_blank">
-              <div class="date june_24 ir">June 24</div>
-              <div class="location">Milan</div>
-            </a>
-            <a class="event" data-location="Munich" href="http://munich.redhat-forum.com/" target="_blank">
-              <div class="date june_25 ir">June 25</div>
-              <div class="location">Munich</div>
-            </a>
-          </div>
-        </div></header>
+          </a>
+          <a class="event" data-location="Paris" href="http://paris.redhat-forum.com/" target="_blank">
+            <div class="date june_4 ir">June 4</div>
+            <div class="location">Paris</div>
+          </a>
+          <a class="event" data-location="Stockholm" href="http://stockholm.redhat-forum.com/" target="_blank">
+            <div class="date june_4 ir">June 4</div>
+            <div class="location">Stockholm</div>
+          </a>
+          <a class="event" data-location="Moscow" href="http://moscow.redhat-forum.com/" target="_blank">
+            <div class="date june_10 ir">June 10</div>
+            <div class="location">Moscow</div>
+          </a>
+          <a class="event" data-location="Helsinki" href="http://helsinki.redhat-forum.com/" target="_blank">
+            <div class="date june_11 ir">June 11</div>
+            <div class="location">Helsinki</div>
+          </a>
+          <a class="event" data-location="Zurich" href="http://zurich.redhat-forum.com/" target="_blank">
+            <div class="date june_11 ir">June 11</div>
+            <div class="location">Zurich</div>
+          </a>
+          <a class="event" data-location="Madrid" href="http://madrid.redhat-forum.com/" target="_blank">
+            <div class="date june_12 ir">June 12</div>
+            <div class="location">Madrid</div>
+          </a>
+        </div>
+        <div class="pure-u">
+          <a class="event" data-location="Istanbul" href="http://istanbul.redhat-forum.com/" target="_blank">
+            <div class="date june_17 ir">June 17</div>
+            <div class="location">Istanbul</div>
+          </a>
+          <a class="event" data-location="Prague" href="http://prague.redhat-forum.com/" target="_blank">
+            <div class="date june_18 ir">June 18</div>
+            <div class="location">Prague</div>
+          </a>
+          <a class="event" data-location="London" href="http://london.redhat-forum.com/" target="_blank">
+            <div class="date june_19 ir">June 19</div>
+            <div class="location">London</div>
+          </a>
+          <a class="event" data-location="Antwerpen" href="http://antwerp.redhat-forum.com/" target="_blank">
+            <div class="date june_23 ir">June 23</div>
+            <div class="location">Antwerp</div>
+          </a>
+          <a class="event" data-location="Johannesburg" href="http://johannesburg.redhat-forum.com/" target="_blank">
+            <div class="date june_24 ir">June 24</div>
+            <div class="location">Joburg</div>
+          </a>
+          <a class="event" data-location="Milan" href="http://milan.redhat-forum.com/" target="_blank">
+            <div class="date june_24 ir">June 24</div>
+            <div class="location">Milan</div>
+          </a>
+          <a class="event" data-location="Munich" href="http://munich.redhat-forum.com/" target="_blank">
+            <div class="date june_25 ir">June 25</div>
+            <div class="location">Munich</div>
+          </a>
+        </div>
+      </div></header>
 
-        <div class="pure-g">
-
-          <section class="pure-u sidebar-left">
-          
-            <h1>We are coming to you!</h1>
-            
-            <a class="box" href="en/video">View Red Hat Forum 2013 Video</a>
-            
-            <div class="infobox">
-          <div class="dark">
-            <!-- <h3>#redhatforum</h3> -->
-            <p class="toggle" data-toggle=".twitterbox" data-hidden="1">See here what is happening on the Red Hat Forum 2014 on Twitter.</p>
-            <div class="twitterbox hidden-phone">
-              <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/RedHatEMEA" data-widget-id="413288846512496640">Tweets von @RedHatEMEA</a>
-              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            </div>
-          </div>
-        </div>    
-            <div class="hidden-phone">
-          <div id="fb-root"></div>
-          <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-          fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));</script>
-          
-          
-          <!-- twitter -->
-          <a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical">Tweet</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-          
-          <!-- facebook -->
-          <div class="fb-share-button" data-href="http://redhat-forum.com/" data-type="box_count"></div>
-          
-          <!-- linkedin -->
-          <script src="//platform.linkedin.com/in.js" type="text/javascript">
-            lang: en_US
-          </script>
-          <script type="IN/Share" data-counter="top"></script>
-          
-          <!-- google plus -->
-          <div class="g-plusone" data-size="tall"></div>
-          <script type="text/javascript">
-            window.___gcfg = {lang: 'de'};
-            (function() {
-            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-            po.src = 'https://apis.google.com/js/platform.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-            })();
-          </script>
-        </div>    
-          </section>
-          
-          <section class="pure-u content">
-              
-              <p>…to show how Red Hat open-source solutions will simplify your IT, enabling you to focus on innovation while making your business more flexible and agile. Red Hat maintains a global network of customers, communities and business partners collaborating to develop better technologies and deliver greater innovation.</p>
-
-              <p>Our world is becoming more dynamic, especially when it comes to IT. No one can afford to ignore the latest technology trends and the explosive growth of data. At the same time, business enterprises want to leverage investments while optimizing strategic flexibility and ensuring freedom of choice in the data center.</p>
-              
-              <p>Red Hat offers business enterprises the expertise needed to cope with dynamic IT, and today 90 percent of the Fortune 500 companies rely on this proven competence. If you are looking for a trusted partner to support your IT, you should attend the Red Hat Forum 2014 to discover the benefits available to you.</p>
-              
-              <h3>Highlights at the Red Hat Forum 2014 include:</h3>
-              
-              <ul>
-                <li>Red Hat panel discussions and presentations</li>
-                <li>Red Hat use cases and scenarios addressing critical pain points</li>
-                <li>Real-world strategies and solutions</li>
-                <li>Technology and business sessions</li>
-                <li>Direct networking with Red Hat and its partners</li>
-              </ul>
-              
-              <p>You will have an opportunity to speak with Red Hat’s EMEA support staff at the event and hear keynotes from top executives about their vision of the future. Engineering and product experts will be on-site to discuss specific issues with you, and you will have a chance to experience the strength and promise of Red Hat's vast technology ecosystem.</p>
-
-              <p>Who could ask for more? Be sure to attend the Red Hat Forum 2014 for a better understanding of your own IT and how Red Hat will unlock even more value through innovation.</p>
-              
-          </section>
-          
-          <section class="pure-u sidebar-right">
-            <a href="../en/kiosk">
-              <img class="sponsor" src="img/RH_Forum_KioskApp-Banner_EN.jpg" alt="Red Hat Kiosk">
-            </a>
-          </section>
-
-        </div>      
-              <footer>
-                Copyright 2014 Red Hat, Inc
-              </footer>
-              
-            </article>
+        
             
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.lettering.js'></script>
