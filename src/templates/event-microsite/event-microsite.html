@@ -116,7 +116,60 @@ height: 100vh
           {{/day}}
           {{#day}}
           <div class='time-table-{{ day-name }}'>
-            {{> time-table }}
+            <table class="calendar">
+              <tr class="headings">
+                <th class="time">Timing</th>
+                <th class="duration">Duration</th>
+                <th class="topic">Topic</th>
+              </tr>
+              {{#times}}
+              <tr class="{{ type }}">
+                <td class="time">{{time}}</td>
+                <td class="duration">{{duration}}</td>
+
+                <td>
+                  {{#topic}}
+                  <p>{{topic}}</p>
+                  {{/topic}}
+
+                  {{#track-a}}
+                  <div class="track-a">
+                    <h6>Track A</h6>
+                    <p>{{track-a}}</p>
+                  </div>
+                  {{/track-a}}
+
+                  {{#track-b}}
+                  <div class="track-b">
+                    <h6>Track B</h6>
+                    <p>{{track-b}}</p>
+                  </div>
+                  {{/track-b}}
+
+                  {{#track-c}}
+                  <div class="track-c">
+                    <h6>Track C</h6>
+                    <p>{{track-c}}</p>
+                  </div>
+                  {{/track-c}}
+
+                  {{#track-d}}
+                  <div class="track-d">
+                    <h6>Track D</h6>
+                    <p>{{track-d}}</p>
+                  </div>
+                  {{/track-d}}
+
+                  {{#track-e}}
+                  <div class="track-e">
+                    <h6>Track E</h6>
+                    <p>{{track-e}}</p>
+                  </div>
+                  {{/track-e}}
+                </td>
+              </tr>
+              {{/times}}
+            </table>
           </div>
           {{/day}}
         </div>

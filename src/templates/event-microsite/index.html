@@ -1,8 +1,6 @@
 ---
 title: Event Microsite
 template: preview.hbt
-template-partials:
-  time-table: "<table><tr><th>Timing</th><th>Duration</th><th>Topic</th></tr>{{#times}}<tr><td>{{time}}</td><td>{{duration}}</td><td>{{topic}}</td></tr>{{/times}}</table>"
 data:
   title: Example event title
   hero-image: http://www.successfulworkplace.org/wp-content/uploads/2013/11/Chulture-change-is-a-bear.jpg
@@ -35,5 +33,11 @@ data:
         -
           time: 08:00
           duration: 60
-          description: 'Arrivals & Registration'
+          track-a: 'Foo'
+          track-b: 'Bar'
+        -
+          time: 09:00
+          duration: 60
+          track-a: 'Foo'
+          track-b: 'Baz'
 ---

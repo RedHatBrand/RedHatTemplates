@@ -15,6 +15,12 @@
 }
 
 .calendar {
+  table-layout: fixed;
+
+  .time, .duration {
+    width: 25%;
+  }
+
   .icon-user:before {
     color:lighten($color-shade,40%)
   }
