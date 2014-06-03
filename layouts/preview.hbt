@@ -23,7 +23,6 @@
         <iframe class='preview-frame' data-xml-url="{{this.url}}" height='100%' width='100%'></iframe>
       </div>
       {{/each}}
-      <div id="partials" data-partials="{{ json template-partials }}"></div>
       <div id="data" data-template-data="{{ json data }}"></div>
     </article>
 

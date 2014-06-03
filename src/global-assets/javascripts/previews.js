@@ -4,8 +4,6 @@
 
   $(function () {
     var data = $('#data').data('template-data');
-    var partials = $('#partials').data('partials');
-    console.log(JSON.stringify(data));
 
     function parseValues (vals, render) {
       return {
@@ -47,7 +45,7 @@
     }
 
     function writeTemplate (doc, template, data) {
-      var compiledTemplate = Mustache.render(template, data, partials);
+      var compiledTemplate = Mustache.render(template, data);
       doc.open();
       doc.write(compiledTemplate);
       doc.close();
