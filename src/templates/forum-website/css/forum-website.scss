@@ -505,7 +505,7 @@ ul.inside{
 
 /* 36px height */
 
-.event .date.june_3 { background-position: -1.87em -0.19em; }
+/*.event .date.june_3 { background-position: -1.87em -0.19em; }
 .event .date.june_4 { background-position: -1.87em -2.75em; }
 .event .date.june_5 { background-position: -1.87em -5.25em; }
 .event .date.june_10 { background-position: -1.87em -7.87em; }
@@ -517,14 +517,14 @@ ul.inside{
 .event .date.june_19 { background-position: -1.87em -23.2em; }
 .event .date.june_23 { background-position: -1.87em -25.78em; }
 .event .date.june_24 { background-position: -1.87em -28.37em; }
-.event .date.june_25 { background-position: -1.87em -30.89em; }
+.event .date.june_25 { background-position: -1.87em -30.89em; }*/
 
 $unit: 6.5%;
 
-.event .location .ir {
+.event .location .ir, .event .date {
 	position: relative;
 }
-.event .location .ir:after {
+.event .location .ir:after, .event .date:after {
 	content: '';
 	background: url("../images/destination_sprite.svg") no-repeat scroll 0 0;
 	display: block;
@@ -535,9 +535,13 @@ $unit: 6.5%;
 	top: 0;
 	background-size: contain;
 	background-position: 0 0;
+	transition:top 0.1s ease;
 }
 
 $letters: space, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z;
+
+$dates: june 3, june 4, june 5, june 10, june 11, june 12, june 16, june 17, june 18, june 19, june 23, june 24, june 25;
+
 
 
 @for $i from 1 through length($letters) {
@@ -546,6 +550,17 @@ $letters: space, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, 
 	.event .location .#{$letter}:after { 
 		left: 0;
 		top: -(100% * ($i - 1));
+	}
+}
+
+@for $n from 1 through length($dates) {
+	$date: nth($dates, $n);
+	$day: nth($date, 2);
+	$month: nth($date, 1);
+
+	.event .date.#{$month}_#{$day}:after { 
+		left: -100%;
+		top: -(100% * ($n - 1));
 	}
 }
 
