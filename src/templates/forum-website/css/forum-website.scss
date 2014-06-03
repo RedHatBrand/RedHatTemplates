@@ -435,7 +435,6 @@ ul.inside{
 
 
 .event .date, .event .location span {
-	background: url("../images/destination_sprite.svg") no-repeat scroll 0 0;
     /* width: 32px; */
     width: 26px;
     -webkit-transition: background 100ms ease-out;
@@ -506,47 +505,49 @@ ul.inside{
 
 /* 36px height */
 
-.event .date.june_3 { background-position: -1.91em -0.19em; }
-.event .date.june_4 { background-position: -1.91em -2.75em; }
-.event .date.june_5 { background-position: -1.91em -5.25em; }
-.event .date.june_10 { background-position: -1.91em -7.87em; }
-.event .date.june_11 { background-position: -1.91em -10.4em; }
-.event .date.june_12 { background-position: -1.91em -12.98em; }
-.event .date.june_16 { background-position: -1.91em -14em; }
-.event .date.june_17 { background-position: -1.91em -18.1em; }
-.event .date.june_18 { background-position: -1.91em -20.66em; }
-.event .date.june_19 { background-position: -1.91em -23.2em; }
-.event .date.june_23 { background-position: -1.91em -25.78em; }
-.event .date.june_24 { background-position: -1.91em -28.37em; }
-.event .date.june_25 { background-position: -1.91em -30.89em; }
+.event .date.june_3 { background-position: -1.87em -0.19em; }
+.event .date.june_4 { background-position: -1.87em -2.75em; }
+.event .date.june_5 { background-position: -1.87em -5.25em; }
+.event .date.june_10 { background-position: -1.87em -7.87em; }
+.event .date.june_11 { background-position: -1.87em -10.4em; }
+.event .date.june_12 { background-position: -1.87em -12.98em; }
+.event .date.june_16 { background-position: -1.87em -14em; }
+.event .date.june_17 { background-position: -1.87em -18.1em; }
+.event .date.june_18 { background-position: -1.87em -20.66em; }
+.event .date.june_19 { background-position: -1.87em -23.2em; }
+.event .date.june_23 { background-position: -1.87em -25.78em; }
+.event .date.june_24 { background-position: -1.87em -28.37em; }
+.event .date.june_25 { background-position: -1.87em -30.89em; }
+
+$unit: 6.5%;
+
+.event .location .ir {
+	position: relative;
+}
+.event .location .ir:after {
+	content: '';
+	background: url("../images/destination_sprite.svg") no-repeat scroll 0 0;
+	display: block;
+	position: absolute;
+	width: 200%;
+	height:2700%;
+	left: 0;
+	top: 0;
+	background-size: contain;
+	background-position: 0 0;
+}
+
+$letters: space, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z;
 
 
-.event .location .a { background-position: 0 -2.75em; }
-.event .location .b { background-position: 0 -5.29em; }
-.event .location .c { background-position: 0 -7.88em; }
-.event .location .d { background-position: 0 -10.4em; }
-.event .location .e { background-position: 0 -12.95em; }
-.event .location .f { background-position: 0 -15.5em; }
-.event .location .g { background-position: 0 -18.1em; }
-.event .location .h { background-position: 0 -20.66em; }
-.event .location .i { background-position: 0 -23.2em; }
-.event .location .j { background-position: 0 -25.78em; }
-.event .location .k { background-position: 0 -28.34em; }
-.event .location .l { background-position: 0 -30.9em; }
-.event .location .m { background-position: 0 -33.45em; }
-.event .location .n { background-position: 0 -36em; }
-.event .location .o { background-position: 0 -38.55em; }
-.event .location .p { background-position: 0 -41.13em; }
-.event .location .q { background-position: 0 -43.65em; }
-.event .location .r { background-position: 0 -46.25em; }
-.event .location .s { background-position: 0 -48.79em; }
-.event .location .t { background-position: 0 -51.35em; }
-.event .location .u { background-position: 0 -53.9em; }
-.event .location .v { background-position: 0 -55.5em; }
-.event .location .w { background-position: 0 -59em; }
-.event .location .x { background-position: 0 -61.55em; }
-.event .location .y { background-position: 0 -64.1em; }
-.event .location .z { background-position: 0 -66.65em; }
+@for $i from 1 through length($letters) {
+	$letter: nth($letters, $i);
+
+	.event .location .#{$letter}:after { 
+		left: 0;
+		top: -(100% * ($i - 1));
+	}
+}
 
 
 /*	====================================

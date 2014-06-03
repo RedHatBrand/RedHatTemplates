@@ -13,21 +13,10 @@
 (function($){
 	function injector(t, splitter, klass, after) {
 		var a = t.text().split(splitter), inject = '';
-		var n_letter = a.length;
-		if (n_letter) {
+		if (a.length) {
 			$(a).each(function(i, item) {
-				item = item.toLowerCase();
-				//inject += '<span class="'+klass+(i+1)+'">'+item+'</span>'+after;
-				inject += '<span class="'+item+' ir">'+item+'</span>'+after;
-			});
-			if (!t.parent().hasClass('city')) {
-				if (n_letter<9) {
-					var n_blank = 9-n_letter;
-					for (var i=0;i<n_blank;i++) {
-						inject += '<span></span>';
-					}
-				}
-			}
+				inject += '<span class="'+klass+(i+1)+'">'+item+'</span>'+after;
+			});	
 			t.empty().append(inject);
 		}
 	}
@@ -54,7 +43,7 @@
 			return this.each(function() {
 				var r = "eefec303079ad17405c889e092e105b0";
 				// Because it's hard to split a <br/> tag consistently across browsers,
-				// (*ahem* IE *ahem*), we replace all <br/> instances with an md5 hash 
+				// (*ahem* IE *ahem*), we replaces all <br/> instances with an md5 hash 
 				// (of the word "split").  If you're trying to use this plugin on that 
 				// md5 hash string, it will fail because you're being ridiculous.
 				injector($(this).children("br").replaceWith(r).end(), r, 'line', '');

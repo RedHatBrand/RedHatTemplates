@@ -18,13 +18,6 @@ height: 100vh
     <link href='<%= baseUrl %>/templates/forum-website/css/forum-website.css' media='screen' rel='stylesheet'>
     
     
-    <script src='<%= baseUrl %>/templates/forum-website//js/modernizr-2.7.0.min.js'></script>
-    <script src='<%= baseUrl %>/templates/forum-website//js/jquery-1.10.2.min.js'></script>
-    <script src='<%= baseUrl %>/templates/forum-website//js/jquery.cookie.js'></script>
-    <script src='<%= baseUrl %>/templates/forum-website//js/jquery.lettering.js'></script>
-    <script src='<%= baseUrl %>/templates/forum-website//js/jquery.flexslider.min.js'></script>
-    <script src='<%= baseUrl %>/templates/forum-website//js/redhat.js'></script>
-    
     
   </head>
   <body>
@@ -278,40 +271,9 @@ height: 100vh
               
             </article>
             
-            <!-- begin Google Remarketing -->
-            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/990030321/?value=0&amp;label=rxV4CN_35QQQ8dOK2AM&amp;guid=ON&amp;script=0" />  
-            <!-- end Google Remarketing -->
-            
-            <!-- begin eloqua tracking -->
-            <script type='text/javascript' language='JavaScript' src='//www.redhat.com/j/elqNow/elqCfg.js'></script>
-            <script type='text/javascript' language='JavaScript' src='//www.redhat.com/j/elqNow/elqImg.js'></script>
-            <!-- end eloqua tracking -->
-            
-            <!-- Adobe Analytics -->
-            <script type="text/javascript" src="//www.redhat.com/assets/js/tracking/s_code.js"></script>
-            <script language="JavaScript" type="text/javascript"><!--
-            s.rh_pageType = "microsite" // alternative: landing page
-            s.rh_siteName = "red hat forum emea"; // only for non-redhat.com domains
-            s.rh_languageCodeIndex = "0"; // index of language code in relative path
-            //--></script>
-            <script type="text/javascript" src="//www.redhat.com/assets/js/tracking/track_microsite.js"></script>
-            <script type="text/javascript" src="//www.redhat.com/assets/js/tracking/rh_omni_footer.js"></script>
-            <script language="JavaScript" type="text/javascript"><!--
-            if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('<')+'\!-'+'-')
-            //--></script><noscript><a href="http://www.omniture.com" title="Web Analytics"><img
-            src="https://smtrcs.redhat.com/b/ss/redhatglobal/1/H.25.4--NS/0?[AQB]&cdp=3&[AQE]"
-            height="1" width="1" border="0" alt="" /></a></noscript><!--/DO NOT REMOVE/-->
-            <!-- End Adobe Analytics -->
-            
-            <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            
-            ga('create', 'UA-42007412-11', 'redhat-forum.com');
-            ga('send', 'pageview');
-            </script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.lettering.js'></script>
+    <script src='<%= baseUrl %>/templates/forum-website/js/main.js'></script>
     
   </body>
 </html>
