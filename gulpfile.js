@@ -7,9 +7,9 @@ var gulp               = require('gulp'),
     express            = require('express'),
     app                = express(),
     argv               = require('yargs').argv;
+
 var dest               = './build';
 var env                = argv.type || 'development';
-
 var base = {
   production: 'http://red-hat-assets.s3.amazonaws.com',
   development: 'http://localhost:4000'

@@ -4,13 +4,23 @@ width: 450mm
 ---
 
 <!DOCTYPE html>
-<html style='height:{{#add}}{{height}}+{{#multiply}}{{bleed}}*4{{/multiply}}{{/add}}mm; width:{{#add}}{{width}}+{{#multiply}}{{bleed}}*4{{/multiply}}{{/add}}mm; padding: {{bleed}}mm'>
+<html
+  height="{{#add}}{{height}}+{{#multiply}}{{bleed}}*4{{/multiply}}{{/add}}mm"
+  width="{{#add}}{{width}}+{{#multiply}}{{bleed}}*4{{/multiply}}{{/add}}mm"
+  style="padding: {{bleed}}mm">
+
   <head>
     <meta charset='utf-8'>
     <meta content='IE=edge' http-equiv='X-UA-Compatible'>
     <link href='<%= baseUrl %>/templates/poster/stylesheets/main.css' rel='stylesheet'>
   </head>
-  <body class='rh-theme-{{ category }}' style='height:{{#add}}{{height}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm; width:{{#add}}{{width}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm; padding: {{bleed}}mm'>
+
+  <body
+    class="rh-theme-{{ category }}"
+    height="{{#add}}{{height}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
+    width="{{#add}}{{width}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
+    style="padding: {{bleed}}mm">
+
     <div class='brand'>
       <% include ../shared/backgrounds/brand.svg %>
     </div>
