@@ -34,7 +34,8 @@ header {
 	box-sizing: border-box;
 	padding: 0.5em;
 	border-bottom: 2px solid #8c9091;
-	background: linear-gradient(to bottom, #b2b4b4 0%, #383c3d 1%, #1d1e22 100%) no-repeat;
+	background-image: linear-gradient(to bottom, #b2b4b4 0%, #383c3d 1%, #1d1e22 100%);
+  background-repeat: no-repeat;
 	background-position: 0.5em 0.5em;
 	background-size: calc(100% - 1em) calc(100% - 1em);
   background-color: #000;
@@ -42,6 +43,7 @@ header {
 
 .infobox:before, .infobox:after {
 	content: "";
+  display: block;
 	position: absolute;
 	top: -2px;
 	bottom: -2px;
