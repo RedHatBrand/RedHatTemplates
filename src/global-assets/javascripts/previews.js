@@ -45,6 +45,12 @@
       }
     }
 
+    data.toJSON = function () {
+      return function (text, render) {
+        return JSON.stringify(this);
+      }
+    }
+
     function writeTemplate (doc, template, data) {
       var compiledTemplate = Mustache.render(template, data);
       doc.open();
