@@ -1,7 +1,6 @@
 $(function () {
   function findLongestName () {
     var locations = [];
-    var baseUrl = $('#baseUrl').data('base-url');
 
     $('.event .location').each(function (_i, elem) {
       var text = $(elem).text();
@@ -19,6 +18,7 @@ $(function () {
 
   $('.event .location span').each(function (_i, elem) {
     var char = $(elem).text().toLowerCase();
+    char = char === ' ' ? 'space' : char;
 
     $(elem)
       .empty()
@@ -37,23 +37,8 @@ $(function () {
     }
   });
 
-  $('.event').css({
-    boxSizing: 'border-box'
-  })
-
-  $('.event .date').each(function (_i, elem) {
-    var date = moment($(elem).text() + ' 2014');
-    $(elem).empty();
-
-    var day = date.date();
-    var month = date.format('MMMM').toLowerCase();
-
-    $(this)
-      .append('<div class="space" />')
-      .addClass('month-' + month)
-      .addClass('day-' + day).css({
-        width: elemWidth + '%',
-        marginRight: elemWidth * 0.5 + '%'
-      });
+  $('.event .date').css({
+    width: elemWidth + '%',
+    marginRight: elemWidth * 0.5 + '%'
   });
 });

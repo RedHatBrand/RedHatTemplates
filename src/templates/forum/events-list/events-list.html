@@ -14,23 +14,28 @@ height: 100vh
     <link href='<%= baseUrl %>/templates/forum/events-list/css/main.css' media='screen' rel='stylesheet' />
 
   </head>
-  <body style="width: 20cm; height: 10cm">
-    <header>
-      <div class="infobox teaser destinationboard">
-        <div class="event-columns clearfix">
-          {{#events}}
-          <div class="event-column">
-            <a class="event clearfix" href="{{{ link }}}" target="_blank">
-              <div class="date">{{date}}</div>
-              <div class="location clearfix">{{ location }}</div>
-            </a>
-          </div>
-          {{/events}}
+  <body>
+    {{#events}}
+    <a class="event clearfix" href="{{{ link }}}" target="_blank">
+      <div class="date">
+        <div class="space"></div>
+        <div class="text-content">
+          <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+            <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+              {{ day }}
+            </text>
+          </svg>
+          <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+            <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+              {{ month }}
+            </text>
+          </svg>
         </div>
       </div>
-    </header>
+      <div class="location clearfix">{{ location }}</div>
+    </a>
+    {{/events}}
 
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/moment.min.js'></script>
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.lettering.js'></script>
     <script src='<%= baseUrl %>/templates/forum/events-list/js/main.js'></script>

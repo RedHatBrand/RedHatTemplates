@@ -1,12 +1,5 @@
-/*	====================================
-		layout
-	==================================== */
-
-
 body {
-  position: relative;
-  font-size: 14px;
-  line-height: 1.4em;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -20,62 +13,12 @@ body {
     clear: both;
 }
 
-
-/*	====================================
-		layout elements
-	==================================== */
-
-.infobox {
-	position: relative;
-	box-sizing: border-box;
-	padding: 0.5em;
-	border-bottom: 2px solid #8c9091;
-	background-image: linear-gradient(to bottom, #b2b4b4 0%, #383c3d 1%, #1d1e22 100%);
-  background-repeat: no-repeat;
-	background-position: 0.5em 0.5em;
-	background-size: calc(100% - 1em) calc(100% - 1em);
-  background-color: #000;
-}
-
-.infobox:before, .infobox:after {
-	content: "";
-  display: block;
-	position: absolute;
-	top: -2px;
-	bottom: -2px;
-	width: 2px;
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(#8c9091));
-	background-image: -webkit-linear-gradient(transparent,#8c9091);
-	background-image: -moz-linear-gradient(transparent,#8c9091);
-	background-image: -o-linear-gradient(transparent,#8c9091);
-}
-
-.infobox:before { left: 0; }
-.infobox:after { right: 0; }
-
-
-/*	====================================
-		elements -> teaser / destinations
-	==================================== */
-
-$target-column-width: 20em;
-
-.event-columns {
-	padding: 1em 1em 0.25em;
-}
 .event {
   position: relative;
   display: block;
   margin: 0;
   text-decoration: none;
   padding-bottom: 0.5em;
-}
-
-.event-column {
-  box-sizing: border-box;
-  width: 50%;
-  float: left;
-  padding: 0 1em;
 }
 
 .location span {
@@ -90,26 +33,25 @@ $target-column-width: 20em;
   line-height: 1;
   color: white;
   text-align: center;
+  position: relative;
 
   .space { content: url("../images/letters/space.svg"); }
 
-  &:before,
-  &:after {
+  .text-content {
     position: absolute;
+    top: 0;
     left: 0;
     right: 0;
-    font-size: 0.25em;
-    transform: translate(0, -50%);
+
+    svg text {
+      font-family: 'Overpass', 'Helvetica', 'Verdana', sans-serif;
+    }
   }
 
-  &:before {
-    content: attr(data-day);
-    top: 25%;
-  }
-
-  &:after {
-    content: attr(data-month);
-    top: 75%;
+  .day, .month {
+    width: 100%;
+    height: 50%;
+    display: block;
   }
 }
 
