@@ -13,7 +13,7 @@ $(function () {
   }
 
   var longest = findLongestName();
-  var elemWidth = 100 / (longest.length);
+  var elemWidth = 100 / (longest.length + 1.5);
 
   $('.event .location').lettering();
 
@@ -38,7 +38,6 @@ $(function () {
   });
 
   $('.event').css({
-    paddingLeft: '12.5%',
     boxSizing: 'border-box'
   })
 
@@ -50,9 +49,11 @@ $(function () {
     var month = date.format('MMMM').toLowerCase();
 
     $(this)
+      .append('<div class="space" />')
       .addClass('month-' + month)
       .addClass('day-' + day).css({
-        width: elemWidth * 0.8752 + '%'
+        width: elemWidth + '%',
+        marginRight: elemWidth * 0.5 + '%'
       });
   });
 });

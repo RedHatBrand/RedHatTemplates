@@ -9,20 +9,22 @@ height: 100vh
   <head>
     <title>Home | Red Hat Forum 2014</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width; initial-scale=1">
+    <meta name="viewport" content="width=device-width; initial-scale=1" />
 
-    <link href='<%= baseUrl %>/templates/forum/events-list/css/main.css' media='screen' rel='stylesheet'>
+    <link href='<%= baseUrl %>/templates/forum/events-list/css/main.css' media='screen' rel='stylesheet' />
 
   </head>
   <body>
     <header>
       <div class="infobox teaser destinationboard">
-        <div class="event-columns">
+        <div class="event-columns clearfix">
           {{#events}}
-          <a class="event clearfix" href="{{{ link }}}" target="_blank">
-            <div class="date">{{date}}</div>
-            <div class="location">{{ location }}</div>
-          </a>
+          <div class="event-column">
+            <a class="event clearfix" href="{{{ link }}}" target="_blank">
+              <div class="date">{{date}}</div>
+              <div class="location clearfix">{{ location }}</div>
+            </a>
+          </div>
           {{/events}}
         </div>
       </div>

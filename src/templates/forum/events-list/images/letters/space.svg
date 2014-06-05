@@ -7,11 +7,35 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    width="100%"
    height="100%"
    viewBox="0 0 26 36"
-   id="svg38027">
+   id="svg38027"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="space.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="986"
+     inkscape:window-height="776"
+     id="namedview220"
+     showgrid="false"
+     inkscape:zoom="6.5555556"
+     inkscape:cx="13"
+     inkscape:cy="18"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
   <defs
      id="defs38029">
     <linearGradient
@@ -447,7 +471,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -455,7 +479,7 @@
      transform="translate(0,-1016.3622)"
      id="layer1">
     <g
-       transform="matrix(0.93862817,0,0,1,0,1016.3622)"
+       transform="matrix(0.99616858,0,0,1,0,1016.3622)"
        id="g10650">
       <g
          id="g10652">
@@ -486,10 +510,12 @@
         <path
            d="M 24.2,36 H 1.8 C 0.8,36 0,35.2 0,34.2 V 1.8 C 0,0.8 0.8,0 1.8,0 h 22.5 c 1,0 1.8,0.8 1.8,1.8 V 34.3 C 26,35.2 25.2,36 24.2,36 l 0,0 z"
            id="path10663"
-           style="fill:url(#SVGID_2_)" />
+           style="fill:url(#SVGID_2_)"
+           inkscape:connector-curvature="0" />
         <path
            d="M 24.2,0.1 H 1.8 C 0.9,0.1 0.2,0.8 0.2,1.7 v 32.5 c 0,0.9 0.7,1.6 1.6,1.6 h 22.5 c 0.9,0 1.6,-0.7 1.6,-1.6 V 1.8 c 0,-0.9 -0.8,-1.7 -1.7,-1.7 z"
-           id="path10665" />
+           id="path10665"
+           inkscape:connector-curvature="0" />
         <g
            id="g10667">
           <linearGradient
@@ -551,7 +577,8 @@
           <path
              d="m 24.2,14.4 c 0,-0.1 0.1,-0.1 0.1,-0.1 h 0.5 c 0.2,0 0.3,-0.1 0.3,-0.3 V 1.8 C 25.1,1.3 24.7,1 24.2,1 H 1.8 C 1.3,1 0.9,1.4 0.9,1.8 V 14 c 0,0.2 0.1,0.3 0.3,0.3 h 0.5 c 0.1,0 0.1,0.1 0.1,0.1 v 3.1 c 0,0.1 0,0.1 0.1,0.2 0.1,0.1 0.1,0.2 0.2,0.2 h 21.8 c 0.1,0 0.1,0 0.2,-0.1 0.1,-0.1 0.1,-0.1 0.1,-0.2 v -3.2 z"
              id="path10694"
-             style="fill:url(#SVGID_3_)" />
+             style="fill:url(#SVGID_3_)"
+             inkscape:connector-curvature="0" />
         </g>
         <g
            id="g10696">
@@ -574,7 +601,8 @@
           <path
              d="m 24,14.4 c 0,-0.2 0.1,-0.3 0.3,-0.3 h 0.5 c 0.1,0 0.1,-0.1 0.1,-0.1 V 1.8 C 24.9,1.4 24.6,1.1 24.2,1.1 H 1.8 C 1.4,1.1 1,1.4 1,1.8 V 14 c 0,0.1 0.1,0.1 0.1,0.1 h 0.5 c 0.2,0 0.3,0.1 0.3,0.3 v 3.1 c 0,0 0,0.1 0,0.1 0,0 0.1,0 0.1,0 h 21.8 c 0,0 0.1,0 0.1,0 0,0 0,-0.1 0,-0.1 v -3.1 z"
              id="path10703"
-             style="fill:url(#SVGID_4_)" />
+             style="fill:url(#SVGID_4_)"
+             inkscape:connector-curvature="0" />
         </g>
         <g
            id="g10705">
@@ -655,7 +683,8 @@
             <path
                d="m 24.2,21.6 c 0,0.1 0.1,0.1 0.1,0.1 h 0.5 c 0.2,0 0.3,0.1 0.3,0.3 v 12.2 c 0,0.5 -0.4,0.9 -0.9,0.9 H 1.8 C 1.3,35.1 0.9,34.7 0.9,34.2 V 22 c 0,-0.2 0.1,-0.3 0.3,-0.3 h 0.5 c 0.1,0 0.1,-0.1 0.1,-0.1 v -3.1 c 0,-0.1 0,-0.1 0.1,-0.2 C 2,18.2 2,18.1 2.1,18.1 h 21.8 c 0.1,0 0.1,0 0.2,0.1 0.1,0.1 0.1,0.1 0.1,0.2 v 3.2 z"
                id="path10742"
-               style="fill:url(#SVGID_5_)" />
+               style="fill:url(#SVGID_5_)"
+               inkscape:connector-curvature="0" />
           </g>
           <linearGradient
              x1="12.9977"
@@ -676,7 +705,8 @@
           <path
              d="M 24.8,21.8 H 24.3 C 24.1,21.8 24,21.7 24,21.5 v -3.1 c 0,0 0,-0.1 0,-0.1 0,0 -0.1,0 -0.1,0 H 2.1 c 0,0 -0.1,0 -0.1,0 0,0 0,0.1 0,0.1 v 3.1 c 0,0.2 -0.1,0.3 -0.3,0.3 H 1.2 C 1.1,21.8 1,21.9 1,22 v 12.2 c 0,0.4 0.3,0.7 0.7,0.7 h 22.5 c 0.4,0 0.7,-0.3 0.7,-0.7 V 22 c 0,-0.1 0,-0.2 -0.1,-0.2 z"
              id="path10749"
-             style="fill:url(#SVGID_6_)" />
+             style="fill:url(#SVGID_6_)"
+             inkscape:connector-curvature="0" />
         </g>
         <g
            id="g10751">
@@ -859,97 +889,6 @@
              style="fill:url(#SVGID_8_)" />
         </g>
       </g>
-    </g>
-    <g
-       transform="matrix(0.93862817,0,0,1,0,1016.3622)"
-       id="g11298">
-      <linearGradient
-         x1="27.295099"
-         y1="21.5571"
-         x2="27.295099"
-         y2="14.4417"
-         id="linearGradient37988"
-         gradientUnits="userSpaceOnUse">
-        <stop
-           id="stop37990"
-           style="stop-color:#000000;stop-opacity:1"
-           offset="0" />
-        <stop
-           id="stop37992"
-           style="stop-color:#202020;stop-opacity:1"
-           offset="0.0875" />
-        <stop
-           id="stop37994"
-           style="stop-color:#383939;stop-opacity:1"
-           offset="0.16249999" />
-        <stop
-           id="stop37996"
-           style="stop-color:#2d2d2d;stop-opacity:1"
-           offset="0.2156" />
-        <stop
-           id="stop37998"
-           style="stop-color:#232323;stop-opacity:1"
-           offset="0.29319999" />
-        <stop
-           id="stop38000"
-           style="stop-color:#202020;stop-opacity:1"
-           offset="0.38999999" />
-        <stop
-           id="stop38002"
-           style="stop-color:#414141;stop-opacity:1"
-           offset="0.625" />
-        <stop
-           id="stop38004"
-           style="stop-color:#dfdfde;stop-opacity:1"
-           offset="0.875" />
-        <stop
-           id="stop38006"
-           style="stop-color:#dddddc;stop-opacity:1"
-           offset="0.88300002" />
-        <stop
-           id="stop38008"
-           style="stop-color:#d6d6d5;stop-opacity:1"
-           offset="0.88590002" />
-        <stop
-           id="stop38010"
-           style="stop-color:#cacac9;stop-opacity:1"
-           offset="0.88800001" />
-        <stop
-           id="stop38012"
-           style="stop-color:#babab9;stop-opacity:1"
-           offset="0.88959998" />
-        <stop
-           id="stop38014"
-           style="stop-color:#a4a4a3;stop-opacity:1"
-           offset="0.89109999" />
-        <stop
-           id="stop38016"
-           style="stop-color:#888887;stop-opacity:1"
-           offset="0.89240003" />
-        <stop
-           id="stop38018"
-           style="stop-color:#686867;stop-opacity:1"
-           offset="0.89349997" />
-        <stop
-           id="stop38020"
-           style="stop-color:#434342;stop-opacity:1"
-           offset="0.89450002" />
-        <stop
-           id="stop38022"
-           style="stop-color:#30302f;stop-opacity:1"
-           offset="0.89499998" />
-        <stop
-           id="stop38024"
-           style="stop-color:#000000;stop-opacity:1"
-           offset="1" />
-      </linearGradient>
-      <rect
-         width="0.80000001"
-         height="7.0999999"
-         x="26.9"
-         y="14.4"
-         id="rect11337"
-         style="fill:url(#SVGID_28_)" />
     </g>
   </g>
 </svg>

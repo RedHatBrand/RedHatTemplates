@@ -7,11 +7,7 @@ body {
   position: relative;
   font-size: 100%;
   line-height: 1.4em;
-}
-
-header {
-  margin: 2em 0 4em;
-  padding: 0 2em;
+  margin: 0;
 }
 
 .clearfix:before,
@@ -62,9 +58,9 @@ header {
 		elements -> teaser / destinations
 	==================================== */
 
+$target-column-width: 20em;
+
 .event-columns {
-  column-count: 3;
-  column-gap: 2em;
 	padding: 1em 1em 0.25em;
 }
 .event {
@@ -75,22 +71,39 @@ header {
   padding-bottom: 0.5em;
 }
 
+.event-column {
+  box-sizing: border-box;
+}
+
+@media all and (min-width: $target-column-width * 2) {
+  .event-column {
+    width: 50%;
+    float: left;
+    padding: 0 1em;
+  }
+}
+
+@media all and (min-width: $target-column-width * 3) {
+  .event-column {
+    width: 33.333%;
+    float: left;
+  }
+}
+
 .location span {
   display: block;
   float: left;
 }
 
 .event .date {
-  position: absolute;
-  left: 0;
-  top: 0;
+  float: left;
   font-family: sans-serif;
   text-transform: uppercase;
   line-height: 1;
   color: white;
   text-align: center;
 
-  img { width: 100%; }
+  .space { content: url("../images/letters/space.svg"); }
 
   &:before,
   &:after {
@@ -123,6 +136,6 @@ $letters: space, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, 
   $letter: nth($letters, $i);
 
   .event .location .#{$letter}:after {
-    content: url("/templates/forum/events-list/images/letters/#{ $letter }.svg");
+    content: url("../images/letters/#{ $letter }.svg");
   }
 }
