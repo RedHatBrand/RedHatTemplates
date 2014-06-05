@@ -61,4 +61,6 @@ MetalSmith(__dirname)
     directory: 'layouts'
   }))
   .destination(dest)
-  .build();
+  .build(function () {
+    console.log('Smith has acctually finished')
+  });

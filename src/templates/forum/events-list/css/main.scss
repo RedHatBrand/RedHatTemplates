@@ -5,7 +5,7 @@
 
 body {
   position: relative;
-  font-size: 100%;
+  font-size: 14px;
   line-height: 1.4em;
   margin: 0;
 }
@@ -73,21 +73,9 @@ $target-column-width: 20em;
 
 .event-column {
   box-sizing: border-box;
-}
-
-@media all and (min-width: $target-column-width * 2) {
-  .event-column {
-    width: 50%;
-    float: left;
-    padding: 0 1em;
-  }
-}
-
-@media all and (min-width: $target-column-width * 3) {
-  .event-column {
-    width: 33.333%;
-    float: left;
-  }
+  width: 50%;
+  float: left;
+  padding: 0 1em;
 }
 
 .location span {
