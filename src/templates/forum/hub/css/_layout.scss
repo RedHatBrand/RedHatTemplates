@@ -1,0 +1,79 @@
+
+.map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+
+  .leaflet-tile-pane {
+    opacity: .25;
+  }
+}
+
+
+.event-marker-icon {
+  width: 2em !important;
+  height: 2em !important;
+  margin: -1em !important;
+  font-size: 2.5em;
+  background-image: url(../images/marker.svg);
+  background-size: 100%;
+}
+
+.events-list {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 320px;
+  padding: $line-height * 2;
+  color: white;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+
+
+}
+
+li.event {
+  padding: .5em .75em;
+  position: relative;
+
+  &.active {
+    background: rgba(black, .5);
+  }
+
+  a {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    right: .5em;
+    text-indent: -999px;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    margin-top: -.5em;
+    border: .5em solid transparent;
+    border-left-color: $color-primary;
+  }
+}
+
+
+.location {
+  display: inline-block;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+
+
+.logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1em;
+  width: 8em;
+}

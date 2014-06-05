@@ -1,0 +1,57 @@
+---
+width: 100%
+height: 100vh
+---
+
+
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Home | Red Hat Forum 2014</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link href='<%= baseUrl %>/templates/forum/hub/css/main.css' media='screen' rel='stylesheet' />
+
+  </head>
+  <body>
+
+    <div class="map" id="map"></div>
+
+    <ul class="events-list">
+      {{#events}}
+      <li class="event" data-event-id="{{ location_id }}">
+        <h3 class="location">{{ location }}</h3>
+        <span class="date">{{ date }}</span>
+        <a href="{{{ link }}}">Visit site</a>
+      </li>
+      {{/events}}
+    </ul>
+
+    <img class="logo" src="<%= baseUrl %>/global-assets/images/logos/rh-logo.svg">
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/moment.min.js'></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.lettering.js'></script>
+
+    <script type="text/javascript">
+      window.events = [];
+
+      {{#events}}
+        var event = {};
+
+        event['location_id'] = "{{ location_id }}";
+        event['location'] = "{{ location }}";
+        event['latitude'] = parseFloat("{{ latitude }}");
+        event['longitude'] = parseFloat("{{ longitude }}");
+        event['date'] = new Date("{{ date }}");
+        event['link'] = "{{{ link }}}";
+        event['description'] = "{{ description }}";
+
+        events.push(event);
+      {{/events}}
+    </script>
+    <script src='<%= baseUrl %>/templates/forum/hub/js/main.js'></script>
+  </body>
+</html>
