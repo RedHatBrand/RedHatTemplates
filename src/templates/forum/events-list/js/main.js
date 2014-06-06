@@ -1,40 +1,43 @@
 $(function () {
-  function findLongestName () {
+  function findLocations () {
     var locations = [];
 
-    $('.event .location').each(function (_i, elem) {
-      var text = $(elem).text();
-
-      locations.push(text);
+    $('.event .location .text-content').each(function (_i, elem) {
+      var text = $(elem).text()
+      locations.push({ text: text, elem: $(elem).parent() });
+      $(elem).remove();
     });
 
-    return locations.sort(function (a, b) { return b.length - a.length; })[0];
+    return locations;
   }
 
-  var longest = findLongestName();
-  var elemWidth = 100 / (longest.length + 1.5);
+  function findLongest (arr, prop) {
+    return arr.sort(function (a, b) { return b[prop].length - a[prop].length; })[0];
+  }
 
-  $('.event .location').lettering();
+  var locations = findLocations();
+  var longest = findLongest(locations, 'text');
+  var elemWidth = 100 / (longest.text.length + 1.5);
 
-  $('.event .location span').each(function (_i, elem) {
-    var char = $(elem).text().toLowerCase();
-    char = char === ' ' ? 'space' : char;
+  $(locations).each(function (_i, location) {
+      for (var i = 0; i < longest.text.length; i++) {
+        (function elem() {
+          var char = location.text[i];
+          char = char ? char.toUpperCase() : '';
+          
+          var elem = $('<div class="outer-letter" />');
+          location.elem.append(elem);
+          elem.css({
+            width: elemWidth + '%'
+          });
 
-    $(elem)
-      .empty()
-      .addClass(char)
-      .css({
-        width: elemWidth + '%'
-      });
-  });
+          elem.append('<div class="space" />');
 
-  $('.event .location').each(function (_i, elem) {
-    var excess = longest.length - $(elem).find('span').length;
-    if (excess > 0) {
-      for(var i = 0; i < excess; i++) {
-        $(elem).append('<span class="space" style="width: ' + elemWidth + '%" />');
+          var svgContainer = $('<div class="svgs">');
+          elem.append(svgContainer);
+          svgContainer.append('<svg class="letter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 36"><text fill="white" x="50%" y="24" font-size="18" text-anchor="middle">' + char + '</text></svg>');
+        })(i, location);
       }
-    }
   });
 
   $('.event .date').css({

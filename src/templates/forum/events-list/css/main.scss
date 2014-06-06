@@ -1,3 +1,5 @@
+@import '../../../../global-assets/scss/fonts/overpass';
+
 body {
   font-size: 16px;
   margin: 0;
@@ -5,8 +7,8 @@ body {
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    display: table;
 }
 
 .clearfix:after {
@@ -21,9 +23,26 @@ body {
   padding-bottom: 0.5em;
 }
 
-.location span {
+.location .outer-letter {
   display: block;
+  position: relative;
   float: left;
+
+  .svgs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  svg {
+    height: 100%;
+
+    text {
+      font-family: 'Overpass', 'Helvetica', 'Verdana', sans-serif;
+    }
+  }
 }
 
 .event .date {
