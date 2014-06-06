@@ -57,7 +57,6 @@ var initMap = function initMap () {
     markersList[event.location_id] = marker;
   });
 
-  console.log(markersList);
   map.addLayer(markers);
 
   var offset = 0;

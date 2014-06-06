@@ -207,6 +207,16 @@ a.link-footer {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    transition: all .4s;
+    -webkit-transform: translate(-320px, -50%);
+  }
+
+  .menu-open .events-list {
+    z-index: 20;
+    -webkit-transform: translate(0, -50%);
   }
 
   .menu-open .rotate {

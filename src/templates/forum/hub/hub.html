@@ -75,7 +75,9 @@ height: 100vh
         event['link'] = "{{{ link }}}";
         event['description'] = "{{{ description }}}";
 
-        events.push(event);
+        if ( "{{ latitude }}" && "{{ longitude }}" ) {
+          events.push(event);
+        }
       {{/events}}
     </script>
     <script src='<%= baseUrl %>/templates/forum/hub/js/main.js'></script>
