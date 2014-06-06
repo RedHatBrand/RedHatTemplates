@@ -3,7 +3,8 @@ var initMap = function initMap () {
 
   window.map = L.map('map', {
     scrollWheelZoom: false,
-    zoomControl: false
+    zoomControl: false,
+    attributionControl: false
   });
 
   L.control.zoom({
@@ -15,7 +16,8 @@ var initMap = function initMap () {
   L.control.locate({
     position: 'topright',
     follow: true,
-    icon: 'icon-target'
+    icon: 'icon-target',
+    keepCurrentZoomLevel: true
   }).addTo(map);
 
   window.markersList = {};
@@ -76,5 +78,22 @@ $(function () {
     map.panTo( marker.getLatLng() );
     marker.openPopup();
   });
+
+
+  $('.info-toggle').on('click', function(e) {
+    e.preventDefault();
+
+    var $this = $(this);
+    $('.rotate-container').toggleClass('shifted');
+
+    if ($this.hasClass('active')) {
+      $this.text('about')
+      $($this).removeClass('active');
+    } else {
+      $this.text('Close')
+      $this.addClass('active');
+    }
+  });
+
 
 });

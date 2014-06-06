@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'icomoon';
+  src:url('../fonts/icomoon.eot?b9x691');
+  src:url('../fonts/icomoon.eot?#iefixb9x691') format('embedded-opentype'),
+    url('../fonts/icomoon.woff?b9x691') format('woff'),
+    url('../fonts/icomoon.ttf?b9x691') format('truetype'),
+    url('../fonts/icomoon.svg?b9x691#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-marker:before {
+  content: "\e600";
+}
+.icon-statistics:before {
+  content: "\e601";
+}
+.icon-search:before {
+  content: "\e602";
+}
+.icon-plus:before {
+  content: "\e603";
+}
+.icon-navicon:before {
+  content: "\e604";
+}
+.icon-minus:before {
+  content: "\e605";
+}
+.icon-ellipsis:before {
+  content: "\e606";
+}
+.icon-cross:before {
+  content: "\e607";
+}
+.icon-arrow-up:before {
+  content: "\e608";
+}
+.icon-arrow-right:before {
+  content: "\e609";
+}
+.icon-arrow-left:before {
+  content: "\e60a";
+}
+.icon-arrow-down:before {
+  content: "\e60b";
+}
+.icon-location:before {
+  content: "\e0f5";
+}
+.icon-calendar:before {
+  content: "\e115";
+}
+.icon-spinner:before {
+  content: "\e1ad";
+}
+.icon-target:before {
+  content: "\e27a";
+}
