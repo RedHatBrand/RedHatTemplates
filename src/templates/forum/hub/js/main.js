@@ -59,8 +59,15 @@ var initMap = function initMap () {
 
   console.log(markersList);
   map.addLayer(markers);
+
+  var offset = 0;
+
+  if ($(window).outerWidth() > 800) {
+    offset = 320;
+  }
+
   map.fitBounds(markers.getBounds(), {
-    paddingTopLeft: [320, 0]
+    paddingTopLeft: [offset, 0]
   });
 }
 
@@ -94,6 +101,17 @@ $(function () {
       $this.addClass('active');
     }
   });
+
+  $('.nav-toggle').on('click', function(e) {
+    e.preventDefault();
+
+    var $this = $(this);
+    $('body').toggleClass('menu-open');
+    $this.toggleClass('active');
+
+  });
+
+
 
 
 });
