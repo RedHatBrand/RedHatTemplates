@@ -1,7 +1,7 @@
 .nav-toggle { display: none; }
 
 .nav-menu {
-  background: white;
+  background: whitesmoke;
   position: fixed;
 
   .container {
@@ -57,19 +57,27 @@
     top: 0;
     left: 0;
     right: 0;
-    box-shadow: 0 .3em .2em -.3em rgba($black, 0.3);
+
+    .container {
+      margin-left: $page-margin;
+      margin-right: $page-margin;
+      padding: 0;
+      border-bottom: 1px solid $gray-dark;
+    }
   }
 }
 
 
 @media screen and (max-width: $breakpoint-medium) {
-  .nav-menu { position: fixed; }
   .nav-toggle {
     display: block;
     background-color: transparent;
-    &.active { background-color: rgba($white, 0.5); }
+    &.active {
+      background-color: rgba($color-primary, 0.5);
+      color: $white;
+    }
     &:hover {
-      background-color: rgba($white, 0.75);
+      color: rgba($black, 0.75);
     }
   }
   .nav-toggle-overlay {
@@ -93,11 +101,11 @@
   }
 
   .menu-push-toright .nav-toggle {
-    left: $vertical-nav-width;
+    right: $vertical-nav-width;
 
     @media screen and (max-width: $breakpoint-small) {
-      left: 100%;
-      margin-left: -3.5em;
+      right: 100%;
+      margin-right: -3.5em;
     }
   }
 }

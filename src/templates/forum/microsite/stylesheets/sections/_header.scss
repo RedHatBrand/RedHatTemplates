@@ -1,5 +1,4 @@
 .header {
-
   .container {
     position: relative;
     padding-top: 3em;
@@ -21,15 +20,23 @@
   }
 
   .logo {
-    position: absolute;
-    bottom: $line-height * 2.5;
-    right: $gutter;
-    width: 140px;
-    height: 46px;
-    margin: 0.25em;
-    padding: 1.6em 2.5em;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 20em;
+    height: 20em;
+    width: 20em;
+    height: 20em;
+    background-image: linear-gradient(135deg, transparent 0%, transparent 50%, $color-primary 50%, $color-primary 100%);
 
-    img { margin: 0; }
+    img {
+      position: absolute;
+      right: 1em;
+      bottom: 1em;
+      margin: 0;
+      height: 50%;
+      width: 50%;
+    }
 
     &:hover {
       background-color: rgba(255,255,255,.3);

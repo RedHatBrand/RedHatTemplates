@@ -1,0 +1,67 @@
+$vertical-nav-width: 18em !default;
+$nav-background-color: $white;
+
+@mixin nav() {
+  ul {
+    margin-bottom: 0;
+
+    li {
+      padding: 0;
+      margin: 0;
+      &:before {
+        content: '';
+        display: inline;
+        position: static;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.nav-menu {
+  @include nav();
+}
+
+@mixin right-nav() {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: $page-margin / 2;
+  width: $vertical-nav-width;
+  overflow: auto;
+  background-color: $nav-background-color;
+
+  .container { padding: 0; }
+  ul li { display: block; }
+
+  @media screen and (max-width: $breakpoint-small) {
+    width: 100%;
+  }
+
+  &.nav-hide {
+    right: -#{$vertical-nav-width};
+
+    @media screen and (max-width: $breakpoint-small) {
+      right: -100%;
+    }
+  }
+}
+
+.fixed-right-nav-all-breaks {
+  @include right-nav();
+}
+
+@media screen and (max-width: $breakpoint-medium) {
+  .fixed-right-nav-only-medium-break {
+    @include right-nav();
+  }
+}
+
+@media screen and (max-width: $breakpoint-small) {
+  .fixed-right-nav-only-small-break {
+    @include right-nav();
+  }
+}

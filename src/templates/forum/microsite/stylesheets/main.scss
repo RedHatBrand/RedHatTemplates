@@ -1,7 +1,10 @@
 @import '../../../../global-assets/scss/reset';
 @import '../../../../global-assets/scss/fonts/overpass';
+@import '../../../../global-assets/scss/utils/clearfix';
 
 @import 'settings';
+
+@import 'vendor/leaflet';
 
 @import 'helpers/layout_helpers',
         'helpers/interactive_helpers',
@@ -29,13 +32,9 @@
         'interactive/progress_and_meter',
         'interactive/file_inputs';
 
-@import 'components/fixed_left_nav',
+@import 'components/fixed_right_nav',
         'components/menu_icon',
-        'components/tabs',
-        'components/wizard',
-        'components/modal',
-        'components/flyout_menu',
-        'components/item_card';
+        'components/events_list';
 
 @import 'sections/hero',
         'sections/header',
@@ -45,4 +44,5 @@
         'sections/agenda',
         'sections/faq',
         'sections/hotel',
-        'sections/welcome';
+        'sections/welcome',
+        'sections/map';
