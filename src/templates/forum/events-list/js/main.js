@@ -2,7 +2,7 @@ $(function () {
   function findLocations () {
     var locations = [];
 
-    $('.event .location .text-content').each(function (_i, elem) {
+    $('.events-list .event .location .text-content').each(function (_i, elem) {
       var text = $(elem).text()
       locations.push({ text: text, elem: $(elem).parent() });
       $(elem).remove();
@@ -15,6 +15,7 @@ $(function () {
     return arr.sort(function (a, b) { return b[prop].length - a[prop].length; })[0];
   }
 
+  var baseUrl = $('#baseUrl').data('base-url');
   var locations = findLocations();
   var longest = findLongest(locations, 'text');
   var elemWidth = 100 / (longest.text.length + 1.5);
@@ -24,14 +25,14 @@ $(function () {
         (function elem() {
           var char = location.text[i];
           char = char ? char.toUpperCase() : '';
-          
+
           var elem = $('<div class="outer-letter" />');
           location.elem.append(elem);
           elem.css({
             width: elemWidth + '%'
           });
 
-          elem.append('<div class="space" />');
+          elem.append('<img src="' + baseUrl +'/templates/forum/events-list/images/letters/space.svg" />');
 
           var svgContainer = $('<div class="svgs">');
           elem.append(svgContainer);
@@ -40,7 +41,7 @@ $(function () {
       }
   });
 
-  $('.event .date').css({
+  $('.events-list .event .date').css({
     width: elemWidth + '%',
     marginRight: elemWidth * 0.5 + '%'
   });

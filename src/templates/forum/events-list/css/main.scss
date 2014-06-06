@@ -1,90 +1,66 @@
 @import '../../../../global-assets/scss/fonts/overpass';
+@import '../../../../global-assets/scss/utils/clearfix';
 
-body {
-  font-size: 16px;
-  margin: 0;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.event {
-  position: relative;
-  display: block;
-  margin: 0;
-  text-decoration: none;
-  padding-bottom: 0.5em;
-}
-
-.location .outer-letter {
-  display: block;
-  position: relative;
-  float: left;
-
-  .svgs {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  svg {
-    height: 100%;
-
-    text {
-      font-family: 'Overpass', 'Helvetica', 'Verdana', sans-serif;
-    }
-  }
-}
-
-.event .date {
-  float: left;
-  font-family: sans-serif;
-  text-transform: uppercase;
-  line-height: 1;
-  color: white;
-  text-align: center;
-  position: relative;
-
-  .space { content: url("../images/letters/space.svg"); }
-
-  .text-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-
-    svg text {
-      font-family: 'Overpass', 'Helvetica', 'Verdana', sans-serif;
-    }
-  }
-
-  .day, .month {
-    width: 100%;
-    height: 50%;
+.events-list {
+  .event {
+    position: relative;
     display: block;
+    margin: 0;
+    text-decoration: none;
   }
-}
 
-.event .location span:after,
-.event .date:after {
-	display: block;
-}
+  .location .outer-letter {
+    display: block;
+    position: relative;
+    float: left;
 
-$letters: space, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z;
+    .svgs {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
 
-@for $i from 1 through length($letters) {
-  $letter: nth($letters, $i);
+    svg {
+      height: 100%;
+    }
+  }
 
-  .event .location .#{$letter}:after {
-    content: url("../images/letters/#{ $letter }.svg");
+  .location .outer-letter,
+  .event .date {
+    .space { content: url("../images/letters/space.svg"); }
+
+    svg text, {
+      font-family: 'Overpass', 'Helvetica', 'Verdana', sans-serif;
+    }
+  }
+
+  .event .date {
+    float: left;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    line-height: 1;
+    color: white;
+    text-align: center;
+    position: relative;
+
+    .text-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      svg {
+        width: 100%;
+        height: 50%;
+        display: block;
+      }
+    }
+  }
+
+  .event .location span:after,
+  .event .date:after {
+    display: block;
   }
 }
