@@ -62,3 +62,6 @@ gulp.task('publish', ['build'], function () {
 });
 
 gulp.task('default', ['serve']);
+
+// If you are experiencing issues with Gulp server shutting down, try this... `gulp setUlimit`
+gulp.task('setUlimit', shell.task('ulimit -n 8192'));

@@ -7,9 +7,48 @@
   width: 100%;
   height: 100%;
   background: black;
+  background-image: url(https://d3s84xo5cmutkt.cloudfront.net/assets/attachments/000/000/922/original/road-grey-web.jpg?1397463630);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 
   .leaflet-tile-pane {
-    opacity: .25;
+    opacity: .333;
+  }
+}
+
+.leaflet-popup-content {
+  margin: 2em;
+}
+
+a.link-footer {
+  position: relative;
+  display: block;
+  background: black;
+  color: white;
+  margin-top: 1em;
+  padding: 1em 1.5em;
+  font-family: $font-family-headings;
+  text-transform: uppercase;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: .5em;
+    right: .5em;
+    border: .75em solid transparent;
+    border-bottom-color: $color-primary;
+    border-right-color: $color-primary;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+
+    &:before {
+      border-bottom-color: black;
+      border-right-color: black;
+    }
   }
 }
 
@@ -46,18 +85,9 @@ li.event {
     background: rgba(black, .5);
   }
 
-  a {
-    position: absolute;
-    display: inline-block;
-    top: 50%;
-    right: .5em;
-    text-indent: -999px;
-    overflow: hidden;
-    width: 0;
-    height: 0;
-    margin-top: -.5em;
-    border: .5em solid transparent;
-    border-left-color: $color-primary;
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(black, .25);
   }
 }
 
@@ -66,6 +96,14 @@ li.event {
   display: inline-block;
   margin: 0;
   text-transform: uppercase;
+}
+
+.date {
+  margin-left: .5em;
+}
+
+.description {
+  margin: 1em 0;
 }
 
 

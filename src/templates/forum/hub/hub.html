@@ -23,7 +23,6 @@ height: 100vh
       <li class="event" data-event-id="{{ location_id }}">
         <h3 class="location">{{ location }}</h3>
         <span class="date">{{ date }}</span>
-        <a href="{{{ link }}}">Visit site</a>
       </li>
       {{/events}}
     </ul>
@@ -32,6 +31,7 @@ height: 100vh
 
     <script src='http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/moment.min.js'></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+    <script src='<%= baseUrl %>/templates/forum/hub/js/leaflet-locate.js'></script>
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.lettering.js'></script>
 
@@ -45,7 +45,7 @@ height: 100vh
         event['location'] = "{{ location }}";
         event['latitude'] = parseFloat("{{ latitude }}");
         event['longitude'] = parseFloat("{{ longitude }}");
-        event['date'] = new Date("{{ date }}");
+        event['date'] = "{{ date }}";
         event['link'] = "{{{ link }}}";
         event['description'] = "{{ description }}";
 

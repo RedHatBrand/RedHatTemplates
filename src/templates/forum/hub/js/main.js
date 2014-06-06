@@ -1,7 +1,7 @@
 
 var initMap = function initMap () {
 
-  var map = L.map('map', {
+  window.map = L.map('map', {
     scrollWheelZoom: false,
     zoomControl: false
   });
@@ -12,11 +12,13 @@ var initMap = function initMap () {
 
   L.tileLayer('http://{s}.tile.stamen.com/{style}/{z}/{x}/{y}.png', {style: 'toner-background'}).addTo(map);
 
-  // L.control.locate({
-  //   follow: true,
-  //   icon: 'icon-target'
-  // }).addTo(map);
+  L.control.locate({
+    position: 'topright',
+    follow: true,
+    icon: 'icon-target'
+  }).addTo(map);
 
+  window.markersList = {};
   var markers = L.featureGroup();
 
   var icon =  L.divIcon({className: 'event-marker-icon'});
@@ -36,25 +38,24 @@ var initMap = function initMap () {
 
     marker.bindPopup(
       "<h3 class='location'>" + event.location + "</h3>" +
-      "<span class='date'>" + moment(event.date).format('d MMM') + "</span>" +
-      "<a href=" + event.link  + ">Visit site</a>" +
-      "<p class='description'>" + event.description + "</p>"
+      "<span class='date'>" + event.date + "</span>" +
+      "<div class='description'>" + event.description + "</div>" +
+      "<a class='link-footer' href=" + event.link  + ">Visit site</a>"
     );
-
-    marker.on('mouseover', function(e) {
-      $('[data-event-id=' + event.location_id + ']').addClass('active');
-      console.log( $('[data-event-id=' + event.location_id + ']') );
-    }).on('mouseout', function(e) {
-      $('[data-event-id=' + event.location_id + ']').removeClass('active')
-    });
 
     marker.on('click', function(e) {
       map.panTo(latlng);
+      $('[data-event-id=' + event.location_id + ']').addClass('active');
+
+    }).on('popupclose', function(e) {
+      $('[data-event-id=' + event.location_id + ']').removeClass('active');
     });
 
     markers.addLayer(marker);
+    markersList[event.location_id] = marker;
   });
 
+  console.log(markersList);
   map.addLayer(markers);
   map.fitBounds(markers.getBounds(), {
     paddingTopLeft: [320, 0]
@@ -65,6 +66,15 @@ $(function () {
 
   initMap();
 
-$('[data-event-id="2"]')
+  $('li.event').on('click', function(e) {
+    var $this = $(this),
+       marker = markersList[$this.data('event-id')];
+
+    $('li.event').not($this).removeClass('active');
+    $this.addClass('active');
+
+    map.panTo( marker.getLatLng() );
+    marker.openPopup();
+  });
 
 });
