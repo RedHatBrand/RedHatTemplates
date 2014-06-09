@@ -5,9 +5,7 @@ height: 470mm
 
 <!DOCTYPE html>
 <html
-  height="{{#add}}{{height}}+20{{/add}}mm"
-  width="{{#add}}{{width}}+20{{/add}}mm"
-  style="padding: 5mm">
+  style="height: {{#multiply}}12*{{#add}}{{height}}+20{{/add}}{{/multiply}}px; width: {{#multiply}}12*{{#add}}{{width}}+20{{/add}}{{/multiply}}px; padding: 60px">
 
   <head>
     <meta charset='utf-8'>
@@ -16,9 +14,7 @@ height: 470mm
 
   <body
     class="rh-theme-{{ category }}"
-    height="{{#add}}{{height}}+10{{/add}}mm"
-    width="{{#add}}{{width}}+10{{/add}}mm"
-    style="padding: 5mm; position: relative; height: {{#add}}{{height}}+10{{/add}}mm">
+    style="height: {{#multiply}}12*{{#add}}{{height}}+10{{/add}}{{/multiply}}px; width: {{#multiply}}12*{{#add}}{{width}}+10{{/add}}{{/multiply}}px; padding: 60px; position: relative">
 
     <div class="map" id="map"></div>
 
@@ -48,10 +44,10 @@ height: 470mm
     <div id="baseUrl" data-base-url="<%= baseUrl %>"></div>
     <div id="locationName" data-location-name="{{ location }}"></div>
 
-    <div class='crop-mark top-left'></div>
-    <div class='crop-mark top-right'></div>
-    <div class='crop-mark bottom-left'></div>
-    <div class='crop-mark bottom-right'></div>
+    <div class='crop-mark top-left' style="width: 120px; height: 120px"></div>
+    <div class='crop-mark top-right' style="width: 120px; height: 120px"></div>
+    <div class='crop-mark bottom-left' style="width: 120px; height: 120px"></div>
+    <div class='crop-mark bottom-right' style="width: 120px; height: 120px"></div>
 
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>

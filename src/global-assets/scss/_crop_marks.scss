@@ -16,79 +16,81 @@
 }
 
 .crop-mark.top-left {
-  top: -5mm;
-  left: -5mm;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
 }
 
 .crop-mark.top-left:after {
   bottom: 0;
   left: 0;
   height: 1px;
-  width: 5mm;
+  width: 50%;
 }
 
 .crop-mark.top-left:before {
   top: 0;
   right: 0;
   width: 1px;
-  height: 5mm;
+  height: 50%;
 }
 
 .crop-mark.top-right {
-  top: -5mm;
-  right: -5mm;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
 }
 
 .crop-mark.top-right:after {
   bottom: 0;
   right: 0;
   height: 1px;
-  width: 5mm;
+  width: 50%;
 }
 
 .crop-mark.top-right:before {
   top: 0;
   left: 0;
   width: 1px;
-  height: 5mm;
+  height: 50%;
 }
 
 /* Bottom */
 
 .crop-mark.bottom-left {
-  bottom: -5mm;
-  left: -5mm;
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%, 50%);
 }
 
 .crop-mark.bottom-left:after {
   top: 0;
   left: 0;
   height: 1px;
-  width: 5mm;
+  width: 50%;
 }
 
 .crop-mark.bottom-left:before {
   bottom: 0;
   right: 0;
   width: 1px;
-  height: 5mm;
+  height: 50%;
 }
 
 .crop-mark.bottom-right {
-  bottom: -5mm;
-  right: -5mm;
+  transform: translate(50%, 50%);
 }
 
 .crop-mark.bottom-right:after {
   top: 0;
   right: 0;
   height: 1px;
-  width: 5mm;
+  width: 50%;
 }
 
 .crop-mark.bottom-right:before {
   bottom: 0;
   left: 0;
   width: 1px;
-  height: 5mm;
+  height: 50%;
 }
