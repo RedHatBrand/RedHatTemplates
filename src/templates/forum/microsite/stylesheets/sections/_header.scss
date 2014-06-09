@@ -19,45 +19,6 @@
     }
   }
 
-  .logo {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 20em;
-    height: 20em;
-    width: 20em;
-    height: 20em;
-    background-image: linear-gradient(135deg, transparent 0%, transparent 50%, $color-primary 50%, $color-primary 100%);
-
-    img {
-      position: absolute;
-      right: 1em;
-      bottom: 1em;
-      margin: 0;
-      height: 50%;
-      width: 50%;
-    }
-
-    &:hover {
-      background-color: rgba(255,255,255,.3);
-      overflow: visible;
-    }
-
-    @media screen and (max-width: $breakpoint-small) {
-      bottom: auto;
-      right: auto;
-      top: 0;
-      margin-top: 0;
-      padding-top: $line-height;
-      left: $gutter/2;
-      margin: 0;
-      padding: 1.6em $gutter;
-      &:hover {
-        background: rgba(darken($color-shade, 10%), 1);
-      }
-    }
-  }
-
   .box {
     top: $line-height * 1.8;
     padding: 0;

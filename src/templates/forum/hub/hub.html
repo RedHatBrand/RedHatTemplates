@@ -21,14 +21,17 @@ height: 100vh
       <img class="logo" src="<%= baseUrl %>/global-assets/images/logos/rh-logo.svg">
     </div>
 
-    <ul class="events-list">
-      {{#events}}
-      <li class="event" data-event-id="{{ location_id }}">
-        <h3 class="location">{{ location }}</h3>
-        <span class="date">{{ date }}</span>
-      </li>
-      {{/events}}
-    </ul>
+    <div class="events-list-container">
+      <ul class="events-list">
+        {{#events}}
+        <li class="event clearfix" data-event-id="{{ location_id }}">
+          <div class="location clearfix">
+            <div class="text-content">{{ location }}</div>
+          </div>
+        </li>
+        {{/events}}
+      </ul>
+    </div>
 
     <button class="nav-toggle">
       <span>Menu</span>
@@ -44,8 +47,7 @@ height: 100vh
     <div class="information">
       <h2>About</h2>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      {{{ about }}}
 
       <a class="info-toggle" href="#">About</a>
 
@@ -55,31 +57,13 @@ height: 100vh
       </div>
     </div>
 
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/moment.min.js'></script>
+    <div id="baseUrl" data-base-url="<%=baseUrl%>"></div>
+
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
     <script src='<%= baseUrl %>/templates/forum/hub/js/leaflet-locate.js'></script>
+    <script src='<%= baseUrl %>/templates/forum/hub/js/events-list.js'></script>
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.lettering.js'></script>
-
-    <script type="text/javascript">
-      window.events = [];
-
-      {{#events}}
-        var event = {};
-
-        event['location_id'] = "{{ location_id }}";
-        event['location'] = "{{ location }}";
-        event['latitude'] = parseFloat("{{ latitude }}");
-        event['longitude'] = parseFloat("{{ longitude }}");
-        event['date'] = "{{ date }}";
-        event['link'] = "{{{ link }}}";
-        event['description'] = "{{{ description }}}";
-
-        if ( "{{ latitude }}" && "{{ longitude }}" ) {
-          events.push(event);
-        }
-      {{/events}}
-    </script>
     <script src='<%= baseUrl %>/templates/forum/hub/js/main.js'></script>
   </body>
 </html>

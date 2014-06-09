@@ -19,9 +19,12 @@ height: 100vh
     <!--[if lt IE 9]> <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script> <![endif]-->
   </head>
   <body>
-    <aside class="map-panel">
+    <header class="map-panel">
       <div class="map" id="map" style="background-image: url({{{ hero-image }}})"></div>
-    </aside>
+      <a class='logo' href='//www.redhat.com' target='_blank' title='Go to redhat.com'>
+        <img src='<%=baseUrl%>/global-assets/images/logos/rh-logo.svg' />
+      </a>
+    </header>
     <div class='wrapper'>
       <header class='header' role='banner' id='welcome'>
         <figure class='hero'>
@@ -50,24 +53,18 @@ height: 100vh
               </a>
             </div>
 
-
             <div class='registration'>
               <a class='register-button' href='{{{ register-link }}}'>Register</a>
             </div>
 
-            {{#event-logo}}
-            <img class='event-logo' src='{{{ event-logo }}}'>
-            {{/event-logo}}
-            <a class='logo' href='//www.redhat.com' target='_blank' title='Go to redhat.com'>
-              <img src='<%=baseUrl%>/global-assets/images/logos/rh-logo.svg' />
-            </a>
+            {{{ welcome-message }}}
           </div>
         </figure>
       </header>
       <button class='nav-toggle'>
         <span></span>
       </button>
-      <nav class='nav-menu animated fadeInDown fixed-right-nav-only-medium-break layer-four nav-hide'>
+      <nav class='nav-menu animated fadeInDown fixed-left-nav-only-medium-break layer-four nav-hide'>
         <div class='container'>
           <ul>
             <li><a class='menu-link' href='#welcome'>Welcome</a></li>
@@ -77,20 +74,6 @@ height: 100vh
           </ul>
         </div>
       </nav>
-
-      <section class='section-welcome main'>
-        <div class='container'>
-          <div class="grid-container">
-            <div class="two-thirds">
-              <h4>Welcome</h4>
-              {{{ welcome-message }}}
-            </div>
-            <div class="one-third">
-              <img src="{{{ welcome-image }}}" />
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section class='section-agenda main' id='agenda'>
         <div class='container'>
@@ -240,6 +223,7 @@ height: 100vh
     </div>
 
     <div id="baseUrl" data-base-url="<%= baseUrl %>"></div>
+    <div id="locationName" data-location-name="{{ location }}"></div>
 
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.fitvids.js'></script>
@@ -248,37 +232,10 @@ height: 100vh
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.smooth-scroll.js'></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://d3js.org/topojson.v1.min.js"></script>
     <script src='<%= baseUrl %>/templates/forum/hub/js/leaflet-locate.js'></script>
-
-    <script type="text/javascript">
-      window.RHEvents = {};
-      window.RHEvents.events = [];
-      var locationName = '{{ location }}';
-
-      {{#events}}
-      (function (events) {
-        var event = {};
-
-        event['location_id'] = "{{ location_id }}";
-        event['location'] = "{{ location }}";
-        event['latitude'] = parseFloat("{{ latitude }}");
-        event['longitude'] = parseFloat("{{ longitude }}");
-        event['date'] = "{{ date }}";
-        event['link'] = "{{{ link }}}";
-        event['description'] = "{{ description }}";
-
-        if ("{{ latitude }}" && "{{ longitude }}") {
-          events.push(event);
-        }
-      })(RHEvents.events);
-      {{/events}}
-
-      window.setlectedLocation = _.find(RHEvents.events, function (event) {
-        return event.location === locationName;
-      });
-
-    </script>
-
+    <script src='<%= baseUrl %>/templates/forum/microsite/javascripts/d3-topoJSON.js'></script>
     <script src='<%= baseUrl %>/templates/forum/microsite/javascripts/map.js'></script>
     <script src='<%= baseUrl %>/templates/forum/microsite/javascripts/events-list.js'></script>
     <script src='<%= baseUrl %>/templates/forum/microsite/javascripts/main.js'></script>

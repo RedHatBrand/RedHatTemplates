@@ -1,6 +1,18 @@
 .container {
   max-width: $max-width;
   padding: $page-margin;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -0.25em;
+    left: $page-margin;
+    right: $page-margin;
+    height: 0.5em;
+    background: rgba($black, 0.05);
+  }
 
   @if $center-layout {
     margin-left: auto;

@@ -46,7 +46,7 @@
 
     data.toJSON = function () {
       return function (text, render) {
-        return JSON.stringify(this);
+        return JSON.stringify(this[text]);
       }
     }
 

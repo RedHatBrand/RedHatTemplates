@@ -4,12 +4,15 @@
 @import 'leaflet';
 
 @import '../../../../global-assets/scss/fonts/overpass';
+@import '../../../../global-assets/scss/utils/clearfix';
 
 @import 'settings';
 
 @import 'icons';
 
 @import 'menu_icon';
+
+@import 'events-list';
 
 @import 'typography';
 @import 'layout';

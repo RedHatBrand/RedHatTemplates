@@ -1,66 +1,115 @@
+function getEvents () {
+  return $.get('http://d3s84xo5cmutkt.cloudfront.net/renders/attachments/000/002/483/original/latest_event-data.html');
+}
 
-var initMap = function initMap () {
+function parseRespose(data) {
+  var doc = new DOMParser().parseFromString(data, "application/xml");
+  return JSON.parse($('#event-data', doc).text());
+}
 
-  window.map = L.map('map', {
+function initMap (events, selectedLocation) {
+  var map = L.map('map', {
     scrollWheelZoom: false,
-    zoomControl: false
+    zoomControl: false,
+    attributionControl: false
   });
 
   L.control.zoom({
     position: 'topright'
   }).addTo(map);
 
-  L.tileLayer('http://{s}.tile.stamen.com/{style}/{z}/{x}/{y}.png', {style: 'toner'}).addTo(map);
 
-  L.control.locate({
-    position: 'topright',
-    follow: true,
-    icon: 'icon-target'
-  }).addTo(map);
+  // Add a fake GeoJSON line to coerce Leaflet into creating the <svg> tag that d3_geoJson needs
+  var geoPlaceholder = new L.geoJson({"type": "LineString","coordinates":[[0,0],[0,0]]})
+  geoPlaceholder.addTo(map);
 
-  window.markersList = {};
+  // Water Areas from OpenStreetMap
+  var water = new L.TileLayer.d3_topoJSON("http://tile.openstreetmap.us/vectiles-water-areas/{z}/{x}/{y}.topojson", {
+    class: "water",
+    layerName: "vectile",
+    style: ""
+  })
+  water.addTo(map);
+
+  // Highways from OpenStreetMap
+  var roadSizes = {
+    "highway": "2px",
+    "major_road": "1px",
+    "minor_road": "0.5px",
+    "rail": "0.125px",
+    "path": "0.25px"
+  };
+  var roads = new L.TileLayer.d3_topoJSON("http://tile.openstreetmap.us/vectiles-highroad/{z}/{x}/{y}.topojson", {
+    class: "road",
+    layerName: "vectile",
+    style: function(d) { return "stroke-width: " + roadSizes[d.properties.kind]; }
+  })
+  roads.addTo(map);
+
+  var markersList = map.markersList = {};
   var markers = L.featureGroup();
 
   var icon =  L.divIcon({className: 'event-marker-icon'});
+  var currentIcon = L.divIcon({className: 'event-marker-icon-current'});
 
-  $.each(RHEvents.events, function(i, event) {
-    var latlng = [event.latitude, event.longitude]
+  $.each(events, function(i, eventData) {
+    if(!(eventData.latitude && eventData.longitude)) return;
+
+    var latlng = [eventData.latitude, eventData.longitude]
 
     var customMarker = L.Marker.extend({
       options: {
-        location_id: event.location_id
+        location_id: eventData.location_id
       }
     });
 
     var marker = new customMarker(latlng, {
-      icon: icon
+      icon: eventData.location === selectedLocation.location ? currentIcon : icon
     });
 
+    if (eventData.location !== selectedLocation.location) {
+      marker.bindPopup(
+        "<h3 class='location'>" + eventData.location + "</h3>" +
+        "<span class='date'>" + eventData.date + "</span>" +
+        "<a class='link-footer' href=" + eventData.link  + ">Visit site</a>"
+      );
+    }
+
     marker.on('click', function(e) {
-      window.location = event.link;
+      map.panTo(latlng);
     });
 
     markers.addLayer(marker);
-    markersList[event.location_id] = marker;
+    markersList[eventData.location_id] = marker;
   });
 
   map.addLayer(markers);
-  map.setView([setlectedLocation.latitude, setlectedLocation.longitude], 10);
+  map.setView([selectedLocation.latitude - 0.05, selectedLocation.longitude + 0.15], 10);
+
+  return map;
 }
 
 $(function () {
+  var locationName = $('#locationName').data('location-name');
 
-  initMap();
+  getEvents().then(function (data) {
+    var events = parseRespose(data);
 
-  $('li.event').on('click', function(e) {
-    var $this = $(this),
-       marker = markersList[$this.data('event-id')];
+    var selectedLocation = _.find(events, function (eventData) {
+      return eventData.location === locationName;
+    });
 
-    $('li.event').not($this).removeClass('active');
-    $this.addClass('active');
+    var map = initMap(events, selectedLocation);
 
-    map.panTo( marker.getLatLng() );
-    marker.openPopup();
+    $('li.event').on('click', function(e) {
+      var $this = $(this),
+          marker = map.markersList[$this.data('event-id')];
+
+      $('li.event').not($this).removeClass('active');
+      $this.addClass('active');
+
+      map.panTo( marker.getLatLng() );
+      marker.openPopup();
+    });
   });
-
 });

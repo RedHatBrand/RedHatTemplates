@@ -21,7 +21,7 @@ $(function () {
 
   longest = longest > 10 ? longest : 10;
 
-  var elemWidth = 100 / (longest + 1.5);
+  var elemWidth = 100 / (longest);
 
   $(locations).each(function (_i, location) {
       for (var i = 0; i < longest; i++) {
@@ -39,7 +39,7 @@ $(function () {
 
           var svgContainer = $('<div class="svgs">');
           elem.append(svgContainer);
-          svgContainer.append('<svg class="letter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 36"><text fill="white" x="50%" y="24" font-size="18" text-anchor="middle">' + char + '</text></svg>');
+          svgContainer.append('<svg class="letter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 36"><text x="50%" y="24" font-size="18" text-anchor="middle">' + char + '</text></svg>');
         })(i, location);
       }
   });

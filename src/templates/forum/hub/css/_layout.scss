@@ -167,16 +167,15 @@ a.link-footer {
   background-size: 100%;
 }
 
-.events-list {
+.events-list-container {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: $line-height * 2;
+  width: 320px;
   z-index: 1;
-  padding-left: $line-height * 2;
-  color: white;
-  -webkit-transform: translate(0, -50%);
-  -moz-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
+  padding: 1em;
+  background: whitesmoke;
+  border-radius: 0.25em;
   transform: translate(0, -50%);
 }
 
@@ -199,11 +198,13 @@ a.link-footer {
 
   .nav-toggle { display: block; }
 
-  .events-list {
+  .events-list-container {
     z-index: 0;
     width: 320px;
-    font-size: 90%;
-    padding: 0 .75em;
+    padding: 1em;
+    left: 0;
+    top: 3em;
+    background: transparent;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -211,50 +212,46 @@ a.link-footer {
     -moz-transition: all .4s;
     -ms-transition: all .4s;
     transition: all .4s;
-    -webkit-transform: translate(-320px, -50%);
+    -webkit-transform: translate(-320px, 0);
   }
 
-  .menu-open .events-list {
+  .menu-open .events-list-container {
     z-index: 20;
-    -webkit-transform: translate(0, -50%);
+    -webkit-transform: translate(0, 0);
   }
 
   .menu-open .rotate {
-    -webkit-transform: translate(320px, 0) rotateY(45deg);
+    -webkit-transform: translate(320px, 0) rotateY(0);
     box-shadow: 0 0 30px rgba(0,0,0,.25);
   }
 }
 
 li.event {
-  padding: .5em .75em;
   position: relative;
 
+  .date,
+  .month,
+  .letter {
+    fill: $white;
+  }
+
   &.active {
-    background: rgba(black, .5);
+    .date,
+    .month,
+    .letter {
+      fill: $color-primary;
+    }
   }
 
   &:hover {
     cursor: pointer;
-    background-color: rgba(black, .25);
+    .date,
+    .month,
+    .letter {
+      fill: $color-primary;
+    }
   }
 }
-
-
-.location {
-  display: inline-block;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-.date {
-  margin-left: .5em;
-}
-
-.description {
-  margin: 1em 0;
-}
-
-
 
 .logos {
   position: absolute;

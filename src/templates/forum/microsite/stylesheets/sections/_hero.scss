@@ -4,10 +4,13 @@
   background-size: cover;
 }
 
+@media screen and (min-width: $breakpoint-medium) {
+  .hero { margin-top: 3em; }
+}
+
 .hero {
   position: relative;
   overflow: hidden;
-  margin-top: 3em;
 
   a.top-right {
     position: absolute;
@@ -111,4 +114,5 @@ h1.title {
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25em;
+  margin-bottom: 2em;
 }

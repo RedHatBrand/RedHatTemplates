@@ -12,6 +12,15 @@
   table thead th, table tbody th {
     background-color: transparent;
   }
+
+  table.calendar {
+    table-layout: fixed;
+
+    .time,
+    .duration {
+      width: 25%;
+    }
+  }
 }
 
 .calendar {

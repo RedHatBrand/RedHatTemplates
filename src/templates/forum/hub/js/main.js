@@ -1,7 +1,14 @@
+function getEvents () {
+  return $.get('http://d3s84xo5cmutkt.cloudfront.net/renders/attachments/000/002/483/original/latest_event-data.html');
+}
 
-var initMap = function initMap () {
+function parseRespose(data) {
+  var doc = new DOMParser().parseFromString(data, "application/xml");
+  return JSON.parse($('#event-data', doc).text());
+}
 
-  window.map = L.map('map', {
+function initMap (events) {
+  var map = L.map('map', {
     scrollWheelZoom: false,
     zoomControl: false,
     attributionControl: false
@@ -20,17 +27,19 @@ var initMap = function initMap () {
     keepCurrentZoomLevel: true
   }).addTo(map);
 
-  window.markersList = {};
+  var markersList = map.markersList = {};
   var markers = L.featureGroup();
 
   var icon =  L.divIcon({className: 'event-marker-icon'});
 
-  $.each(events, function(i, event) {
-    var latlng = [event.latitude, event.longitude]
+  $.each(events, function(i, eventData) {
+    if(!(eventData.latitude && eventData.longitude)) return;
+
+    var latlng = [eventData.latitude, eventData.longitude]
 
     var customMarker = L.Marker.extend({
       options: {
-        location_id: event.location_id
+        location_id: eventData.location_id
       }
     });
 
@@ -39,22 +48,21 @@ var initMap = function initMap () {
     });
 
     marker.bindPopup(
-      "<h3 class='location'>" + event.location + "</h3>" +
-      "<span class='date'>" + event.date + "</span>" +
-      "<div class='description'>" + event.description + "</div>" +
-      "<a class='link-footer' href=" + event.link  + ">Visit site</a>"
+      "<h3 class='location'>" + eventData.location + "</h3>" +
+      "<span class='date'>" + eventData.date + "</span>" +
+      "<a class='link-footer' href=" + eventData.link  + ">Visit site</a>"
     );
 
     marker.on('click', function(e) {
       map.panTo(latlng);
-      $('[data-event-id=' + event.location_id + ']').addClass('active');
+      $('[data-event-id=' + eventData.location_id + ']').addClass('active');
 
     }).on('popupclose', function(e) {
-      $('[data-event-id=' + event.location_id + ']').removeClass('active');
+      $('[data-event-id=' + eventData.location_id + ']').removeClass('active');
     });
 
     markers.addLayer(marker);
-    markersList[event.location_id] = marker;
+    markersList[eventData.location_id] = marker;
   });
 
   map.addLayer(markers);
@@ -68,23 +76,27 @@ var initMap = function initMap () {
   map.fitBounds(markers.getBounds(), {
     paddingTopLeft: [offset, 0]
   });
+
+  return map;
 }
 
 $(function () {
+  getEvents().then(function (data) {
+    var events = parseRespose(data);
 
-  initMap();
+    var map = initMap(events);
 
-  $('li.event').on('click', function(e) {
-    var $this = $(this),
-       marker = markersList[$this.data('event-id')];
+    $('li.event').on('click', function(e) {
+      var $this = $(this),
+         marker = map.markersList[$this.data('event-id')];
 
-    $('li.event').not($this).removeClass('active');
-    $this.addClass('active');
+      $('li.event').not($this).removeClass('active');
+      $this.addClass('active');
 
-    map.panTo( marker.getLatLng() );
-    marker.openPopup();
+      map.panTo( marker.getLatLng() );
+      marker.openPopup();
+    });
   });
-
 
   $('.info-toggle').on('click', function(e) {
     e.preventDefault();
@@ -104,13 +116,7 @@ $(function () {
   $('.nav-toggle').on('click', function(e) {
     e.preventDefault();
 
-    var $this = $(this);
     $('body').toggleClass('menu-open');
-    $this.toggleClass('active');
-
+    $(this).toggleClass('active');
   });
-
-
-
-
 });

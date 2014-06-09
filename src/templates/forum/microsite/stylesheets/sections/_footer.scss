@@ -1,6 +1,10 @@
 .footer {
   background-color: $gray-lighter;
 
+  .container:before {
+    display: none;
+  }
+
   ul.footer-nav-menu {
     li {
       padding: 0.5em 0;

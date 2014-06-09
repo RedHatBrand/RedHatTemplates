@@ -1,21 +1,33 @@
 $aside-width: 22em;
 
 .map-panel {
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: $aside-width;
+  position: relative;
+  height: 18em;
 }
 
 @media screen and (min-width: $breakpoint-medium) {
-  .nav-menu {
-    left: $aside-width;
+  .map-panel { margin-top: 4em; }
+}
+
+@media screen and (min-width: $max-width + $aside-width) {
+  .map-panel {
+    margin: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: $aside-width;
+  }
+  .wrapper {
+    margin-left: $aside-width;
   }
 }
 
-.wrapper {
-  margin-left: $aside-width;
+@media screen and (min-width: $max-width + $aside-width) {
+  .nav-menu {
+    left: $aside-width;
+  }
 }
 
 .map {
@@ -42,4 +54,49 @@ $aside-width: 22em;
   font-size: 2.5em;
   background-image: url(../images/marker.svg);
   background-size: 100%;
+}
+
+.event-marker-icon-current {
+  width: 6em !important;
+  height: 2.667em !important;
+  margin: -1em !important;
+  font-size: 2.5em;
+  background-image: url(../images/forum-logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+path { stroke-linejoin: round; stroke-linecap: round; fill: none;}
+path.road { stroke: #999; }
+path.water { stroke: white; fill: white; }
+
+.leaflet-overlay-pane {
+  opacity: 0.25;
+}
+
+.map-panel {
+  .logo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: $aside-width * 0.75;
+    height: $aside-width * 0.75;
+    width: $aside-width * 0.75;
+    height: $aside-width * 0.75;
+    background-image: linear-gradient(135deg, transparent 0%, transparent 50%, $color-primary 50%, $color-primary 100%);
+
+    img {
+      position: absolute;
+      right: 10%;
+      bottom: 10%;
+      margin: 0;
+      height: 40%;
+      width: 40%;
+    }
+
+    &:hover {
+      background-color: rgba(255,255,255,.3);
+      overflow: visible;
+    }
+  }
 }
