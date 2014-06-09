@@ -7,6 +7,8 @@ height: 470mm
 <html
   style="height: {{#multiply}}12*{{#add}}{{height}}+20{{/add}}{{/multiply}}px; width: {{#multiply}}12*{{#add}}{{width}}+20{{/add}}{{/multiply}}px; padding: 60px">
 
+  <!-- DPI ratio mm:px is Actually 1:11.811023622 -->
+
   <head>
     <meta charset='utf-8'>
     <link href='<%= baseUrl %>/templates/forum/poster/stylesheets/main.css' media='screen' rel='stylesheet'>
