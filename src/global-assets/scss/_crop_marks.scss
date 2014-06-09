@@ -78,6 +78,8 @@
 }
 
 .crop-mark.bottom-right {
+  bottom: 0;
+  right: 0;
   transform: translate(50%, 50%);
 }
 
