@@ -43,29 +43,11 @@ img, video, audio {
   max-width: 100%;
 }
 
-.text {
-  z-index:100;
-  position:relative;
-  width:100%;
-  text-align:center;
-
-    .title {
-      width:70%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .sub-title {
-      width:50%;
-      margin-left: auto;
-      margin-right: auto;
-
-    }
-
-    .long-copy {
-      width:40%;
-      margin-left: auto;
-      margin-right: auto;
+.rh-logos {
+    svg {
+      width:250px;
+      height:100px;
+      z-index:5;
     }
 }
 
@@ -112,115 +94,68 @@ math {
 /*--------DIVS-----------------*/
 
 table.container {
+  margin:10% auto;
+
+
   td {
     padding:0;
     position: relative;
+
   }
 
 }
 
 table.main {
-  background-color:$color-primary-dark;
+  background-color:$color-primary;
   border-collapse:collapse;
   -moz-box-shadow:    0 0 3px 0 $color-primary-dark;
   -webkit-box-shadow: 0 0 3px 0 $color-primary-dark;
   box-shadow:         0 0 3px 0 $color-primary-dark;
 }
 
-thead {
-  text-align:center;
-
-    tr {
-      height:250px;
-
-          td {
-            padding:0;
-
-            .brand,
-            .campaign {
-              position: absolute;
-              top: 0;
-              bottom: 0;
-              left: 0;
-              right: 0;
-
-                svg {
-                  width:100%;
-                  height:250px;
-                  z-index:0;
-                }
-
-            }
-
-            .brand,
-            .campaign { display: none }
-
-
-
-            h1 {
-              color:white;
-              text-transform:uppercase;
-              font-size:60px;
-              line-height:0.9em;
-              text-align:center;
-              padding:30px 20px 20px 20px;
-              font-weight:bold;
-              position: relative;
-              z-index: 1;
-            }
-
-            svg {
-                    width:110px;
-                    height:35px;
-                    float:right;
-                    vertical-align:bottom;
-
-                  }
-
-
-            }
-          }
-
-
-
-}
 
 
 tr.divider {
   background-color:$color-primary-dark;
 
     td {
-      height:80px;
-      color:white;
-      font-weight:300;
-      letter-spacing:0.18em;
-      font-size:16px;
-      text-align:center;
-      text-transform:uppercase;
-      vertical-align:middle;
       z-index:10;
     }
 }
 
 tbody {
 
-    td.column {
-      width:50%;
-      color:white;
-      line-height:1.6em;
-      letter-spacing:0.02em;
-      font-weight: 300;
-      vertical-align:top;
-      padding:10px 20px 20px 20px;
-      font-size:15px;
+  td.column {
+    width:50%;
+    color:white;
+    line-height:1.6em;
+    letter-spacing:0.02em;
+    font-weight: 300;
+    vertical-align:top;
+    padding:10px 20px 20px 20px;
+    font-size:15px;
+  }
 
-    }
 
-    img {
-    max-width:90%;
+  tr.content:nth-child(even){
+    background-color:rgba(0, 0, 0, .5);
+  }
+
+  tr.content:nth-child(odd){
+    background-color:rgba(0, 0, 0, .3);
+  }
+
+  tr.content{
+    .long-copy {
+      padding:5%;
     }
+  }
+
 
 }
+
+
+
 
 
 tfoot {
@@ -264,10 +199,34 @@ tfoot {
 
 
 
-@media all and (min-width:9933px) and (max-width:9934px){
+@media all and (min-width:10332px) and (max-width:10332px){
 
-  .text {
-  margin-top:1200px;
+thead {
+
+    tr {
+      height:700px;}
+}
+
+tr.divider {
+
+    td {
+      height:600px;
+    }
+}
+
+h1 {
+  font-size:20em;
+  line-height:700px;
+}
+
+h2 {
+  font-size:15em;
+  line-height:600px;
+}
+
+.long-copy {
+  font-size:15em;
+  line-height:4.5em;
 }
 
 
@@ -275,40 +234,78 @@ tfoot {
 
 /*----------------a1--------------------*/
 
+@media all and (min-width:7368px) and (max-width:7368px){
 
+thead {
 
-@media all and (min-width:7015px) and (max-width:7016px){
-
-  .text {
-  margin-top:1100px;
+    tr {
+      height:600px;}
 }
 
+tr.divider {
 
+    td {
+      height:500px;
+    }
 }
 
+h1 {
+  font-size:15em;
+  line-height:600px;
+}
+
+h2 {
+  font-size:10em;
+  line-height:500px;
+}
+
+.long-copy {
+  font-size:10em;
+  line-height:3em;
+}
+
+}
 
 /*----------------a2--------------------*/
 
 
 
-@media all and (min-width:4960px) and (max-width:4961px){
+@media all and (min-width:5280px) and (max-width:5280px){
 
-  .text {
-  margin-top:1000px;
-}
+thead {
 
-}
-
-/*----------------pull up--------------------*/
-
-
-
-@media all and (min-width:11810px) and (max-width:11812px){
-
-  .text {
-  margin-top:1400px;
+    tr {
+      height:400px;}
 }
 
 
+tr.divider {
+
+    td {
+      height:300px;
+    }
 }
+
+h1 {
+  font-size:10em;
+  line-height:400px;
+}
+
+h2 {
+  font-size:5em;
+  line-height:300px;
+}
+
+.long-copy {
+  font-size:5em;
+  line-height:1.5em;
+}
+
+
+}
+
+
+
+
+
 

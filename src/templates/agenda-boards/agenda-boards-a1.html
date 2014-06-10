@@ -1,19 +1,19 @@
 ---
-width: 7015.748031468px
-height: 9933.070866102px
+width: 7368px
+height: 10332px
 ---
 
 <!--594 x 841-->
 
 <!DOCTYPE html>
 <html
-  style="height: {{#multiply}}12*{{#add}}{{height}}+20{{/add}}{{/multiply}}px; width: {{#multiply}}12*{{#add}}{{width}}+20{{/add}}{{/multiply}}px; padding: 60px">
+  style="height: 10332px; width: 7368px; padding: 60px">
 
   <!-- DPI ratio mm:px is Actually 1:11.811023622 -->
 
   <head>
     <meta charset='utf-8'>
-    <link href='<%= baseUrl %>/templates/welcome-signage/stylesheets/main.css' media='screen' rel='stylesheet'>
+    <link href='<%= baseUrl %>/templates/agenda-boards/stylesheets/main.css' media='all' rel='stylesheet'>
   </head>
 
   <body
@@ -45,17 +45,61 @@ height: 9933.070866102px
       </a>
     </div>
 
-    <div class="text">
-      <div class="title">
-        <h1>{{ title }}</h1>
-      </div>
-      <div class="sub-title">
-        <h2>{{ sub-title }}</h2>
-      </div>
-      <div class="long-copy">
-        <h3>{{{ long-copy }}}</h3>
-      </div>
-    </div>
+    <table align='center' cellpadding='0' cellspacing='0' class='container' width='100%'>
+      <tr>
+        <td>
+          <table align='center' style="margin: 0 auto" cellpadding='0' cellspacing='0' class='main' height='auto' width='6000px'>
+            <thead>
+              <tr>
+                <td colspan='2' height='300px'>
+            
+                  </div>
+                  <h1>{{ title }}</h1>
+                  
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class='divider'>
+                <td colspan='2'>
+                  <h2>{{{ sub-title }}}</h2>
+                </td>
+              </tr>
+              <tr>
+                <td class='column'>
+                  <div class='long-copy'>
+                    {{{ long-copy }}}
+                  </div>
+                </td>
+                <td class='column'>
+                  <div class='long-copy'>
+                    {{{ long-copy }}}
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td class='footer' colspan='2'>
+                  <div class='links'>
+                    {{ #footer-link }}
+                    <a href='{{{ url }}}'>{{text}}</a>
+                    {{/ footer-link }}
+                  </div>
+                  <div class='first-footer'>
+                    {{{ first-footer }}}
+                  </div>
+                  <div class='second-footer'>
+                    {{{ second-footer }}}
+                  </div>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </td>
+      </tr>
+    </table>
+
 
     <div id="baseUrl" data-base-url="<%= baseUrl %>"></div>
     <div id="locationName" data-location-name="{{ location }}"></div>
@@ -70,8 +114,8 @@ height: 9933.070866102px
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
     <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="http://d3js.org/topojson.v1.min.js"></script>
-    <script src='<%= baseUrl %>/templates/welcome-signage/javascripts/d3-topoJSON.js'></script>
-    <script src='<%= baseUrl %>/templates/welcome-signage/javascripts/map.js'></script>
-    <script src='<%= baseUrl %>/templates/welcome-signage/javascripts/events-list.js'></script>
+    <script src='<%= baseUrl %>/templates/agenda-boards/javascripts/d3-topoJSON.js'></script>
+    <script src='<%= baseUrl %>/templates/agenda-boards/javascripts/map.js'></script>
+    <script src='<%= baseUrl %>/templates/agenda-boards/javascripts/events-list.js'></script>
   </body>
 </html>

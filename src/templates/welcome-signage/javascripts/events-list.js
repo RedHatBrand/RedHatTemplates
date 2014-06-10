@@ -19,7 +19,7 @@ $(function () {
   var locations = findLocations();
   var longest = findLongest(locations, 'text').text.length;
 
-  longest = longest > 10 ? longest : 10;
+  longest = longest > 12 ? longest : 12;
 
   var elemWidth = 100 / (longest + 1.5);
 

@@ -1,26 +1,29 @@
 ---
-width: 9933.070866102px
-height: 14043.307086558px
+width: 10332px
+height: 14508px
 ---
 
 <!--841 x 1189-->
 
+
 <!DOCTYPE html>
 <html
-  style="height: {{#multiply}}12*{{#add}}{{height}}+20{{/add}}{{/multiply}}px; width: {{#multiply}}12*{{#add}}{{width}}+20{{/add}}{{/multiply}}px; padding: 60px">
+  style="height: 14508px; width: 10332px; padding: 60px">
 
   <!-- DPI ratio mm:px is Actually 1:11.811023622 -->
 
   <head>
     <meta charset='utf-8'>
-    <link href='<%= baseUrl %>/templates/agenda-boards/stylesheets/main.css' media='screen' rel='stylesheet'>
+    <link href='<%= baseUrl %>/templates/agenda-boards/stylesheets/main.css' media='all' rel='stylesheet'>
   </head>
 
   <body
     class="rh-theme-{{ category }}"
     style="height: {{#multiply}}12*{{#add}}{{height}}+10{{/add}}{{/multiply}}px; width: {{#multiply}}12*{{#add}}{{width}}+10{{/add}}{{/multiply}}px; padding: 60px; position: relative">
 
-
+    <div class="rh-logos">
+      <% include ../shared/logos/rh-logo.svg %>
+    </div>
 
     <div class="map" id="map"></div>
 
@@ -50,32 +53,32 @@ height: 14043.307086558px
     <table align='center' cellpadding='0' cellspacing='0' class='container' width='100%'>
       <tr>
         <td>
-          <table align='center' style="margin: 0 auto" cellpadding='0' cellspacing='0' class='main' height='1000px' width='9000px'>
+          <table align='center' style="margin: 0 auto" cellpadding='0' cellspacing='0' class='main' height='auto' width='9000px'>
             <thead>
               <tr>
                 <td colspan='2'>
             
                   </div>
                   <h1>{{ title }}</h1>
-                  <% include ../shared/logos/rh-logo.svg %>
+                  
                 </td>
               </tr>
             </thead>
             <tbody>
               <tr class='divider'>
                 <td colspan='2'>
-                  {{{ sub-title }}}
+                  <h2>{{{ sub-title }}}</h2>
                 </td>
               </tr>
               <tr>
                 <td class='column'>
                   <div class='long-copy'>
-                    {{{ column-1 }}}
+                    {{{ long-copy }}}
                   </div>
                 </td>
                 <td class='column'>
                   <div class='long-copy'>
-                    {{{ column-2 }}}
+                    {{{ long-copy }}}
                   </div>
                 </td>
               </tr>

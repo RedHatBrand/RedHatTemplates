@@ -43,7 +43,7 @@ $aside-width: 22em;
   background-size: cover;
 
   .leaflet-tile-pane {
-    opacity: .333;
+    background-color:$gray-dark;
   }
 }
 
@@ -67,12 +67,9 @@ $aside-width: 22em;
 }
 
 path { stroke-linejoin: round; stroke-linecap: round; fill: none;}
-path.road { stroke: #999; }
-path.water { stroke: white; fill: white; }
+path.road { stroke: $gray-dark; }
+path.water { stroke: $gray-darker; fill: $gray-dark; }
 
-.leaflet-overlay-pane {
-  opacity: 0.25;
-}
 
 .map-panel {
   .logo {
@@ -83,8 +80,8 @@ path.water { stroke: white; fill: white; }
     height: $aside-width * 0.75;
     width: $aside-width * 0.75;
     height: $aside-width * 0.75;
-    background-image: linear-gradient(135deg, transparent 0%, transparent 50%, $color-primary 50%, $color-primary 100%);
-    transition: opacity 0.2s ease;
+
+
 
     img {
       position: absolute;
@@ -95,8 +92,6 @@ path.water { stroke: white; fill: white; }
       width: 40%;
     }
 
-    &:hover {
-      opacity: 0.8;
-    }
+
   }
 }

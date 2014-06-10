@@ -21,14 +21,13 @@
       bottom: 0;
     }
 
-    svg {
-      height: 100%;
-    }
   }
 
   .location .outer-letter,
   .event .date {
-    .space { content: url("../images/letters/space.svg"); }
+    .space { 
+      content: url("../images/letters/space.svg");
+      }
 
     svg text, {
       font-family: 'Overpass', 'Helvetica', 'Verdana', sans-serif;
@@ -52,7 +51,6 @@
 
       svg {
         width: 100%;
-        height: 50%;
         display: block;
       }
     }
@@ -63,3 +61,101 @@
     display: block;
   }
 }
+
+
+
+/*----------------a0--------------------*/
+
+
+
+@media all and (min-width:10332px) and (max-width:10332px){
+
+.events-list {
+
+  .location .outer-letter {
+    svg {
+      height: 1048px;
+    }
+  }
+
+  .location .outer-letter,
+  .event .date {
+    .space { 
+      height:1048px;
+      }
+  }
+
+  .event .date {
+    .text-content {
+      svg {
+        height: 524px;
+      }
+    }
+  }
+}
+}
+
+/*----------------a1--------------------*/
+
+@media all and (min-width:7368px) and (max-width:7368px){
+
+.events-list {
+
+  .location .outer-letter {
+    svg {
+      height: 744px;
+    }
+  }
+
+  .location .outer-letter,
+  .event .date {
+    .space { 
+      height:744px;
+      }
+  }
+
+  .event .date {
+    .text-content {
+      svg {
+        height: 372px;
+      }
+    }
+  }
+}
+
+}
+
+/*----------------a2--------------------*/
+
+
+
+@media all and (min-width:5280px) and (max-width:5280px){
+
+.events-list {
+
+  .location .outer-letter {
+    svg {
+      height: 528px;
+    }
+  }
+
+  .location .outer-letter,
+  .event .date {
+    .space { 
+      height:528px;
+      }
+  }
+
+  .event .date {
+    .text-content {
+      svg {
+        height: 264px;
+      }
+    }
+  }
+}
+}
+
+
+
+

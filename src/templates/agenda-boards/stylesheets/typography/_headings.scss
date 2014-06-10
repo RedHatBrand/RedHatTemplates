@@ -3,18 +3,16 @@
   font-family: $font-family-headings;
 }
 
-h1, h2, h3, h4, h5, h6 { @extend %heading; }
+h1, h2, h3, h4, h5, h6, .long-copy { @extend %heading; }
 
 
 
 h1 {
-  font-size: $font-size-level-one;
   font-weight: $font-weight-level-one;
-  line-height: 0.9em;
-  color:$color-primary;
-  margin-bottom: $margin-level-two /2;
+  color:$white;
   text-transform:uppercase;
   text-align:center;
+  vertical-align:middle;
 
   & + h1, & + h2, & + h3, & + h4, & + h5, & + h6 {
     margin-top: 0;
@@ -26,15 +24,13 @@ h1 {
 }
 
 h2 {
-  font-size: $font-size-level-two;
   font-weight: $font-weight-level-two;
-  margin-bottom: $margin-level-two *1.7;
-  line-height: $line-height-level-two;
   color:$white;
   background-color:$color-primary;
-  padding:50px;
   text-transform:uppercase;
   letter-spacing:0.1em;
+  vertical-align:middle;
+  text-align:center;
 
   & + h1, & + h2, & + h3, & + h4, & + h5, & + h6 {
     margin-top: 0;
@@ -45,20 +41,10 @@ h2 {
   }
 }
 
-h3 {
+.long-copy {
   font-size: $font-size-level-three;
   font-weight: $font-weight-level-three;
-  line-height: $line-height-level-three;
   color:$white;
-
-
-  & + h1, & + h2, & + h3, & + h4, & + h5, & + h6 {
-    margin-top: 0;
-  }
-
-  @media screen and (max-width: $breakpoint-small) {
-    font-size: $font-size-level-three * 0.8;
-  }
 }
 
 h4 {
