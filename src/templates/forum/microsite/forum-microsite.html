@@ -29,10 +29,9 @@ height: 100vh
       <header class='header' role='banner' id='welcome'>
         <figure class='hero'>
           <div class='container layer-three'>
-
             <div class="events-list">
               <a class="event clearfix" href="{{{ link }}}" target="_blank">
-                <div class="date">
+                <div data-brand-tool-editable="date" class="date">
                   <img src='<%= baseUrl %>/templates/forum/events-list/images/letters/space.svg' />
                   <div class="text-content">
                     <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
@@ -47,7 +46,7 @@ height: 100vh
                     </svg>
                   </div>
                 </div>
-                <div class="location clearfix">
+                <div data-brand-tool-editable="location" class="location clearfix">
                   <div class="text-content">{{ location }}</div>
                 </div>
               </a>
@@ -57,10 +56,13 @@ height: 100vh
               <a class='register-button' href='{{{ register-link }}}'>Register</a>
             </div>
 
-            {{{ welcome-message }}}
+            <div data-brand-tool-editable="welcome-message">
+              {{{ welcome-message }}}
+            </div>
           </div>
         </figure>
       </header>
+
       <button class='nav-toggle'>
         <span></span>
       </button>
@@ -83,7 +85,7 @@ height: 100vh
           <label for='{{ day-name }}'>{{ day-name }}</label>
           {{/days}}
           {{#days}}
-          <div class='time-table-{{ day-name }}'>
+          <div data-brand-tool-editable="days.times" class='time-table-{{ day-name }}'>
             <table class="calendar">
               <tr class="headings">
                 <th class="time">Timing</th>
@@ -134,6 +136,13 @@ height: 100vh
                     <p>{{track-e}}</p>
                   </div>
                   {{/track-e}}
+
+                  {{#track-f}}
+                  <div class="track-f">
+                    <h6>Track F</h6>
+                    <p>{{track-f}}</p>
+                  </div>
+                  {{/track-f}}
                 </td>
               </tr>
               {{/times}}
@@ -149,7 +158,7 @@ height: 100vh
           {{#speakers}}
           <div class="grid-container">
             <div class="one-third">
-              <h3>{{ name }}</h3>
+              <h3 data-brand-tool-editable="speakers.name">{{ name }}</h3>
               <img class="welcome-avatar" src="{{{ profile-photo }}}">
               <div class="sign-off">
                 <p>
@@ -158,7 +167,7 @@ height: 100vh
                 </p>
               </div>
             </div>
-            <div class="two-thirds">
+            <div data-brand-tool-editable="speakers.description" class="two-thirds">
               {{{ description }}}
             </div>
           </div>
@@ -170,7 +179,7 @@ height: 100vh
         <div class='container'>
           <h1>Sponsors</h1>
           {{#sponsors}}
-          <h3>{{ name }}</h3>
+          <h3 data-brand-tool-editable="sponsors.name">{{ name }}</h3>
           <div class="grid-container">
             <div class="one-third">
               <img class="sponsor-logo" src="{{{ logo }}}">
@@ -180,7 +189,7 @@ height: 100vh
                 </p>
               </div>
             </div>
-            <div class="two-thirds">
+            <div data-brand-tool-editable="sponsors.description" class="two-thirds">
               {{{ description }}}
             </div>
           </div>

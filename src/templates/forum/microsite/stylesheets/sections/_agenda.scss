@@ -16,9 +16,26 @@
   table.calendar {
     table-layout: fixed;
 
+    tr.headings {
+      color: $gray-dark;
+    }
+
     .time,
     .duration {
       width: 25%;
+    }
+
+    p { margin-bottom: $line-height / 2; }
+    [class*=track] h6 {
+      margin-bottom: 0;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba($black, 0.05);
+      margin-bottom: 0.2em;
+    }
+
+    td, th {
+      &:first-child { padding-left: 0; }
+      &:last-child { padding-right: 0; }
     }
   }
 }
@@ -40,7 +57,6 @@
       font-size: smaller;
       letter-spacing:.1em;
     }
-
   }
 }
 
