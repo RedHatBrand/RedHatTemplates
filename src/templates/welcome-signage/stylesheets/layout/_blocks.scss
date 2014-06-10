@@ -1,0 +1,165 @@
+.container {
+  max-width: $max-width;
+  padding: $page-margin;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -0.25em;
+    left: $page-margin;
+    right: $page-margin;
+    height: 0.5em;
+    background: rgba($black, 0.05);
+  }
+
+  @if $center-layout {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (max-width: $breakpoint-small) {
+    padding: $page-margin / 2;
+  }
+}
+
+nav {}
+article {}
+aside {}
+header {}
+footer {}
+main {}
+
+iframe {
+  width: 100%;
+  display: block;
+  border: 0;
+}
+
+img, video, audio {
+  display: block;
+  width: auto;
+  max-width: 100%;
+}
+
+.text {
+  z-index:100;
+  position:relative;
+  width:100%;
+  text-align:center;
+
+    .title {
+      width:70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .sub-title {
+      width:50%;
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+
+    .long-copy {
+      width:40%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+}
+
+video, audio {
+  background-color: $black;
+}
+
+blockquote {
+  margin-bottom: $line-height;
+  padding-left: $gutter / 2;
+  border-left: $heavy-stroke solid $default-border-color;
+}
+
+pre {
+  margin-bottom: $line-height;
+  background-color: $gray-dark;
+  color: $gray-lighter;
+  border-radius: $radius;
+  padding: $line-height / 2;
+  white-space: pre-wrap;
+  max-height: 80vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+details {
+  margin-bottom: $line-height;
+
+  summary { cursor: pointer; }
+
+  summary:focus {
+    outline: 0;
+    color: $color-primary;
+  }
+}
+
+math {
+  display: block;
+  margin-bottom: $line-height;
+}
+
+
+
+
+
+/*----------------a0--------------------*/
+
+
+
+@media all and (min-width:9933px) and (max-width:9934px){
+
+  .text {
+  margin-top:1200px;
+}
+
+
+}
+
+/*----------------a1--------------------*/
+
+
+
+@media all and (min-width:7015px) and (max-width:7016px){
+
+  .text {
+  margin-top:1100px;
+}
+
+
+}
+
+
+/*----------------a2--------------------*/
+
+
+
+@media all and (min-width:4960px) and (max-width:4961px){
+
+  .text {
+  margin-top:1000px;
+}
+
+}
+
+/*----------------pull up--------------------*/
+
+
+
+@media all and (min-width:11810px) and (max-width:11812px){
+
+  .text {
+  margin-top:1400px;
+}
+
+
+}
+
