@@ -2,12 +2,12 @@ html{
 	width:340mm; height:460mm; padding:5mm;
 	font-family:"Overpass"; color:#fff;
 	overflow:hidden;
-	background:#888;
+	background:#ddd;
 }
 
 body{
 	width:330mm; height:450mm; padding:5mm;
-	background:#ff0;
+	background:#fff;
 }
 
 section{
@@ -15,10 +15,54 @@ section{
 	background:#fff;
 	.rh-main-logo{
 		width:87mm;
-		margin:0 auto;
+		margin:auto;
 		object{
 			width:87mm; height:auto;
 			margin:72mm 0 0 0;
+		}
+	}
+	.rhf-ico{
+		width:171mm; height:auto;
+		margin:auto;
+		object{
+			width:171mm; height:auto;
+			margin:63mm 0 0 0;
+		}
+	}
+	.sponsors{
+		width:252mm; height:60mm;
+		margin:107mm auto 0 auto; padding:10mm 0 0 0;
+		border-top:1px solid #ccc;
+		ul.main-sponsors{ 
+			float:left;
+			li{
+				float:left;
+				width:27mm; height:27mm;
+				margin:0 2mm 0 0;
+				background:#f00;
+				display:block;
+			}
+		}
+		ul.joint-sponsors{ 
+			float:right;
+			li{
+				float:left;
+				width:27mm; height:27mm;
+				margin:0 0 0 2mm;
+				background:#f00;
+				display:block;
+			}
+		}
+		li.hdr-title-sponsor{
+			float:none !important;
+			width:60mm !important; height:10mm !important;
+			font-size:14pt; color:#000;
+			background:none !important;
+		}
+		li{
+			img{
+				width:27mm; height:27mm;
+			}		
 		}
 	}
 } /*section*/
