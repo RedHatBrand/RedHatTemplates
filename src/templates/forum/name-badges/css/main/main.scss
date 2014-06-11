@@ -39,10 +39,6 @@ section{
 		width:70mm;
 		margin:0 5mm; padding:3mm 0;
 		border-bottom:1px solid #fff;
-		h3{
-			position:absolute; margin:21.7mm 0 0 21.2mm;
-			font-size:9pt;
-		}
 		object{
 			width:24mm; height:auto;
 		}
@@ -116,5 +112,9 @@ section{
 	.red-hat-forum-ico{
 		width:51mm;
 		margin:4mm 0 0 4mm;
+		h3{
+			position:absolute; margin:-9.1mm 0 0 21.2mm;
+			font-size:9pt;
+		}
 	}
 } /*section*/
