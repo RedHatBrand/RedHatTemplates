@@ -2,17 +2,23 @@ html{
 	width:340mm; height:460mm; padding:5mm;
 	font-family:"Overpass"; color:#fff;
 	overflow:hidden;
-	border:1px dotted #00f;
-	background:#ff0;
+	background:#888;
 }
 
 body{
 	width:330mm; height:450mm; padding:5mm;
-	background:#f2f2f3;
-	border:1px dotted #ff0;
+	background:#ff0;
 }
 
 section{
 	width:330mm; height:450mm;
-	background:#f00;
+	background:#fff;
+	.rh-main-logo{
+		width:87mm;
+		margin:0 auto;
+		object{
+			width:87mm; height:auto;
+			margin:72mm 0 0 0;
+		}
+	}
 } /*section*/
