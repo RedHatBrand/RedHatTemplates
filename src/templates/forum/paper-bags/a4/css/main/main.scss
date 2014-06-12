@@ -1,17 +1,17 @@
 html{
-	width:220mm; height:307mm; padding:5mm;
+	width:260mm; height:360mm; padding:5mm;
 	font-family:"Overpass"; color:#fff;
 	overflow:hidden;
 }
 
 body{
-	width:210mm; height:297mm; padding:5mm;
+	width:250mm; height:350mm; padding:5mm;
 }
 
 section{
-	width:210mm; height:297mm;
+	width:250mm; height:350mm;
 	.img-bg{
-		width:230mm; height:317mm;
+		width:270mm; height:370mm;
 		position:absolute; z-index:-1; margin:-10mm 0 0 -10mm;
 		overflow:hidden;
 	}
@@ -30,6 +30,10 @@ section{
 			width:114mm; height:auto;
 			margin:48mm 0 0 0;
 		}
+		.forum-venue{
+			position:absolute; margin:-18.5mm 0 0 49mm;
+			font-size:21pt; color:#000;
+		}
 	}
 	.sponsors{
 		width:165mm; height:60mm;
@@ -41,7 +45,6 @@ section{
 				float:left;
 				width:18mm; height:18mm;
 				margin:0 2mm 0 0;
-				background:#f00;
 				display:block;
 			}
 		}
@@ -51,7 +54,6 @@ section{
 				float:left;
 				width:18mm; height:18mm;
 				margin:0 0 0 2mm;
-				background:#f00;
 				display:block;
 			}
 		}

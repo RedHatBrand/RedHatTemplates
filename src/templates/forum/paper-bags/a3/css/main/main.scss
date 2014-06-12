@@ -31,6 +31,10 @@ section{
 			width:171mm; height:auto;
 			margin:63mm 0 0 0;
 		}
+		.forum-venue{
+			position:absolute; margin:-27mm 0 0 74mm;
+			font-size:31pt; color:#000;
+		}
 	}
 	.sponsors{
 		width:252mm; height:60mm;
@@ -42,7 +46,6 @@ section{
 				float:left;
 				width:27mm; height:27mm;
 				margin:0 2mm 0 0;
-				background:#f00;
 				display:block;
 			}
 		}
@@ -52,7 +55,6 @@ section{
 				float:left;
 				width:27mm; height:27mm;
 				margin:0 0 0 2mm;
-				background:#f00;
 				display:block;
 			}
 		}
