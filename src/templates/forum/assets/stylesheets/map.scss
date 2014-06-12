@@ -1,0 +1,40 @@
+@import '../../../../global-assets/scss/colors/base_color_palette';
+
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .leaflet-tile-pane {
+    background-color: $color-grey-dark;
+  }
+
+  .event-marker-icon {
+    width: 2em !important;
+    height: 2em !important;
+    margin: -1em !important;
+    font-size: 2.5em;
+    background-image: url(../images/marker.svg);
+    background-size: 100%;
+  }
+
+  .event-marker-icon-current {
+    width: 6em !important;
+    height: 2.667em !important;
+    margin: -1em !important;
+    font-size: 2.5em;
+    background-image: url(../images/forum-logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  path { stroke-linejoin: round; stroke-linecap: round; fill: none;}
+  path.road { stroke: $color-grey-dark; }
+  path.water { stroke: darken($color-grey-dark, 5%); fill: $color-grey-dark; }
+}
