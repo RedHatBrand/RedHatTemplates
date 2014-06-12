@@ -1,0 +1,70 @@
+html{
+	width:220mm; height:307mm; padding:5mm;
+	font-family:"Overpass"; color:#fff;
+	overflow:hidden;
+}
+
+body{
+	width:210mm; height:297mm; padding:5mm;
+}
+
+section{
+	width:210mm; height:297mm;
+	.img-bg{
+		width:230mm; height:317mm;
+		position:absolute; z-index:-1; margin:-10mm 0 0 -10mm;
+		overflow:hidden;
+	}
+	.rh-main-logo{
+		width:57mm;
+		margin:auto;
+		object{
+			width:57mm; height:auto;
+			margin:48mm 0 0 0;
+		}
+	}
+	.rhf-ico{
+		width:114mm; height:auto;
+		margin:auto;
+		object{
+			width:114mm; height:auto;
+			margin:48mm 0 0 0;
+		}
+	}
+	.sponsors{
+		width:165mm; height:60mm;
+		margin:78mm auto 0 auto; padding:10mm 0 0 0;
+		border-top:1px solid #ccc;
+		ul.main-sponsors{ 
+			float:left;
+			li{
+				float:left;
+				width:18mm; height:18mm;
+				margin:0 2mm 0 0;
+				background:#f00;
+				display:block;
+			}
+		}
+		ul.joint-sponsors{ 
+			float:right;
+			li{
+				float:left;
+				width:18mm; height:18mm;
+				margin:0 0 0 2mm;
+				background:#f00;
+				display:block;
+			}
+		}
+		li.hdr-title-sponsor{
+			float:none !important;
+			width:50mm !important; height:10mm !important;
+			font-size:12pt; color:#000;
+			background:none !important;
+		}
+		li{
+			img{
+				width:18mm; height:18mm;
+			}		
+		}
+	}
+} /*section*/
