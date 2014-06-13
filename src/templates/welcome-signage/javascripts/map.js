@@ -79,7 +79,7 @@ function initMap (events, selectedLocation) {
   });
 
   map.addLayer(markers);
-  map.setView([selectedLocation.latitude - 0.05, selectedLocation.longitude + 0.15], 10);
+  map.setView([selectedLocation.latitude, selectedLocation.longitude], 13);
 
   return map;
 }

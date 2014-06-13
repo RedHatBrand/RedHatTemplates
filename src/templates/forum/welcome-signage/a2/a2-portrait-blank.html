@@ -1,0 +1,149 @@
+---
+width: 5103px
+height: 7158px
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+
+    <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/events-list.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css' rel='stylesheet' />
+    <style>
+      body {
+        position: relative;
+        font-size: 41px;
+      }
+      main { display: block }
+
+      .leaflet-map-pane,
+      .leaflet-tile-pane {
+        width: 100%;
+        height: 100%;
+      }
+      .leaflet-tile-pane:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgb(0, 0, 0);
+        background-image: url(http://d3s84xo5cmutkt.cloudfront.net/assets/attachments/000/000/707/original/clouds-grey-web.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        opacity: 0.5;
+        z-index: 2;
+      }
+
+      .leaflet-tile-pane:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 2;
+      }
+
+      #map {
+        height: 66.667%;
+      }
+
+      #map .event-marker-icon {
+        width: 2em !important;
+        height: 2em !important;
+        margin: -3em !important;
+      }
+
+      #map .event-marker-icon-current {
+        width: 6em !important;
+        height: 2.667em !important;
+        margin-left: -1.125em !important;
+        margin-top: -1.333em !important;
+        font-size: 10em;
+      }
+
+      #content {
+        position: absolute;
+        bottom: 0;
+        height: 33.333%;
+        left: 0;
+        right: 0;
+        padding: 8em;
+        background-color: black;
+      }
+      .events-list { height: 475px; }
+      .events-list .event,
+      .events-list .event .date,
+      .events-list .event .location { height: inherit; }
+
+      .events-list .event .letter {
+        fill: white;
+      }
+    </style>
+  </head>
+
+  <body style="width: 5103px; height: 7158px; padding: 35.5px;">
+    <main style="width: 5032px; height: 7087px;  padding: 35.5px;">
+      <!-- Finished, cropped area = 4961px x 7016px. 35.5px = 3mm bleed -->
+
+      <!-- Design here -->
+      <div id="map"></div>
+
+      <article id="content">
+        <div class="events-list">
+          <a class="event clearfix" href="{{{ link }}}" target="_blank">
+            <div data-brand-tool-editable="date" class="date">
+              <img src='<%= baseUrl %>/templates/forum/assets/images/space.svg' />
+              <div class="text-content">
+                <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                  <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                    {{ date }}
+                  </text>
+                </svg>
+                <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                  <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                    {{ month }}
+                  </text>
+                </svg>
+              </div>
+            </div>
+            <div data-brand-tool-editable="location" class="location clearfix">
+              <div class="text-content">{{ location }}</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="grid-container"></div>
+      </article>
+      <!-- /Design here -->
+
+      <div class='crop-mark top-left'></div>
+      <div class='crop-mark top-right'></div>
+      <div class='crop-mark bottom-left'></div>
+      <div class='crop-mark bottom-right'></div>
+    </main>
+
+    <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
+    <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
+    <!-- Params we may expose -->
+    <div style="display: none" id="zoom" data-zoom="14"></div>
+    <div style="display: none" id="offsetLatitude" data-offset-lat="0"></div>
+    <div style="display: none" id="offsetLongitude" data-offset-lon="0.14"></div>
+    <!-- /Params we may expose -->
+
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script>
+    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map.js'></script>
+    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-events-list.js'></script>
+  </body>
+</html>

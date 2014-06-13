@@ -1,0 +1,10 @@
+@import '../utils/crop_marks';
+
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+body, main { box-sizing: border-box; }
+
+main { position: relative; }
