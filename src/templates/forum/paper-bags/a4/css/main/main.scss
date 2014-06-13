@@ -1,14 +1,14 @@
 html{
-	width:260mm; height:360mm; padding:5mm;
+	width:340mm; height:360mm; padding:5mm;
 	font-family:"Overpass"; color:#fff;
 	overflow:hidden;
 }
 
 body{
-	width:250mm; height:350mm; padding:5mm;
+	width:330mm; height:350mm; padding:5mm;
 }
 
-section{
+section.main-panel{
 	width:250mm; height:350mm;
 	.img-bg{
 		width:270mm; height:370mm;
@@ -69,4 +69,10 @@ section{
 			}		
 		}
 	}
-} /*section*/
+} /*section.main-panel*/
+section.side-panel{
+	width:90mm; height: 370mm;
+	position:absolute; margin:-10mm 0 0 250mm; z-index:-1;
+	text-indent:-9999mm;
+	background:#cc0000;
+}

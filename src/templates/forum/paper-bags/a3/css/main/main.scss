@@ -1,20 +1,19 @@
 html{
-	width:340mm; height:460mm; padding:5mm;
+	width:420mm; height:460mm; padding:5mm;
 	font-family:"Overpass"; color:#fff;
 	overflow:hidden;
 }
 
 body{
-	width:330mm; height:450mm; padding:5mm;
+	width:410mm; height:450mm; padding:5mm;
 }
 
-section{
+section.main-panel{
 	width:330mm; height:450mm;
 	.img-bg{
 		width:350mm; height:470mm;
 		position:absolute; z-index:-1; margin:-10mm 0 0 -10mm;
 		overflow:hidden;
-		/*background:#0f0;*/
 	}
 	.rh-main-logo{
 		width:87mm;
@@ -70,4 +69,10 @@ section{
 			}		
 		}
 	}
-} /*section*/
+} /*section.main-panel*/
+section.side-panel{
+	width:90mm; height:470mm;
+	position:absolute; z-index:-1; margin:-10mm 0 0 330mm;
+	text-indent:-9999mm;
+	background:#cc0000;
+}
