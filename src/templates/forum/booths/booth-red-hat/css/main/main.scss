@@ -1,0 +1,120 @@
+html{
+	width:90mm; height:115mm; padding:5mm;
+	font-family:"Overpass"; color:#fff;
+	overflow:hidden;
+}
+
+body{
+	width:80mm; height:105mm; padding:5mm;
+	background:#f2f2f3;
+}
+
+section{
+	width:80mm; height:105mm;
+	.bg-img{
+		width:100mm; height:125mm;
+		position:absolute; margin:-10mm 0 0 -10mm; z-index:-1;
+		overflow:hidden;
+		.bg-multiply{
+			width:100mm; height:125mm;
+			position:absolute;
+			background:#221f1f;
+			opacity:0.9;
+		}
+		img{
+			max-height:125mm; width:auto;
+		}
+	}
+	.forum-bg-outline{
+		width:100mm; height:125mm;
+		position:absolute; margin:-10mm 0 0 -10mm; z-index:-1;
+		overflow:hidden;
+		opacity:0.5;
+		object{
+			width:115mm; height:auto;
+			margin:-13mm 0 0 -35mm;
+		}
+	}
+	.logo{
+		width:70mm;
+		margin:0 5mm; padding:3mm 0;
+		border-bottom:1px solid #fff;
+		object{
+			width:24mm; height:auto;
+		}
+	}
+	.name{
+		width:100mm; height:22mm;
+		position:absolute; margin:26mm 0 0 -10mm; padding:12mm 0;
+		h1{
+			font-size:24pt; text-align:center;
+		}
+		h3{
+			font-size:14pt; text-align:center;
+		}
+		.bg-name-red{
+			width:100mm; height:48mm;
+			position:absolute; z-index:-1; margin:-14mm 0 0 0;
+			background:#cc0000;
+			opacity:0.75;
+		}
+		.bg-name-orange{
+			width:100mm; height:48mm;
+			position:absolute; z-index:-1; margin:-14mm 0 0 0;
+			background:#cc0000;
+			opacity:0.75;
+		}
+		.bg-name-green{
+			width:100mm; height:48mm;
+			position:absolute; z-index:-1; margin:-14mm 0 0 0;
+			background:#cc0000;
+			opacity:0.75;
+		}
+		.bg-name-blue{
+			width:100mm; height:48mm;
+			position:absolute; z-index:-1; margin:-14mm 0 0 0;
+			background:#cc0000;
+			opacity:0.75;
+		}
+	}
+	.bg-personnel-red{
+		h2{
+			font-size:18pt; text-align:center;
+		}
+		width:100mm;
+		position:absolute; margin:10mm 0 0 -10mm; padding:5mm 0;
+		background:#cc0000;
+	}
+	.bg-personnel-orange{
+		h2{
+			font-size:18pt; text-align:center;
+		}
+		width:100mm;
+		position:absolute; margin:10mm 0 0 -10mm; padding:5mm 0;
+		background:#ff9c00;
+	}
+	.bg-personnel-green{
+		h2{
+			font-size:18pt; text-align:center;
+		}
+		width:100mm;
+		position:absolute; margin:10mm 0 0 -10mm; padding:5mm 0;
+		background:#42b936;
+	}
+	.bg-personnel-blue{
+		h2{
+			font-size:18pt; text-align:center;
+		}
+		width:100mm;
+		position:absolute; margin:10mm 0 0 -10mm; padding:5mm 0;
+		background:#0092c8;
+	}
+	.red-hat-forum-ico{
+		width:51mm;
+		margin:4mm 0 0 4mm;
+		h3{
+			position:absolute; margin:-9.1mm 0 0 21.2mm;
+			font-size:9pt;
+		}
+	}
+} /*section*/
