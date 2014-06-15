@@ -1,0 +1,98 @@
+@import '../../../../../global-assets/scss/utils/grid';
+@import '../../../../../global-assets/scss/fonts/overpass';
+@import '../../../../../global-assets/scss/colors/base_color_palette';
+
+body {
+  position: relative;
+  font-size: 200px; /* ~48pt */
+  font-family: 'Overpass';
+  font-weight: 400;
+  line-height: 1.5em;
+}
+main { display: block }
+p { margin: 0.333em 0 0.75em; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+h1 { font-size: 3em; }
+
+.leaflet-map-pane,
+.leaflet-tile-pane {
+  width: 100%;
+  height: 100%;
+}
+.leaflet-tile-pane:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.leaflet-tile-pane:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+#map { height: 66.667%; }
+
+#map .event-marker-icon {
+  width: 1em !important;
+  height: 1em !important;
+  margin: -0.5em !important;
+}
+
+#map .event-marker-icon-current {
+  width: 6em !important;
+  height: 2.667em !important;
+  margin-left: -1.125em !important;
+  margin-top: -1.333em !important;
+  font-size: 5em;
+}
+
+#content {
+  position: absolute;
+  bottom: 0;
+  height: 33.333%;
+  left: 0;
+  right: 0;
+  padding: 4em;
+  background-color: black;
+  color: white;
+}
+.events-list {
+  height: 435px;
+  margin-bottom: 5em;
+}
+.events-list .event,
+.events-list .event .date,
+.events-list .event .location { height: inherit; }
+
+.events-list .event .letter { fill: white; }
+
+.register-box {
+  border: 0.05em solid white;
+  padding: 0.8em 0.667em;
+  font-weight: 300;
+  border-radius: 0.25em;
+}
