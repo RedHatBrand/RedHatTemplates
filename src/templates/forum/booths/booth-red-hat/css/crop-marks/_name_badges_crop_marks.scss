@@ -1,8 +1,8 @@
 /* -- Crop marks -- */
 
 .crop-mark {
-  width:10mm;
-  height:10mm;
+  width:120px;
+  height:120px;
   position: absolute;
   z-index:2;
 }
@@ -16,79 +16,79 @@
 }
 
 .crop-mark.top-left {
-  top:0mm;
-  left:0mm;
+  top:0px;
+  left:0px;
 }
 
 .crop-mark.top-left:after {
   bottom: 0;
   left: 0;
   height: 1px;
-  width: 5mm;
+  width: 60px;
 }
 
 .crop-mark.top-left:before {
   top: 0;
   right: 0;
   width: 1px;
-  height: 5mm;
+  height: 60px;
 }
 
 .crop-mark.top-right {
   top:0mm;
-  left:90mm;
+  left:24120px;
 }
 
 .crop-mark.top-right:after {
   bottom:0;
   right:0;
   height:1px;
-  width:5mm;
+  width:60px;
 }
 
 .crop-mark.top-right:before {
   top:0;
   left:0;
   width:1px;
-  height:5mm;
+  height:60px;
 }
 
 /* Bottom */
 
 .crop-mark.bottom-left {
-  top:115mm;
-  left:0mm;
+  top:8520px;
+  left:0px;
 }
 
 .crop-mark.bottom-left:after {
   top: 0;
   left: 0;
   height: 1px;
-  width: 5mm;
+  width: 60px;
 }
 
 .crop-mark.bottom-left:before {
   bottom: 0;
   right: 0;
   width: 1px;
-  height: 5mm;
+  height: 60px;
 }
 
 .crop-mark.bottom-right {
-  top:115mm;
-  left:90mm;
+  top:8520px;
+  left:24120px;
 }
 
 .crop-mark.bottom-right:after {
   top: 0;
   right: 0;
   height: 1px;
-  width: 5mm;
+  width: 60px;
 }
 
 .crop-mark.bottom-right:before {
   bottom: 0;
   left: 0;
   width: 1px;
-  height: 5mm;
+  height: 60px;
 }

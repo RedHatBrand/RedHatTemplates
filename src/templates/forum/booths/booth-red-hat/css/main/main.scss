@@ -1,120 +1,108 @@
 html{
-	width:90mm; height:115mm; padding:5mm;
+	width:24120px; height:8520px; padding:60px;
 	font-family:"Overpass"; color:#fff;
-	overflow:hidden;
 }
 
 body{
-	width:80mm; height:105mm; padding:5mm;
-	background:#f2f2f3;
+	width:24000px; height:8400px; padding:60px;
+	background:#890000;
 }
 
 section{
-	width:80mm; height:105mm;
-	.bg-img{
-		width:100mm; height:125mm;
-		position:absolute; margin:-10mm 0 0 -10mm; z-index:-1;
+	width:24000px; height:8400px;
+	.bg-logo-area{
+		width:24240px; height:2370px;
+		position:absolute; z-index:-1; margin:-120px 0 0 -120px;
+		background:#222;
 		overflow:hidden;
-		.bg-multiply{
-			width:100mm; height:125mm;
-			position:absolute;
-			background:#221f1f;
-			opacity:0.9;
+		object.polygon-gray-1{
+			width:28330px; height:auto;
+			margin:-5240px 0 0 -8090px;
+			opacity:0.3;
 		}
-		img{
-			max-height:125mm; width:auto;
+		object.polygon-gray-2{
+			width:30000px; height:auto;
+			position:absolute; margin:-826px 0 0 -19185px;
+			opacity:0.3;
 		}
 	}
-	.forum-bg-outline{
-		width:100mm; height:125mm;
-		position:absolute; margin:-10mm 0 0 -10mm; z-index:-1;
+	.contain-red-bg{
+		width:24120px; height:8520px; padding:60px;
+		position:absolute; z-index:-1; margin:-120px 0 0 -120px;
 		overflow:hidden;
-		opacity:0.5;
+		object.polygon-red-1{
+			width:28330px; height:auto;
+			position:absolute; z-index:-1; margin:-5240px 0 0 -7920px;
+			opacity:0.3;
+		}
+		object.polygon-red-2{
+			width:21180px; height:auto;
+			position:absolute; margin:-8780px 0 0 1310px;
+			opacity:0.2;
+		}
+		object.polygon-red-3{
+			width:28970px; height:auto;
+			position:absolute; z-index:-1; margin:-9440px 0 0 -23760px;
+			opacity:0.5;
+		}
+		object.polygon-red-4{
+			width:38110px; height:auto;
+			position:absolute; z-index:-1; margin:-11280px 0 0 3570px;
+			opacity:0.5;
+		}
+	}
+	.logo-area{
+		width:24000px; height:2130px;
 		object{
-			width:115mm; height:auto;
-			margin:-13mm 0 0 -35mm;
+			width:4320px; height:auto;
+			margin:260px 0 0 1260px;
 		}
 	}
-	.logo{
-		width:70mm;
-		margin:0 5mm; padding:3mm 0;
-		border-bottom:1px solid #fff;
+	.rhf-logo{
+		width:8520px; height:auto;
+		position:absolute;
 		object{
-			width:24mm; height:auto;
+			width:8520px; height:auto;
+			margin:1692px 0 0 1290px; 
+		}
+		.rhf-logo-venue{
+			width:4700px;
+			position:absolute; margin:-1333px 0 0 4972px;
+			font-size:497px; line-height:497px;
 		}
 	}
-	.name{
-		width:100mm; height:22mm;
-		position:absolute; margin:26mm 0 0 -10mm; padding:12mm 0;
-		h1{
-			font-size:24pt; text-align:center;
+	.rhf-country{
+		width:12000px; height:3400px;
+		position:absolute; margin:1430px 0 0 11040px;
+		border-left:10px solid #fff;
+		.contain-country{
+			width:6940px; height:3576px;
+			margin:-169px 0 0 4270px;
+			display:table;
+			h1.country{
+				vertical-align:middle;
+				font-size:1260px; line-height:inherit;
+				overflow:hidden;
+				display:table-cell;
+			}
 		}
-		h3{
-			font-size:14pt; text-align:center;
+		.date{
+			width:1920px; height:2730px;
+			position:absolute; margin:326px 0 0 2371px;
+			h3.mm{
+				width:3600px;
+				margin:100px 0 0 -1590px;
+				font-size:860px; text-align:center;
+			}
+			h3.dd{
+				width:3300px;
+				margin:450px 0 0 -1440px;
+				font-size:1080px; text-align:center;
+			}
 		}
-		.bg-name-red{
-			width:100mm; height:48mm;
-			position:absolute; z-index:-1; margin:-14mm 0 0 0;
-			background:#cc0000;
-			opacity:0.75;
-		}
-		.bg-name-orange{
-			width:100mm; height:48mm;
-			position:absolute; z-index:-1; margin:-14mm 0 0 0;
-			background:#cc0000;
-			opacity:0.75;
-		}
-		.bg-name-green{
-			width:100mm; height:48mm;
-			position:absolute; z-index:-1; margin:-14mm 0 0 0;
-			background:#cc0000;
-			opacity:0.75;
-		}
-		.bg-name-blue{
-			width:100mm; height:48mm;
-			position:absolute; z-index:-1; margin:-14mm 0 0 0;
-			background:#cc0000;
-			opacity:0.75;
-		}
-	}
-	.bg-personnel-red{
-		h2{
-			font-size:18pt; text-align:center;
-		}
-		width:100mm;
-		position:absolute; margin:10mm 0 0 -10mm; padding:5mm 0;
-		background:#cc0000;
-	}
-	.bg-personnel-orange{
-		h2{
-			font-size:18pt; text-align:center;
-		}
-		width:100mm;
-		position:absolute; margin:10mm 0 0 -10mm; padding:5mm 0;
-		background:#ff9c00;
-	}
-	.bg-personnel-green{
-		h2{
-			font-size:18pt; text-align:center;
-		}
-		width:100mm;
-		position:absolute; margin:10mm 0 0 -10mm; padding:5mm 0;
-		background:#42b936;
-	}
-	.bg-personnel-blue{
-		h2{
-			font-size:18pt; text-align:center;
-		}
-		width:100mm;
-		position:absolute; margin:10mm 0 0 -10mm; padding:5mm 0;
-		background:#0092c8;
-	}
-	.red-hat-forum-ico{
-		width:51mm;
-		margin:4mm 0 0 4mm;
-		h3{
-			position:absolute; margin:-9.1mm 0 0 21.2mm;
-			font-size:9pt;
+		object.flip-txt{
+			width:auto; height:3576px;
+			position:absolute; margin:-90px 0 0 1280px;
 		}
 	}
 } /*section*/

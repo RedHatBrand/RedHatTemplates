@@ -1,10 +1,10 @@
 <!---
-width: 100mm
-height: 125mm
+width: 24240px
+height: 8640px
 --->
 
 <!DOCTYPE html>
-<html style="width:24000px; height:8400px; padding:60px;">
+<html style="width:24120px; height:8520px; padding:60px; overflow:scroll;">
 <head>
 <meta name="charset" content="utf-8" />
 <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -12,7 +12,37 @@ height: 125mm
 
 <body style="width:24000px; height:8400px; padding:60px;">
 	<section>
-    	BOOTHS
+    	<div class="contain-red-bg">
+            <object data="images/background/polygon-red-4.svg" class="polygon-red-4"></object>
+            <object data="images/background/polygon-red-3.svg" class="polygon-red-3"></object>
+            <object data="images/background/polygon-red-1.svg" class="polygon-red-1"></object>
+            <object data="images/background/polygon-red-2.svg" class="polygon-red-2"></object>
+        </div><!--.contain-red-bg-->
+        <div class="bg-logo-area">
+            <object data="images/background/polygon-gray-1.svg" class="polygon-gray-1"></object>
+            <object data="images/background/polygon-gray-2.svg" class="polygon-gray-2"></object>
+        </div><!--.bg-logo-area-->
+    	<div class="logo-area">
+        	<object data="../../../../global-assets/images/logos/rh-logo.svg"></object>
+        </div><!--.logo-area-->
+    	<div class="rhf-logo">
+        	<object data="images/logo/red-hat-forum-ico.svg"></object>
+            <div class="rhf-logo-venue"><h3>{{ venue }}</h3></div><!--.rhf-logo-venue-->
+        </div><!--rhf-logo-->
+        <div class="rhf-country">
+        	<object data="images/background/flip-txt.svg" class="flip-txt"></object>
+            <div class="date">
+            	<h3 class="mm">{{ mm }}</h3>
+                <h3 class="dd">{{ dd }}</h3>
+            </div><!--.date-->
+            <div class="contain-country">
+                <h1 class="country">{{ country }}</h1>
+            </div><!--.contain-venue-->
+        </div><!--.rhf-venue-->
     </section>
+    <div class="crop-mark top-left">&nbsp;</div>
+    <div class="crop-mark top-right">&nbsp;</div>
+    <div class="crop-mark bottom-left">&nbsp;</div>
+    <div class="crop-mark bottom-right">&nbsp;</div>
 </body>
 </html>
