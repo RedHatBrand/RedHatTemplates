@@ -1,3 +1,7 @@
+body {
+  background-color:$black;
+}
+
 .container {
   max-width: $max-width;
   padding: $page-margin;
@@ -22,6 +26,18 @@
   @media screen and (max-width: $breakpoint-small) {
     padding: $page-margin / 2;
   }
+}
+
+#content {
+  position: absolute;
+  bottom: 0;
+  height: 33.333%;
+  left: 0;
+  right: 0;
+  padding: 3em 4em 4em 4em;
+  background-color: black;
+  color: white;
+  z-index:2;
 }
 
 nav {}

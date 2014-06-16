@@ -21,6 +21,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 { font-size: 8em; }
 
+h2 {
+  font-weight:300;
+}
+
 .leaflet-map-pane,
 .leaflet-tile-pane {
   width: 100%;
@@ -95,4 +99,79 @@ h1 { font-size: 8em; }
   padding: 0.8em 0.667em;
   font-weight: 300;
   border-radius: 0.25em;
+}
+
+.sponsors {
+  width:6000px;
+  display:block;
+  height:12em;
+  margin-top:200px;
+
+  ul.main-sponsors {
+  
+    width:2600px;
+    display:block;
+    height:inherit;
+    list-style-type:none;
+    margin:0;
+    padding-right:300px;
+    padding-left:0;
+    float:left;
+
+    li.hdr-title-sponsor {
+      display:inline;
+      width:100%;}
+
+    li {
+      width:800px;
+      float:left;
+      padding-right:300px;
+
+      h2 {
+        margin-top:1em;
+        margin-bottom:1em;
+      }
+
+      img {
+        width:800px;
+        height:800px;
+      }
+      
+    }
+  }
+    
+  }
+
+  ul.joint-sponsors {
+
+    width:2600px;
+    margin:0;
+    display:block;
+    list-style-type:none;
+    float:left;
+    padding:0;
+
+  
+    li.hdr-title-sponsor {
+      display:inline;
+      width:100%;
+    }
+
+    li {
+      width:800px;
+      float:left;
+      padding-right:300px;
+
+      h2 {
+        margin-top:1em;
+        margin-bottom:1em;
+      }
+
+      img {
+        width:800px;
+        height:800px;
+      }
+      
+    }
+
 }
