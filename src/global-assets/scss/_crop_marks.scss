@@ -1,8 +1,12 @@
+/* ---------------- */
 /* -- Crop marks -- */
+/* ---------------- */
+
+/* Default 3mm bleed @ 300dpi */
 
 .crop-mark {
-  width: 10mm;
-  height: 10mm;
+  width: 71px;
+  height: 71px;
   position: absolute;
   z-index:2;
 }

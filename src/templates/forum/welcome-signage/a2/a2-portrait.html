@@ -12,82 +12,9 @@ height: 7158px
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css' rel='stylesheet' />
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/events-list.css' rel='stylesheet' />
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/welcome-signage/a2/stylesheets/main.css' rel='stylesheet' />
     <style>
-      body {
-        position: relative;
-        font-size: 41px;
-      }
-      main { display: block }
-
-      .leaflet-map-pane,
-      .leaflet-tile-pane {
-        width: 100%;
-        height: 100%;
-      }
-      .leaflet-tile-pane:before {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background-color: rgb(0, 0, 0);
-        background-image: url(http://d3s84xo5cmutkt.cloudfront.net/assets/attachments/000/000/707/original/clouds-grey-web.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        opacity: 0.5;
-        z-index: 2;
-      }
-
-      .leaflet-tile-pane:after {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.3);
-        z-index: 2;
-      }
-
-      #map {
-        height: 66.667%;
-      }
-
-      #map .event-marker-icon {
-        width: 2em !important;
-        height: 2em !important;
-        margin: -3em !important;
-      }
-
-      #map .event-marker-icon-current {
-        width: 6em !important;
-        height: 2.667em !important;
-        margin-left: -1.125em !important;
-        margin-top: -1.333em !important;
-        font-size: 10em;
-      }
-
-      #content {
-        position: absolute;
-        bottom: 0;
-        height: 33.333%;
-        left: 0;
-        right: 0;
-        padding: 8em;
-        background-color: black;
-      }
-      .events-list { height: 475px; }
-      .events-list .event,
-      .events-list .event .date,
-      .events-list .event .location { height: inherit; }
-
-      .events-list .event .letter {
-        fill: white;
-      }
+      /*.leaflet-tile-pane:before { background-image: url({{{ background-image }}}); }*/
     </style>
   </head>
 
@@ -122,7 +49,15 @@ height: 7158px
           </a>
         </div>
 
-        <div class="grid-container"></div>
+        <div class="grid-container">
+          <div class="one-half">
+            <h1>{{{ message }}}</h1>
+          </div>
+          <div class="one-half">
+            <p>Find out more and register at</p>
+            <div class="register-box">{{ website }}</div>
+          </div>
+        </div>
       </article>
       <!-- /Design here -->
 

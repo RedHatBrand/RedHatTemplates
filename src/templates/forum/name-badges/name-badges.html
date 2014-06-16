@@ -7,18 +7,18 @@ height: 125mm
 <html style="width:90mm; height:115mm; padding:5mm;">
 <head>
 <meta name="charset" content="utf-8" />
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/name-badges/css/style.css">
 </head>
 
 <body style="width:80mm; height:105mm; padding:5mm;">
 	<section>
-    	<div class="bg-img"><div class="bg-multiply">&nbsp;</div><!--.bg-multiply--><img src={{{ bg }}} alt="background image"></div><!--.bg-img-->
-        <div class="forum-bg-outline"><object data="images/background/rh-forum-polygon-outline-grey.svg"></object></div><!--.forum-bg-outline-->
+    	<div class="bg-img"><div class="bg-multiply">&nbsp;</div><!--.bg-multiply--><img src="{{{ bg }}}" alt="background image"></div><!--.bg-img-->
+        <div class="forum-bg-outline"><object data="<%=baseUrl%>/templates/forum/name-badges/images/background/rh-forum-polygon-outline-grey.svg"></object></div><!--.forum-bg-outline-->
         <div class="logo">
-        	<object data="../../../global-assets/images/logos/rh-logo.svg"></object>
+        	<object data="<%=baseUrl%>/global-assets/images/logos/rh-logo.svg"></object>
         </div><!--.logo-->
         <div class="red-hat-forum-ico">
-        	<object data="images/logo/red-hat-forum-ico.svg"></object>
+        	<object data="<%=baseUrl%>/templates/forum/name-badges/images/logo/red-hat-forum-ico.svg"></object>
             <h3>{{ venue }}</h3>
         </div><!--.red-hat-forum-ico-->
         <div class="{{ bg-personnel-red }}">
