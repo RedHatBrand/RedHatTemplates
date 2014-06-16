@@ -4,7 +4,7 @@
 
 body {
   position: relative;
-  font-size: 200px; /* ~48pt */
+  font-size: 100px; /* ~24pt */
   font-family: 'Overpass';
   font-weight: 400;
   line-height: 1.5em;
@@ -19,11 +19,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-h1 { font-size: 3em;
-      margin-bottom:400px; }
+h1 { font-size: 3em; }
 
-h2 {font-size:.8em;
-    font-weight:300;}
+h2 {font-weight: 300;
+    font-size:1em;}
 
 .leaflet-map-pane,
 .leaflet-tile-pane {
@@ -80,13 +79,13 @@ h2 {font-size:.8em;
   height: 33.333%;
   left: 0;
   right: 0;
-  padding: 3em 4em 4em 4em;
+  padding: 4em;
   background-color: black;
   color: white;
 }
 .events-list {
-  height: 928px;
-  margin-bottom: 3em;
+  height: 688px;
+  margin-bottom: 5em;
 }
 .events-list .event,
 .events-list .event .date,
@@ -101,21 +100,21 @@ h2 {font-size:.8em;
   border-radius: 0.25em;
 }
 
+
 .sponsors {
-  width:5000px;
+  width:2900px;
   display:block;
   height:12em;
   margin-top:200px;
-  padding-left:1.2em;
 
   ul.main-sponsors {
   
-    width:1800px;
+    width:1264px;
     display:block;
     height:inherit;
     list-style-type:none;
     margin:0;
-    padding-right:500px;
+    padding-right:150px;
     padding-left:0;
     float:left;
 
@@ -124,9 +123,9 @@ h2 {font-size:.8em;
       width:100%;}
 
     li {
-      width:600px;
+      width:540px;
       float:left;
-      padding-right:200px;
+      padding-right:50px;
 
       h2 {
         margin-top:1em;
@@ -134,9 +133,10 @@ h2 {font-size:.8em;
       }
 
       img {
-        width:600px;
-        height:600px;
-      }   
+        width:450px;
+        height:450px;
+      }
+      
     }
   }
       
@@ -144,13 +144,12 @@ h2 {font-size:.8em;
 
   ul.joint-sponsors {
 
-    width:1800px;
+    width:1264px;
     margin:0;
     display:block;
     list-style-type:none;
     float:left;
     padding:0;
-
   
     li.hdr-title-sponsor {
       display:inline;
@@ -158,9 +157,9 @@ h2 {font-size:.8em;
     }
 
     li {
-      width:600px;
+      width:540px;
       float:left;
-      padding-right:200px;
+      padding-right:50px;
 
       h2 {
         margin-top:1em;
@@ -168,8 +167,8 @@ h2 {font-size:.8em;
       }
 
       img {
-        width:600px;
-        height:600px;
+        width:450px;
+        height:450px;
       }
       
     }

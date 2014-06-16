@@ -13,6 +13,9 @@ height: 14185px
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/events-list.css' rel='stylesheet' />
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css' rel='stylesheet' />
     <link href='<%= baseUrl %>/templates/forum/welcome-signage/a0/stylesheets/main.css' rel='stylesheet' />
+    <style>
+      /*.leaflet-tile-pane:before { background-image: url({{{ background-image }}}); }*/
+    </style>
   </head>
 
   <body style="width: 10075px; height: 14185px; padding: 35.5px;">
@@ -54,7 +57,26 @@ height: 14185px
             <p>Find out more and register at</p>
             <div class="register-box">{{ website }}</div>
           </div>
+
+          <div class="sponsors">
+            <ul class="main-sponsors">
+              <li class="hdr-title-sponsor"><h2>principal sponsors</h2></li>
+              <li><img src="{{{ main-sponsor }}}" alt="main sponsor"></li>
+              <li><img src="{{{ main-sponsor }}}" alt="main sponsor"></li>
+            </ul><!--ul.main-sponsors-->
+
+            <ul class="joint-sponsors">
+              <li class="hdr-title-sponsor"><h2>joint sponsors</h2></li>
+              <li><img src="{{{ joint-sponsor }}}" alt="joint sponsor"></li>
+               <li><img src="{{{ joint-sponsor }}}" alt="joint sponsor"></li>
+            </ul><!--ul.joint-sponsors-->
+          </div><!--.sponsors-->
+
         </div>
+
+          
+
+
       </article>
       <!-- /Design here -->
 

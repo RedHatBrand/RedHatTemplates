@@ -1,26 +1,28 @@
 ---
-width: 5103px
-height: 7158px
+width: 7158px
+height: 10075px
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset='utf-8'>
-    <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
 
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css' rel='stylesheet' />
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/events-list.css' rel='stylesheet' />
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css' rel='stylesheet' />
-    <link href='<%= baseUrl %>/templates/forum/welcome-signage/a2/stylesheets/main.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/welcome-signage/a1/stylesheets/main.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+    
     <style>
-      /*.leaflet-tile-pane:before { background-image: url({{{ background-image }}}); }*/
+      body { position: relative; }
+      main { display: block }
     </style>
   </head>
 
-  <body style="width: 5103px; height: 7158px; padding: 35.5px;">
-    <main style="width: 5032px; height: 7087px;  padding: 35.5px;">
-      <!-- Finished, cropped area = 4961px x 7016px. 35.5px = 3mm bleed -->
+  <body style="width: 7158px; height: 10075px; padding: 35.5px;">
+    <main style="width: 7087px; height: 10004px;  padding: 35.5px;">
+      <!-- Finished, cropped area = 7016px x 9933px. 35.5px = 3mm bleed -->
 
       <!-- Design here -->
       <div id="map"></div>
@@ -59,23 +61,20 @@ height: 7158px
           </div>
         </div>
 
-
-          <div class="sponsors">
-            <ul class="main-sponsors">
-              <li class="hdr-title-sponsor"><h2>principal sponsors</h2></li>
-              <li><img src="{{{ main-sponsor }}}" alt="main sponsor"></li>
-              <li><img src="{{{ main-sponsor }}}" alt="main sponsor"></li>
-            </ul><!--ul.main-sponsors-->
-
+        <div class="sponsors">
+          <ul class="main-sponsors">
+            <li class="hdr-title-sponsor"><h2>principal sponsors</h2></li>
+            <li><img src="{{{ main-sponsor }}}" alt="main sponsor"></li>
+            <li><img src="{{{ main-sponsor }}}" alt="main sponsor"></li>
+          </ul><!--ul.main-sponsors-->
 
 
-            <ul class="joint-sponsors">
-              <li class="hdr-title-sponsor"><h2>joint sponsors</h2></li>
-              <li><img src="{{{ joint-sponsor }}}" alt="joint sponsor"></li>
-               <li><img src="{{{ joint-sponsor }}}" alt="joint sponsor"></li>
-            </ul><!--ul.joint-sponsors-->
-          </div><!--.sponsors-->
-
+          <ul class="joint-sponsors">
+            <li class="hdr-title-sponsor"><h2>joint sponsors</h2></li>
+            <li><img src="{{{ joint-sponsor }}}" alt="joint sponsor"></li>
+            <li><img src="{{{ joint-sponsor }}}" alt="joint sponsor"></li>
+          </ul><!--ul.joint-sponsors-->
+        </div><!--.sponsors-->
 
       </article>
       <!-- /Design here -->
