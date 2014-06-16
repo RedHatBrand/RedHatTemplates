@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html
+  style="height: {{#multiply}}12*{{#add}}{{height}}+20{{/add}}{{/multiply}}px; width: {{#multiply}}12*{{#add}}{{width}}+20{{/add}}{{/multiply}}px; padding: 60px">
+
+  <!-- DPI ratio mm:px is Actually 1:11.811023622 -->
+
+  <head>
+    <meta charset='utf-8'>
+    <link href='/templates/forum/poster/stylesheets/main.css' media='screen' rel='stylesheet'>
+  </head>
+
+  <body
+    class="rh-theme-{{ category }}"
+    style="height: {{#multiply}}12*{{#add}}{{height}}+10{{/add}}{{/multiply}}px; width: {{#multiply}}12*{{#add}}{{width}}+10{{/add}}{{/multiply}}px; padding: 60px; position: relative">
+
+
+    <div class="map" id="map"></div>
+
+    <article id="content">
+
+      <div class="events-list">
+        <a class="event clearfix" href="{{{ link }}}" target="_blank">
+          <div class="date">
+            <img src='/templates/forum/events-list/images/letters/space.svg' />
+            <div class="text-content">
+              <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                  {{ date }}
+                </text>
+              </svg>
+              <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                  {{ month }}
+                </text>
+              </svg>
+            </div>
+          </div>
+          <div class="location clearfix">
+            <div class="text-content">{{ location }}</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="text">
+        <h1>{{{ message }}}</h1>
+      </div>
+
+    </article>
+
+    <div id="baseUrl" data-base-url=""></div>
+    <div id="locationName" data-location-name="{{ location }}"></div>
+
+    <div class='crop-mark top-left' style="width: 120px; height: 120px"></div>
+    <div class='crop-mark top-right' style="width: 120px; height: 120px"></div>
+    <div class='crop-mark bottom-left' style="width: 120px; height: 120px"></div>
+    <div class='crop-mark bottom-right' style="width: 120px; height: 120px"></div>
+
+    <script src='/global-assets/javascripts/vendor/jquery.js'></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src='/templates/forum/poster/javascripts/d3-topoJSON.js'></script>
+    <script src='/templates/forum/poster/javascripts/map.js'></script>
+    <script src='/templates/forum/poster/javascripts/events-list.js'></script>
+  </body>
+</html>

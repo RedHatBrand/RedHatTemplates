@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html style="width:340mm; height:360mm; padding:5mm;">
+<head>
+<meta name="charset" content="utf-8" />
+<link href="/templates/forum/paper-bags/a4/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="width:330mm; height:350mm; padding:5mm;">
+	<section class="side-panel">SIDE PANEL</section><!--section.side-panel-->
+    <section class="main-panel">
+        <div class="img-bg"><object data="/templates/forum/paper-bags/a4/images/backgrounds/rh-forum-polygon-outline-grey.svg" style="position:asbolute; margin:45mm 0 0 -180mm; opacity:0.07;"></object></div><!--img-bg-->
+        <div class="rh-main-logo"><object data="/templates/forum/paper-bags/a4/images/logos/rh-logo-v2.svg"></object></div><!--.rh-main-logo-->
+        <div class="rhf-ico">
+        	<object data="/templates/forum/paper-bags/a4/images/logos/red-hat-forum-ico-v2.svg"></object>
+            <div class="forum-venue">{{ forum-venue }}</div><!--.forum-venue-->
+		</div><!--.rh-main-logo-->
+        <div class="sponsors">
+            <ul class="main-sponsors">
+                <li class="hdr-title-sponsor"><h3>principal sponsors</h3></li>
+                <li><img src="{{{ main-sponsor }}}" alt="main sponsor"></li>
+                <li><img src="{{{ main-sponsor }}}" alt="main sponsor"></li>
+            </ul><!--ul.main-sponsors-->
+            <ul class="joint-sponsors">
+                <li class="hdr-title-sponsor"><h3>joint sponsors</h3></li>
+                <li><img src="{{{ joint-sponsor }}}" alt="joint sponsor"></li>
+                <li><img src="{{{ joint-sponsor }}}" alt="joint sponsor"></li>
+                <li><img src="{{{ joint-sponsor }}}" alt="joint sponsor"></li>
+            </ul><!--ul.joint-sponsors-->
+        </div><!--.sponsors-->
+    </section><!--section.main-panel-->
+    <div class="crop-mark top-left">&nbsp;</div>
+    <div class="crop-mark top-right">&nbsp;</div>
+    <div class="crop-mark bottom-left">&nbsp;</div>
+    <div class="crop-mark bottom-right">&nbsp;</div>
+</body>
+</html>

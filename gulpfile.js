@@ -1,30 +1,29 @@
 var gulp               = require('gulp'),
     gutil              = require('gulp-util'),
+    debug              = require('gulp-debug'),
+    deploy             = require('gulp-awspublish'),
     ejs                = require('gulp-ejs'),
-    shell              = require('gulp-shell'),
     livereload         = require('gulp-livereload'),
-    awspublish         = require('gulp-awspublish'),
     express            = require('express'),
-    app                = express(),
-    argv               = require('yargs').argv;
-
-var dest               = './build';
-var env                = argv.type || 'development';
-var base = {
-  production: 'http://red-hat-assets.s3.amazonaws.com',
-  development: 'http://localhost:4000'
-}
+    argv               = require('yargs').argv,
+    app                = express();
 
 var MetalSmith         = require('metalsmith'),
-    ignore             = require('metalsmith-ignore'),
-    collection         = require('metalsmith-collections'),
-    templates          = require('metalsmith-templates'),
-    sass               = require('metalsmith-sass'),
     autoprefixer       = require('metalsmith-autoprefixer'),
-    _                  = require('lodash'),
-    q                  = require('q');
+    collection         = require('metalsmith-collections'),
+    handlebars         = require('handlebars'),
+    ignore             = require('metalsmith-ignore'),
+    sass               = require('metalsmith-sass'),
+    templates          = require('metalsmith-templates'),
+    q                  = require('q'),
+    _                  = require('lodash');
 
-var handlebars         = require('handlebars');
+var tmp                = './.tmp';
+var prod               = './build';
+var base = {
+  production: 'http://red-hat-assets.s3.amazonaws.com',
+  development: ''
+}
 
 handlebars.registerHelper('json', function(context) {
   return JSON.stringify(context);
@@ -33,7 +32,7 @@ handlebars.registerHelper('json', function(context) {
 function url(){
   return function addUrl(files, metalsmith, done){
     for (var file in files) {
-      files[file].url = '/' + file;
+      files[file].url = file;
     }
     done();
   };
@@ -74,13 +73,15 @@ gulp.task('smith', function () {
       templates: 'templates/**/index.html'
     }))
     .use(ignore('**/_*.scss'))
-    .use(sass())
+    .use(sass({
+      outputStyle: "expanded"
+    }))
     .use(autoprefixer())
     .use(templates({
       engine: 'handlebars',
       directory: 'layouts'
     }))
-    .destination(dest)
+    .destination(tmp)
     .build(function () {
       return defered.resolve.call(defered, arguments);
     });
@@ -88,10 +89,26 @@ gulp.task('smith', function () {
   return defered.promise;
 });
 
-gulp.task('build', ['smith'], function () {
-  return gulp.src('./build/templates/**/*.html', { base: './build/templates' })
-    .pipe(ejs({ baseUrl: base[env] }).on('error', gutil.log))
-    .pipe(gulp.dest(dest + '/templates'));
+gulp.task('replace-urls', ['smith'], function () {
+  return gulp.src(tmp + '/templates/**/*.html', { base: './.tmp/templates' })
+      .pipe(ejs({ baseUrl: base['development'] }).on('error', gutil.log))
+      .pipe(gulp.dest(tmp + '/templates'));
+});
+
+gulp.task('replace-urls-production', ['smith'], function () {
+  return gulp.src(tmp + '/templates/**/*.html', { base: './.tmp/templates' })
+      .pipe(ejs({ baseUrl: base['production'] }).on('error', gutil.log))
+      .pipe(gulp.dest(tmp + '/templates'));
+});
+
+gulp.task('build', ['replace-urls'], function () {
+  return gulp.src(tmp + '/**/*', { base: './.tmp' })
+    .pipe(gulp.dest(tmp + '/templates'));
+});
+
+gulp.task('build-production', ['replace-urls-production'], function () {
+  return gulp.src(tmp + '/**/*', { base: './.tmp' })
+    .pipe(gulp.dest(prod));
 });
 
 gulp.task('watch', function() {
@@ -102,18 +119,18 @@ gulp.task('watch', function() {
   };
 
   gulp.watch('./src/**/*.*', ['build']);
-  gulp.watch('./build/**/*.*').on('change', reload);
+  gulp.watch(tmp + '/**/*.*').on('change', reload);
 });
 
 gulp.task('serve', ['build', 'watch'], function () {
   return app
-    .use(express.static(dest))
+    .use(express.static(tmp))
     .listen(4000, function () {
       console.log('Express Server listening on 4000');
     });
 });
 
-gulp.task('publish', ['build'], function () {
+gulp.task('publish', ['build-production'], function () {
   var publisher = awspublish.create({
     key: process.env.RH_AWS_KEY,
     secret: process.env.RH_AWS_SECRET,
@@ -133,6 +150,3 @@ gulp.task('publish', ['build'], function () {
 });
 
 gulp.task('default', ['serve']);
-
-// If you are experiencing issues with Gulp server shutting down, try this... `gulp setUlimit`
-gulp.task('setUlimit', shell.task('ulimit -n 8192'));
