@@ -1,0 +1,241 @@
+.container {
+  max-width: $max-width;
+  padding: $page-margin;
+  position: relative;
+  background: rgba($black, 0.05);
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -0.25em;
+    left: $page-margin;
+    right: $page-margin;
+    height: 0.5em;
+    background: rgba($black, 0.05);
+  }
+
+  @if $center-layout {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (max-width: $breakpoint-small) {
+    padding: $page-margin / 2;
+  }
+}
+
+nav {}
+article {}
+aside {}
+footer {}
+main {}
+
+iframe {
+  width: 100%;
+  display: block;
+  border: 0;
+}
+
+.img-bg {
+  width:100%;
+  height:25%;
+  opacity:0.5;
+  position:absolute;
+  top:-10%;
+  left:-60%;
+
+  img {
+    width:100%;
+    height:200%;
+    
+  }
+
+
+}
+
+.forum-logo{
+    width:27%;
+    height:70%;
+    margin:0 0 10% 9%;
+    float:left;
+
+      img {
+        width:100%;
+
+      }
+}
+
+#headings {
+  width:65%;
+  float:left;
+  height:50%;
+  margin:18% 0 auto -8%;
+}
+
+.header {
+  height:25%;
+  width:100%;
+  background-color: rgba($white, 0.7);
+  display:block;
+  z-index:10;
+  margin:0 0 10% 0;
+  position:absolute;
+}
+
+.contents {
+  margin-top:40%;
+}
+
+video, audio {
+  background-color: $black;
+}
+
+blockquote {
+  margin-bottom: $line-height;
+  padding-left: $gutter / 2;
+  border-left: $heavy-stroke solid $default-border-color;
+}
+
+pre {
+  margin-bottom: $line-height;
+  background-color: $gray-dark;
+  color: $gray-lighter;
+  border-radius: $radius;
+  padding: $line-height / 2;
+  white-space: pre-wrap;
+  max-height: 80vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+details {
+  margin-bottom: $line-height;
+
+  summary { cursor: pointer; }
+
+  summary:focus {
+    outline: 0;
+    color: $color-primary;
+  }
+}
+
+math {
+  display: block;
+  margin-bottom: $line-height;
+}
+
+
+
+/*--------DIVS-----------------*/
+
+table.container {
+  margin-top:10%;
+
+  td {
+    padding:0;
+    position: relative;
+
+  }
+
+}
+
+table.main {
+  border-collapse:collapse;
+  -moz-box-shadow:    0 0 3px 0 $color-primary-dark;
+  -webkit-box-shadow: 0 0 3px 0 $color-primary-dark;
+  box-shadow:         0 0 3px 0 $color-primary-dark;
+  text-align:center;
+
+
+  tbody {
+
+    text-align:center;
+
+    tr.content{
+
+      td {
+        width:12.5%;
+        background-color:$white;
+        color:$black;
+        line-height:1.6em;
+        letter-spacing:0.02em;
+        font-weight: 300;
+        vertical-align:top;
+        font-size:15px;
+        height:150px;
+
+          p {
+            color:$black;
+            font-size:4em;
+            line-height:4em;
+            padding:0;
+            margin:0;
+          }
+
+          
+        }
+      }
+
+  }
+
+
+  thead {
+    background-color:$color-primary;
+    font-size:4.5em;
+
+      tr {
+        padding-top:2%;
+        padding-bottom:2%;
+        height:3em;
+
+        td {
+          padding-top:2%;
+          padding-bottom:2%;
+
+            h2 {
+              line-height:3em;
+              vertical-align:middle;
+            }
+        }
+      }
+  }
+
+
+  tfoot {
+    color:$black;
+    text-align:center;
+    line-height:1.5em;
+
+      tr {
+        height:170px;
+
+        td.footer {
+          padding:20px;
+          font-size:12px;
+
+              
+
+
+
+              .first-footer {
+                padding-top:10px;
+                font-weight: 300;
+              }
+
+              .second-footer {
+                padding-top:10px;
+                font-weight: 300;
+              }
+          }
+      }
+
+  }
+
+}
+
+
+
+
+
+

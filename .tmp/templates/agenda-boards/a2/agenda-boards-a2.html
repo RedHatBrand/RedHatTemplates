@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html
+  style="height: 7368px; width: 5280px; padding: 60px">
+
+  <!--420 x 594-->
+  <!-- DPI ratio mm:px is Actually 1:11.811023622 -->
+
+  <head>
+    <meta charset='utf-8'>
+    <link href='/templates/agenda-boards/a2/stylesheets/main.css' media='all' rel='stylesheet'>
+  </head>
+
+  <body
+    class="rh-theme-{{ category }}"
+    style="height: 7368px; width:5280px; padding: 60px; position: relative">
+
+    <div class="map" id="map"></div>
+
+    <div class="img-bg"><img src='/templates/agenda-boards/a2/images/rh-forum-polygon-outline-grey.svg'></div>
+
+    <div class="header">
+
+      <img class="forum-logo" src='/templates/agenda-boards/a2/images/red-hat-forum-ico-v2.svg'>
+      <div id="headings">
+        <h1>{{ title }}</h1>
+        <h2>{{ sub-title }}</h2>
+      </div>
+
+      
+    </div>
+
+    <div class="contents">
+      <div class="events-list">
+        <a class="event clearfix" href="{{{ link }}}" target="_blank">
+          <div class="date">
+            <img src='/templates/forum/events-list/images/letters/space.svg' />
+            <div class="text-content">
+              <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                  {{ date }}
+                </text>
+              </svg>
+              <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                  {{ month }}
+                </text>
+              </svg>
+            </div>
+          </div>
+          <div class="location clearfix">
+            <div class="text-content">{{ location }}</div>
+          </div>
+        </a>
+      </div>
+
+      <table align='center' cellpadding='0' cellspacing='0' class='container' width='5280px'>
+        <tr>
+          <td>
+            <table align='center' style="margin: 0 auto" cellpadding='0' cellspacing='0' class='main' height='auto' width='90%'>
+              <thead>
+                <tr>
+                  <td colspan="1">
+                   <h3>{{ col1 }}</h3>
+                  </td>
+                  <td colspan="1">
+                    <h3>{{ col2 }}</h3>
+                  </td>
+                  <td colspan="6">
+                    <h3>{{ col3 }}</h3>
+                  </td>   
+                </tr>
+
+              </thead>
+              <tbody>
+
+
+
+                <tr class="content">
+                  <td><p><b>{{{ timing }}}</p></b></td>
+                  <td><p><b>{{{ duration }}}</p></b></td>
+                  <td><p>{{{ track a }}}</p></td>
+                  <td><p>{{{ track b }}}</p></td>
+                  <td><p>{{{ track c }}}</p></td>
+                  <td><p>{{{ track d }}}</p></td>
+                  <td><p>{{{ track e }}}</p></td>
+                  <td><p>{{{ track f }}}</p></td>
+                </tr>
+
+                <tr class="content">
+                  <td><p><b>{{{ timing }}}</p></b></td>
+                  <td><p><b>{{{ duration }}}</p></b></td>
+                  <td><p>{{{ track a }}}</p></td>
+                  <td><p>{{{ track b }}}</p></td>
+                  <td><p>{{{ track c }}}</p></td>
+                  <td><p>{{{ track d }}}</p></td>
+                  <td><p>{{{ track e }}}</p></td>
+                  <td><p>{{{ track f }}}</p></td>
+                </tr>
+
+                <tr class="content">
+                  <td><p><b>{{{ timing }}}</p></b></td>
+                  <td><p><b>{{{ duration }}}</p></b></td>
+                  <td><p>{{{ track a }}}</p></td>
+                  <td><p>{{{ track b }}}</p></td>
+                  <td><p>{{{ track c }}}</p></td>
+                  <td><p>{{{ track d }}}</p></td>
+                  <td><p>{{{ track e }}}</p></td>
+                  <td><p>{{{ track f }}}</p></td>
+                </tr>
+
+                <tr class="content">
+                  <td><p><b>{{{ timing }}}</p></b></td>
+                  <td><p><b>{{{ duration }}}</p></b></td>
+                  <td><p>{{{ track a }}}</p></td>
+                  <td><p>{{{ track b }}}</p></td>
+                  <td><p>{{{ track c }}}</p></td>
+                  <td><p>{{{ track d }}}</p></td>
+                  <td><p>{{{ track e }}}</p></td>
+                  <td><p>{{{ track f }}}</p></td>
+                </tr>
+
+                <tr class="content">
+                  <td><p><b>{{{ timing }}}</p></b></td>
+                  <td><p><b>{{{ duration }}}</p></b></td>
+                  <td><p>{{{ track a }}}</p></td>
+                  <td><p>{{{ track b }}}</p></td>
+                  <td><p>{{{ track c }}}</p></td>
+                  <td><p>{{{ track d }}}</p></td>
+                  <td><p>{{{ track e }}}</p></td>
+                  <td><p>{{{ track f }}}</p></td>
+                </tr>
+
+
+
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td class='footer' colspan='2'>
+                    <div class='links'>
+                      {{ #footer-link }}
+                      <a href='{{{ url }}}'>{{text}}</a>
+                      {{/ footer-link }}
+                    </div>
+                    <div class='first-footer'>
+                      {{{ first-footer }}}
+                    </div>
+                    <div class='second-footer'>
+                      {{{ second-footer }}}
+                    </div>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+
+    <div id="baseUrl" data-base-url=""></div>
+    <div id="locationName" data-location-name="{{ location }}"></div>
+
+    <div class='crop-mark top-left' style="width: 120px; height: 120px"></div>
+    <div class='crop-mark top-right' style="width: 120px; height: 120px"></div>
+    <div class='crop-mark bottom-left' style="width: 120px; height: 120px"></div>
+    <div class='crop-mark bottom-right' style="width: 120px; height: 120px"></div>
+
+    <script src='/global-assets/javascripts/vendor/jquery.js'></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src='/templates/agenda-boards/a2/javascripts/d3-topoJSON.js'></script>
+    <script src='/templates/agenda-boards/a2/javascripts/map.js'></script>
+    <script src='/templates/agenda-boards/a2/javascripts/events-list.js'></script>
+  </body>
+</html>

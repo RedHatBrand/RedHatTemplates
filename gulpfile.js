@@ -32,7 +32,7 @@ handlebars.registerHelper('json', function(context) {
 function url(){
   return function addUrl(files, metalsmith, done){
     for (var file in files) {
-      files[file].url = file;
+      files[file].url = '/' + file;
     }
     done();
   };

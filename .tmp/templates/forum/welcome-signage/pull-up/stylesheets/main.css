@@ -111,7 +111,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700; }
 
 h1 {
-  font-size: 8em; }
+  font-size: 8em;
+  margin-bottom: 15%; }
 
 h2 {
   font-weight: 300; }
@@ -189,50 +190,46 @@ h2 {
   border-radius: 0.25em; }
 
 .sponsors {
-  width: 6000px;
+  width: 51%;
   display: block;
-  height: 12em;
-  margin-top: 200px; }
+  height: 8em; }
   .sponsors ul.main-sponsors {
-    width: 2600px;
+    width: 44%;
     display: block;
     height: inherit;
     list-style-type: none;
     margin: 0;
-    padding-right: 300px;
+    padding-right: 5%;
     padding-left: 0;
     float: left; }
     .sponsors ul.main-sponsors li.hdr-title-sponsor {
       display: inline;
       width: 100%; }
     .sponsors ul.main-sponsors li {
-      width: 800px;
+      width: 35%;
       float: left;
-      padding-right: 300px; }
+      padding-right: 6%; }
       .sponsors ul.main-sponsors li h2 {
-        margin-top: 1em;
-        margin-bottom: 1em; }
+        margin-top: 11%;
+        margin-bottom: 6%; }
       .sponsors ul.main-sponsors li img {
-        width: 800px;
-        height: 800px; }
-
-ul.joint-sponsors {
-  width: 2600px;
-  margin: 0;
-  display: block;
-  list-style-type: none;
-  float: left;
-  padding: 0; }
-  ul.joint-sponsors li.hdr-title-sponsor {
-    display: inline;
-    width: 100%; }
-  ul.joint-sponsors li {
-    width: 800px;
+        width: 100%; }
+  .sponsors ul.joint-sponsors {
+    width: 44%;
+    margin: 0;
+    display: block;
+    list-style-type: none;
     float: left;
-    padding-right: 300px; }
-    ul.joint-sponsors li h2 {
-      margin-top: 1em;
-      margin-bottom: 1em; }
-    ul.joint-sponsors li img {
-      width: 800px;
-      height: 800px; }
+    padding: 0; }
+    .sponsors ul.joint-sponsors li.hdr-title-sponsor {
+      display: inline;
+      width: 100%; }
+    .sponsors ul.joint-sponsors li {
+      width: 35%;
+      float: left;
+      padding-right: 6%; }
+      .sponsors ul.joint-sponsors li h2 {
+        margin-top: 11%;
+        margin-bottom: 6%; }
+      .sponsors ul.joint-sponsors li img {
+        width: 100%; }

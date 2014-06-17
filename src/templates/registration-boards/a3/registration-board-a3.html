@@ -1,0 +1,101 @@
+---
+width: 3708px
+height: 5184px
+---
+
+<!--297 x 420-->
+
+<!DOCTYPE html>
+<html
+  style="height: 5184px; width: 3708px; padding: 60px">
+
+  <!-- DPI ratio mm:px is Actually 1:11.811023622 -->
+
+  <head>
+    <meta charset='utf-8'>
+    <link href='<%= baseUrl %>/templates/registration-boards/a3/stylesheets/main.css' media='all' rel='stylesheet'>
+  </head>
+
+  <body
+    class="rh-theme-{{ category }}"
+    style="height: 5184px; width: 3708px; padding: 60px; position: relative">
+
+
+
+    <div class="map" id="map"></div>
+
+    <div class="red-stripe">
+      <img src='<%= baseUrl %>/templates/registration-boards/a3/images/brand.svg' />
+    </div>
+
+    <div class="text">
+      <div class="title">
+        <h1>{{ title }}</h1>
+      </div>
+      <div class="sub-title">
+        <h2>{{ sub-title }}</h2>
+      </div>
+      <div class="long-copy">
+        <h3>{{{ long-copy }}}</h3>
+      </div>
+    </div>
+
+    <div id="bottom-section">
+      <div class="events-list">
+        <a class="event clearfix" href="{{{ link }}}" target="_blank">
+          <div class="date">
+            <img src='<%= baseUrl %>/templates/forum/events-list/images/letters/space.svg' />
+            <div class="text-content">
+              <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                  {{ date }}
+                </text>
+              </svg>
+              <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                  {{ month }}
+                </text>
+              </svg>
+            </div>
+          </div>
+          <div class="location clearfix">
+            <div class="text-content">{{ location }}</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="sponsors">
+            <ul class="main-sponsors">
+              <li class="hdr-title-sponsor"><p>principal sponsors</p></li>
+              <li><img src="{{{ main-sponsor }}}" alt="main sponsor"></li>
+              <li><img src="{{{ main-sponsor }}}" alt="main sponsor"></li>
+            </ul><!--ul.main-sponsors-->
+
+            <ul class="joint-sponsors">
+              <li class="hdr-title-sponsor"><p>joint sponsors</p></li>
+              <li><img src="{{{ joint-sponsor }}}" alt="joint sponsor"></li>
+               <li><img src="{{{ joint-sponsor }}}" alt="joint sponsor"></li>
+            </ul><!--ul.joint-sponsors-->
+          </div><!--.sponsors-->
+
+    </div>
+
+    <div id="baseUrl" data-base-url="<%= baseUrl %>"></div>
+    <div id="locationName" data-location-name="{{ location }}"></div>
+
+    <div class='crop-mark top-left' style="width: 120px; height: 120px"></div>
+    <div class='crop-mark top-right' style="width: 120px; height: 120px"></div>
+    <div class='crop-mark bottom-left' style="width: 120px; height: 120px"></div>
+    <div class='crop-mark bottom-right' style="width: 120px; height: 120px"></div>
+
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src='<%= baseUrl %>/templates/registration-boards/a3/javascripts/d3-topoJSON.js'></script>
+    <script src='<%= baseUrl %>/templates/registration-boards/a3/javascripts/map.js'></script>
+    <script src='<%= baseUrl %>/templates/registration-boards/a3/javascripts/events-list.js'></script>
+
+  </body>
+</html>

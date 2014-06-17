@@ -1,0 +1,161 @@
+.events-list {
+  margin-bottom: 2em;
+
+  .event {
+    position: relative;
+    display: block;
+    margin: 0;
+    text-decoration: none;
+  }
+
+  .location .outer-letter {
+    display: block;
+    position: relative;
+    float: left;
+
+    .svgs {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+  }
+
+  .location .outer-letter,
+  .event .date {
+    .space { 
+      content: url("../images/letters/space.svg");
+      }
+
+    svg text, {
+      font-family: 'Overpass', 'Helvetica', 'Verdana', sans-serif;
+    }
+  }
+
+  .event .date {
+    float: left;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    line-height: 1;
+    color: white;
+    text-align: center;
+    position: relative;
+
+    .text-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      svg {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  .event .location span:after,
+  .event .date:after {
+    display: block;
+  }
+}
+
+
+
+/*----------------a0--------------------*/
+
+
+
+@media all and (min-width:10332px) and (max-width:10332px){
+
+.events-list {
+
+  .location .outer-letter {
+    svg {
+      height: 1048px;
+    }
+  }
+
+  .location .outer-letter,
+  .event .date {
+    .space { 
+      height:1048px;
+      }
+  }
+
+  .event .date {
+    .text-content {
+      svg {
+        height: 524px;
+      }
+    }
+  }
+}
+}
+
+/*----------------a1--------------------*/
+
+@media all and (min-width:7368px) and (max-width:7368px){
+
+.events-list {
+
+  .location .outer-letter {
+    svg {
+      height: 744px;
+    }
+  }
+
+  .location .outer-letter,
+  .event .date {
+    .space { 
+      height:744px;
+      }
+  }
+
+  .event .date {
+    .text-content {
+      svg {
+        height: 372px;
+      }
+    }
+  }
+}
+
+}
+
+/*----------------a2--------------------*/
+
+
+
+@media all and (min-width:5280px) and (max-width:5280px){
+
+.events-list {
+
+  .location .outer-letter {
+    svg {
+      height: 528px;
+    }
+  }
+
+  .location .outer-letter,
+  .event .date {
+    .space { 
+      height:528px;
+      }
+  }
+
+  .event .date {
+    .text-content {
+      svg {
+        height: 264px;
+      }
+    }
+  }
+}
+}
+
+
+
+
