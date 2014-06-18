@@ -661,12 +661,12 @@ h1 {
   text-transform: uppercase;
   text-align: left;
   vertical-align: middle;
-  font-size: 30em; }
+  font-size: 60em; }
   h1 + h1, h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6 {
     margin-top: 0; }
   @media screen and (max-width: 32em) {
     h1 {
-      font-size: 22.5em; } }
+      font-size: 45em; } }
 
 h2 {
   font-weight: 300;
@@ -675,12 +675,12 @@ h2 {
   letter-spacing: 0.1em;
   vertical-align: middle;
   text-align: left;
-  font-size: 10em; }
+  font-size: 28em; }
   h2 + h1, h2 + h2, h2 + h3, h2 + h4, h2 + h5, h2 + h6 {
     margin-top: 0; }
   @media screen and (max-width: 32em) {
     h2 {
-      font-size: 8em; } }
+      font-size: 22.4em; } }
 
 h3 {
   font-weight: 300;
@@ -689,15 +689,15 @@ h3 {
   letter-spacing: 0.1em;
   vertical-align: middle;
   text-align: center;
-  font-size: 1em; }
+  font-size: 4.2em; }
   h3 + h1, h3 + h2, h3 + h3, h3 + h4, h3 + h5, h3 + h6 {
     margin-top: 0; }
   @media screen and (max-width: 32em) {
     h3 {
-      font-size: 8em; } }
+      font-size: 22.4em; } }
 
 .long-copy {
-  font-size: 1em;
+  font-size: 4.2em;
   font-weight: 300;
   color: white; }
 
@@ -850,6 +850,52 @@ main address, main audio, main embed, main object, main map, main svg, main vide
     .container {
       padding: 1.6em; } }
 
+#map {
+  height: 100%; }
+
+#map .event-marker-icon {
+  width: 1em !important;
+  height: 1em !important;
+  margin: -0.5em !important; }
+
+#map .event-marker-icon-current {
+  width: 6em !important;
+  height: 2.667em !important;
+  margin-left: -1.125em !important;
+  margin-top: -1.333em !important;
+  font-size: 5em; }
+
+.leaflet-map-pane, .leaflet-tile-pane {
+  width: 100%;
+  height: 100%; }
+
+.leaflet-tile-pane:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: black;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  opacity: 0.5;
+  z-index: 2; }
+
+.leaflet-tile-pane:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2; }
+
 
 
 
@@ -862,40 +908,57 @@ iframe {
 
 .img-bg {
   width: 100%;
-  height: 25%;
+  height: 100%;
   opacity: 0.5;
   position: absolute;
-  top: -10%;
-  left: -60%; }
+  top: 0;
+  left: 0;
+  padding: 0;
+  overflow: hidden; }
   .img-bg img {
-    width: 100%;
-    height: 200%; }
+    max-width: 80%;
+    max-height: 150%;
+    position: absolute;
+    top: -10%;
+    left: -45%; }
 
 .forum-logo {
-  width: 27%;
+  width: 30%;
   height: 70%;
-  margin: 0 0 10% 9%;
+  margin: 0 0 10% 5%;
   float: left; }
   .forum-logo img {
     width: 100%; }
+
+.white-bg {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
 
 #headings {
   width: 65%;
   float: left;
   height: 50%;
-  margin: 18% 0 auto -8%; }
+  margin: 18% 0 auto -13%; }
 
 .header {
   height: 25%;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.7);
   display: block;
   z-index: 10;
   margin: 0 0 10% 0;
-  position: absolute; }
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 3em 4em 4em 4em;
+  z-index: 2; }
 
 .contents {
-  margin-top: 40%; }
+  margin-top: 55%; }
 
 video, audio {
   background-color: #171717; }
@@ -930,15 +993,14 @@ math {
 
 /*--------DIVS-----------------*/
 table.container {
-  margin-top: 10%; }
+  margin-top: 5%;
+  border-style: none; }
   table.container td {
     padding: 0;
     position: relative; }
 
 table.main {
   border-collapse: collapse;
-  -webkit-box-shadow: 0 0 3px 0 #3f050b;
-  box-shadow: 0 0 3px 0 #3f050b;
   text-align: center; }
   table.main tbody {
     text-align: center; }
@@ -954,7 +1016,7 @@ table.main {
       height: 150px; }
       table.main tbody tr.content td p {
         color: #171717;
-        font-size: 4em;
+        font-size: 14em;
         line-height: 4em;
         padding: 0;
         margin: 0; }
@@ -971,21 +1033,6 @@ table.main {
         table.main thead tr td h2 {
           line-height: 3em;
           vertical-align: middle; }
-  table.main tfoot {
-    color: #171717;
-    text-align: center;
-    line-height: 1.5em; }
-    table.main tfoot tr {
-      height: 170px; }
-      table.main tfoot tr td.footer {
-        padding: 20px;
-        font-size: 12px; }
-        table.main tfoot tr td.footer .first-footer {
-          padding-top: 10px;
-          font-weight: 300; }
-        table.main tfoot tr td.footer .second-footer {
-          padding-top: 10px;
-          font-weight: 300; }
 
 .grid-container {
   margin-left: -1.2em;
