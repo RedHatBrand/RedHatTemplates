@@ -9,6 +9,7 @@ function parseRespose(data) {
 
 function initMap (events, selectedLocation) {
   var zoom = parseFloat($('#zoom').data('zoom'));
+  var eventlogo = $('#eventLogo').data('event-logo');
   var offsetLat = parseFloat($('#offsetLatitude').data('offset-lat'));
   var offsetLon = parseFloat($('#offsetLongitude').data('offset-lon'));
 
@@ -26,7 +27,10 @@ function initMap (events, selectedLocation) {
   var markers = L.featureGroup();
 
   var icon =  L.divIcon({className: 'event-marker-icon'});
-  var currentIcon = L.divIcon({className: 'event-marker-icon-current'});
+  var currentIcon = L.icon({
+    className: 'event-marker-icon-current',
+    iconUrl: 'data:image/svg+xml,' + eventlogo
+  });
 
   $.each(events, function(i, eventData) {
     if(!(eventData.latitude && eventData.longitude)) return;

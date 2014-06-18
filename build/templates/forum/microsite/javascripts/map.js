@@ -8,6 +8,8 @@ function parseRespose(data) {
 }
 
 function initMap (events, selectedLocation) {
+  var eventlogo = $('#eventLogo').data('event-logo');
+
   var map = L.map('map', {
     scrollWheelZoom: false,
     zoomControl: false,
@@ -50,7 +52,10 @@ function initMap (events, selectedLocation) {
   var markers = L.featureGroup();
 
   var icon =  L.divIcon({className: 'event-marker-icon'});
-  var currentIcon = L.divIcon({className: 'event-marker-icon-current'});
+  var currentIcon = L.icon({
+    className: 'event-marker-icon-current',
+    iconUrl: 'data:image/svg+xml,' + eventlogo
+  });
 
   $.each(events, function(i, eventData) {
     if(!(eventData.latitude && eventData.longitude)) return;
