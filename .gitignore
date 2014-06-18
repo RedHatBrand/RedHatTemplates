@@ -2,4 +2,4 @@
 .awspublish-red-hat-assets
 .sass-cache
 node_modules
-build
+.tmp

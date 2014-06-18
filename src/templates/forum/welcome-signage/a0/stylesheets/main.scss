@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { font-size: 3em;
-      margin-bottom:400px; }
+      margin-bottom:12%; }
 
 h2 {font-size:.8em;
     font-weight:300;}
@@ -102,20 +102,17 @@ h2 {font-size:.8em;
 }
 
 .sponsors {
-  width:5000px;
+  width:51%;
   display:block;
-  height:12em;
-  margin-top:200px;
-  padding-left:1.2em;
+  height:8em;
 
   ul.main-sponsors {
-  
-    width:1800px;
+    width:44%;
     display:block;
     height:inherit;
     list-style-type:none;
-    margin:0;
-    padding-right:500px;
+    margin:0 0 0 6%;
+    padding-right:5%;
     padding-left:0;
     float:left;
 
@@ -124,27 +121,28 @@ h2 {font-size:.8em;
       width:100%;}
 
     li {
-      width:600px;
+      width:35%;
       float:left;
-      padding-right:200px;
+      padding-right:6%;
 
       h2 {
-        margin-top:1em;
-        margin-bottom:1em;
+        margin-top:11%;
+        margin-bottom:6%;
       }
 
       img {
-        width:600px;
-        height:600px;
-      }   
-    }
-  }
+        width:100%;
+      }
       
+    }
+    
   }
+     
+  
 
   ul.joint-sponsors {
 
-    width:1800px;
+    width:44%;
     margin:0;
     display:block;
     list-style-type:none;
@@ -158,20 +156,21 @@ h2 {font-size:.8em;
     }
 
     li {
-      width:600px;
+      width:35%;
       float:left;
-      padding-right:200px;
+      padding-right:6%;
 
       h2 {
-        margin-top:1em;
-        margin-bottom:1em;
+        margin-top:11%;
+        margin-bottom:6%;
       }
 
       img {
-        width:600px;
-        height:600px;
+        width:100%;
       }
       
     }
+
+  }
 
 }

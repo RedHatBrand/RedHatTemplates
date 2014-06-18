@@ -8,7 +8,7 @@
     "gulp-awspublish": "0.0.16",
     "gulp-clean": "^0.3.0",
     "gulp-debug": "^0.3.0",
-    "gulp-ejs": "^0.2.2",
+    "gulp-ejs": "0.2.2",
     "gulp-front-matter": "^1.0.0",
     "gulp-inject": "^0.4.1",
     "gulp-livereload": "^1.5.0",
