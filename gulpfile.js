@@ -62,11 +62,26 @@ function tree() {
   }
 }
 
+function previewIndexes () {
+  return function previewIndexes(files, metalsmith, done){
+    for (var file in files) {
+      (function (file, files) {
+        if ((file.split('/').pop() === 'index.html') && !(files[file].hasOwnProperty('template'))) {
+          return files[file].template = 'preview.hbt';
+        }
+      })(file, files);
+    }
+
+    done();
+  }
+}
+
 
 gulp.task('smith', function () {
   var defered = q.defer();
 
   MetalSmith(__dirname)
+    .use(previewIndexes())
     .use(url())
     .use(tree())
     .use(collection({
