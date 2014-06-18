@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+  <head>
+    <meta charset='utf-8'>
+
+    <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/vendor/leaflet.css' rel='stylesheet' />
+    <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/events-list.css' rel='stylesheet' />
+    <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/map.css' rel='stylesheet' />
+    <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/welcome-signage/pull-up/stylesheets/main.css' rel='stylesheet' />
+    <link href='http://red-hat-assets.s3.amazonaws.com/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+    
+    <style>
+      body { position: relative; }
+      main { display: block }
+    </style>
+  </head>
+
+  <body style="width: 12286px; height: 24286px; padding: 35.5px;">
+    <main style="width: 12215px; height: 24215px;  padding: 35.5px;">
+      <!-- Finished, cropped area = 12144px x 24144px. 35.5px = 3mm bleed -->
+
+      <!--12144px x 24144px-->
+
+      <!-- Design here -->
+      <div id="map"></div>
+
+      <article id="content">
+        <div class="events-list">
+          <a class="event clearfix" href="{{{ link }}}" target="_blank">
+            <div data-brand-tool-editable="date" class="date">
+              <img src='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/images/space.svg' />
+              <div class="text-content">
+                <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                  <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                    {{ date }}
+                  </text>
+                </svg>
+                <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                  <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                    {{ month }}
+                  </text>
+                </svg>
+              </div>
+            </div>
+            <div data-brand-tool-editable="location" class="location clearfix">
+              <div class="text-content">{{ location }}</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="grid-container">
+          <div class="one-half">
+            <h1>{{{ message }}}</h1>
+          </div>
+          <div class="one-half">
+            <p>Find out more and register at</p>
+            <div class="register-box">{{ website }}</div>
+          </div>
+        </div>
+
+        <div class="sponsors">
+          <ul class="main-sponsors">
+            <li class="hdr-title-sponsor"><h2>principal sponsors</h2></li>
+            <li><img src="{{{ main-sponsor }}}" alt="main sponsor"></li>
+            <li><img src="{{{ main-sponsor }}}" alt="main sponsor"></li>
+          </ul><!--ul.main-sponsors-->
+
+
+          <ul class="joint-sponsors">
+            <li class="hdr-title-sponsor"><h2>joint sponsors</h2></li>
+            <li><img src="{{{ joint-sponsor }}}" alt="joint sponsor"></li>
+            <li><img src="{{{ joint-sponsor }}}" alt="joint sponsor"></li>
+          </ul><!--ul.joint-sponsors-->
+        </div><!--.sponsors-->
+
+      </article>
+      <!-- /Design here -->
+
+      <div class='crop-mark top-left'></div>
+      <div class='crop-mark top-right'></div>
+      <div class='crop-mark bottom-left'></div>
+      <div class='crop-mark bottom-right'></div>
+    </main>
+
+    <div style="display: none" id="baseUrl" data-base-url="http://red-hat-assets.s3.amazonaws.com"></div>
+    <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
+    <!-- Params we may expose -->
+    <div style="display: none" id="zoom" data-zoom="14"></div>
+    <div style="display: none" id="offsetLatitude" data-offset-lat="0"></div>
+    <div style="display: none" id="offsetLongitude" data-offset-lon="0.14"></div>
+    <!-- /Params we may expose -->
+
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/lodash.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/leaflet.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/javascripts/print-map.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/javascripts/print-events-list.js'></script>
+  </body>
+</html>

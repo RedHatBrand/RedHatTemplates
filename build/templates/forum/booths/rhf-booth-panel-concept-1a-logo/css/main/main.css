@@ -1,0 +1,75 @@
+html {
+  width: 12120px;
+  height: 30120px;
+  padding: 60px;
+  font-family: "Overpass";
+  color: #fff; }
+
+body {
+  width: 12000px;
+  height: 30000px;
+  padding: 60px;
+  background: #890000; }
+
+section {
+  width: 12000px;
+  height: 30000px; }
+  section .gray-bottom-bar {
+    width: 12240px;
+    height: 3730px;
+    position: absolute;
+    margin: 26390px 0 0 -120px;
+    text-indent: -999999px;
+    background: #222; }
+  section .red-bg {
+    width: 12240px;
+    height: 30240px;
+    position: absolute;
+    z-index: -1;
+    margin: -120px 0 0 -120px;
+    overflow: hidden; }
+    section .red-bg object.polygon-red-1 {
+      width: 33580px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: 1000px 0 0 -10080px;
+      opacity: 0.2; }
+    section .red-bg object.polygon-red-2 {
+      width: 22720px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: -3640px 0 0 -12600px;
+      opacity: 0.3; }
+    section .red-bg object.polygon-red-3 {
+      width: 38120px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: 15388px 0 0 -2000px;
+      opacity: 0.5; }
+    section .red-bg object.polygon-red-4 {
+      width: 21050px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: -10638px 0 0 0;
+      opacity: 1; }
+  section .rhf-logo-icon {
+    width: 12000px;
+    margin: 1060px 0 0 0;
+    position: absolute; }
+    section .rhf-logo-icon h3 {
+      width: 6000px;
+      position: absolute;
+      margin: -1387px 0 0 5400px;
+      font-size: 526px; }
+    section .rhf-logo-icon .rhf-logo-icon-contain {
+      width: 8850px;
+      margin: auto; }
+      section .rhf-logo-icon .rhf-logo-icon-contain object {
+        width: 8850px;
+        height: auto; }
+
+/*section*/

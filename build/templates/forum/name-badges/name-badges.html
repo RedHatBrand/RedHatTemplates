@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html style="width:90mm; height:115mm; padding:5mm;">
+<head>
+<meta name="charset" content="utf-8" />
+<link rel="stylesheet" type="text/css" href="http://red-hat-assets.s3.amazonaws.com/templates/forum/name-badges/css/style.css">
+</head>
+
+<body style="width:80mm; height:105mm; padding:5mm;">
+	<section>
+    	<div class="bg-img"><div class="bg-multiply">&nbsp;</div><!--.bg-multiply--><img src="{{{ bg }}}" alt="background image"></div><!--.bg-img-->
+        <div class="forum-bg-outline"><object data="http://red-hat-assets.s3.amazonaws.com/templates/forum/name-badges/images/background/rh-forum-polygon-outline-grey.svg"></object></div><!--.forum-bg-outline-->
+        <div class="logo">
+        	<object data="http://red-hat-assets.s3.amazonaws.com/global-assets/images/logos/rh-logo.svg"></object>
+        </div><!--.logo-->
+        <div class="red-hat-forum-ico">
+        	<object data="http://red-hat-assets.s3.amazonaws.com/templates/forum/name-badges/images/logo/red-hat-forum-ico.svg"></object>
+            <h3>{{ venue }}</h3>
+        </div><!--.red-hat-forum-ico-->
+        <div class="{{ bg-personnel-red }}">
+        	<h2>{{ personnel }}</h2>
+        </div><!--.personnel-->
+        <div class="name">
+        	<div class="{{ bg-name-red }}">&nbsp;</div>
+        	<h1>{{ name }}</h1>
+            <h3>{{ org }}</h3>
+        </div><!--.name-->
+    	<div class="crop-mark top-left">&nbsp;</div>
+    	<div class="crop-mark top-right">&nbsp;</div>
+    	<div class="crop-mark bottom-left">&nbsp;</div>
+    	<div class="crop-mark bottom-right">&nbsp;</div>
+    </section>
+</body>
+</html>
