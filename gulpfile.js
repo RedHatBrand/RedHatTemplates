@@ -91,7 +91,6 @@ gulp.task('smith', function () {
 
 gulp.task('replace-urls', ['smith'], function () {
   return gulp.src(tmp + '/templates/**/*.html', { base: './.tmp/templates' })
-      .pipe(debug())
       .pipe(ejs({ baseUrl: base['development'] }).on('error', gutil.log))
       .pipe(gulp.dest(tmp + '/templates'));
 });
