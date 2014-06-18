@@ -111,18 +111,11 @@ gulp.task('build-production', ['replace-urls-production'], function () {
     .pipe(gulp.dest(prod));
 });
 
-gulp.task('watch', function() {
-  var server = livereload();
-
-  var reload = function(file) {
-    server.changed(file.path);
-  };
-
+gulp.task('watch', ['build'], function() {
   gulp.watch('./src/**/*.*', ['build']);
-  gulp.watch(tmp + '/**/*.*').on('change', reload);
 });
 
-gulp.task('serve', ['build', 'watch'], function () {
+gulp.task('serve', ['watch'], function () {
   return app
     .use(express.static(tmp))
     .listen(4000, function () {

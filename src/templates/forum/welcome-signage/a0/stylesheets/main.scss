@@ -133,12 +133,12 @@ h2 {font-size:.8em;
       img {
         width:100%;
       }
-      
+
     }
-    
+
   }
-     
-  
+
+
 
   ul.joint-sponsors {
 
@@ -149,7 +149,7 @@ h2 {font-size:.8em;
     float:left;
     padding:0;
 
-  
+
     li.hdr-title-sponsor {
       display:inline;
       width:100%;
@@ -168,9 +168,28 @@ h2 {font-size:.8em;
       img {
         width:100%;
       }
-      
     }
-
   }
+}
 
+$aside-width: 20em;
+
+.corner-logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: $aside-width * 0.75;
+  height: $aside-width * 0.75;
+  width: $aside-width * 0.75;
+  height: $aside-width * 0.75;
+  background-image: linear-gradient(135deg, transparent 0%, transparent 50%, $color-rh-red 50%, $color-rh-red 100%);
+
+  img {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    margin: 0;
+    height: 40%;
+    width: 40%;
+  }
 }

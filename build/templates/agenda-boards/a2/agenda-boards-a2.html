@@ -9,15 +9,22 @@
   <head>
     <meta charset='utf-8'>
     <link href='http://red-hat-assets.s3.amazonaws.com/templates/agenda-boards/a2/stylesheets/main.css' media='all' rel='stylesheet'>
+    <link href='http://red-hat-assets.s3.amazonaws.com/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+    <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/map.css' rel='stylesheet' />
+    <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/vendor/leaflet.css' rel='stylesheet' />
+    <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/events-list.css' rel='stylesheet' />
+
   </head>
 
   <body
     class="rh-theme-{{ category }}"
     style="height: 7368px; width:5280px; padding: 60px; position: relative">
 
-    <div class="map" id="map"></div>
+    <div id="map"></div>
 
-    <div class="img-bg"><img src='http://red-hat-assets.s3.amazonaws.com/templates/agenda-boards/a2/images/rh-forum-polygon-outline-grey.svg'></div>
+    <!--<div class="img-bg"><img src='http://red-hat-assets.s3.amazonaws.com/templates/agenda-boards/a2/images/rh-forum-polygon-outline-grey.svg'></div>-->
+
+    <div class="white-bg"></div>
 
     <div class="header">
 
@@ -57,7 +64,7 @@
       <table align='center' cellpadding='0' cellspacing='0' class='container' width='5280px'>
         <tr>
           <td>
-            <table align='center' style="margin: 0 auto" cellpadding='0' cellspacing='0' class='main' height='auto' width='90%'>
+            <table align='center' style="margin: 0 auto" cellpadding='0' cellspacing='0' class='main' height='auto' width='100%'>
               <thead>
                 <tr>
                   <td colspan="1">
@@ -79,78 +86,50 @@
                 <tr class="content">
                   <td><p><b>{{{ timing }}}</p></b></td>
                   <td><p><b>{{{ duration }}}</p></b></td>
-                  <td><p>{{{ track a }}}</p></td>
-                  <td><p>{{{ track b }}}</p></td>
-                  <td><p>{{{ track c }}}</p></td>
-                  <td><p>{{{ track d }}}</p></td>
-                  <td><p>{{{ track e }}}</p></td>
-                  <td><p>{{{ track f }}}</p></td>
+                  {{# track-a }}<td><p>{{{ track-a }}}</p></td>{{/ track-a }}
+                  {{# track-b }}<td><p>{{{ track-b }}}</p></td>{{/ track-b }}
+                  {{# track-c }}<td><p>{{{ track-c }}}</p></td>{{/ track-c }}
+                  {{# track-d }}<td><p>{{{ track-d }}}</p></td>{{/ track-d }}
+                  {{# track-e }}<td><p>{{{ track-e }}}</p></td>{{/ track-e }}
+                  {{# track-f }}<td><p>{{{ track-f }}}</p></td>{{/ track-f }}
                 </tr>
 
                 <tr class="content">
                   <td><p><b>{{{ timing }}}</p></b></td>
                   <td><p><b>{{{ duration }}}</p></b></td>
-                  <td><p>{{{ track a }}}</p></td>
-                  <td><p>{{{ track b }}}</p></td>
-                  <td><p>{{{ track c }}}</p></td>
-                  <td><p>{{{ track d }}}</p></td>
-                  <td><p>{{{ track e }}}</p></td>
-                  <td><p>{{{ track f }}}</p></td>
+                  {{# track-a }}<td><p>{{{ track-a }}}</p></td>{{/ track-a }}
+                  {{# track-b }}<td><p>{{{ track-b }}}</p></td>{{/ track-b }}
+                  {{# track-c }}<td><p>{{{ track-c }}}</p></td>{{/ track-c }}
+                  {{# track-d }}<td><p>{{{ track-d }}}</p></td>{{/ track-d }}
+                  {{# track-e }}<td><p>{{{ track-e }}}</p></td>{{/ track-e }}
+                  {{# track-f }}<td><p>{{{ track-f }}}</p></td>{{/ track-f }}
                 </tr>
 
                 <tr class="content">
                   <td><p><b>{{{ timing }}}</p></b></td>
                   <td><p><b>{{{ duration }}}</p></b></td>
-                  <td><p>{{{ track a }}}</p></td>
-                  <td><p>{{{ track b }}}</p></td>
-                  <td><p>{{{ track c }}}</p></td>
-                  <td><p>{{{ track d }}}</p></td>
-                  <td><p>{{{ track e }}}</p></td>
-                  <td><p>{{{ track f }}}</p></td>
+                  {{# track-a }}<td><p>{{{ track-a }}}</p></td>{{/ track-a }}
+                  {{# track-b }}<td><p>{{{ track-b }}}</p></td>{{/ track-b }}
+                  {{# track-c }}<td><p>{{{ track-c }}}</p></td>{{/ track-c }}
+                  {{# track-d }}<td><p>{{{ track-d }}}</p></td>{{/ track-d }}
+                  {{# track-e }}<td><p>{{{ track-e }}}</p></td>{{/ track-e }}
+                  {{# track-f }}<td><p>{{{ track-f }}}</p></td>{{/ track-f }}
                 </tr>
 
                 <tr class="content">
                   <td><p><b>{{{ timing }}}</p></b></td>
                   <td><p><b>{{{ duration }}}</p></b></td>
-                  <td><p>{{{ track a }}}</p></td>
-                  <td><p>{{{ track b }}}</p></td>
-                  <td><p>{{{ track c }}}</p></td>
-                  <td><p>{{{ track d }}}</p></td>
-                  <td><p>{{{ track e }}}</p></td>
-                  <td><p>{{{ track f }}}</p></td>
-                </tr>
-
-                <tr class="content">
-                  <td><p><b>{{{ timing }}}</p></b></td>
-                  <td><p><b>{{{ duration }}}</p></b></td>
-                  <td><p>{{{ track a }}}</p></td>
-                  <td><p>{{{ track b }}}</p></td>
-                  <td><p>{{{ track c }}}</p></td>
-                  <td><p>{{{ track d }}}</p></td>
-                  <td><p>{{{ track e }}}</p></td>
-                  <td><p>{{{ track f }}}</p></td>
+                  {{# track-a }}<td><p>{{{ track-a }}}</p></td>{{/ track-a }}
+                  {{# track-b }}<td><p>{{{ track-b }}}</p></td>{{/ track-b }}
+                  {{# track-c }}<td><p>{{{ track-c }}}</p></td>{{/ track-c }}
+                  {{# track-d }}<td><p>{{{ track-d }}}</p></td>{{/ track-d }}
+                  {{# track-e }}<td><p>{{{ track-e }}}</p></td>{{/ track-e }}
+                  {{# track-f }}<td><p>{{{ track-f }}}</p></td>{{/ track-f }}
                 </tr>
 
 
 
               </tbody>
-              <tfoot>
-                <tr>
-                  <td class='footer' colspan='2'>
-                    <div class='links'>
-                      {{ #footer-link }}
-                      <a href='{{{ url }}}'>{{text}}</a>
-                      {{/ footer-link }}
-                    </div>
-                    <div class='first-footer'>
-                      {{{ first-footer }}}
-                    </div>
-                    <div class='second-footer'>
-                      {{{ second-footer }}}
-                    </div>
-                  </td>
-                </tr>
-              </tfoot>
             </table>
           </td>
         </tr>
@@ -161,18 +140,22 @@
     <div id="baseUrl" data-base-url="http://red-hat-assets.s3.amazonaws.com"></div>
     <div id="locationName" data-location-name="{{ location }}"></div>
 
-    <div class='crop-mark top-left' style="width: 120px; height: 120px"></div>
-    <div class='crop-mark top-right' style="width: 120px; height: 120px"></div>
-    <div class='crop-mark bottom-left' style="width: 120px; height: 120px"></div>
-    <div class='crop-mark bottom-right' style="width: 120px; height: 120px"></div>
+    <div class='crop-mark top-left'></div>
+    <div class='crop-mark top-right'></div>
+    <div class='crop-mark bottom-left'></div>
+    <div class='crop-mark bottom-right'></div>
+
+    <!-- Params we may expose -->
+    <div style="display: none" id="zoom" data-zoom="14"></div>
+    <div style="display: none" id="offsetLatitude" data-offset-lat="0"></div>
+    <div style="display: none" id="offsetLongitude" data-offset-lon="0.14"></div>
+    <!-- /Params we may expose -->
 
     <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/jquery.js'></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
-    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script type="text/javascript" src="http://d3js.org/topojson.v1.min.js"></script>
-    <script src='http://red-hat-assets.s3.amazonaws.com/templates/agenda-boards/a2/javascripts/d3-topoJSON.js'></script>
-    <script src='http://red-hat-assets.s3.amazonaws.com/templates/agenda-boards/a2/javascripts/map.js'></script>
-    <script src='http://red-hat-assets.s3.amazonaws.com/templates/agenda-boards/a2/javascripts/events-list.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/lodash.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/leaflet.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/javascripts/print-map.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/javascripts/print-events-list.js'></script>
+
   </body>
 </html>

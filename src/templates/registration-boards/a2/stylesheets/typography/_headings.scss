@@ -26,9 +26,9 @@ h1 {
 }
 
 h2 {
-  font-size: 90em;
+  font-size: $font-size-level-two;
   font-weight: $font-weight-level-two;
-  margin-bottom: $margin-level-two *1.7;
+  margin-bottom: 0;
   line-height: $line-height-level-two;
   color:$white;
   padding:50px;

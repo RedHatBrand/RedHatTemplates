@@ -43,15 +43,29 @@ img, video, audio {
   max-width: 100%;
 }
 
-.red-stripe {
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    width:100%;
-    display:block;
-    z-index:-1;
+.black-bg {
+  background-color: rgba($black, 0.9);
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+#map { height: 66.667%; }
+
+#map .event-marker-icon {
+  width: 1em !important;
+  height: 1em !important;
+  margin: -0.5em !important;
+}
+
+#map .event-marker-icon-current {
+  width: 6em !important;
+  height: 2.667em !important;
+  margin-left: -1.125em !important;
+  margin-top: -1.333em !important;
+  font-size: 5em;
 }
 
 #bottom-section {
@@ -98,9 +112,17 @@ img, video, audio {
 .sponsors {
   width:50%;
   display:block;
-  height:8em;
+  height:23em;
   margin-left:auto;
   margin-right:auto;
+
+  #separator {
+    width: 0.1em;
+    height: 10em;
+    background-color: white;
+    margin: 9.5em 0 0 6%;
+    float: left;
+  }
 
   ul.main-sponsors {
     width:44%;
@@ -108,18 +130,27 @@ img, video, audio {
     height:inherit;
     list-style-type:none;
     margin:0;
-    padding-right:5%;
-    padding-left:0;
+    padding:0;
     float:left;
+    text-align:center;
 
     li.hdr-title-sponsor {
       display:inline;
       width:100%;}
 
+    li.left {
+      padding-right:5%;
+      display:inline-block;
+    }
+
+    li.right {
+      padding:0;
+      display:inline-block;
+    }
+
     li {
       width:35%;
-      float:left;
-      padding-right:6%;
+      display:inline-block;
 
       h2 {
         margin-top:11%;
@@ -142,19 +173,29 @@ img, video, audio {
     margin:0;
     display:block;
     list-style-type:none;
-    float:left;
+    float:right;
     padding:0;
+    text-align:center;
 
   
     li.hdr-title-sponsor {
-      display:inline;
+      display:inline-block;
       width:100%;
+    }
+
+    li.left {
+      padding-right:5%;
+      display:inline-block;
+    }
+
+    li.right {
+      padding:0;
+      display:inline-block;
     }
 
     li {
       width:35%;
-      float:left;
-      padding-right:6%;
+      display:inline-block;
 
       h2 {
         margin-top:11%;

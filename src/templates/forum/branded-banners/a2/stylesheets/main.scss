@@ -1,0 +1,72 @@
+@import '../../../../../global-assets/scss/utils/grid';
+@import '../../../../../global-assets/scss/fonts/overpass';
+@import '../../../../../global-assets/scss/colors/base_color_palette';
+
+// ## Colours
+
+$color-primary:             #c12;
+$color-primary-light:       lighten($color-primary, 30%);
+$color-primary-dark:        darken($color-primary, 30%);
+
+$black:                     hsl(0,0%,9%);
+
+body {
+  position: relative;
+  background-color:$black;
+  font-family: 'Overpass';
+  color:white;
+}
+main { display: block }
+p { margin: 0.333em 0 0.75em; }
+
+
+
+.title {
+  height:16%;
+  width:66%;
+
+  h1 { 
+    font-size: 20em; 
+    margin-bottom:0.2em;
+    margin-top:0.3em;
+    font-weight: 700;
+    text-transform:uppercase;
+    line-height:1em;
+    }
+
+  h2 { 
+    font-size: 15em;
+    font-weight: 300; 
+    margin-top:0;}
+}
+
+.directional-arrow {
+  height:20%;
+  width:50%;
+
+  h3 {
+    font-size: 200em;
+    font-weight: 300;
+    margin: 0;
+    line-height:1em;
+  }
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index:-1;
+  display:block;
+
+  object{
+      width:100%;
+      height:100%;
+      margin:0;
+      }
+}
+
+
+

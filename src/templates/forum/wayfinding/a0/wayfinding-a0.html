@@ -1,0 +1,133 @@
+---
+width: 14185px
+height: 10075px
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/wayfinding/a0/stylesheets/main.css' rel='stylesheet' />
+    <style>
+      /*.leaflet-tile-pane:before { background-image: url({{{ background-image }}}); }*/
+    </style>
+  </head>
+
+  <body class="rh-theme-{{ page-direction }}" style="height: 10075px; width: 14185px; padding: 35.5px;">
+    <main style="height: 10075px; width: 14185px;  padding: 35.5px;">
+      <!-- Finished, cropped area = 4961px x 7016px. 35.5px = 3mm bleed -->
+
+      <!-- changing backgrounds -->
+
+      <div class="left">
+
+        <svg height='100%' style='position: relative' version='1.0' width='100%' xmlns:svg='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+          <style>
+            body { margin: 0 }
+          </style>
+          <defs>
+            <filter height='1' id='f1' width='1' x='0' y='0'>
+              <feImage height='100%' preserveAspectRatio='xMidYMid slice' result='shape1' width='100%' x='0' xlink:href='<%= baseUrl %>/templates/forum/wayfinding/a0/images/corner-red-stripe-left.svg' y='0'></feImage>
+              <feBlend in2='shape1' in='SourceGraphic' mode='multiply' result='SG_shape1'></feBlend>
+            </filter>
+          </defs>
+          <image filter='url(#f1)' height='100%' preserveAspectRatio='xMidYMid slice' width='100%' x='0' xlink:href='{{{ image }}}' y='0'></image>
+        </svg>
+
+        <svg height="1000" version="1.1" width="1000" style='position: absolute; top:0; left:0;' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+          <defs>
+            <pattern id="Pattern" height="62" width="62" x="0" y="0" patternUnits="userSpaceOnUse">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               width="62px" height="62px" fill="$color-primary" viewBox="-0.124 -0.125 62 62" enable-background="new -0.124 -0.125 62 62" xml:space="preserve">
+              <path d="M-0.125-0.125v0.713l30.273,30.276L-0.125,61.14v0.735h0.722l30.281-30.281l30.279,30.281h0.722V61.14L31.604,30.864
+                L61.878,0.588v-0.713h-0.741L30.878,30.138L0.615-0.125H-0.125z M7.034-0.125l23.841,23.85l23.843-23.85h-1.453l-22.39,22.391
+                L8.487-0.125H7.034z M14.903-0.125L30.875,15.85L46.853-0.125h-1.457L30.875,14.394L16.359-0.125H14.903z M22.772-0.125l8.103,8.105
+                l8.105-8.105h-1.456l-6.649,6.646l-6.646-6.646H22.772z M-0.125,7.004V8.46l22.401,22.404L-0.125,53.271v1.454l23.86-23.86
+                L-0.125,7.004z M61.878,7.004L38.02,30.864l23.858,23.86v-1.454L39.477,30.864L61.878,8.46V7.004z M-0.125,14.876v1.457
+                l14.532,14.532L-0.125,45.396v1.456l15.991-15.988L-0.125,14.876z M61.878,14.876L45.89,30.864l15.988,15.988v-1.456L47.346,30.864
+                l14.532-14.532V14.876z M-0.125,22.748v1.457l6.663,6.66l-6.663,6.664v1.454l8.119-8.118L-0.125,22.748z M61.878,22.748l-8.12,8.116
+                l8.12,8.118v-1.454l-6.664-6.664l6.664-6.66V22.748z M30.875,38.009L7.012,61.875h1.457l22.406-22.409l22.41,22.409h1.456
+                L30.875,38.009z M30.875,45.876L14.881,61.875h1.459l14.534-14.539l14.541,14.539h1.459L30.875,45.876z M30.875,53.75l-8.124,8.125
+                h1.459l6.665-6.668l6.668,6.668h1.459L30.875,53.75z"/>
+              </svg>
+            </pattern>
+          </defs>
+          <g transform="translate(204.8, 250) rotate(-45 0 0)" style="overflow: hidden">
+            <rect fill="url(#Pattern)" height="61" stroke="none" width="1000" x="0" y="0"  transform="translate(-500, 0)"></rect>
+          </g>
+        </svg>
+
+      </div>
+
+      <div class="right">
+
+        <svg height='100%' style='position: relative' version='1.0' width='100%' xmlns:svg='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+          <style>
+            body { margin: 0 }
+          </style>
+          <defs>
+            <filter height='1' id='f1' width='1' x='0' y='0'>
+              <feImage height='100%' preserveAspectRatio='xMidYMid slice' result='shape1' width='100%' x='0' xlink:href='<%= baseUrl %>/templates/forum/wayfinding/a0/images/corner-red-stripe-right.svg' y='0'></feImage>
+              <feBlend in2='shape1' in='SourceGraphic' mode='multiply' result='SG_shape1'></feBlend>
+            </filter>
+          </defs>
+          <image filter='url(#f1)' height='100%' preserveAspectRatio='xMidYMid slice' width='100%' x='0' xlink:href='{{{ image }}}' y='0'></image>
+        </svg>
+
+        <svg height="1000" version="1.1" width="1000" style='position: absolute; top:0; left:0;' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+          <defs>
+            <pattern id="Pattern" height="62" width="62" x="0" y="0" patternUnits="userSpaceOnUse">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               width="62px" height="62px" fill="$color-primary" viewBox="-0.124 -0.125 62 62" enable-background="new -0.124 -0.125 62 62" xml:space="preserve">
+              <path d="M-0.125-0.125v0.713l30.273,30.276L-0.125,61.14v0.735h0.722l30.281-30.281l30.279,30.281h0.722V61.14L31.604,30.864
+                L61.878,0.588v-0.713h-0.741L30.878,30.138L0.615-0.125H-0.125z M7.034-0.125l23.841,23.85l23.843-23.85h-1.453l-22.39,22.391
+                L8.487-0.125H7.034z M14.903-0.125L30.875,15.85L46.853-0.125h-1.457L30.875,14.394L16.359-0.125H14.903z M22.772-0.125l8.103,8.105
+                l8.105-8.105h-1.456l-6.649,6.646l-6.646-6.646H22.772z M-0.125,7.004V8.46l22.401,22.404L-0.125,53.271v1.454l23.86-23.86
+                L-0.125,7.004z M61.878,7.004L38.02,30.864l23.858,23.86v-1.454L39.477,30.864L61.878,8.46V7.004z M-0.125,14.876v1.457
+                l14.532,14.532L-0.125,45.396v1.456l15.991-15.988L-0.125,14.876z M61.878,14.876L45.89,30.864l15.988,15.988v-1.456L47.346,30.864
+                l14.532-14.532V14.876z M-0.125,22.748v1.457l6.663,6.66l-6.663,6.664v1.454l8.119-8.118L-0.125,22.748z M61.878,22.748l-8.12,8.116
+                l8.12,8.118v-1.454l-6.664-6.664l6.664-6.66V22.748z M30.875,38.009L7.012,61.875h1.457l22.406-22.409l22.41,22.409h1.456
+                L30.875,38.009z M30.875,45.876L14.881,61.875h1.459l14.534-14.539l14.541,14.539h1.459L30.875,45.876z M30.875,53.75l-8.124,8.125
+                h1.459l6.665-6.668l6.668,6.668h1.459L30.875,53.75z"/>
+              </svg>
+            </pattern>
+          </defs>
+          <g transform="translate(295.2, 250) rotate(45 0 0)" style="overflow: hidden">
+            <rect fill="url(#Pattern)" height="61" stroke="none" width="1000" x="0" y="0"  transform="translate(-500, 0)"></rect>
+          </g>
+        </svg>
+
+      </div>
+
+      <!-- end changing backgrounds -->
+
+      <div class="title">
+        <h1>{{ heading }}</h1>
+        <h2>{{ sub-heading }}</h2>
+      </div>
+
+      <div class="directional-arrow">
+        <h3>{{{ directional-arrow }}}</h3>
+      </div>
+
+
+
+      <!-- /Design here -->
+
+      <div class='crop-mark top-left'></div>
+      <div class='crop-mark top-right'></div>
+      <div class='crop-mark bottom-left'></div>
+      <div class='crop-mark bottom-right'></div>
+    </main>
+
+    <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
+    <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
+    <!-- Params we may expose -->
+    <div style="display: none" id="zoom" data-zoom="14"></div>
+    <!-- /Params we may expose -->
+
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
+  </body>
+</html>

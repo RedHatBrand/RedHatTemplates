@@ -105,9 +105,10 @@ section{
 	.red-hat-forum-ico{
 		width:51mm;
 		margin:4mm 0 0 4mm;
-		h3{
-			position:absolute; margin:-9.1mm 0 0 21.2mm;
-			font-size:9pt;
+
+		svg {
+			height: 100%;
+			width: 100%;
 		}
 	}
-} /*section*/
+}

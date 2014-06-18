@@ -14,19 +14,19 @@ height: 5184px
   <head>
     <meta charset='utf-8'>
     <link href='<%= baseUrl %>/templates/registration-boards/a3/stylesheets/main.css' media='all' rel='stylesheet'>
+    <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/events-list.css' rel='stylesheet' />
   </head>
 
   <body
     class="rh-theme-{{ category }}"
     style="height: 5184px; width: 3708px; padding: 60px; position: relative">
 
+    <div id="map"></div>
 
-
-    <div class="map" id="map"></div>
-
-    <div class="red-stripe">
-      <img src='<%= baseUrl %>/templates/registration-boards/a3/images/brand.svg' />
-    </div>
+    <div class="black-bg"></div>
 
     <div class="text">
       <div class="title">
@@ -67,14 +67,17 @@ height: 5184px
       <div class="sponsors">
             <ul class="main-sponsors">
               <li class="hdr-title-sponsor"><p>principal sponsors</p></li>
-              <li><img src="{{{ main-sponsor }}}" alt="main sponsor"></li>
-              <li><img src="{{{ main-sponsor }}}" alt="main sponsor"></li>
+              <li class="left"><img src="{{{ main-sponsor }}}" alt="main sponsor"></li>
+              <li class="right"><img src="{{{ main-sponsor }}}" alt="main sponsor"></li>
             </ul><!--ul.main-sponsors-->
+
+            <div id="separator">
+            </div>
 
             <ul class="joint-sponsors">
               <li class="hdr-title-sponsor"><p>joint sponsors</p></li>
-              <li><img src="{{{ joint-sponsor }}}" alt="joint sponsor"></li>
-               <li><img src="{{{ joint-sponsor }}}" alt="joint sponsor"></li>
+              <li class="left"><img src="{{{ joint-sponsor }}}" alt="joint sponsor"></li>
+               <li class="right"><img src="{{{ joint-sponsor }}}" alt="joint sponsor"></li>
             </ul><!--ul.joint-sponsors-->
           </div><!--.sponsors-->
 
@@ -83,19 +86,22 @@ height: 5184px
     <div id="baseUrl" data-base-url="<%= baseUrl %>"></div>
     <div id="locationName" data-location-name="{{ location }}"></div>
 
-    <div class='crop-mark top-left' style="width: 120px; height: 120px"></div>
-    <div class='crop-mark top-right' style="width: 120px; height: 120px"></div>
-    <div class='crop-mark bottom-left' style="width: 120px; height: 120px"></div>
-    <div class='crop-mark bottom-right' style="width: 120px; height: 120px"></div>
+    <div class='crop-mark top-left'></div>
+    <div class='crop-mark top-right'></div>
+    <div class='crop-mark bottom-left'></div>
+    <div class='crop-mark bottom-right'></div>
+
+    <!-- Params we may expose -->
+    <div style="display: none" id="zoom" data-zoom="14"></div>
+    <div style="display: none" id="offsetLatitude" data-offset-lat="0"></div>
+    <div style="display: none" id="offsetLongitude" data-offset-lon="0.14"></div>
+    <!-- /Params we may expose -->
 
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
-    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script type="text/javascript" src="http://d3js.org/topojson.v1.min.js"></script>
-    <script src='<%= baseUrl %>/templates/registration-boards/a3/javascripts/d3-topoJSON.js'></script>
-    <script src='<%= baseUrl %>/templates/registration-boards/a3/javascripts/map.js'></script>
-    <script src='<%= baseUrl %>/templates/registration-boards/a3/javascripts/events-list.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script>
+    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map.js'></script>
+    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-events-list.js'></script>
 
   </body>
 </html>
