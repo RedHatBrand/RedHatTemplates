@@ -1,48 +1,59 @@
 html {
-  width: 90mm;
-  height: 115mm;
-  padding: 5mm;
   font-family: "Overpass";
   color: #fff;
   overflow: hidden; }
 
-body {
-  width: 80mm;
-  height: 105mm;
-  padding: 5mm;
-  background: #f2f2f3; }
+.category-red-hat .bg-name {
+  background-color: #cc0000; }
+.category-red-hat .bg-personnel {
+  background-color: #cc0000; }
+
+.category-crew .bg-name {
+  background-color: #ff9c00; }
+.category-crew .bg-personnel {
+  background: #ff9c00; }
+
+.category-delegate .bg-name {
+  background-color: #0092c8; }
+.category-delegate .bg-personnel {
+  background-color: #0092c8; }
+
+.category-speaker .bg-name {
+  background-color: #42b936; }
+.category-speaker .bg-personnel {
+  background-color: #42b936; }
+
+main {
+  position: relative;
+  display: block;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%; }
+  main:before, main .forum-bg-outline {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: 50% 50%; }
+  main:before {
+    content: '';
+    z-index: 2;
+    background-color: rgba(34, 31, 31, 0.9); }
+  main .forum-bg-outline {
+    background-image: url(/templates/forum/name-badges/images/background/rh-forum-polygon-outline-grey.svg);
+    z-index: 2;
+    opacity: 0.5; }
 
 section {
   width: 80mm;
-  height: 105mm; }
-  section .bg-img {
-    width: 100mm;
-    height: 125mm;
-    position: absolute;
-    margin: -10mm 0 0 -10mm;
-    z-index: -1;
-    overflow: hidden; }
-    section .bg-img .bg-multiply {
-      width: 100mm;
-      height: 125mm;
-      position: absolute;
-      background: #221f1f;
-      opacity: 0.9; }
-    section .bg-img img {
-      max-height: 125mm;
-      width: auto; }
-  section .forum-bg-outline {
-    width: 100mm;
-    height: 125mm;
-    position: absolute;
-    margin: -10mm 0 0 -10mm;
-    z-index: -1;
-    overflow: hidden;
-    opacity: 0.5; }
-    section .forum-bg-outline object {
-      width: 115mm;
-      height: auto;
-      margin: -13mm 0 0 -35mm; }
+  height: 105mm;
+  position: relative;
+  z-index: 3; }
   section .logo {
     width: 70mm;
     margin: 0 5mm;
@@ -52,83 +63,32 @@ section {
       width: 24mm;
       height: auto; }
   section .name {
-    width: 100mm;
+    left: -5mm;
+    right: -5mm;
     height: 22mm;
+    bottom: -5mm;
     position: absolute;
-    margin: 26mm 0 0 -10mm;
-    padding: 12mm 0; }
+    padding: 12mm 0;
+    text-align: center; }
     section .name h1 {
-      font-size: 24pt;
-      text-align: center; }
+      font-size: 24pt; }
     section .name h3 {
-      font-size: 14pt;
-      text-align: center; }
-    section .name .bg-name-red {
-      width: 100mm;
-      height: 48mm;
+      font-size: 14pt; }
+    section .name .bg-name {
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
       position: absolute;
       z-index: -1;
-      margin: -14mm 0 0 0;
-      background: #cc0000;
       opacity: 0.75; }
-    section .name .bg-name-orange {
-      width: 100mm;
-      height: 48mm;
-      position: absolute;
-      z-index: -1;
-      margin: -14mm 0 0 0;
-      background: #cc0000;
-      opacity: 0.75; }
-    section .name .bg-name-green {
-      width: 100mm;
-      height: 48mm;
-      position: absolute;
-      z-index: -1;
-      margin: -14mm 0 0 0;
-      background: #cc0000;
-      opacity: 0.75; }
-    section .name .bg-name-blue {
-      width: 100mm;
-      height: 48mm;
-      position: absolute;
-      z-index: -1;
-      margin: -14mm 0 0 0;
-      background: #cc0000;
-      opacity: 0.75; }
-  section .bg-personnel-red {
-    width: 100mm;
+  section .bg-personnel {
     position: absolute;
-    margin: 10mm 0 0 -10mm;
-    padding: 5mm 0;
-    background: #cc0000; }
-    section .bg-personnel-red h2 {
-      font-size: 18pt;
-      text-align: center; }
-  section .bg-personnel-orange {
-    width: 100mm;
-    position: absolute;
-    margin: 10mm 0 0 -10mm;
-    padding: 5mm 0;
-    background: #ff9c00; }
-    section .bg-personnel-orange h2 {
-      font-size: 18pt;
-      text-align: center; }
-  section .bg-personnel-green {
-    width: 100mm;
-    position: absolute;
-    margin: 10mm 0 0 -10mm;
-    padding: 5mm 0;
-    background: #42b936; }
-    section .bg-personnel-green h2 {
-      font-size: 18pt;
-      text-align: center; }
-  section .bg-personnel-blue {
-    width: 100mm;
-    position: absolute;
-    margin: 10mm 0 0 -10mm;
-    padding: 5mm 0;
-    background: #0092c8; }
-    section .bg-personnel-blue h2 {
+    left: -5mm;
+    right: -5mm;
+    top: 55mm;
+    padding: 5mm 0; }
+    section .bg-personnel h2 {
       font-size: 18pt;
       text-align: center; }
   section .red-hat-forum-ico {
