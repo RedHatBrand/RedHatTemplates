@@ -130,8 +130,8 @@ gulp.task('serve', ['build', 'watch'], function () {
     });
 });
 
-gulp.task('publish', ['build-production'], function () {
-  var publisher = awspublish.create({
+gulp.task('publish', function () {
+  var publisher = deploy.create({
     key: process.env.RH_AWS_KEY,
     secret: process.env.RH_AWS_SECRET,
     bucket: 'red-hat-assets',
@@ -146,7 +146,7 @@ gulp.task('publish', ['build-production'], function () {
     .pipe(publisher.publish(headers))
     .pipe(publisher.sync())
     .pipe(publisher.cache())
-    .pipe(awspublish.reporter());
+    .pipe(deploy.reporter());
 });
 
 gulp.task('default', ['serve']);
