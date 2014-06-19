@@ -16,11 +16,6 @@ function initMap (events, selectedLocation) {
     attributionControl: false
   });
 
-  L.control.zoom({
-    position: 'topright'
-  }).addTo(map);
-
-
   // Add a fake GeoJSON line to coerce Leaflet into creating the <svg> tag that d3_geoJson needs
   var geoPlaceholder = new L.geoJson({"type": "LineString","coordinates":[[0,0],[0,0]]})
   geoPlaceholder.addTo(map);

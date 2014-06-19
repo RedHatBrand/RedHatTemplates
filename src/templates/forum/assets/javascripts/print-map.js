@@ -44,7 +44,7 @@ function initMap (events, selectedLocation) {
     });
 
     var marker = new customMarker(latlng, {
-      icon: eventData.location === selectedLocation.location ? currentIcon : icon
+      icon: eventData.location === (selectedLocation && selectedLocation.location) ? currentIcon : icon
     });
 
     markers.addLayer(marker);
@@ -52,10 +52,15 @@ function initMap (events, selectedLocation) {
   });
 
   map.addLayer(markers);
-  map.setView([
-    selectedLocation.latitude + offsetLat,
-    selectedLocation.longitude + offsetLon
-  ], zoom);
+
+  if (selectedLocation) {
+    map.setView([
+      selectedLocation.latitude + offsetLat,
+      selectedLocation.longitude + offsetLon
+    ], zoom);
+  } else {
+    map.fitBounds(markers.getBounds());
+  }
 
   return map;
 }

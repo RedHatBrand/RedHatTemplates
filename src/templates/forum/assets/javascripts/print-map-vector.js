@@ -20,8 +20,32 @@ function initMap (events, selectedLocation) {
   });
   map.dragging.disable();
 
-  var tileLayer = new L.tileLayer('http://{s}.tile.stamen.com/{style}/{z}/{x}/{y}.png', {style: 'toner-background'})
-  tileLayer.addTo(map);
+  // Add a fake GeoJSON line to coerce Leaflet into creating the <svg> tag that d3_geoJson needs
+  var geoPlaceholder = new L.geoJson({"type": "LineString","coordinates":[[0,0],[0,0]]})
+  geoPlaceholder.addTo(map);
+
+  // Water Areas from OpenStreetMap
+  var water = new L.TileLayer.d3_topoJSON("http://tile.openstreetmap.us/vectiles-water-areas/{z}/{x}/{y}.topojson", {
+    class: "water",
+    layerName: "vectile",
+    style: ""
+  })
+  water.addTo(map);
+
+  // Highways from OpenStreetMap
+  var roadSizes = {
+    "highway": "2px",
+    "major_road": "1px",
+    "minor_road": "0.5px",
+    "rail": "0.125px",
+    "path": "0.25px"
+  };
+  var roads = new L.TileLayer.d3_topoJSON("http://tile.openstreetmap.us/vectiles-highroad/{z}/{x}/{y}.topojson", {
+    class: "road",
+    layerName: "vectile",
+    style: function(d) { return "stroke-width: " + roadSizes[d.properties.kind]; }
+  })
+  roads.addTo(map);
 
   var markersList = map.markersList = {};
   var markers = L.featureGroup();
@@ -59,7 +83,9 @@ function initMap (events, selectedLocation) {
       selectedLocation.longitude + offsetLon
     ], zoom);
   } else {
-    map.fitBounds(markers.getBounds());
+    map.fitBounds(markers.getBounds(), {
+      paddingTopLeft: [400, 500]
+    });
   }
 
   return map;
