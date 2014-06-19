@@ -11,7 +11,7 @@ body{
 section{
 	width:24000px; height:8400px;
 	.bg-logo-area{
-		width:24240px; height:2370px;
+		width:24240px; height:2372px;
 		position:absolute; z-index:-1; margin:6148px 0 0 -120px;
 		background:#222;
 		overflow:hidden;
@@ -95,10 +95,10 @@ section{
 				width:2600px; height:2250px;
 				.date{
 					width:1920px; height:2080px;
-					position:absolute; margin:400px 0 0 0;
+					position:absolute;
 					h3.mm{
 						width:2500px;
-						margin:0 0 0 45px;
+						margin:400px 0 0 45px;
 						font-size:560px; text-align:center;
 					}
 					h3.dd{
