@@ -16,7 +16,7 @@ section {
   height: 8400px; }
   section .bg-logo-area {
     width: 24240px;
-    height: 2370px;
+    height: 2372px;
     position: absolute;
     z-index: -1;
     margin: 6148px 0 0 -120px;
@@ -121,11 +121,10 @@ section {
         section .rhf-country .contain-country .contain-date .date {
           width: 1920px;
           height: 2080px;
-          position: absolute;
-          margin: 400px 0 0 0; }
+          position: absolute; }
           section .rhf-country .contain-country .contain-date .date h3.mm {
             width: 2500px;
-            margin: 0 0 0 45px;
+            margin: 400px 0 0 45px;
             font-size: 560px;
             text-align: center; }
           section .rhf-country .contain-country .contain-date .date h3.dd {
