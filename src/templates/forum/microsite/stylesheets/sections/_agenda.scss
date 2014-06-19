@@ -22,7 +22,7 @@
 
     .time,
     .duration {
-      width: 25%;
+      width: 20%;
     }
 
     p { margin-bottom: $line-height / 2; }
@@ -177,6 +177,8 @@ input#Sunday:checked ~ .time-table-Sunday {
   box-sizing: border-box;
   display: inline-block;
   margin-right: -0.25em;
+
+  &.input-total-days-1 { display: none; }
 }
 
 .section-agenda.agenda-1 input[type="radio"] + label {

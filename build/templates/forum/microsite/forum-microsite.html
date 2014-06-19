@@ -28,7 +28,7 @@
             <div class="events-list">
               <a class="event clearfix" href="{{{ link }}}" target="_blank">
                 <div data-brand-tool-editable="date" class="date">
-                  <img src='http://red-hat-assets.s3.amazonaws.com/templates/forum/events-list/images/letters/space.svg' />
+                  <img src='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/images/space.svg' />
                   <div class="text-content">
                     <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
                       <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
@@ -69,6 +69,7 @@
             <li><a class='menu-link' href='#agenda'>Agenda</a></li>
             <li><a class='menu-link' href='#speakers'>Speakers</a></li>
             <li><a class='menu-link' href='#sponsors'>Sponsors</a></li>
+            <li><a class='register-link' href='{{{ register-link }}}'><i class="icon-arrow-right"></i>Register</a></li>
           </ul>
         </div>
       </nav>
@@ -77,11 +78,12 @@
         <div class='container'>
           <h1>Agenda</h1>
           {{#days}}
-          <input id='{{ day-name }}' name='active-day' type='radio'>
-          <label for='{{ day-name }}'>{{ day-name }}</label>
+          <input class="input-total-days-{{ days.length }}" id='{{ day-name }}' name='active-day' type='radio'>
+          <label class="input-total-days-{{ days.length }}" for='{{ day-name }}'>{{ day-name }}</label>
           {{/days}}
           {{#days}}
           <div data-brand-tool-editable="days.times" class='time-table-{{ day-name }}'>
+            <h3>{{ date }}</h3>
             <table class="calendar">
               <tr class="headings">
                 <th class="time">Timing</th>
@@ -100,43 +102,43 @@
 
                   {{#track-a}}
                   <div class="track-a">
-                    <h6>Track A</h6>
-                    <p>{{track-a}}</p>
+                    <h6>{{ track-a }}</h6>
+                    <p>{{ track-a-content }}</p>
                   </div>
                   {{/track-a}}
 
                   {{#track-b}}
                   <div class="track-b">
-                    <h6>Track B</h6>
-                    <p>{{track-b}}</p>
+                    <h6>{{ track-b }}</h6>
+                    <p>{{ track-b-content }}</p>
                   </div>
                   {{/track-b}}
 
                   {{#track-c}}
                   <div class="track-c">
-                    <h6>Track C</h6>
-                    <p>{{track-c}}</p>
+                    <h6>{{ track-c }}</h6>
+                    <p>{{ track-c-content }}</p>
                   </div>
                   {{/track-c}}
 
                   {{#track-d}}
                   <div class="track-d">
-                    <h6>Track D</h6>
-                    <p>{{track-d}}</p>
+                    <h6>{{ track-d }}</h6>
+                    <p>{{ track-d-content }}</p>
                   </div>
                   {{/track-d}}
 
                   {{#track-e}}
                   <div class="track-e">
-                    <h6>Track E</h6>
-                    <p>{{track-e}}</p>
+                    <h6>{{ track-e }}</h6>
+                    <p>{{ track-e-content }}</p>
                   </div>
                   {{/track-e}}
 
                   {{#track-f}}
                   <div class="track-f">
-                    <h6>Track F</h6>
-                    <p>{{track-f}}</p>
+                    <h6>{{ track-f }}</h6>
+                    <p>{{ track-f-content }}</p>
                   </div>
                   {{/track-f}}
                 </td>
