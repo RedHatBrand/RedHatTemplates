@@ -31,6 +31,8 @@
   display: block;
   margin: 0;
   text-decoration: none; }
+.events-list .letter {
+  fill: white; }
 .events-list .location .outer-letter {
   display: block;
   position: relative;

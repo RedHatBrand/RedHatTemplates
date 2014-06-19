@@ -9,6 +9,10 @@
     text-decoration: none;
   }
 
+  .letter {
+    fill: white;
+  }
+
   .location .outer-letter {
     display: block;
     position: relative;
@@ -31,7 +35,7 @@
   .event .date {
     .space { content: url("../images/letters/space.svg"); }
 
-    svg text, {
+    svg text {
       font-family: 'Overpass', 'Helvetica', 'Verdana', sans-serif;
     }
   }

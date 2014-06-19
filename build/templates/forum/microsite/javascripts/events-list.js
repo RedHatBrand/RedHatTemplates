@@ -35,7 +35,7 @@ $(function () {
             width: elemWidth + '%'
           });
 
-          elem.append('<img src="' + baseUrl +'/templates/forum/events-list/images/letters/space.svg" />');
+          elem.append('<img src="' + baseUrl +'/templates/forum/assets/images/space.svg" />');
 
           var svgContainer = $('<div class="svgs">');
           elem.append(svgContainer);
