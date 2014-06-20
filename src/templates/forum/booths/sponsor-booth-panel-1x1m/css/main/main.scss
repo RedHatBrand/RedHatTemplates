@@ -1,0 +1,30 @@
+html{
+  width:12120px; height:12120px; padding:60px;
+  font-family:"Overpass"; color:#fff;
+}
+
+body{
+  width:12000px; height:12000px; padding:60px;
+  background:#fff;
+}
+
+section{
+  width:12000px; height:12000px;
+  .bg-sponsor-img{
+  	width:12240px; height:12240px;
+	position:absolute; z-index:-1; margin:-120px 0 0 -120px;
+	overflow:hidden;
+  	object{
+		width:32000px; height:auto;
+		position:absolute; margin:-8000px 0 0 -8000px;
+		opacity:0.07;
+	}
+  }
+  .logo-area{
+  	width:12000px; margin:auto;
+  	object{
+		width:7860px; height:auto;
+		position:absolute; margin:2500px 0 0 0;
+	}
+  }
+} /*section*/
