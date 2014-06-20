@@ -1,0 +1,45 @@
+<!---
+width: 12240px
+height: 30240px
+---!>
+
+<!DOCTYPE html>
+<html style="width:12120px; height:30120px; padding:60px; overflow:scroll;">
+<head>
+<meta name="charset" content="utf-8" />
+<link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-concept-1a/css/style.css">
+</head>
+
+<body style="width:12000px; height:30000px; padding:60px;">
+	<section>
+    	<div class="red-bg">
+        	<object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-concept-1a/images/background/polygon-red-4.svg" class="polygon-red-4"></object>
+        	<object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-concept-1a/images/background/polygon-red-3.svg" class="polygon-red-3"></object>
+        	<object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-concept-1a/images/background/polygon-red-2.svg" class="polygon-red-2"></object>
+        	<object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-concept-1a/images/background/polygon-red-1.svg" class="polygon-red-1"></object>
+        </div><!--.red-bg-->
+        <div class="content-contain">
+            <div class="rhf-logo-icon content-option-{{ content-option-icon }}">
+                <div class="rhf-logo-icon-contain">
+                    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-concept-1a/images/logo/red-hat-forum-ico.svg"></object>
+                </div><!--.rhf-logo-icon-contain-->
+                <h3>{{ venue }}</h3>
+            </div><!--.rhf-logo-icon-->
+            <div class="rhf_info content-option-{{ content-option-info }}">
+            	<p class="text-1">{{ general-desc }}</p>
+                <p class="text-2">{{ benefit-statement }}</p>
+                <ul class="text-3">
+                	{{#proofpoint}}
+                        <li>{{ proofpoint-txt }}</li>
+                    {{/proofpoint}}
+                </ul>
+            </div><!--.rhf_info-->
+        </div><!--.content-contain-->
+    	<div class="gray-bottom-bar">gray-bottom-bar</div><!--.gray-bottom-bar-->
+    </section>
+    <div class="crop-mark top-left">&nbsp;</div>
+    <div class="crop-mark top-right">&nbsp;</div>
+    <div class="crop-mark bottom-left">&nbsp;</div>
+    <div class="crop-mark bottom-right">&nbsp;</div>
+</body>
+</html>
