@@ -21,31 +21,6 @@ section{
     text-indent:-999999px;
     background:#222;
   }
-	.red-bg{
-		width:12240px; height:30240px;
-		position:absolute; z-index:-1; margin:-120px 0 0 -120px;
-		overflow:hidden;
-		object.polygon-red-1{
-			width:33580px; height:auto;
-			position:absolute; z-index:-1; margin:1000px 0 0 -10080px;
-			opacity:0.2;
-		}
-		object.polygon-red-2{
-			width:22720px; height:auto;
-			position:absolute; z-index:-1; margin:-3640px 0 0 -12600px;
-			opacity:0.3;
-		}
-		object.polygon-red-3{
-			width:38120px; height:auto;
-			position:absolute; z-index:-1; margin:15388px 0 0 -2000px;
-			opacity:0.5;
-		}
-		object.polygon-red-4{
-			width:21050px; height:auto;
-			position:absolute; z-index:-1; margin:-10638px 0 0 0;
-			opacity:1;
-		}
-	}
 	.content-contain{
 		position: absolute;
 		.rhf_info{
