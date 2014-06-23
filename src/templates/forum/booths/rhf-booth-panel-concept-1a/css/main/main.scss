@@ -9,9 +9,11 @@ body{
   background:#890000;
 }
 
-.content-option-info .content-info{display:block}
-.content-option-icon .content-icon{display:block}
-.content-info, .content-logo {display:none;}
+.content-option-icon-icon{display:block !important;}
+.content-option-icon-info{display:none !important;}
+
+.content-option-info-icon{display:none !important;}
+.content-option-info-info{display:block !important;}
 
 section{
   width:12000px; height:30000px;
