@@ -23,6 +23,43 @@ section{
     text-indent:-999999px;
     background:#222;
   }
+	.content-contain{
+		position: absolute;
+		.rhf_info{
+			display:block; border:1px dotted #fff;
+			width:12000px; padding:1060px 0 0 0;
+			p.text-1{
+				width:9000px; margin:auto;
+				font-size:676px;
+			}
+			p.text-2{
+				width:9000px; margin:auto;
+				padding-top:800px;
+				font-size:476px;
+			}
+			ul.text-3{
+				list-style-type:disc;
+				width:9000px; margin:auto;
+				padding:800px 0 0 500px;
+				font-size:350px;
+			}
+		}
+		.rhf-logo-icon{
+			width:12000px; padding:1060px 0 0 0;
+			display:none;
+			h3{
+				width:6000px;
+				position:absolute; margin:-1387px 0 0 5400px;
+				font-size:526px;
+			}
+			.rhf-logo-icon-contain{
+				width:8850px; margin:auto;
+				object{
+					width:8850px; height:auto;
+				}
+			}
+		}
+	}
 	.red-bg{
 		width:12240px; height:30240px;
 		position:absolute; z-index:-1; margin:-120px 0 0 -120px;
@@ -46,43 +83,6 @@ section{
 			width:21050px; height:auto;
 			position:absolute; z-index:-1; margin:-10638px 0 0 0;
 			opacity:1;
-		}
-	}
-	.content-contain{
-		position: absolute;
-		.rhf_info{
-			display:block;
-			width:12000px; padding:1060px 0 0 0;
-			p.text-1{
-				width:9000px; margin:auto;
-				font-size:676px;
-			}
-			p.text-2{
-				width:9000px; margin:auto;
-				padding-top:800px;
-				font-size:476px;
-			}
-			ul.text-3{
-				list-style-type:disc;
-				width:9000px; margin:auto;
-				padding:800px 0 0 500px;
-				font-size:350px;
-			}
-		}
-		.rhf-logo-icon{
-			width:12000px; padding:1060px 0 0 0;
-			display:block;
-			h3{
-				width:6000px;
-				position:absolute; margin:-1387px 0 0 5400px;
-				font-size:526px;
-			}
-			.rhf-logo-icon-contain{
-				width:8850px; margin:auto;
-				object{
-					width:8850px; height:auto;
-				}
-			}
 		}
 	}
 } /*section*/
