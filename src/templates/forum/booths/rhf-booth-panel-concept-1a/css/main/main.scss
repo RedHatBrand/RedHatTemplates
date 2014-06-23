@@ -26,7 +26,7 @@ section{
 		position:absolute;
 		.rhf_info{
 			width:12000px; padding:1060px 0 0 0;
-			display:none;
+			display:block; border:1px dotted #fff;
 			p.text-1{
 				width:9000px; margin:auto;
 				font-size:676px;
@@ -45,7 +45,7 @@ section{
 		}
 		.rhf-logo-icon{
 			width:12000px; padding:1060px 0 0 0;
-			display:none;
+			display:block;
 			h3{
 				width:6000px;
 				position:absolute; margin:-1387px 0 0 5400px;
