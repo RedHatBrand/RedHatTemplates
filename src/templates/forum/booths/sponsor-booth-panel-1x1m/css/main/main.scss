@@ -10,6 +10,33 @@ body{
 
 section{
   width:12000px; height:12000px;
+	.gray-bg{
+		width:12240px; height:12240px;
+		position:absolute; z-index:-2; margin:-120px 0 0 -120px;
+		overflow:hidden;
+		width:12240px; height:12240px;
+		background:#e1e1e1;
+		object.polygon-gray-1{
+			width:33580px; height:auto;
+			position:absolute; z-index:-1; margin:375px 0 0 -8080px;
+			opacity:0.3;
+		}
+		object.polygon-gray-2{
+			width:32720px; height:auto;
+			position:absolute; z-index:-1; margin:-10000px 0 0 -17600px;
+			opacity:0.35;
+		}
+		object.polygon-gray-3{
+			width:38120px; height:auto;
+			position:absolute; z-index:-1; margin:0 0 0 0;
+			opacity:0.7;
+		}
+		object.polygon-gray-4{
+			width:21050px; height:auto;
+			position:absolute; z-index:-1; margin:-4520px 0 0 -6500px;
+			opacity:0.3;
+		}
+	}
   .bg-sponsor-img{
   	width:12240px; height:12240px;
 	position:absolute; z-index:-1; margin:-120px 0 0 -120px;

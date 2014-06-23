@@ -11,13 +11,22 @@ height: 12240px
 </head>
 
 <body style="width:12000px; height:1200px; padding:60px;">
-  <section>
-    <div class="bg-sponsor-img">{{ sponsor-logo-bg }}</div><!--.bg-sponsor-img-->
-    <div class="logo-area">{{ sponsor-logo }}</div><!--.logo-area-->
-  </section>
-  <div class="crop-mark top-left">&nbsp;</div>
-  <div class="crop-mark top-right">&nbsp;</div>
-  <div class="crop-mark bottom-left">&nbsp;</div>
-   <div class="crop-mark bottom-right">&nbsp;</div>
+<section>
+  <div class="gray-bg change-bg-{{ change-bg-gray }}">
+    <object data="<%=baseUrl%>/templates/forum/booths/sponsor-booth-panel-1x1m/images/background/polygon-gray-4.svg" class="polygon-gray-4"></object>
+    <object data="<%=baseUrl%>/templates/forum/booths/sponsor-booth-panel-1x1m/images/background/polygon-gray-3.svg" class="polygon-gray-3"></object>
+    <object data="<%=baseUrl%>/templates/forum/booths/sponsor-booth-panel-1x1m/images/background/polygon-gray-2.svg" class="polygon-gray-2"></object>
+    <object data="<%=baseUrl%>/templates/forum/booths/sponsor-booth-panel-1x1m/images/background/polygon-gray-1.svg" class="polygon-gray-1"></object>
+  </div>
+  <!--.gray-bg-->
+  <div class="bg-sponsor-img">{{ sponsor-logo-bg }}</div>
+  <!--.bg-sponsor-img-->
+  <div class="logo-area">{{ sponsor-logo }}</div>
+  <!--.logo-area--> 
+</section>
+<div class="crop-mark top-left">&nbsp;</div>
+<div class="crop-mark top-right">&nbsp;</div>
+<div class="crop-mark bottom-left">&nbsp;</div>
+<div class="crop-mark bottom-right">&nbsp;</div>
 </body>
 </html>
