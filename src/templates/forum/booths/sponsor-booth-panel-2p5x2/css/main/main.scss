@@ -15,12 +15,6 @@ body{
 
 section{
   width:12000px; height:30000px;
-  .gray-bottom-bar{
-    width:12240px; height:3730px;
-    position:absolute; margin:26390px 0 0 -120px;
-    text-indent:-999999px;
-    background:#222;
-  }
 	.content-contain{
 		position: absolute;
 		.rhf_info{
@@ -54,6 +48,32 @@ section{
 					width:7860px; height:auto;
 				}
 			}
+		}
+	}
+	.gray-bg{
+		width:12240px; height:30240px;
+		position:absolute; z-index:-1; margin:-120px 0 0 -120px;
+		background:#e1e1e1;
+		overflow:hidden;
+		object.polygon-gray-1{
+			width:33580px; height:auto;
+			position:absolute; z-index:-1; margin:1000px 0 0 -10080px;
+			opacity:0.3;
+		}
+		object.polygon-gray-2{
+			width:22720px; height:auto;
+			position:absolute; z-index:-1; margin:-3640px 0 0 -12600px;
+			opacity:0.35;
+		}
+		object.polygon-gray-3{
+			width:38120px; height:auto;
+			position:absolute; z-index:-1; margin:15388px 0 0 -2000px;
+			opacity:0.7;
+		}
+		object.polygon-gray-4{
+			width:21050px; height:auto;
+			position:absolute; z-index:-1; margin:-10638px 0 0 0;
+			opacity:0.3;
 		}
 	}
 } /*section*/
