@@ -92,7 +92,7 @@
 
 body {
   position: relative;
-  font-size: 24pt;
+  font-size: 48pt;
   font-family: 'Overpass';
   font-weight: 400;
   line-height: 1.5em; }
@@ -101,7 +101,12 @@ main {
   display: block;
   -webkit-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 3mm;
+  bottom: 3mm;
+  left: 3mm;
+  right: 3mm; }
 
 p {
   margin: 0.333em 0 0.75em; }
@@ -123,6 +128,18 @@ h2 {
   font-size: 0.8em;
   font-weight: 300; }
 
+#background-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  -webkit-filter: grayscale(100%); }
+
 .leaflet-map-pane, .leaflet-tile-pane {
   width: 100%;
   height: 100%; }
@@ -134,10 +151,10 @@ h2 {
   background-color: transparent; }
 
 .leaflet-map-pane {
-  background-color: rgba(0, 0, 0, 0.3); }
+  background-color: rgba(0, 0, 0, 0.4); }
 
 #map {
-  height: 66.667%;
+  height: 50%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -152,7 +169,7 @@ h2 {
   height: 2.667em !important;
   margin-left: -1.125em !important;
   margin-top: -1.333em !important;
-  font-size: 12em;
+  font-size: 6em;
   background-repeat: no-repeat;
   -webkit-background-size: contain;
   background-size: contain; }
@@ -160,11 +177,11 @@ h2 {
 #content {
   position: absolute;
   bottom: 0;
-  height: 33.333%;
+  height: 50%;
   left: 0;
   right: 0;
   padding: 3em 4em 4em 4em;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.85);
   color: white;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

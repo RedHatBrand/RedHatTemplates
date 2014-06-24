@@ -92,66 +92,72 @@
 
 body {
   position: relative;
-  font-size: 100px;
-  /* ~24pt */
+  font-size: 24pt;
   font-family: 'Overpass';
   font-weight: 400;
   line-height: 1.5em; }
 
 main {
-  display: block; }
+  display: block;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 3mm;
+  bottom: 3mm;
+  left: 3mm;
+  right: 3mm; }
 
 p {
   margin: 0.333em 0 0.75em; }
 
-h1, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   line-height: 1.2em;
   text-transform: uppercase;
   font-weight: 700; }
 
+ul {
+  margin: 0; }
+
 h1 {
   font-size: 3em;
-  margin-bottom: 0.2em;
-  margin-top: 0.3em; }
+  margin-bottom: 12%; }
 
 h2 {
-  font-size: 1em;
+  font-size: 0.8em;
   font-weight: 300; }
+
+#background-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  -webkit-filter: grayscale(100%); }
 
 .leaflet-map-pane, .leaflet-tile-pane {
   width: 100%;
   height: 100%; }
 
-.leaflet-tile-pane:before {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: black;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  opacity: 0.5;
-  z-index: 2; }
+#map .leaflet-tile-pane {
+  background-color: transparent; }
 
-.leaflet-tile-pane:after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 2; }
+#map.leaflet-container {
+  background-color: transparent; }
+
+.leaflet-map-pane {
+  background-color: rgba(0, 0, 0, 0.3); }
 
 #map {
-  height: 66.667%; }
+  height: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 #map .event-marker-icon {
   width: 1em !important;
@@ -163,21 +169,26 @@ h2 {
   height: 2.667em !important;
   margin-left: -1.125em !important;
   margin-top: -1.333em !important;
-  font-size: 5em; }
+  font-size: 6em;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain; }
 
 #content {
   position: absolute;
   bottom: 0;
-  height: 33.333%;
+  height: 50%;
   left: 0;
   right: 0;
   padding: 3em 4em 4em 4em;
-  background-color: black;
-  color: white; }
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .events-list {
-  height: 435px;
-  margin-bottom: 1em; }
+  margin-bottom: 3em; }
 
 .events-list .event, .events-list .event .date, .events-list .event .location {
   height: inherit; }
@@ -186,15 +197,10 @@ h2 {
   fill: white; }
 
 .register-box {
-  border: 0.05em solid white;
+  border: thin solid white;
   padding: 0.8em 0.667em;
   font-weight: 300;
   border-radius: 0.25em; }
-
-.one-half {
-  height: 1300px; }
-  .one-half p {
-    margin-top: 1.2em; }
 
 .sponsors {
   width: 51%;
@@ -205,7 +211,6 @@ h2 {
     display: block;
     height: inherit;
     list-style-type: none;
-    margin: 0;
     padding-right: 5%;
     padding-left: 0;
     float: left; }
@@ -245,10 +250,10 @@ h2 {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 15em;
-  height: 15em;
-  width: 15em;
-  height: 15em;
+  width: 20em;
+  height: 20em;
+  width: 20em;
+  height: 20em;
   background-image: -webkit-linear-gradient(315deg, transparent 0%, transparent 50%, #b90c20 50%, #b90c20 100%);
   background-image: linear-gradient(135deg, transparent 0%, transparent 50%, #b90c20 50%, #b90c20 100%); }
   .corner-logo img {
