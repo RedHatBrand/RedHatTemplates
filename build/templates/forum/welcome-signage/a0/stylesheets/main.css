@@ -152,7 +152,10 @@ h2 {
   height: 2.667em !important;
   margin-left: -1.125em !important;
   margin-top: -1.333em !important;
-  font-size: 12em; }
+  font-size: 12em;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain; }
 
 #content {
   position: absolute;
