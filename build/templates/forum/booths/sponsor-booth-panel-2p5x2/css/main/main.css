@@ -1,0 +1,108 @@
+html {
+  width: 12120px;
+  height: 30120px;
+  padding: 60px;
+  font-family: "Overpass";
+  color: #000; }
+
+body {
+  width: 12000px;
+  height: 30000px;
+  padding: 60px;
+  background: #fff; }
+
+.content-option-icon-icon {
+  display: block !important; }
+
+.content-option-icon-info {
+  display: none !important; }
+
+.content-option-info-icon {
+  display: none !important; }
+
+.content-option-info-info {
+  display: block !important; }
+
+.show-hide-gray-bg-show {
+  display: block; }
+
+.show-hide-gray-bg-hide {
+  display: none; }
+
+section {
+  width: 12000px;
+  height: 30000px; }
+  section .content-contain {
+    position: absolute; }
+    section .content-contain .rhf_info {
+      width: 12000px;
+      padding: 1060px 0 0 0;
+      display: none; }
+      section .content-contain .rhf_info p.text-1 {
+        width: 9000px;
+        margin: auto;
+        font-size: 676px; }
+      section .content-contain .rhf_info p.text-2 {
+        width: 9000px;
+        margin: auto;
+        padding-top: 800px;
+        font-size: 476px; }
+      section .content-contain .rhf_info ul.text-3 {
+        list-style-type: disc;
+        width: 9000px;
+        margin: auto;
+        padding: 800px 0 0 500px;
+        font-size: 350px; }
+    section .content-contain .rhf-logo-icon {
+      width: 12000px;
+      padding: 1060px 0 0 0;
+      display: none; }
+      section .content-contain .rhf-logo-icon h3 {
+        width: 6000px;
+        position: absolute;
+        margin: -1387px 0 0 5400px;
+        font-size: 526px; }
+      section .content-contain .rhf-logo-icon .rhf-logo-icon-contain {
+        width: 7860px;
+        margin: auto; }
+        section .content-contain .rhf-logo-icon .rhf-logo-icon-contain object {
+          width: 7860px;
+          height: auto; }
+  section .gray-bg {
+    width: 12240px;
+    height: 30240px;
+    position: absolute;
+    z-index: -1;
+    margin: -120px 0 0 -120px;
+    background: #e1e1e1;
+    overflow: hidden; }
+    section .gray-bg object.polygon-gray-1 {
+      width: 33580px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: 1000px 0 0 -10080px;
+      opacity: 0.3; }
+    section .gray-bg object.polygon-gray-2 {
+      width: 22720px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: -3640px 0 0 -12600px;
+      opacity: 0.35; }
+    section .gray-bg object.polygon-gray-3 {
+      width: 38120px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: 15388px 0 0 -2000px;
+      opacity: 0.7; }
+    section .gray-bg object.polygon-gray-4 {
+      width: 21050px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: -10638px 0 0 0;
+      opacity: 0.3; }
+
+/*section*/
