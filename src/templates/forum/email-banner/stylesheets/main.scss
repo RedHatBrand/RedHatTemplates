@@ -1,0 +1,55 @@
+@import '../../../../global-assets/scss/fonts/overpass';
+@import '../../../../global-assets/scss/colors/base_color_palette';
+
+body {
+  margin: 0;
+  position: relative;
+  background-color: $color-grey-lighter;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 1.7em;
+  height: 7.2em;
+  box-sizing: border-box;
+}
+
+.leaflet-map-pane,
+.leaflet-tile-pane {
+  width: 100%;
+  height: 100%;
+}
+
+#map .leaflet-tile-pane {
+  background-color: transparent;
+}
+
+#map.leaflet-container { background-color: transparent; }
+
+.leaflet-map-pane { background-color: rgba(0, 0, 0, 0.4); }
+
+$triangle-size: 12.75em;
+
+.corner-logo {
+  position: absolute;
+  bottom: 7.2em;
+  right: 0;
+  width: $triangle-size;
+  height: $triangle-size;
+  background-image: linear-gradient(135deg, transparent 0%, transparent 50%, $color-rh-red 50%, $color-rh-red 100%);
+
+  img {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    margin: 0;
+    height: 40%;
+    width: 40%;
+  }
+}

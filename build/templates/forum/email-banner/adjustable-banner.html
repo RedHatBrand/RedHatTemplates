@@ -1,75 +1,47 @@
 
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset='utf-8' />
-    <link href='http://red-hat-assets.s3.amazonaws.com/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
 
     <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/vendor/leaflet.css?v1403608314339' rel='stylesheet' />
     <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/events-list.css?v1403608314339' rel='stylesheet' />
     <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/map.css?v1403608314339' rel='stylesheet' />
-    <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/welcome-signage/a0/stylesheets/main.css?v1403608314339' rel='stylesheet' />
+
+    <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/email-banner/stylesheets/main.css?v1403608314339' rel='stylesheet' />
   </head>
+  <body style='width: 620px; height: 320px; background-image: url({{{ background-image }}})'>
+    <div id="map"></div>
 
-  <body style="width: 853mm; height: 1201mm">
-    <main>
-      <!-- Finished, cropped area = 841mm x 1189mm. 3mm bleed -->
+    <div class='corner-logo'>
+      <img src='http://red-hat-assets.s3.amazonaws.com/global-assets/images/logos/rh-logo.svg' />
+    </div>
 
-      <!-- Design here -->
-      <div id="background-image" style="background-image: url({{{ background-image }}})"></div>
-      <div id="map"></div>
-
-      <article id="content">
-        <div class="events-list">
-          <a class="event clearfix" href="{{{ link }}}" target="_blank">
-            <div data-brand-tool-editable="date" class="date">
-              <img src='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/images/space.svg' />
-              <div class="text-content">
-                <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
-                  <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
-                    {{ date }}
-                  </text>
-                </svg>
-                <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
-                  <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
-                    {{ month }}
-                  </text>
-                </svg>
-              </div>
+    <article id="content">
+      <div class="events-list">
+        <a class="event clearfix" href="{{{ link }}}" target="_blank">
+          <div data-brand-tool-editable="date" class="date">
+            <img src='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/images/space.svg' />
+            <div class="text-content">
+              <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                  {{ date }}
+                </text>
+              </svg>
+              <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                  {{ month }}
+                </text>
+              </svg>
             </div>
-            <div data-brand-tool-editable="location" class="location clearfix">
-              <div class="text-content">{{ location }}</div>
-            </div>
-          </a>
-        </div>
-
-        <div class="grid-container">
-          <div class="two-thirds">
-            <h1>{{{ message }}}</h1>
           </div>
-        </div>
-
-        <div class="grid-container">
-          <div class="one-half">
-            <p>Find out more and register at</p>
-            <div class="register-box">{{ website }}</div>
+          <div data-brand-tool-editable="location" class="location clearfix">
+            <div class="text-content">{{ location }}</div>
           </div>
-        </div>
-
-        <div class='corner-logo'>
-          <img src='http://red-hat-assets.s3.amazonaws.com/global-assets/images/logos/rh-logo.svg' />
-        </div>
-
-      </article>
-      <!-- /Design here -->
-
-      <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
-      <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
-      <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
-      <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
-    </main>
+        </a>
+      </div>
+    </article>
 
     <div style="display: none" id="baseUrl" data-base-url="http://red-hat-assets.s3.amazonaws.com"></div>
     <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
@@ -176,9 +148,9 @@
       </svg>'>
     </div>
     <!-- Params we may expose -->
-    <div style="display: none" id="zoom" data-zoom="13"></div>
-    <div style="display: none" id="offsetLatitude" data-offset-lat="0"></div>
-    <div style="display: none" id="offsetLongitude" data-offset-lon="0.14"></div>
+    <div style="display: none" id="zoom" data-zoom="10"></div>
+    <div style="display: none" id="offsetLatitude" data-offset-lat="-0.075"></div>
+    <div style="display: none" id="offsetLongitude" data-offset-lon="0.35"></div>
     <!-- /Params we may expose -->
 
     <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/jquery.js'></script>

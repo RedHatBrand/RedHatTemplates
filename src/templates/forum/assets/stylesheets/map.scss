@@ -33,5 +33,5 @@
 
   path { stroke-linejoin: round; stroke-linecap: round; fill: none;}
   path.road { stroke: $color-grey-dark; }
-  path.water { stroke: darken($color-grey-dark, 5%); fill: $color-grey-dark; }
+  path.water { stroke: $color-grey-dark; fill: $color-grey-dark; }
 }
