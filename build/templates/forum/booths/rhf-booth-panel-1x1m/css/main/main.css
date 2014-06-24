@@ -1,0 +1,112 @@
+html {
+  width: 12120px;
+  height: 12120px;
+  padding: 60px;
+  font-family: "Overpass";
+  color: #fff; }
+
+body {
+  width: 12000px;
+  height: 12000px;
+  padding: 60px;
+  background: #890000; }
+
+.change-bg-gray-red {
+  display: none; }
+
+.change-bg-gray-gray {
+  display: block; }
+
+.content-bg-red-red {
+  display: block; }
+
+.content-bg-red-gray {
+  display: none; }
+
+section {
+  width: 12000px;
+  height: 12000px; }
+  section .logo-area {
+    width: 9000px;
+    margin: auto; }
+    section .logo-area object {
+      width: 9000px;
+      height: auto;
+      position: absolute;
+      margin: 4550px 0 0 0; }
+  section .gray-bg {
+    width: 12240px;
+    height: 12240px;
+    position: absolute;
+    z-index: -2;
+    margin: -120px 0 0 -120px;
+    overflow: hidden;
+    width: 12240px;
+    height: 12240px;
+    background: #222; }
+    section .gray-bg object.polygon-gray-1 {
+      width: 33580px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: 375px 0 0 -8080px;
+      opacity: 0.2; }
+    section .gray-bg object.polygon-gray-2 {
+      width: 32720px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: -10000px 0 0 -17600px;
+      opacity: 0.1; }
+    section .gray-bg object.polygon-gray-3 {
+      width: 38120px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: 0 0 0 0;
+      opacity: 0.5; }
+    section .gray-bg object.polygon-gray-4 {
+      width: 21050px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: -4520px 0 0 -6500px;
+      opacity: 0.5; }
+  section .red-bg {
+    width: 12240px;
+    height: 12240px;
+    position: absolute;
+    z-index: -1;
+    margin: -120px 0 0 -120px;
+    background: #890000;
+    overflow: hidden; }
+    section .red-bg object.polygon-red-1 {
+      width: 33580px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: 375px 0 0 -8080px;
+      opacity: 0.2; }
+    section .red-bg object.polygon-red-2 {
+      width: 32720px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: -10000px 0 0 -17600px;
+      opacity: 0.2; }
+    section .red-bg object.polygon-red-3 {
+      width: 38120px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: 0 0 0 0;
+      opacity: 0.5; }
+    section .red-bg object.polygon-red-4 {
+      width: 21050px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: -4520px 0 0 -6500px;
+      opacity: 1; }
+
+/*section*/

@@ -1,0 +1,63 @@
+html {
+  width: 6120px;
+  height: 12120px;
+  padding: 60px;
+  font-family: "Overpass";
+  color: #000; }
+
+body {
+  width: 6000px;
+  height: 12000px;
+  padding: 60px;
+  background: #fff; }
+
+.show-hide-gray-bg-show {
+  display: block; }
+
+.show-hide-gray-bg-hide {
+  display: none; }
+
+section {
+  width: 6000px;
+  height: 12000px; }
+  section .gray-bg {
+    width: 6240px;
+    height: 12240px;
+    position: absolute;
+    z-index: -2;
+    margin: -120px 0 0 -120px;
+    overflow: hidden;
+    background: #e1e1e1; }
+    section .gray-bg object.polygon-gray-1 {
+      width: 33580px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: 375px 0 0 -12080px;
+      opacity: 0.3; }
+    section .gray-bg object.polygon-gray-2 {
+      width: 32720px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: -10000px 0 0 -21600px;
+      opacity: 0.35; }
+    section .gray-bg object.polygon-gray-3 {
+      width: 38120px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: 0 0 0 -4000px;
+      opacity: 0.7; }
+    section .gray-bg object.polygon-gray-4 {
+      width: 21050px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: -4520px 0 0 -10500px;
+      opacity: 0.3; }
+  section .logo-area {
+    width: 5500px;
+    margin: auto; }
+
+/*section*/

@@ -106,13 +106,13 @@ gulp.task('smith', function () {
 
 gulp.task('replace-urls', ['smith'], function () {
   return gulp.src(tmp + '/templates/**/*.html', { base: './.tmp/templates' })
-      .pipe(ejs({ baseUrl: base['development'] }).on('error', gutil.log))
+      .pipe(ejs({ baseUrl: base['development'], version: Date.now() }).on('error', gutil.log))
       .pipe(gulp.dest(tmp + '/templates'));
 });
 
 gulp.task('replace-urls-production', ['smith'], function () {
   return gulp.src(tmp + '/templates/**/*.html', { base: './.tmp/templates' })
-      .pipe(ejs({ baseUrl: base['production'] }).on('error', gutil.log))
+      .pipe(ejs({ baseUrl: base['production'], version: Date.now() }).on('error', gutil.log))
       .pipe(gulp.dest(tmp + '/templates'));
 });
 
