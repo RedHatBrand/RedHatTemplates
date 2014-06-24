@@ -8,9 +8,10 @@ body{
   background:#890000;
 }
 
-.change-bg-gray .content-bg-gray{display:none;}
-.change-bg-gray .content-bg-red{display:block;}
-.content-bg-red, .content-bg-gray{display:none;}
+.change-bg-gray-red{display:none;}
+.change-bg-gray-gray{display:block;}
+.content-bg-red-red{display:block;}
+.content-bg-red-gray{display:none;}
 
 section{
   width:12000px; height:12000px;
