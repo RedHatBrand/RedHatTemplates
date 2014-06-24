@@ -47,19 +47,11 @@ h2 {font-size:.8em;
   -webkit-filter: unquote("grayscale(100%)");
 }
 
-.leaflet-map-pane,
-.leaflet-tile-pane {
-  width: 100%;
-  height: 100%;
-}
-
 #map .leaflet-tile-pane {
   background-color: transparent;
 }
 
-#map.leaflet-container { background-color: transparent; }
-
-.leaflet-map-pane { background-color: rgba(0, 0, 0, 0.4); }
+#map.leaflet-container { background-color: rgba(0, 0, 0, 0.4); }
 
 #map {
   height: 50%;
@@ -73,13 +65,17 @@ h2 {font-size:.8em;
 }
 
 #map .event-marker-icon-current {
-  width: 6em !important;
-  height: 2.667em !important;
-  margin-left: -1.125em !important;
-  margin-top: -1.333em !important;
-  font-size: 6em;
-  background-repeat: no-repeat;
-  background-size: contain;
+  width: 50% !important;
+  height: 100% !important;
+
+  svg { transform: translateY(-42%); }
+}
+
+#map .leaflet-objects-pane,
+#map .leaflet-marker-pane,
+#map .leaflet-map-pane {
+  width: 100%;
+  height: 100%;
 }
 
 #content {

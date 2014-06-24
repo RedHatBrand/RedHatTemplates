@@ -32,6 +32,21 @@ function initMap (events, selectedLocation) {
   })
   water.addTo(map);
 
+  // Highways from OpenStreetMap
+  var roadSizes = {
+    "highway": "2px",
+    "major_road": "1px",
+    "minor_road": "0.5px",
+    "rail": "0.125px",
+    "path": "0.25px"
+  };
+  var roads = new L.TileLayer.d3_topoJSON("http://tile.openstreetmap.us/vectiles-highroad/{z}/{x}/{y}.topojson", {
+    class: "road",
+    layerName: "vectile",
+    style: function(d) { return "stroke-width: " + roadSizes[d.properties.kind]; }
+  })
+  roads.addTo(map);
+
   var markersList = map.markersList = {};
   var markers = L.featureGroup();
 
@@ -62,11 +77,24 @@ function initMap (events, selectedLocation) {
 
   map.addLayer(markers);
 
+  var mapWidth = $('#map').width();
+
+  function setViewOffset (latlng, offset) {
+    var x = map.latLngToContainerPoint(latlng).x - offset[0];
+    var y = map.latLngToContainerPoint(latlng).y - offset[1];
+    var point = map.containerPointToLatLng([x, y]);
+    return map.setView(point);
+  }
+
   if (selectedLocation) {
     map.setView([
-      selectedLocation.latitude + offsetLat,
-      selectedLocation.longitude + offsetLon
+      selectedLocation.latitude,
+      selectedLocation.longitude
     ], zoom);
+    setViewOffset([
+      selectedLocation.latitude,
+      selectedLocation.longitude
+    ], [-(mapWidth / 4), 0]);
   } else {
     map.fitBounds(markers.getBounds(), {
       paddingTopLeft: [400, 500]

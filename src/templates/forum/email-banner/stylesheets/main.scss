@@ -21,19 +21,37 @@ body {
   box-sizing: border-box;
 }
 
-.leaflet-map-pane,
-.leaflet-tile-pane {
-  width: 100%;
-  height: 100%;
-}
-
 #map .leaflet-tile-pane {
   background-color: transparent;
 }
 
-#map.leaflet-container { background-color: transparent; }
+#map.leaflet-container { background-color: rgba(0, 0, 0, 0.4); }
 
-.leaflet-map-pane { background-color: rgba(0, 0, 0, 0.4); }
+#map {
+  box-sizing: border-box;
+  bottom: 7.2em;
+  height: auto;
+}
+
+#map .event-marker-icon {
+  width: 1em !important;
+  height: 1em !important;
+  margin: -0.5em !important;
+}
+
+#map .event-marker-icon-current {
+  width: 50% !important;
+  height: 100% !important;
+
+  svg { transform: translateY(-30%); }
+}
+
+#map .leaflet-objects-pane,
+#map .leaflet-marker-pane,
+#map .leaflet-map-pane {
+  width: 100%;
+  height: 100%;
+}
 
 $triangle-size: 12.75em;
 
