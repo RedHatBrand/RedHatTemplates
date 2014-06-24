@@ -36,9 +36,9 @@ function initMap (events, selectedLocation) {
   var markers = L.featureGroup();
 
   var icon =  L.divIcon({className: 'event-marker-icon'});
-  var currentIcon = L.icon({
+  var currentIcon = L.divIcon({
     className: 'event-marker-icon-current',
-    iconUrl: 'data:image/svg+xml,' + window.encodeURIComponent(eventlogo)
+    html: eventlogo
   });
 
   $.each(events, function(i, eventData) {
