@@ -11,7 +11,7 @@ height: 100vh
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width" />
 
-    <link href='<%= baseUrl %>/templates/forum/hub/css/main.css' media='screen' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/hub/css/main.css?v<%=version%>' media='screen' rel='stylesheet' />
 
   </head>
   <body>
@@ -81,6 +81,6 @@ height: 100vh
     <script src='<%= baseUrl %>/templates/forum/hub/js/leaflet-locate.js'></script>
     <script src='<%= baseUrl %>/templates/forum/hub/js/events-list.js'></script>
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
-    <script src='<%= baseUrl %>/templates/forum/hub/js/main.js'></script>
+    <script src='<%= baseUrl %>/templates/forum/hub/js/main.js?v<%=version%>'></script>
   </body>
 </html>
