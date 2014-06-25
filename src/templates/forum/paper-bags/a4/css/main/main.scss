@@ -1,6 +1,6 @@
 html{
 	width:340mm; height:360mm; padding:5mm;
-	font-family:"Overpass"; color:#fff;
+	font-family:"Overpass"; color:#000;
 	overflow:hidden;
 }
 
@@ -66,6 +66,7 @@ section.main-panel{
 		li{
 			img{
 				width:18mm; height:18mm;
+				border:1px dotted #000;
 			}		
 		}
 	}
