@@ -7,7 +7,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width" />
 
-    <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/hub/css/main.css?v1403738935819' media='screen' rel='stylesheet' />
+    <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/hub/css/main.css?v1403740585085' media='screen' rel='stylesheet' />
 
   </head>
   <body>
@@ -20,6 +20,7 @@
     <div class="events-list-container">
       <ul class="events-list">
         {{#events}}
+        {{#location}}
         <li class="event clearfix">
           <a href="{{ link }}" data-event-id="{{ location_id }}">
             <div class="date">
@@ -42,6 +43,7 @@
             </div>
           </a>
         </li>
+        {{/location}}
         {{/events}}
       </ul>
     </div>
@@ -75,8 +77,7 @@
     <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/jquery.js'></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
     <script src='http://red-hat-assets.s3.amazonaws.com/templates/forum/hub/js/leaflet-locate.js'></script>
-    <script src='http://red-hat-assets.s3.amazonaws.com/templates/forum/hub/js/events-list.js'></script>
-    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/jquery.js'></script>
-    <script src='http://red-hat-assets.s3.amazonaws.com/templates/forum/hub/js/main.js?v1403738935819'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/templates/forum/hub/js/events-list.js?v1403740585085'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/templates/forum/hub/js/main.js?v1403740585085'></script>
   </body>
 </html>

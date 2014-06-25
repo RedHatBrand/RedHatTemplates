@@ -24,6 +24,7 @@ height: 100vh
     <div class="events-list-container">
       <ul class="events-list">
         {{#events}}
+        {{#location}}
         <li class="event clearfix">
           <a href="{{ link }}" data-event-id="{{ location_id }}">
             <div class="date">
@@ -46,6 +47,7 @@ height: 100vh
             </div>
           </a>
         </li>
+        {{/location}}
         {{/events}}
       </ul>
     </div>
@@ -79,8 +81,7 @@ height: 100vh
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
     <script src='<%= baseUrl %>/templates/forum/hub/js/leaflet-locate.js'></script>
-    <script src='<%= baseUrl %>/templates/forum/hub/js/events-list.js'></script>
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='<%= baseUrl %>/templates/forum/hub/js/events-list.js?v<%=version%>'></script>
     <script src='<%= baseUrl %>/templates/forum/hub/js/main.js?v<%=version%>'></script>
   </body>
 </html>

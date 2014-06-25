@@ -39,7 +39,7 @@ function initMap (events) {
 
     var customMarker = L.Marker.extend({
       options: {
-        location_id: eventData.location_id
+        location_id: i
       }
     });
 
