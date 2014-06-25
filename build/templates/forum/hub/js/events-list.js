@@ -21,7 +21,7 @@ $(function () {
 
   longest = longest > 10 ? longest : 10;
 
-  var elemWidth = 100 / (longest);
+  var elemWidth = 100 / (longest + 1.5);
 
   $(locations).each(function (_i, location) {
       for (var i = 0; i < longest; i++) {
@@ -35,7 +35,7 @@ $(function () {
             width: elemWidth + '%'
           });
 
-          elem.append('<img src="' + baseUrl +'/templates/forum/events-list/images/letters/space.svg" />');
+          elem.append('<img src="' + baseUrl +'/templates/forum/assets/images/space.svg" />');
 
           var svgContainer = $('<div class="svgs">');
           elem.append(svgContainer);

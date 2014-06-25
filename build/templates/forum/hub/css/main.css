@@ -936,7 +936,7 @@ li.event {
   position: relative; }
   li.event .date, li.event .month, li.event .letter {
     fill: white; }
-  li.event.active .date, li.event.active .month, li.event.active .letter {
+  li.event a.active .date, li.event a.active .month, li.event a.active .letter {
     fill: #CC0000; }
   li.event:hover {
     cursor: pointer; }

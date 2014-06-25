@@ -239,7 +239,7 @@ html {
   height: 360mm;
   padding: 5mm;
   font-family: "Overpass";
-  color: #fff;
+  color: #000;
   overflow: hidden; }
 
 body {
@@ -308,7 +308,8 @@ section.main-panel {
       background: none !important; }
     section.main-panel .sponsors li img {
       width: 18mm;
-      height: 18mm; }
+      height: 18mm;
+      border: 1px dotted #000; }
 
 /*section.main-panel*/
 section.side-panel {

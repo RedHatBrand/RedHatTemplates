@@ -20,10 +20,27 @@
     <div class="events-list-container">
       <ul class="events-list">
         {{#events}}
-        <li class="event clearfix" data-event-id="{{ location_id }}">
-          <div class="location clearfix">
-            <div class="text-content">{{ location }}</div>
-          </div>
+        <li class="event clearfix">
+          <a href="{{ link }}" data-event-id="{{ location_id }}">
+            <div class="date">
+              <img src='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/images/space.svg' />
+              <div class="text-content">
+                <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                  <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                    {{ date }}
+                  </text>
+                </svg>
+                <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                  <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                    {{ month }}
+                  </text>
+                </svg>
+              </div>
+            </div>
+            <div class="location clearfix">
+              <div class="text-content">{{ location }}</div>
+            </div>
+          </a>
         </li>
         {{/events}}
       </ul>

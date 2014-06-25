@@ -86,11 +86,13 @@ $(function () {
 
     var map = initMap(events);
 
-    $('li.event').on('click', function(e) {
+    $('li.event a').on('click', function(e) {
+      e.preventDefault();
+
       var $this = $(this),
          marker = map.markersList[$this.data('event-id')];
 
-      $('li.event').not($this).removeClass('active');
+      $('li.event a').not($this).removeClass('active');
       $this.addClass('active');
 
       map.panTo( marker.getLatLng() );
