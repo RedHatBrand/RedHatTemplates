@@ -49,7 +49,6 @@ function initMap (events) {
 
     marker.bindPopup(
       "<h3 class='location'>" + eventData.location + "</h3>" +
-      "<span class='date'>" + eventData.date + "</span>" +
       "<a class='link-footer' href=" + eventData.link  + ">Visit site</a>"
     );
 
