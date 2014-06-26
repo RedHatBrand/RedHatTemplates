@@ -62,7 +62,7 @@ function initMap (events) {
     });
 
     markers.addLayer(marker);
-    markersList[eventData.location_id] = marker;
+    markersList[eventData['location-id']] = marker;
   });
 
   map.addLayer(markers);
