@@ -8,6 +8,7 @@ body {
   font-family: 'Overpass';
   font-weight: 400;
   line-height: 1.5em;
+  background-color: white;
 }
 
 main {
@@ -52,7 +53,7 @@ h2 {font-size:.8em;
   background-color: transparent;
 }
 
-#map.leaflet-container { background-color: rgba(0, 0, 0, 0.4); }
+#map.leaflet-container { background-color: rgba(0, 0, 0, 0.667); }
 
 #map {
   height: 50%;

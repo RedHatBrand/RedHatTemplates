@@ -8,6 +8,7 @@ body {
   font-family: 'Overpass';
   font-weight: 400;
   line-height: 1.5em;
+  background-color: white;
 }
 
 main {
@@ -52,7 +53,7 @@ h2 {font-size:.8em;
   background-color: transparent;
 }
 
-#map.leaflet-container { background-color: rgba(0, 0, 0, 0.4); }
+#map.leaflet-container { background-color: rgba(0, 0, 0, 0.667); }
 
 #map {
   height: 50%;
@@ -172,24 +173,23 @@ h2 {font-size:.8em;
   }
 }
 
-$triangle-size: 20em;
-
 .corner-logo {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: $triangle-size;
-  height: $triangle-size;
-  width: $triangle-size;
-  height: $triangle-size;
-  background-image: linear-gradient(135deg, transparent 0%, transparent 50%, $color-rh-red 50%, $color-rh-red 100%);
+  width: 40%;
+  height: 100%;
+  background-image: url('/global-assets/images/basic-shapes/triangle.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
 
   img {
     position: absolute;
     right: 10%;
     bottom: 10%;
     margin: 0;
-    height: 40%;
-    width: 40%;
+    height: auto;
+    width: 30%;
   }
 }

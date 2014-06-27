@@ -1165,7 +1165,7 @@ input[type='checkbox'], input[type='radio'] {
   text-align: center;
   font-size: inherit;
   background: transparent;
-  -webkit-background-size: contain contain;
+  -webkit-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center; }
@@ -1241,7 +1241,7 @@ select {
   border-color: #d6d6d6;
   background-repeat: no-repeat;
   background-position: right 0.4em center;
-  -webkit-background-size: 0.8em 0.8em;
+  -webkit-background-size: 0.8em;
   background-size: 0.8em;
   background-image: url("data:image/svg+xml;utf8, <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><path fill=\"#171717\" d=\"M8 12l8 8 8-8z\" /></svg>");
   -webkit-transition: all 0.5s ease;
@@ -1671,7 +1671,7 @@ input[type="file"]::-webkit-file-upload-button {
 .hero-layer {
   background-color: rgba(0, 0, 0, 0.1);
   background-position: 50% 50%;
-  -webkit-background-size: cover cover;
+  -webkit-background-size: cover;
   background-size: cover; }
 
 @media screen and (min-width: 48em) {
@@ -2280,7 +2280,7 @@ input#Monday:checked ~ label[for="Monday"], input#Tuesday:checked ~ label[for="T
   background: black;
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-background-size: cover cover;
+  -webkit-background-size: cover;
   background-size: cover; }
   .map .leaflet-tile-pane {
     opacity: 0.333; }
@@ -2291,7 +2291,7 @@ input#Monday:checked ~ label[for="Monday"], input#Tuesday:checked ~ label[for="T
   margin: -1em !important;
   font-size: 2.5em;
   background-image: url(../images/marker.svg);
-  -webkit-background-size: 100% 100%;
+  -webkit-background-size: 100%;
   background-size: 100%; }
 
 .event-marker-icon-current {

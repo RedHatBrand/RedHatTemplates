@@ -1195,7 +1195,7 @@ math {
   background: black;
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-background-size: cover cover;
+  -webkit-background-size: cover;
   background-size: cover; }
   .map .leaflet-tile-pane {
     background-color: #4a4a4a; }
@@ -1206,7 +1206,7 @@ math {
   margin: -1em !important;
   font-size: 2.5em;
   background-image: url(../images/marker.svg);
-  -webkit-background-size: 100% 100%;
+  -webkit-background-size: 100%;
   background-size: 100%; }
 
 .event-marker-icon-current {
@@ -1215,7 +1215,7 @@ math {
   margin: -1em !important;
   font-size: 2.5em;
   background-image: url(../images/forum-logo.svg);
-  -webkit-background-size: contain contain;
+  -webkit-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat; }
 
