@@ -91,6 +91,7 @@ section{
 				font-size:1260px; line-height:inherit;
 				overflow:hidden;
 				display:table-cell;
+				border:1px dotted;
 			}
 			.contain-date{
 				width:2600px; height:2250px;
@@ -102,11 +103,13 @@ section{
 						width:2500px;
 						margin:400px 0 0 45px;
 						font-size:560px; text-align:center;
+						border:1px dotted;
 					}
 					h3.dd{
 						width:2300px;
 						margin:300px 0 0 150px;
 						font-size:680px; text-align:center;
+						border:1px dotted;
 					}
 				}
 				object.flip-txt{
