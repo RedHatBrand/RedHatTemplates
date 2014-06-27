@@ -9,7 +9,7 @@ function parseRespose(data) {
 
 function initMap (events, selectedLocation) {
   var zoom = parseFloat($('#zoom').data('zoom'));
-  var eventlogo = $('#eventLogo').data('event-logo');
+  var eventlogo = $('#eventLogo').data('event-logo') || '';
   var offsetLat = parseFloat($('#offsetLatitude').data('offset-lat'));
   var offsetLon = parseFloat($('#offsetLongitude').data('offset-lon'));
 
