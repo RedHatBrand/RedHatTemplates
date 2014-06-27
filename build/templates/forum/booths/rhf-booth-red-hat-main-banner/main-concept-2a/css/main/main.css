@@ -103,7 +103,8 @@ section {
     width: 24000px;
     height: 2250px;
     position: absolute;
-    margin: 2737px 0 0 0; }
+    margin: 2737px 0 0 0;
+    background: #00f; }
     section .rhf-country .contain-country {
       max-width: 22000px;
       height: 2250px;
@@ -114,10 +115,12 @@ section {
         font-size: 1260px;
         line-height: inherit;
         overflow: hidden;
-        display: table-cell; }
+        display: table-cell;
+        border: 1px dotted; }
       section .rhf-country .contain-country .contain-date {
         width: 2600px;
-        height: 2250px; }
+        height: 2250px;
+        background: #0f0; }
         section .rhf-country .contain-country .contain-date .date {
           width: 1920px;
           height: 2080px;
@@ -126,12 +129,14 @@ section {
             width: 2500px;
             margin: 400px 0 0 45px;
             font-size: 560px;
-            text-align: center; }
+            text-align: center;
+            border: 1px dotted; }
           section .rhf-country .contain-country .contain-date .date h3.dd {
             width: 2300px;
             margin: 300px 0 0 150px;
             font-size: 680px;
-            text-align: center; }
+            text-align: center;
+            border: 1px dotted; }
         section .rhf-country .contain-country .contain-date object.flip-txt {
           float: left;
           width: auto;

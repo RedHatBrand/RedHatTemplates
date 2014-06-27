@@ -245,16 +245,17 @@ h2 {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 20em;
-  height: 20em;
-  width: 20em;
-  height: 20em;
-  background-image: -webkit-linear-gradient(315deg, transparent 0%, transparent 50%, #b90c20 50%, #b90c20 100%);
-  background-image: linear-gradient(135deg, transparent 0%, transparent 50%, #b90c20 50%, #b90c20 100%); }
+  width: 40%;
+  height: 100%;
+  background-image: url('/global-assets/images/basic-shapes/triangle.svg');
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 100% 100%; }
   .corner-logo img {
     position: absolute;
     right: 10%;
     bottom: 10%;
     margin: 0;
-    height: 40%;
-    width: 40%; }
+    height: auto;
+    width: 30%; }
