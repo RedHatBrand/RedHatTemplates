@@ -8,6 +8,7 @@ height: 8640px
 <head>
 <meta name="charset" content="utf-8" />
 <link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths/rhf-booth-red-hat-main-banner/main-concept-2a/css/style.css">
+<link href='<%= baseUrl %>/templates/forum/assets/stylesheets/events-list.css?v<%= version %>' rel='stylesheet' />
 </head>
 
 <body style="width:24000px; height:8400px; padding:60px;">
@@ -42,7 +43,7 @@ height: 8640px
   </div>
   <!--.bg-logo-area-->
   <div class="logo-area">
-    <object data="<%=baseUrl %>/global-assets/images/logos/rh-logo.svg">
+    <object data="<%=baseUrl%>/global-assets/images/logos/rh-logo.svg">
     </object>
   </div>
   <!--.logo-area-->
@@ -57,8 +58,11 @@ height: 8640px
         </div>
         <!--.date--> 
       </div>
-      <!--.contain-date-->
-      <h1 class="country">{{ country }}</h1>
+      <!--.contain-date--> 
+      <!--h1 class="country">{{ country }}</h1-->
+      <div data-brand-tool-editable="location" class="location clearfix">
+        <div class="text-content">{{ location }}</div>
+      </div>
     </div>
     <!--.contain-country--> 
   </div>
@@ -68,5 +72,12 @@ height: 8640px
 <div class="crop-mark top-right">&nbsp;</div>
 <div class="crop-mark bottom-left">&nbsp;</div>
 <div class="crop-mark bottom-right">&nbsp;</div>
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script>
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3.v3.min.js'></script>
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script>
+<script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-events-list.js?v<%= version %>'></script>
 </body>
 </html>
