@@ -2,6 +2,7 @@
 @import '../../../../../global-assets/scss/fonts/overpass';
 @import '../../../../../global-assets/scss/colors/base_color_palette';
 
+
 // ## Colours
 
 $color-primary:             #c12;
@@ -12,7 +13,7 @@ $black:                     hsl(0,0%,9%);
 
 body {
   position: relative;
-  font-family: 'Overpass';
+  font-family: 'Overpass', 'Helvetica', 'Verdana', 'Arial', sans-serif;
   color:white;
 }
 main { display: block }
@@ -75,6 +76,7 @@ p { margin: 0.333em 0 0.75em; }
 .rh-theme-right .right { display: block; }
 
 body.rh-theme-right { 
+  font-family: 'Overpass', 'Helvetica', 'Verdana', 'Arial', sans-serif;
 
   .title, .directional-arrow {
     margin-left:31%;

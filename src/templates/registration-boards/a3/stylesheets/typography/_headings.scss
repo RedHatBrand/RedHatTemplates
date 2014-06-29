@@ -10,11 +10,12 @@ h1, h2, h3, h4, h5, h6 { @extend %heading; }
 h1 {
   font-size: $font-size-level-one;
   font-weight: $font-weight-level-one;
-  line-height: 0.9em;
+  line-height: 1em;
   color:$white;
   margin-bottom: $margin-level-two /2;
-  text-transform:uppercase;
   text-align:center;
+  vertical-align:middle;
+  letter-spacing:0.1em;
 
   & + h1, & + h2, & + h3, & + h4, & + h5, & + h6 {
     margin-top: 0;
@@ -31,7 +32,7 @@ h2 {
   margin-bottom: 0;
   line-height: $line-height-level-two;
   color:$white;
-  padding:50px;
+  padding:40px 50px 50px 50px;
   text-transform:uppercase;
   letter-spacing:0;
 

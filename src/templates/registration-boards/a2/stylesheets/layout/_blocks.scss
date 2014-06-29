@@ -88,12 +88,10 @@ img, video, audio {
     .title {
       width:70%;
       margin: 0 auto;
-      border:$white solid 0.5em;
-      background-color: rgba($white, 0.2);
+      background-color: $color-primary;
 
         h1 {
           padding:5%;
-          line-height:2.3em;
           vertical-align:middle;
           margin:0;
         }
