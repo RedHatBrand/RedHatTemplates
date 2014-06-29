@@ -20,7 +20,7 @@
   font-style: normal; }
 
 html {
-  -webkit-background-size: cover;
+  -webkit-background-size: cover cover;
   background-size: cover;
   background-position: 50% 50%; }
 

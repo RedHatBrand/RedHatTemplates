@@ -263,7 +263,7 @@ html {
 main {
   position: relative;
   display: block;
-  -webkit-background-size: cover;
+  -webkit-background-size: cover cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%; }
@@ -274,7 +274,7 @@ main {
     right: 0;
     top: 0;
     bottom: 0;
-    -webkit-background-size: cover;
+    -webkit-background-size: cover cover;
     background-size: cover;
     background-position: 50% 50%; }
   main:before {

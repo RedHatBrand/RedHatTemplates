@@ -683,7 +683,7 @@ h2 {
       font-size: 22.4em; } }
 
 h3 {
-  font-weight: 300;
+  font-weight: 700;
   color: white;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -878,7 +878,7 @@ main address, main audio, main embed, main object, main map, main svg, main vide
   top: 0;
   bottom: 0;
   background-color: black;
-  -webkit-background-size: cover;
+  -webkit-background-size: cover cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -1237,7 +1237,7 @@ table.main {
   background: black;
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-background-size: cover;
+  -webkit-background-size: cover cover;
   background-size: cover; }
   .map .leaflet-tile-pane {
     background-color: #4a4a4a; }
@@ -1248,7 +1248,7 @@ table.main {
   margin: -1em !important;
   font-size: 2.5em;
   background-image: url(../images/marker.svg);
-  -webkit-background-size: 100%;
+  -webkit-background-size: 100% 100%;
   background-size: 100%; }
 
 .event-marker-icon-current {
@@ -1257,7 +1257,7 @@ table.main {
   margin: -1em !important;
   font-size: 2.5em;
   background-image: url(../images/forum-logo.svg);
-  -webkit-background-size: contain;
+  -webkit-background-size: contain contain;
   background-size: contain;
   background-repeat: no-repeat; }
 
