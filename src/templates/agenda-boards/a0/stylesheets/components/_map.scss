@@ -47,24 +47,6 @@ $aside-width: 22em;
   }
 }
 
-.event-marker-icon {
-  width: 2em !important;
-  height: 2em !important;
-  margin: -1em !important;
-  font-size: 2.5em;
-  background-image: url(../images/marker.svg);
-  background-size: 100%;
-}
-
-.event-marker-icon-current {
-  width: 6em !important;
-  height: 2.667em !important;
-  margin: -1em !important;
-  font-size: 2.5em;
-  background-image: url(../images/forum-logo.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
 
 path { stroke-linejoin: round; stroke-linecap: round; fill: none;}
 path.road { stroke: $gray-dark; }
