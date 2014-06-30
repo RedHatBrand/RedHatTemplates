@@ -17,7 +17,7 @@ object.flip-txt-jp-tyo-tyo{display:block;}
 section{
 	width:24000px; height:8400px;
 	#background-image {
-	  position: absolute;
+	  position: absolute; z-index-1;
 	  left: 0;
 	  right: 0;
 	  top: 0;
