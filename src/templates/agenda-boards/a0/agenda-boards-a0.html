@@ -86,14 +86,14 @@ height: 14508px
 
                 {{# times }}
                 <tr class="content">
-                  <td><h4>{{{ timing }}}</h4></td>
-                  <td><h4>{{{ duration }}}</h4></td>
-                  {{# track-a }}<td><h4>{{ track-a }}</h4><p>{{ track-a-content }}</p></td> {{/ track-a }}
-                  {{# track-b }}<td><h4>{{ track-b }}</h4><p>{{ track-b-content }}</p></td> {{/ track-b }}
-                  {{# track-c }}<td><h4>{{ track-c }}</h4><p>{{ track-c-content }}</p></td> {{/ track-c }}
-                  {{# track-d }}<td><h4>{{ track-d }}</h4><p>{{ track-d-content }}</p></td> {{/ track-d }}
-                  {{# track-e }}<td><h4>{{ track-e }}</h4><p>{{ track-e-content }}</p></td> {{/ track-e }}
-                  {{# track-f }}<td><h4>{{ track-f }}</h4><p>{{ track-f-content }}</p></td> {{/ track-f }}
+                  <div class="tracks"><h4>{{{ timing }}}</h4></div>
+                  <div class="tracks"><h4>{{{ duration }}}</h4></div>
+                  {{# track-a }}<div class="tracks"><h4>{{ track-a }}</h4><p>{{ track-a-content }}</p></div> {{/ track-a }}
+                  {{# track-b }}<div class="tracks"><h4>{{ track-b }}</h4><p>{{ track-b-content }}</p></div> {{/ track-b }}
+                  {{# track-c }}<div class="tracks"><h4>{{ track-c }}</h4><p>{{ track-c-content }}</p></div> {{/ track-c }}
+                  {{# track-d }}<div class="tracks"><h4>{{ track-d }}</h4><p>{{ track-d-content }}</p></div> {{/ track-d }}
+                  {{# track-e }}<div class="tracks"><h4>{{ track-e }}</h4><p>{{ track-e-content }}</p></div> {{/ track-e }}
+                  {{# track-f }}<div class="tracks"><h4>{{ track-f }}</h4><p>{{ track-f-content }}</p></div> {{/ track-f }}
                 </tr>
                 {{/ times }}
 
