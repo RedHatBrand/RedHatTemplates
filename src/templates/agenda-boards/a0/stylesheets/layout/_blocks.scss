@@ -25,7 +25,17 @@
   }
 }
 
-#map { height: 100%; }
+#map { 
+  height: 100%; 
+  top: -120px;
+  left: -120px;
+  right: -120px;
+  bottom:-120px;
+
+  .event-marker-icon-current {
+    display:none;
+  }
+}
 
 
 .leaflet-map-pane,
@@ -103,7 +113,6 @@ iframe {
 
       img {
         width:100%;
-
       }
 }
 
@@ -138,7 +147,10 @@ iframe {
 }
 
 .contents {
-  margin-top:55%;
+  top:55%;
+  position:absolute;
+  width:10000px;
+  padding:60px;
 }
 
 video, audio {

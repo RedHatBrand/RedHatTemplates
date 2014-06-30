@@ -2,13 +2,10 @@
 
 .leaflet-map-pane,
 .leaflet-tile,
-.leaflet-marker-icon,
-.leaflet-marker-shadow,
 .leaflet-tile-pane,
 .leaflet-tile-container,
 .leaflet-overlay-pane,
 .leaflet-shadow-pane,
-.leaflet-marker-pane,
 .leaflet-popup-pane,
 .leaflet-overlay-pane svg,
 .leaflet-zoom-box,
@@ -22,18 +19,13 @@
   overflow: hidden;
   -ms-touch-action: none;
   }
-.leaflet-tile,
-.leaflet-marker-icon,
-.leaflet-marker-shadow {
+.leaflet-tile {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   -webkit-user-drag: none;
   }
-.leaflet-marker-icon,
-.leaflet-marker-shadow {
-  display: block;
-  }
+
 /* map is broken in FF if you have max-width: 100% on tiles */
 .leaflet-container img {
   max-width: none !important;
@@ -62,7 +54,6 @@
 .leaflet-objects-pane { z-index: 3; }
 .leaflet-overlay-pane { z-index: 4; }
 .leaflet-shadow-pane  { z-index: 5; }
-.leaflet-marker-pane  { z-index: 6; }
 .leaflet-popup-pane   { z-index: 7; }
 
 .leaflet-vml-shape {

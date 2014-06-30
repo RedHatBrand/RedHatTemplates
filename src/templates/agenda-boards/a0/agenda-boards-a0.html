@@ -62,7 +62,7 @@ height: 14508px
         </a>
       </div>
 
-      <table align='center' cellpadding='0' cellspacing='0' class='container' width='10332px'>
+      <table align='center' cellpadding='0' cellspacing='0' class='container' width='10022px'>
         <tr>
           <td>
             <table align='center' style="margin: 0 auto" cellpadding='0' cellspacing='0' class='main' height='auto' width='100%'>
@@ -83,7 +83,7 @@ height: 14508px
               <tbody>
 
 
-
+                {{# times }}
                 <tr class="content">
                   <td><h4>{{{ timing }}}</h4></td>
                   <td><h4>{{{ duration }}}</h4></td>
@@ -94,6 +94,7 @@ height: 14508px
                   {{# track-e }}<td><h4>{{ track-e }}</h4><p>{{ track-e-content }}</p></td> {{/ track-e }}
                   {{# track-f }}<td><h4>{{ track-f }}</h4><p>{{ track-f-content }}</p></td> {{/ track-f }}
                 </tr>
+                {{/ times }}
 
               </tbody>
             </table>
