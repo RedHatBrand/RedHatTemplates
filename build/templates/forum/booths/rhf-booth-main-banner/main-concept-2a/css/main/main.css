@@ -1,0 +1,163 @@
+html {
+  width: 24120px;
+  height: 8520px;
+  padding: 60px;
+  font-family: "Overpass";
+  color: #fff; }
+
+body {
+  width: 24000px;
+  height: 8400px;
+  padding: 60px;
+  background: #890000; }
+
+object.flip-txt-my-my {
+  display: block; }
+
+object.flip-txt-my-tyo {
+  display: none; }
+
+object.flip-txt-jp-tyo-my {
+  display: none; }
+
+object.flip-txt-jp-tyo-tyo {
+  display: block; }
+
+section {
+  width: 24000px;
+  height: 8400px; }
+  section .bg-logo-area {
+    width: 24240px;
+    height: 2372px;
+    position: absolute;
+    z-index: -1;
+    margin: 6148px 0 0 -120px;
+    background: #222;
+    overflow: hidden; }
+    section .bg-logo-area object.polygon-gray-1 {
+      width: 28330px;
+      height: auto;
+      position: absolute;
+      margin: -5240px 0 0 -13590px;
+      opacity: 0.3; }
+    section .bg-logo-area object.polygon-gray-2 {
+      width: 30000px;
+      height: auto;
+      position: absolute;
+      margin: -8730px 0 0 2710px;
+      opacity: 0.3; }
+  section .contain-red-bg {
+    width: 24120px;
+    height: 8520px;
+    padding: 60px;
+    position: absolute;
+    z-index: -1;
+    margin: -120px 0 0 -120px;
+    overflow: hidden; }
+    section .contain-red-bg object.polygon-red-1 {
+      width: 28330px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: -5240px 0 0 -7920px;
+      opacity: 0.3; }
+    section .contain-red-bg object.polygon-red-2 {
+      width: 21180px;
+      height: auto;
+      position: absolute;
+      margin: -8780px 0 0 1310px;
+      opacity: 0.2;
+      display: none; }
+    section .contain-red-bg object.polygon-red-5 {
+      width: 21180px;
+      height: auto;
+      position: absolute;
+      margin: -8780px 0 0 -300px;
+      opacity: 0.2; }
+    section .contain-red-bg object.polygon-red-3 {
+      width: 28970px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: -9440px 0 0 -23760px;
+      opacity: 0.5; }
+    section .contain-red-bg object.polygon-red-4 {
+      width: 38110px;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      margin: -11280px 0 0 3570px;
+      opacity: 0.5; }
+  section .logo-area {
+    width: 7500px;
+    height: 3400px;
+    position: absolute;
+    margin: 1390px 0 0 16260px;
+    border-left: 10px solid #fff; }
+    section .logo-area object {
+      width: 4330px;
+      height: auto;
+      position: absolute;
+      margin: 900px 0 0 1670px; }
+  section .rhf-logo {
+    width: 8520px;
+    height: auto;
+    position: absolute;
+    margin: 1390px 0 0 3280px; }
+    section .rhf-logo object {
+      width: 9060px;
+      height: auto; }
+    section .rhf-logo .rhf-logo-venue {
+      width: 4700px;
+      position: absolute;
+      margin: -1433px 0 0 3920px;
+      font-size: 497px;
+      line-height: 497px; }
+  section .rhf-country {
+    width: 24000px;
+    height: 2250px;
+    position: absolute;
+    margin: 6148px 0 0 0; }
+    section .rhf-country .contain-country {
+      width: 22900px;
+      height: 2250px;
+      margin: auto;
+      display: table;
+      /*h1.country{
+				vertical-align:middle;
+				position:absolute; margin:-1765px 0 0 3060px;
+				font-size:1260px; font-weight:300; letter-spacing:800px; line-height:inherit; 
+				overflow:hidden;
+				display:table-cell;
+			}*/ }
+      section .rhf-country .contain-country object.flip-txt-full-my, section .rhf-country .contain-country object.flip-txt-full-jp-tyo {
+        width: auto;
+        height: 2153px;
+        position: absolute;
+        z-index: -1;
+        margin: -2187px 0 0 2600px; }
+      section .rhf-country .contain-country .contain-date {
+        width: 2600px;
+        height: 2250px; }
+        section .rhf-country .contain-country .contain-date .date {
+          width: 1920px;
+          height: 2080px;
+          position: absolute;
+          font-weight: 300; }
+          section .rhf-country .contain-country .contain-date .date h3.mm {
+            width: 2500px;
+            margin: 380px 0 0 55px;
+            font-size: 560px;
+            text-align: center; }
+          section .rhf-country .contain-country .contain-date .date h3.dd {
+            width: 2300px;
+            margin: 400px 0 0 170px;
+            font-size: 560px;
+            text-align: center; }
+        section .rhf-country .contain-country .contain-date object.flip-txt {
+          float: left;
+          width: auto;
+          height: 2080px;
+          margin: 100px 0 0 555px; }
+
+/*section*/

@@ -182,7 +182,7 @@ h1 {
   bottom: 0;
   left: 0;
   background-position: 50% 50%;
-  -webkit-background-size: cover cover;
+  -webkit-background-size: cover;
   background-size: cover; }
 
 .bg-image-color {

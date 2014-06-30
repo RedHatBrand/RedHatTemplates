@@ -1,4 +1,5 @@
 @import '../../../../global-assets/scss/colors/base_color_palette';
+@import 'vendor/leaflet';
 
 #map {
   position: absolute;
@@ -11,8 +12,11 @@
   background-position: center;
   background-size: cover;
 
-  .leaflet-tile-pane {
-    background-color: $color-grey-dark;
+  .leaflet-objects-pane,
+  .leaflet-marker-pane,
+  .leaflet-map-pane {
+    width: 100%;
+    height: 100%;
   }
 
   .event-marker-icon {
@@ -25,13 +29,17 @@
   }
 
   .event-marker-icon-current {
-    width: 6em !important;
-    height: 2.667em !important;
-    margin: -1em !important;
-    font-size: 2.5em;
-  }
+    width: 60% !important;
+    height: 100% !important;
 
-  path { stroke-linejoin: round; stroke-linecap: round; fill: none;}
-  path.road { stroke: $color-grey-dark; }
-  path.water { stroke: $color-grey-dark; fill: $color-grey-dark; }
+    svg { transform: translateY(-50%); }
+  }
+}
+
+#map {
+  path {
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    fill: none;
+  }
 }

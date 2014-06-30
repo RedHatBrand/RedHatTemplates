@@ -94,7 +94,7 @@ function initMap (events, selectedLocation) {
     setViewOffset([
       selectedLocation.latitude,
       selectedLocation.longitude
-    ], [-(mapWidth / 4), 0]);
+    ], [-(mapWidth / 3), 0]);
   } else {
     map.fitBounds(markers.getBounds(), {
       paddingTopLeft: [400, 500]

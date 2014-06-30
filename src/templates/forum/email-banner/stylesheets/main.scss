@@ -1,6 +1,9 @@
 @import '../../../../global-assets/scss/fonts/overpass';
 @import '../../../../global-assets/scss/colors/base_color_palette';
 
+@import '../../assets/stylesheets/map';
+@import '../../assets/stylesheets/colors';
+
 body {
   font-size: 32px;
   margin: 0;
@@ -15,7 +18,6 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.85);
   padding: 1.7em;
   height: 7.2em;
   box-sizing: border-box;
@@ -24,8 +26,6 @@ body {
 #map .leaflet-tile-pane {
   background-color: transparent;
 }
-
-#map.leaflet-container { background-color: rgba(0, 0, 0, 0.4); }
 
 #map {
   box-sizing: border-box;
@@ -40,10 +40,8 @@ body {
 }
 
 #map .event-marker-icon-current {
-  width: 50% !important;
-  height: 100% !important;
-
-  svg { transform: translateY(-30%); }
+  width: 40% !important;
+  svg { transform: translateY(-47%); }
 }
 
 #map .leaflet-objects-pane,
@@ -53,22 +51,23 @@ body {
   height: 100%;
 }
 
-$triangle-size: 12.75em;
-
 .corner-logo {
   position: absolute;
   bottom: 7.2em;
   right: 0;
-  width: $triangle-size;
-  height: $triangle-size;
-  background-image: linear-gradient(135deg, transparent 0%, transparent 50%, $color-rh-red 50%, $color-rh-red 100%);
+  width: 33.333%;
+  top: 0;
+  background-image: url('/global-assets/images/basic-shapes/triangle.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
 
   img {
     position: absolute;
     right: 10%;
     bottom: 10%;
     margin: 0;
-    height: 40%;
-    width: 40%;
+    height: auto;
+    width: 30%;
   }
 }

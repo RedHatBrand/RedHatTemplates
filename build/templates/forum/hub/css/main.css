@@ -839,7 +839,7 @@ html {
   background-image: url(https://d3s84xo5cmutkt.cloudfront.net/assets/attachments/000/000/922/original/road-grey-web.jpg?1397463630);
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-background-size: cover cover;
+  -webkit-background-size: cover;
   background-size: cover;
   background-attachment: fixed; }
   .map .leaflet-tile-pane {
@@ -880,7 +880,7 @@ a.link-footer {
   margin: -1em !important;
   font-size: 1.5em;
   background-image: url(../images/marker.svg);
-  -webkit-background-size: 100% 100%;
+  -webkit-background-size: 100%;
   background-size: 100%; }
 
 .events-list-container {

@@ -107,7 +107,7 @@ body {
 
 main {
   display: block;
-  -webkit-background-size: cover cover;
+  -webkit-background-size: cover;
   background-size: cover;
   background-position: 50% 50%; }
 
@@ -142,7 +142,7 @@ h2 {
   top: 0;
   bottom: 0;
   background-color: black;
-  -webkit-background-size: cover cover;
+  -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -162,7 +162,7 @@ h2 {
 
 #map {
   height: 50%;
-  -webkit-background-size: cover cover;
+  -webkit-background-size: cover;
   background-size: cover;
   background-position: 50% 50%; }
 

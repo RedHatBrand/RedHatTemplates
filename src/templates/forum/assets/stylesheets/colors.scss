@@ -1,0 +1,38 @@
+@import '../../../../global-assets/scss/colors/base_color_palette';
+
+#content {
+  color: $color-white;
+  background-color: rgba($color-black, 0.85);
+}
+.theme-light #content {
+  color: $color-grey-dark;
+  background-color: rgba($color-grey-lighter, 0.85);
+}
+
+#map {
+  &.leaflet-container { background-color: rgba(0, 0, 0, 0.6); }
+
+  path.road {
+    stroke: $color-grey-dark;
+  }
+  path.water {
+    stroke: $color-grey-dark;
+    fill: $color-grey-dark;
+  }
+}
+
+.theme-light #map {
+  &.leaflet-container { background-color: rgba($color-grey-lighter, 0.4); }
+
+  path.road {
+    stroke: $color-grey-lighter;
+  }
+  path.water {
+    stroke: $color-grey-lighter;
+    fill: $color-grey-lighter;
+  }
+
+  .event-marker-icon-current .text {
+    fill: $color-black !important;
+  }
+}
