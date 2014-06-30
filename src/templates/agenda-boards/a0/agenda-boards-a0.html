@@ -11,11 +11,11 @@ height: 14508px
 
   <head>
     <meta charset='utf-8'>
-    <link href='<%= baseUrl %>/templates/agenda-boards/a0/stylesheets/main.css' media='all' rel='stylesheet'>
-    <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
-    <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css' rel='stylesheet' />
-    <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css' rel='stylesheet' />
-    <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/events-list.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/agenda-boards/a0/stylesheets/main.css?v<%= version %>' media='all' rel='stylesheet'>
+    <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css?v<%= version %>' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/events-list.css?v<%= version %>' rel='stylesheet' />
   </head>
 
  <body
@@ -153,11 +153,11 @@ height: 14508px
     <div style="display: none" id="offsetLongitude" data-offset-lon="0.14"></div>
     <!-- /Params we may expose -->
 
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script>
-    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map.js'></script>
-    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-events-list.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js?v<%= version %>'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js?v<%= version %>'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js?v<%= version %>'></script>
+    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map.js?v<%= version %>'></script>
+    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-events-list.js?v<%= version %>'></script>
 
   </body>
 </html>
