@@ -82,6 +82,9 @@ section{
 			position:absolute; margin:900px 0 0 1670px;
 		}
 	}
+	#map .leaflet-tile-pane {
+	  background-color: transparent;
+	}
 	.rhf-logo{
 		width:8520px; height:auto;
 		position:absolute; margin:1390px 0 0 3280px; 
