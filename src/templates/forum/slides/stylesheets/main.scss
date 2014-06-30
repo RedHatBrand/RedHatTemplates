@@ -2,6 +2,9 @@
 @import '../../../../global-assets/scss/fonts/overpass';
 @import '../../../../global-assets/scss/colors/base_color_palette';
 
+@import '../../assets/stylesheets/map';
+@import '../../assets/stylesheets/colors';
+
 body {
   position: relative;
   font-size: 16px;
@@ -51,39 +54,6 @@ h2 {font-size:.8em;
 
 #map .leaflet-tile-pane {
   background-color: transparent;
-}
-
-#map {
-  &.leaflet-container { background-color: rgba(0, 0, 0, 0.4); }
-
-  path {
-    stroke-linejoin: round;
-    stroke-linecap: round;
-    fill: none;
-  }
-  path.road {
-    stroke: $color-grey-dark;
-  }
-  path.water {
-    stroke: $color-grey-dark;
-    fill: $color-grey-dark;
-  }
-}
-
-.theme-light #map {
-  &.leaflet-container { background-color: rgba(245, 245, 245, 0.4); }
-
-  path.road {
-    stroke: $color-grey-lighter;
-  }
-  path.water {
-    stroke: $color-grey-lighter;
-    fill: $color-grey-lighter;
-  }
-
-  .event-marker-icon-current .text {
-    fill: $color-black !important;
-  }
 }
 
 #map .event-marker-icon {
@@ -205,20 +175,20 @@ h2 {font-size:.8em;
   right: 0;
   width: 33.333%;
   height: 100%;
-  background-image: url("data:image/svg+xml,<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"1000\" height=\"1000\" viewBox=\"0 0 1000 1000\"><polygon fill=\"rgb(185,12,32)\" points=\"1000,0 1000,1000 0,1000\" /></svg>");
+  background-image: url('/global-assets/images/basic-shapes/triangle.svg');
   background-size: contain;
-  background-position: 100% 100%;
   background-repeat: no-repeat;
+  background-position: 100% 100%;
 
   img {
     position: absolute;
     right: 10%;
     bottom: 10%;
     margin: 0;
-    width: 40%;
+    height: auto;
+    width: 30%;
   }
 }
-
 
 .center-logo {
   width: 50%;

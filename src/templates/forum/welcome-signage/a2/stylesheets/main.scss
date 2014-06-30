@@ -2,6 +2,9 @@
 @import '../../../../../global-assets/scss/fonts/overpass';
 @import '../../../../../global-assets/scss/colors/base_color_palette';
 
+@import '../../../assets/stylesheets/map';
+@import '../../../assets/stylesheets/colors';
+
 body {
   position: relative;
   font-size: 24pt;
@@ -53,8 +56,6 @@ h2 {font-size:.8em;
   background-color: transparent;
 }
 
-#map.leaflet-container { background-color: rgba(0, 0, 0, 0.667); }
-
 #map {
   height: 50%;
   box-sizing: border-box;
@@ -87,10 +88,9 @@ h2 {font-size:.8em;
   left: 0;
   right: 0;
   padding: 3em 4em 4em 4em;
-  background-color: rgba($color-black, 0.85);
-  color: white;
   box-sizing: border-box;
 }
+
 .events-list { margin-bottom: 3em; }
 .events-list .event,
 .events-list .event .date,
@@ -99,7 +99,7 @@ h2 {font-size:.8em;
 .events-list .event .letter { fill: white; }
 
 .register-box {
-  border: thin solid white;
+  border: thin solid;
   padding: 0.8em 0.667em;
   font-weight: 300;
   border-radius: 0.25em;
