@@ -7,6 +7,8 @@ height: 8640px
 <html style="width:24120px; height:8520px; padding:60px; overflow:scroll;">
 <head>
 <meta name="charset" content="utf-8" />
+<link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
+<link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
 <link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-2a/css/style.css">
 </head>
 
@@ -24,6 +26,7 @@ height: 8640px
     <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-2a/images/background/polygon-red-2.svg" class="polygon-red-2">
     </object>
   </div>
+  <div id="background-image" style="background-image: url({{{ background-image }}})"></div>
   <!--.contain-red-bg-->
   <div class="rhf-logo">
     <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-2a/images/logo/red-hat-forum-ico.svg">
@@ -56,10 +59,13 @@ height: 8640px
           <h3 class="mm">{{ mm }}</h3>
         </div>
         <!--.date--> 
-      </div><!--.contain-date--> 
-      <object data="<%=baseUrl%>/templates/forum/assets/images/flip-texts/flip-txt-full-my.svg" class="flip-txt-full-my flip-txt-my-{{ country }}"></object>
-      <object data="<%=baseUrl%>/templates/forum/assets/images/flip-texts/flip-txt-full-jp-tyo.svg" class="flip-txt-full-jp-tyo flip-txt-jp-tyo-{{ country }}"></object>
-      <!--h1 class="country">LATIN AMERICA</h1-->
+      </div>
+      <!--.contain-date-->
+      <object data="<%=baseUrl%>/templates/forum/assets/images/flip-texts/flip-txt-full-my.svg" class="flip-txt-full-my flip-txt-my-{{ country }}">
+      </object>
+      <object data="<%=baseUrl%>/templates/forum/assets/images/flip-texts/flip-txt-full-jp-tyo.svg" class="flip-txt-full-jp-tyo flip-txt-jp-tyo-{{ country }}">
+      </object>
+      <!--h1 class="country">LATIN AMERICA</h1--> 
     </div>
     <!--.contain-country--> 
   </div>
@@ -69,5 +75,12 @@ height: 8640px
 <div class="crop-mark top-right">&nbsp;</div>
 <div class="crop-mark bottom-left">&nbsp;</div>
 <div class="crop-mark bottom-right">&nbsp;</div>
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script> 
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script> 
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script> 
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3.v3.min.js'></script> 
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script> 
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script> 
+<script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map-vector.js?v<%= version %>'></script>
 </body>
 </html>
