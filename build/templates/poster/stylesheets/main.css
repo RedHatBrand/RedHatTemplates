@@ -149,7 +149,7 @@ html {
   padding: 5mm; }
 
 body {
-  -webkit-background-size: cover;
+  -webkit-background-size: cover cover;
   background-size: cover;
   margin-left: auto;
   margin-right: auto;

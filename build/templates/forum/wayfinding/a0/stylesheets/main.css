@@ -92,7 +92,7 @@
 
 body {
   position: relative;
-  font-family: 'Overpass';
+  font-family: 'Overpass', 'Helvetica', 'Verdana', 'Arial', sans-serif;
   color: white; }
 
 main {
@@ -109,7 +109,7 @@ p {
     font-size: 60em;
     margin-top: 1em;
     margin-bottom: 0;
-    font-weight: 700;
+    font-weight: bold;
     text-transform: uppercase;
     line-height: 1em; }
   .title h2 {
@@ -147,10 +147,12 @@ p {
 .rh-theme-right .right {
   display: block; }
 
-body.rh-theme-right .title, body.rh-theme-right .directional-arrow {
-  margin-left: 31%;
-  text-align: right; }
-body.rh-theme-right .directional-arrow h3 {
-  position: absolute;
-  top: 25.5%;
-  right: 1.2%; }
+body.rh-theme-right {
+  font-family: 'Overpass', 'Helvetica', 'Verdana', 'Arial', sans-serif; }
+  body.rh-theme-right .title, body.rh-theme-right .directional-arrow {
+    margin-left: 31%;
+    text-align: right; }
+  body.rh-theme-right .directional-arrow h3 {
+    position: absolute;
+    top: 25.5%;
+    right: 1.2%; }

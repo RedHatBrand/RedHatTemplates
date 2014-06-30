@@ -11,6 +11,18 @@ body {
   padding: 60px;
   background: #890000; }
 
+object.flip-txt-my-my {
+  display: block; }
+
+object.flip-txt-my-tyo {
+  display: none; }
+
+object.flip-txt-jp-tyo-my {
+  display: none; }
+
+object.flip-txt-jp-tyo-tyo {
+  display: block; }
+
 section {
   width: 24000px;
   height: 8400px; }
@@ -103,40 +115,43 @@ section {
     width: 24000px;
     height: 2250px;
     position: absolute;
-    margin: 2737px 0 0 0;
-    background: #00f; }
+    margin: 2737px 0 0 0; }
     section .rhf-country .contain-country {
-      max-width: 22000px;
+      width: 22900px;
       height: 2250px;
       margin: auto;
-      display: table; }
-      section .rhf-country .contain-country h1.country {
-        vertical-align: middle;
-        font-size: 1260px;
-        line-height: inherit;
-        overflow: hidden;
-        display: table-cell;
-        border: 1px dotted; }
+      display: table;
+      /*h1.country{
+				vertical-align:middle;
+				position:absolute; margin:-1765px 0 0 3060px;
+				font-size:1260px; font-weight:300; letter-spacing:800px; line-height:inherit; 
+				overflow:hidden;
+				display:table-cell;
+			}*/ }
+      section .rhf-country .contain-country object.flip-txt-full-my, section .rhf-country .contain-country object.flip-txt-full-jp-tyo {
+        width: auto;
+        height: 2153px;
+        position: absolute;
+        z-index: -1;
+        margin: -2187px 0 0 2600px; }
       section .rhf-country .contain-country .contain-date {
         width: 2600px;
-        height: 2250px;
-        background: #0f0; }
+        height: 2250px; }
         section .rhf-country .contain-country .contain-date .date {
           width: 1920px;
           height: 2080px;
-          position: absolute; }
+          position: absolute;
+          font-weight: 300; }
           section .rhf-country .contain-country .contain-date .date h3.mm {
             width: 2500px;
-            margin: 400px 0 0 45px;
+            margin: 380px 0 0 55px;
             font-size: 560px;
-            text-align: center;
-            border: 1px dotted; }
+            text-align: center; }
           section .rhf-country .contain-country .contain-date .date h3.dd {
             width: 2300px;
-            margin: 300px 0 0 150px;
-            font-size: 680px;
-            text-align: center;
-            border: 1px dotted; }
+            margin: 400px 0 0 170px;
+            font-size: 560px;
+            text-align: center; }
         section .rhf-country .contain-country .contain-date object.flip-txt {
           float: left;
           width: auto;

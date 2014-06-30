@@ -745,7 +745,7 @@ input[type='checkbox'], input[type='radio'] {
   text-align: center;
   font-size: inherit;
   background: transparent;
-  -webkit-background-size: contain;
+  -webkit-background-size: contain contain;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center; }
@@ -821,7 +821,7 @@ select {
   border-color: #d6d6d6;
   background-repeat: no-repeat;
   background-position: right 0.4em center;
-  -webkit-background-size: 0.8em;
+  -webkit-background-size: 0.8em 0.8em;
   background-size: 0.8em;
   background-image: url("data:image/svg+xml;utf8, <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><path fill=\"#171717\" d=\"M8 12l8 8 8-8z\" /></svg>");
   -webkit-transition: all 0.5s ease;
@@ -1418,7 +1418,7 @@ input[type="file"]::-webkit-file-upload-button {
   .item-card .item-thumbnail {
     margin: -1.2em -1.6em 1.2em;
     height: 8em;
-    -webkit-background-size: cover;
+    -webkit-background-size: cover cover;
     background-size: cover; }
   .item-card .item-footer {
     margin: 1.6em -1.6em -1.6em; }
@@ -1426,7 +1426,7 @@ input[type="file"]::-webkit-file-upload-button {
 .hero-layer {
   background-color: rgba(0, 0, 0, 0.1);
   background-position: 50% 50%;
-  -webkit-background-size: cover;
+  -webkit-background-size: cover cover;
   background-size: cover; }
 
 .hero {

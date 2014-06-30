@@ -146,7 +146,7 @@ tbody img {
 
 tfoot {
   background: url("../images/svg/svg-backgrounds/background-red03.svg") no-repeat center;
-  -webkit-background-size: cover;
+  -webkit-background-size: cover cover;
   background-size: cover;
   color: white;
   text-align: center;
