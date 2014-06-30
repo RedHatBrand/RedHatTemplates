@@ -4,7 +4,9 @@
 
 @import 'settings';
 
-@import 'vendor/leaflet';
+@import '../../assets/stylesheets/map';
+@import '../../assets/stylesheets/events-list';
+@import '../../assets/stylesheets/colors';
 
 @import 'helpers/layout_helpers',
         'helpers/interactive_helpers',

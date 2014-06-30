@@ -1,0 +1,25 @@
+#content {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.85); }
+
+.theme-light #content {
+  color: #222222;
+  background-color: rgba(204, 204, 204, 0.85); }
+
+#map.leaflet-container {
+  background-color: rgba(0, 0, 0, 0.6); }
+#map path.road {
+  stroke: #222222; }
+#map path.water {
+  stroke: #222222;
+  fill: #222222; }
+
+.theme-light #map.leaflet-container {
+  background-color: rgba(204, 204, 204, 0.4); }
+.theme-light #map path.road {
+  stroke: #cccccc; }
+.theme-light #map path.water {
+  stroke: #cccccc;
+  fill: #cccccc; }
+.theme-light #map .event-marker-icon-current .text {
+  fill: black !important; }
