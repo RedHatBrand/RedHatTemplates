@@ -97,9 +97,9 @@ h5 {
 h6 {
   font-size: $font-size-level-six;
   font-weight: $font-weight-level-six;
-  margin-top: $margin-level-six * 2;
-  margin-bottom: $margin-level-six;
-  line-height: $line-height-level-six;
+  margin:0;
+  padding:5% 0 0 0;
+  line-height: $line-height-level-four;
 
   & + h1, & + h2, & + h3, & + h4, & + h5, & + h6 {
     margin-top: 0;

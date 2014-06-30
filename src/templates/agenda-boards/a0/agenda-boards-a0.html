@@ -69,13 +69,13 @@ height: 14508px
               <thead>
                 <tr>
                   <td colspan="1">
-                   <h3>{{ col1 }}</h3>
+                   <h3>Time</h3>
                   </td>
                   <td colspan="1">
-                    <h3>{{ col2 }}</h3>
+                    <h3>Duration</h3>
                   </td>
                   <td colspan="6">
-                    <h3>{{ col3 }}</h3>
+                    <h3>Topic</h3>
                   </td>
                 </tr>
 
@@ -85,50 +85,15 @@ height: 14508px
 
 
                 <tr class="content">
-                  <td><p><b>{{{ timing }}}</p></b></td>
-                  <td><p><b>{{{ duration }}}</p></b></td>
-                  {{# track-a }}<td><p>{{{ track-a }}}</p></td>{{/ track-a }}
-                  {{# track-b }}<td><p>{{{ track-b }}}</p></td>{{/ track-b }}
-                  {{# track-c }}<td><p>{{{ track-c }}}</p></td>{{/ track-c }}
-                  {{# track-d }}<td><p>{{{ track-d }}}</p></td>{{/ track-d }}
-                  {{# track-e }}<td><p>{{{ track-e }}}</p></td>{{/ track-e }}
-                  {{# track-f }}<td><p>{{{ track-f }}}</p></td>{{/ track-f }}
+                  <td><h4>{{{ timing }}}</h4></td>
+                  <td><h4>{{{ duration }}}</h4></td>
+                  {{# track-a }}<td><h4>{{ track-a }}</h4><p>{{ track-a-content }}</p></td> {{/ track-a }}
+                  {{# track-b }}<td><h4>{{ track-b }}</h4><p>{{ track-b-content }}</p></td> {{/ track-b }}
+                  {{# track-c }}<td><h4>{{ track-c }}</h4><p>{{ track-c-content }}</p></td> {{/ track-c }}
+                  {{# track-d }}<td><h4>{{ track-d }}</h4><p>{{ track-d-content }}</p></td> {{/ track-d }}
+                  {{# track-e }}<td><h4>{{ track-e }}</h4><p>{{ track-e-content }}</p></td> {{/ track-e }}
+                  {{# track-f }}<td><h4>{{ track-f }}</h4><p>{{ track-f-content }}</p></td> {{/ track-f }}
                 </tr>
-
-                <tr class="content">
-                  <td><p><b>{{{ timing }}}</p></b></td>
-                  <td><p><b>{{{ duration }}}</p></b></td>
-                  {{# track-a }}<td><p>{{{ track-a }}}</p></td>{{/ track-a }}
-                  {{# track-b }}<td><p>{{{ track-b }}}</p></td>{{/ track-b }}
-                  {{# track-c }}<td><p>{{{ track-c }}}</p></td>{{/ track-c }}
-                  {{# track-d }}<td><p>{{{ track-d }}}</p></td>{{/ track-d }}
-                  {{# track-e }}<td><p>{{{ track-e }}}</p></td>{{/ track-e }}
-                  {{# track-f }}<td><p>{{{ track-f }}}</p></td>{{/ track-f }}
-                </tr>
-
-                <tr class="content">
-                  <td><p><b>{{{ timing }}}</p></b></td>
-                  <td><p><b>{{{ duration }}}</p></b></td>
-                  {{# track-a }}<td><p>{{{ track-a }}}</p></td>{{/ track-a }}
-                  {{# track-b }}<td><p>{{{ track-b }}}</p></td>{{/ track-b }}
-                  {{# track-c }}<td><p>{{{ track-c }}}</p></td>{{/ track-c }}
-                  {{# track-d }}<td><p>{{{ track-d }}}</p></td>{{/ track-d }}
-                  {{# track-e }}<td><p>{{{ track-e }}}</p></td>{{/ track-e }}
-                  {{# track-f }}<td><p>{{{ track-f }}}</p></td>{{/ track-f }}
-                </tr>
-
-                <tr class="content">
-                  <td><p><b>{{{ timing }}}</p></b></td>
-                  <td><p><b>{{{ duration }}}</p></b></td>
-                  {{# track-a }}<td><p>{{{ track-a }}}</p></td>{{/ track-a }}
-                  {{# track-b }}<td><p>{{{ track-b }}}</p></td>{{/ track-b }}
-                  {{# track-c }}<td><p>{{{ track-c }}}</p></td>{{/ track-c }}
-                  {{# track-d }}<td><p>{{{ track-d }}}</p></td>{{/ track-d }}
-                  {{# track-e }}<td><p>{{{ track-e }}}</p></td>{{/ track-e }}
-                  {{# track-f }}<td><p>{{{ track-f }}}</p></td>{{/ track-f }}
-                </tr>
-
-
 
               </tbody>
             </table>
