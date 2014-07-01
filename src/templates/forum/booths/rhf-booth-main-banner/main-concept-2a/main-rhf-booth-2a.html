@@ -28,6 +28,12 @@ height: 8640px
   </div>
   <!--div id="background-image" style="background-image: url({{{ background-image }}});"></div-->
   <!--.contain-red-bg-->
+      <div id="map"></div>
+    <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
+    <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
+    <!-- Params we may expose -->
+    <div style="display: none" id="zoom" data-zoom="13"></div>
+    <!-- /Params we may expose -->
   <div class="rhf-logo">
     <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-2a/images/logo/red-hat-forum-ico.svg">
     </object>
