@@ -14,65 +14,65 @@ body{
 .content-bg-red-gray{display:none;}
 
 section{
-  width:12000px; height:12000px;
+  width:inherit; height:inherit;
+  display:block;
   .logo-area{
-  	width:9000px; margin:auto;
+  	width:562.5em; margin:auto;
   	object{
-		width:9000px; height:auto;
-		position:absolute; margin:4550px 0 0 0;
+		width:562.5em; height:auto;
+		position:absolute; margin:284.375em 0 0 0;
 	}
   }
 	.gray-bg{
-		width:12240px; height:12240px;
-		position:absolute; z-index:-2; margin:-120px 0 0 -120px;
+		width:765em; height:765em;
+		position:absolute; z-index:-2; margin:-7.5em 0 0 -7.5em;
 		overflow:hidden;
-		width:12240px; height:12240px;
 		background:#222;
 		object.polygon-gray-1{
-			width:33580px; height:auto;
-			position:absolute; z-index:-1; margin:375px 0 0 -8080px;
+			width:2098.75em; height:auto;
+			position:absolute; z-index:-1; margin:23.4375em 0 0 -505em;
 			opacity:0.2;
 		}
 		object.polygon-gray-2{
-			width:32720px; height:auto;
-			position:absolute; z-index:-1; margin:-10000px 0 0 -17600px;
+			width:2045em; height:auto;
+			position:absolute; z-index:-1; margin:-625em 0 0 -1100em;
 			opacity:0.1;
 		}
 		object.polygon-gray-3{
-			width:38120px; height:auto;
+			width:2382.5em; height:auto;
 			position:absolute; z-index:-1; margin:0 0 0 0;
 			opacity:0.5;
 		}
 		object.polygon-gray-4{
-			width:21050px; height:auto;
-			position:absolute; z-index:-1; margin:-4520px 0 0 -6500px;
+			width:1315.625em; height:auto;
+			position:absolute; z-index:-1; margin:-282.5em 0 0 -406.25em;
 			opacity:0.5;
 		}
 	}
   .red-bg{
-		width:12240px; height:12240px;
-		position:absolute; z-index:-1; margin:-120px 0 0 -120px;
+		width:765em; height:765em;
+		position:absolute; z-index:-1; margin:-7.5em 0 0 -7.5em;
 		background:#890000;
 		overflow:hidden;
 		object.polygon-red-1{
-			width:33580px; height:auto;
-			position:absolute; z-index:-1; margin:375px 0 0 -8080px;
+			width:2098.75em; height:auto;
+			position:absolute; z-index:-1; margin:23.4375em 0 0 -505em;
 			opacity:0.2;
 		}
 		object.polygon-red-2{
-			width:32720px; height:auto;
-			position:absolute; z-index:-1; margin:-10000px 0 0 -17600px;
-			opacity:0.2;
+			width:2045em; height:auto;
+			position:absolute; z-index:-1; margin:-625em 0 0 -1100em;
+			opacity:0.1;
 		}
 		object.polygon-red-3{
-			width:38120px; height:auto;
+			width:2382.5em; height:auto;
 			position:absolute; z-index:-1; margin:0 0 0 0;
 			opacity:0.5;
 		}
 		object.polygon-red-4{
-			width:21050px; height:auto;
-			position:absolute; z-index:-1; margin:-4520px 0 0 -6500px;
-			opacity:1;
+			width:1315.625em; height:auto;
+			position:absolute; z-index:-1; margin:-282.5em 0 0 -406.25em;
+			opacity:0.5;
 		}
 	}
 } /*section*/
