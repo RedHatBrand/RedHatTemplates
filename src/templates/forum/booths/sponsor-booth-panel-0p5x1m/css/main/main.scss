@@ -12,34 +12,36 @@ body{
 .show-hide-gray-bg-hide{display:none;}
 
 section{
-  width:6000px; height:12000px;
+  width:inherit; height:inherit;
+  position:absolute;
 	.gray-bg{
-		width:6240px; height:12240px;
-		position:absolute; z-index:-2; margin:-120px 0 0 -120px;
+		width:104%; height:102%;
+		position:absolute; z-index:-2; margin:-7.5em 0 0 -7.5em;
 		overflow:hidden;
 		background:#e1e1e1;
+		display:block;
 		object.polygon-gray-1{
-			width:33580px; height:auto;
-			position:absolute; z-index:-1; margin:375px 0 0 -12080px;
+			width:538.14%; height:auto;
+			position:absolute; z-index:-1; margin:3.06% 0 0 -182.96%;
 			opacity:0.3;
 		}
 		object.polygon-gray-2{
-			width:32720px; height:auto;
-			position:absolute; z-index:-1; margin:-10000px 0 0 -21600px;
+			width:524.36%; height:auto;
+			position:absolute; z-index:-1; margin:-160.26% 0 0 -346.15%;
 			opacity:0.35;
 		}
 		object.polygon-gray-3{
-			width:38120px; height:auto;
-			position:absolute; z-index:-1; margin:0 0 0 -4000px;
+			width:610.9%; height:auto;
+			position:absolute; z-index:-1; margin:0 0 0 -76.34%;
 			opacity:0.7;
 		}
 		object.polygon-gray-4{
-			width:21050px; height:auto;
-			position:absolute; z-index:-1; margin:-4520px 0 0 -10500px;
+			width:337.34%; height:auto;
+			position:absolute; z-index:-1; margin:-72.44% 0 0 -168.27%;
 			opacity:0.3;
 		}
 	}
   .logo-area{
-  	width:5500px; margin:auto;
+  	width:91.7%; margin:auto;
   }
 } /*section*/
