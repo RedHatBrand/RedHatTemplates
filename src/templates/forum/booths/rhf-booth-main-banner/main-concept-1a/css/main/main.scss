@@ -9,100 +9,100 @@ body{
 }
 
 section{
-	width:24000px; height:8400px;
+	width:inherit; height:inherit;
 	.bg-logo-area{
-		width:24240px; height:2370px;
-		position:absolute; z-index:-1; margin:-120px 0 0 -120px;
+		width:1515em; height:148.125em;
+		position:absolute; z-index:-1; margin:-7.5em 0 0 -7.5em;
 		background:#222;
 		overflow:hidden;
 		object.polygon-gray-1{
-			width:28330px; height:auto;
-			margin:-5240px 0 0 -8090px;
-			opacity:0.3;
+			width:1770.625em; height:auto;
+			margin:-327.5em 0 0 -505.625em;
+			opacity:0.2;
 		}
 		object.polygon-gray-2{
-			width:30000px; height:auto;
-			position:absolute; margin:-826px 0 0 -19185px;
+			width:1875em; height:auto;
+			position:absolute; margin:-51.625em 0 0 -1199.0625em;
 			opacity:0.3;
 		}
 	}
 	.contain-red-bg{
-		width:24120px; height:8520px; padding:60px;
-		position:absolute; z-index:-1; margin:-120px 0 0 -120px;
+		width:1507.5em; height:532.5em; padding:3.75em;
+		position:absolute; z-index:-1; margin:-7.5em 0 0 -7.5em;
 		overflow:hidden;
 		object.polygon-red-1{
-			width:28330px; height:auto;
-			position:absolute; z-index:-1; margin:-5240px 0 0 -7920px;
+			width:1770.625em; height:auto;
+			position:absolute; z-index:-1; margin:-327.5em 0 0 -495em;
 			opacity:0.3;
 		}
 		object.polygon-red-2{
-			width:21180px; height:auto;
-			position:absolute; margin:-8780px 0 0 1310px;
+			width:1323.75em; height:auto;
+			position:absolute; z-index:-1; margin:-548.75em 0 0 81.875em;
 			opacity:0.2;
 		}
 		object.polygon-red-3{
-			width:28970px; height:auto;
-			position:absolute; z-index:-1; margin:-9440px 0 0 -23760px;
+			width:1810.625em; height:auto;
+			position:absolute; z-index:-1; margin:-590em 0 0 -1485em;
 			opacity:0.5;
 		}
 		object.polygon-red-4{
-			width:38110px; height:auto;
-			position:absolute; z-index:-1; margin:-11280px 0 0 3570px;
+			width:2381.875em; height:auto;
+			position:absolute; z-index:-1; margin:-705em 0 0 223.125em;
 			opacity:0.5;
 		}
 	}
 	.logo-area{
-		width:24000px; height:2130px;
+		width:1500em; height:133.125em;
 		object{
-			width:4320px; height:auto;
-			margin:260px 0 0 1260px;
+			width:270em; height:auto;
+			margin:16.25em 0 0 78.75em;
 		}
 	}
 	.rhf-logo{
-		width:8520px; height:auto;
+		width:355.5em; height:auto;
 		position:absolute;
 		object{
-			width:8520px; height:auto;
-			margin:1692px 0 0 1290px; 
+			width:355.5em; height:auto;
+			margin:105.75em 0 0 53.925em; 
 		}
 		.rhf-logo-venue{
-			width:4700px;
-			position:absolute; margin:-1333px 0 0 4972px;
-			font-size:497px; line-height:497px;
+			width:20.75em;
+			position:absolute; margin:-2.7em 0 0 10em;
+			font-size:31.0625em;
 		}
 	}
 	.rhf-country{
-		width:12000px; height:3400px;
-		position:absolute; margin:1430px 0 0 11040px;
+		width:960em; height:141.7em;
+		position:absolute; margin:105.375em 0 0 490em;
 		border-left:10px solid #fff;
 		.contain-country{
-			width:6940px; height:3576px;
-			margin:-169px 0 0 4270px;
+			width:433.75em; height:154.5em;
+			margin:-8.56em 0 0 226.88em;
 			display:table;
 			h1.country{
 				vertical-align:middle;
-				font-size:1260px; line-height:inherit;
+				font-size:119.75em; line-height:inherit;
 				overflow:hidden;
 				display:table-cell;
 			}
 		}
 		.date{
-			width:1920px; height:2730px;
-			position:absolute; margin:326px 0 0 2371px;
+			width:120em; height:170.63em;
+			position:absolute; margin:-14em 0 0 47.1875em;
 			h3.mm{
-				width:3600px;
-				margin:100px 0 0 -1590px;
-				font-size:860px; text-align:center;
+				width:4em;
+				margin:0.9em 0 0 0.46em;
+				font-size:53.75em; text-align:center;
 			}
 			h3.dd{
-				width:3300px;
-				margin:450px 0 0 -1440px;
-				font-size:1080px; text-align:center;
+				width:4em;
+				margin:0.6em 0 0 -0.04em;
+				font-size:67.5em; text-align:center;
 			}
 		}
 		object.flip-txt{
-			width:auto; height:3576px;
-			position:absolute; margin:-90px 0 0 1280px;
+			width:auto; height:148.5em;
+			position:absolute; margin:-3.5em 0 0 81em;
 		}
 	}
 } /*section*/
