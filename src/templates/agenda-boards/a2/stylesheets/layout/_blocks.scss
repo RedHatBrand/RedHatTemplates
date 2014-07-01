@@ -1,8 +1,9 @@
+
+
 .container {
   max-width: $max-width;
   padding: $page-margin;
   position: relative;
-  background: rgba($black, 0.05);
 
   &:before {
     content: '';
@@ -27,10 +28,8 @@
 
 #map { 
   height: 100%; 
-  top: -35.5px;
-  left: -35.5px;
-  right: -35.5px;
-  bottom: -35.5px;
+  top: 0;
+  left: 0;
 
   .event-marker-icon-current {
     display:none;
@@ -75,7 +74,17 @@ nav {}
 article {}
 aside {}
 footer {}
-main {}
+
+main {
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  top: 3mm; bottom: 3mm;
+  left: 3mm; right: 3mm;
+}
+
 
 iframe {
   width: 100%;
@@ -106,9 +115,9 @@ iframe {
 }
 
 .forum-logo{
-    width:30%;
-    height:70%;
-    margin:15% 0 10% 5%;
+    width:25%;
+    height:40%;
+    margin:0 0 10% 18%;
     float:left;
 
       img {
@@ -120,10 +129,8 @@ iframe {
 .white-bg {
   background-color: rgba($white, 0.9);
   position:absolute;
-  top: -35.5px;
-  left: -35.5px;
-  right: -35.5px;
-  bottom: -35.5px;
+  top: 0;
+  left: 0;
   width:100%;
   height:100%;
 }
@@ -132,28 +139,28 @@ iframe {
   width:66%;
   float:left;
   height:50%;
-  margin:33% 0 auto -13%;
+  margin:10% 0 auto -15%;
 }
 
 .header {
   height:25%;
   width:100%;
-  display:block;
   z-index:10;
   margin:0 0 10% 0;
   position:absolute;
   top: 0;
   left: 0;
-  right: 0;
   padding: 3em 4em 4em 4em;
   z-index:2;
+  box-sizing: border-box;
 }
 
 .contents {
   position:absolute;
-  top:50%;
-  width:5000px;
+  top:24%;
+  width:100%;
   padding:60px;
+  box-sizing: border-box;
 
 }
 
@@ -199,116 +206,75 @@ math {
 
 /*--------DIVS-----------------*/
 
-table.container {
-  margin-top:3%;
-  border-style:none;
-  background-color:none;
-
-  td {
-    padding:0;
-    position: relative;
-
-  }
-
-}
-
-table.main {
-  border-collapse:collapse;
-  text-align:center;
-  background-color:none;
 
 
-  tbody {
+div.agenda {
+  background-color:$white;
+  width:1500px;
+  column-count:2;
+  column-gap:2em;
+  padding:5em 3em;
 
-    text-align:center;
+  div.content{
+    border-top: 0.1em solid $gray-light;
 
-    tr.content{
+      div.timing {
 
-      div.tracks {
-        width:90%;
-        background-color:$white;
-        color:$black;
-        line-height:1.6em;
-        font-weight: 300;
-        vertical-align:baseline;
-        height:auto;
-        padding:5% 0 0 10%;
-
-          p, h4 {
-            text-align:left;
-          }
-        }
-
-      td {
-        width:12.5%;
-        background-color:$white;
-        color:$black;
-        line-height:1.6em;
-        letter-spacing:0.02em;
-        font-weight: 300;
-        vertical-align:baseline;
-        font-size:15px;
-        height:150px;
-
-          p, h4 {
-            color:$black;
-            margin:0;
-          }
-
-          h4 {
-            line-height:4em;
-            vertical-align:baseline;
-          }
-
-          p { 
-            line-height:2em;
-            font-size:9em;
-            }
-
-          
+        h4 {
+          color: $color-primary;
+          text-align: left;
+          font-size:4em;
+          padding: 1.5% 0 3% 3%;
         }
       }
 
-  }
+      div.topic {
+        padding-left:3%;
+
+        div.tracks {
+          width:90%;
+          background-color:$white;
+          color:$black;
+          line-height:1.6em;
+          vertical-align:baseline;
+          height:auto;
 
 
-  thead {
-    background-color:$color-primary;
-    font-size:4.5em;
-
-      tr {
-        padding-top:2%;
-        padding-bottom:2%;
-        height:3em;
-
-        td {
-          padding-top:2%;
-          padding-bottom:2%;
-
-            h2 {
-              line-height:3em;
-              vertical-align:middle;
-            }
-        }
-
-        td.narrow-col {
-          width:19%;
-        }
-
-        td.wide-col {
-          width:60%;
-          text-align:left;
-          padding-left:6.1%;
-            h3 {
+            p, h4 {
               text-align:left;
+              
             }
-        }
-      }
-  }
 
+            p { 
+              line-height:1.5em;
+              font-size:3em;
+              }
+
+            h4 {
+              line-height:1.2em;
+            }
+
+            &:last-child p {
+              border-bottom-color:$gray-light;
+              border-bottom-style:dotted;
+              border-bottom-width:1px;
+              margin-bottom:1em;
+            }
+
+            
+        }
+
+      }
+
+    }
 }
 
-
+.topic:last-child p {
+              border-bottom-color:$gray-light;
+              border-bottom-style:dotted;
+              border-bottom-width:1px;
+              margin-bottom:1em;
+            }
 
 
 

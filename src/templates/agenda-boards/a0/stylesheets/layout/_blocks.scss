@@ -75,7 +75,17 @@ nav {}
 article {}
 aside {}
 footer {}
-main {}
+
+
+main {
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  top: 3mm; bottom: 3mm;
+  left: 3mm; right: 3mm;
+}
 
 iframe {
   width: 100%;

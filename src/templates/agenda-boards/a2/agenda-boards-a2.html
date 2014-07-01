@@ -1,6 +1,6 @@
 ---
-width: 5103px
-height: 7158px
+width: 432mm
+height: 606mm
 ---
 
 <!DOCTYPE html>
@@ -19,10 +19,9 @@ height: 7158px
 
   </head>
 
-  <body
-    style="height: 7158px; width:5103px; padding: 35.5px; position: relative">
-    <main style="height: 7087px; width: 5032px;  padding: 35.5px;">
-    <!-- Finished, cropped area = 4961px x 7016px. 35.5px = 3mm bleed -->
+  <body style="width: 432mm; height: 606mm">
+    <main>
+      <!-- Finished, cropped area = 420mm x 594mm. 3mm bleed -->
 
       <div id="map"></div>
 
@@ -38,10 +37,6 @@ height: 7158px
           <h2>{{ sub-title }}</h2>
         </div>
 
-
-      </div>
-
-      <div class="contents">
         <div class="events-list">
           <a class="event clearfix" href="{{{ link }}}" target="_blank">
             <div class="date">
@@ -65,59 +60,37 @@ height: 7158px
           </a>
         </div>
 
+        <div class="agenda">
+          
+          {{# times }}
 
+          <div class="content">
 
-        <table align='center' cellpadding='0' cellspacing='0' class='container' width='5000px'>
-          <tr>
-            <td>
-              <table align='center' style="margin: 0 auto" cellpadding='0' cellspacing='0' class='main' height='auto' width='100%'>
-                <thead>
-                   <tr>
-                    <td class="narrow-col">
-                     <h3>Time</h3>
-                    </td>
-                    <td class="narrow-col">
-                      <h3>Duration</h3>
-                    </td>
-                    <td class="wide-col">
-                      <h3>Topic</h3>
-                    </td>
-                  </tr>
+            <div class="timing"><h4>{{{ timing }}}</h4></div>
 
-                </thead>
-                <tbody>
+            <div class="topic"><p>{{{ topic }}}</p>
+              {{# track-a }}<div class="tracks"><h4>{{{ track-a }}}</h4><p>{{{ track-a-content }}}</p></div> {{/ track-a }}
+              {{# track-b }}<div class="tracks"><h4>{{{ track-a }}}</h4><p>{{{ track-b-content }}}</p></div> {{/ track-b }}
+              {{# track-c }}<div class="tracks"><h4>{{{ track-a }}}</h4><p>{{{ track-c-content }}}</p></div> {{/ track-c }}
+              {{# track-d }}<div class="tracks"><h4>{{{ track-a }}}</h4><p>{{{ track-d-content }}}</p></div> {{/ track-d }}
+              {{# track-e }}<div class="tracks"><h4>{{{ track-a }}}</h4><p>{{{ track-e-content }}}</p></div> {{/ track-e }}
+              {{# track-f }}<div class="tracks"><h4>{{{ track-a }}}</h4><p>{{{ track-f-content }}}</p></div> {{/ track-f }}
+            </div>
 
+          </div>
 
-                  {{# times }}
-                  <tr class="content">
-                    <td><h4>{{{ timing }}}</h4></td>
-                    <td><h4>{{{ duration }}}</h4></td>
-                    <td><h4>{{{ topic }}}</h4>
-                      {{# track-a }}<div class="tracks"><h4>{{ track-a }}</h4><p>{{ track-a-content }}</p></div> {{/ track-a }}
-                      {{# track-b }}<div class="tracks"><h4>{{ track-b }}</h4><p>{{ track-b-content }}</p></div> {{/ track-b }}
-                      {{# track-c }}<div class="tracks"><h4>{{ track-c }}</h4><p>{{ track-c-content }}</p></div> {{/ track-c }}
-                      {{# track-d }}<div class="tracks"><h4>{{ track-d }}</h4><p>{{ track-d-content }}</p></div> {{/ track-d }}
-                      {{# track-e }}<div class="tracks"><h4>{{ track-e }}</h4><p>{{ track-e-content }}</p></div> {{/ track-e }}
-                      {{# track-f }}<div class="tracks"><h4>{{ track-f }}</h4><p>{{ track-f-content }}</p></div> {{/ track-f }}
-                    </td>
-                  </tr>
-                  {{/ times }}
-
-                </tbody>
-              </table>
-            </td>
-          </tr>
-        </table>
-      </div>
+          {{/ times }}
+  
+        </div>
 
 
       <div id="baseUrl" data-base-url="<%= baseUrl %>"></div>
       <div id="locationName" data-location-name="{{ location }}"></div>
 
-      <div class='crop-mark top-left'></div>
-      <div class='crop-mark top-right'></div>
-      <div class='crop-mark bottom-left'></div>
-      <div class='crop-mark bottom-right'></div>
+      <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
 
     </main>
 
