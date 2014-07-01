@@ -39,8 +39,15 @@ $aside-width: 22em;
   background-size: 100%;
 }
 
-.event-marker-icon-current {
+#map .event-marker-icon-current {
   background-image: none;
+
+  @media screen and (max-width: $breakpoint-small) {
+    svg {
+      width: 75%;
+      transform: translate(-10%, -60%);
+    }
+  }
 }
 
 .map-panel {

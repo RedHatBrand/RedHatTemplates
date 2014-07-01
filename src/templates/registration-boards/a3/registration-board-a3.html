@@ -1,9 +1,8 @@
 ---
-width: 3708px
-height: 5184px
+width: 309mm
+height: 432mm
 ---
 
-<!--297 x 420-->
 
 <!DOCTYPE html>
 <html
@@ -13,15 +12,17 @@ height: 5184px
 
   <head>
     <meta charset='utf-8'>
-    <link href='<%= baseUrl %>/templates/registration-boards/a3/stylesheets/main.css?v<%= version %>' media='all' rel='stylesheet'>
+
     <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css?v<%= version %>' rel='stylesheet' />
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/events-list.css?v<%= version %>' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/registration-boards/a3/stylesheets/main.css?v<%= version %>' media='all' rel='stylesheet'>
   </head>
 
-  <body
-    style="height: 5184px; width: 3708px; padding: 60px; position: relative">
+  <body style="width: 309mm; height: 432mm">
+    <main>
+      <!-- Finished, cropped area = 297 x 420. 3mm bleed -->
 
     <div id="map"></div>
 

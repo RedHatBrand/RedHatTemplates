@@ -28,7 +28,7 @@ h2 {
   font-weight: $font-weight-level-two;
   color:$color-primary;
   text-transform:uppercase;
-  letter-spacing:0.1em;
+  letter-spacing:0.2em;
   vertical-align:middle;
   text-align:left;
   font-size:$font-size-level-two;
@@ -68,10 +68,9 @@ h3 {
 
 h4 {
   font-size: $font-size-level-four;
-  font-weight: $font-weight-level-four;
-  margin-top: $margin-level-four * 2;
-  margin-bottom: $margin-level-four;
+  font-weight: $font-weight-level-one;
   line-height: $line-height-level-four;
+  vertical-align:baseline;
 
   & + h1, & + h2, & + h3, & + h4, & + h5, & + h6 {
     margin-top: 0;

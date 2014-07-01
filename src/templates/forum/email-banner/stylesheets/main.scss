@@ -33,12 +33,6 @@ body {
   height: auto;
 }
 
-#map .event-marker-icon {
-  width: 1em !important;
-  height: 1em !important;
-  margin: -0.5em !important;
-}
-
 #map .event-marker-icon-current {
   width: 40% !important;
   svg { transform: translateY(-47%); }

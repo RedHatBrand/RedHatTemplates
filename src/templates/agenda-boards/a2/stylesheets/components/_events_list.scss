@@ -2,6 +2,12 @@
 @import '../../../../../global-assets/scss/utils/clearfix';
 
 .events-list {
+
+  width:1000px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:2%;
+  
   .event {
     position: relative;
     display: block;
@@ -61,7 +67,7 @@
 
       svg {
         width: 100%;
-        height: 50%;
+        height: 44%;
         display: block;
       }
     }
