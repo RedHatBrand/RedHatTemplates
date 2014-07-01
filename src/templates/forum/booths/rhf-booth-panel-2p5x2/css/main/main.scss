@@ -4,8 +4,7 @@ html{
 }
 
 body{
-  width:12000px; height:
-  30000px; padding:60px;
+  width:12000px; height:30000px; padding:60px;
   color:#ffffff;
   background:#890000;
 }
@@ -17,71 +16,76 @@ body{
 .content-option-info-info{display:block !important;}
 
 section{
-  width:12000px; height:30000px;
+  width:inherit; height:inherit;
+  display:block;
   .gray-bottom-bar{
-    width:12240px; height:3730px;
-    position:absolute; margin:26390px 0 0 -120px;
+    width:765em; height:158.125em;
+    position:absolute; margin:1724.375em 0 0 -7.5em;
     background:#222;
   }
 	.content-contain{
+		  width:inherit; height:inherit;
 		position:absolute;
 		.rhf_info{
-			width:12000px; padding:1060px 0 0 0;
+			width:inherit; padding:46.25em 0 0 0;
 			display:none;
+			display:block;
 			p.text-1{
-				width:9000px; margin:auto;
-				font-size:676px;
+				width:75%; margin:auto;
+				font-size:42.25em;
 			}
 			p.text-2{
-				width:9000px; margin:auto;
-				padding-top:800px;
-				font-size:476px;
+				width:75%; margin:auto;
+				padding-top:6.7%;
+				font-size:29.75em;
 			}
 			ul.text-3{
 				list-style-type:disc;
-				width:9000px; margin:auto;
-				padding:800px 0 0 500px;
-				font-size:350px;
+				width:75%; margin:auto;
+				padding:6.7% 0 0 5%;
+				font-size:21.875em;
 			}
 		}
 		.rhf-logo-icon{
-			width:12000px; padding:1060px 0 0 0;
+			width:100%; padding:9.53% 0 0 0;
 			display:none;
+			display:block;
 			h3{
-				width:6000px;
-				position:absolute; margin:-1387px 0 0 5400px;
-				font-size:526px;
+				width:50%;
+				position:absolute; margin:-10.62% 0 0 45%;
+				font-size:32.875em;
 			}
 			.rhf-logo-icon-contain{
-				width:8850px; margin:auto;
+				width:73.75%; margin:auto;
 				object{
-					width:8850px; height:auto;
+					width:100%; height:auto;
 				}
 			}
 		}
 	}
 	.red-bg{
-		width:12240px; height:30240px;
-		position:absolute; z-index:-1; margin:-120px 0 0 -120px;
+		width:765em; height:1890em;
+		position:absolute; z-index:-1; margin:-7.5em 0 0 -7.5em;
 		overflow:hidden;
+		display:block;
 		object.polygon-red-1{
-			width:33580px; height:auto;
-			position:absolute; z-index:-1; margin:1000px 0 0 -10080px;
+			width:274.35%; height:auto;
+			position:absolute; z-index:-1; margin:62.5em 0 0 -630em;
 			opacity:0.2;
 		}
 		object.polygon-red-2{
-			width:22720px; height:auto;
-			position:absolute; z-index:-1; margin:-3640px 0 0 -12600px;
+			width:185.62%; height:auto;
+			position:absolute; z-index:-1; margin:-227.5em 0 0 -787.5em;
 			opacity:0.3;
 		}
 		object.polygon-red-3{
-			width:38120px; height:auto;
-			position:absolute; z-index:-1; margin:15388px 0 0 -2000px;
+			width:311.44%; height:auto;
+			position:absolute; z-index:-1; margin:961.75em 0 0 -125em;
 			opacity:0.5;
 		}
 		object.polygon-red-4{
-			width:21050px; height:auto;
-			position:absolute; z-index:-1; margin:-10638px 0 0 0;
+			width:171.98%; height:auto;
+			position:absolute; z-index:-1; margin:-664.875em 0 0 0;
 			opacity:1;
 		}
 	}
