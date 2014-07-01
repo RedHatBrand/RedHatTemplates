@@ -37,6 +37,7 @@
   }
 }
 
+
 .leaflet-map-pane,
 .leaflet-tile-pane {
   width: 100%;
@@ -128,7 +129,7 @@ iframe {
 }
 
 #headings {
-  width:65%;
+  width:66%;
   float:left;
   height:50%;
   margin:33% 0 auto -13%;
@@ -149,10 +150,11 @@ iframe {
 }
 
 .contents {
-  top:50%;
   position:absolute;
-  width:6977px;
+  top:50%;
+  width:5000px;
   padding:60px;
+
 }
 
 video, audio {
@@ -198,8 +200,9 @@ math {
 /*--------DIVS-----------------*/
 
 table.container {
-  margin-top:5%;
+  margin-top:3%;
   border-style:none;
+  background-color:none;
 
   td {
     padding:0;
@@ -212,6 +215,7 @@ table.container {
 table.main {
   border-collapse:collapse;
   text-align:center;
+  background-color:none;
 
 
   tbody {
@@ -220,6 +224,21 @@ table.main {
 
     tr.content{
 
+      div.tracks {
+        width:90%;
+        background-color:$white;
+        color:$black;
+        line-height:1.6em;
+        font-weight: 300;
+        vertical-align:baseline;
+        height:auto;
+        padding:5% 0 0 10%;
+
+          p, h4 {
+            text-align:left;
+          }
+        }
+
       td {
         width:12.5%;
         background-color:$white;
@@ -227,23 +246,24 @@ table.main {
         line-height:1.6em;
         letter-spacing:0.02em;
         font-weight: 300;
-        vertical-align:top;
+        vertical-align:baseline;
         font-size:15px;
         height:150px;
 
           p, h4 {
             color:$black;
-            padding:0;
             margin:0;
           }
 
           h4 {
+            line-height:4em;
             vertical-align:baseline;
           }
 
           p { 
             line-height:2em;
-            font-size:10em;}
+            font-size:9em;
+            }
 
           
         }
@@ -268,6 +288,19 @@ table.main {
             h2 {
               line-height:3em;
               vertical-align:middle;
+            }
+        }
+
+        td.narrow-col {
+          width:19%;
+        }
+
+        td.wide-col {
+          width:60%;
+          text-align:left;
+          padding-left:6.1%;
+            h3 {
+              text-align:left;
             }
         }
       }

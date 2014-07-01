@@ -1,11 +1,10 @@
 ---
-width: 5280px
-height: 7368px
+width: 5103px
+height: 7158px
 ---
 
 <!DOCTYPE html>
-<html
-  style="height: 7368px; width: 5280px; padding: 60px">
+<html lang="en">
 
   <!--420 x 594-->
   <!-- DPI ratio mm:px is Actually 1:11.811023622 -->
@@ -21,100 +20,106 @@ height: 7368px
   </head>
 
   <body
-    style="height: 7368px; width:5280px; padding: 60px; position: relative">
+    style="height: 7158px; width:5103px; padding: 35.5px; position: relative">
+    <main style="height: 7087px; width: 5032px;  padding: 35.5px;">
+    <!-- Finished, cropped area = 4961px x 7016px. 35.5px = 3mm bleed -->
 
-    <div id="map"></div>
+      <div id="map"></div>
 
-    <!--<div class="img-bg"><img src='<%=baseUrl%>/templates/agenda-boards/a2/images/rh-forum-polygon-outline-grey.svg'></div>-->
+      <!--<div class="img-bg"><img src='<%=baseUrl%>/templates/agenda-boards/a2/images/rh-forum-polygon-outline-grey.svg'></div>-->
 
-    <div class="white-bg"></div>
+      <div class="white-bg"></div>
 
-    <div class="header">
+      <div class="header">
 
-      <img class="forum-logo" src='<%= baseUrl %>/templates/agenda-boards/a2/images/red-hat-forum-ico-v2.svg'>
-      <div id="headings">
-        <h1>{{ title }}</h1>
-        <h2>{{ sub-title }}</h2>
+        <img class="forum-logo" src='<%= baseUrl %>/templates/agenda-boards/a2/images/red-hat-forum-ico-v2.svg'>
+        <div id="headings">
+          <h1>{{ title }}</h1>
+          <h2>{{ sub-title }}</h2>
+        </div>
+
+
       </div>
 
-
-    </div>
-
-    <div class="contents">
-      <div class="events-list">
-        <a class="event clearfix" href="{{{ link }}}" target="_blank">
-          <div class="date">
-            <img src='<%= baseUrl %>/templates/forum/assets/images/space.svg' />
-            <div class="text-content">
-              <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
-                <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
-                  {{ date }}
-                </text>
-              </svg>
-              <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
-                <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
-                  {{ month }}
-                </text>
-              </svg>
+      <div class="contents">
+        <div class="events-list">
+          <a class="event clearfix" href="{{{ link }}}" target="_blank">
+            <div class="date">
+              <img src='<%= baseUrl %>/templates/forum/assets/images/space.svg' />
+              <div class="text-content">
+                <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                  <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                    {{ date }}
+                  </text>
+                </svg>
+                <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                  <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                    {{ month }}
+                  </text>
+                </svg>
+              </div>
             </div>
-          </div>
-          <div class="location clearfix">
-            <div class="text-content">{{ location }}</div>
-          </div>
-        </a>
+            <div class="location clearfix">
+              <div class="text-content">{{ location }}</div>
+            </div>
+          </a>
+        </div>
+
+
+
+        <table align='center' cellpadding='0' cellspacing='0' class='container' width='5000px'>
+          <tr>
+            <td>
+              <table align='center' style="margin: 0 auto" cellpadding='0' cellspacing='0' class='main' height='auto' width='100%'>
+                <thead>
+                   <tr>
+                    <td class="narrow-col">
+                     <h3>Time</h3>
+                    </td>
+                    <td class="narrow-col">
+                      <h3>Duration</h3>
+                    </td>
+                    <td class="wide-col">
+                      <h3>Topic</h3>
+                    </td>
+                  </tr>
+
+                </thead>
+                <tbody>
+
+
+                  {{# times }}
+                  <tr class="content">
+                    <td><h4>{{{ timing }}}</h4></td>
+                    <td><h4>{{{ duration }}}</h4></td>
+                    <td><h4>{{{ topic }}}</h4>
+                      {{# track-a }}<div class="tracks"><h4>{{ track-a }}</h4><p>{{ track-a-content }}</p></div> {{/ track-a }}
+                      {{# track-b }}<div class="tracks"><h4>{{ track-b }}</h4><p>{{ track-b-content }}</p></div> {{/ track-b }}
+                      {{# track-c }}<div class="tracks"><h4>{{ track-c }}</h4><p>{{ track-c-content }}</p></div> {{/ track-c }}
+                      {{# track-d }}<div class="tracks"><h4>{{ track-d }}</h4><p>{{ track-d-content }}</p></div> {{/ track-d }}
+                      {{# track-e }}<div class="tracks"><h4>{{ track-e }}</h4><p>{{ track-e-content }}</p></div> {{/ track-e }}
+                      {{# track-f }}<div class="tracks"><h4>{{ track-f }}</h4><p>{{ track-f-content }}</p></div> {{/ track-f }}
+                    </td>
+                  </tr>
+                  {{/ times }}
+
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </table>
       </div>
 
 
+      <div id="baseUrl" data-base-url="<%= baseUrl %>"></div>
+      <div id="locationName" data-location-name="{{ location }}"></div>
 
-      <table align='center' cellpadding='0' cellspacing='0' class='container' width='5000px'>
-        <tr>
-          <td>
-            <table align='center' style="margin: 0 auto" cellpadding='0' cellspacing='0' class='main' height='auto' width='100%'>
-              <thead>
-                 <tr>
-                  <td colspan="1">
-                   <h3>Time</h3>
-                  </td>
-                  <td colspan="1">
-                    <h3>Duration</h3>
-                  </td>
-                  <td colspan="6">
-                    <h3>Topic</h3>
-                  </td>
-                </tr>
+      <div class='crop-mark top-left'></div>
+      <div class='crop-mark top-right'></div>
+      <div class='crop-mark bottom-left'></div>
+      <div class='crop-mark bottom-right'></div>
 
-              </thead>
-              <tbody>
-
-
-                {{# times }}
-                <tr class="content">
-                  <td><h4>{{{ timing }}}</h4></td>
-                  <td><h4>{{{ duration }}}</h4></td>
-                  {{# track-a }}<td><h4>{{ track-a }}</h4><p>{{ track-a-content }}</p></td> {{/ track-a }}
-                  {{# track-b }}<td><h4>{{ track-b }}</h4><p>{{ track-b-content }}</p></td> {{/ track-b }}
-                  {{# track-c }}<td><h4>{{ track-c }}</h4><p>{{ track-c-content }}</p></td> {{/ track-c }}
-                  {{# track-d }}<td><h4>{{ track-d }}</h4><p>{{ track-d-content }}</p></td> {{/ track-d }}
-                  {{# track-e }}<td><h4>{{ track-e }}</h4><p>{{ track-e-content }}</p></td> {{/ track-e }}
-                  {{# track-f }}<td><h4>{{ track-f }}</h4><p>{{ track-f-content }}</p></td> {{/ track-f }}
-                </tr>
-                {{/ times }}
-
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </div>
-
-
-    <div id="baseUrl" data-base-url="<%= baseUrl %>"></div>
-    <div id="locationName" data-location-name="{{ location }}"></div>
-
-    <div class='crop-mark top-left'></div>
-    <div class='crop-mark top-right'></div>
-    <div class='crop-mark bottom-left'></div>
-    <div class='crop-mark bottom-right'></div>
+    </main>
 
     <!-- Params we may expose -->
     <div style="display: none" id="zoom" data-zoom="14"></div>

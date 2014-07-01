@@ -7,12 +7,13 @@ height: 5103px
 <html lang="en">
   <head>
     <meta charset='utf-8'>
-    <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
-    <link href='<%= baseUrl %>/templates/forum/wayfinding/a2/stylesheets/main.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css?v<%= version %>' rel='stylesheet' />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='<%= baseUrl %>/templates/forum/wayfinding/a2/stylesheets/main.css?v<%= version %>' rel='stylesheet' />
   </head>
 
   <body class="rh-theme-{{ page-direction }}" style="height: 5103px; width: 7158px; padding: 35.5px;">
-    <main style="height: 5032px; width: 7158px;  padding: 35.5px;">
+    <main style="height: 5032px; width: 7087px;  padding: 35.5px;">
       <!-- Finished, cropped area = 4961px x 7016px. 35.5px = 3mm bleed -->
 
       <!-- changing backgrounds -->
@@ -105,7 +106,7 @@ height: 5103px
       </div>
 
       <div class="directional-arrow">
-        <h3>{{{ directional-arrow }}}</h3>
+        <i class="big-icon fa fa-{{{ directional-arrow }}}"></i>
       </div>
 
 
@@ -126,7 +127,7 @@ height: 5103px
     <div style="display: none" id="offsetLongitude" data-offset-lon="0.14"></div>
     <!-- /Params we may expose -->
 
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js?v<%= version %>'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js?v<%= version %>'></script>
   </body>
 </html>

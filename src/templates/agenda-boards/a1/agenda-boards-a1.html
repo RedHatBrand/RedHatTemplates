@@ -1,6 +1,6 @@
 ---
-width: 7368px
-height: 10332px
+width: 7158px
+height: 10075px
 ---
 
 <!DOCTYPE html>
@@ -19,8 +19,11 @@ height: 10332px
     <link href='<%= baseUrl %>/templates/agenda-boards/a1/stylesheets/main.css?v<%= version %>' media='all' rel='stylesheet'>
   </head>
 
+
   <body
-    style="height: 10332px; width:7368px; padding: 60px; position: relative">
+    style="height: 10075px; width: 7158px; padding: 35.5px;">
+    <main style="height: 10004px; width: 7087px;  padding: 35.5px;">
+      <!-- Finished, cropped area = 9933 x 7016px. 35.5px = 3mm bleed -->
 
     <div id="map"></div>
 
@@ -69,13 +72,13 @@ height: 10332px
             <table align='center' style="margin: 0 auto" cellpadding='0' cellspacing='0' class='main' height='auto' width='100%'>
               <thead>
                 <tr>
-                  <td colspan="1">
+                  <td class="narrow-col">
                    <h3>Time</h3>
                   </td>
-                  <td colspan="1">
+                  <td class="narrow-col">
                     <h3>Duration</h3>
                   </td>
-                  <td colspan="6">
+                  <td class="wide-col">
                     <h3>Topic</h3>
                   </td>
                 </tr>
@@ -84,16 +87,18 @@ height: 10332px
               <tbody>
 
 
-              {{# times }}
+                {{# times }}
                 <tr class="content">
                   <td><h4>{{{ timing }}}</h4></td>
                   <td><h4>{{{ duration }}}</h4></td>
-                  {{# track-a }}<td><h4>{{ track-a }}</h4><p>{{ track-a-content }}</p></td> {{/ track-a }}
-                  {{# track-b }}<td><h4>{{ track-b }}</h4><p>{{ track-b-content }}</p></td> {{/ track-b }}
-                  {{# track-c }}<td><h4>{{ track-c }}</h4><p>{{ track-c-content }}</p></td> {{/ track-c }}
-                  {{# track-d }}<td><h4>{{ track-d }}</h4><p>{{ track-d-content }}</p></td> {{/ track-d }}
-                  {{# track-e }}<td><h4>{{ track-e }}</h4><p>{{ track-e-content }}</p></td> {{/ track-e }}
-                  {{# track-f }}<td><h4>{{ track-f }}</h4><p>{{ track-f-content }}</p></td> {{/ track-f }}
+                  <td><h4>{{{ topic }}}</h4>
+                    {{# track-a }}<div class="tracks"><h4>{{ track-a }}</h4><p>{{ track-a-content }}</p></div> {{/ track-a }}
+                    {{# track-b }}<div class="tracks"><h4>{{ track-b }}</h4><p>{{ track-b-content }}</p></div> {{/ track-b }}
+                    {{# track-c }}<div class="tracks"><h4>{{ track-c }}</h4><p>{{ track-c-content }}</p></div> {{/ track-c }}
+                    {{# track-d }}<div class="tracks"><h4>{{ track-d }}</h4><p>{{ track-d-content }}</p></div> {{/ track-d }}
+                    {{# track-e }}<div class="tracks"><h4>{{ track-e }}</h4><p>{{ track-e-content }}</p></div> {{/ track-e }}
+                    {{# track-f }}<div class="tracks"><h4>{{ track-f }}</h4><p>{{ track-f-content }}</p></div> {{/ track-f }}
+                  </td>
                 </tr>
                 {{/ times }}
 
