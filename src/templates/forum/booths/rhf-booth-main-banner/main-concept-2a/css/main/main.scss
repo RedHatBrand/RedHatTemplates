@@ -5,14 +5,17 @@ html{
 
 body{
 	width:24000px; height:8400px; padding:60px;
-	background:#890000;
 }
 
 object.flip-txt-my-my{display:block;}
 object.flip-txt-my-tyo{display:none;}
-
 object.flip-txt-jp-tyo-my{display:none;}
 object.flip-txt-jp-tyo-tyo{display:block;}
+
+.contain-red-bg-red{display:block !important;}
+.contain-red-bg-gray{display:none !important;}
+.contain-gray-bg-red{display:none !important;}
+.contain-gray-bg-gray{display:block !important;}
 
 section{
 	width:inherit; height:inherit;
@@ -32,9 +35,11 @@ section{
 			opacity:0.3;
 		}
 	}
+	
 	.contain-red-bg{
 		width:1507.5em; height:532.5em; padding:3.75em;
 		position:absolute; z-index:-1; margin:-7.5em 0 0 -7.5em;
+		background:#890000;
 		overflow:hidden;
 		object.polygon-red-1{
 			width:1770.625em; height:auto;
@@ -61,28 +66,82 @@ section{
 			position:absolute; z-index:-1; margin:-705em 0 0 223.125em;
 			opacity:0.5;
 		}
-	}
-	.logo-area{
-		width:468.75em; height:142.5em;
-		position:absolute; margin:116.875em 0 0 1016.25em;
-		border-left:0.625em solid #fff;
-		object{
-			width:270.625em; height:auto;
-			position:absolute; margin:16.25em 0 0 104.375em;
+		.logo-area{
+			width:468.75em; height:142.5em;
+			position:absolute; margin:116.875em 0 0 1016.25em;
+			border-left:0.625em solid #fff;
+			object{
+				width:270.625em; height:auto;
+				position:absolute; margin:16.25em 0 0 104.375em;
+			}
+		}
+		.rhf-logo{
+			width:532.5em; height:auto;
+			position:absolute; margin:86.875em 0 0 205em; 
+			object{
+				width:536.25em; height:auto;
+			}
+			.rhf-logo-venue{
+				width:13.75em;
+				position:absolute; margin:-2.25em 0 0 6.17em;
+				font-size:56.0625em; line-height:auto; color:#000;
+			}
 		}
 	}
-	.rhf-logo{
-		width:532.5em; height:auto;
-		position:absolute; margin:86.875em 0 0 205em; 
-		object{
-			width:536.25em; height:auto;
+	
+	.contain-gray-bg{
+		width:1507.5em; height:532.5em; padding:3.75em;
+		position:absolute; z-index:-1; margin:-7.5em 0 0 -7.5em;
+		background:#e1e1e1;
+		overflow:hidden;
+		object.polygon-gray-1m{
+			width:1770.625em; height:auto;
+			position:absolute; z-index:-1; margin:-327.5em 0 0 -495em;
+			opacity:0.3;
 		}
-		.rhf-logo-venue{
-			width:13.75em;
-			position:absolute; margin:-2.25em 0 0 6.17em;
-			font-size:56.0625em; line-height:auto;
+		object.polygon-gray-2m{
+			width:1323.75em; height:auto;
+			position:absolute; margin:-548.75em 0 0 81.875em;
+			opacity:0.2; display:none;
+		}
+		object.polygon-gray-5m{
+			width:1323.75em; height:auto;
+			position:absolute; margin:-548.75em 0 0 -18.75em;
+			opacity:0.2;
+		}
+		object.polygon-gray-3m{
+			width:1810.625em; height:auto;
+			position:absolute; z-index:-1; margin:-590em 0 0 -1485em;
+			opacity:0.5;
+		}
+		object.polygon-gray-4m{
+			width:2381.875em; height:auto;
+			position:absolute; z-index:-1; margin:-705em 0 0 223.125em;
+			opacity:0.2;
+		}
+		.logo-area-black{
+			width:468.75em; height:142.5em;
+			position:absolute; margin:116.875em 0 0 1016.25em;
+			border-left:0.625em solid #222;
+			object{
+				width:270.625em; height:auto;
+				position:absolute; margin:16.25em 0 0 104.375em;
+			}
+		}
+		.rhf-logo-black{
+			width:532.5em; height:auto;
+			position:absolute; margin:86.875em 0 0 205em; 
+			object{
+				width:536.25em; height:auto;
+			}
+			.rhf-logo-venue-black{
+				width:13.75em;
+				position:absolute; margin:-2.25em 0 0 6.17em;
+				font-size:56.0625em; line-height:auto; color:#000;
+			}
 		}
 	}
+	
 	.rhf-country{
 		width:1500em; height:140.625em;
 		position:absolute; margin:384.25em 0 0 0;
