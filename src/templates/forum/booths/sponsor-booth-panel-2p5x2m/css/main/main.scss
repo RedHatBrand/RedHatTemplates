@@ -20,7 +20,7 @@ body{
 .show-hide-gray-bg-hide{display:none;}
 
 section{
-  height:100%;
+  width:inherit; height:inherit;
 	.content-contain{
 		position: absolute;
 		.rhf_info{
@@ -54,8 +54,8 @@ section{
 		}
 	}
 	.gray-bg{
-		width:12240px; height:30240px;
-		position:absolute; z-index:-1; margin:-120px 0 0 -120px;
+		width:765em; height:1890em;
+		position:absolute; z-index:-1; margin:-7.5em 0 0 -7.5em;
 		background:#e1e1e1;
 		overflow:hidden;
 		object.polygon-gray-1{
