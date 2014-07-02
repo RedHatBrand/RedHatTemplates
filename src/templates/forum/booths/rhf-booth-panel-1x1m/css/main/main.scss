@@ -17,11 +17,11 @@ body{
   &.leaflet-container { background-color: rgba(0, 0, 0, 0.6); }
 
   path.road {
-    stroke: $color-grey-dark;
+    stroke: rgba(0, 0, 0, 0.6);
   }
   path.water {
-    stroke: $color-grey-dark;
-    fill: $color-grey-dark;
+    stroke: rgba(0, 0, 0, 0.6);
+    fill: rgba(0, 0, 0, 0.6);
   }
 }
 
