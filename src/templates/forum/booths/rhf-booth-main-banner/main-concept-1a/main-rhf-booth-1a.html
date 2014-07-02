@@ -12,9 +12,9 @@ height: 8640px
 <link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-1a/css/style.css">
 </head>
 
-<body style="width:24000px; height:8400px; padding:60px;">
+<body class="theme-{{ theme }}" style="width:24000px; height:8400px; padding:60px;">
 <section>
-  <div class="contain-red-bg">
+  <div class="contain-red-bg contain-red-bg-{{ contain-bg }}">
     <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-1a/images/background/polygon-red-4.svg" class="polygon-red-4">
     </object>
     <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-1a/images/background/polygon-red-3.svg" class="polygon-red-3">
@@ -23,31 +23,31 @@ height: 8640px
     </object>
     <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-1a/images/background/polygon-red-2.svg" class="polygon-red-2">
     </object>
-      <div class="rhf-logo">
-        <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-1a/images/logo/red-hat-forum-ico.svg">
-        </object>
-        <div class="rhf-logo-venue">
-          <h3>{{ venue }}</h3>
-        </div>
-        <!--.rhf-logo-venue--> 
+    <div class="rhf-logo">
+      <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-1a/images/logo/red-hat-forum-ico.svg">
+      </object>
+      <div class="rhf-logo-venue">
+        <h3>{{ venue }}</h3>
       </div>
-      <!--rhf-logo-->
-      <div class="rhf-country">
-        <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-1a/images/background/flip-txt.svg" class="flip-txt">
-        </object>
-        <div class="date">
-          <h3 class="mm">{{ mm }}</h3>
-          <h3 class="dd">{{ dd }}</h3>
-        </div>
-        <!--.date-->
-        <div class="contain-country">
-          <h1 class="country">{{ country }}</h1>
-        </div>
-        <!--.contain-venue--> 
-      </div><!--.rhf-country--> 
+      <!--.rhf-logo-venue--> 
+    </div>
+    <!--rhf-logo-->
+    <div class="rhf-country">
+      <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-1a/images/background/flip-txt.svg" class="flip-txt">
+      </object>
+      <div class="date">
+        <h3 class="mm">{{ mm }}</h3>
+        <h3 class="dd">{{ dd }}</h3>
+      </div>
+      <!--.date-->
+      <div class="contain-country">
+        <h1 class="country">{{ country }}</h1>
+      </div>
+      <!--.contain-venue--> 
+    </div>
+    <!--.rhf-country--> 
   </div>
-  
-  <div class="contain-gray-bg">
+  <div class="contain-gray-bg contain-gray-bg-{{ contain-bg }}">
     <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-1a/images/background/polygon-gray-4m.svg" class="polygon-gray-4m">
     </object>
     <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-1a/images/background/polygon-gray-3m.svg" class="polygon-gray-3m">
@@ -56,36 +56,38 @@ height: 8640px
     </object>
     <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-1a/images/background/polygon-gray-2m.svg" class="polygon-gray-2m">
     </object>
-      <div id="map"></div>
-      <div class="rhf-logo" style="color:#000;">
-        <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-1a/images/logo/red-hat-forum-ico-black.svg">
-        </object>
-        <div class="rhf-logo-venue">
-          <h3>{{ venue }}</h3>
-        </div>
-        <!--.rhf-logo-venue--> 
+    <div id="map"></div>
+    <div class="rhf-logo" style="color:#000;">
+      <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-1a/images/logo/red-hat-forum-ico-black.svg">
+      </object>
+      <div class="rhf-logo-venue">
+        <h3>{{ venue }}</h3>
       </div>
-      <!--rhf-logo-->
-      <div class="rhf-country" style="color:#000;">
-        <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-1a/images/background/flip-txt.svg" class="flip-txt">
-        </object>
-        <div class="date" style="color:#fff !important;">
-          <h3 class="mm">{{ mm }}</h3>
-          <h3 class="dd">{{ dd }}</h3>
-        </div>
-        <!--.date-->
-        <div class="contain-country">
-          <h1 class="country">{{ country }}</h1>
-        </div>
-        <!--.contain-venue--> 
-      </div><!--.rhf-country--> 
-  </div><!--.contain-gray-bg-->
+      <!--.rhf-logo-venue--> 
+    </div>
+    <!--rhf-logo-->
+    <div class="rhf-country" style="color:#000;">
+      <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-1a/images/background/flip-txt.svg" class="flip-txt">
+      </object>
+      <div class="date" style="color:#fff !important;">
+        <h3 class="mm">{{ mm }}</h3>
+        <h3 class="dd">{{ dd }}</h3>
+      </div>
+      <!--.date-->
+      <div class="contain-country">
+        <h1 class="country">{{ country }}</h1>
+      </div>
+      <!--.contain-venue--> 
+    </div>
+    <!--.rhf-country--> 
+  </div>
+  <!--.contain-gray-bg-->
   
-    <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
-    <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
-    <!-- Params we may expose -->
-    <div style="display: none" id="zoom" data-zoom="12"></div>
-    <!-- /Params we may expose -->
+  <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
+  <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
+  <!-- Params we may expose -->
+  <div style="display: none" id="zoom" data-zoom="12"></div>
+  <!-- /Params we may expose -->
   
   <div class="bg-logo-area">
     <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-1a/images/background/polygon-gray-1.svg" class="polygon-gray-1">
@@ -98,18 +100,18 @@ height: 8640px
     <object data="<%=baseUrl%>/global-assets/images/logos/rh-logo.svg">
     </object>
   </div>
-  <!--.logo-area-->
+  <!--.logo-area--> 
 </section>
 <div class="crop-mark top-left">&nbsp;</div>
 <div class="crop-mark top-right">&nbsp;</div>
 <div class="crop-mark bottom-left">&nbsp;</div>
 <div class="crop-mark bottom-right">&nbsp;</div>
-<script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
-<script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
-<script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script>
-<script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3.v3.min.js'></script>
-<script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
-<script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script>
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script> 
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script> 
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script> 
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3.v3.min.js'></script> 
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script> 
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script> 
 <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map-vector.js?v<%= version %>'></script>
 </body>
 </html>
