@@ -5,7 +5,6 @@ html{
 
 body{
 	width:24000px; height:8400px; padding:60px;
-	background:#890000;
 }
 
 section{
@@ -29,6 +28,7 @@ section{
 	.contain-red-bg{
 		width:1507.5em; height:532.5em; padding:3.75em;
 		position:absolute; z-index:-1; margin:-7.5em 0 0 -7.5em;
+		background:#890000;
 		overflow:hidden;
 		object.polygon-red-1{
 			width:1770.625em; height:auto;
@@ -51,6 +51,32 @@ section{
 			opacity:0.5;
 		}
 	}
+	.contain-gray-bg{
+		width:1507.5em; height:532.5em; padding:3.75em;
+		position:absolute; z-index:-1; margin:-7.5em 0 0 -7.5em;
+		background:#e1e1e1;
+		overflow:hidden;
+		object.polygon-gray-1m{
+			width:1770.625em; height:auto;
+			position:absolute; z-index:-1; margin:-327.5em 0 0 -495em;
+			opacity:0.3;
+		}
+		object.polygon-gray-2m{
+			width:1323.75em; height:auto;
+			position:absolute; z-index:-1; margin:-548.75em 0 0 81.875em;
+			opacity:0.2;
+		}
+		object.polygon-gray-3m{
+			width:1810.625em; height:auto;
+			position:absolute; z-index:-1; margin:-590em 0 0 -1485em;
+			opacity:0.5;
+		}
+		object.polygon-gray-4m{
+			width:2381.875em; height:auto;
+			position:absolute; z-index:-1; margin:-705em 0 0 223.125em;
+			opacity:0.5;
+		}
+	}
 	.logo-area{
 		width:1500em; height:133.125em;
 		object{
@@ -63,17 +89,17 @@ section{
 		position:absolute;
 		object{
 			width:355.5em; height:auto;
-			margin:105.75em 0 0 53.925em; 
+			margin:265.75em 0 0 53.925em; 
 		}
 		.rhf-logo-venue{
-			width:20.75em;
-			position:absolute; margin:-2.7em 0 0 10em;
+			width:15.75em;
+			position:absolute; margin:-1.75em 0 0 6.65em;
 			font-size:31.0625em;
 		}
 	}
 	.rhf-country{
 		width:960em; height:141.7em;
-		position:absolute; margin:105.375em 0 0 490em;
+		position:absolute; margin:268.375em 0 0 490em;
 		border-left:10px solid #fff;
 		.contain-country{
 			width:433.75em; height:154.5em;
@@ -81,7 +107,7 @@ section{
 			display:table;
 			h1.country{
 				vertical-align:middle;
-				font-size:119.75em; line-height:inherit;
+				font-size:79.75em; line-height:inherit;
 				overflow:hidden;
 				display:table-cell;
 			}
@@ -92,12 +118,12 @@ section{
 			h3.mm{
 				width:4em;
 				margin:0.9em 0 0 0.46em;
-				font-size:53.75em; text-align:center;
+				font-size:35.85em; text-align:center;
 			}
 			h3.dd{
 				width:4em;
 				margin:0.6em 0 0 -0.04em;
-				font-size:67.5em; text-align:center;
+				font-size:45.0em; text-align:center;
 			}
 		}
 		object.flip-txt{
