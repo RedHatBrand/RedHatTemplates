@@ -11,15 +11,15 @@ body{
 	position:absolute; z-index:-1;
 }
 #map .leaflet-tile-pane {
-  &.leaflet-container { background-color: rgba(0, 0, 0, 0); }
-  background-color: transparent;
+  &.leaflet-container { background-color: rgba(0, 0, 0, 0) !important; }
+  background-color: rgba(0, 0, 0, 0) !important;
 
   path.road {
-    stroke: rgba(34, 34, 34, 0.12);
+    stroke: rgba(34, 34, 34, 0.12) !important;
   }
   path.water {
-    stroke: rgba(34, 34, 34, 0.12);
-    fill: rgba(34, 34, 34, 0.12);
+    stroke: rgba(34, 34, 34, 0.12) !important;
+    fill: rgba(34, 34, 34, 0.12) !important;
   }
 }
 
