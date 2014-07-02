@@ -9,50 +9,86 @@ height: 30240px
 <meta name="charset" content="utf-8" />
 <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
 <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
-<link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2/css/style.css">
+<link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2m/css/style.css">
 </head>
 
 <body style="width:12000px; height:30000px; padding:60px;">
 <section>
-  <div class="red-bg">
-    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2/images/background/polygon-gray-4.svg" class="polygon-red-4">
+  <div class="red-bg red-bg-{{ bg-contain }}">
+    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2m/images/background/polygon-red-4.svg" class="polygon-red-4">
     </object>
-    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2/images/background/polygon-gray-3.svg" class="polygon-red-3">
+    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2m/images/background/polygon-red-3.svg" class="polygon-red-3">
     </object>
-    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2/images/background/polygon-gray-2.svg" class="polygon-red-2">
+    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2m/images/background/polygon-red-2.svg" class="polygon-red-2">
     </object>
-    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2/images/background/polygon-gray-1.svg" class="polygon-red-1">
+    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2m/images/background/polygon-red-1.svg" class="polygon-red-1">
     </object>
+    <div class="content-contain">
+      <div class="rhf-logo-icon content-option-icon-{{ content-option }}">
+        <div class="rhf-logo-icon-contain">
+          <object data="<%=baseUrl%>/global-assets/images/logos/red-hat-forum-ico.svg">
+          </object>
+        </div>
+        <!--.rhf-logo-icon-contain-->
+        <h3>{{ venue }}</h3>
+      </div>
+      <!--.rhf-logo-icon-->
+      <div class="rhf_info content-option-info-{{ content-option }}">
+        <p class="text-1">{{ general-desc }}</p>
+        <p class="text-2">{{ benefit-statement }}</p>
+        <ul class="text-3">
+          {{#proofpoint}}
+          <li>{{ proofpoint-txt }}</li>
+          {{/proofpoint}}
+        </ul>
+      </div>
+      <!--.rhf_info--> 
+    </div>
+    <!--.content-contain--> 
   </div>
   <!--.red-bg-->
-  <div id="map"></div>
+  
+  <div class="gray-bg gray-bg-{{ bg-contain }}">
+    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2m/images/background/polygon-gray-4.svg" class="polygon-gray-4">
+    </object>
+    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2m/images/background/polygon-gray-3.svg" class="polygon-gray-3">
+    </object>
+    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2m/images/background/polygon-gray-2.svg" class="polygon-gray-2">
+    </object>
+    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2m/images/background/polygon-gray-1.svg" class="polygon-gray-1">
+    </object>
+    <div id="map"></div>
+    <div class="content-contain" style="color:#000;">
+      <div class="rhf-logo-icon content-option-icon-{{ content-option }}">
+        <div class="rhf-logo-icon-contain">
+          <object data="<%=baseUrl%>/global-assets/images/logos/red-hat-forum-ico-black.svg">
+          </object>
+        </div>
+        <!--.rhf-logo-icon-contain-->
+        <h3>{{ venue }}</h3>
+      </div>
+      <!--.rhf-logo-icon-->
+      <div class="rhf_info content-option-info-{{ content-option }}">
+        <p class="text-1">{{ general-desc }}</p>
+        <p class="text-2">{{ benefit-statement }}</p>
+        <ul class="text-3">
+          {{#proofpoint}}
+          <li>{{ proofpoint-txt }}</li>
+          {{/proofpoint}}
+        </ul>
+      </div>
+      <!--.rhf_info--> 
+    </div>
+    <!--.content-contain--> 
+  </div>
+  <!--.gray-bg-->
+  
   <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
   <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
   <!-- Params we may expose -->
-  <div style="display: none" id="zoom" data-zoom="13"></div>
+  <div style="display: none" id="zoom" data-zoom="12"></div>
   <!-- /Params we may expose -->
-  <div class="content-contain">
-    <div class="rhf-logo-icon content-option-icon-{{ content-option }}">
-      <div class="rhf-logo-icon-contain">
-        <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2/images/logo/red-hat-forum-ico-black.svg">
-        </object>
-      </div>
-      <!--.rhf-logo-icon-contain-->
-      <h3>{{ venue }}</h3>
-    </div>
-    <!--.rhf-logo-icon-->
-    <div class="rhf_info content-option-info-{{ content-option }}">
-      <p class="text-1">{{ general-desc }}</p>
-      <p class="text-2">{{ benefit-statement }}</p>
-      <ul class="text-3">
-        {{#proofpoint}}
-        <li>{{ proofpoint-txt }}</li>
-        {{/proofpoint}}
-      </ul>
-    </div>
-    <!--.rhf_info--> 
-  </div>
-  <!--.content-contain-->
+  
   <div class="gray-bottom-bar">&nbsp;</div>
   <!--.gray-bottom-bar--> 
 </section>

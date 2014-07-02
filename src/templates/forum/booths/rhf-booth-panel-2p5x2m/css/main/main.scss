@@ -12,9 +12,13 @@ body{
 
 .content-option-icon-icon{display:block !important;}
 .content-option-icon-info{display:none !important;}
-
 .content-option-info-icon{display:none !important;}
 .content-option-info-info{display:block !important;}
+
+.red-bg-red{display:block !important;}
+.red-bg-gray{display:none !important;}
+.gray-bg-gray{display:block !important;}
+.gray-bg-red{display:none !important;}
 
 section{
   width:inherit; height:inherit;
@@ -22,7 +26,6 @@ section{
   .gray-bottom-bar{
     width:765em; height:158.125em;
     position:absolute; margin:1724.375em 0 0 -7.5em;
-  /*background:#890000;*/
     background:#222;
   }
 	.content-contain{
@@ -31,6 +34,7 @@ section{
 		.rhf_info{
 			width:inherit; padding:46.25em 0 0 0;
 			display:none;
+			display:block;
 			p.text-1{
 				width:75%; margin:auto;
 				font-size:42.25em;
@@ -50,6 +54,7 @@ section{
 		.rhf-logo-icon{
 			width:100%; padding:9.53% 0 0 0;
 			display:none;
+			display:block;
 			h3{
 				width:50%;
 				position:absolute; margin:-10.62% 0 0 45%;
@@ -67,26 +72,54 @@ section{
 		width:765em; height:1890em;
 		position:absolute; z-index:-1; margin:-7.5em 0 0 -7.5em;
 		overflow:hidden;
+  		background:#890000;
 		display:block;
 		object.polygon-red-1{
 			width:274.35%; height:auto;
 			position:absolute; z-index:-1; margin:62.5em 0 0 -630em;
 			opacity:0.2;
-			opacity:0.3;
 		}
 		object.polygon-red-2{
 			width:185.62%; height:auto;
 			position:absolute; z-index:-1; margin:-227.5em 0 0 -787.5em;
 			opacity:0.3;
-			opacity:0.35;
 		}
 		object.polygon-red-3{
 			width:311.44%; height:auto;
 			position:absolute; z-index:-1; margin:961.75em 0 0 -125em;
 			opacity:0.5;
-			opacity:0.7;
 		}
 		object.polygon-red-4{
+			width:171.98%; height:auto;
+			position:absolute; z-index:-1; margin:-664.875em 0 0 0;
+			opacity:1;
+		}
+	}
+	.gray-bg{
+		width:765em; height:1890em;
+		position:absolute; z-index:-1; margin:-7.5em 0 0 -7.5em;
+		overflow:hidden;
+  		background:#eee;
+		display:block;
+		object.polygon-gray-1{
+			width:274.35%; height:auto;
+			position:absolute; z-index:-1; margin:62.5em 0 0 -630em;
+			opacity:0.2;
+			opacity:0.3;
+		}
+		object.polygon-gray-2{
+			width:185.62%; height:auto;
+			position:absolute; z-index:-1; margin:-227.5em 0 0 -787.5em;
+			opacity:0.3;
+			opacity:0.35;
+		}
+		object.polygon-gray-3{
+			width:311.44%; height:auto;
+			position:absolute; z-index:-1; margin:961.75em 0 0 -125em;
+			opacity:0.5;
+			opacity:0.7;
+		}
+		object.polygon-gray-4{
 			width:171.98%; height:auto;
 			position:absolute; z-index:-1; margin:-664.875em 0 0 0;
 			opacity:1;
