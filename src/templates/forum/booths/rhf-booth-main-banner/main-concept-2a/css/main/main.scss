@@ -7,6 +7,22 @@ body{
 	width:24000px; height:8400px; padding:60px;
 }
 
+#map{
+	position:absolute; z-index:-1;
+}
+#map .leaflet-tile-pane {
+  &.leaflet-container { background-color: rgba(0, 0, 0, 0); }
+  background-color: transparent;
+
+  path.road {
+    stroke: rgba(34, 34, 34, 0.12);
+  }
+  path.water {
+    stroke: rgba(34, 34, 34, 0.12);
+    fill: rgba(34, 34, 34, 0.12);
+  }
+}
+
 object.flip-txt-my-my{display:block;}
 object.flip-txt-my-tyo{display:none;}
 object.flip-txt-jp-tyo-my{display:none;}
