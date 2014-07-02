@@ -10,6 +10,10 @@ body{
   background:#e1e1e1;
 }
 
+#map .leaflet-tile-pane {
+  background-color: transparent;
+}
+
 .content-option-icon-icon{display:block !important;}
 .content-option-icon-info{display:none !important;}
 .content-option-info-icon{display:none !important;}

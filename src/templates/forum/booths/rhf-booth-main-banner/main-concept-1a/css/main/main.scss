@@ -7,6 +7,10 @@ body{
 	width:24000px; height:8400px; padding:60px;
 }
 
+#map .leaflet-tile-pane {
+  background-color: transparent;
+}
+
 contain-red-bg-red{display:block !important;}
 contain-red-bg-gray{display:none !important;}
 contain-gray-bg-gray{display:block !important;}
