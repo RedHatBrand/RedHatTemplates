@@ -48,9 +48,12 @@ function tree() {
 
         for (var possibleSibling in files) {
           var possibleSiblingPath = possibleSibling.split('/');
-          possibleSiblingPath.pop();
+          var name = possibleSiblingPath.pop();
 
-          if ((file !== possibleSibling) && _.isEqual(path, possibleSiblingPath)) {
+          if ((file !== possibleSibling) &&
+              (name !== '.DS_Store') &&
+              _.isEqual(path, possibleSiblingPath)) {
+
             siblings.push(files[possibleSibling]);
           }
         }

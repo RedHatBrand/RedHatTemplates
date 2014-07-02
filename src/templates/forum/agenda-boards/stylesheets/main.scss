@@ -1,0 +1,161 @@
+@import '../../../../global-assets/scss/utils/grid';
+@import '../../../../global-assets/scss/fonts/overpass';
+@import '../../../../global-assets/scss/colors/base_color_palette';
+
+
+@import '../../assets/stylesheets/map';
+@import '../../assets/stylesheets/colors';
+
+body {
+  position: relative;
+  font-size: 1.2vw;
+  font-family: 'Overpass';
+  font-weight: 400;
+  line-height: 1.5em;
+  background-color: white;
+}
+
+main {
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  top: 3mm; bottom: 3mm;
+  left: 3mm; right: 3mm;
+}
+
+p { margin: 0.333em 0 0.75em; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+h1 {  font-size: 3em; }
+
+#title {
+  h1, p {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 0.5em;
+  }
+  p {
+    font-size: 1.5em;
+  }
+}
+
+#background-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  -webkit-filter: unquote("grayscale(100%)");
+}
+
+#map .leaflet-tile-pane {
+  background-color: transparent;
+}
+
+#map {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 4em 4em 8em 4em;
+  box-sizing: border-box;
+
+  .time-slot {
+    break-inside: avoid-column;
+    page-break-inside:avoid;
+  }
+}
+
+#agenda {
+  column-count: 3;
+  column-gap: 3em;
+  column-fill: balance;
+}
+
+.time-slot {
+  padding-bottom: 1.5em;
+
+  p {
+    margin-bottom: 1em;
+  }
+}
+
+[class*="track-"] {
+  h6 {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 0.5em 0;
+  }
+}
+
+.time-slot-header {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: thin solid;
+
+  .time,
+  .duration {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 0.5em;
+  }
+
+  .time {
+    font-size: 1.5em;
+    line-height: 1em;
+  }
+  .duration {
+    font-size: 1em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    font-weight: bold;
+  }
+}
+
+.events-list { margin-bottom: 3em; }
+.events-list .event,
+.events-list .event .date,
+.events-list .event .location { height: inherit; }
+
+.events-list .event .letter { fill: white; }
+
+.corner-logo {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  width: 33.333%;
+  max-height: 100vh;
+
+  img.triangle {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%
+  }
+
+  img.logo {
+    position: absolute;
+    right: $page-margin / 2;
+    bottom: $page-margin / 2;
+    margin: 0;
+    height: auto;
+    width: 40%;
+  }
+}
