@@ -110,3 +110,11 @@ gulp publish
 ```
 
 Sweet, everything is up in the cloud. You can now add template files from the `/build` folder to outfit.
+
+## If you get a "too many open files" error
+
+Paste this in your terminal / put it in your shell profile (~/.zshrc, ~/.profile, or other)
+
+```
+ulimit -n 8192
+```
