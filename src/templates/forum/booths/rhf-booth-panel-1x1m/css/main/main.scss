@@ -27,26 +27,30 @@ section{
 		width:765em; height:765em;
 		position:absolute; z-index:-2; margin:-7.5em 0 0 -7.5em;
 		overflow:hidden;
-		background:#222;
+		background:#e1e1e1;
 		object.polygon-gray-1{
 			width:2098.75em; height:auto;
 			position:absolute; z-index:-1; margin:23.4375em 0 0 -505em;
 			opacity:0.2;
+			opacity:0.3;
 		}
 		object.polygon-gray-2{
 			width:2045em; height:auto;
 			position:absolute; z-index:-1; margin:-625em 0 0 -1100em;
 			opacity:0.1;
+			opacity:0.35;
 		}
 		object.polygon-gray-3{
 			width:2382.5em; height:auto;
 			position:absolute; z-index:-1; margin:0 0 0 0;
 			opacity:0.5;
+			opacity:0.7;
 		}
 		object.polygon-gray-4{
 			width:1315.625em; height:auto;
 			position:absolute; z-index:-1; margin:-282.5em 0 0 -406.25em;
 			opacity:0.5;
+			opacity:0.3;
 		}
 	}
   .red-bg{

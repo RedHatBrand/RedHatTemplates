@@ -7,6 +7,8 @@ height: 12240px
 <html style="width:12120px; height:12120px; padding:60px; overflow:scroll;">
 <head>
 <meta name="charset" content="utf-8" />
+<link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
+<link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
 <link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-1x1m/css/style.css">
 </head>
 
@@ -21,6 +23,16 @@ height: 12240px
     </object>
     <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-1x1m/images/background/polygon-gray-1.svg" class="polygon-gray-1">
     </object>
+  <div id="map"></div>
+  <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
+  <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
+  <!-- Params we may expose -->
+  <div style="display: none" id="zoom" data-zoom="13"></div>
+  <!-- /Params we may expose -->
+  <div class="logo-area">
+    <object data="<%=baseUrl%>/global-assets/images/logos/rh-logo-black.svg">
+    </object>
+  </div><!--.logo-area--> 
   </div>
   <!--.gray-bg-->
   <div class="red-bg change-bg-red-{{ change-bg }}">
@@ -32,17 +44,23 @@ height: 12240px
     </object>
     <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-1x1m/images/background/polygon-red-1.svg" class="polygon-red-1">
     </object>
-  </div>
-  <!--.red-bg-->
   <div class="logo-area">
     <object data="<%=baseUrl%>/global-assets/images/logos/rh-logo.svg">
     </object>
+  </div><!--.logo-area--> 
   </div>
-  <!--.logo-area--> 
+  <!--.red-bg-->
 </section>
 <div class="crop-mark top-left">&nbsp;</div>
 <div class="crop-mark top-right">&nbsp;</div>
 <div class="crop-mark bottom-left">&nbsp;</div>
 <div class="crop-mark bottom-right">&nbsp;</div>
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script>
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3.v3.min.js'></script>
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script>
+<script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map-vector.js?v<%= version %>'></script>
 </body>
 </html>

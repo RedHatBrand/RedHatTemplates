@@ -15,26 +15,32 @@ height: 30240px
 <body style="width:12000px; height:30000px; padding:60px;">
 <section>
   <div class="red-bg">
-    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2/images/background/polygon-gray-4.svg" class="polygon-red-4"></object>
-    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2/images/background/polygon-gray-3.svg" class="polygon-red-3"></object>
-    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2/images/background/polygon-gray-2.svg" class="polygon-red-2"></object>
-    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2/images/background/polygon-gray-1.svg" class="polygon-red-1"></object>
+    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2/images/background/polygon-gray-4.svg" class="polygon-red-4">
+    </object>
+    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2/images/background/polygon-gray-3.svg" class="polygon-red-3">
+    </object>
+    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2/images/background/polygon-gray-2.svg" class="polygon-red-2">
+    </object>
+    <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2/images/background/polygon-gray-1.svg" class="polygon-red-1">
+    </object>
   </div>
   <!--.red-bg-->
-      <div id="map"></div>
-    <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
-    <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
-    <!-- Params we may expose -->
-    <div style="display: none" id="zoom" data-zoom="13"></div>
-    <!-- /Params we may expose -->
+  <div id="map"></div>
+  <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
+  <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
+  <!-- Params we may expose -->
+  <div style="display: none" id="zoom" data-zoom="13"></div>
+  <!-- /Params we may expose -->
   <div class="content-contain">
     <div class="rhf-logo-icon content-option-icon-{{ content-option }}">
       <div class="rhf-logo-icon-contain">
         <object data="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-2p5x2/images/logo/red-hat-forum-ico-black.svg">
         </object>
-      </div><!--.rhf-logo-icon-contain-->
+      </div>
+      <!--.rhf-logo-icon-contain-->
       <h3>{{ venue }}</h3>
-    </div><!--.rhf-logo-icon-->
+    </div>
+    <!--.rhf-logo-icon-->
     <div class="rhf_info content-option-info-{{ content-option }}">
       <p class="text-1">{{ general-desc }}</p>
       <p class="text-2">{{ benefit-statement }}</p>
@@ -43,20 +49,23 @@ height: 30240px
         <li>{{ proofpoint-txt }}</li>
         {{/proofpoint}}
       </ul>
-    </div><!--.rhf_info--> 
-  </div><!--.content-contain-->
-  <div class="gray-bottom-bar">&nbsp;</div><!--.gray-bottom-bar--> 
+    </div>
+    <!--.rhf_info--> 
+  </div>
+  <!--.content-contain-->
+  <div class="gray-bottom-bar">&nbsp;</div>
+  <!--.gray-bottom-bar--> 
 </section>
 <div class="crop-mark top-left">&nbsp;</div>
 <div class="crop-mark top-right">&nbsp;</div>
 <div class="crop-mark bottom-left">&nbsp;</div>
 <div class="crop-mark bottom-right">&nbsp;</div>
-<script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
-<script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
-<script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script>
-<script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3.v3.min.js'></script>
-<script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
-<script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script>
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script> 
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script> 
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script> 
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3.v3.min.js'></script> 
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script> 
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script> 
 <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map-vector.js?v<%= version %>'></script>
 </body>
 </html>
