@@ -8,10 +8,10 @@ body{
   background:#890000;
 }
 
-.change-bg-gray-red{display:none;}
-.change-bg-gray-gray{display:block;}
-.content-bg-red-red{display:block;}
-.content-bg-red-gray{display:none;}
+.change-bg-gray-red{display:none !important;}
+.change-bg-gray-gray{display:block !important;}
+.content-bg-red-red{display:block !important;}
+.content-bg-red-gray{display:none !important;}
 
 section{
   width:inherit; height:inherit;
@@ -58,6 +58,7 @@ section{
 		position:absolute; z-index:-1; margin:-7.5em 0 0 -7.5em;
 		background:#890000;
 		overflow:hidden;
+		display:none;
 		object.polygon-red-1{
 			width:2098.75em; height:auto;
 			position:absolute; z-index:-1; margin:23.4375em 0 0 -505em;
