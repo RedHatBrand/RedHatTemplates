@@ -13,7 +13,7 @@ body{
 .content-bg-red-red{display:block !important;}
 .content-bg-red-gray{display:none !important;}
 
-/*#map {
+#map{
   &.leaflet-container { background-color: rgba(0, 0, 0, 0.6); }
 
   path.road {
@@ -23,11 +23,11 @@ body{
     stroke: $color-grey-dark;
     fill: $color-grey-dark;
   }
-}*/
-
-#map .leaflet-tile-pane {
-  background-color: transparent;
 }
+
+/*#map .leaflet-tile-pane {
+  background-color: transparent;
+}*/
 
 section{
   width:inherit; height:inherit;
