@@ -41,6 +41,7 @@ $aside-width: 22em;
 
 #map .event-marker-icon-current {
   background-image: none;
+  width: 60% !important;
 
   @media screen and (max-width: $breakpoint-small) {
     svg {
