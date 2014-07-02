@@ -14,10 +14,15 @@ body{
   background-color: transparent;
 }
 
-.content-option-icon-icon{display:block !important;}
-.content-option-icon-info{display:none !important;}
-.content-option-info-icon{display:none !important;}
-.content-option-info-info{display:block !important;}
+.content-option-icon-icon,
+.content-option-info-info
+{display:block !important;}
+
+.content-option-icon-info,
+.content-option-info-icon,
+.content-option-icon-blank,
+.content-option-info-blank
+{display:none !important;}
 
 .red-bg-red{display:block !important;}
 .red-bg-gray{display:none !important;}

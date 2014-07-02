@@ -8,11 +8,13 @@ body{
   background:#fff;
 }
 
-.content-option-icon-icon{display:block !important;}
-.content-option-icon-info{display:none !important;}
-
-.content-option-info-icon{display:none !important;}
+.content-option-icon-icon,
 .content-option-info-info{display:block !important;}
+
+.content-option-icon-info,
+.content-option-icon-blank,
+.content-option-info-blank,
+.content-option-info-icon{display:none !important;}
 
 .show-hide-gray-bg-show{display:block;}
 .show-hide-gray-bg-hide{display:none;}
