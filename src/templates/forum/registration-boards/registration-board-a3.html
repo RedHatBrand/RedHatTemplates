@@ -12,6 +12,7 @@ height: 432mm
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/events-list.css?v<%= version %>' rel='stylesheet' />
     <link href='<%= baseUrl %>/templates/forum/registration-boards/stylesheets/main.css?v<%= version %>' rel='stylesheet' />
+    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
   </head>
 
   {{{ dimensions }}}
@@ -29,34 +30,34 @@ height: 432mm
           </div>
         </div>
 
-        
+
         <div class="sponsors">
-    
+
           <ul class="platinum-sponsors">
             <li class="hdr-title-sponsor"><p>platinum sponsors</p></li>
             {{#platinum-sponsors}}
             <li class="sponsor-image"><img src="{{{ sponsor-logo }}}" alt="platinum sponsor"></li>
             {{/platinum-sponsors}}
           </ul><!--ul.platinum-sponsors-->
-          
 
-          
+
+
           <ul class="gold-sponsors">
             <li class="hdr-title-sponsor"><p>gold sponsors</p></li>
             {{#gold-sponsors}}
             <li class="sponsor-image"><img src="{{{ sponsor-logo }}}" alt="gold sponsor"></li>
             {{/gold-sponsors}}
           </ul><!--ul.gold-sponsors-->
-          
 
-          
+
+
           <ul class="silver-sponsors">
             <li class="hdr-title-sponsor"><p>silver sponsors</p></li>
             {{#silver-sponsors}}
             <li class="sponsor-image"><img src="{{{ sponsor-logo }}}" alt="silver sponsor"></li>
             {{/silver-sponsors}}
           </ul><!--ul.silver-sponsors-->
-          
+
 
         </div><!--.sponsors-->
 
