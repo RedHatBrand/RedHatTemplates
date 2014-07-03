@@ -84,7 +84,7 @@ hr {
   height: 0;
   border: none;
   background: none;
-  margin-top: $line-height - $light-stroke / 2;
-  margin-bottom: $line-height - $light-stroke / 2;
-  border-top: $light-stroke solid $default-border-color;
+  margin-top: $line-height;
+  margin-bottom: $line-height;
+  border-top: thin solid $default-border-color;
 }

@@ -157,23 +157,50 @@ height: 100vh
       <section id="speakers" class='section-speakers main'>
         <div class='container'>
           <h1>Speakers</h1>
-          {{#speakers}}
           <div class="grid-container">
-            <div class="one-third">
-              <h3 data-brand-tool-editable="speakers.name">{{ name }}</h3>
-              <img class="welcome-avatar" src="{{{ profile-photo }}}">
-              <div class="sign-off">
-                <p>
-                  <em>{{ title }}</em>
-                  <br> <strong>{{ company }}</strong>
-                </p>
+            {{#speakers}}
+            <a
+              data-target-modal="{{#slugify}}{{ name }}{{/slugify}}"
+              href="#{{#slugify}}{{ name }}{{/slugify}}"
+              class="modal-open one-half anchor-box">
+
+              <div class="speaker-block grid-container">
+                <div class="speaker-block-avatar-container one-third">
+                  <img class="welcome-avatar" src="{{{ profile-photo }}}">
+                </div>
+                <div class="speaker-block-content-container two-thirds">
+                  <h4 class="speaker-block-content-name">{{ name }}</h4>
+                  <p>
+                    <em>{{ title }}</em>
+                    <br> <strong>{{ company }}</strong>
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <div id="{{#slugify}}{{ name }}{{/slugify}}" class="modal full-width">
+              <header class="modal-header">
+                <h3 data-brand-tool-editable="speakers.name">{{ name }}</h3>
+              </header>
+              <div class="modal-content">
+                <div class="grid-container">
+                  <div class="one-third">
+                    <img class="welcome-avatar" src="{{{ profile-photo }}}">
+                    <div class="sign-off">
+                      <p>
+                        <em>{{ title }}</em>
+                        <br> <strong>{{ company }}</strong>
+                      </p>
+                    </div>
+                  </div>
+                  <div data-brand-tool-editable="speakers.description" class="two-thirds">
+                    {{{ description }}}
+                  </div>
+                </div>
               </div>
             </div>
-            <div data-brand-tool-editable="speakers.description" class="two-thirds">
-              {{{ description }}}
-            </div>
+            {{/speakers}}
           </div>
-          {{/speakers}}
         </div>
       </section>
 
@@ -353,6 +380,8 @@ height: 100vh
         </g>
       </svg>'>
     </div>
+
+    <div class="modal-overlay" id="modal-overlay"></div>
 
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.fitvids.js'></script>
