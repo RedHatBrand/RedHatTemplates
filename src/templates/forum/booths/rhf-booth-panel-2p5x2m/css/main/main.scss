@@ -10,8 +10,16 @@ body{
   background:#e1e1e1;
 }
 
-#map .leaflet-tile-pane {
-  background-color: transparent;
+#map{
+  &.leaflet-container { background-color:transparent; }
+
+  path.road {
+    stroke:#ccc;
+  }
+  path.water {
+    stroke:#ccc;
+    fill:#ccc;
+  }
 }
 
 .content-option-icon-icon,
