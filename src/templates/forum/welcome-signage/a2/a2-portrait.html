@@ -62,6 +62,33 @@ height: 606mm
           </div>
         </div>
 
+        <div class="sponsors">
+    
+          <ul class="platinum-sponsors">
+            <li class="hdr-title-sponsor"><p>platinum sponsors</p></li>
+            {{#platinum-sponsors}}
+            <li class="sponsor-image"><img src="{{{ sponsor-logo }}}" alt="platinum sponsor"></li>
+            {{/platinum-sponsors}}
+          </ul><!--ul.platinum-sponsors-->
+          
+   
+          <ul class="gold-sponsors">
+            <li class="hdr-title-sponsor"><p>gold sponsors</p></li>
+            {{#gold-sponsors}}
+            <li class="sponsor-image"><img src="{{{ sponsor-logo }}}" alt="gold sponsor"></li>
+            {{/gold-sponsors}}
+          </ul><!--ul.gold-sponsors-->
+          
+          
+          <ul class="silver-sponsors">
+            <li class="hdr-title-sponsor"><p>silver sponsors</p></li>
+            {{#silver-sponsors}}
+            <li class="sponsor-image"><img src="{{{ sponsor-logo }}}" alt="silver sponsor"></li>
+            {{/silver-sponsors}}
+          </ul><!--ul.silver-sponsors-->
+
+        </div><!--.sponsors-->
+
         <div class='corner-logo'>
           <img src='<%=baseUrl%>/global-assets/images/logos/rh-logo.svg' />
         </div>
@@ -201,7 +228,7 @@ height: 606mm
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3.v3.min.js'></script>
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script>
-    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map-vector.js?v<%= version %>'></script>
+    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map-vector-full-page.js?v<%= version %>'></script>
     <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-events-list.js?v<%= version %>'></script>
   </body>
 </html>

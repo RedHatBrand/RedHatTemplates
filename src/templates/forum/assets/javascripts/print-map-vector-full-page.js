@@ -81,6 +81,7 @@ function initMap (events, selectedLocation) {
   var contentHeight = $('#content').outerHeight();
 
   function setViewOffset (latlng, offset) {
+    console.log(latlng);
     var x = map.latLngToContainerPoint(latlng).x - offset[0];
     var y = map.latLngToContainerPoint(latlng).y - offset[1];
     var point = map.containerPointToLatLng([x, y]);
