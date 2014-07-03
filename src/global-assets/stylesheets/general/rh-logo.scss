@@ -1,0 +1,49 @@
+$page-margin: 4em !default;
+
+.corner-logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 33.333%;
+  max-height: 100vh;
+
+  &:before {
+    content: url('/global-assets/images/basic-shapes/triangle.svg');
+    display: block;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .logo {
+    position: absolute;
+    right: $page-margin / 3;
+    bottom: $page-margin / 3;
+    margin: 0;
+    height: auto;
+    width: 40%;
+
+    &:before {
+      content: url('/global-assets/images/logos/rh-logo.svg');
+      display: block;
+      font-size: 0;
+      line-height: 0;
+    }
+  }
+}
+
+
+.center-logo {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  &:before {
+    content: url('/global-assets/images/logos/rh-logo.svg');
+    display: block;
+    font-size: 0;
+    line-height: 0;
+  }
+}

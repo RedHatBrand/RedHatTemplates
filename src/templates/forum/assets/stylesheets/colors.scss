@@ -36,3 +36,8 @@
     fill: $color-black !important;
   }
 }
+
+.low-contrast #map.leaflet-container { background-color: rgba($color-black, 0.85); }
+.theme-light.low-contrast #map.leaflet-container { background-color: rgba(204, 204, 204, 0.85); }
+
+.theme-light .center-logo:before { content: url('/global-assets/images/logos/rh-logo-black.svg'); }
