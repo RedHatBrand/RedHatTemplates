@@ -8,6 +8,10 @@ main {
 	display: block;
 }
 
+#map .leaflet-tile-pane {
+  background-color: transparent;
+}
+
 .front-bg-extend{
 	width:50%; height:100%;
 	background:#890000; margin:-5mm 0 0 -5mm;
