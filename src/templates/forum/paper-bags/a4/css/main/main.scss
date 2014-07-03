@@ -39,7 +39,7 @@ section.main-panel{
 		width:165mm; height:60mm;
 		margin:78mm auto 0 auto; padding:10mm 0 0 0;
 		border-top:1px solid #ccc;
-		ul.main-sponsors{ 
+		ul.main-sponsors{
 			float:left;
 			li{
 				float:left;
@@ -48,7 +48,7 @@ section.main-panel{
 				display:block;
 			}
 		}
-		ul.joint-sponsors{ 
+		ul.joint-sponsors{
 			float:right;
 			li{
 				float:left;
@@ -66,8 +66,7 @@ section.main-panel{
 		li{
 			img{
 				width:18mm; height:18mm;
-				border:1px dotted #000;
-			}		
+			}
 		}
 	}
 } /*section.main-panel*/

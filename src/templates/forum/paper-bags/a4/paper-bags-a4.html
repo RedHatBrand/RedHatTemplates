@@ -21,26 +21,22 @@ height: 370mm
   </div><!--.rh-main-logo-->
   <div class="rhf-ico">
     <object data="<%=baseUrl%>/templates/forum/paper-bags/a4/images/logos/red-hat-forum-ico-v2.svg"></object>
-    <div class="forum-venue">{{ forum-venue-a4 }}</div><!--.forum-venue--> 
+    <div class="forum-venue">{{ forum-venue-a4 }}</div><!--.forum-venue-->
   </div><!--.rh-main-logo-->
   <div class="sponsors">
     <ul class="main-sponsors">
       <li class="hdr-title-sponsor">
         <h3>main sponsors</h3>
       </li>
-      {{#li-main-sponsor-a4}}
-      <li><img src="{{ main-sponsor-a4 }}" alt="main sponsor"></li>
-      {{/li-main-sponsor-a4}}
+      <li><img src="{{{ main-sponsor-a4 }}}" alt="main sponsor image"></li>
     </ul><!--ul.main-sponsors-->
     <ul class="joint-sponsors">
       <li class="hdr-title-sponsor">
         <h3>joint sponsors</h3>
       </li>
-      {{#li-joint-sponsor-a4}}
-      <li><img src="{{ joint-sponsor-a4 }}" alt="joint sponsor"></li>
-      {{/li-joint-sponsor-a4}}
-    </ul><!--ul.joint-sponsors--> 
-  </div><!--.sponsors--> 
+      <li><img src="{{{  joint-sponsor-a4 }}}" alt="joint sponsor image"></li>
+    </ul><!--ul.joint-sponsors-->
+  </div><!--.sponsors-->
 </section><!--section.main-panel-->
 <div class="crop-mark top-left">&nbsp;</div>
 <div class="crop-mark top-right">&nbsp;</div>
