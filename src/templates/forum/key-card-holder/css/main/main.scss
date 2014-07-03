@@ -1,0 +1,62 @@
+html{
+  font-family:"Overpass"; color:#fff;
+	background:#222;
+}
+
+main {
+	position: relative;
+	display: block;
+}
+
+.front-bg-extend{
+	width:50%; height:100%;
+	background:#890000; margin:-5mm 0 0 -5mm;
+	position:absolute; z-index:-3;
+	opacity:0.7;
+}
+
+section.front{
+	width:50%; height:100%;
+	position: relative;	z-index:3; margin:0 0 0 0;
+	background:#890000;
+	overflow:hidden;
+	object.polygon-red-1{
+		width:200%; height:auto;
+		position:absolute; z-index:-1; margin:34.7% 0 0 -40%;
+		opacity:0.2;
+	}
+	object.polygon-red-2{
+		width:150%; height:auto;
+		position:absolute; z-index:-1; margin:-10% 0 0 -60%;
+		opacity:0.3;
+	}
+	object.polygon-red-3{
+		width:500%; height:auto;
+		position:absolute; z-index:-1; margin:0 0 0 -50%;
+		opacity:0.5;
+		display:none;
+	}
+	object.polygon-red-4{
+		width:600%; height:auto;
+		position:absolute; z-index:-1; margin:-220% 0 0 0%;
+		opacity:0.4;
+	}
+	object.solid-tri-shape-222{
+		height:50%;
+		position:absolute; margin:80% 0 0 35%;
+	}
+	object.rh-logo{
+		width:33%;
+		position:absolute; margin:116% 0 0 66%;
+	}
+	.rhf-marker-ico-contain{
+		width:43%;
+		margin:auto; padding:40% 0 0 0;
+	}
+}
+
+section.back{
+	width:50%; height:100%;
+	position: relative;	z-index: 3; margin:-70.5% 0 0 50%;
+	background:#222;
+}

@@ -1,0 +1,54 @@
+---
+width: 230mm
+height: 168mm
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="charset" content="utf-8" />
+<link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
+<link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
+<link rel="stylesheet" type="text/css" href="<%= baseUrl %>/templates/forum/key-card-holder/css/style.css">
+</head>
+
+<body style="width:220mm; height:158mm; padding:5mm;">
+  <main style="width:210mm; height:148mm; padding:5mm;">
+  
+    <div class="front-bg-extend">&nbsp;</div><!--.front-bg-extend-->
+    <section class="front">
+      <object data="<%= baseUrl %>/templates/forum/key-card-holder/images/background/polygon-red-4.svg" class="polygon-red-4"></object>
+      <object data="<%= baseUrl %>/templates/forum/key-card-holder/images/background/polygon-red-3.svg" class="polygon-red-3"></object>
+      <object data="<%= baseUrl %>/templates/forum/key-card-holder/images/background/polygon-red-2.svg" class="polygon-red-2"></object>
+      <object data="<%= baseUrl %>/templates/forum/key-card-holder/images/background/polygon-red-1.svg" class="polygon-red-1"></object>
+      <object data="<%= baseUrl %>/global-assets/images/category-shapes/solid-corner-triangle-hex-222222.svg" class="solid-tri-shape-222"></object>
+      <object data="<%= baseUrl %>/global-assets/images/logos/rh-logo.svg" class="rh-logo"></object>
+      <div class="rhf-marker-ico-contain">
+        <object data="<%= baseUrl %>/global-assets/images/logos/red-hat-forum-marker.svg" class="rhf-marker-ico"></object>
+      </div><!--.rhf-marker-ico-contain-->
+    </section><!--.front-->
+    
+    <section class="back">
+      <div id="map"></div>
+    </section><!--.back-->
+    
+    <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
+    <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
+    <!-- Params we may expose -->
+    <div style="display: none" id="zoom" data-zoom="12"></div>
+    <!-- /Params we may expose -->
+    
+  </main>
+<div class="crop-mark top-left">&nbsp;</div>
+<div class="crop-mark top-right">&nbsp;</div>
+<div class="crop-mark bottom-left">&nbsp;</div>
+<div class="crop-mark bottom-right">&nbsp;</div>
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script> 
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script> 
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script> 
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3.v3.min.js'></script> 
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script> 
+<script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script> 
+<script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map-vector.js?v<%= version %>'></script>
+</body>
+</html>
