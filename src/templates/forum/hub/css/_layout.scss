@@ -212,16 +212,16 @@ a.link-footer {
     -moz-transition: all .4s;
     -ms-transition: all .4s;
     transition: all .4s;
-    -webkit-transform: translate(-320px, 0);
+    transform: translate(-320px, 0);
   }
 
   .menu-open .events-list-container {
     z-index: 20;
-    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 
   .menu-open .rotate {
-    -webkit-transform: translate(320px, 0) rotateY(0);
+    transform: translate(320px, 0) rotateY(0);
     box-shadow: 0 0 30px rgba(0,0,0,.25);
   }
 }
