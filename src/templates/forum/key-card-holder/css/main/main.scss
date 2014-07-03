@@ -8,8 +8,16 @@ main {
 	display: block;
 }
 
-#map .leaflet-tile-pane {
-  background-color: transparent;
+#map{
+  &.leaflet-container { background-color:transparent; }
+
+  path.road {
+    stroke:#444;
+  }
+  path.water {
+    stroke:#444;
+    fill:#444;
+  }
 }
 
 .front-bg-extend{
