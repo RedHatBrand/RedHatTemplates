@@ -1,3 +1,5 @@
+$page-margin: 4em;
+
 html{
   font-family:"Overpass"; color:#fff;
 	background:#eee;
@@ -160,3 +162,32 @@ section.back-gray{
 .bg-back-red-gray,
 .back-cover-bg-red
 {visibility:hidden;}
+
+.corner-logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 66.667%;
+  max-height: 100vh;
+
+  img.triangle {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%
+  }
+
+  img.logo {
+    position: absolute;
+    right: $page-margin / 4;
+    bottom: $page-margin / 4;
+    margin: 0;
+    height: auto;
+    width: 40%;
+  }
+}
+
+#map .event-marker-icon-current {
+  width: 60% !important;
+}
