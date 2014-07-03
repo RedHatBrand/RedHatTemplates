@@ -77,14 +77,6 @@ h2 {
 
 }
 
-.content-half {
-  position: relative;
-}
-
-#text-container {
-  flex: 1 1 66.667%;
-}
-
 .events-list {
   width: 100%;
 }
@@ -130,7 +122,7 @@ h2 {
     display:inline-block;
     height:inherit;
     list-style-type:none;
-    height:4em;
+    vertical-align:top;
     margin:0;
     padding:0;
     text-align:center;
@@ -139,7 +131,6 @@ h2 {
       display:inline-block;
       float:left;
       width: 87%;
-			padding-left: 2%;
 			margin-bottom: 5%;
 			border-bottom-color: white;
 			border-bottom-style: solid;
@@ -156,10 +147,11 @@ h2 {
   	}
 
     li.sponsor-image {
-		padding: 0 2%;
-		display: inline;
-		float: left;
-		width: 11%;
+      padding-right: 6%;
+      padding-bottom: 5%;
+  		display: inline;
+  		float: left;
+  		width: 24%;
 
       	img {
       		width:100%;

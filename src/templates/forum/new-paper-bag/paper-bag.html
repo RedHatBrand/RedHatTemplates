@@ -1,9 +1,7 @@
 ---
-width: 853mm
-height: 1201mm
+width: 262mm
+height: 362mm
 ---
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,22 +11,27 @@ height: 1201mm
 
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/events-list.css?v<%= version %>' rel='stylesheet' />
-    <link href='<%= baseUrl %>/templates/forum/welcome-signage/a0/stylesheets/main.css?v<%= version %>' rel='stylesheet' />
-    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/new-paper-bag/stylesheets/main.css?v<%= version %>' rel='stylesheet' />
   </head>
 
-  <body class="theme-{{ theme }}" style="width: 853mm; height: 1201mm">
-    <main>
-      <!-- Finished, cropped area = 841mm x 1189mm. 3mm bleed -->
+  {{{ dimensions }}}
+    <main class="theme-{{ theme }}">
+      <!-- Finished, cropped area = 420mm x 594mm. 3mm bleed -->
 
       <!-- Design here -->
       <div id="background-image" style="background-image: url({{{ background-image }}})"></div>
       <div id="map"></div>
 
       <article id="content">
+
+        <div class='corner-logo'>
+          <img class="triangle" src='<%=baseUrl%>/global-assets/images/basic-shapes/triangle.svg' />
+          <img class="logo" src='<%=baseUrl%>/global-assets/images/logos/rh-logo.svg' />
+        </div>
+
         <div class="events-list">
           <a class="event clearfix" href="{{{ link }}}" target="_blank">
-            <div data-brand-tool-editable="date" class="date">
+            <div class="date">
               <img src='<%= baseUrl %>/templates/forum/assets/images/space.svg' />
               <div class="text-content">
                 <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
@@ -43,28 +46,15 @@ height: 1201mm
                 </svg>
               </div>
             </div>
-            <div data-brand-tool-editable="location" class="location clearfix">
+            <div class="location clearfix">
               <div class="text-content">{{ location }}</div>
             </div>
           </a>
         </div>
 
-        <div class="grid-container">
-          <div class="two-thirds">
-            <h1>{{{ message }}}</h1>
-          </div>
-        </div>
-
-        <div class="grid-container">
-          <div class="one-half">
-            <p>Find out more and register at</p>
-            <div class="register-box">{{ website }}</div>
-          </div>
-        </div>
-
-        <div class="sponsors">
+        <div class="sponsors clearfix">
     
-          <ul class="platinum-sponsors">
+          <ul class="platinum-sponsors clearfix">
             <li class="hdr-title-sponsor"><p>platinum sponsors</p></li>
             {{#platinum-sponsors}}
             <li class="sponsor-image"><img src="{{{ sponsor-logo }}}" alt="platinum sponsor"></li>
@@ -72,7 +62,7 @@ height: 1201mm
           </ul><!--ul.platinum-sponsors-->
           
    
-          <ul class="gold-sponsors">
+          <ul class="gold-sponsors clearfix">
             <li class="hdr-title-sponsor"><p>gold sponsors</p></li>
             {{#gold-sponsors}}
             <li class="sponsor-image"><img src="{{{ sponsor-logo }}}" alt="gold sponsor"></li>
@@ -80,7 +70,7 @@ height: 1201mm
           </ul><!--ul.gold-sponsors-->
           
           
-          <ul class="silver-sponsors">
+          <ul class="silver-sponsors clearfix">
             <li class="hdr-title-sponsor"><p>silver sponsors</p></li>
             {{#silver-sponsors}}
             <li class="sponsor-image"><img src="{{{ sponsor-logo }}}" alt="silver sponsor"></li>
@@ -89,9 +79,6 @@ height: 1201mm
 
         </div><!--.sponsors-->
 
-        <div class='corner-logo'>
-          <img src='<%=baseUrl%>/global-assets/images/logos/rh-logo.svg' />
-        </div>
 
       </article>
       <!-- /Design here -->
@@ -219,7 +206,7 @@ height: 1201mm
       </svg>'>
     </div>
     <!-- Params we may expose -->
-    <div style="display: none" id="zoom" data-zoom="13"></div>
+    <div style="display: none" id="zoom" data-zoom="12"></div>
     <!-- /Params we may expose -->
 
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>

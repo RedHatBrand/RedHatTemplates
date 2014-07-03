@@ -2,6 +2,7 @@
 @import '../../../../../global-assets/scss/fonts/overpass';
 @import '../../../../../global-assets/scss/colors/base_color_palette';
 
+
 @import '../../../assets/stylesheets/map';
 @import '../../../assets/stylesheets/colors';
 
@@ -35,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 ul { margin:0; }
 
 h1 { font-size: 3em;
-      margin-bottom:12%; }
+      margin-bottom:6%; }
 
 h2 {font-size:.8em;
     font-weight:300;}
@@ -57,14 +58,13 @@ h2 {font-size:.8em;
 }
 
 #map {
-  height: 50%;
+  height: 100%;
   box-sizing: border-box;
 }
 
 #content {
   position: absolute;
   bottom: 0;
-  height: 50%;
   left: 0;
   right: 0;
   padding: 3em 4em 4em 4em;
@@ -85,77 +85,9 @@ h2 {font-size:.8em;
   border-radius: 0.25em;
 }
 
-.sponsors {
-  width:51%;
-  display:block;
-  height:8em;
-
-  ul.main-sponsors {
-    width:44%;
-    display:block;
-    height:inherit;
-    list-style-type:none;
-    padding-right:5%;
-    padding-left:0;
-    float:left;
-
-    li.hdr-title-sponsor {
-      display:inline;
-      width:100%;}
-
-    li {
-      width:35%;
-      float:left;
-      padding-right:6%;
-
-      h2 {
-        margin-top:11%;
-        margin-bottom:6%;
-      }
-
-      img {
-        width:100%;
-      }
-
-    }
-
-  }
-
-  ul.joint-sponsors {
-
-    width:44%;
-    margin:0;
-    display:block;
-    list-style-type:none;
-    float:left;
-    padding:0;
-
-
-    li.hdr-title-sponsor {
-      display:inline;
-      width:100%;
-    }
-
-    li {
-      width:35%;
-      float:left;
-      padding-right:6%;
-
-      h2 {
-        margin-top:11%;
-        margin-bottom:6%;
-      }
-
-      img {
-        width:100%;
-      }
-    }
-  }
-}
-
 .corner-logo {
   position: absolute;
-  bottom: 0;
+  bottom: 100%;
   right: 0;
   width: 50%;
   height: 100%;
@@ -172,4 +104,55 @@ h2 {font-size:.8em;
     height: auto;
     width: 30%;
   }
+}
+
+.sponsors {
+  width:100%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:7%;
+  font-size:32pt;
+  text-align: center;
+  height:20%;
+
+  ul.platinum-sponsors, ul.gold-sponsors, ul.silver-sponsors {
+    width:32.9%;
+    display:inline-block;
+    list-style-type:none;
+    vertical-align:top;
+    margin:0;
+    padding:0;
+    text-align:center;
+
+    li.hdr-title-sponsor {
+      display:inline-block;
+      float:left;
+      width: 87%;
+      margin-bottom: 5%;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+          
+      p {
+        text-align:left;
+        vertical-align:top;
+        margin:0;
+        line-height:1.7em;
+      }
+
+    }
+
+    li.sponsor-image {
+    padding-right: 4%;
+    padding-bottom:5%;
+    display: inline;
+    float: left;
+    width: 24%;
+
+        img {
+          width:100%;
+        }
+    }
+  }
+
 }
