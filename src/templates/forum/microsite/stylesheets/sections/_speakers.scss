@@ -1,0 +1,19 @@
+a.anchor-box {
+  color: $black;
+
+  &:hover {
+    .speaker-block-content-name {
+      color: $color-primary;
+    }
+  }
+}
+
+.speaker-block {
+  margin-bottom: $line-height;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  &.speaker-block-content-name {
+    margin-bottom: 0.5em;
+  }
+}
