@@ -1,0 +1,95 @@
+---
+width: 1000mm
+height: 2000mm
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8' />
+    <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+
+    <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/events-list.css?v<%= version %>' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/basic-box/print/stylesheets/main.css?v<%= version %>' rel='stylesheet' />
+    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+  </head>
+
+  <body class="theme-{{ theme }}" style="width: {{#add}}{{width}}+6{{/add}}mm; height: {{#add}}{{height}}+6{{/add}}mm">
+
+    <main>
+      <!-- Design here -->
+      <div id="background-image" style="background-image: url({{{ background-image }}})" style="z-index:10 !important;"></div>
+      <div id="map"></div>
+
+      <article id="content">
+        <div class="events-list">
+          <a class="event clearfix" href="{{{ link }}}" target="_blank">
+            <div data-brand-tool-editable="date" class="date">
+              <img src='<%= baseUrl %>/templates/forum/assets/images/space.svg' />
+              <div class="text-content">
+                <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                  <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                    {{ date }}
+                  </text>
+                </svg>
+                <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                  <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                    {{ month }}
+                  </text>
+                </svg>
+              </div>
+            </div>
+            <div data-brand-tool-editable="location" class="location clearfix">
+              <div class="text-content">{{ location }}</div>
+            </div>
+          </a>
+        </div>
+        <div class='corner-logo'>
+          <img class="triangle" src='<%=baseUrl%>/global-assets/images/basic-shapes/triangle.svg' />
+          <img class="logo" src='<%=baseUrl%>/global-assets/images/logos/rh-logo.svg' />
+        </div>
+      </article>
+      <!-- /Design here -->
+
+      <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
+    </main>
+
+    <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
+    <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
+
+    <!-- Params we may expose -->
+    <div style="display: none" id="zoom" data-zoom="13"></div>
+    <!-- /Params we may expose -->
+
+    <div class="text-content-area" style="width:70%; position:absolute; z-index:1; margin:15% 0 0 15%; color:#fff;">
+      <div class="show-hide-p={{ show-hide-text }}">
+        {{#p-loop}}
+        <h1 style="margin:0 0 2% 0; font-size:4em; font-weight:300;">{{ p-title-text }}</h1>
+        <p style="margin:0; font-size:2em; line-height:normal;">{{ p-text }}</p>
+        {{/p-loop}}
+      </div><!--.show-hide-p-->
+
+      <div class="show-hide-list-{{ show-hide-text }}">
+        <h1 style="margin:5% 0 2% 0; font-size:4em; font-weight:300;">{{ li-title-text }}</h1>
+        <ul style="padding:0 0 0 2.5%; font-size:2em;">
+          {{#li-text-loop}}
+          <li>{{ li-text }}</li>
+          {{/li-text-loop}}
+        </ul>
+      </div><!--.show-hide-list-->
+    </div><!--.text-content-area-->
+
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3.v3.min.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script>
+    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map-vector-full-page.js?v<%= version %>'></script>
+    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-events-list.js?v<%= version %>'></script>
+  </body>
+</html>
