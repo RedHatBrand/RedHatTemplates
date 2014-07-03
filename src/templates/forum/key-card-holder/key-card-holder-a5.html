@@ -43,12 +43,18 @@ height: 168mm
     </section><!--.front-->
 
     <section class="back-gray">
+      <div class="bg-back-gray bg-back-gray-{{ colour-setup }}"></div><!--.bg-back-->
+      <div class="bg-back-red bg-back-red-{{ colour-setup }}"></div><!--.bg-back-->
       <div id="map"></div>
       <div class="back-cover-bg back-cover-bg-{{ colour-setup }}"></div>
-      <div class="rhf-logo-contain">
+      <div class="rhf-logo-contain rhf-logo-contain-gray-{{ colour-setup }}">
         <object data="<%= baseUrl %>/global-assets/images/logos/red-hat-forum-ico-black.svg" class="rhf-logo"></object>
         <h3>TEST</h3>
       </div><!--.rhf-logo-contain-->
+      <div class="rhf-logo-contain-red rhf-logo-contain-red-{{ colour-setup }}">
+        <object data="<%= baseUrl %>/global-assets/images/logos/red-hat-forum-ico.svg" class="rhf-logo"></object>
+        <h3>TEST</h3>
+      </div><!--.rhf-logo-contain-red-->
     </section><!--.back-->
 
     <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
