@@ -13,8 +13,14 @@ body{
 .content-bg-red-red{display:block !important;}
 .content-bg-red-gray{display:none !important;}
 
-#map .leaflet-tile-pane {
-  background-color: transparent;
+#map{
+  &.leaflet-container { background-color:transparent; }
+
+  path.road { stroke:#444; }
+  path.water {
+    stroke:#444;
+    fill:#444;
+  }
 }
 
 section{
@@ -23,9 +29,9 @@ section{
   .logo-area{
   	width:562.5em; margin:auto;
   	object{
-		width:562.5em; height:auto;
-		position:absolute; margin:284.375em 0 0 0;
-	}
+			width:562.5em; height:auto;
+			position:absolute; margin:284.375em 0 0 0;
+		}
   }
 	.gray-bg{
 		width:765em; height:765em;
