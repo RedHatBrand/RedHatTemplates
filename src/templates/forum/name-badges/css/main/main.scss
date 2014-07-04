@@ -3,9 +3,9 @@ html{
   overflow:hidden;
 }
 
-body, main {
-  box-sizing: border-box;
-}
+body, main { box-sizing: border-box; }
+.logo { height: 3.75em; }
+.logo img { height: 3em; }
 
 .category-red-hat {
   .bg-name { background-color:#cc0000; }
