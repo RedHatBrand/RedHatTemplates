@@ -47,6 +47,16 @@
   }
 }
 
+.lower-contrast #map {
+  path.road {
+    stroke: $color-black;
+  }
+  path.water {
+    stroke: $color-black;
+    fill: $color-black;
+  }
+}
+
 .low-contrast #map.leaflet-container { background-color: rgba($color-black, 0.85); }
 .theme-light.low-contrast #map.leaflet-container { background-color: rgba(204, 204, 204, 0.85); }
 
