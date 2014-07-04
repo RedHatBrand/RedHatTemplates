@@ -7,8 +7,14 @@ body{
 	width:24000px; height:8400px; padding:60px;
 }
 
-#map .leaflet-tile-pane {
-  background-color: transparent;
+#map{
+  &.leaflet-container { background-color:transparent; }
+
+  path.road { stroke:#444; }
+  path.water {
+    stroke:#444;
+    fill:#444;
+  }
 }
 
 contain-red-bg-red{display:block !important;}
