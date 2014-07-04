@@ -37,7 +37,20 @@
   }
 }
 
+.lower-contrast.theme-light #map {
+  path.road {
+    stroke: $color-white;
+  }
+  path.water {
+    stroke: $color-white;
+    fill: $color-white;
+  }
+}
+
 .low-contrast #map.leaflet-container { background-color: rgba($color-black, 0.85); }
 .theme-light.low-contrast #map.leaflet-container { background-color: rgba(204, 204, 204, 0.85); }
+
+.lower-contrast #map.leaflet-container { background-color: rgba($color-black, 0.95); }
+.theme-light.lower-contrast #map.leaflet-container { background-color: rgba(255, 255, 255, 0.95); }
 
 .theme-light .center-logo:before { content: url('/global-assets/images/logos/rh-logo-black.svg'); }

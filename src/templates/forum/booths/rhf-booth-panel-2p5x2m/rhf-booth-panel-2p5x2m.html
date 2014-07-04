@@ -1,10 +1,10 @@
 ---
-width: 12240px
-height: 30240px
+width: 5012mm
+height: 2012mm
 ---
 
 <!DOCTYPE html>
-<html style="width:12120px; height:30120px; padding:60px; overflow:scroll;">
+<html>
 <head>
 <meta name="charset" content="utf-8" />
 <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
@@ -19,8 +19,8 @@ NOTES:
 -->
 
 
-<body class="theme-{{ theme }}" style="width:12000px; height:30000px; padding:60px;">
-<section>
+<body class="theme-{{ theme }}" style="width: 5012mm; height: 2012mm">
+<main>
   <div class="red-bg red-bg-{{ bg-contain }}">
     <object data="<%= baseUrl %>/templates/forum/booths/rhf-booth-panel-2p5x2m/images/background/polygon-red-4.svg" class="polygon-red-4">
     </object>
@@ -94,11 +94,12 @@ NOTES:
 
   <div class="gray-bottom-bar">&nbsp;</div>
   <!--.gray-bottom-bar-->
-</section>
-<div class="crop-mark top-left">&nbsp;</div>
-<div class="crop-mark top-right">&nbsp;</div>
-<div class="crop-mark bottom-left">&nbsp;</div>
-<div class="crop-mark bottom-right">&nbsp;</div>
+
+  <div class="crop-mark top-left">&nbsp;</div>
+  <div class="crop-mark top-right">&nbsp;</div>
+  <div class="crop-mark bottom-left">&nbsp;</div>
+  <div class="crop-mark bottom-right">&nbsp;</div>
+</main>
 <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
 <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
 <script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script>
