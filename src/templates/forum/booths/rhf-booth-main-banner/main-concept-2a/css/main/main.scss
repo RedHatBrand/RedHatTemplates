@@ -7,19 +7,25 @@ body{
 	width:24000px; height:8400px; padding:60px;
 }
 
-#map .leaflet-tile-pane {
-  background-color: transparent;
+#map{
+  &.leaflet-container { background-color:transparent; }
+
+  path.road { stroke:#444; }
+  path.water {
+    stroke:#444;
+    fill:#444;
+  }
 }
 
-object.flip-txt-my-my{display:block;}
-object.flip-txt-my-tyo{display:none;}
-object.flip-txt-jp-tyo-my{display:none;}
-object.flip-txt-jp-tyo-tyo{display:block;}
+object.flip-txt-my-my{ display:block; }
+object.flip-txt-my-tyo{ display:none; }
+object.flip-txt-jp-tyo-my{ display:none; }
+object.flip-txt-jp-tyo-tyo{ display:block; }
 
-.contain-red-bg-red{display:block !important;}
-.contain-red-bg-gray{display:none !important;}
-.contain-gray-bg-red{display:none !important;}
-.contain-gray-bg-gray{display:block !important;}
+.contain-red-bg-red{ display:block !important; }
+.contain-red-bg-gray{ display:none !important; }
+.contain-gray-bg-red{ display:none !important; }
+.contain-gray-bg-gray{ display:block !important; }
 
 section{
 	width:inherit; height:inherit;

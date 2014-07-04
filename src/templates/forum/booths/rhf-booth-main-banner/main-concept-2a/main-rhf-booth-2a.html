@@ -39,60 +39,43 @@ height: 8640px
   </div><!--.contain-red-bg-->
  
   <div class="contain-gray-bg contain-gray-bg-{{ contain-bg }}">
-    <object data="<%=baseUrl%>/global-assets/images/background-shapes/polygon-gray-4m.svg" class="polygon-gray-4m">
-    </object>
-    <object data="<%=baseUrl%>/global-assets/images/background-shapes/polygon-gray-3m.svg" class="polygon-gray-3m">
-    </object>
-    <object data="<%=baseUrl%>/global-assets/images/background-shapes/polygon-gray-1m.svg" class="polygon-gray-1m">
-    </object>
-    <object data="<%=baseUrl%>/global-assets/images/background-shapes/polygon-gray-5m.svg" class="polygon-gray-5m">
-    </object>
-    <object data="<%=baseUrl%>/global-assets/images/background-shapes/polygon-gray-2m.svg" class="polygon-gray-2m">
-    </object>
+    <object data="<%=baseUrl%>/global-assets/images/background-shapes/polygon-gray-4m.svg" class="polygon-gray-4m"></object>
+    <object data="<%=baseUrl%>/global-assets/images/background-shapes/polygon-gray-3m.svg" class="polygon-gray-3m"></object>
+    <object data="<%=baseUrl%>/global-assets/images/background-shapes/polygon-gray-1m.svg" class="polygon-gray-1m"></object>
+    <object data="<%=baseUrl%>/global-assets/images/background-shapes/polygon-gray-5m.svg" class="polygon-gray-5m"></object>
+    <object data="<%=baseUrl%>/global-assets/images/background-shapes/polygon-gray-2m.svg" class="polygon-gray-2m"></object>
       <div id="map"></div>
       <div class="rhf-logo-black">
-        <object data="<%=baseUrl%>/global-assets/images/logos/red-hat-forum-ico-black.svg">
-        </object>
+        <object data="<%=baseUrl%>/global-assets/images/logos/red-hat-forum-ico-black.svg"></object>
         <div class="rhf-logo-venue-black">
           <h3>{{ venue }}</h3>
         </div><!--.rhf-logo-venue-->
       </div><!--rhf-logo-black-->
       <div class="logo-area-black">
-        <object data="<%=baseUrl%>/global-assets/images/logos/rh-logo-black.svg">
-        </object>
+        <object data="<%=baseUrl%>/global-assets/images/logos/rh-logo-black.svg"></object>
       </div><!--.logo-area-black-->  
   </div><!--.contain-gray-bg-->
         
     <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
-    <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
-    <!-- Params we may expose -->
-    <div style="display: none" id="zoom" data-zoom="12"></div>
-    <!-- /Params we may expose -->
+    <div style="display: none" id="locationName" data-location-name="{{ location }}"></div><!-- Params we may expose -->
+    <div style="display: none" id="zoom" data-zoom="12"></div><!-- /Params we may expose -->
         
   <div class="bg-logo-area">
-    <object data="<%=baseUrl%>/global-assets/images/background-shapes/polygon-gray-1.svg" class="polygon-gray-1">
-    </object>
-    <object data="<%=baseUrl%>/global-assets/images/background-shapes/polygon-gray-2.svg" class="polygon-gray-2">
-    </object>
-  </div>
-  <!--.bg-logo-area-->
+    <object data="<%=baseUrl%>/global-assets/images/background-shapes/polygon-gray-1.svg" class="polygon-gray-1"></object>
+    <object data="<%=baseUrl%>/global-assets/images/background-shapes/polygon-gray-2.svg" class="polygon-gray-2"></object>
+  </div><!--.bg-logo-area-->
   
   <div class="rhf-country">
     <div class="contain-country">
       <div class="contain-date">
-        <object data="<%=baseUrl%>/global-assets/images/background-shapes/background/flip-txt.svg" class="flip-txt">
-        </object>
+        <object data="<%=baseUrl%>/global-assets/images/background-shapes/background/flip-txt.svg" class="flip-txt"></object>
         <div class="date">
           <h3 class="dd">{{ day }}</h3>
           <h3 class="mm">{{ month }}</h3>
-        </div>
-        <!--.date-->
-      </div>
-      <!--.contain-date-->
-      <object data="<%=baseUrl%>/templates/forum/assets/images/flip-texts/flip-txt-full-my.svg" class="flip-txt-full-my flip-txt-my-{{ country }}">
-      </object>
-      <object data="<%=baseUrl%>/templates/forum/assets/images/flip-texts/flip-txt-full-jp-tyo.svg" class="flip-txt-full-jp-tyo flip-txt-jp-tyo-{{ country }}">
-      </object>
+        </div><!--.date-->
+      </div><!--.contain-date-->
+      <object data="<%=baseUrl%>/templates/forum/assets/images/flip-texts/flip-txt-full-my.svg" class="flip-txt-full-my flip-txt-my-{{ country }}"></object>
+      <object data="<%=baseUrl%>/templates/forum/assets/images/flip-texts/flip-txt-full-jp-tyo.svg" class="flip-txt-full-jp-tyo flip-txt-jp-tyo-{{ country }}"></object>
       <!--h1 class="country">LATIN AMERICA</h1-->
     </div><!--.contain-country-->
   </div><!--.rhf-country-->
