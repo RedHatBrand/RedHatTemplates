@@ -1,0 +1,51 @@
+@import '../../../global-assets/scss/fonts/overpass';
+@import '../../../global-assets/scss/colors/base_color_palette';
+
+$gen-spacing-4em: 4em;
+$gen-spacing-2em: 2em;
+
+body {
+  margin: 0;
+  font-family: 'Overpass'; font-size: 2vw; font-weight: 400; line-height: 1.5em;
+	color: #fff;
+	background: #890000;
+	overflow: hidden;
+	main {
+		padding: 0;
+		.red-bg {
+      width: inherit; height: inherit;
+			position: absolute; z-index: -1; top: 0; left: 0;
+			overflow: hidden;
+			object.polygon-red-1 {
+				width: 250%;
+				position: absolute; margin: -50% 0 0 -125%;
+				opacity: 0.45;
+			}
+			object.polygon-red-2 {
+				width: 150%;
+				position: absolute; margin: -50% 0 0 -86%;
+				opacity: 0.20;
+			}
+			object.polygon-red-4 {
+				width: 250%;
+				position: absolute; margin: -50% 0 0 -25%;
+				opacity: 0.35;
+			}
+		}
+		section.hdr-branding {
+			object {
+				width: 50%;
+				margin: $gen-spacing-4em 25% 0 $gen-spacing-4em;
+			}
+		}
+		section.testimonial {
+			margin: 0 $gen-spacing-4em;
+			.grp {
+				h3, p.sub-info {
+					margin: 0;
+				}
+				p.sub-info { font-size:1.7vw; opacity:0.75; }
+			}
+		}
+	}
+}

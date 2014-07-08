@@ -1,0 +1,42 @@
+---
+width: 210mm
+height: 297mm
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+  </head>
+
+  <body sclass="rh-theme-{{ category }}"
+  height="{{#add}}{{height}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
+  width="{{#add}}{{width}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
+  style="padding: {{bleed}}mm">
+  	<main>
+      <div class="red-bg" style="width: {{ width }}; height: {{ height }};">
+      	<object data="../../global-assets/images/background-shapes/polygon-red-1.svg" class="polygon-red-1"></object>
+      	<object data="../../global-assets/images/background-shapes/polygon-red-4.svg" class="polygon-red-4"></object>
+      	<object data="../../global-assets/images/background-shapes/polygon-red-2.svg" class="polygon-red-2"></object>
+      </div><!--.red-bg-->
+    	<section class="hdr-branding">
+      	<object data="../../global-assets/images/logos/rh-logo.svg"></object>
+      </section><!--.hdr-branding-->
+    	<section class="testimonial">
+      	<h1>TESTIMONIALS</h1>
+        <div class="grp">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque nec justo non dignissim. Quisque ac condimentum nisi. Nulla a mattis elit. Integer quis fermentum nisi. Suspendisse at placerat nisi, vitae pellentesque ipsum. Sed ut massa eros. Pellentesque sagittis quam porttitor placerat mattis. Ut vel porta augue. Mauris non posuere risus. Etiam adipiscing non risus et condimentum. Aliquam viverra nisi lacus, non elementum nunc hendrerit id. Morbi lacinia ipsum felis. Sed rutrum aliquet massa id accumsan. Pellentesque nec posuere erat, vel laoreet sem. Duis mollis odio aliquam dui porta blandit. Etiam in scelerisque massa.</p>
+          <h3>John Smith</h3>
+          <p class="sub-info">Sub info on John Smith</p>
+        </div><!--.grp-->
+        <div class="grp">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque nec justo non dignissim. Quisque ac condimentum nisi. Nulla a mattis elit. Integer quis fermentum nisi. Suspendisse at placerat nisi, vitae pellentesque ipsum. Sed ut massa eros. Pellentesque sagittis quam porttitor placerat mattis. Ut vel porta augue. Mauris non posuere risus. Etiam adipiscing non risus et condimentum. Aliquam viverra nisi lacus, non elementum nunc hendrerit id. Morbi lacinia ipsum felis. Sed rutrum aliquet massa id accumsan. Pellentesque nec posuere erat, vel laoreet sem. Duis mollis odio aliquam dui porta blandit. Etiam in scelerisque massa.</p>
+          <h3>John Smith</h3>
+          <p class="sub-info">Sub info on John Smith</p>
+        </div><!--.grp-->
+      </section><!--.testimonial-->
+    </main>
+  </body>
+</html>
