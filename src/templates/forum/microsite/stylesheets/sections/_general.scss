@@ -129,3 +129,13 @@ button.full-width {
 .light-grey-background {
   background-color: rgb(230,230,230);
 }
+
+
+.section-layout-two-columns {
+  column-count: 2;
+  column-gap: $line-height * 1.5;
+
+  @media all and (max-width: $breakpoint-small) {
+    column-count: 1;
+  }
+}

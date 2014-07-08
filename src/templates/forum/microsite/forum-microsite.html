@@ -74,6 +74,9 @@ height: 100vh
             <li><a class='menu-link' href='#agenda'>Agenda</a></li>
             <li><a class='menu-link' href='#speakers'>Speakers</a></li>
             <li><a class='menu-link' href='#sponsors'>Sponsors</a></li>
+            {{#extra-section-title}}
+            <li><a class='menu-link' href='#extra'>{{ extra-section-title }}</a></li>
+            {{/extra-section-title}}
             <li><a class='register-link' href='{{{ register-link }}}'><i class="icon-arrow-right"></i>Register</a></li>
           </ul>
         </div>
@@ -226,6 +229,17 @@ height: 100vh
           {{/sponsors}}
         </div>
       </section>
+
+      {{#extra-section-title}}
+      <section id="extra">
+        <div class='container'>
+          <h1>{{ extra-section-title }}</h1>
+          <div class="section-layout-{{ extra-section-format }}">
+            {{{ extra-section-content }}}
+          </div>
+        </div>
+      </section>
+      {{/extra-section-title}}
 
       <footer class='footer'>
         <section class='secondary'>
