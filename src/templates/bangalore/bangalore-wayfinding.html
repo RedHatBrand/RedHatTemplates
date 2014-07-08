@@ -1,0 +1,85 @@
+---
+width: 606mm
+height: 853mm
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8' />
+    <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/bangalore/stylesheets/main.css?v<%= version %>' rel='stylesheet' />
+    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+    <style type="text/css">
+      main{
+        background-image:
+          url('{{{ background-image }}}'),
+          url('<%= baseUrl %>/templates/bangalore/images/arrow-{{ direction }}.svg');
+        background-blend-mode:multiply;
+        background-repeat: no-repeat;
+      }
+
+      main.direction-left {
+        background-size: cover, 50% 100%;
+        background-position: 50% 50%, 100% 50%;
+      }
+
+      main.direction-right {
+        background-size: cover, 50% 100%;
+        background-position: 50% 50%, 100% 50%;
+      }
+
+      main.direction-up {
+        background-size: cover, 50% 100%;
+        background-position: 50% 50%, 100% 50%;
+      }
+
+      main.direction-down {
+        background-size: cover, 50% 100%;
+        background-position: 50% 50%, 100% 50%;
+      }
+
+
+    </style>
+  </head>
+
+  {{{ dimensions }}}
+    <main class="theme-{{ theme }} direction-{{ direction }}">
+      <!-- Finished, cropped area = 420mm x 594mm. 3mm bleed -->
+
+      <!-- Design here -->
+      <div id="background-image"></div>
+
+      <article id="content">
+        <div id="text-container" class="content-half">
+          <div class="text-content">
+            <h1>{{ message }}</h1>
+          </div>
+        </div>
+
+        <div class='corner-logo'>
+          <img class="logo" src='<%=baseUrl%>/global-assets/images/logos/rh-logo.svg' />
+          <p>{{ call-to-action }}
+        </div>
+      </article>
+      <!-- /Design here -->
+
+      <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
+    </main>
+
+    <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
+
+    <!-- Params we may expose -->
+    <div style="display: none" id="zoom" data-zoom="12"></div>
+    <!-- /Params we may expose -->
+
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3.v3.min.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script>
+  </body>
+</html>
