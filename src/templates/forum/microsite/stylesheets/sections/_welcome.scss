@@ -4,6 +4,8 @@
   margin-bottom: $line-height;
   max-width: 12em;
   border-radius: 50%;
+  background-size: cover;
+  background-position: 50% 50%;
 
   @media screen and (max-width: $breakpoint-small) {
     margin: $line-height * 2 auto;
