@@ -10,28 +10,18 @@ body {
 	color: #fff;
 	background: #890000;
 	overflow: hidden;
+  #background-image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px dotted;
+  }
 	main {
 		padding: 0;
-		.red-bg {
-      width: inherit; height: inherit;
-			position: absolute; z-index: -1; top: 0; left: 0;
-			overflow: hidden;
-			object.polygon-red-1 {
-				width: 250%;
-				position: absolute; margin: -50% 0 0 -125%;
-				opacity: 0.45;
-			}
-			object.polygon-red-2 {
-				width: 150%;
-				position: absolute; margin: -50% 0 0 -86%;
-				opacity: 0.20;
-			}
-			object.polygon-red-4 {
-				width: 250%;
-				position: absolute; margin: -50% 0 0 -25%;
-				opacity: 0.35;
-			}
-		}
 		section.hdr-branding {
 			object {
 				width: 50%;
@@ -45,6 +35,7 @@ body {
 					margin: 0;
 				}
 				p.sub-info { font-size:1.7vw; opacity:0.75; }
+        object { width:40mm; height:auto; }
 			}
 		}
 	}
