@@ -1,5 +1,6 @@
 @import '../../../global-assets/scss/fonts/overpass';
 @import '../../../global-assets/scss/colors/base_color_palette';
+@import '../../../global-assets/stylesheets/general/rh-logo';
 
 $gen-spacing-4em: 4em;
 $gen-spacing-2em: 2em;
@@ -10,24 +11,17 @@ body {
 	color: #fff;
 	background: #890000;
 	overflow: hidden;
-  #background-image {
-    position: absolute;
+  .background-image {
+    position: absolute; z-index: -1;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     background-size: cover;
     background-repeat: no-repeat;
-    border: 1px dotted;
   }
 	main {
 		padding: 0;
-		section.hdr-branding {
-			object {
-				width: 50%;
-				margin: $gen-spacing-4em 25% 0 $gen-spacing-4em;
-			}
-		}
 		section.testimonial {
 			margin: 0 $gen-spacing-4em;
 			.grp {
