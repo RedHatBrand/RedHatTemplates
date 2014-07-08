@@ -15,7 +15,7 @@ height: 100vh
     <meta content='{{ meta-keywords }}' name='keywords'>
     <link href='//red-hat-assets.s3.amazonaws.com/assets/images/favicon.ico' rel='icon' type='image/ico'>
     <link href='http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css' media='screen' rel='stylesheet'>
-    <link href='<%= baseUrl %>/templates/forum/microsite/stylesheets/main.css?v<%= version %>' media='screen' rel='stylesheet'>
+    <link href='<%=baseUrl%>/templates/forum/microsite/stylesheets/main.css?v1404800092111' media='screen' rel='stylesheet'>
     <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
     <!--[if lt IE 9]> <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script> <![endif]-->
   </head>
@@ -33,7 +33,7 @@ height: 100vh
             <div class="events-list">
               <a class="event clearfix" href="{{{ link }}}" target="_blank">
                 <div data-brand-tool-editable="date" class="date">
-                  <img src='<%= baseUrl %>/templates/forum/assets/images/space.svg' />
+                  <img src='<%=baseUrl%>/templates/forum/assets/images/space.svg' />
                   <div class="text-content">
                     <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
                       <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
@@ -54,7 +54,7 @@ height: 100vh
             </div>
 
             <div class='registration'>
-              <a class='register-button' href='{{{ register-link }}}'>Register</a>
+              <a class='register-button' href='{{{ register-link }}}'>{{ register-prompt }}</a>
             </div>
 
             <div data-brand-tool-editable="welcome-message">
@@ -70,21 +70,21 @@ height: 100vh
       <nav class='nav-menu animated fadeInDown fixed-left-nav-only-medium-break layer-four nav-hide'>
         <div class='container'>
           <ul>
-            <li><a class='menu-link' href='#welcome'>Welcome</a></li>
-            <li><a class='menu-link' href='#agenda'>Agenda</a></li>
-            <li><a class='menu-link' href='#speakers'>Speakers</a></li>
-            <li><a class='menu-link' href='#sponsors'>Sponsors</a></li>
+            <li><a class='menu-link' href='#welcome'>{{ welcome-title }}</a></li>
+            <li><a class='menu-link' href='#agenda'>{{ agenda-title }}</a></li>
+            <li><a class='menu-link' href='#speakers'>{{ speakers-title }}</a></li>
+            <li><a class='menu-link' href='#sponsors'>{{ sponsors-title }}</a></li>
             {{#extra-section-title}}
             <li><a class='menu-link' href='#extra'>{{ extra-section-title }}</a></li>
             {{/extra-section-title}}
-            <li><a class='register-link' href='{{{ register-link }}}'><i class="icon-arrow-right"></i>Register</a></li>
+            <li><a class='register-link' href='{{{ register-link }}}'><i class="icon-arrow-right"></i>{{ register-prompt }}</a></li>
           </ul>
         </div>
       </nav>
 
       <section class='section-agenda main' id='agenda'>
         <div class='container'>
-          <h1>Agenda</h1>
+          <h1>{{ agenda-title }}</h1>
           {{#days}}
           <input class="input-total-days-{{ days.length }}" id='{{ day-name }}' name='active-day' type='radio'>
           <label class="input-total-days-{{ days.length }}" for='{{ day-name }}'>{{ day-name }}</label>
@@ -160,7 +160,7 @@ height: 100vh
 
       <section id="speakers" class='section-speakers main'>
         <div class='container'>
-          <h1>Speakers</h1>
+          <h1>{{ speakers-title }}</h1>
           <div class="grid-container">
             {{#speakers}}
             <a
@@ -170,7 +170,7 @@ height: 100vh
 
               <div class="speaker-block grid-container">
                 <div class="speaker-block-avatar-container one-third">
-                  <div class="welcome-avatar" style="background-image:url({{{ profile-photo }}})">
+                  <div class="welcome-avatar" style="background-image:url('{{{ profile-photo }}}')">
                     <img class="spacer-gif" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
                   </div>
                 </div>
@@ -191,7 +191,7 @@ height: 100vh
               <div class="modal-content">
                 <div class="grid-container">
                   <div class="one-third">
-                    <div class="welcome-avatar" style="background-image:url({{{ profile-photo }}})">
+                    <div class="welcome-avatar" style="background-image:url('{{{ profile-photo }}}')">
                       <img class="spacer-gif" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
                     </div>
                     <div class="sign-off">
@@ -214,7 +214,7 @@ height: 100vh
 
       <section id="sponsors" class='section-sponsors main'>
         <div class='container'>
-          <h1>Sponsors</h1>
+          <h1>{{ sponsors-title }}</h1>
           {{#sponsors}}
           <h3 data-brand-tool-editable="sponsors.name">{{ name }}</h3>
           <div class="grid-container">
@@ -402,18 +402,18 @@ height: 100vh
 
     <div class="modal-overlay" id="modal-overlay"></div>
 
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.fitvids.js'></script>
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.fittext.js'></script>
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.scrollspy.js'></script>
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.smooth-scroll.js'></script>
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script>
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3.v3.min.js'></script>
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script>
-    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map-vector.js?v<%= version %>'></script>
-    <script src='<%= baseUrl %>/templates/forum/microsite/javascripts/events-list.js?v<%= version %>'></script>
-    <script src='<%= baseUrl %>/templates/forum/microsite/javascripts/main.js?v<%= version %>'></script>
+    <script src='<%=baseUrl%>/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='<%=baseUrl%>/global-assets/javascripts/vendor/jquery.fitvids.js'></script>
+    <script src='<%=baseUrl%>/global-assets/javascripts/vendor/jquery.fittext.js'></script>
+    <script src='<%=baseUrl%>/global-assets/javascripts/vendor/jquery.scrollspy.js'></script>
+    <script src='<%=baseUrl%>/global-assets/javascripts/vendor/jquery.smooth-scroll.js'></script>
+    <script src='<%=baseUrl%>/global-assets/javascripts/vendor/lodash.js'></script>
+    <script src='<%=baseUrl%>/global-assets/javascripts/vendor/leaflet.js'></script>
+    <script src='<%=baseUrl%>/global-assets/javascripts/vendor/d3.v3.min.js'></script>
+    <script src='<%=baseUrl%>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
+    <script src='<%=baseUrl%>/global-assets/javascripts/vendor/d3-topojson.js'></script>
+    <script src='<%=baseUrl%>/templates/forum/assets/javascripts/print-map-vector.js?v1404800092111'></script>
+    <script src='<%=baseUrl%>/templates/forum/microsite/javascripts/events-list.js?v1404800092111'></script>
+    <script src='<%=baseUrl%>/templates/forum/microsite/javascripts/main.js?v1404800092111'></script>
   </body>
 </html>
