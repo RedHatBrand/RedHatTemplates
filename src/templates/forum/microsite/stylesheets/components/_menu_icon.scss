@@ -55,13 +55,15 @@ $menu-icon-size: $menu-icon-stroke * 7;
   }
 
   &.active {
+    background-color: $color-primary;
+
     > span {
-      background: fade($color-primary);
+      background: $white;
       box-shadow: none;
       transform: rotate(45deg);
 
       &:before {
-        background: fade($color-primary);
+        background: $white;
         top: 0;
         box-shadow: none;
         transform: rotate(90deg);

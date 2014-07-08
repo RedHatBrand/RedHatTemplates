@@ -79,8 +79,9 @@
     display: block;
     background-color: transparent;
     &.active {
-      background-color: rgba($color-primary, 0.5);
+      background-color: $color-primary;
       color: $white;
+      left: $vertical-nav-width;
     }
     &:hover {
       color: rgba($black, 0.75);
@@ -105,13 +106,11 @@
       opacity: 1;
     }
   }
+}
 
-  .menu-push-toright .nav-toggle {
-    right: $vertical-nav-width;
-
-    @media screen and (max-width: $breakpoint-small) {
-      right: 100%;
-      margin-right: -3.5em;
-    }
+@media screen and (max-width: $breakpoint-small) {
+  .nav-toggle.active {
+    right: 0;
+    left: auto;
   }
 }
