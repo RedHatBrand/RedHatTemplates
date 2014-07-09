@@ -25,12 +25,18 @@ body {
 		section.testimonial {
 			margin: 0 $gen-spacing-4em;
 			.grp {
+        margin: 0 0 $gen-spacing-2em 0;
 				h3, p.sub-info {
 					margin: 0;
 				}
 				p.sub-info { font-size:1.7vw; opacity:0.75; }
-        object { width:40mm; height:auto; }
+        object.quot-marks {
+          float: left;
+          width: 10vw; height:auto;
+          margin: 0 1vw 0 0;
+        }
 			}
+      h1 { margin: $gen-spacing-2em 0 7vw 0; font-size: 6vw; }
 		}
 	}
 }
