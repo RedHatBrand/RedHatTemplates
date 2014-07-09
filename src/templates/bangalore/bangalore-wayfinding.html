@@ -18,28 +18,6 @@ height: 853mm
         background-blend-mode:multiply;
         background-repeat: no-repeat;
       }
-
-      main.direction-left {
-        background-size: cover, 50% 100%;
-        background-position: 50% 50%, 100% 50%;
-      }
-
-      main.direction-right {
-        background-size: cover, 50% 100%;
-        background-position: 50% 50%, 100% 50%;
-      }
-
-      main.direction-up {
-        background-size: cover, 50% 100%;
-        background-position: 50% 50%, 100% 50%;
-      }
-
-      main.direction-down {
-        background-size: cover, 50% 100%;
-        background-position: 50% 50%, 100% 50%;
-      }
-
-
     </style>
   </head>
 
@@ -48,18 +26,16 @@ height: 853mm
       <!-- Finished, cropped area = 420mm x 594mm. 3mm bleed -->
 
       <!-- Design here -->
-      <div id="background-image"></div>
+      <header id="header">
+        <img class="logo" src='<%=baseUrl%>/global-assets/images/logos/rh-logo.svg' />
+        <div class="call-to-action"><span class="highlighted">{{ call-to-action }}</span></div>
+      </header>
 
       <article id="content">
-        <div id="text-container" class="content-half">
+        <div id="text-container">
           <div class="text-content">
-            <h1>{{ message }}</h1>
+            <h1><span class="highlighted">{{ message }}</span></h1>
           </div>
-        </div>
-
-        <div class='corner-logo'>
-          <img class="logo" src='<%=baseUrl%>/global-assets/images/logos/rh-logo.svg' />
-          <p>{{ call-to-action }}
         </div>
       </article>
       <!-- /Design here -->
@@ -69,17 +45,5 @@ height: 853mm
       <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
       <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
     </main>
-
-    <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
-
-    <!-- Params we may expose -->
-    <div style="display: none" id="zoom" data-zoom="12"></div>
-    <!-- /Params we may expose -->
-
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3.v3.min.js'></script>
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
-    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script>
   </body>
 </html>
