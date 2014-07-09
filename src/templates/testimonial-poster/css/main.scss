@@ -20,16 +20,38 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
   }
+  .background-image-3a {
+    position: absolute; z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-size: 245% auto, cover;
+    background-position: 60% 60%, 0 0;
+    background-repeat: no-repeat, no-repeat;
+  }
 	main {
 		padding: 0;
+    .bg-stripes {
+      position: absolute;
+      object.pattern-stripe {
+        width: 70vw;
+        position: absolute; z-index: -1; margin: -47vw 0 0 -20vw;
+      }
+      object.solid-stripe {
+        width: 270vw;
+        position: absolute; z-index: -1; margin: -155vw 0 0 -100vw;
+      }
+    }
 		section.testimonial {
 			margin: 0 $gen-spacing-4em;
 			.grp {
         margin: 0 0 $gen-spacing-2em 0;
-				h3, p.sub-info {
+				h3{
 					margin: 0;
 				}
-				p.sub-info { font-size:1.7vw; }
+        p.input { margin: 0 11vw 0 0; }
+				p.sub-info { margin: 0; font-size: 1.7vw; }
         object.quot-marks {
           float: left;
           width: 8.5vw; height:auto;
@@ -37,6 +59,7 @@ body {
         }
 			}
       h1 { margin: $gen-spacing-2em 0 7vw 0; font-size: 6vw; }
+      h1.h1-3a { margin: 14vw 0 7vw 0; }
 		}
 	}
 }

@@ -16,29 +16,23 @@ height: 297mm
   width="{{#add}}{{width}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
   style="padding: {{bleed}}mm">
   	<main>
-      <div class="background-image" style="background-color: #37424a; background-image: url({{{ background-image }}}); background-blend-mode: multiply;">
+      <div class="background-image-3a" style="background-color: #ffffff; background-image: url('<%= baseUrl %>/global-assets/images/category-shapes/solid-center-bar-corporate.svg'), url({{{ background-image }}}); background-blend-mode: multiply;">
       </div><!--.background-image-->
+      <div class="bg-stripes">
+        <object data="<%= baseUrl %>/global-assets/images/category-shapes/solid-stripe-corporate.svg" class="solid-stripe"></object>
+        <object data="<%= baseUrl %>/global-assets/images/category-shapes/pattern-stripe-corporate.svg" class="pattern-stripe"></object>
+      </div><!--.bg-stripes-->
     	<section class="testimonial">
-      	<h1>{{ poster-title }}</h1>
+      	<h1 class="h1-3a">{{ poster-title }}</h1>
         {{#loop-testimonials}}
         <div class="grp">
           <object data="<%= baseUrl %>/global-assets/images/basic-shapes/quot-marks.svg" class="quot-marks"></object>
-          <p>{{ testimonial-input }}</p>
+          <p class="input">{{ testimonial-input }}</p>
           <h3>{{ testimonial-name }}</h3>
           <p class="sub-info">{{ testimonial-sub-info }}</p>
         </div><!--.grp-->
         {{/loop-testimonials}}
       </section><!--.testimonial-->
-      <div class="logo-bottom" style="position: absolute; bottom: -1%; right: 0;">
-        <object
-          data="<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg"
-          style="height: {{#multiply}}{{ height }}*0.36{{/multiply}}mm;"
-        >
-        </object>
-      </div><!--.logo-bottom-->
-      <div class='corner-logo' style="display:none;">
-        <div class="logo"></div>
-      </div>
     </main>
   </body>
 </html>
