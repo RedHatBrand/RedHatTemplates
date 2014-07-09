@@ -26,8 +26,8 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    background-size: 245% auto, cover;
-    background-position: 60% 60%, 0 0;
+    background-size: 253vw auto, cover;
+    background-position: -75vw -80vw, 0 0;
     background-repeat: no-repeat, no-repeat;
   }
 	main {
@@ -42,6 +42,11 @@ body {
         width: 270vw;
         position: absolute; z-index: -1; margin: -155vw 0 0 -100vw;
       }
+    }
+    .rh-logo{
+      width: 20vw;
+      margin: 0 6vw 0 0; padding: 0 0 3vw 0;
+      position: absolute; bottom: 0; right: 0;
     }
 		section.testimonial {
 			margin: 0 $gen-spacing-4em;
