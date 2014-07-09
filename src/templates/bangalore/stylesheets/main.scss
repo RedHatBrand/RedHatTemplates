@@ -4,11 +4,12 @@
 
 body {
   position: relative;
-  font-size: 1.2vw;
+  font-size: 1.8vw;
   font-family: 'Overpass';
   font-weight: 400;
   line-height: 1.5em;
   background-color: white;
+  color: $color-white;
 }
 
 main {
@@ -21,6 +22,26 @@ main {
   left: 3mm; right: 3mm;
 }
 
+main.direction-left {
+  background-size: cover, 75% 100%;
+  background-position: 50% 50%, 100% 50%;
+}
+
+main.direction-right {
+  background-size: cover, 75% 100%;
+  background-position: 50% 50%, 0 50%;
+}
+
+main.direction-up {
+  background-size: cover, 150% 75%;
+  background-position: 50% 50%, 50% 100%;
+}
+
+main.direction-down {
+  background-size: cover, 150% 75%;
+  background-position: 50% 50%, 50% 0;
+}
+
 p { margin: 0.333em 0 0.75em; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -30,29 +51,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-h1 {  font-size: 3em; }
-
-#background-image {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-  -webkit-filter: unquote("grayscale(100%)");
-}
-
-#map .leaflet-tile-pane {
-  background-color: transparent;
-}
-
-#map {
-  height: 100%;
-  box-sizing: border-box;
-}
-
 #content {
   position: absolute;
   bottom: 0;
@@ -60,111 +58,70 @@ h1 {  font-size: 3em; }
   right: 0;
   padding: 4em;
   box-sizing: border-box;
-  height: 50%;
-  display: flex;
-  flex-direction: row;
 }
 
-.content-half {
-  position: relative;
+main.direction-up #content {
+  bottom: auto;
+  top: 8em;
 }
 
-#text-container {
-  flex: 1 1 66.667%;
-}
-
-#arrow-container {
-  flex: 1 1 33.333%;
-}
-
-.arrow-icon {
-  width: 80vw;
-  height: 120vw;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-
-.direction-left .arrow-icon {
-  transform: translate(0%, -78.5%);
-  margin-left: 6.25%;
-  margin-bottom: 6.25%;
-}
-.direction-right .arrow-icon {
-  transform: translate(-50%, -50%) rotate(135deg);
-  margin-left: -6.25%;
-  margin-bottom: -6.25%;
-}
-.direction-up .arrow-icon { transform: translate(-50%, -50%) rotate(45deg); }
-.direction-down .arrow-icon { transform: translate(-50%, -50%) rotate(225deg); }
-
-
-.direction-left #content {
-  flex-direction: row-reverse;
-  text-align: left;
-}
-
-.direction-right #content {
-  flex-direction: row;
-  text-align: right;
-}
-
-.direction-down #content {
-  flex-direction: column;
-  text-align: center;
-}
-
-.direction-up #content {
-  flex-direction: column-reverse;
-  text-align: center;
+span.highlighted {
+  display: inline;
+  background: rgba(0, 0, 0, 0.8);
+  padding-top: 0.5em;
+  padding-bottom: 0.4em;
+  box-shadow:
+    0.5em 0 0 rgba(0, 0, 0, 0.8),
+    -0.5em 0 0 rgba(0, 0, 0, 0.8);
 }
 
 .text-content {
-  position: absolute;
-  top: 50%;
-  left: 3em;
-  right: 3em;
-  transform: translateY(-50%);
-  overflow: hidden;
-
   h1 {
     font-size: 4em;
     margin: 0;
-    line-height: 1em;
+    line-height: 1.5em;
+
+    span.highlighted {
+      padding-top: 0.07em;
+      padding-bottom: 0.02em;
+      box-shadow:
+        0.25em 0 0 rgba(0, 0, 0, 0.8),
+        -0.25em 0 0 rgba(0, 0, 0, 0.8);
+    }
   }
 }
 
-.direction-down,
-.direction-up {
-  #text-container,
-  #arrow-container {
-    flex: 1 1 50%;
+.direction-left .text-content {
+  margin-right: 25%;
+}
+.direction-right .text-content {
+  margin-left: 25%;
+  text-align: right;
+}
+.direction-up,
+.direction-down {
+  .text-content {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-.events-list .event .letter { fill: white; }
-
-.corner-logo {
+#header {
   position: absolute;
-  bottom: 100%;
+  top: 0;
+  left: 0;
   right: 0;
-  width: 100%;
-  max-height: 100vh;
+  padding: 4em;
 
-  img.triangle {
-    display: block;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%
+  .logo {
+    width: 25%;
+    margin-right: 2em;
   }
 
-  img.logo {
-    position: absolute;
-    left: 2em;
-    bottom: 37em;
-    margin: 0;
-    height: auto;
-    width: 20%;
+  .call-to-action {
+    font-size: 1.25em;
+    float: right;
+    padding: 1.5em;
   }
 }
