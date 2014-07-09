@@ -1,6 +1,6 @@
 ---
 width: 210mm
-height: 297mm
+height: 797mm
 ---
 
 <!DOCTYPE html>
@@ -16,7 +16,14 @@ height: 297mm
   width="{{#add}}{{width}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
   style="padding: {{bleed}}mm">
   	<main>
-      <div class="background-image-3a" style="background-color: #ffffff; background-image: url('<%= baseUrl %>/global-assets/images/category-shapes/solid-center-bar-corporate.svg'), url({{{ background-image }}}); background-blend-mode: multiply;">
+      <div class="background-image-3a"
+        style="
+          background-color: #ffffff;
+          background-image: url('<%= baseUrl %>/global-assets/images/category-shapes/solid-center-bar-corporate.svg'),
+                            linear-gradient(0deg, #37424a 0%, transparent 100%),
+                            url({{{ background-image }}});
+          background-blend-mode: multiply;"
+      >
       </div><!--.background-image-->
       <div class="bg-stripes">
         <object data="<%= baseUrl %>/global-assets/images/category-shapes/solid-stripe-corporate.svg" class="solid-stripe"></object>
