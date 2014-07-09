@@ -21,7 +21,7 @@ height: 297mm
           background-image: url('<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-multiply-bottom.svg'),
                             linear-gradient(0deg, #37424a, #37424a),
                             url({{{ background-image }}});
-          background-blend-mode: multiply;
+          background-blend-mode: overlay, multiply, multiply;
           background-size: {{#multiply}}{{ height }}*0.36{{/multiply}}mm, cover, cover;"
       >
       </div><!--.background-image-->
@@ -30,7 +30,7 @@ height: 297mm
         {{#loop-testimonials}}
         <div class="grp">
           <object data="<%= baseUrl %>/global-assets/images/basic-shapes/quot-marks.svg" class="quot-marks"></object>
-          <p>{{ testimonial-input }}</p>
+          <p class="input">{{ testimonial-input }}</p>
           <h3>{{ testimonial-name }}</h3>
           <p class="sub-info">{{ testimonial-sub-info }}</p>
         </div><!--.grp-->
