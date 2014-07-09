@@ -16,7 +16,8 @@ height: 297mm
   width="{{#add}}{{width}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
   style="padding: {{bleed}}mm">
   	<main>
-      <div class="background-image" style="background-color: #37424a; background-image: url({{{ background-image }}}); background-blend-mode: multiply;"></div><!--#background-image-->
+      <div class="background-image" style="background-color: #37424a; background-image: url({{{ background-image }}}); background-blend-mode: multiply;">
+      </div><!--.background-image-->
     	<section class="testimonial">
       	<h1>TESTIMONIALS</h1>
         <div class="grp">
@@ -32,7 +33,7 @@ height: 297mm
           <p class="sub-info">Sub info on John Smith</p>
         </div><!--.grp-->
       </section><!--.testimonial-->
-      <div class="logo-bottom" style="position: absolute; bottom: -2mm; right: 0;">
+      <div class="logo-bottom" style="position: absolute; bottom: -1%; right: 0;">
         <object
           data="<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg"
           style="height: {{#multiply}}{{ height }}*0.36{{/multiply}}mm;"
