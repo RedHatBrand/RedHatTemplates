@@ -17,8 +17,8 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-position: right bottom, left, left;
+    background-repeat: no-repeat, no-repeat, no-repeat;
   }
   .background-image-3a {
     position: absolute; z-index: -1;

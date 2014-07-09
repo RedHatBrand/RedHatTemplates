@@ -16,7 +16,14 @@ height: 297mm
   width="{{#add}}{{width}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
   style="padding: {{bleed}}mm">
   	<main>
-      <div class="background-image" style="background-color: #37424a; background-image: url({{{ background-image }}}); background-blend-mode: multiply;">
+      <div class="background-image"
+        style="
+          background-image: url('<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-multiply-bottom.svg'),
+                            linear-gradient(0deg, #37424a, #37424a),
+                            url({{{ background-image }}});
+          background-blend-mode: multiply;
+          background-size: {{#multiply}}{{ height }}*0.36{{/multiply}}mm, cover, cover;"
+      >
       </div><!--.background-image-->
     	<section class="testimonial">
       	<h1>{{ poster-title }}</h1>
