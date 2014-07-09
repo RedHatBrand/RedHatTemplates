@@ -1,6 +1,6 @@
 ---
 width: 210mm
-height: 797mm
+height: 297mm
 ---
 
 <!DOCTYPE html>
@@ -29,10 +29,10 @@ height: 797mm
         </div><!--.grp-->
         {{/loop-testimonials}}
       </section><!--.testimonial-->
-      <div class="logo-bottom" style="position: absolute; bottom: -1%; right: 0;">
+      <div class="logo-bottom" style="height: {{#multiply}}{{ height }}*0.36{{/multiply}}mm; position: absolute; bottom: 0%; right: 0;">
         <object
           data="<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg"
-          style="height: {{#multiply}}{{ height }}*0.36{{/multiply}}mm;"
+          style="height: {{#multiply}}{{ height }}*0.36{{/multiply}}mm; width: auto;"
         >
         </object>
       </div><!--.logo-bottom-->
