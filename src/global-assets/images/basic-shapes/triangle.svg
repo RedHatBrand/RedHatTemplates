@@ -3,6 +3,7 @@
    xmlns="http://www.w3.org/2000/svg"
    viewBox="0 0 283.1 284.5"
    version="1.1"
+   preserveAspectRatio="xMaxYMax"
    id="svg8021">
   <path
      d="m 71.46,285.1 211.84,0 0,-211.87 L 71.46,285.1 Z"

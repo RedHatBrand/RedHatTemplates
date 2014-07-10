@@ -1,0 +1,383 @@
+@import '../../../../global-assets/scss/fonts/overpass';
+@import '../../../../global-assets/scss/colors/base_color_palette';
+
+html {
+  font-family: 'Overpass', 'Interstate', 'Helvetica', 'Arial', sans-serif;
+  font-size: 20px;
+  line-height: 1.5em;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  color: $color-white;
+  background-blend-mode:multiply;
+  background-repeat: no-repeat;
+}
+
+.rh-logo:before {
+  content: url('/global-assets/images/logos/rh-logo.svg');
+  display:block;
+  font-size: 0;
+  line-height: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  line-height: 1.25em;
+}
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.333em; }
+h3 { font-size: 1.25em; }
+
+.outer-wrapper {
+  position: absolute;
+  left: 1em;
+  right: 1em;
+  bottom: 1em;
+  top: 1em;
+}
+
+.text-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 6em;
+  display: flex;
+  align-items: center;
+  -webkit-hyphens: manual;
+}
+
+.branding {
+  position: absolute;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  height: 3em;
+  min-width: 8em;
+}
+.branding svg {
+  height: 3em;
+  min-width: 8em;
+}
+
+.call-to-action {
+  padding: 0.5em 0.75em;
+  border: thin solid;
+  text-transform: uppercase;
+  line-height: 1em;
+  display: inline-block;
+}
+
+.product-wrapper {
+  svg {
+    fill: $color-white;
+    width: 100%;
+  }
+}
+
+/* 300 X 600 The base style */
+
+.size-300-600 {
+  width: 300px;
+  height: 600px;
+}
+
+
+/* 300 X 100 */
+
+.size-300-100 {
+  width: 300px;
+  height: 100px;
+  font-size: 10px;
+  line-height: 1.5em;
+}
+
+.size-300-100 .branding {
+  top: auto;
+  bottom: -0.5em;
+  left: auto;
+  right: 0;
+  width: 10em;
+  height: 3.5em;
+}
+
+.size-300-100 .branding svg {
+  height: 3.5em;
+}
+
+.size-300-100 .call-to-action {
+  left: 0;
+  right: auto;
+}
+
+.size-300-100 .text-wrapper { display: none; }
+
+
+/* 125 X 125 */
+
+.size-125-125 {
+  width: 125px;
+  height: 125px;
+}
+
+.size-125-125 .text-wrapper,
+.size-125-125 .call-to-action,
+.size-125-125 .branding  {
+  display: none;
+}
+
+.size-125-125 .product-wrapper {
+  top: 50%;
+  bottom: auto;
+  height: auto;
+  left: 0.25em;
+  right: 0.25em;
+  transform: translateY(-50%);
+}
+
+
+/* 468 X 60 */
+
+.size-468-60 {
+  width: 468px;
+  height: 60px;
+  font-size: 10px;
+  line-height: 1.5em;
+}
+
+.size-468-60 .call-to-action {
+  display: none;
+}
+
+.size-468-60 .text-wrapper {
+  right: 11em;
+  bottom: auto;
+}
+
+.size-468-60 .branding {
+  width: 9.75em;
+  height: 3.5em;
+  right: 0;
+  left: auto;
+}
+.size-468-60 .branding svg {
+  width: 9.75em;
+  height: 3.5em;
+}
+
+/* 728 X 90 */
+
+.size-728-90 {
+  width: 728px;
+  height: 90px;
+  font-size: 15px;
+  line-height: 1.5em;
+}
+
+.size-728-90 .text-wrapper {
+  right: 9.5em;
+  bottom: 0;
+}
+
+.size-728-90 .call-to-action {
+  font-size: 0.8em;
+  line-height: 1em;
+  position: fixed;
+  right: 1em;
+  top: 1em;
+}
+
+.size-728-90 .branding {
+  width: 7em;
+  height: 2em;
+  left: auto;
+  right: 0;
+}
+.size-728-90 .branding svg {
+  width: 7em;
+  height: 2.5em;
+}
+
+
+/* 180 X 90 */
+
+.size-180-90 {
+  width: 180px;
+  height: 90px;
+  font-size: 10px;
+  line-height: 1.5em;
+}
+.size-180-90 .text-wrapper { display: none; }
+
+.size-180-90 .text { font-size: 0.8em; }
+
+.size-180-90 .call-to-action {
+  left: 0;
+  right: auto;
+  border: none;
+  padding: 0.3em 0;
+}
+
+.size-180-90 .branding {
+  width: 7em;
+  height: 2.5em;
+  left: auto;
+  right: 0;
+  bottom: 0;
+  top: auto;
+}
+
+.size-180-90 .branding svg {
+  width: 7em;
+  height: 2.5em;
+}
+
+/* 160 X 600 */
+
+.size-160-600 {
+  width: 160px;
+  height: 600px;
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+.size-160-600 .text-wrapper {
+  bottom: 8em;
+}
+
+.size-160-600 .call-to-action {
+  left: 0;
+  right: 0;
+  bottom: 0.5em;
+}
+
+/* 120 X 600 */
+
+.size-120-600 {
+  width: 120px;
+  height: 600px;
+  font-size: 10px;
+  line-height: 1.5em;
+}
+
+.size-120-600 .text-wrapper {
+  bottom: 8em;
+}
+
+.size-120-600 .branding {
+  height: 3.3em;
+}
+.size-120-600 .branding svg {
+  height: 3.3em;
+}
+
+.size-120-600 .call-to-action {
+  left: 0;
+  right: 0;
+  bottom: 0.5em;
+}
+
+
+/* 240 X 400 */
+
+.size-240-400 {
+  width: 240px;
+  height: 400px;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+.size-240-400 .text-wrapper {
+  bottom: 8em;
+  top: 1em;
+}
+
+.size-240-400 .branding {
+  height: 3em;
+}
+.size-240-400 .branding svg {
+  height: 3em;
+}
+
+.size-240-400 .call-to-action {
+  bottom: 0.5em;
+}
+
+/* 336 X 280 */
+
+.size-336-280 {
+  width: 336px;
+  height: 280px;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+.size-336-280 .text-wrapper {
+  bottom: 2em;
+  top: 1em;
+}
+
+.size-336-280 .branding {
+  height: 3.5em;
+}
+.size-336-280 .branding svg {
+  height: 3.5em;
+}
+
+.size-336-280 .call-to-action {
+  bottom: 0.5em;
+}
+
+
+/* 720 X 300 */
+
+.size-720-300 {
+  width: 720px;
+  height: 300px;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+.size-720-300 .text-wrapper {
+  bottom: 2em;
+  top: 2em;
+}
+
+.size-720-300 .branding {
+  height: 3.5em;
+}
+.size-720-300 .branding svg {
+  height: 3.5em;
+}
+
+/* 120 X 90 */
+
+.size-120-90 {
+  width: 120px;
+  height: 90px;
+  font-size: 10px;
+  line-height: 1.5em;
+}
+
+.size-120-90 .text-wrapper {
+  display: none;
+}
+
+.size-120-90 .call-to-action {
+  left:0;
+}
+.size-120-90 .branding {
+  height: auto;
+  left: 0.5em;
+  right: 0.5em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.size-120-90 .branding svg {
+  height: 3.5em;
+}
