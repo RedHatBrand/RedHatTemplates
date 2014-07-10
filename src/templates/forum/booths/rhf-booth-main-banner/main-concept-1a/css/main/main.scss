@@ -1,10 +1,10 @@
-html{
-	width:24120px; height:8520px; padding:60px;
-	font-family:"Overpass"; color:#fff;
-}
-
 body{
-	width:24000px; height:8400px; padding:60px;
+	margin: 0;
+	font-family: "Overpass"; color: #fff;
+	background: #ccc;
+	section {
+		border: 1px dotted;
+	} /*section*/
 }
 
 #map{
@@ -12,138 +12,7 @@ body{
 
   path.road { stroke:#444; }
   path.water {
-    stroke:#444;
-    fill:#444;
+    stroke: #444;
+    fill: #444;
   }
 }
-
-contain-red-bg-red{display:block !important;}
-contain-red-bg-gray{display:none !important;}
-contain-gray-bg-gray{display:block !important;}
-contain-gray-bg-red{display:none !important;}
-
-section{
-	width:inherit; height:inherit;
-	.bg-logo-area{
-		width:1515em; height:148.125em;
-		position:absolute; z-index:-1; margin:-7.5em 0 0 -7.5em;
-		background:#222;
-		overflow:hidden;
-		object.polygon-gray-1{
-			width:1770.625em; height:auto;
-			margin:-327.5em 0 0 -505.625em;
-			opacity:0.2;
-		}
-		object.polygon-gray-2{
-			width:1875em; height:auto;
-			position:absolute; margin:-51.625em 0 0 -1199.0625em;
-			opacity:0.3;
-		}
-	}
-	.contain-red-bg{
-		width:1507.5em; height:532.5em; padding:3.75em;
-		position:absolute; z-index:-1; margin:-7.5em 0 0 -7.5em;
-		background:#890000;
-		overflow:hidden;
-		object.polygon-red-1{
-			width:1770.625em; height:auto;
-			position:absolute; z-index:-1; margin:-327.5em 0 0 -495em;
-			opacity:0.3;
-		}
-		object.polygon-red-2{
-			width:1323.75em; height:auto;
-			position:absolute; z-index:-1; margin:-548.75em 0 0 81.875em;
-			opacity:0.2;
-		}
-		object.polygon-red-3{
-			width:1810.625em; height:auto;
-			position:absolute; z-index:-1; margin:-590em 0 0 -1485em;
-			opacity:0.5;
-		}
-		object.polygon-red-4{
-			width:2381.875em; height:auto;
-			position:absolute; z-index:-1; margin:-705em 0 0 223.125em;
-			opacity:0.5;
-		}
-	}
-	.contain-gray-bg{
-		width:1507.5em; height:532.5em; padding:3.75em;
-		position:absolute; z-index:-1; margin:-7.5em 0 0 -7.5em;
-		background:#eee;
-		overflow:hidden;
-		object.polygon-gray-1m{
-			width:1770.625em; height:auto;
-			position:absolute; z-index:-1; margin:-327.5em 0 0 -495em;
-			opacity:0.3;
-		}
-		object.polygon-gray-2m{
-			width:1323.75em; height:auto;
-			position:absolute; z-index:-1; margin:-548.75em 0 0 81.875em;
-			opacity:0.2;
-		}
-		object.polygon-gray-3m{
-			width:1810.625em; height:auto;
-			position:absolute; z-index:-1; margin:-590em 0 0 -1485em;
-			opacity:0.5;
-		}
-		object.polygon-gray-4m{
-			width:2381.875em; height:auto;
-			position:absolute; z-index:-1; margin:-705em 0 0 223.125em;
-			opacity:0.5;
-		}
-	}
-	.logo-area{
-		width:1500em; height:133.125em;
-		object{
-			width:270em; height:auto;
-			margin:16.25em 0 0 78.75em;
-		}
-	}
-	.rhf-logo{
-		width:355.5em; height:auto;
-		position:absolute;
-		object{
-			width:355.5em; height:auto;
-			margin:265.75em 0 0 53.925em; 
-		}
-		.rhf-logo-venue{
-			width:15.75em;
-			position:absolute; margin:-1.75em 0 0 6.65em;
-			font-size:31.0625em;
-		}
-	}
-	.rhf-country{
-		width:960em; height:141.7em;
-		position:absolute; margin:268.375em 0 0 490em;
-		border-left:10px solid #fff;
-		.contain-country{
-			width:433.75em; height:154.5em;
-			margin:-8.56em 0 0 226.88em;
-			display:table;
-			h1.country{
-				vertical-align:middle;
-				font-size:79.75em; line-height:inherit;
-				overflow:hidden;
-				display:table-cell;
-			}
-		}
-		.date{
-			width:120em; height:170.63em;
-			position:absolute; margin:-14em 0 0 47.1875em;
-			h3.mm{
-				width:4em;
-				margin:0.9em 0 0 0.46em;
-				font-size:35.85em; text-align:center;
-			}
-			h3.dd{
-				width:4em;
-				margin:0.6em 0 0 -0.04em;
-				font-size:45.0em; text-align:center;
-			}
-		}
-		object.flip-txt{
-			width:auto; height:148.5em;
-			position:absolute; margin:-3.5em 0 0 81em;
-		}
-	}
-} /*section*/
