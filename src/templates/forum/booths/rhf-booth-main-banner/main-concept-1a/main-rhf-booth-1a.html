@@ -10,20 +10,51 @@ height: 700mm
   <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
   <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
   <link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-1a/css/style.css">
+  <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
   </head>
 
-  <body class="rh-theme-{{ category }}"
+  <body class="theme-{{ theme }}"
     height="{{#add}}{{height}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
     width="{{#add}}{{width}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
     style="padding: {{bleed}}mm;"
   >
   <main>
-      <div id="x-map"></div>
+      <div id="map"></div>
+      <div class="rh-forum-logo">
+        <object data="<%= baseUrl %>/global-assets/images/logos/red-hat-forum-ico.svg" class="rh-forum-ico"></object>
+        <h3 class="venue">{{ location }}</h3>
+        <div class="venue-info">
+            <object data="<%= baseUrl %>/templates/forum/assets/images/space.svg"></object>
+            <div class="date">
+              <h3 class="dd">{{ dd }}</h3>
+              <h3 class="mm">{{ mm }}</h3>
+            </div><!--.date-->
+            <div class="venue-info-txt">
+              <h1>{{ location }}</h1>
+            </div><!--.venue-info-txt-->
+        </div><!--.venue-info-->
+      </div><!--.rh-forum-logo-->
   </main>
 
-  <div class='corner-logo'>
+  <div class='corner-logo' style="display: none;">
     <div class="logo"></div>
   </div>
+
+  <div class="rh-logo" style="display: none;">
+    <object data="<%= baseUrl %>/global-assets/images/logos/rh-logo.svg"></object>
+  </div><!--.rh-logo-->
+
+  <div class="rh-logo-triangle">
+    <object data="<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg"
+            style="height: {{#multiply}}{{ height }}*0.46{{/multiply}}mm; width: auto;">
+    </object>
+  </div><!--.rh-logo-triangle-->
+
+  <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
+  <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
+  <!-- Params we may expose -->
+  <div style="display: none" id="zoom" data-zoom="14"></div>
+  <!-- /Params we may expose -->
 
   <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
   <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
