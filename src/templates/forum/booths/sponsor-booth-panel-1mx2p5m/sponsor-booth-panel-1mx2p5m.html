@@ -1,0 +1,57 @@
+---
+width: 1000mm
+height: 2500mm
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="charset" content="utf-8" />
+<link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
+<link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
+<link rel="stylesheet" type="text/css" href="<%= baseUrl %>/templates/forum/booths/sponsor-booth-panel-1mx2p5m/css/style.css">
+<link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+</head>
+
+
+  <body class="theme-{{ theme }}"
+    height="{{#add}}{{height}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
+    width="{{#add}}{{width}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
+    style="padding: {{bleed}}mm;">
+    <main>
+      <div id="map"></div>
+      <div class="bottom-bar" style="margin: 0 0 -{{ bleed }}mm 0;"></div><!--.bottom-bar-->
+      <div class="content-contain">
+        <div class="sponsor-logo-icon display-sponsor-icon-{{ display-content }}">
+          <div class="sponsor-logo-icon-contain">
+            <object data="<%=baseUrl%>/templates/forum/booths/sponsor-booth-panel-1mx2p5m/images/logo/sponsor-logo-filler.svg">
+            </object>
+          </div><!--.sponsor-logo-icon-contain-->
+        </div><!--.sponsor-logo-icon-->
+        <div class="sponsor_info display-sponsor-info-{{ display-content }}">
+          <p class="text-1">{{ general-desc }}</p>
+          <p class="text-2">{{ benefit-statement }}</p>
+          <ul class="text-3">
+            {{#proofpoint}}
+            <li>{{ proofpoint-txt }}</li>
+            {{/proofpoint}}
+          </ul>
+        </div><!--.sponsor_info-->
+      </div><!--.content-contain-->
+    </main>
+
+    <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
+    <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
+    <!-- Params we may expose -->
+    <div style="display: none" id="zoom" data-zoom="14"></div>
+    <!-- /Params we may expose -->
+
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3.v3.min.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script>
+    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map-vector.js?v<%= version %>'></script>
+  </body>
+</html>

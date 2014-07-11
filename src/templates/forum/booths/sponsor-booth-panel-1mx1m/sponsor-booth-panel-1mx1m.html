@@ -1,0 +1,43 @@
+---
+width: 1000mm
+height: 1000mm
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="charset" content="utf-8" />
+<link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
+<link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
+<link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths/sponsor-booth-panel-1mx1m/css/style.css">
+<link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+</head>
+
+<body class="theme-{{ theme }}"
+  height="{{#add}}{{height}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
+  width="{{#add}}{{width}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
+  style="padding: {{bleed}}mm;">
+  <section>
+    <main>
+      <div id="map"></div>
+      <div class="logo-area">
+        <object data="<%=baseUrl%>/templates/forum/booths/sponsor-booth-panel-1mx1m/images/logo/sponsor-logo-filler.svg"></object>
+      </div><!--.logo-area-->
+    </main>
+  </section>
+
+  <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
+  <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
+  <!-- Params we may expose -->
+  <div style="display: none" id="zoom" data-zoom="14"></div>
+  <!-- /Params we may expose -->
+
+  <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
+  <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
+  <script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script>
+  <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3.v3.min.js'></script>
+  <script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
+  <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script>
+  <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map-vector.js?v<%= version %>'></script>
+</body>
+</html>
