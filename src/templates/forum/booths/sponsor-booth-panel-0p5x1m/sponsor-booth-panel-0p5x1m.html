@@ -1,30 +1,42 @@
 ---
-width: 6240px
-height: 12240px
+width: 500mm
+height: 1000mm
 ---
 
 <!DOCTYPE html>
-<html style="width:6120px; height:12120px; padding:60px; overflow:scroll;">
-<head>
-<meta name="charset" content="utf-8" />
-<link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths/sponsor-booth-panel-0p5x1m/css/style.css">
-</head>
+<html>
+  <head>
+    <meta name="charset" content="utf-8" />
+    <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
+    <link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths/sponsor-booth-panel-0p5x1m/css/style.css">
+    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+  </head>
 
-<body style="width:6000px; height:12000px; padding:60px;">
-<section>
-  <div class="gray-bg show-hide-gray-bg-{{ show-hide-gray-bg }}">
-    <object data="<%=baseUrl%>/global-assets/images/background-shapes/polygon-gray-4m.svg" class="polygon-gray-4"></object>
-    <object data="<%=baseUrl%>/global-assets/images/background-shapes/polygon-gray-3m.svg" class="polygon-gray-3"></object>
-    <object data="<%=baseUrl%>/global-assets/images/background-shapes/polygon-gray-2m.svg" class="polygon-gray-2"></object>
-    <object data="<%=baseUrl%>/global-assets/images/background-shapes/polygon-gray-1m.svg" class="polygon-gray-1"></object>
-  </div>
-  <!--.gray-bg-->
-  <div class="logo-area">{{ sponsor-logo }}</div>
-  <!--.logo-area--> 
-</section>
-<div class="crop-mark top-left">&nbsp;</div>
-<div class="crop-mark top-right">&nbsp;</div>
-<div class="crop-mark bottom-left">&nbsp;</div>
-<div class="crop-mark bottom-right">&nbsp;</div>
-</body>
+  <body class="theme-{{ theme }}"
+    height="{{#add}}{{height}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
+    width="{{#add}}{{width}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
+    style="padding: {{bleed}}mm;"
+  >
+    <main>
+      <div id="map"></div>
+      <div class="logo-area">
+        <object data='<%=baseUrl%>/templates/forum/booths/sponsor-booth-panel-0p5x1m/images/logo/sponsor-logo-filler.svg'></object>
+      </div><!--.logo-area-->
+    </main>
+
+    <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
+    <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
+    <!-- Params we may expose -->
+    <div style="display: none" id="zoom" data-zoom="14"></div>
+    <!-- /Params we may expose -->
+
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3.v3.min.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script>
+    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map-vector.js?v<%= version %>'></script>
+  </body>
 </html>

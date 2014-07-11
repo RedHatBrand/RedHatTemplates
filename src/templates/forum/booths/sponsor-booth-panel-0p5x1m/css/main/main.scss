@@ -1,47 +1,21 @@
-html{
-  width:6120px; height:12120px; padding:60px;
-  font-family:"Overpass"; color:#000;
+body {
+  margin: 0;
+  font-family: "Overpass"; color: #fff;
+    .logo-area {
+      width: 75%;
+      position: absolute; z-index: 1;
+      top:35%; transform: translateY(-50%);
+      left:50%; transform: translateX(-50%);
+    }
 }
 
-body{
-  width:6000px; height:12000px; padding:60px;
-  background:#fff;
-}
 
-.show-hide-gray-bg-show{display:block;}
-.show-hide-gray-bg-hide{display:none;}
+#map{
+  &.leaflet-container { background-color:#fff !important; }
 
-section{
-  width:inherit; height:inherit;
-  position:absolute;
-	.gray-bg{
-		width:104%; height:102%;
-		position:absolute; z-index:-2; margin:-7.5em 0 0 -7.5em;
-		overflow:hidden;
-		background:#e1e1e1;
-		display:block;
-		object.polygon-gray-1{
-			width:538.14%; height:auto;
-			position:absolute; z-index:-1; margin:3.06% 0 0 -182.96%;
-			opacity:0.3;
-		}
-		object.polygon-gray-2{
-			width:524.36%; height:auto;
-			position:absolute; z-index:-1; margin:-160.26% 0 0 -346.15%;
-			opacity:0.35;
-		}
-		object.polygon-gray-3{
-			width:610.9%; height:auto;
-			position:absolute; z-index:-1; margin:0 0 0 -76.34%;
-			opacity:0.7;
-		}
-		object.polygon-gray-4{
-			width:337.34%; height:auto;
-			position:absolute; z-index:-1; margin:-72.44% 0 0 -168.27%;
-			opacity:0.3;
-		}
-	}
-  .logo-area{
-  	width:91.7%; margin:auto;
+  path.road { stroke:#eee !important; }
+  path.water {
+    stroke: #eee !important;
+    fill: #eee !important;
   }
-} /*section*/
+}
