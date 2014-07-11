@@ -1,199 +1,69 @@
-html{
-	width:24120px; height:8520px; padding:60px;
-	font-family:"Overpass"; color:#fff;
-}
-
-body{
-	width:24000px; height:8400px; padding:60px;
-}
-
-#map{
-  &.leaflet-container { background-color:transparent; }
-
-  path.road { stroke:#444; }
-  path.water {
-    stroke:#444;
-    fill:#444;
-  }
-}
-
-object.flip-txt-my-my{ display:block; }
-object.flip-txt-my-tyo{ display:none; }
-object.flip-txt-jp-tyo-my{ display:none; }
-object.flip-txt-jp-tyo-tyo{ display:block; }
-
-.contain-red-bg-red{ display:block !important; }
-.contain-red-bg-gray{ display:none !important; }
-.contain-gray-bg-red{ display:none !important; }
-.contain-gray-bg-gray{ display:block !important; }
-
-section{
-	width:inherit; height:inherit;
-	.bg-logo-area{
-		width:1515em; height:148.25em;
-		position:absolute; margin:384.25em 0 0 -7.5em;
-		background:#222;
-		overflow:hidden;
-		object.polygon-gray-1{
-			width:1770.625em; height:auto;
-			position:absolute; margin:-327.5em 0 0 -849.375em;
-			opacity:0.3;
+body {
+	margin: 0;
+	font-family: "Overpass"; color: #fff;
+	main {
+		#content {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding: 0;
+			height: 30%;
+			box-sizing: border-box;
 		}
-		object.polygon-gray-2{
-			width:1875em; height:auto;
-			position:absolute; margin:-545.625em 0 0 169.375em;
-			opacity:0.3;
+		.events-list {
+			width: 70%;
+			position: absolute; top:16%; transform: translateY(-50%); left:40%; transform: translateX(-50%);
 		}
-	}
-	
-	.contain-red-bg{
-		width:1507.5em; height:532.5em; padding:3.75em;
-		position:absolute; z-index:-1; margin:-7.5em 0 0 -7.5em;
-		background:#890000;
-		overflow:hidden;
-		object.polygon-red-1{
-			width:1770.625em; height:auto;
-			position:absolute; z-index:-1; margin:-327.5em 0 0 -495em;
-			opacity:0.3;
-		}
-		object.polygon-red-2{
-			width:1323.75em; height:auto;
-			position:absolute; margin:-548.75em 0 0 81.875em;
-			opacity:0.2; display:none;
-		}
-		object.polygon-red-5{
-			width:1323.75em; height:auto;
-			position:absolute; margin:-548.75em 0 0 -18.75em;
-			opacity:0.2;
-		}
-		object.polygon-red-3{
-			width:1810.625em; height:auto;
-			position:absolute; z-index:-1; margin:-590em 0 0 -1485em;
-			opacity:0.5;
-		}
-		object.polygon-red-4{
-			width:2381.875em; height:auto;
-			position:absolute; z-index:-1; margin:-705em 0 0 223.125em;
-			opacity:0.5;
-		}
-		.logo-area{
-			width:468.75em; height:142.5em;
-			position:absolute; margin:116.875em 0 0 1016.25em;
-			border-left:0.625em solid #fff;
-			object{
-				width:270.625em; height:auto;
-				position:absolute; margin:16.25em 0 0 104.375em;
+		.events-list .event .letter { fill: white; }
+		.rh-forum-logo {
+			width: 90%; height: 40%;
+			position: absolute; top:15%; transform: translateY(-50%); left:50%; transform: translateX(-50%);
+			h3.venue {
+				position: absolute; margin: 10.3vw 0 0 1.3vw; left:50%; transform: translateX(-50%);
+				font-size: 3vw;
 			}
-		}
-		.rhf-logo{
-			width:532.5em; height:auto;
-			position:absolute; margin:86.875em 0 0 205em; 
-			object{
-				width:536.25em; height:auto;
+			object.rh-forum-ico {
+				width:43.5%;
+				position: absolute; margin: -1% 0 0 0; left:50%; transform: translateX(-50%);
 			}
-			.rhf-logo-venue{
-				width:13.75em;
-				position:absolute; margin:-1.75em 0 0 6.65em;
-				font-size:31.0625em; line-height:auto; color:#000;
-			}
-		}
-	}
-	
-	.contain-gray-bg{
-		width:1507.5em; height:532.5em; padding:3.75em;
-		position:absolute; z-index:-1; margin:-7.5em 0 0 -7.5em;
-		background:#eee;
-		overflow:hidden;
-		object.polygon-gray-1m{
-			width:1770.625em; height:auto;
-			position:absolute; z-index:-1; margin:-327.5em 0 0 -495em;
-			opacity:0.3;
-		}
-		object.polygon-gray-2m{
-			width:1323.75em; height:auto;
-			position:absolute; margin:-548.75em 0 0 81.875em;
-			opacity:0.2; display:none;
-		}
-		object.polygon-gray-5m{
-			width:1323.75em; height:auto;
-			position:absolute; margin:-548.75em 0 0 -18.75em;
-			opacity:0.2;
-		}
-		object.polygon-gray-3m{
-			width:1810.625em; height:auto;
-			position:absolute; z-index:-1; margin:-590em 0 0 -1485em;
-			opacity:0.5;
-		}
-		object.polygon-gray-4m{
-			width:2381.875em; height:auto;
-			position:absolute; z-index:-1; margin:-705em 0 0 223.125em;
-			opacity:0.2;
-		}
-		.logo-area-black{
-			width:468.75em; height:142.5em;
-			position:absolute; margin:116.875em 0 0 1016.25em;
-			border-left:0.625em solid #222;
-			object{
-				width:270.625em; height:auto;
-				position:absolute; margin:16.25em 0 0 104.375em;
-			}
-		}
-		.rhf-logo-black{
-			width:532.5em; height:auto;
-			position:absolute; margin:86.875em 0 0 205em; 
-			object{
-				width:536.25em; height:auto;
-			}
-			.rhf-logo-venue-black{
-				width:13.75em;
-				position:absolute; margin:-2.25em 0 0 6.16em;
-				font-size:37.4625em; line-height:auto; color:#000;
-			}
-		}
-	}
-	
-	.rhf-country{
-		width:1500em; height:140.625em;
-		position:absolute; margin:384.25em 0 0 0;
-		.contain-country{
-			width:1431.25em; height:140.625em;
-			margin:auto;
-			display:table;
-			/*h1.country{
-				vertical-align:middle;
-				position:absolute; margin:-1765px 0 0 3060px;
-				font-size:1260px; font-weight:300; letter-spacing:800px; line-height:inherit; 
-				overflow:hidden;
-				display:table-cell;
-			}*/
-			object.flip-txt-full-my, 
-			object.flip-txt-full-jp-tyo{
-				width:auto; height:134.5625em;
-				position:absolute; margin:-136.6875em 0 0 162.5em;
-			}
-			.contain-date{
-				width:162.5em; height:140.625em;
-				.date{
-					width:120em; height:130em;
-					position:absolute;
-					font-weight:300;
-					h3.mm{
-						width:16.25em;
-						position:absolute; margin:2.03em 0 0 -6.12em;
-						font-size:40em; text-align:center;
-				  }
-					h3.dd{
-						width:13.75em;
-						position:absolute; margin:0.18em 0 0 -5.54em;
-						font-size:60em; text-align:center;
+			.venue-info {
+				width: 47%; height: 100%;
+				position: absolute; margin: 0 0 0 47.5%; padding: 0 0 0 5%;
+				border-left: 2mm solid #fff;
+				.date {
+					width: 21.5%; height:100%;
+					position: absolute; margin: -30% 0 0 0;
+					text-align: center;
+					h3.dd {
+						position: relative; margin:20% 0 0 0;
+						font-size: 4vw;
+					}
+					h3.mm {
+						position: relative; margin:26% 0 0 0;
+						font-size: 3.7vw; text-transform:uppercase;
 					}
 				}
-				object.flip-txt{
-					float:left;
-					width:auto; height:130em;
-					margin:6.25em 0 0 34.69em;
+				object {
+					height: 100%;
+				}
+				.venue-info-txt {
+					width: 66%; height: 100%;
+					position: absolute; margin: -30% 0 0 25%;
+					h1 {
+						position: absolute; top:50%; transform: translateY(-50%);
+						font-size: 5vw; text-transform:uppercase;
+					}
 				}
 			}
 		}
+	}/*main*/
+	.rh-logo{
+		width: 15%;
+		margin: 0 4vw 0 0; padding: 0 0 3vw 0;
+		position: absolute; bottom: 0; right: 0;
+	}/*rh-logo*/
+	.rh-logo-triangle {
+		position: absolute; right: 0; bottom: 0;
 	}
-} /*section*/
+}
