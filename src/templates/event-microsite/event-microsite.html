@@ -113,7 +113,7 @@ height: 100vh
           <h1>Agenda</h1>
           {{#day}}
           <input id='{{ day-name }}' name='active-day' type='radio'>
-          <label for='{{ day-name }}'>{{ day-name }}</label>
+          <label for='{{ day-name }}'>{{ day-name }} {{ day-name-translation }}</label>
           {{/day}}
           {{#day}}
           <div class='time-table-{{ day-name }}'>
