@@ -1,6 +1,6 @@
 ---
-width: 2000mm
-height: 700mm
+width: 1000mm
+height: 350mm
 ---
 
 <!DOCTYPE html>
@@ -70,7 +70,7 @@ height: 700mm
     <object data="<%= baseUrl %>/global-assets/images/logos/rh-logo.svg"></object>
   </div><!--.rh-logo-->
 
-  <div class="rh-logo-triangle">
+  <div class="rh-logo-triangle" style="height: {{#multiply}}{{ height }}*0.66{{/multiply}}mm; width: auto;">
     <object data="<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg"
             style="height: {{#multiply}}{{ height }}*0.66{{/multiply}}mm; width: auto;">
     </object>

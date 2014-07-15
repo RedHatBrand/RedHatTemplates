@@ -1,6 +1,6 @@
 ---
-width: 2000mm
-height: 700mm
+width: 1000mm
+height: 350mm
 ---
 
 <!DOCTYPE html>
@@ -20,6 +20,7 @@ height: 700mm
   >
   <main>
       <div id="map"></div>
+      <div class="bar-x"></div><!--.bar-x-->
       <div class="rh-forum-logo">
         <object data="<%= baseUrl %>/global-assets/images/logos/red-hat-forum-ico.svg" class="rh-forum-ico"></object>
         <h3 class="venue">{{ location }}</h3>
@@ -44,7 +45,7 @@ height: 700mm
     <object data="<%= baseUrl %>/global-assets/images/logos/rh-logo.svg"></object>
   </div><!--.rh-logo-->
 
-  <div class="rh-logo-triangle">
+  <div class="rh-logo-triangle" style="height: {{#multiply}}{{ height }}*0.46{{/multiply}}mm; width: auto;">
     <object data="<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg"
             style="height: {{#multiply}}{{ height }}*0.46{{/multiply}}mm; width: auto;">
     </object>

@@ -13,9 +13,15 @@ body {
 	margin: 0;
 	font-family: "Overpass"; color: #fff;
 	main {
+		.bar-x {
+			width: 100%; height: 70%;
+			position: absolute; left: 0; top:50%; transform: translateY(-50%);
+			background: #000;
+			opacity: 0.70;
+		}
 		.rh-forum-logo {
 			width: 90%; height: 40%;
-			position: absolute; top:25%; transform: translateY(-50%); left:50%; transform: translateX(-50%);
+			position: absolute; top:30%; transform: translateY(-50%); left:50%; transform: translateX(-50%);
 			h3.venue {
 				position: absolute; margin: 10.3vw 0 0 17vw;
 				font-size: 3vw;
