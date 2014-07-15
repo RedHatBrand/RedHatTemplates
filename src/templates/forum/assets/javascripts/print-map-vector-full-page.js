@@ -12,6 +12,7 @@ function initMap (events, selectedLocation) {
   var eventlogo = $('#eventLogo').data('event-logo') || '';
   var offsetLat = parseFloat($('#offsetLatitude').data('offset-lat'));
   var offsetLon = parseFloat($('#offsetLongitude').data('offset-lon'));
+  var isPreview = !!$('#preview').get(0);
 
   var map = L.map('map', {
     scrollWheelZoom: false,
@@ -33,20 +34,22 @@ function initMap (events, selectedLocation) {
   water.addTo(map);
 
   // Highways from OpenStreetMap
-  var roadSizes = {
-    "highway": "2px",
-    "major_road": "1px",
-    "minor_road": "0.5px",
-    "rail": "0.125px",
-    "path": "0.25px"
-  };
-  var roads = new L.TileLayer.d3_topoJSON("http://tile.openstreetmap.us/vectiles-highroad/{z}/{x}/{y}.topojson", {
-    class: "road",
-    layerName: "vectile",
-    style: function(d) { return "stroke-width: " + roadSizes[d.properties.kind]; }
-  })
-  roads.addTo(map);
-
+  if (!isPreview) {
+    var roadSizes = {
+      "highway": "2px",
+      "major_road": "1px",
+      "minor_road": "0.5px",
+      "rail": "0.125px",
+      "path": "0.25px"
+    };
+    var roads = new L.TileLayer.d3_topoJSON("http://tile.openstreetmap.us/vectiles-highroad/{z}/{x}/{y}.topojson", {
+      class: "road",
+      layerName: "vectile",
+      style: function(d) { return "stroke-width: " + roadSizes[d.properties.kind]; }
+    })
+    roads.addTo(map);
+  }
+  
   var markersList = map.markersList = {};
   var markers = L.featureGroup();
 

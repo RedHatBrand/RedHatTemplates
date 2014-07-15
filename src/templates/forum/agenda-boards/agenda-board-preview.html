@@ -15,7 +15,7 @@ height: 309mm
     <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
   </head>
 
-  <body style="width: 222mm; height: 309mm">
+  <body id="preview" style="width: 222mm; height: 309mm">
     <main class="theme-{{ theme }}">
       <!-- Design here -->
       <div id="background-image" style="background-image: url({{{ background-image }}})"></div>
@@ -215,7 +215,7 @@ height: 309mm
       </svg>'>
     </div>
     <!-- Params we may expose -->
-    <div style="display: none" id="zoom" data-zoom="12"></div>
+    <div style="display: none" id="zoom" data-zoom="10"></div>
     <!-- /Params we may expose -->
 
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
@@ -225,6 +225,5 @@ height: 309mm
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script>
     <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map-vector-full-page.js?v<%= version %>'></script>
-    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-events-list.js?v<%= version %>'></script>
   </body>
 </html>
