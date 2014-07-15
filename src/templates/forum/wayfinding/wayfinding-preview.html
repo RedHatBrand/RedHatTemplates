@@ -1,6 +1,6 @@
 ---
-width: 309mm
-height: 432mm
+width: 222mm
+height: 309mm
 ---
 
 <!DOCTYPE html>
@@ -11,12 +11,13 @@ height: 432mm
 
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/events-list.css?v<%= version %>' rel='stylesheet' />
-    <link href='<%= baseUrl %>/templates/forum/registration-boards/stylesheets/main.css?v<%= version %>' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/wayfinding/stylesheets/main.css?v<%= version %>' rel='stylesheet' />
     <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
   </head>
 
-  {{{ dimensions }}}
-    <main class="theme-{{ theme }}">
+  <body style="width: 222mm; height: 309mm">
+    <main class="theme-{{ theme }} direction-{{ direction }}">
+      <!-- Finished, cropped area = 420mm x 594mm. 3mm bleed -->
 
       <!-- Design here -->
       <div id="background-image" style="background-image: url({{{ background-image }}})"></div>
@@ -25,41 +26,17 @@ height: 432mm
       <article id="content">
         <div id="text-container" class="content-half">
           <div class="text-content">
-            <h1>{{ title }}</h1>
-            <h2>{{ sub-title }}</h2>
+            <h1>{{ message }}</h1>
           </div>
         </div>
-
-
-        <div class="sponsors grid-container">
-          <div class="platinum-sponsors one-third">
-            <header class="hdr-title-sponsor"><h5>Platinum Sponsors</h5></header>
-            {{#platinum-sponsors}}
-            <div class="sponsor-image"><img src="{{{ sponsor-logo }}}"></div>
-            {{/platinum-sponsors}}
-          </div>
-
-
-          <div class="gold-sponsors one-third">
-            <header class="hdr-title-sponsor"><h5>Gold Sponsors</h5></header>
-            {{#gold-sponsors}}
-            <div class="sponsor-image"><img src="{{{ sponsor-logo }}}" alt="gold sponsor"></div>
-            {{/gold-sponsors}}
-          </div>
-          
-          <div class="silver-sponsors one-third">
-            <header class="hdr-title-sponsor"><h5>Silver Sponsors</h5></header>
-            {{#silver-sponsors}}
-            <div class="sponsor-image"><img src="{{{ sponsor-logo }}}"></div>
-            {{/silver-sponsors}}
-          </div>
-        </div><!--.sponsors-->
+        <div id="arrow-container" class="content-half">
+          <i class="arrow-icon"></i>
+        </div>
 
         <div class='corner-logo'>
           <img class="triangle" src='<%=baseUrl%>/global-assets/images/basic-shapes/triangle.svg' />
           <img class="logo" src='<%=baseUrl%>/global-assets/images/logos/rh-logo.svg' />
         </div>
-
       </article>
       <!-- /Design here -->
 
@@ -196,5 +173,6 @@ height: 432mm
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script>
     <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map-vector-full-page.js?v<%= version %>'></script>
+    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-events-list.js?v<%= version %>'></script>
   </body>
 </html>

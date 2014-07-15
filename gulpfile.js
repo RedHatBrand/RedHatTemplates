@@ -51,7 +51,6 @@ function tree() {
           var name = possibleSiblingPath.pop();
 
           if ((file !== possibleSibling) &&
-              (name !== '.DS_Store') &&
               _.isEqual(path, possibleSiblingPath)) {
 
             siblings.push(files[possibleSibling]);
@@ -84,13 +83,13 @@ gulp.task('smith', function () {
   var defered = q.defer();
 
   MetalSmith(__dirname)
+    .use(ignore(['**/_*.scss', '**/.**.**.swp', '**/.DS*']))
     .use(previewIndexes())
     .use(url())
     .use(tree())
     .use(collection({
       templates: 'templates/**/index.html'
     }))
-    .use(ignore('**/_*.scss'))
     .use(sass({
       outputStyle: "expanded"
     }))

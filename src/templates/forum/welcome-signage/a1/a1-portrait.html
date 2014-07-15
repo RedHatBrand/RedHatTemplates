@@ -11,7 +11,7 @@ height: 853mm
 
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/events-list.css?v<%= version %>' rel='stylesheet' />
-    <link href='<%= baseUrl %>/templates/forum/welcome-signage/a1/stylesheets/main.css?v<%= version %>' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/welcome-signage/stylesheets/main.css?v<%= version %>' rel='stylesheet' />
     <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
   </head>
 
@@ -60,32 +60,29 @@ height: 853mm
           </div>
         </div>
 
-        <div class="sponsors">
-    
-          <ul class="platinum-sponsors">
-            <li class="hdr-title-sponsor"><p>platinum sponsors</p></li>
+        <div class="sponsors grid-container">
+          <div class="platinum-sponsors one-third">
+            <header class="hdr-title-sponsor"><h5>Platinum Sponsors</h5></header>
             {{#platinum-sponsors}}
-            <li class="sponsor-image"><img src="{{{ sponsor-logo }}}" alt="platinum sponsor"></li>
+            <div class="sponsor-image"><img src="{{{ sponsor-logo }}}"></div>
             {{/platinum-sponsors}}
-          </ul><!--ul.platinum-sponsors-->
-          
-   
-          <ul class="gold-sponsors">
-            <li class="hdr-title-sponsor"><p>gold sponsors</p></li>
-            {{#gold-sponsors}}
-            <li class="sponsor-image"><img src="{{{ sponsor-logo }}}" alt="gold sponsor"></li>
-            {{/gold-sponsors}}
-          </ul><!--ul.gold-sponsors-->
-          
-          
-          <ul class="silver-sponsors">
-            <li class="hdr-title-sponsor"><p>silver sponsors</p></li>
-            {{#silver-sponsors}}
-            <li class="sponsor-image"><img src="{{{ sponsor-logo }}}" alt="silver sponsor"></li>
-            {{/silver-sponsors}}
-          </ul><!--ul.silver-sponsors-->
+          </div>
 
-        </div><!--.sponsors-->
+
+          <div class="gold-sponsors one-third">
+            <header class="hdr-title-sponsor"><h5>Gold Sponsors</h5></header>
+            {{#gold-sponsors}}
+            <div class="sponsor-image"><img src="{{{ sponsor-logo }}}" alt="gold sponsor"></div>
+            {{/gold-sponsors}}
+          </div>
+          
+          <div class="silver-sponsors one-third">
+            <header class="hdr-title-sponsor"><h5>Silver Sponsors</h5></header>
+            {{#silver-sponsors}}
+            <div class="sponsor-image"><img src="{{{ sponsor-logo }}}"></div>
+            {{/silver-sponsors}}
+          </div>
+        </div><!--.sponsors--> 
 
         <div class='corner-logo'>
           <img src='<%=baseUrl%>/global-assets/images/logos/rh-logo.svg' />

@@ -1,6 +1,6 @@
 ---
-width: 309mm
-height: 432mm
+width: 262mm
+height: 512mm
 ---
 
 <!DOCTYPE html>
@@ -11,55 +11,48 @@ height: 432mm
 
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/events-list.css?v<%= version %>' rel='stylesheet' />
-    <link href='<%= baseUrl %>/templates/forum/registration-boards/stylesheets/main.css?v<%= version %>' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/basic-box/print/stylesheets/main.css?v<%= version %>' rel='stylesheet' />
     <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+
+    <style type="text/css" media="all">
+       main { overflow: hidden }
+    </style>
   </head>
 
-  {{{ dimensions }}}
-    <main class="theme-{{ theme }}">
-
+  <body class="theme-{{ theme }}" 
+  style="width: {{#add}}{{#divide}}{{width}}/4{{/divide}}+12{{/add}}mm; height: {{#add}}{{#divide}}{{height}}/4{{/divide}}+12{{/add}}mm">
+    <main>
       <!-- Design here -->
       <div id="background-image" style="background-image: url({{{ background-image }}})"></div>
       <div id="map"></div>
 
       <article id="content">
-        <div id="text-container" class="content-half">
-          <div class="text-content">
-            <h1>{{ title }}</h1>
-            <h2>{{ sub-title }}</h2>
-          </div>
+        <div class="events-list">
+          <a class="event clearfix" href="{{{ link }}}" target="_blank">
+            <div data-brand-tool-editable="date" class="date">
+              <img src='<%= baseUrl %>/templates/forum/assets/images/space.svg' />
+              <div class="text-content">
+                <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                  <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                    {{ date }}
+                  </text>
+                </svg>
+                <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                  <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                    {{ month }}
+                  </text>
+                </svg>
+              </div>
+            </div>
+            <div data-brand-tool-editable="location" class="location clearfix">
+              <div class="text-content">{{ location }}</div>
+            </div>
+          </a>
         </div>
-
-
-        <div class="sponsors grid-container">
-          <div class="platinum-sponsors one-third">
-            <header class="hdr-title-sponsor"><h5>Platinum Sponsors</h5></header>
-            {{#platinum-sponsors}}
-            <div class="sponsor-image"><img src="{{{ sponsor-logo }}}"></div>
-            {{/platinum-sponsors}}
-          </div>
-
-
-          <div class="gold-sponsors one-third">
-            <header class="hdr-title-sponsor"><h5>Gold Sponsors</h5></header>
-            {{#gold-sponsors}}
-            <div class="sponsor-image"><img src="{{{ sponsor-logo }}}" alt="gold sponsor"></div>
-            {{/gold-sponsors}}
-          </div>
-          
-          <div class="silver-sponsors one-third">
-            <header class="hdr-title-sponsor"><h5>Silver Sponsors</h5></header>
-            {{#silver-sponsors}}
-            <div class="sponsor-image"><img src="{{{ sponsor-logo }}}"></div>
-            {{/silver-sponsors}}
-          </div>
-        </div><!--.sponsors-->
-
         <div class='corner-logo'>
           <img class="triangle" src='<%=baseUrl%>/global-assets/images/basic-shapes/triangle.svg' />
           <img class="logo" src='<%=baseUrl%>/global-assets/images/logos/rh-logo.svg' />
         </div>
-
       </article>
       <!-- /Design here -->
 
@@ -186,7 +179,7 @@ height: 432mm
       </svg>'>
     </div>
     <!-- Params we may expose -->
-    <div style="display: none" id="zoom" data-zoom="12"></div>
+    <div style="display: none" id="zoom" data-zoom="13"></div>
     <!-- /Params we may expose -->
 
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
@@ -196,5 +189,6 @@ height: 432mm
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script>
     <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map-vector-full-page.js?v<%= version %>'></script>
+    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-events-list.js?v<%= version %>'></script>
   </body>
 </html>
