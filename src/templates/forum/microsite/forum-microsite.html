@@ -87,11 +87,11 @@ height: 100vh
           <h1>{{ agenda-title }}</h1>
           {{#days}}
           <input class="input-total-days-{{ days.length }}" id='{{ day-name }}' name='active-day' type='radio'>
-          <label class="input-total-days-{{ days.length }}" for='{{ day-name }}'>{{ day-name }}</label>
+          <label class="input-total-days-{{ days.length }}" for='{{ day-name }}'>{{ day-name-translation }} {{ day-name }}</label>
           {{/days}}
           {{#days}}
           <div data-brand-tool-editable="days.times" class='time-table-{{ day-name }}'>
-            <h3>{{ date }}</h3>
+            <h3>{{ date }} {{ day-name-translation }} {{ day-name }}</h3>
             <table class="calendar">
               <tr class="headings">
                 <th class="time">Timing</th>
