@@ -1,23 +1,12 @@
-
-/*#map{
-	&.leaflet-container { background-color:transparent; }
-
-	path.road { stroke:#444; }
-	path.water {
-		stroke: #444;
-		fill: #444;
-	}
-}*/
-
 body {
 	margin: 0;
 	font-family: "Overpass"; color: #fff;
 	main {
-		.bar-x {
+		#background-image {
 			width: 100%; height: 70%;
 			position: absolute; left: 0; top:50%; transform: translateY(-50%);
-			background: #000;
-			opacity: 0.70;
+			background-size: cover;
+			background: rgba(0, 0, 0, 0.85);
 		}
 		.rh-forum-logo {
 			width: 90%; height: 40%;
