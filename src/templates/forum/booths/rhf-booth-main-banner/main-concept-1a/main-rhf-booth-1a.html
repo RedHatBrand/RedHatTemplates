@@ -1,6 +1,6 @@
 ---
-width: 1000mm
-height: 350mm
+width: 1012mm
+height: 362mm
 ---
 
 <!DOCTYPE html>
@@ -8,17 +8,15 @@ height: 350mm
   <head>
   <meta charset="utf-8" />
   <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+
   <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
   <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
   <link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-1a/css/style.css">
   <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
   </head>
 
-  <body class="theme-{{ theme }}"
-    height="{{#add}}{{height}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
-    width="{{#add}}{{width}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
-  >
-    <main style="height: {{ height }}mm;">
+  <body class="theme-{{ theme }}" style="height: {{ height }}mm; width: {{ width }}mm; ">
+    <main>
         <div id="map"></div>
         <div id="background-image" style="background-image: url({{{ background-image }}})"></div><!--.bar-x-->
         <div class="rh-forum-logo">
@@ -35,6 +33,10 @@ height: 350mm
               </div><!--.venue-info-txt-->
           </div><!--.venue-info-->
         </div><!--.rh-forum-logo-->
+      <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
     </main>
 
     <div class='corner-logo' style="display: none;">
@@ -47,7 +49,7 @@ height: 350mm
 
     <div class="rh-logo-triangle" style="height: {{#multiply}}{{ height }}*0.46{{/multiply}}mm; width: auto;">
       <object data="<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg"
-              style="height: {{#multiply}}{{ height }}*0.46{{/multiply}}mm; width: auto;">
+              style="height: {{#multiply}}{{ height }}*0.46{{/multiply}}mm; width: auto;>
       </object>
     </div><!--.rh-logo-triangle-->
 
@@ -56,8 +58,6 @@ height: 350mm
     <!-- Params we may expose -->
     <div style="display: none" id="zoom" data-zoom="14"></div>
     <!-- /Params we may expose -->
-
-    <!--div class="crop-mark top-left"></div-->
 
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
