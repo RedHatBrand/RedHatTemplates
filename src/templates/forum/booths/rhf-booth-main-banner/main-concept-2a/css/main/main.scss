@@ -2,6 +2,9 @@ body {
 	margin: 0;
 	font-family: "Overpass"; color: #fff;
 	main {
+		position: absolute;
+		top: 3mm; bottom: 3mm;
+		left: 3mm; right: 3mm;
 		#content {
 			position: absolute;
 			bottom: 0;
@@ -20,41 +23,12 @@ body {
 			width: 90%; height: 40%;
 			position: absolute; top:15%; transform: translateY(-50%); left:50%; transform: translateX(-50%);
 			h3.venue {
-				position: absolute; margin: 10.3vw 0 0 1.3vw; left:50%; transform: translateX(-50%);
-				font-size: 3vw;
+				position: absolute; margin: 10.8vw 0 0 0.8vw; left:50%; transform: translateX(-50%);
+				font-size: 3.1vw;
 			}
 			object.rh-forum-ico {
-				width:43.5%;
-				position: absolute; margin: -1% 0 0 0; left:50%; transform: translateX(-50%);
-			}
-			.venue-info {
-				width: 47%; height: 100%;
-				position: absolute; margin: 0 0 0 47.5%; padding: 0 0 0 5%;
-				border-left: 2mm solid #fff;
-				.date {
-					width: 21.5%; height:100%;
-					position: absolute; margin: -30% 0 0 0;
-					text-align: center;
-					h3.dd {
-						position: relative; margin:20% 0 0 0;
-						font-size: 4vw;
-					}
-					h3.mm {
-						position: relative; margin:26% 0 0 0;
-						font-size: 3.7vw; text-transform:uppercase;
-					}
-				}
-				object {
-					height: 100%;
-				}
-				.venue-info-txt {
-					width: 66%; height: 100%;
-					position: absolute; margin: -30% 0 0 25%;
-					h1 {
-						position: absolute; top:50%; transform: translateY(-50%);
-						font-size: 5vw; text-transform:uppercase;
-					}
-				}
+				width:50%;
+				position: absolute; margin: -2% 0 0 0; left:50%; transform: translateX(-50%);
 			}
 		}
 	}/*main*/
@@ -64,6 +38,6 @@ body {
 		position: absolute; bottom: 0; right: 0;
 	}/*rh-logo*/
 	.rh-logo-triangle {
-		position: absolute; right: 0; bottom: 0;
+		position: absolute; right: 3mm; bottom: 3mm;
 	}
 }

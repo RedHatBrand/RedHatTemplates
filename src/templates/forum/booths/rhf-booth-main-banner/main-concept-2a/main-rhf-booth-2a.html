@@ -1,12 +1,13 @@
 ---
-width: 1000mm
-height: 350mm
+width: 1012mm
+height: 362mm
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
   <meta charset="utf-8" />
+  <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
   <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
   <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/events-list.css?v<%= version %>' rel='stylesheet' />
   <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
@@ -14,11 +15,7 @@ height: 350mm
   <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
   </head>
 
-  <body class="theme-{{ theme }}"
-    height="{{#add}}{{height}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
-    width="{{#add}}{{width}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
-    style="padding: {{bleed}}mm;"
-  >
+  <body class="theme-{{ theme }}" style="width: {{ width }}mm; height: {{ height }}mm;">
   <main>
       <div id="map"></div>
       <div class="rh-forum-logo">
@@ -60,6 +57,10 @@ height: 350mm
         </a>
       </div>
     </article>
+    <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
+    <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
+    <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
+    <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
   </main>
 
   <div class='corner-logo' style="display: none;">
