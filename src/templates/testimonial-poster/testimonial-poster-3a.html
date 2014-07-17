@@ -1,20 +1,18 @@
 ---
-width: 210mm
-height: 297mm
+width: 222mm
+height: 309mm
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
     <link href="<%= baseUrl %>/templates/testimonial-poster/css/main.css?v<%= version %>" rel="stylesheet" />
     <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
   </head>
 
-  <body sclass="rh-theme-{{ category }}"
-  height="{{#add}}{{height}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
-  width="{{#add}}{{width}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
-  style="padding: {{bleed}}mm">
+  <body sclass="rh-theme-{{ category }}" style="width: {{ width }}mm; height: {{ height }}mm;">
   	<main>
       <div class="background-image-3a"
         style="
@@ -43,6 +41,10 @@ height: 297mm
       <div class="rh-logo">
         <object data="<%= baseUrl %>/global-assets/images/logos/rh-logo.svg"></object>
       </div><!--.rh-logo-->
+      <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
     </main>
   </body>
 </html>

@@ -9,7 +9,7 @@ body {
   margin: 0;
   font-family: 'Overpass'; font-size: 2vw; font-weight: 400; line-height: 1.5em;
 	color: #fff;
-	background: #890000;
+	background: #fff;
 	overflow: hidden;
   .background-image {
     position: absolute; z-index: -1;
@@ -26,21 +26,24 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    background-size: 253vw auto, cover, cover;
+    background-size: 248vw auto, cover, cover;
     background-position: -105vw -49vw, 0 0, 0 0;
     background-repeat: no-repeat, no-repeat, no-repeat;
   }
 	main {
 		padding: 0;
+    position: absolute;
+    top: 3mm; bottom: 3mm;
+    left: 3mm; right: 3mm;
     .bg-stripes {
       position: absolute;
       object.pattern-stripe {
         width: 70vw;
-        position: absolute; z-index: -1; margin: -47vw 0 0 -20vw;
+        position: absolute; z-index: -1; margin: -32vw 0 0 -20vw;
       }
       object.solid-stripe {
         width: 270vw;
-        position: absolute; z-index: -1; margin: -155vw 0 0 -100vw;
+        position: absolute; z-index: -1; margin: -140vw 0 0 -100vw;
       }
     }
     .rh-logo{
