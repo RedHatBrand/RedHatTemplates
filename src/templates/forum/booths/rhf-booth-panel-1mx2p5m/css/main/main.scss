@@ -10,6 +10,9 @@ body {
   margin: 0;
   font-family: "Overpass"; color: #fff;
   main {
+    position: absolute;
+    top: 3mm; bottom: 3mm;
+    left: 3mm; right: 3mm;
     .bottom-bar {
       width: 100%; height: 10%;
       position: absolute; left: 0; bottom: 0;

@@ -1,26 +1,24 @@
 ---
-width: 500mm
-height: 1250mm
+width: 512mm
+height: 1262mm
 ---
 
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="charset" content="utf-8" />
-<link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
-<link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
-<link rel="stylesheet" type="text/css" href="<%= baseUrl %>/templates/forum/booths/rhf-booth-panel-1mx2p5m/css/style.css">
-<link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
-</head>
+  <head>
+  <meta name="charset" content="utf-8" />
+  <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+  <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
+  <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
+  <link rel="stylesheet" type="text/css" href="<%= baseUrl %>/templates/forum/booths/rhf-booth-panel-1mx2p5m/css/style.css">
+  <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+  </head>
 
 
-  <body class="theme-{{ theme }}"
-    height="{{#add}}{{height}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
-    width="{{#add}}{{width}}+{{#multiply}}{{bleed}}*2{{/multiply}}{{/add}}mm"
-    style="padding: {{bleed}}mm;">
+  <body class="theme-{{ theme }}" style="wdith: {{ width }}mm; height: {{ height }}mm;">
     <main>
       <div id="map"></div>
-      <div class="bottom-bar" style="margin: 0 0 -{{ bleed }}mm 0;"></div><!--.bottom-bar-->
+      <div class="bottom-bar"></div><!--.bottom-bar-->
       <div class="content-contain">
         <div class="rhf-logo-icon display-rfh-icon-{{ display-content }}">
           <div class="rhf-logo-icon-contain">
@@ -39,6 +37,10 @@ height: 1250mm
           </ul>
         </div><!--.rhf_info-->
       </div><!--.content-contain-->
+      <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
     </main>
 
     <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
