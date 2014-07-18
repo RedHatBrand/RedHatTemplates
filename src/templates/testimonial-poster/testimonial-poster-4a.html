@@ -20,7 +20,7 @@ height: 309mm
                             linear-gradient(0deg, #37424a, #37424a),
                             url({{{ background-image }}});
           background-blend-mode: overlay, multiply, multiply;
-          background-size: {{#multiply}}{{ height }}*0.36{{/multiply}}mm, cover, cover;"
+          background-size: auto 36%, cover, cover;"
       >
       </div><!--.background-image-->
     	<section class="testimonial">
@@ -34,10 +34,10 @@ height: 309mm
         </div><!--.grp-->
         {{/testimonials}}
       </section><!--.testimonial-->
-      <div class="logo-bottom" style="height: {{#multiply}}{{ height }}*0.36{{/multiply}}mm; position: absolute; bottom: 0%; right: 0;">
+      <div class="logo-bottom" style="height: 36%; width: 100%; position: absolute; bottom: 0; right: 0;">
         <object
           data="<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg"
-          style="height: {{#multiply}}{{ height }}*0.36{{/multiply}}mm; width: auto;"
+          style="height: 100%; width: auto; position: absolute; bottom: 0; right: 0;"
         >
         </object>
       </div><!--.logo-bottom-->
