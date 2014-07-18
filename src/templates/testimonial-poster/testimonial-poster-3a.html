@@ -31,10 +31,14 @@ height: 309mm
       	<h1 class="h1-3a">{{ poster-title }}</h1>
         {{#loop-testimonials}}
         <div class="grp">
-          <object data="<%= baseUrl %>/global-assets/images/basic-shapes/quot-marks.svg" class="quot-marks"></object>
-          <p class="input">{{ testimonial-input }}</p>
-          <h3>{{ testimonial-name }}</h3>
-          <p class="sub-info">{{ testimonial-sub-info }}</p>
+          <section>
+            <object data="<%= baseUrl %>/global-assets/images/basic-shapes/quot-marks.svg" class="quot-marks" style="display: none;"></object>
+            <p class="input">{{ testimonial-input }}</p>
+          </section>
+          <section>
+            <h3>{{ testimonial-name }}</h3>
+            <p class="sub-info">{{ testimonial-sub-info }}</p>
+          </section>
         </div><!--.grp-->
         {{/loop-testimonials}}
       </section><!--.testimonial-->
