@@ -29,21 +29,19 @@ height: 309mm
       </div><!--.bg-stripes-->
     	<section class="testimonial">
       	<h1 class="h1-3a">{{ poster-title }}</h1>
-        {{#loop-testimonials}}
-        <div class="grp">
-          <section>
-            <object data="<%= baseUrl %>/global-assets/images/basic-shapes/quot-marks.svg" class="quot-marks" style="display: none;"></object>
-            <p class="input">{{ testimonial-input }}</p>
-          </section>
-          <section>
-            <h3>{{ testimonial-name }}</h3>
-            <p class="sub-info">{{ testimonial-sub-info }}</p>
-          </section>
-        </div><!--.grp-->
-        {{/loop-testimonials}}
+        {{#testimonials}}
+          <div class="grp">
+            <object data="<%= baseUrl %>/global-assets/images/basic-shapes/quot-marks.svg" class="quot-marks" style="display: block;"></object>
+            <p class="input">{{ content }}</p>
+            <h3>{{ name }}</h3>
+            <p class="sub-info">{{ sub-info }}</p>
+          </div><!--.grp-->
+        {{/testimonials}}
       </section><!--.testimonial-->
       <div class="rh-logo">
-        <object data="<%= baseUrl %>/global-assets/images/logos/rh-logo.svg"></object>
+        <object data="<%= baseUrl %>/global-assets/images/logos/rh-logo.svg"
+          style="width: {{#multiply}}{{ height }}*0.14{{/multiply}}mm;"
+        ></object>
       </div><!--.rh-logo-->
       <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
       <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>

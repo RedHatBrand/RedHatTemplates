@@ -7,7 +7,7 @@ $gen-spacing-2em: 2em;
 
 body {
   margin: 0;
-  font-family: 'Overpass'; font-size: 2vw; font-weight: 400; line-height: 1.5em;
+  font-family: 'Overpass'; font-size: 2.4vw; font-weight: 400; line-height: 1.5em;
 	color: #fff;
 	background: #fff;
 	overflow: hidden;
@@ -26,8 +26,8 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    background-size: 248vw auto, cover, cover;
-    background-position: -105vw -49vw, 0 0, 0 0;
+    background-size: auto 170%, cover, cover;
+    background-position: 70% center, 0 0, 0 0;
     background-repeat: no-repeat, no-repeat, no-repeat;
   }
 	main {
@@ -47,7 +47,6 @@ body {
       }
     }
     .rh-logo{
-      width: 20vw;
       margin: 0 6vw 0 0; padding: 0 0 3vw 0;
       position: absolute; bottom: 0; right: 0;
     }
@@ -56,7 +55,7 @@ body {
 			.grp {
         margin: 0 0 $gen-spacing-2em 0;
 				h3{
-					margin: 0;
+					margin: 2vw 0 0 0;
 				}
         p.input {
           margin: 0 11vw 0 0;
@@ -64,8 +63,8 @@ body {
 				p.sub-info { margin: 0; font-size: 1.7vw; }
         object.quot-marks {
           float: left;
-          width: 8.5vw; height:auto;
-          margin: 0 2vw 0 0;
+          width: 8.7vw; height:auto;
+          margin: 0.8vw 2.4vw 0 0;
         }
 			}
       h1 { margin: $gen-spacing-2em 0 7vw 0; font-size: 6vw; }

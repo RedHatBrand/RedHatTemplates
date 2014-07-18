@@ -25,14 +25,14 @@ height: 309mm
       </div><!--.background-image-->
     	<section class="testimonial">
       	<h1>{{ poster-title }}</h1>
-        {{#loop-testimonials}}
+        {{#testimonials}}
         <div class="grp">
-          <object data="<%= baseUrl %>/global-assets/images/basic-shapes/quot-marks.svg" class="quot-marks" style="display: none;"></object>
-          <p class="input">{{ testimonial-input }}</p>
-          <h3>{{ testimonial-name }}</h3>
-          <p class="sub-info">{{ testimonial-sub-info }}</p>
+          <object data="<%= baseUrl %>/global-assets/images/basic-shapes/quot-marks.svg" class="quot-marks" style="display: block;"></object>
+          <p class="input">{{ content }}</p>
+          <h3>{{ name }}</h3>
+          <p class="sub-info">{{ sub-info }}</p>
         </div><!--.grp-->
-        {{/loop-testimonials}}
+        {{/testimonials}}
       </section><!--.testimonial-->
       <div class="logo-bottom" style="height: {{#multiply}}{{ height }}*0.36{{/multiply}}mm; position: absolute; bottom: 0%; right: 0;">
         <object
