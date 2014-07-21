@@ -26,8 +26,8 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    background-size: auto 170%, cover, cover;
-    background-position: 70% center, 0 0, 0 0;
+    background-size: 250vw 250vw, cover, cover;
+    background-position: -100vw center, 0 0, 0 0;
     background-repeat: no-repeat, no-repeat, no-repeat;
   }
 	main {
@@ -63,7 +63,7 @@ body {
 				p.sub-info { margin: 0; font-size: 1.7vw; }
         object.quot-marks {
           float: left;
-          width: 8.7vw; height:auto;
+          width: 8.7vw; height:8.7vw;
           margin: 0.8vw 2.4vw 0 0;
         }
 			}
