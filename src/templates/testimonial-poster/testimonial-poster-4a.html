@@ -16,17 +16,17 @@ height: 309mm
   	<main>
       <div class="background-image"
         style="
-          background-image: url('<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-multiply-bottom.svg'),
-                            linear-gradient(0deg, #37424a, #37424a),
+          background-image: url('<%= baseUrl %>/global-assets/images/basic-shapes/top/triangle-multiply-top.svg'),
+                            linear-gradient(0deg, #37424a, transparent),
                             url({{{ background-image }}});
-          background-blend-mode: overlay, multiply, multiply;
-          background-size: auto 36%, cover, cover;"
+          background-blend-mode: multiply, multiply, multiply;
+          background-size: auto 46vw, cover, cover;"
       >
       </div><!--.background-image-->
     	<section class="testimonial">
-      	<h1>{{ poster-title }}</h1>
+      	<h1 style="display: none;">{{ poster-title }}</h1>
         {{#testimonials}}
-        <div class="grp">
+        <div class="grp grp-4a">
           <object data="<%= baseUrl %>/global-assets/images/basic-shapes/quot-marks.svg" class="quot-marks" style="display: block;"></object>
           <p class="input">{{ content }}</p>
           <h3>{{ name }}</h3>
@@ -34,10 +34,10 @@ height: 309mm
         </div><!--.grp-->
         {{/testimonials}}
       </section><!--.testimonial-->
-      <div class="logo-bottom" style="height: 36vw; width: 100vw; position: absolute; bottom: 0; right: 0;">
+      <div class="logo-bottom" style="height: 46vw; width: 100vw; position: absolute; top: 0; left: 0;">
         <object
-          data="<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg"
-          style="height: 100%; width: auto; position: absolute; bottom: 0; right: 0;"
+          data="<%= baseUrl %>/global-assets/images/basic-shapes/top/triangle-with-logo-top.svg"
+          style="height: 100%; width: auto; position: absolute; bottom: 0; left: 0;"
         >
         </object>
       </div><!--.logo-bottom-->

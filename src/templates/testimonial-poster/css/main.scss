@@ -17,7 +17,7 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    background-position: right bottom, left, left;
+    background-position: left top, left, center;
     background-repeat: no-repeat, no-repeat, no-repeat;
   }
   .background-image-3a {
@@ -51,14 +51,14 @@ body {
       position: absolute; bottom: 0; right: 0;
     }
 		section.testimonial {
-			margin: 0 $gen-spacing-4em;
+			position: absolute; margin: 0 $gen-spacing-4em 6vw $gen-spacing-4em; bottom: 0;
 			.grp {
         margin: 0 0 $gen-spacing-2em 0;
 				h3{
 					margin: 2vw 0 0 0;
 				}
         p.input {
-          margin: 0 11vw 0 0;
+          margin: 0 0 0 0;
         }
 				p.sub-info { margin: 0; font-size: 1.7vw; }
         object.quot-marks {
