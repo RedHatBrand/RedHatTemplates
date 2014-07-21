@@ -17,7 +17,7 @@ height: 309mm
       <div class="background-image"
         style="
           background-image: url('<%= baseUrl %>/global-assets/images/basic-shapes/top/triangle-multiply-top.svg'),
-                            linear-gradient(0deg, #37424a, transparent),
+                            linear-gradient(0deg, transparent, transparent),
                             url({{{ background-image }}});
           background-blend-mode: multiply, multiply, multiply;
           background-size: auto 46vw, cover, cover;"
@@ -29,8 +29,10 @@ height: 309mm
         <div class="grp grp-4a">
           <object data="<%= baseUrl %>/global-assets/images/basic-shapes/quot-marks.svg" class="quot-marks" style="display: block;"></object>
           <p class="input">{{ content }}</p>
-          <h3>{{ name }}</h3>
-          <p class="sub-info">{{ sub-info }}</p>
+          <div class="name">
+            <h3>{{ name }}</h3>
+            <p class="sub-info">{{ sub-info }}</p>
+          </div>
         </div><!--.grp-->
         {{/testimonials}}
       </section><!--.testimonial-->

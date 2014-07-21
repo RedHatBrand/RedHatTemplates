@@ -7,7 +7,7 @@ $gen-spacing-2em: 2em;
 
 body {
   margin: 0;
-  font-family: 'Overpass'; font-size: 2.4vw; font-weight: 400; line-height: 1.5em;
+  font-family: 'Overpass'; font-size: 2.4vw; font-weight: 400;
 	color: #fff;
 	background: #fff;
 	overflow: hidden;
@@ -54,17 +54,25 @@ body {
 			position: absolute; margin: 0 $gen-spacing-4em 6vw $gen-spacing-4em; bottom: 0;
 			.grp {
         margin: 0 0 $gen-spacing-2em 0;
-				h3{
-					margin: 2vw 0 0 0;
-				}
-        p.input {
-          margin: 0 0 0 0;
+        .name {
+          float: right;
+          margin: 1vw 0 0 0; padding: 3vw;
+          background: rgba(0, 0, 0, 0.80);
+          h3{
+            margin: 0;
+            text-align: right;
+          }
+          p.sub-info { margin: 0; font-size: 1.7vw; text-align: right; }
         }
-				p.sub-info { margin: 0; font-size: 1.7vw; }
+        p.input {
+          margin: 0; padding: 3vw;
+          font-size: 2.8vw; line-height: 5vw;
+          background: rgba(0, 0, 0, 0.80);
+        }
         object.quot-marks {
           float: left;
           width: 8.7vw; height:8.7vw;
-          margin: 0.8vw 2.4vw 0 0;
+          margin: 3.5vw 2.4vw 0 2.8vw;
         }
 			}
       h1 { margin: $gen-spacing-2em 0 7vw 0; font-size: 6vw; }
