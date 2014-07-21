@@ -20,14 +20,13 @@ body {
     background-position: left top, left, center;
     background-repeat: no-repeat, no-repeat, no-repeat;
   }
-  .background-image-3a {
+  .background-image-4b {
     position: absolute; z-index: -1;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    background-size: 250vw 250vw, cover, cover;
-    background-position: -100vw center, 0 0, 0 0;
+    background-position: right bottom, left, center;
     background-repeat: no-repeat, no-repeat, no-repeat;
   }
 	main {
@@ -75,8 +74,32 @@ body {
           margin: 4.2vw 2.4vw 0 5.2vw;
         }
 			}
+      .grp-4b {
+        margin: 0 20vw $gen-spacing-2em 0;
+        .name {
+          float: left;
+          margin: 1vw 0 0 0; padding: 3vw;
+          background: rgba(0, 0, 0, 0.80);
+          h3{
+            margin: 0;
+            text-align: left;
+          }
+          p.sub-info { margin: 0; font-size: 1.7vw; text-align: left; }
+        }
+        p.input {
+          margin: 0; padding: 4vw 3vw 4vw 5vw;
+          font-size: 2.8vw; line-height: 5vw;
+          background: rgba(0, 0, 0, 0.80);
+        }
+        object.quot-marks {
+          float: left;
+          width: 8.7vw; height:8.7vw;
+          margin: 4.2vw 2.4vw 0 5.2vw;
+        }
+      }
       h1 { margin: $gen-spacing-2em 0 7vw 0; font-size: 6vw; }
       h1.h1-3a { margin: 14vw 0 7vw 0; }
 		}
+    section.testimonial-4b { position: absolute; margin: 0 $gen-spacing-4em 16.5vw $gen-spacing-4em; bottom: 0; }
 	}
 }

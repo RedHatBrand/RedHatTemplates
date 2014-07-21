@@ -14,19 +14,19 @@ height: 309mm
 
   <body sclass="rh-theme-{{ category }}" style="width: {{ width }}mm; height: {{ height }}mm;">
   	<main>
-      <div class="background-image"
+      <div class="background-image-4b"
         style="
-          background-image: url('<%= baseUrl %>/global-assets/images/basic-shapes/top/triangle-multiply-top.svg'),
+          background-image: url('<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-multiply-bottom.svg'),
                             linear-gradient(0deg, #37424a 1%, transparent 35%),
                             url({{{ background-image }}});
           background-blend-mode: multiply, multiply, multiply;
           background-size: auto 42vw, cover, cover;"
       >
       </div><!--.background-image-->
-    	<section class="testimonial">
+    	<section class="testimonial testimonial-4b">
       	<h1 style="display: none;">{{ poster-title }}</h1>
         {{#testimonials}}
-        <div class="grp grp-4a">
+        <div class="grp-4b">
           <object data="<%= baseUrl %>/global-assets/images/basic-shapes/quot-marks.svg" class="quot-marks" style="display: block;"></object>
           <p class="input"><em>{{ content }}</em></p>
           <div class="name">
@@ -36,10 +36,10 @@ height: 309mm
         </div><!--.grp-->
         {{/testimonials}}
       </section><!--.testimonial-->
-      <div class="logo-top" style="height: 42vw; width: 100vw; position: absolute; top: 0; left: 0;">
+      <div class="logo-bottom" style="height: 42vw; width: 100vw; position: absolute; bottom: 0; right: 0;">
         <object
-          data="<%= baseUrl %>/global-assets/images/basic-shapes/top/triangle-with-logo-top.svg"
-          style="height: 100%; width: auto; position: absolute; bottom: 0; left: 0;"
+          data="<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg"
+          style="height: 100%; width: auto; position: absolute; bottom: 0; right: 0;"
         >
         </object>
       </div><!--.logo-bottom-->
