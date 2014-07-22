@@ -16,8 +16,8 @@ height: 362mm
   </head>
 
   <body class="theme-{{ theme }}" style="width: {{ width }}mm; height: {{ height }}mm;">
-  <main>
-      <div id="map" style="width: {{#subtract}}{{ width }}-12{{/subtract}}; height: {{#subtract}}{{ height }}-12{{/subtract}};"></div>
+  <main style="width: {{#subtract}}{{ width }}-12{{/subtract}}mm; height: {{#subtract}}{{ height }}-12{{/subtract}}mm;">
+      <div id="map" style="width: {{#subtract}}{{ width }}-12{{/subtract}}mm; height: {{#subtract}}{{ height }}-12{{/subtract}}mm;"></div>
       <div class="rh-forum-logo">
         <object data="<%= baseUrl %>/global-assets/images/logos/red-hat-forum-ico.svg" class="rh-forum-ico"></object>
         <h3 class="venue">{{ location }}</h3>
