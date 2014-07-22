@@ -8,8 +8,8 @@ height: 362mm
   <head>
   <meta charset="utf-8" />
   <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
-
   <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
+  <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/events-list.css?v<%= version %>' rel='stylesheet' />
   <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
   <link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths-2a/main-banner/css/main.css" />
   <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
@@ -18,6 +18,26 @@ height: 362mm
   <body class="theme-{{ theme }}" style="height: {{ height }}mm; width: {{ width }}mm; ">
     <main>
         <div id="map"></div>
+        <article id="content">
+          <div class="events-list">
+            <a class="event clearfix" href="{{{ link }}}" target="_blank">
+              <div data-brand-tool-editable="date" class="date">
+                <img src='<%= baseUrl %>/templates/forum/assets/images/space.svg' />
+                <div class="text-content">
+                  <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                    <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">{{ date }}</text>
+                  </svg>
+                  <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                    <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">{{ month }}</text>
+                  </svg>
+                </div>
+              </div>
+              <div data-brand-tool-editable="location" class="location clearfix">
+                <div class="text-content">{{ location }}</div>
+              </div>
+            </a>
+          </div>
+        </article>
         <div class="rh-logo" style="height: 25vw; width: 25vw; position: absolute; bottom: 0; right: 0;">
           <object data="<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg"
             style="height: 25vw; width: 25vw;"
@@ -43,5 +63,6 @@ height: 362mm
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script>
     <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map-vector-full-page.js?v<%= version %>'></script>
+    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-events-list.js?v<%= version %>'></script>
   </body>
 </html>

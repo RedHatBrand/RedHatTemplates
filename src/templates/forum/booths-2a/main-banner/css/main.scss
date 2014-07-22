@@ -1,7 +1,7 @@
-@import "../../../../../global-assets/scss/reset";
-@import "../../../../../global-assets/scss/colors/base_color_palette";
-@import "../../../../../global-assets/scss/colors/flat_color_themes";
-@import '../../../../../global-assets/stylesheets/general/rh-logo';
+@import '../../../../../global-assets/scss/utils/grid';
+@import '../../../../../global-assets/scss/fonts/overpass';
+@import '../../../../../global-assets/scss/colors/base_color_palette';
+
 @import '../../../assets/stylesheets/map';
 @import '../../../assets/stylesheets/colors';
 
@@ -15,6 +15,21 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     display: block;
+    #content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 0;
+      height: 30%;
+      box-sizing: border-box;
+    }
+    .events-list {
+      width: 70%;
+      position: absolute; top:16%; transform: translateY(-50%); left:40%; transform: translateX(-50%);
+    }
+    .events-list .event .letter { fill: white; }
+
     .rh-logo {
       height: 25vw; width: 25vw;
       position: absolute; bottom: 0; right: 0;
