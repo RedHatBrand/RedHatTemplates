@@ -11,12 +11,12 @@ height: 362mm
 
   <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
   <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
-  <link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-1a/css/style.css">
+  <link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths/rhf-booth-main-banner/main-concept-1a/css/style.css" />
   <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
   </head>
 
   <body class="theme-{{ theme }}" style="height: {{ height }}mm; width: {{ width }}mm; ">
-    <main>
+    <main style="width: {{#subtract}}{{ width }}-12{{/subtract}}; height: {{#subtract}}{{ height }}-12{{/subtract}};">
         <div id="map"></div>
         <div id="background-image" style="background-image: url({{{ background-image }}})"></div><!--.background-image-->
         <div class="rh-forum-logo">
