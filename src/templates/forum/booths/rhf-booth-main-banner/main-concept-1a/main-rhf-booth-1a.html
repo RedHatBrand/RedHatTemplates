@@ -18,7 +18,7 @@ height: 362mm
   <body class="theme-{{ theme }}" style="height: {{ height }}mm; width: {{ width }}mm; ">
     <main>
         <div id="map"></div>
-        <div id="background-image" style="background-image: url({{{ background-image }}})"></div><!--.bar-x-->
+        <div id="background-image" style="background-image: url({{{ background-image }}})"></div><!--.background-image-->
         <div class="rh-forum-logo">
           <object data="<%= baseUrl %>/global-assets/images/logos/red-hat-forum-ico.svg" class="rh-forum-ico"></object>
           <h3 class="venue">{{ location }}</h3>
@@ -47,9 +47,9 @@ height: 362mm
       <object data="<%= baseUrl %>/global-assets/images/logos/rh-logo.svg"></object>
     </div><!--.rh-logo-->
 
-    <div class="rh-logo-triangle" style="height: {{#multiply}}{{ height }}*0.46{{/multiply}}mm; width: auto;">
+    <div class="rh-logo-triangle" style="height: 18vw; width: 18vw;">
       <object data="<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg"
-              style="height: {{#multiply}}{{ height }}*0.46{{/multiply}}mm; width: auto;>
+              style="height: 18vw; width: 18vw;>
       </object>
     </div><!--.rh-logo-triangle-->
 

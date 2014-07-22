@@ -5,6 +5,9 @@ body {
 		position: absolute;
 		top: 3mm; bottom: 3mm;
 		left: 3mm; right: 3mm;
+		background-size: cover;
+		background-repeat: no-repeat;
+		display: block;
 		#content {
 			position: absolute;
 			bottom: 0;
@@ -20,14 +23,14 @@ body {
 		}
 		.events-list .event .letter { fill: white; }
 		.rh-forum-logo {
-			width: 90%; height: 40%;
+			width: 90vw; height: 18vw;
 			position: absolute; top:15%; transform: translateY(-50%); left:50%; transform: translateX(-50%);
 			h3.venue {
 				position: absolute; margin: 10.8vw 0 0 0.8vw; left:50%; transform: translateX(-50%);
 				font-size: 3.1vw;
 			}
 			object.rh-forum-ico {
-				width:50%;
+				width: 45vw;
 				position: absolute; margin: -2% 0 0 0; left:50%; transform: translateX(-50%);
 			}
 		}
