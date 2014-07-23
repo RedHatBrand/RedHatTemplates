@@ -15,7 +15,7 @@ height: 362mm
   <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
   </head>
 
-  <body id="preview" class="theme-{{ theme }}" style="height: {{#divide}}{{ height }}/3{{/divide}}mm; width: {{#divide}}{{ width }}/3{{/divide}}mm; ">
+  <body id="preview" class="theme-{{ theme }}" style="height: {{#divide}}{{height}}/3{{/divide}}mm; width: {{#divide}}{{width}}/3{{/divide}}mm; ">
     <main>
         <div id="map"></div>
         <article id="content">
@@ -38,9 +38,9 @@ height: 362mm
             </a>
           </div>
         </article>
-        <div class="rh-logo" style="height: {{#divide}}25/3{{/divide}}vw; width: {{#divide}}25/3{{/divide}}vw; position: absolute; bottom: 0; right: 0;">
+        <div class="rh-logo" style="height: {{#multiply}}{{height}}*0.2178{{/multiply}}mm; width: {{#multiply}}{{height}}*0.2178{{/multiply}}mm; position: absolute; bottom: 0; right: 0;">
           <object data="<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg"
-            style="height: {{#divide}}25/3{{/divide}}vw; width: {{#divide}}25/3{{/divide}}vw;"
+            style="height: {{#multiply}}{{height}}*0.2178{{/multiply}}mm; width: {{#multiply}}{{height}}*0.2178{{/multiply}}mm;"
           >
           </object>
         </div><!--.rh-logo-->

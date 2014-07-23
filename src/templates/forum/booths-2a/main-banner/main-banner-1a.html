@@ -38,9 +38,9 @@ height: 362mm
             </a>
           </div>
         </article>
-        <div class="rh-logo" style="height: 25vw; width: 25vw; position: absolute; bottom: 0; right: 0;">
+        <div class="rh-logo" style="height: {{#multiply}}{{height}}*0.66{{/multiply}}mm; width: {{#multiply}}{{height}}*0.66{{/multiply}}mm; position: absolute; bottom: 0; right: 0;">
           <object data="<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg"
-            style="height: 25vw; width: 25vw;"
+            style="height: {{#multiply}}{{height}}*0.66{{/multiply}}mm; width: {{#multiply}}{{height}}*0.66{{/multiply}}mm;"
           >
           </object>
         </div><!--.rh-logo-->
