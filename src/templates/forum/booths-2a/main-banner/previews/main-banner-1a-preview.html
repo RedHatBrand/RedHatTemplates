@@ -37,16 +37,15 @@ height: 362mm
               </div>
             </a>
           </div>
-          <div class="rh-forum_ico" style="width: {{#multiply}}{{width}}*0.1518{{/multiply}}mm; height: auto;">
-            <object data="<%= baseUrl %>/global-assets/images/logos/red-hat-forum-ico.svg"
-              style="width: {{#multiply}}{{width}}*0.1518{{/multiply}}mm; height: auto;"
-            >
-            </object>
-            <h2 class="rh-forum-location" style="position: absolute; left: {{#divide}}20/3{{/divide}}vw; top:{{#divide}}12.8/3{{/divide}}vw; margin: 0;
-            font-size: {{#divide}}3.5/3{{/divide}}em; font-weight: 500;">{{ location }}</h2>
-          </div><!--.rh-forum_ico-->
         </article>
-
+        <div class="rh-forum_ico" style="width: {{#multiply}}{{width}}*0.1518{{/multiply}}mm; height: auto;">
+          <object data="<%= baseUrl %>/global-assets/images/logos/red-hat-forum-ico.svg"
+            style="width: {{#multiply}}{{width}}*0.1518{{/multiply}}mm; height: auto;"
+          >
+          </object>
+          <h2 class="rh-forum-location" style="position: absolute; left: {{#divide}}20/3{{/divide}}vw; top:{{#divide}}12.8/3{{/divide}}vw; margin: 0;
+          font-size: {{#divide}}3.5/3{{/divide}}em; font-weight: 500;">{{ location }}</h2>
+        </div><!--.rh-forum_ico-->  
         <div class="rh-logo" style="height: {{#multiply}}{{height}}*0.2178{{/multiply}}mm; width: {{#multiply}}{{height}}*0.2178{{/multiply}}mm; position: absolute; bottom: 0; right: 0;">
           <object data="<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg"
             style="height: {{#multiply}}{{height}}*0.2178{{/multiply}}mm; width: {{#multiply}}{{height}}*0.2178{{/multiply}}mm;"
