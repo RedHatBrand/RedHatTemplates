@@ -30,7 +30,7 @@ body {
     }
     .events-list .event .letter { fill: white; }
     .rh-forum_ico {
-      position: absolute;
+      position: absolute; z-index: 10;
       h2.rh-forum-location {
         position: absolute; left: 20vw; top:12.8vw; margin: 0;
         font-size: 3.5em; font-weight: 500;
