@@ -1,0 +1,68 @@
+---
+width: 1012mm
+height: 362mm
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+  <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
+  <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/events-list.css?v<%= version %>' rel='stylesheet' />
+  <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
+  <link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths-2a/main-banner/css/main.css" />
+  <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+  </head>
+
+  <body id="preview" class="theme-{{ theme }}" style="height: {{#divide}}{{ height }}/3{{/divide}}mm; width: {{#divide}}{{ width }}/3{{/divide}}mm; ">
+    <main>
+        <div id="map"></div>
+        <article id="content">
+          <div class="events-list">
+            <a class="event clearfix" href="{{{ link }}}" target="_blank">
+              <div data-brand-tool-editable="date" class="date">
+                <img src='<%= baseUrl %>/templates/forum/assets/images/space.svg' />
+                <div class="text-content">
+                  <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                    <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">{{ date }}</text>
+                  </svg>
+                  <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                    <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">{{ month }}</text>
+                  </svg>
+                </div>
+              </div>
+              <div data-brand-tool-editable="location" class="location clearfix">
+                <div class="text-content">{{ location }}</div>
+              </div>
+            </a>
+          </div>
+        </article>
+        <div class="rh-logo" style="height: {{#divide}}25/3{{/divide}}vw; width: {{#divide}}25/3{{/divide}}vw; position: absolute; bottom: 0; right: 0;">
+          <object data="<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg"
+            style="height: {{#divide}}25/3{{/divide}}vw; width: {{#divide}}25/3{{/divide}}vw;"
+          >
+          </object>
+        </div><!--.rh-logo-->
+        <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
+        <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
+        <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
+        <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
+    </main>
+
+    <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
+    <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
+    <!-- Params we may expose -->
+    <div style="display: none" id="zoom" data-zoom="14"></div>
+    <!-- /Params we may expose -->
+
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3.v3.min.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script>
+    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map-vector-full-page.js?v<%= version %>'></script>
+    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-events-list.js?v<%= version %>'></script>
+  </body>
+</html>
