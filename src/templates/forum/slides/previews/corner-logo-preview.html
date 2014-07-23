@@ -1,0 +1,53 @@
+---
+{
+  "width": "1920px",
+  "height": "1080px"
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8' />
+
+    <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
+
+    <link href='<%= baseUrl %>/templates/forum/slides/stylesheets/main.css?v<%= version %>' rel='stylesheet' />
+    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+  </head>
+
+  <body id="preview" class="theme-{{ theme }} {{ contrast }}-contrast" style="width: {{#divide}}{{width}}/3{{/divide}}px; height: {{#multiply}}{{#divide}}{{width}}/3{{/divide}}*{{ratio}}{{/multiply}}px">
+    <main>
+      <!-- Design here -->
+      <div id="background-image" style="background-image: url({{{ background-image }}})"></div>
+      <div id="map"></div>
+
+      <div class="rh-logo" style="height: {{#multiply}}{{#divide}}{{width}}/6.5{{/divide}}*{{ratio}}{{/multiply}}px; width: {{#multiply}}{{#divide}}{{width}}/6.5{{/divide}}*{{ratio}}{{/multiply}}px; position: absolute; bottom: 0; right: 0;">
+        <object data="<%= baseUrl %>/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg"
+          style="height: {{#multiply}}{{#divide}}{{width}}/6.5{{/divide}}*{{ratio}}{{/multiply}}px; width: {{#multiply}}{{#divide}}{{width}}/6.5{{/divide}}*{{ratio}}{{/multiply}}px;"
+        >
+        </object>
+      </div><!--.rh-logo-->
+
+      <div class='corner-logo' style="display: none;">
+        <div class="logo"></div>
+      </div>
+      <!-- /Design here -->
+    </main>
+
+    <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
+    <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
+    <!-- Params we may expose -->
+    <div style="display: none" id="zoom" data-zoom="13"></div>
+    <!-- /Params we may expose -->
+
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3.v3.min.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script>
+    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map-vector.js?v<%= version %>'></script>
+  </body>
+</html>
