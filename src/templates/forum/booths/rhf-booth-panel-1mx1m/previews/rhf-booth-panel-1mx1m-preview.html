@@ -14,7 +14,7 @@ height: 512mm
   <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
   </head>
 
-  <body class="theme-{{ theme }}" style="width: {{ width }}mm; height: {{ height }}mm">
+  <body id="preview" class="theme-{{ theme }}" style="width: {{#divide}}{{ width }}/3{{/divide}}mm; height: {{#divide}}{{ height }}/3{{/divide}}mm">
     <main>
       <section>
         <div id="map"></div>
