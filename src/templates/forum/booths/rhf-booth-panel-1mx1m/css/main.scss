@@ -12,5 +12,8 @@ body {
     position: absolute;
     top: 3mm; bottom: 3mm;
     left: 3mm; right: 3mm;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
   }
 }
