@@ -18,8 +18,10 @@ height: 512mm
     <main>
       <section>
         <div id="map"></div>
-        <div class="logo-area">
-          <object data="<%=baseUrl%>/global-assets/images/logos/rh-logo.svg" style="width: 80vw; height: 80vw; position: absolute;">
+        <div class="logo-area"
+          style="width: {{#divide}}80/3{{/divide}}vw; height: {{#divide}}80/3{{/divide}}vw; position: absolute; z-index: 1; top:7%; transform: translateY(-50%); left:50%; transform: translateX(-50%);"
+        >
+          <object data="<%=baseUrl%>/global-assets/images/logos/rh-logo.svg" style="width: {{#divide}}80/3{{/divide}}vw; height: {{#divide}}80/3{{/divide}}vw; position: absolute;">
           </object>
         </div><!--.logo-area-->
       </section>
