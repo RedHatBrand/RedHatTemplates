@@ -1,0 +1,36 @@
+@import "../../../../../global-assets/scss/reset";
+@import "../../../../../global-assets/scss/colors/base_color_palette";
+@import "../../../../../global-assets/scss/colors/flat_color_themes";
+@import '../../../../../global-assets/stylesheets/general/rh-logo';
+@import '../../../assets/stylesheets/map';
+@import '../../../assets/stylesheets/colors';
+
+.display-map-bg-display
+{ display: block; }
+
+.display-map-bg-none
+{ display: none; }
+
+body {
+  position: relative; margin: 0;
+  font-family: "Overpass"; font-size: 1vw; color: #fff;
+  main {
+    position: absolute;
+    top: 3mm; bottom: 3mm;
+    left: 3mm; right: 3mm;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+  }
+}
+
+
+#map{
+  &.leaflet-container { background-color:#fff !important; }
+
+  path.road { stroke:#eee !important; }
+  path.water {
+    stroke: #eee !important;
+    fill: #eee !important;
+  }
+}
