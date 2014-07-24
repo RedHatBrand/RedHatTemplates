@@ -10,7 +10,7 @@ height: 512mm
   <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
   <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
   <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
-  <link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths/sponsor-booth-panel-1mx1m/css/style.css">
+  <link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths/sponsor-booth-panel-1mx1m/css/main.css" />
   <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
   </head>
 
@@ -18,8 +18,12 @@ height: 512mm
     <main>
       <section>
         <div id="map" class="display-map-bg-{{ display-map }}"></div>
-        <div class="logo-area">
-          <object data="<%=baseUrl%>/templates/forum/booths/sponsor-booth-panel-1mx1m/images/logo/sponsor-logo-filler.svg"></object>
+        <div class="logo-area"
+          style="width: 80vw; position: absolute; z-index: 1; top:7%; transform: translateY(-50%); left:50%; transform: translateX(-50%);"
+        >
+          <object data="<%=baseUrl%>/templates/forum/booths/sponsor-booth-panel-1mx1m/images/logo/sponsor-logo-filler.svg"
+              sstyle="width: 80vw; height: 65.26vw; position: absolute;"
+          ></object>
         </div><!--.logo-area-->
         <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
         <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
