@@ -1,0 +1,66 @@
+@import "../../../../../global-assets/scss/reset";
+@import "../../../../../global-assets/scss/colors/base_color_palette";
+@import "../../../../../global-assets/scss/colors/flat_color_themes";
+@import '../../../../../global-assets/stylesheets/general/rh-logo';
+@import '../../../assets/stylesheets/map';
+@import '../../../assets/stylesheets/colors';
+
+.display-rfh-icon-icon,
+.display-rfh-info-info,
+.display-rfh-info-both,
+.display-rfh-icon-both
+{ display: block; }
+
+.display-rfh-icon-info,
+.display-rfh-info-icon,
+.display-rfh-info-none,
+.display-rfh-icon-none
+{ display: none; }
+
+body {
+  position: relative; margin: 0;
+  font-family: "Overpass"; font-size: 1vw; color: #fff;
+  main {
+    position: absolute;
+    top: 3mm; bottom: 3mm;
+    left: 3mm; right: 3mm;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    .bottom-bar {
+      width: 100%; height: 10%;
+      position: absolute; left: 0; bottom: 0;
+      background: #000;
+      opacity: 0.85;
+    }
+    .content-contain {
+      width: 100%; height: 100%;
+      position: relative; z-index: 1;
+    }
+    .rhf-logo-icon-contain {
+      width: 85vw;
+      position: relative; left:50%; transform: translateX(-50%);
+      margin: 12vw 0 -4vw 0;
+      h3 {
+        position: absolute; margin: -13vw 0 0 37vw;
+        font-size: 7em;
+      }
+      object {
+        width: 85vw;
+        position: relative;
+      }
+    }/*rhf-logo-icon-contain*/
+    .rhf_info {
+      width: 85%;
+      position: absolute; left:50%; transform: translateX(-50%);
+      margin: 11vw 0 0 0;
+      p.text-1 { margin: 0 0 4vw 0; font-size: 5vw; }
+      p.text-2 { margin: 0 0 4vw 0; font-size: 4vw; }
+      ul.text-3 {
+        list-style-type: disc;
+        padding: 0 0 0 2.5vw;
+        font-size: 3vw;
+      }
+    }
+  }
+}
