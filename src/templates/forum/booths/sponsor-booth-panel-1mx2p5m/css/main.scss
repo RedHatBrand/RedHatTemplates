@@ -19,38 +19,33 @@
 
 body {
   position: relative; margin: 0;
-  font-family: "Overpass"; font-size: 1vw; color: #fff;
+  font-family: "Overpass"; font-size: 1vw; color: #000;
   main {
     position: absolute;
     top: 3mm; bottom: 3mm;
     left: 3mm; right: 3mm;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: block;
     .bottom-bar {
       width: 100%; height: 10%;
       position: absolute; left: 0; bottom: 0;
       background: #000;
       opacity: 0.85;
+      display: none;
     }
     .content-contain {
       width: 100%; height: 100%;
-      position: relative; z-index: 1;
+      position: absolute; z-index: 1;
     }
-    .rhf-logo-icon-contain {
+    .sponsor-logo-icon-contain {
       width: 85vw;
       position: relative; left:50%; transform: translateX(-50%);
       margin: 12vw 0 -4vw 0;
-      h3 {
-        position: absolute; margin: -13vw 0 0 37vw;
-        font-size: 7em;
-      }
       object {
-        width: 85vw; height: 35.7vw;
+        width: 85vw; height: 75vw;
         position: relative;
+        border: 1px dotted;
       }
-    }/*rhf-logo-icon-contain*/
-    .rhf_info {
+    }
+    .sponsor_info {
       width: 85%;
       position: absolute; left:50%; transform: translateX(-50%);
       margin: 11vw 0 0 0;
@@ -62,5 +57,15 @@ body {
         font-size: 3em;
       }
     }
+  }
+}
+
+#map{
+  &.leaflet-container { background-color:#fff !important; }
+
+  path.road { stroke:#eee !important; }
+  path.water {
+    stroke: #eee !important;
+    fill: #eee !important;
   }
 }
