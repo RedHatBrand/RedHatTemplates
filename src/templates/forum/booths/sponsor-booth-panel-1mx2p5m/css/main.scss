@@ -8,13 +8,15 @@
 .display-rfh-icon-icon,
 .display-rfh-info-info,
 .display-rfh-info-both,
-.display-rfh-icon-both
+.display-rfh-icon-both,
+.display-map-bg-display
 { display: block; }
 
 .display-rfh-icon-info,
 .display-rfh-info-icon,
 .display-rfh-info-none,
-.display-rfh-icon-none
+.display-rfh-icon-none,
+.display-map-bg-none
 { display: none; }
 
 body {
@@ -38,11 +40,10 @@ body {
     .sponsor-logo-icon-contain {
       width: 85vw;
       position: relative; left:50%; transform: translateX(-50%);
-      margin: 12vw 0 -4vw 0;
+      margin: 9vw 0 -4vw 0;
       object {
         width: 85vw; height: 75vw;
         position: relative;
-        border: 1px dotted;
       }
     }
     .sponsor_info {
