@@ -10,7 +10,7 @@ height: 512mm
   <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
   <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
   <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
-  <link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-1mx1m/css/main.css">
+  <link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths/rhf-booth-panel-1mx1m/css/main.css" />
   <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
   </head>
 
@@ -18,7 +18,7 @@ height: 512mm
     <main>
       <section>
         <div id="map"></div>
-        <div class="logo-area" style="width: 80vw; position: absolute; z-index: 1; top:35%; transform: translateY(-50%); left:50%; transform: translateX(-50%);">
+        <div class="logo-area" style="display: none; width: 80vw; position: absolute; z-index: 1; top:35%; transform: translateY(-50%); left:50%; transform: translateX(-50%);">
           <object data="<%=baseUrl%>/global-assets/images/logos/rh-logo.svg" style="width: 80vw; height: auto; position: absolute;">
           </object>
         </div><!--.logo-area-->
