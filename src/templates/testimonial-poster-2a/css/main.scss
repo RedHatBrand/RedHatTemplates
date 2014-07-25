@@ -1,0 +1,120 @@
+@import '../../../global-assets/scss/fonts/overpass';
+@import '../../../global-assets/scss/colors/base_color_palette';
+@import '../../../global-assets/stylesheets/general/rh-logo';
+
+$gen-spacing-4em: 4em;
+$gen-spacing-2em: 2em;
+
+body {
+  margin: 0;
+  font-family: 'Overpass'; font-size: 1vh; font-weight: 400;
+	color: #fff;
+	background: #fff;
+	overflow: hidden;
+  .background-image {
+    position: absolute; z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-position: left top, left, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+  }
+  .background-image-2b {
+    position: absolute; z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-position: right bottom, left, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+  }
+	main {
+		padding: 0;
+    position: absolute;
+    top: 3mm; bottom: 3mm;
+    left: 3mm; right: 3mm;
+    .bg-stripes {
+      position: absolute;
+      object.pattern-stripe {
+        width: 70vw;
+        position: absolute; z-index: -1; margin: 0 0 0 0;
+      }
+      object.solid-stripe {
+        width: 270vw;
+        position: absolute; z-index: -1; margin: 0 0 0 0;
+      }
+    }
+    .rh-logo{
+      margin: 0 6vw 0 0; padding: 0 0 3vw 0;
+      position: absolute; bottom: 0; right: 0;
+    }
+		section.testimonial {
+			position: absolute; margin: 0 $gen-spacing-4em 6.5vw $gen-spacing-4em; bottom: 0;
+			.grp {
+        margin: 0 0 $gen-spacing-2em 0;
+        .name {
+          float: right;
+          margin: 1vw 0 0 0; padding: 2vh 3vh;
+          background: rgba(0, 0, 0, 0.80);
+          h3{
+            margin: 0;
+            font-size: 2.2vh; text-align: left;
+          }
+          p.sub-info { margin: 0.3vh 0 0 0; font-size: 1.8vh; text-align: left; }
+        }
+        p.input {
+          margin: 0; padding: 2vh 3vh 2vh 4vh;
+          font-size: 2.2vh; line-height: 3.5vh;
+          background: rgba(0, 0, 0, 0.80);
+        }
+        object.quot-marks {
+          float: left;
+          width: 6vh; height: 6vh;
+          margin: 2.4vh 2vh 0 4vh;
+        }
+			}
+      .grp-2b {
+        margin: 0 21vw $gen-spacing-2em 0;
+        .name {
+          float: left;
+          margin: 0vw 0 0 1vw;
+          h3{
+            margin: 0;
+            font-size: 2.4em; text-align: left;
+          }
+          p.sub-info { margin: 0.6vh 0 0 0; font-size: 2vh; text-align: left;}
+          h3, p.sub-info {
+            background: rgba(0, 0, 0, 0.8);
+            padding-top: 0.5em;
+            padding-bottom: 0.4em;
+            box-shadow:
+              0.5em 0 0 rgba(0, 0, 0, 0.8),
+              -0.5em 0 0 rgba(0, 0, 0, 0.8);
+          }
+        }
+        p.input {
+          margin: 0; padding: 2vw 3vw 1vw 1vw;
+          font-size: 3vh; line-height: 2.1em;
+          span {
+            display: inline;
+            background: rgba(0, 0, 0, 0.8);
+            padding-top: 0.5em;
+            padding-bottom: 0.4em;
+            box-shadow:
+              0.5em 0 0 rgba(0, 0, 0, 0.8),
+              -0.5em 0 0 rgba(0, 0, 0, 0.8);
+          }
+        }
+        object.quot-marks {
+          float: left;
+          width: 8vh; height: 8vh;
+          margin: 2vw 2.4vw 0 3.8vw;
+        }
+      }
+      h1 { margin: $gen-spacing-2em 0 7vw 0; font-size: 6vw; }
+      h1.h1-3a { margin: 14vw 0 7vw 0; }
+		}
+    section.testimonial-2b { position: absolute; margin: 0 $gen-spacing-4em 4vw 4vw; bottom: 0; }
+	}
+}
