@@ -55,19 +55,11 @@ body {
         margin: 0 0 $gen-spacing-2em 0;
         .name {
           float: right;
-          margin: 1vw 0 0 0; padding: 2vh 3vh;
-          background: rgba(0, 0, 0, 0.80);
-          h3{
-            margin: 0;
-            font-size: 2.2vh; text-align: left;
-          }
-          p.sub-info { margin: 0.3vh 0 0 0; font-size: 1.8vh; text-align: left; }
+          margin: 1vw 0 0 0; padding: 2vh 1.8vh;
+          h3{ float: right; margin: 0 0 0.25vh 0; font-size: 2.2vh; }
+          p.sub-info {  float: right; margin: 0.3vh 0 0 0; font-size: 1.8vh; }
         }
-        p.input {
-          margin: 0; padding: 2vh 3vh 2vh 4vh;
-          font-size: 2.2vh; line-height: 3.5vh;
-          background: rgba(0, 0, 0, 0.80);
-        }
+        p.input { text-align: right; }
         object.quot-marks {
           float: left;
           width: 6vh; height: 6vh;
@@ -78,33 +70,11 @@ body {
         margin: 0 21vw $gen-spacing-2em 0;
         .name {
           float: left;
-          margin: 0vw 0 0 1vw;
-          h3{
-            margin: 0;
-            font-size: 2.4em; text-align: left;
-          }
-          p.sub-info { margin: 0.6vh 0 0 0; font-size: 2vh; text-align: left;}
-          h3, p.sub-info {
-            background: rgba(0, 0, 0, 0.8);
-            padding-top: 0.5em;
-            padding-bottom: 0.4em;
-            box-shadow:
-              0.5em 0 0 rgba(0, 0, 0, 0.8),
-              -0.5em 0 0 rgba(0, 0, 0, 0.8);
-          }
+          margin: 1vw 0 0 0.8vw;
+          h3{ float:left; margin: 0; font-size: 2.4em; }
+          p.sub-info { float: left; margin: 0.5vh 0 0 -0.2vh; font-size: 2em;}
         }
         p.input {
-          margin: 0; padding: 2vw 3vw 1vw 1vw;
-          font-size: 3vh; line-height: 2.1em;
-          span {
-            display: inline;
-            background: rgba(0, 0, 0, 0.8);
-            padding-top: 0.5em;
-            padding-bottom: 0.4em;
-            box-shadow:
-              0.5em 0 0 rgba(0, 0, 0, 0.8),
-              -0.5em 0 0 rgba(0, 0, 0, 0.8);
-          }
         }
         object.quot-marks {
           float: left;
@@ -118,3 +88,28 @@ body {
     section.testimonial-2b { position: absolute; margin: 0 $gen-spacing-4em 4vw 4vw; bottom: 0; }
 	}
 }
+
+h3, p.sub-info {
+  display: inline;
+  background: rgba(0, 0, 0, 0.8);
+  padding-top: 0.5em;
+  padding-bottom: 0.4em;
+  box-shadow:
+    0.5em 0 0 rgba(0, 0, 0, 0.8),
+    -0.5em 0 0 rgba(0, 0, 0, 0.8);
+}
+p.input {
+  margin: 0; padding: 2vw 3vw 1vw 1vw;
+  font-size: 3vh; line-height: 2.1em;
+  span {
+    display: inline;
+    background: rgba(0, 0, 0, 0.8);
+    padding-top: 0.5em;
+    padding-bottom: 0.4em;
+    box-shadow:
+      0.5em 0 0 rgba(0, 0, 0, 0.8),
+      -0.5em 0 0 rgba(0, 0, 0, 0.8);
+  }
+}
+
+.clear-float { clear: both; }
