@@ -1,0 +1,62 @@
+@import '../../../../../global-assets/scss/utils/grid';
+@import '../../../../../global-assets/scss/fonts/overpass';
+@import '../../../../../global-assets/scss/colors/base_color_palette';
+
+@import '../../../assets/stylesheets/map';
+@import '../../../assets/stylesheets/colors';
+
+#content { background: rgba(130, 0, 0, 0); }
+#event-marker-icon-current svg { border: 1px dotted #0f0; }
+
+body {
+  position: relative; margin: 0;
+  font-family: "Overpass"; font-size: 1vw; color: #fff;
+  main {
+    position: absolute;
+    top: 3mm; bottom: 3mm;
+    left: 3mm; right: 3mm;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    #content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 0;
+      height: 30%;
+      box-sizing: border-box;
+    }
+    .events-list {
+      width: 70%;
+      position: absolute; top:16%; transform: translateY(-50%); left:40%; transform: translateX(-50%);
+    }
+    .events-list .event .letter { fill: white; }
+    .rh-forum_ico {
+      position: absolute; top:16%; transform: translateY(-50%); left:40%; transform: translateX(-50%);
+      h2.rh-forum-location {
+        position: absolute; left: 20vw; top:12.8vw; margin: 0;
+        font-size: 3.5em; font-weight: 500;
+      }
+    }
+    #map .leaflet-tile-pane {
+      background-color: transparent;
+    }
+
+    #map {
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+  }
+}
+
+#map{
+  &.leaflet-container { background-color:#222 !important; }
+
+  path.road { stroke:#000 !important; }
+  path.water {
+    stroke: #000 !important;
+    fill: #000 !important;
+  }
+}

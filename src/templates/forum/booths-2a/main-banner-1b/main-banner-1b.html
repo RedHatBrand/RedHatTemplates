@@ -1,0 +1,115 @@
+---
+width: 1012mm
+height: 362mm
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+  <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
+  <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/events-list.css?v<%= version %>' rel='stylesheet' />
+  <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
+  <link rel="stylesheet" type="text/css" href="<%=baseUrl%>/templates/forum/booths-2a/main-banner-1b/css/main.css" />
+  <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+  </head>
+
+  <body class="theme-{{ theme }}" style="height: {{ height }}mm; width: {{ width }}mm; ">
+    <main>
+        <div id="map"></div>
+        <div class="red-diagonal-bg"
+          style=  "width: 125vw; height: 125vw; position: absolute;
+                  left: -8%; transform: translateX(-20%); transform: translateY(-45%);
+                  background-image: url('<%= baseUrl %>/global-assets/images/category-shapes/solid-center-bar-corporate-820000.svg');
+                  background-size: 125vw 125vw;
+                  opacity: 0.8;"
+        >
+        </div><!--.red-diagonal-bg-->
+        <div
+          style=  "width: 125vw; height: 125vw; position: absolute;
+                  left: -8%; transform: translateX(-20%); transform: translateY(-45%);
+                  background-image: url('<%= baseUrl %>/global-assets/images/category-shapes/pattern-stripe-corporate.svg');
+                  background-size: 45vw 45vw;
+                  background-position: 17.8vw 47vw;
+                  background-repeat: no-repeat;
+                  opacity: 0.8;"
+        >
+        </div>
+        <div
+          style=  "width: 125vw; height: 125vw; position: absolute;
+                  left: -8%; transform: translateX(-20%); transform: translateY(-45%);
+                  background-image: url('<%= baseUrl %>/global-assets/images/category-shapes/solid-stripe-corporate.svg');
+                  background-size: 115vw 115vw;
+                  background-position: -55vw 30vw;
+                  background-repeat: no-repeat;
+                  opacity: 0.8;"
+        >
+        </div>
+        <div
+          style=  "width: 100vw; height: 25vw; position: absolute;
+                  left: 0%; transform: translateX(-50%); top:40%; transform: translateY(-50%);
+                  background-image: url('<%= baseUrl %>/global-assets/images/logos/red-hat-forum-ico.svg');
+                  background-blend-mode: multiply;
+                  background-size: 50vw 50vw;
+                  background-position: center center;
+                  background-repeat: no-repeat;"
+        >
+          <h2 style="position: absolute; left: 46.6%; top: 47.5%; font-size: 4em; font-weight: 500;">{{location}}</h2>
+        </div>
+        <article id="content">
+          <div class="events-list">
+            <a class="event clearfix" href="{{{ link }}}" target="_blank">
+              <div data-brand-tool-editable="date" class="date">
+                <img src='<%= baseUrl %>/templates/forum/assets/images/space.svg' />
+                <div class="text-content">
+                  <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                    <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">{{ date }}</text>
+                  </svg>
+                  <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                    <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">{{ month }}</text>
+                  </svg>
+                </div>
+              </div>
+              <div data-brand-tool-editable="location" class="location clearfix">
+                <div class="text-content">{{ location }}</div>
+              </div>
+            </a>
+          </div>
+        </article>
+        <div class="rh-forum_ico" style="display: none; width: {{#multiply}}{{width}}*0.46{{/multiply}}mm; height: auto;">
+          <object data="<%= baseUrl %>/global-assets/images/logos/red-hat-forum-ico.svg"
+            style="width: {{#multiply}}{{width}}*0.46{{/multiply}}mm; height: auto;"
+          >
+          </object>
+          <h2 class="rh-forum-location">{{ location }}</h2>
+        </div><!--.rh-forum_ico-->
+        <div class="rh-logo" style="height: {{#multiply}}{{height}}*0.40{{/multiply}}mm; width: {{#multiply}}{{height}}*0.40{{/multiply}}mm; position: absolute; bottom: -4%; right: 3%;">
+          <object data="<%= baseUrl %>/global-assets/images/logos/rh-logo.svg"
+            style="height: {{#multiply}}{{height}}*0.40{{/multiply}}mm; width: {{#multiply}}{{height}}*0.40{{/multiply}}mm;"
+          >
+          </object>
+        </div><!--.rh-logo-->
+        <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
+        <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
+        <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
+        <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
+    </main>
+
+    <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
+    <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
+
+    <!-- Params we may expose -->
+    <div style="display: none" id="zoom" data-zoom="14"></div>
+    <!-- /Params we may expose -->
+
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3.v3.min.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script>
+    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map-vector-full-page.js?v<%= version %>'></script>
+    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-events-list.js?v<%= version %>'></script>
+  </body>
+</html>
