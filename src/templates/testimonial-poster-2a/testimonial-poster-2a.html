@@ -16,13 +16,21 @@ height: 309mm
   	<main>
       <div class="background-image"
         style="
-          background-image: url('<%= baseUrl %>/global-assets/images/basic-shapes/triangle-top.svg'),
+          background-image: linear-gradient(135deg, #cc0000 43%, transparent 43%),
+                            linear-gradient(135deg, #cc0000 43%, transparent 43%),
                             linear-gradient(0deg, #37424a 1%, transparent 35%),
                             url({{{ background-image }}});
-          background-blend-mode: multiply, multiply, multiply;
-          background-size: 44vw 44vw, cover, cover;"
+          background-blend-mode: multiply, multiply, multiply, multiply;
+          background-size: 39vw 39vw, 44vw 44vw, cover, cover;
+          background-position: 0 0, 0 0, center, center"
       >
       </div><!--.background-image-->
+      <div>
+        <object
+          data="<%= baseUrl %>/global-assets/images/category-shapes/pattern-stripe-corporate.svg"
+          style="width: 54vw; height 54vw; position: absolute; left: -8.07vw; top: -8.07vw;">
+        </object>
+      </div>
     	<section class="testimonial">
       	<h1 style="display: none;">{{ poster-title }}</h1>
         {{#testimonials}}
