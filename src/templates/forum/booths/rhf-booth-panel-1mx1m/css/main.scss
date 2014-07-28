@@ -17,3 +17,13 @@ body {
     display: block;
   }
 }
+
+.map-mod{
+  &.leaflet-container { background-color:#222 !important; }
+
+  path.road { stroke:#000 !important; }
+  path.water {
+    stroke: #000 !important;
+    fill: #000 !important;
+  }
+}
