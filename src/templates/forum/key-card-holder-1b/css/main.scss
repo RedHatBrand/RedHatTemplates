@@ -1,0 +1,208 @@
+@import "../../../../global-assets/scss/reset";
+@import "../../../../global-assets/scss/colors/base_color_palette";
+@import "../../../../global-assets/scss/colors/flat_color_themes";
+
+$page-margin: 4em;
+
+html{
+  font-family:"Overpass"; color:#fff;
+	background:#eee;
+}
+
+main {
+	position: relative;
+	display: block;
+}
+
+#map{
+  &.leaflet-container { background-color:transparent; }
+
+  path.road {
+    stroke:#444;
+  }
+  path.water {
+    stroke:#444;
+    fill:#444;
+  }
+}
+
+.front-bg-extend-red{
+	width:50%; height:100%;
+	background:#890000; margin:-5mm 0 0 -5mm;
+	position:absolute; z-index:-3;
+	opacity:1;
+}
+.front-bg-extend-gray{
+  width:50%; height:100%;
+  background:#eee; margin:-5mm 0 0 -5mm;
+  position:absolute; z-index:-3;
+  opacity:1;
+}
+
+section.front{
+	z-index:3; margin:0;
+	background:#890000;
+	overflow:hidden;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 50%;
+
+	object.polygon-red-1{
+		width:200%; height:auto;
+		position:absolute; z-index:-1; margin:34.7% 0 0 -40%;
+		opacity:0.2;
+	}
+	object.polygon-red-2{
+		width:150%; height:auto;
+		position:absolute; z-index:-1; margin:-10% 0 0 -60%;
+		opacity:0.3;
+	}
+	object.polygon-red-3{
+		width:500%; height:auto;
+		position:absolute; z-index:-1; margin:0 0 0 -50%;
+		opacity:0.5;
+		display:none;
+	}
+	object.polygon-red-4{
+		width:600%; height:auto;
+		position:absolute; z-index:-1; margin:-220% 0 0 0%;
+		opacity:0.4;
+	}
+  .gray-bg{
+    width:100%; height:100%;
+    background:#eee;
+    position:absolute; margin:-94.5% 0 0 0;
+    overflow:hidden;
+    object.polygon-gray-1{
+      width:200%; height:auto;
+      position:absolute; z-index:0; margin:34.7% 0 0 -40%;
+      opacity:0.3;
+    }
+    object.polygon-gray-2{
+      width:150%; height:auto;
+      position:absolute; z-index:0; margin:-10% 0 0 -60%;
+      opacity:0.35;
+    }
+    object.polygon-gray-3{
+      width:500%; height:auto;
+      position:absolute; z-index:0; margin:0 0 0 -50%;
+      opacity:0.7;
+    }
+    object.polygon-gray-4{
+      width:600%; height:auto;
+      position:absolute; z-index:0; margin:-220% 0 0 0%;
+      opacity:0.3;
+    }
+  }
+	object.solid-tri-shape-222{
+		height:50%;
+		position:absolute; margin:80% 0 0 35%;
+	}
+	object.rh-logo{
+		width:33%;
+		position:absolute; margin:116% 0 0 66%;
+	}
+	.rhf-marker-ico-contain{
+		width:43%;
+		position:relative; z-index:3; margin:auto; padding:40% 0 0 0;
+	}
+}
+
+section.back-gray{
+	position: absolute;
+  z-index: 3;
+  margin:0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+	background:#00f;
+  .bg-back-gray{
+    width:100%; height:100%;
+    position:absolute;
+    background:#eee;
+  }
+  .bg-back-red{
+    width:100%; height:100%;
+    position:absolute;
+    background:#222;
+  }
+  .back-cover-bg{
+    width:100%; height:100%;
+    position:absolute; z-index:0;
+    background:#eee;
+    opacity:0.65;
+  }
+  .rhf-logo-contain{
+    width:70%;
+    position:absolute; margin:50% 0 0 15%;
+    h3{
+      height:1.2em; font-size:1.2em;
+      margin:-16% 0 0 43%;
+      color:#000;
+    }
+  }
+  .rhf-logo-contain-red{
+    width:70%;
+    position:absolute; margin:50% 0 0 15%;
+    h3{
+      height:1.2em; font-size:1.2em;
+      margin:-16% 0 0 43%;
+      color:#fff;
+    }
+  }
+}
+
+.front-bg-extend-red-red,
+.front-bg-extend-gray-gray,
+.red-bg-red,
+.gray-bg-gray,
+.rhf-logo-contain-red-red,
+.rhf-logo-contain-gray-gray,
+.bg-back-gray-gray,
+.bg-back-red-red,
+.back-cover-bg-gray
+{visibility:visible;}
+
+.front-bg-extend-red-gray,
+.front-bg-extend-gray-red,
+.red-bg-gray,
+.gray-bg-red,
+.rhf-logo-contain-red-gray,
+.rhf-logo-contain-gray-red,
+.bg-back-gray-red,
+.bg-back-red-gray,
+.back-cover-bg-red
+{visibility:hidden;}
+
+.corner-logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 66.667%;
+  max-height: 100vh;
+
+  img.triangle {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%
+  }
+
+  img.logo {
+    position: absolute;
+    right: $page-margin / 4;
+    bottom: $page-margin / 4;
+    margin: 0;
+    height: auto;
+    width: 40%;
+  }
+}
+
+#map .event-marker-icon-current {
+  width: 60% !important;
+}
