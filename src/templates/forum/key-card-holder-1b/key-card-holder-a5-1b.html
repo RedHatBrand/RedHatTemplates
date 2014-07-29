@@ -10,16 +10,14 @@ height: 180mm
     <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
     <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/map.css?v<%= version %>' rel='stylesheet' />
-    <link rel="stylesheet" type="text/css" href="<%= baseUrl %>/templates/forum/key-card-holder/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<%= baseUrl %>/templates/forum/key-card-holder-1b/css/main.css">
     <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
   </head>
 
 <body class="theme-{{ theme }}" style="width: {{width}}mm; height: {{height}}mm;">
   <main>
-
-    <div class="front-bg-extend-red front-bg-extend-red-{{ colour-setup }}">&nbsp;</div><!--.front-bg-extend-->
-    <div class="front-bg-extend-gray front-bg-extend-gray-{{ colour-setup }}">&nbsp;</div><!--.front-bg-extend-->
     <section class="front">
+      <object class="rhf-marker-only" data="<%= baseUrl %>/global-assets/images/logos/red-hat-forum-marker.svg"></object>
     </section><!--.front-->
 
     <section class="back-gray">
@@ -50,11 +48,11 @@ height: 180mm
         <path
            d="M 497.589,243.988 C 497.589,109.221 386.18,0 248.786,0 111.392,0 0,109.221 0,243.988 c 0,168.804 246.517,375.136 246.517,375.136 0,0 251.072,-213.228 251.072,-375.136"
            id="path7"
-           style="fill:#e22434" />
+           style="fill:#cc0000" />
         <path
            d="m 497.589,243.988 c 0,-69.777 -29.881,-132.697 -77.767,-177.17 L 246.517,619.124 c 0,0 251.072,-213.228 251.072,-375.136"
            id="path9"
-           style="fill:#bc1c29" />
+           style="fill:#aa0000" />
         <path
            d="M 206.195,96.08 142.089,237.1 328.744,188.194 206.195,96.08 z m -71.467,152.986 -5.688,-6.702 70.812,-155.803 7.34,-1.876 135.384,101.766 -1.68,8.568 -206.168,54.047 z"
            id="path11"
@@ -150,7 +148,6 @@ height: 180mm
         </g>
       </svg>'>
     </div>
-
     <!-- Params we may expose -->
     <div style="display: none" id="zoom" data-zoom="11"></div>
     <!-- /Params we may expose -->
