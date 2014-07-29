@@ -19,24 +19,11 @@ main {
   left: 3mm; right: 3mm;
 }
 
-#map{
-  &.leaflet-container { background-color:transparent; }
-
-  path.road {
-    stroke:#444;
-  }
-  path.water {
-    stroke:#444;
-    fill:#444;
-  }
-}
-
 section.front{
 	z-index:3; margin:0;
 	background: #820000;
 	overflow: hidden;
   position: absolute;
-  z-index: 3;
   left: 0;
   top: 0;
   bottom: 0;
@@ -44,6 +31,14 @@ section.front{
   object.rhf-marker-only {
     width: 30vw; height: 30vw;
     position: absolute; top:25%; transform: translateY(-50%); left:50%; transform: translateX(-50%);
+  }
+  object.bg-pattern {
+    width: 150vw; height: 150vw;
+    position: absolute; position: absolute; top:35%; transform: translateY(-50%); left:-10%; transform: translateX(-50%);
+  }
+  object.bg-solid-stripe {
+    width: 90vw; height: 90vw;
+    position: absolute; position: absolute; top:25%; transform: translateY(-50%); left:35%; transform: translateX(-50%);
   }
 	object.solid-tri-shape-222{
 		height:50%;
@@ -61,29 +56,11 @@ section.front{
 
 section.back-gray{
 	position: absolute;
-  z-index: 3;
   margin:0;
   top: 0;
   bottom: 0;
   left: 50%;
   right: 0;
-	background:#00f;
-  .bg-back-gray{
-    width:100%; height:100%;
-    position:absolute;
-    background:#eee;
-  }
-  .bg-back-red{
-    width:100%; height:100%;
-    position:absolute;
-    background:#222;
-  }
-  .back-cover-bg{
-    width:100%; height:100%;
-    position:absolute; z-index:0;
-    background:#eee;
-    opacity:0.65;
-  }
   .rhf-logo-contain{
     width:70%;
     position:absolute; margin:50% 0 0 15%;
@@ -103,28 +80,6 @@ section.back-gray{
     }
   }
 }
-
-.front-bg-extend-red-red,
-.front-bg-extend-gray-gray,
-.red-bg-red,
-.gray-bg-gray,
-.rhf-logo-contain-red-red,
-.rhf-logo-contain-gray-gray,
-.bg-back-gray-gray,
-.bg-back-red-red,
-.back-cover-bg-gray
-{visibility:visible;}
-
-.front-bg-extend-red-gray,
-.front-bg-extend-gray-red,
-.red-bg-gray,
-.gray-bg-red,
-.rhf-logo-contain-red-gray,
-.rhf-logo-contain-gray-red,
-.bg-back-gray-red,
-.bg-back-red-gray,
-.back-cover-bg-red
-{visibility:hidden;}
 
 .corner-logo {
   position: absolute;
@@ -153,4 +108,18 @@ section.back-gray{
 
 #map .event-marker-icon-current {
   width: 60% !important;
+}
+
+#map .leaflet-tile-pane {
+  background-color: transparent;
+}
+
+#map{
+  &.leaflet-container { background-color:#444 !important; }
+
+  path.road { stroke:#222 !important; }
+  path.water {
+    stroke: #222 !important;
+    fill: #222 !important;
+  }
 }
