@@ -1,0 +1,512 @@
+@import '../../../../global-assets/scss/fonts/overpass';
+@import '../../../../global-assets/scss/colors/base_color_palette';
+
+@import '../../assets/stylesheets/map';
+@import '../../assets/stylesheets/colors';
+
+#map{
+  &.leaflet-container { background-color:#222 !important; }
+
+  path.road { stroke:#111 !important; }
+  path.water {
+    stroke: #111 !important;
+    fill: #111 !important;
+  }
+}
+
+html {
+  font-family: 'Overpass', 'Interstate', 'Helvetica', 'Arial', sans-serif;
+  font-size: 20px;
+  line-height: 1.5em;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  color: $color-white;
+
+  &[class*="campaign"] {
+    background-size: 600px 600px;
+    background-position: 50% 100%;
+  }
+}
+
+.background-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.brand,
+.campaign {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.brand,
+.campaign { display: none }
+.rh-theme-brand .brand { display: block; }
+.rh-theme-campaign .campaign { display: block; }
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  line-height: 1.25em;
+}
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.333em; }
+h3 { font-size: 1.25em; }
+
+.outer-wrapper {
+  position: absolute;
+  left: 1em;
+  right: 1em;
+  bottom: 1em;
+  top: 1em;
+}
+
+.text-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 6em;
+  display: flex;
+  align-items: center;
+  -webkit-hyphens: manual;
+}
+
+.branding {
+  position: absolute;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  height: 3em;
+}
+.branding svg {
+  height: 3em;
+  min-width: 8em;
+}
+
+.call-to-action {
+  padding: 0.5em 0.75em;
+  border: thin solid;
+  text-transform: uppercase;
+  line-height: 1em;
+  display: inline-block;
+}
+
+[class*="brand"][class*="campaign"] {
+  .call-to-action {
+    border: none;
+    background-color: $color-rh-red;
+    color: $color-white;
+  }
+}
+
+/* 300 X 600 The base style */
+.map-mod-300-600 .event-marker-icon-current {
+  margin: 0 0 0 -9.5vw !important;
+  svg {
+    width: 86vw; height: 86vw;
+  }
+}
+.branding-300-600 {
+  bottom: -1.2em; right: -1em;
+  svg {
+    height: 2em; min-width: 7em;
+  }
+}
+.size-300-600 .text-wrapper {
+  top:0; bottom: 30.6em;
+  font-size: 0.7em;
+  align-items: inherit;
+}
+.size-300-600 .call-to-action {
+  left: 0; right: 0;
+  top: -1em; bottom: 0.5em;
+}
+
+.size-300-600 {
+  width: 300px;
+  height: 600px;
+}
+
+
+/* 300 X 100 */
+.map-mod-300-100 .event-marker-icon-current {
+  margin: -2em 0 0 11vw !important;
+  svg {
+    width:40vw; height: 40vw;
+  }
+}
+.branding-300-100 {
+  svg {
+    height: 0.5em; width: 1em;
+    position: absolute; bottom: 0.5em; right: -0.5em;
+  }
+}
+.size-300-100 {
+  width: 300px;
+  height: 100px;
+  font-size: 8px;
+  line-height: 1.5em;
+}
+
+.size-300-100 .branding {
+  top: auto;
+  bottom: -0.5em;
+  left: auto;
+  right: 0;
+  width: 10em;
+  height: 3.5em;
+}
+
+.size-300-100 .branding svg {
+  height: 2.5em;
+}
+
+.size-300-100 .text-wrapper {
+  top: 8.5em;
+  right: 8em; bottom: 0;
+  .text { float: left; margin: -0.3em 0 0 0; font-size: 1em; }
+}
+
+.size-300-100 .call-to-action {
+  float: left; margin-top: -0.4em; margin-left: 4px;
+  font-size: 1em; line-height: 1em;
+}
+
+
+
+/* 125 X 125 */
+.map-mod-125-125 .event-marker-icon-current {
+  margin: -7vw 0 0 -10vw !important;
+  svg {
+    width:77vw; height: 77vw;
+  }
+}
+.size-125-125 {
+  width: 125px;
+  height: 125px;
+}
+
+.size-125-125 .text-wrapper,
+.size-125-125 .call-to-action  {
+  display: none;
+}
+
+.size-125-125 .branding-125-125 {
+  right: -3.5em;
+  bottom: -1em;
+  height: 1.5em;
+  margin-top: -0.8em;
+}
+.size-125-125 .branding-125-125 svg {
+  width: 1em; height: 1em;
+}
+
+
+/* 468 X 60 */
+.map-mod-468-60 .event-marker-icon-current {
+  margin: 0 0 0 -3em !important;
+  svg {
+    width: 11em; height: 11em;
+  }
+}
+.size-468-60 {
+  width: 468px;
+  height: 60px;
+  font-size: 10px;
+  line-height: 1.5em;
+}
+
+.size-468-60 .call-to-action {
+  display: none;
+}
+
+.size-468-60 .text-wrapper {
+  top: 1em;
+  left: 27em; right: 9em;
+  bottom: auto;
+  font-size: 0.8em;
+}
+
+.size-468-60 .branding {
+  width: 9.75em;
+  height: 3.5em;
+  right: -2em;
+  bottom: -0.5em;
+  left: auto;
+}
+.size-468-60 .branding svg {
+  width: 7em;
+  height: 2.5em;
+}
+
+/* 728 X 90 */
+
+.map-mod-728 .event-marker-icon-current {
+  margin: 0 0 0 -10em !important;
+  svg {
+    height: 7em;
+  }
+}
+.size-728-90 {
+  width: 728px;
+  height: 90px;
+  font-size: 10px;
+  line-height: 1.5em;
+
+
+  &[class*="campaign"] {
+    background-size: 728px 728px;
+  }
+}
+
+.size-728-90 .text-wrapper {
+  top: -1em;
+  left: 43em; bottom: 0; right: 10em;
+}
+
+.size-728-90 .call-to-action {
+  float: left; margin-top: -0.6em;
+  font-size: 0.8em; line-height: 1em;
+}
+
+.size-728-90 .branding {
+  right: 0em;
+  bottom: 1.7em;
+}
+.size-728-90 .branding svg {
+  width: 9em;
+  height: 3em;
+}
+
+
+/* 180 X 90 */
+.map-mod-180-90 .event-marker-icon-current {
+  margin: -2em 0 0 5vw !important;
+  svg {
+    width: 55vw; height: 55vw;
+  }
+}
+
+.branding-180-90 {
+  svg {
+    height: 0.5em; width: 1em;
+    position: absolute; bottom: 0.5em; right: -0.5em;
+  }
+}
+.size-180-90 {
+  width: 300px;
+  height: 100px;
+  font-size: 8px;
+  line-height: 1.5em;
+}
+
+.size-180-90 .branding {
+  top: auto;
+  bottom: -0.5em;
+  left: auto;
+  right: -1em;
+  width: 10em;
+  height: 3.5em;
+}
+
+.size-180-90 .branding svg {
+  height: 2em;
+}
+
+.size-180-90 .text-wrapper {
+  top: 7.5em;
+  right: 7em; bottom: 0;
+  .text { float: left; margin: -0.3em 0 0 0; font-size: 0.7em; }
+}
+
+.size-180-90 .call-to-action {
+  float: left; margin-top: -0.4em; margin-left: 4px;
+  font-size: 0.7em; line-height: 1.4em;
+}
+
+/* 160 X 600 */
+
+.size-160-600 {
+  width: 160px;
+  height: 600px;
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+.size-160-600 .text-wrapper {
+  top:0; bottom: 30.6em;
+  font-size: 0.7em;
+  align-items: inherit;
+}
+.size-160-600 .call-to-action {
+  left: 0; right: 0;
+  top: -1em; bottom: 0.5em;
+}
+
+/* 120 X 600 */
+
+.size-120-600 {
+  width: 120px;
+  height: 600px;
+  font-size: 10px;
+  line-height: 1.5em;
+}
+
+.size-120-600 .branding {
+  height: 3.3em;
+}
+.size-120-600 .branding svg {
+  height: 3.3em;
+}
+
+.size-120-600 .text-wrapper {
+  top:0; bottom: 30.6em;
+  font-size: 0.9em;
+  align-items: inherit;
+}
+.size-120-600 .call-to-action {
+  left: 0; right: 0;
+  top: -1em; bottom: 0.5em;
+}
+
+/* 240 X 400 */
+
+.size-240-400 {
+  width: 240px;
+  height: 400px;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+.branding-240-400 {
+  bottom: -1.2em; right: -1em;
+  svg {
+    height: 2em; min-width: 7em;
+  }
+}
+.size-240-400 .text-wrapper {
+  top:0; bottom: 30.6em;
+  font-size: 0.7em;
+  align-items: inherit;
+}
+.size-240-400 .call-to-action {
+  left: 0; right: 0;
+  top: -1em; bottom: 0.5em;
+}
+
+/* 336 X 280 */
+.map-mod-336-280 .event-marker-icon-current {
+  margin: -2.5em 0 0 0.5vw !important;
+  svg {
+    width: 65vw; height: 65vw;
+  }
+}
+.branding-336-280 svg {
+  height: 1.5em;
+  min-width: 6em;
+}
+.size-336-280 {
+  width: 336px;
+  height: 280px;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+.size-336-280 .text-wrapper {
+  top: 14em;
+  right: 7.5em; bottom: 0;
+  .text { float: left; margin: 0 1em 0 1em; font-size: 0.7em; }
+}
+
+.size-336-280 .call-to-action {
+  float: left; margin-top: -0.6em;
+  font-size: 0.8em; line-height: 1em;
+}
+.size-336-280 .branding {
+  height: 3.5em;
+}
+.size-336-280 .branding svg {
+  height: 3.5em;
+}
+
+.size-336-280 .call-to-action {
+  bottom: 0.5em;
+}
+
+
+/* 720 X 300 */
+.map-mod-720 .event-marker-icon-current {
+  margin: -2.5em 0 0 10vw !important;
+  svg {
+    width:40vw; height: 40vw;
+  }
+}
+.size-720-300 {
+  width: 720px;
+  height: 300px;
+  font-size: 18px;
+  line-height: 1.5em;
+
+  &[class*="campaign"] {
+    background-size: 720px 720px;
+  }
+}
+
+.size-720-300 .text-wrapper {
+  top: 11em;
+  right: 11.5em; bottom: 0;
+  .text { float: left; margin: 0 1em 0 1em; font-size: 0.8em; }
+}
+
+.size-720-300 .call-to-action {
+  float: left; margin-top: -0.6em;
+  font-size: 0.8em; line-height: 1em;
+}
+
+.size-720-300 .branding {
+  height: 3.5em;
+}
+.size-720-300 .branding svg {
+  height: 3.5em;
+}
+
+/* 120 X 90 */
+.map-mod-125-125 .event-marker-icon-current {
+  margin: -7vw 0 0 -8vw !important;
+  svg {
+    width:77vw; height: 77vw;
+  }
+}
+.size-120-90 {
+  width: 120px;
+  height: 90px;
+  font-size: 10px;
+  line-height: 1.5em;
+}
+
+.size-120-90 .text-wrapper,
+.size-120-90 .call-to-action  {
+  display: none;
+}
+
+.size-120-90 .branding-125-125 {
+  right: -2em;
+  bottom: 0em;
+  height: 1.5em;
+  margin-top: -0.8em;
+}
+.size-120-90 .branding-125-125 svg {
+  width: 2em; height: 2em;
+}
