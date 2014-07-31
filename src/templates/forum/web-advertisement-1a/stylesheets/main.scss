@@ -415,32 +415,27 @@ h3 { font-size: 1.25em; }
     width: 65vw; height: 65vw;
   }
 }
-.branding-336-280 svg {
-  height: 1.5em;
-  min-width: 6em;
-}
 .size-336-280 {
   width: 336px;
   height: 280px;
   font-size: 14px;
-  line-height: 1.5em;
 }
 
 .size-336-280 .text-wrapper {
   top: 14em;
   right: 7.5em; bottom: 0;
-  .text { float: left; margin: 0 1vw 0 1em; font-size: 0.7em; }
+  .text { float: left; margin: 0 1vw 0 1em; font-size: 0.7em; line-height: 2em; }
 }
 
 .size-336-280 .call-to-action {
   float: left; margin-top: -0.6em; bottom: 0.5em;
-  font-size: 0.8em; line-height: 1em;
+  font-size: 0.8em; line-height: 1em
 }
 .size-336-280 .branding {
-  bottom: 1em;
+  bottom: 0.5em; right: -1em;
 }
 .size-336-280 .branding svg {
-  height: 3.5em;
+  width: 2em; height: 2.4em;
 }
 
 
