@@ -20,11 +20,9 @@ html {
 body {
   font-family: 'Overpass';
   overflow: hidden;
-  position: relative;
-  padding: 0;
-  margin: 0;
-  color: $color-white;
+  position: relative; padding: 0; margin: 0;
   font-size: 20px;
+  color: $color-white;
 
   &[class*="campaign"] {
     background-size: 600px 600px;
@@ -33,21 +31,14 @@ body {
 }
 
 .background-wrapper {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
+  position: absolute; left: 0; right: 0; bottom: 0; top: 0;
   overflow: hidden;
 }
 
 .brand,
 .campaign {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 0; bottom: 0; left: 0; right: 0;
 }
 .brand,
 .campaign { display: none }
@@ -56,37 +47,27 @@ body {
 
 .outer-wrapper {
   position: absolute;
-  left: 1em;
-  right: 1em;
-  bottom: 1em;
-  top: 1em;
+  left: 1em; right: 1em; bottom: 1em; top: 1em;
 }
 
 .text-wrapper {
   position: absolute;
-  left: 0; right: 0;
-  top: 0; bottom: 6em;
-  display: flex;
-  align-items: center;
+  left: 0; right: 0; top: 0; bottom: 6em;
+  display: flex; align-items: center;
   -webkit-hyphens: manual;
   font-weight: 500; text-transform: uppercase;
 }
 
 .branding {
-  position: absolute;
-  bottom: 0; left: auto; right: 0;
+  position: absolute; bottom: 0; left: auto; right: 0;
   height: 3em;
 }
-.branding svg {
-  height: 3em;
-  min-width: 8em;
-}
+.branding svg { height: 3em; min-width: 8em; }
 
 .call-to-action {
   padding: 0.5em 0.75em;
   border: thin solid;
-  text-transform: uppercase;
-  line-height: 1em;
+  text-transform: uppercase; line-height: 1.2em;
   display: inline-block;
 }
 
@@ -110,7 +91,7 @@ body {
 }
 .size-300-600 .text-wrapper {
   top:0; bottom: 31em;
-  font-size: 0.6em; line-height: 2em;
+  line-height: 2em;
   align-items: inherit;
 }
 .size-300-600 .call-to-action {
