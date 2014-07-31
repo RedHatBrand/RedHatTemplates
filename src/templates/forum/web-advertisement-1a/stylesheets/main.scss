@@ -218,7 +218,7 @@ h3 { font-size: 1.25em; }
 
 /* 468 X 60 */
 .map-mod-468-60 .event-marker-icon-current {
-  margin: 0 0 0 -3em !important;
+  margin: 0 0 0 -2.5em !important;
   svg {
     width: 11em; height: 11em;
   }
@@ -235,7 +235,7 @@ h3 { font-size: 1.25em; }
 }
 
 .size-468-60 .text-wrapper {
-  top: 1em;
+  top: -0.5em;
   left: 27em; right: 9em;
   bottom: auto;
   font-size: 0.8em;
@@ -311,7 +311,7 @@ h3 { font-size: 1.25em; }
   width: 300px;
   height: 100px;
   font-size: 8px;
-  line-height: 1.5em;
+  line-height: 1em;
 }
 
 .size-180-90 .branding {
@@ -429,22 +429,18 @@ h3 { font-size: 1.25em; }
 .size-336-280 .text-wrapper {
   top: 14em;
   right: 7.5em; bottom: 0;
-  .text { float: left; margin: 0 1em 0 1em; font-size: 0.7em; }
+  .text { float: left; margin: 0 1vw 0 1em; font-size: 0.7em; }
 }
 
 .size-336-280 .call-to-action {
-  float: left; margin-top: -0.6em;
+  float: left; margin-top: -0.6em; bottom: 0.5em;
   font-size: 0.8em; line-height: 1em;
 }
 .size-336-280 .branding {
-  height: 3.5em;
+  bottom: 1em;
 }
 .size-336-280 .branding svg {
   height: 3.5em;
-}
-
-.size-336-280 .call-to-action {
-  bottom: 0.5em;
 }
 
 
@@ -478,7 +474,7 @@ h3 { font-size: 1.25em; }
 }
 
 .size-720-300 .branding {
-  height: 3.5em; top: 10.7em;
+  bottom: 1em;
 }
 .size-720-300 .branding svg {
   height: 3.5em;
