@@ -13,7 +13,7 @@ height: 100vh
     <meta content='Red Hat' name='author'>
     <meta content='{{ meta-description }}' name='description'>
     <meta content='{{ meta-keywords }}' name='keywords'>
-    <link href='//red-hat-assets.s3.amazonaws.com/assets/images/favicon.ico' rel='icon' type='image/ico'>
+    <link href='http://red-hat-assets.s3.amazonaws.com/assets/images/favicon.ico' rel='icon' type='image/ico'>
     <link href='http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css' media='screen' rel='stylesheet'>
     <link href='<%=baseUrl%>/templates/forum/microsite/stylesheets/main.css?v1404800092111' media='screen' rel='stylesheet'>
     <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
@@ -187,6 +187,10 @@ height: 100vh
             <div id="{{#slugify}}{{ name }}{{/slugify}}" class="modal full-width">
               <header class="modal-header">
                 <h3 data-brand-tool-editable="speakers.name">{{ name }}</h3>
+
+                <button type="button" class="modal-close icon-remove icon-only">
+                  Close
+                </button>
               </header>
               <div class="modal-content">
                 <div class="grid-container">
@@ -197,7 +201,8 @@ height: 100vh
                     <div class="sign-off">
                       <p>
                         <em>{{ title }}</em>
-                        <br> <strong>{{ company }}</strong>
+                        <br /> 
+                        <strong>{{ company }}</strong>
                       </p>
                     </div>
                   </div>

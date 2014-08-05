@@ -23,6 +23,13 @@
       bottom: $page-margin / 2;
     }
   }
+  
+  .modal-close {
+    position: absolute;
+    top: 1.6em;
+    right: 1.6em;
+  }
+ 
 
   .modal-header {
     h1, h2, h3, h4, h5, h6 { margin: 0; }
