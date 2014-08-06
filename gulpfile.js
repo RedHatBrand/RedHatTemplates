@@ -1,4 +1,5 @@
 var gulp               = require('gulp'),
+    gulpFilter         = require('gulp-filter'),
     gutil              = require('gulp-util'),
     debug              = require('gulp-debug'),
     deploy             = require('gulp-awspublish'),
@@ -106,25 +107,23 @@ gulp.task('smith', function () {
   return defered.promise;
 });
 
-gulp.task('replace-urls', ['smith'], function () {
-  return gulp.src(tmp + '/templates/**/*.html', { base: './.tmp/templates' })
-      .pipe(ejs({ baseUrl: base['development'], version: Date.now() }).on('error', gutil.log))
-      .pipe(gulp.dest(tmp + '/templates'));
-});
+gulp.task('build', ['smith'], function () {
+  var htmlFilter = gulpFilter('**/*.html');
 
-gulp.task('replace-urls-production', ['smith'], function () {
-  return gulp.src(tmp + '/templates/**/*.html', { base: './.tmp/templates' })
-      .pipe(ejs({ baseUrl: base['production'], version: Date.now() }).on('error', gutil.log))
-      .pipe(gulp.dest(tmp + '/templates'));
-});
-
-gulp.task('build', ['replace-urls'], function () {
   return gulp.src(tmp + '/**/*', { base: './.tmp' })
-    .pipe(gulp.dest(tmp + '/templates'));
+    .pipe(htmlFilter)
+    .pipe(ejs({ baseUrl: base['development'], version: Date.now() }).on('error', gutil.log))
+    .pipe(htmlFilter.restore())
+    .pipe(gulp.dest(tmp));
 });
 
-gulp.task('build-production', ['replace-urls-production'], function () {
+gulp.task('build-production', ['smith'], function () {
+  var htmlFilter = gulpFilter('**/*.html');
+
   return gulp.src(tmp + '/**/*', { base: './.tmp' })
+    .pipe(htmlFilter)
+    .pipe(ejs({ baseUrl: base['production'], version: Date.now() }).on('error', gutil.log))
+    .pipe(htmlFilter.restore())
     .pipe(gulp.dest(prod));
 });
 
