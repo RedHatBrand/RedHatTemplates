@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <link href='http://red-hat-assets.s3.amazonaws.com/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+  <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/vendor/leaflet.css?v1407286478211' rel='stylesheet' />
+  <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/events-list.css?v1407286478211' rel='stylesheet' />
+  <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/map.css?v1407286478211' rel='stylesheet' />
+  <link rel="stylesheet" type="text/css" href="http://red-hat-assets.s3.amazonaws.com/templates/forum/booths/rhf-booth-main-banner/main-concept-2a/css/style.css" />
+  <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+  </head>
+
+  <body class="theme-{{ theme }}" style="width: {{ width }}mm; height: {{ height }}mm;">
+  <main style="width: {{#subtract}}{{ width }}-12{{/subtract}}mm; height: {{#subtract}}{{ height }}-12{{/subtract}}mm;">
+      <div id="map" style="width: {{#subtract}}{{ width }}-12{{/subtract}}mm; height: {{#subtract}}{{ height }}-12{{/subtract}}mm;"></div>
+      <div class="rh-forum-logo">
+        <object data="http://red-hat-assets.s3.amazonaws.com/global-assets/images/logos/red-hat-forum-ico.svg" class="rh-forum-ico"></object>
+        <h3 class="venue">{{ location }}</h3>
+        <div class="venue-info" style="display: none">
+            <object data="http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/images/space.svg"></object>
+            <div class="date">
+              <h3 class="dd">{{ dd }}</h3>
+              <h3 class="mm">{{ mm }}</h3>
+            </div><!--.date-->
+            <div class="venue-info-txt">
+              <h1>{{ location }}</h1>
+            </div><!--.venue-info-txt-->
+        </div><!--.venue-info-->
+      </div><!--.rh-forum-logo-->
+
+    <article id="content">
+      <div class="events-list">
+        <a class="event clearfix" href="{{{ link }}}" target="_blank">
+          <div data-brand-tool-editable="date" class="date">
+            <img src='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/images/space.svg' />
+            <div class="text-content">
+              <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                  {{ date }}
+                </text>
+              </svg>
+              <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                  {{ month }}
+                </text>
+              </svg>
+            </div>
+          </div>
+          <div data-brand-tool-editable="location" class="location clearfix">
+            <div class="text-content">{{ location }}</div>
+          </div>
+        </a>
+      </div>
+    </article>
+    <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
+    <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
+    <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
+    <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
+  </main>
+
+  <div class='corner-logo' style="display: none;">
+    <div class="logo"></div>
+  </div>
+
+  <div class="rh-logo" style="display: none;">
+    <object data="http://red-hat-assets.s3.amazonaws.com/global-assets/images/logos/rh-logo.svg"></object>
+  </div><!--.rh-logo-->
+
+  <div class="rh-logo-triangle" style="height: 25vw; width: 25vw;">
+    <object data="http://red-hat-assets.s3.amazonaws.com/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg"
+            style="height: 25vw; width: 25vw;">
+    </object>
+  </div><!--.rh-logo-triangle-->
+
+  <div style="display: none" id="baseUrl" data-base-url="http://red-hat-assets.s3.amazonaws.com"></div>
+  <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
+  <!-- Params we may expose -->
+  <div style="display: none" id="zoom" data-zoom="14"></div>
+  <!-- /Params we may expose -->
+
+  <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/jquery.js'></script>
+  <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/lodash.js'></script>
+  <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/leaflet.js'></script>
+  <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/d3.v3.min.js'></script>
+  <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
+  <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/d3-topojson.js'></script>
+  <script src='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/javascripts/print-map-vector.js?v1407286478211'></script>
+  <script src='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/javascripts/print-events-list.js?v1407286478211'></script>
+  </body>
+</html>

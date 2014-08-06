@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <meta content='IE=edge' http-equiv='X-UA-Compatible' />
+    <link href='http://red-hat-assets.s3.amazonaws.com/templates/product/web-advertisement/stylesheets/main.css?v1407286478211' rel='stylesheet' />
+    <style>
+      body.brand {
+        background-image:
+          url('{{{ background-image }}}'),
+          url('http://red-hat-assets.s3.amazonaws.com/global-assets/images/category-shapes/solid-center-bar-corporate.svg');
+        background-position: 50% 50%, 50% 50%;
+      }
+
+      body.campaign {
+        background-image:
+          url('{{{ background-image }}}'),
+          url('http://red-hat-assets.s3.amazonaws.com/global-assets/images/basic-shapes/triangle.svg');
+        background-position: 50% 50%, 100% 100%;
+        background-size: cover, 250% 200%;
+      }
+    </style>
+  </head>
+  <body class='size-720-300 {{ purpose }}' style='width: 720px; height: 300px'>
+    <main class='outer-wrapper'>
+      <div class='branding'>
+        <div class='rh-logo'>
+        </div>
+      </div>
+      <div class='text-wrapper'>
+        <div class='text'>
+          {{{ long-message }}}
+          <div class='call-to-action'>
+            {{ call-to-action }}
+          </div>
+        </div>
+      </div>
+      <div class="product-wrapper">
+        {{{ product }}}
+      </div>
+    </main>
+  </body>
+</html>

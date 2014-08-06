@@ -1,0 +1,60 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link href='http://red-hat-assets.s3.amazonaws.com/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+    <link href="http://red-hat-assets.s3.amazonaws.com/templates/testimonial-poster-2a/css/main.css?v1407286478211" rel="stylesheet" />
+    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+  </head>
+
+  <body sclass="rh-theme-{{ category }}" style="width: {{ height }}mm; height: {{ width }}mm;">
+  	<main>
+      <div class="background-image-2b"
+        style="
+          background-image: linear-gradient(-45deg, #cc0000 43%, transparent 43%),
+                            linear-gradient(-45deg, #cc0000 43%, transparent 43%),
+                            linear-gradient(0deg, #37424a 1%, transparent 35%),
+                            url({{{ background-image }}});
+          background-blend-mode: multiply, multiply, multiply, multiply;
+          background-size: 27.5vw 27.5vw, 38.9vw 38.9vw, cover, cover;
+          background-position: right bottom, right bottom, center, center"
+      >
+      </div><!--.background-image-->
+      <div style="width: 100vw; height 100vh; position: absolute; right: 0; bottom: 0;">
+        <object
+          data="http://red-hat-assets.s3.amazonaws.com/global-assets/images/category-shapes/pattern-stripe-corporate.svg"
+          style="width: 43vw; height: 43vw; position: absolute; right: -4.8vw; bottom: -4.8vw;">
+        </object>
+      </div>
+    	<section class="testimonial testimonial-2b">
+      	<h1 style="display: none;">{{ poster-title }}</h1>
+        {{#testimonials}}
+        <div class="grp-2b">
+          <object data="http://red-hat-assets.s3.amazonaws.com/global-assets/images/basic-shapes/quot-marks.svg" class="quot-marks" style="display: none;"></object>
+          <p class="input"><span>{{ content }}</span></p>
+          <div class="name">
+            <h3>{{ name }}</h3>
+            <div class="clear-float"></div>
+            <p class="sub-info">{{ sub-info }}</p>
+          </div>
+        </div><!--.grp-->
+        {{/testimonials}}
+      </section><!--.testimonial-->
+      <div class="rh-logo" style="width: 12vw; height: 2vw; position: absolute; bottom: 3vw; right: -3vw;">
+        <object
+          style="width: 12vw; height: 5vw;"
+          data="http://red-hat-assets.s3.amazonaws.com/global-assets/images/logos/rh-logo.svg">
+        </object>
+      </div><!--.rh-logo-->
+      <div class='corner-logo' style="display:none;">
+        <div class="logo"></div>
+      </div>
+      <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
+    </main>
+  </body>
+</html>

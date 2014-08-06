@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="charset" content="utf-8" />
+  <link href='http://red-hat-assets.s3.amazonaws.com/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+  <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/vendor/leaflet.css?v1407286478211' rel='stylesheet' />
+  <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/map.css?v1407286478211' rel='stylesheet' />
+  <link rel="stylesheet" type="text/css" href="http://red-hat-assets.s3.amazonaws.com/templates/forum/booths/rhf-booth-panel-1mx2p5m/css/main.css" />
+  <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+  </head>
+
+
+  <body class="theme-{{ theme }}" style="width: {{ width }}mm; height: {{ height }}mm;">
+    <main>
+      <div id="map" class="map-mod"></div>
+      <div class="red-diagonal-bg"
+        style=  "width: 100vw; height: 100vh; position: absolute;
+                background-image: url('http://red-hat-assets.s3.amazonaws.com/global-assets/images/category-shapes/solid-center-bar-corporate-820000.svg');
+                background-size: 170vh 170vh;
+                background-position: center -40vh;
+                opacity: 0.8;"
+      >
+      </div><!--.red-diagonal-bg-->
+      <div
+        style=  "width: 100vw; height: 100vh; position: absolute;
+                background-image: url('http://red-hat-assets.s3.amazonaws.com/global-assets/images/category-shapes/pattern-stripe-corporate.svg');
+                background-size: 115vw 115vw;
+                background-position: -9.9vw 133vw;
+                background-repeat: no-repeat;
+                opacity: 0.8;"
+      >
+      </div>
+      <div
+        style=  "width: 100vw; height: 100vh; position: absolute;
+                background-image: url('http://red-hat-assets.s3.amazonaws.com/global-assets/images/category-shapes/solid-stripe-corporate.svg');
+                background-size: 280vw 280vw;
+                background-position: -11vw -11vw;
+                background-repeat: no-repeat;
+                opacity: 0.8;"
+      >
+      </div>
+      <div class="content-contain">
+        <div class="rhf-logo-icon display-rfh-icon-{{ display-content }}">
+          <div class="rhf-logo-icon-contain">
+            <object data="http://red-hat-assets.s3.amazonaws.com/global-assets/images/logos/red-hat-forum-ico.svg">
+            </object>
+            <h3>{{ location }}</h3>
+          </div><!--.rhf-logo-icon-contain-->
+        </div><!--.rhf-logo-icon-->
+        <div class="rhf_info display-rfh-info-{{ display-content }}">
+          <p class="text-1">{{ general-desc }}</p>
+          <p class="text-2">{{ benefit-statement }}</p>
+          <ul class="text-3">
+            {{#proofpoint}}
+            <li>{{ proofpoint-txt }}</li>
+            {{/proofpoint}}
+          </ul>
+        </div><!--.rhf_info-->
+      </div><!--.content-contain-->
+      <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
+    </main>
+
+    <div style="display: none" id="baseUrl" data-base-url="http://red-hat-assets.s3.amazonaws.com"></div>
+    <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
+    <!-- Params we may expose -->
+    <div style="display: none" id="zoom" data-zoom="14"></div>
+    <!-- /Params we may expose -->
+
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/lodash.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/leaflet.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/d3.v3.min.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/d3-topojson.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/javascripts/print-map-vector.js?v1407286478211'></script>
+  </body>
+</html>
