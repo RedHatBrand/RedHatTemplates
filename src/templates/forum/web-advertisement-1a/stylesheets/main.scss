@@ -14,7 +14,8 @@
 }
 
 html {
-  height: 100%;
+  overflow: hidden !important;
+  padding : 0; margin: 0;
 }
 
 body {
@@ -23,7 +24,7 @@ body {
   position: relative; padding: 0; margin: 0;
   font-size: 20px;
   color: $color-white;
-  overflow: hidden;
+  overflow: hidden !important;
 
   &[class*="campaign"] {
     background-size: 600px 600px;
@@ -94,9 +95,14 @@ body {
   top:0; bottom: 31em;
   line-height: 2em;
   align-items: inherit;
+  font-size: 1em;
 }
 .size-300-600 .call-to-action {
   left: 0; right: 0; top: -2em; bottom: 0.5em;
+}
+.size-300-600 .text-wrapper {
+  margin-top: -1em;
+  .text { font-size: 0.7em; line-height: 1; }
 }
 
 /* 300 X 100 */
