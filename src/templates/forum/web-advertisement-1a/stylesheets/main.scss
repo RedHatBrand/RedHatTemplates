@@ -23,6 +23,7 @@ body {
   position: relative; padding: 0; margin: 0;
   font-size: 20px;
   color: $color-white;
+  overflow: hidden;
 
   &[class*="campaign"] {
     background-size: 600px 600px;
