@@ -486,7 +486,9 @@
   fill: #111 !important; }
 
 html {
-  height: 100%; }
+  overflow: hidden !important;
+  padding: 0;
+  margin: 0; }
 
 body {
   font-family: 'Overpass';
@@ -495,7 +497,8 @@ body {
   padding: 0;
   margin: 0;
   font-size: 20px;
-  color: white; }
+  color: white;
+  overflow: hidden !important; }
   body[class*="campaign"] {
     -webkit-background-size: 600px 600px;
     background-size: 600px 600px;
@@ -598,13 +601,20 @@ body {
   -webkit-box-align: inherit;
   -webkit-align-items: inherit;
   -ms-flex-align: inherit;
-  align-items: inherit; }
+  align-items: inherit;
+  font-size: 1em; }
 
 .size-300-600 .call-to-action {
   left: 0;
   right: 0;
   top: -2em;
   bottom: 0.5em; }
+
+.size-300-600 .text-wrapper {
+  margin-top: -1em; }
+  .size-300-600 .text-wrapper .text {
+    font-size: 0.7em;
+    line-height: 1; }
 
 /* 300 X 100 */
 .map-mod-300-100 .event-marker-icon-current {

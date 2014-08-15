@@ -1201,7 +1201,7 @@ a {
   -webkit-transition: background-color 0.5s ease, color 0.5s ease;
   transition: background-color 0.5s ease, color 0.5s ease; }
   a:hover {
-    color: #c12; }
+    color: #4eabca; }
   a:active {
     color: #c12; }
 
@@ -2514,10 +2514,11 @@ input#Monday:checked ~ label[for="Monday"], input#Tuesday:checked ~ label[for="T
 a.anchor-box {
   color: #171717; }
   a.anchor-box:hover .speaker-block-content-name {
-    color: #c12; }
+    color: #4eabca; }
 
 .speaker-block {
-  margin-bottom: 1.6em; }
+  margin-bottom: 1.6em;
+  min-height: 8.625em; }
 
 h1.speaker-block-content-name, h2.speaker-block-content-name, h3.speaker-block-content-name, h4.speaker-block-content-name, h5.speaker-block-content-name, h6.speaker-block-content-name {
   margin-bottom: 0.5em; }
