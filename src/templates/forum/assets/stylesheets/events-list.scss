@@ -18,6 +18,11 @@
     position: relative;
     float: left;
 
+    img {
+      width: 100%;
+      display: block;
+    }
+
     .svgs {
       position: absolute;
       top: 0;
@@ -51,6 +56,11 @@
     color: white;
     text-align: center;
     position: relative;
+    
+    img {
+      width: 100%;
+      display: block;
+    }
 
     .text-content {
       position: absolute;
