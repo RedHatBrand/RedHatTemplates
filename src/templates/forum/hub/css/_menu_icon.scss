@@ -30,8 +30,7 @@ $menu-icon-size: $menu-icon-stroke * 7;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: -$menu-icon-size / 2;
-    margin-top: -$menu-icon-stroke / 2;
+    transform: translate(-50%, -50%);
     border-radius: .25em;
     -webkit-transition: -webkit-transform 0.2s ease;
     -moz-transition: -moz-transform 0.2s ease;
@@ -41,24 +40,27 @@ $menu-icon-size: $menu-icon-stroke * 7;
       content: '';
       display: block;
       position: absolute;
+      top: 50%;
       width: 100%;
       height: $menu-icon-stroke;
       background-color: white;
-      -webkit-transition: -webkit-transform 0.2s ease;
-      -moz-transition: -moz-transform 0.2s ease;
       transition: transform 0.2s ease;
       border-radius: .25em;
     }
 
-    &:before { top: -($menu-icon-stroke * 2) }
-    &:after { bottom: -($menu-icon-stroke * 2) }
+    &:before { 
+      transform: translateY(-250%); 
+    }
+    &:after { 
+      transform: translateY(150%);
+    }
   }
 
   &.active {
     > span {
       background: fade(white);
       box-shadow: none;
-      transform: rotate(45deg);
+      transform: translate(-50%, -50%) rotate(45deg);
 
       &:before {
         background: fade(white);

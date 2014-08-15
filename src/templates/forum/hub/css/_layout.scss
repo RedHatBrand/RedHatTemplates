@@ -78,8 +78,7 @@ body {
   }
 }
 
-
-.shifted ~ .information {
+.info-open .information {
   -webkit-transform: translate(-320px, 0);
   -moz-transform: translate(-320px, 0);
   -ms-transform: translate(-320px, 0);
