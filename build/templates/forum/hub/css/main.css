@@ -546,8 +546,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: -14px;
-    margin-top: -2px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     border-radius: 0.25em;
     -webkit-transition: -webkit-transform 0.2s ease;
     transition: transform 0.2s ease; }
@@ -555,6 +556,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       content: '';
       display: block;
       position: absolute;
+      top: 50%;
       width: 100%;
       height: 4px;
       background-color: white;
@@ -562,16 +564,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       transition: transform 0.2s ease;
       border-radius: 0.25em; }
     .nav-toggle > span:before {
-      top: -8px; }
+      -webkit-transform: translateY(-250%);
+      -ms-transform: translateY(-250%);
+      transform: translateY(-250%); }
     .nav-toggle > span:after {
-      bottom: -8px; }
+      -webkit-transform: translateY(150%);
+      -ms-transform: translateY(150%);
+      transform: translateY(150%); }
   .nav-toggle.active > span {
     background: fade(#ffffff);
     -webkit-box-shadow: none;
     box-shadow: none;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg); }
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    -ms-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg); }
     .nav-toggle.active > span:before {
       background: fade(#ffffff);
       top: 0;
@@ -592,6 +598,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
   position: relative;
   float: left; }
+  .events-list .location .outer-letter img {
+    width: 100%;
+    dsplay: block; }
   .events-list .location .outer-letter .svgs {
     position: absolute;
     top: 0;
@@ -610,13 +619,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   text-transform: uppercase;
   line-height: 1;
   color: white;
-  text-align: center;
   position: relative; }
+  .events-list .event .date img {
+    width: 100%;
+    display: block; }
   .events-list .event .date .text-content {
+    text-align: center;
     position: absolute;
     top: 0;
     left: 0;
-    right: 0; }
+    right: 0;
+    bottom: 0; }
     .events-list .event .date .text-content svg {
       width: 100%;
       height: 50%;
@@ -812,11 +825,11 @@ body {
   .information .logos {
     background: gray; }
 
-.shifted ~ .information {
+.info-open .information {
   -webkit-transform: translate(-320px, 0);
   -ms-transform: translate(-320px, 0);
   transform: translate(-320px, 0); }
-  .shifted ~ .information .info-toggle {
+  .info-open .information .info-toggle {
     opacity: 1; }
 
 .info-toggle {

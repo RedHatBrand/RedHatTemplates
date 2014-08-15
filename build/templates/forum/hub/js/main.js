@@ -104,6 +104,7 @@ $(function () {
 
     var $this = $(this);
     $('.rotate-container').toggleClass('shifted');
+    $('body').toggleClass('info-open');
 
     if ($this.hasClass('active')) {
       $this.text('about')
