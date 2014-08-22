@@ -24,7 +24,8 @@ var tmp                = './.tmp';
 var prod               = './build';
 var base = {
   production: 'http://red-hat-assets.s3.amazonaws.com',
-  development: ''
+  ghPages: 'http://redhatbrand.github.io/RedHatTemplates',
+  development: '/RedHatTemplates'
 }
 
 handlebars.registerHelper('json', function(context) {
@@ -34,7 +35,7 @@ handlebars.registerHelper('json', function(context) {
 function url(){
   return function addUrl(files, metalsmith, done){
     for (var file in files) {
-      files[file].url = '/' + file;
+      files[file].url = '/RedHatTemplates/' + file;
     }
     done();
   };
@@ -100,7 +101,7 @@ gulp.task('smith', function () {
       engine: 'handlebars',
       directory: 'layouts'
     }))
-    .destination(tmp)
+    .destination(tmp + '/RedHatTemplates')
     .build(function () {
       return defered.resolve.call(defered, arguments);
     });
@@ -121,7 +122,7 @@ gulp.task('build', ['smith'], function () {
 gulp.task('build-production', ['smith'], function () {
   var htmlFilter = gulpFilter('**/*.html');
 
-  return gulp.src(tmp + '/**/*', { base: './.tmp' })
+  return gulp.src(tmp + '/RedHatTemplates' + '/**/*', { base: './.tmp/RedHatTemplates' })
     .pipe(htmlFilter)
     .pipe(ejs({ baseUrl: base['production'], version: Date.now() }).on('error', gutil.log))
     .pipe(htmlFilter.restore())
@@ -159,8 +160,18 @@ gulp.task('publish', function () {
     .pipe(deploy.reporter());
 });
 
+gulp.task('build-gh-pages', ['smith'], function () {
+  var htmlFilter = gulpFilter('**/*.html');
+
+  return gulp.src(tmp + '/RedHatTemplates' + '/**/*', { base: './.tmp/RedHatTemplates' })
+    .pipe(htmlFilter)
+    .pipe(ejs({ baseUrl: base['ghPages'], version: Date.now() }).on('error', gutil.log))
+    .pipe(htmlFilter.restore())
+    .pipe(gulp.dest(prod));
+});
+
 gulp.task('deploy', function () {
-  gulp.src('./build/**/*')
+  return gulp.src('./build/**/*.*')
     .pipe(deploy());
 });
 
