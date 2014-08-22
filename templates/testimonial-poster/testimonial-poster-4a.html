@@ -1,0 +1,52 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link href='http://red-hat-assets.s3.amazonaws.com/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+    <link href="http://red-hat-assets.s3.amazonaws.com/templates/testimonial-poster/css/main.css?v1408666839732" rel="stylesheet" />
+    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+  </head>
+
+  <body sclass="rh-theme-{{ category }}" style="width: {{ width }}mm; height: {{ height }}mm;">
+  	<main>
+      <div class="background-image"
+        style="
+          background-image: url('http://red-hat-assets.s3.amazonaws.com/global-assets/images/basic-shapes/top/triangle-multiply-top.svg'),
+                            linear-gradient(0deg, #37424a 1%, transparent 35%),
+                            url({{{ background-image }}});
+          background-blend-mode: multiply, multiply, multiply;
+          background-size: 44vw 44vw, cover, cover;"
+      >
+      </div><!--.background-image-->
+    	<section class="testimonial">
+      	<h1 style="display: none;">{{ poster-title }}</h1>
+        {{#testimonials}}
+        <div class="grp grp-4a">
+          <object data="http://red-hat-assets.s3.amazonaws.com/global-assets/images/basic-shapes/quot-marks.svg" class="quot-marks" style="display: block;"></object>
+          <p class="input"><em>{{ content }}</em></p>
+          <div class="name">
+            <h3>{{ name }}</h3>
+            <p class="sub-info">{{ sub-info }}</p>
+          </div>
+        </div><!--.grp-->
+        {{/testimonials}}
+      </section><!--.testimonial-->
+      <div class="logo-top" style="height: 42vw; width: 42vw; position: absolute; top: 0; left: 0;">
+        <object
+          data="http://red-hat-assets.s3.amazonaws.com/global-assets/images/basic-shapes/top/triangle-with-logo-top.svg"
+          style="height: 42vw; width: 42vw; position: absolute; bottom: 0; left: 0;"
+        >
+        </object>
+      </div><!--.logo-bottom-->
+      <div class='corner-logo' style="display:none;">
+        <div class="logo"></div>
+      </div>
+      <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
+    </main>
+  </body>
+</html>

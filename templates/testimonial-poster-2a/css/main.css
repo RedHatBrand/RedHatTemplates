@@ -1,0 +1,185 @@
+@font-face {
+  font-family: 'Overpass';
+  src: url('/global-assets/fonts/overpass/overpass_bold-webfont.eot');
+  src: url('/global-assets/fonts/overpass/overpass_bold-webfont.eot?#iefix') format('embedded-opentype'), url('/global-assets/fonts/overpass/overpass_bold-webfont.woff') format('woff'), url('/global-assets/fonts/overpass/overpass_bold-webfont.ttf') format('truetype'), url('/global-assets/fonts/overpass/overpass_bold-webfont.svg#overpassbold') format('svg');
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('/global-assets/fonts/overpass/overpass_light-webfont.eot');
+  src: url('/global-assets/fonts/overpass/overpass_light-webfont.eot?#iefix') format('embedded-opentype'), url('/global-assets/fonts/overpass/overpass_light-webfont.woff') format('woff'), url('/global-assets/fonts/overpass/overpass_light-webfont.ttf') format('truetype'), url('/global-assets/fonts/overpass/overpass_light-webfont.svg#overpasslight') format('svg');
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('/global-assets/fonts/overpass/overpass_regular-webfont.eot');
+  src: url('/global-assets/fonts/overpass/overpass_regular-webfont.eot?#iefix') format('embedded-opentype'), url('/global-assets/fonts/overpass/overpass_regular-webfont.woff') format('woff'), url('/global-assets/fonts/overpass/overpass_regular-webfont.ttf') format('truetype'), url('/global-assets/fonts/overpass/overpass_regular-webfont.svg#overpassregular') format('svg');
+  font-weight: 600;
+  font-style: normal; }
+
+.corner-logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 33.333%;
+  max-height: 100vh; }
+  .corner-logo:before {
+    content: url('/global-assets/images/basic-shapes/triangle.svg');
+    display: block;
+    font-size: 0;
+    line-height: 0; }
+  .corner-logo .logo {
+    position: absolute;
+    right: 1.33333em;
+    bottom: 1.33333em;
+    margin: 0;
+    height: auto;
+    width: 40%; }
+    .corner-logo .logo:before {
+      content: url('/global-assets/images/logos/rh-logo.svg');
+      display: block;
+      font-size: 0;
+      line-height: 0; }
+
+.center-logo {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  .center-logo:before {
+    content: url('/global-assets/images/logos/rh-logo.svg');
+    display: block;
+    font-size: 0;
+    line-height: 0; }
+
+body {
+  margin: 0;
+  font-family: 'Overpass';
+  font-size: 1vh;
+  font-weight: 400;
+  color: #fff;
+  background: #fff;
+  overflow: hidden; }
+  body .background-image {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-position: left top, left, center;
+    background-repeat: no-repeat, no-repeat, no-repeat; }
+  body .background-image-2b {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-position: right bottom, left, center;
+    background-repeat: no-repeat, no-repeat, no-repeat; }
+  body main {
+    padding: 0;
+    position: absolute;
+    top: 3mm;
+    bottom: 3mm;
+    left: 3mm;
+    right: 3mm; }
+    body main .bg-stripes {
+      position: absolute; }
+      body main .bg-stripes object.pattern-stripe {
+        width: 70vw;
+        position: absolute;
+        z-index: -1;
+        margin: 0 0 0 0; }
+      body main .bg-stripes object.solid-stripe {
+        width: 270vw;
+        position: absolute;
+        z-index: -1;
+        margin: 0 0 0 0; }
+    body main .rh-logo {
+      margin: 0 6vw 0 0;
+      padding: 0 0 3vw 0;
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+    body main section.testimonial {
+      position: absolute;
+      margin: 0 4em 6.5vw 4em;
+      bottom: 0; }
+      body main section.testimonial .grp {
+        margin: 0 0 2em 0; }
+        body main section.testimonial .grp .name {
+          float: right;
+          margin: 1vw 0 0 0;
+          padding: 2vh 1.8vh; }
+          body main section.testimonial .grp .name h3 {
+            float: right;
+            margin: 0 0 0.25vh 0;
+            font-size: 2.2vh; }
+          body main section.testimonial .grp .name p.sub-info {
+            float: right;
+            margin: 0.3vh 0 0 0;
+            font-size: 1.8vh; }
+        body main section.testimonial .grp p.input {
+          text-align: right; }
+        body main section.testimonial .grp object.quot-marks {
+          float: left;
+          width: 6vh;
+          height: 6vh;
+          margin: 2.4vh 2vh 0 4vh; }
+      body main section.testimonial .grp-2b {
+        margin: 0 21vw 2em 0; }
+        body main section.testimonial .grp-2b .name {
+          float: left;
+          margin: 1vw 0 0 0.8vw; }
+          body main section.testimonial .grp-2b .name h3 {
+            float: left;
+            margin: 0;
+            font-size: 2.4em; }
+          body main section.testimonial .grp-2b .name p.sub-info {
+            float: left;
+            margin: 0.5vh 0 0 -0.2vh;
+            font-size: 2em; }
+        body main section.testimonial .grp-2b object.quot-marks {
+          float: left;
+          width: 8vh;
+          height: 8vh;
+          margin: 2vw 2.4vw 0 3.8vw; }
+      body main section.testimonial h1 {
+        margin: 2em 0 7vw 0;
+        font-size: 6vw; }
+      body main section.testimonial h1.h1-3a {
+        margin: 14vw 0 7vw 0; }
+    body main section.testimonial-2b {
+      position: absolute;
+      margin: 0 4em 4vw 4vw;
+      bottom: 0; }
+
+h3, p.sub-info {
+  display: inline;
+  background: rgba(0, 0, 0, 0.8);
+  padding-top: 0.5em;
+  padding-bottom: 0.4em;
+  box-shadow: 0.5em 0 0 rgba(0, 0, 0, 0.8), -0.5em 0 0 rgba(0, 0, 0, 0.8); }
+
+p.input {
+  margin: 0;
+  padding: 2vw 3vw 1vw 1vw;
+  font-size: 3vh;
+  line-height: 2.1em; }
+  p.input span {
+    display: inline;
+    background: rgba(0, 0, 0, 0.8);
+    padding-top: 0.5em;
+    padding-bottom: 0.4em;
+    box-shadow: 0.5em 0 0 rgba(0, 0, 0, 0.8), -0.5em 0 0 rgba(0, 0, 0, 0.8); }
+
+.clear-float {
+  clear: both; }

@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <title>{{ title }}</title>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+    <meta content='initial-scale=1.0' name='viewport' />
+    <meta content='Red Hat' name='author' />
+    <meta content='{{ meta-description }}' name='description' />
+    <meta content='{{ meta-keywords }}' name='keywords' />
+    <link href='//red-hat-assets.s3.amazonaws.com/assets/images/favicon.ico' rel='icon' type='image/ico' />
+    <link href='http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css' media='screen' rel='stylesheet' />
+    <link href='http://red-hat-assets.s3.amazonaws.com/templates/event-microsite/stylesheets/main.css' media='screen' rel='stylesheet' />
+    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/jquery.fitvids.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/jquery.fittext.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/jquery.scrollspy.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/jquery.smooth-scroll.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/templates/event-microsite/javascripts/main.js'></script>
+    <!--[if lt IE 9]> <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script> <![endif]-->
+  </head>
+  <body>
+    <div class='wrapper'>
+      <header class='header' role='banner'>
+        <figure class='hero'>
+          <div class='hero-layer' style='background-image: url({{{ hero-image }}})'></div>
+          <div class='container layer-three'>
+            <h1 class='title'>{{ title }}</h1>
+            {{#event-logo}}
+            <img class='event-logo' src='{{{ event-logo }}}'>
+            {{/event-logo}}
+            <div class='event-details'>
+              <div class='dates'>
+                <h4>{{ dates }}</h4>
+              </div>
+              <div class='location'>
+                <h4>{{ location }}</h4>
+              </div>
+              <div class='registration'>
+                <a class='button register-button' href='{{{ register-link }}}'>Register</a>
+              </div>
+            </div>
+            <a class='logo' href='//www.redhat.com' target='_blank' title='Go to redhat.com'>
+              <img src='http://netengine.io-assets.s3.amazonaws.com/assets/images/png/logos/rh.png'>
+            </a>
+          </div>
+        </figure>
+      </header>
+      <button class='nav-toggle'>
+        <span></span>
+      </button>
+      <nav class='nav-menu animated fadeInDown fixed-left-nav-only-medium-break layer-four nav-hide'>
+        <div class='container'>
+          <ul>
+            {{#section }}
+            <li><a class='menu-link' href='#{{ slug }}'>{{ name }}</a></li>
+            {{/section}}
+
+            {{#promotion-title}}
+            <li><a class='menu-link' href='#fee'>Fee</a></li>
+            {{/promotion-title}}
+            <li><a class='menu-link' href='#agenda'>Agenda</a></li>
+          </ul>
+        </div>
+      </nav>
+      {{#section}}
+      <section class='section-{{ name }} main {{ section-theme }}' id='{{ slug }}'>
+        <div class='container'>
+          {{{ content }}}
+        </div>
+      </section>
+      {{/section}}
+      {{#promotion-title}}
+      <section class='section-fee main' id='fee'>
+        <div class='container'>
+          <h1>Fee</h1>
+          <div class="grid-container">
+            <div class='one-half'>
+              <div class='promo-box'>
+                <div class='promo-box-title'>
+                  <h3>{{ promotion-title }}</h3>
+                </div>
+                <figure class='big-number'>{{ promotion-rate }}</figure>
+                <p>
+                  {{ promotion-savings }}
+                </p>
+                <div class='promo-box-footer'>
+                  <a class='button' href='{{ register-link }}' target='_blank'>Register</a>
+                  by
+                  <strong>{{ promotion-close-date }}</strong>
+                </div>
+              </div>
+              <p>
+                FEES FROM {{ post-promotion-date }} {{ post-promotion-fee }}
+              </p>
+            </div>
+            <div class='one-half'>
+              <h2>Inlcudes</h2>
+              {{ inclusions }}
+            </div>
+          </div>
+        </div>
+      </section>
+      {{/promotion-title}}
+      <section class='section-agenda main' id='agenda'>
+        <div class='container'>
+          <h1>Agenda</h1>
+          {{#day}}
+          <input id='{{ day-name }}' name='active-day' type='radio'>
+          <label for='{{ day-name }}'>{{ day-name }} {{ day-name-translation }}</label>
+          {{/day}}
+          {{#day}}
+          <div class='time-table-{{ day-name }}'>
+            <table class="calendar">
+              <tr class="headings">
+                <th class="time">Timing</th>
+                <th class="duration">Duration</th>
+                <th class="topic">Topic</th>
+              </tr>
+              {{#times}}
+              <tr class="{{ type }}">
+                <td class="time">{{time}}</td>
+                <td class="duration">{{duration}}</td>
+
+                <td>
+                  {{#topic}}
+                  <p>{{topic}}</p>
+                  {{/topic}}
+
+                  {{#track-a}}
+                  <div class="track-a">
+                    <h6>Track A</h6>
+                    <p>{{track-a}}</p>
+                  </div>
+                  {{/track-a}}
+
+                  {{#track-b}}
+                  <div class="track-b">
+                    <h6>Track B</h6>
+                    <p>{{track-b}}</p>
+                  </div>
+                  {{/track-b}}
+
+                  {{#track-c}}
+                  <div class="track-c">
+                    <h6>Track C</h6>
+                    <p>{{track-c}}</p>
+                  </div>
+                  {{/track-c}}
+
+                  {{#track-d}}
+                  <div class="track-d">
+                    <h6>Track D</h6>
+                    <p>{{track-d}}</p>
+                  </div>
+                  {{/track-d}}
+
+                  {{#track-e}}
+                  <div class="track-e">
+                    <h6>Track E</h6>
+                    <p>{{track-e}}</p>
+                  </div>
+                  {{/track-e}}
+                </td>
+              </tr>
+              {{/times}}
+            </table>
+          </div>
+          {{/day}}
+        </div>
+      </section>
+      <footer class='footer'>
+        <section class='secondary'>
+          <div class='container'>
+            <div class="grid-container">
+              <ul class='one-half footer-nav-menu'>
+                <li>
+                  <a href='//www.redhat.com/about/' target='_blank'>About Red Hat</a>
+                </li>
+                <li>
+                  <a href='//www.redhat.com/legal/privacy_statement.html' target='_blank'>Privacy Policy</a>
+                </li>
+                <li>
+                  <a href='//www.redhat.com/legal/legal_statement.html' target='_blank'>Terms of Use</a>
+                </li>
+              </ul>
+              <div class='one-half social-links'>
+                <a class='social-link icon-twitter icon-only icon-in-circle' href='//www.twitter.com/red_hat_apac' target='_blank'>Twitter</a>
+                <a class='social-link icon-facebook icon-only icon-in-circle' href='//www.facebook.com/RedhatAPAC' target='_blank'>Facebook</a>
+                <a class='social-link icon-youtube icon-only icon-in-circle' href='//www.youtube.com/user/RedHatVideos' target='_blank'>youtube</a>
+                <a class='social-link icon-linkedin icon-only icon-in-circle' href='//www.linkedin.com/groups/Red-Hat-Certified-Professionals-in-3124596?mostPopular=&amp;amp;gid=3124596' target='_blank'>LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class='tertiary'>
+          <div class='container'>
+            <p class='copyright'>
+              Copyright &copy; 2014 Red Hat, Inc.
+            </p>
+          </div>
+        </section>
+      </footer>
+    </div>
+  </body>
+</html>

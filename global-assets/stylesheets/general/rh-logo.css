@@ -1,0 +1,38 @@
+.corner-logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 33.333%;
+  max-height: 100vh; }
+  .corner-logo:before {
+    content: url('/global-assets/images/basic-shapes/triangle.svg');
+    display: block;
+    font-size: 0;
+    line-height: 0; }
+  .corner-logo .logo {
+    position: absolute;
+    right: 1.33333em;
+    bottom: 1.33333em;
+    margin: 0;
+    height: auto;
+    width: 40%; }
+    .corner-logo .logo:before {
+      content: url('/global-assets/images/logos/rh-logo.svg');
+      display: block;
+      font-size: 0;
+      line-height: 0; }
+
+.center-logo {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  .center-logo:before {
+    content: url('/global-assets/images/logos/rh-logo.svg');
+    display: block;
+    font-size: 0;
+    line-height: 0; }

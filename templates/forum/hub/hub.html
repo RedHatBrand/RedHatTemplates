@@ -1,0 +1,83 @@
+
+
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Home | Red Hat Forum 2014</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/hub/css/main.css?v1408666839732' media='screen' rel='stylesheet' />
+    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+  </head>
+  <body>
+
+    <div class="logos">
+      <img class="forum-logo" src='http://red-hat-assets.s3.amazonaws.com/templates/forum/hub/images/forum-logo.svg'>
+      <img class="logo" src="http://red-hat-assets.s3.amazonaws.com/global-assets/images/logos/rh-logo.svg">
+    </div>
+
+    <div class="events-list-container">
+      <ul class="events-list">
+        {{#events}}
+        {{#location}}
+        <li class="event clearfix">
+          <a href="{{ link }}" data-event-id="{{ location-id }}">
+            <div class="date">
+              <img src='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/images/space.svg' />
+              <div class="text-content">
+                <svg class="day" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                  <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                    {{ date }}
+                  </text>
+                </svg>
+                <svg class="month" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+                  <text fill="white" x="50%" y="12.5" font-size="9" text-anchor="middle">
+                    {{ month }}
+                  </text>
+                </svg>
+              </div>
+            </div>
+            <div class="location clearfix">
+              <div class="text-content">{{ location }}</div>
+            </div>
+          </a>
+        </li>
+        {{/location}}
+        {{/events}}
+      </ul>
+    </div>
+
+    <button class="nav-toggle">
+      <span>Menu</span>
+      <label class="toggle-label">Locations</label>
+    </button>
+
+    <div class="rotate-container">
+      <div class="rotate">
+        <div class="map" id="map"></div>
+      </div>
+    </div>
+
+    <div class="information">
+      <h2>About</h2>
+
+      {{{ about }}}
+
+      <a class="info-toggle" href="#">About</a>
+
+      <div class="logos">
+        <img class="forum-logo" src='http://red-hat-assets.s3.amazonaws.com/templates/forum/hub/images/forum-logo.svg'>
+        <img class="logo" src="http://red-hat-assets.s3.amazonaws.com/global-assets/images/logos/rh-logo.svg">
+      </div>
+    </div>
+
+    <div id="baseUrl" data-base-url="http://red-hat-assets.s3.amazonaws.com"></div>
+
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/jquery.js'></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/templates/forum/hub/js/leaflet-locate.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/templates/forum/hub/js/events-list.js?v1408666839732'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/templates/forum/hub/js/main.js?v1408666839732'></script>
+  </body>
+</html>

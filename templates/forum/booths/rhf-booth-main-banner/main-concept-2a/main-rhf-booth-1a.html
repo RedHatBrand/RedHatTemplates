@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <link href='http://red-hat-assets.s3.amazonaws.com/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+
+  <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/vendor/leaflet.css?v1408666839732' rel='stylesheet' />
+  <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/map.css?v1408666839732' rel='stylesheet' />
+  <link rel="stylesheet" type="text/css" href="http://red-hat-assets.s3.amazonaws.com/templates/forum/booths/rhf-booth-main-banner/main-concept-2a/css/style.css" />
+  <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+  </head>
+
+  <body class="theme-{{ theme }}" style="height: {{ height }}mm; width: {{ width }}mm; ">
+    <main>
+        <div id="map"></div>
+        <div id="background-image" style="background-image: url({{{ background-image }}})"></div><!--.background-image-->
+        <div class="rh-forum-logo">
+          <object data="http://red-hat-assets.s3.amazonaws.com/global-assets/images/logos/red-hat-forum-ico.svg" class="rh-forum-ico-1a"></object>
+          <h3 class="venue">{{ location }}</h3>
+          <div class="venue-info">
+              <object data="http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/images/space.svg"></object>
+              <div class="date-1a">
+                <h3 class="dd-1a">{{ date }}</h3>
+                <h3 class="mm-1a">{{ month }}</h3>
+              </div><!--.date-->
+              <div class="venue-info-txt">
+                <h1>{{ location }}</h1>
+              </div><!--.venue-info-txt-->
+          </div><!--.venue-info-->
+        </div><!--.rh-forum-logo-->
+      <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
+    </main>
+
+    <div class='corner-logo' style="display: none;">
+      <div class="logo"></div>
+    </div>
+
+    <div class="rh-logo" style="display: none;">
+      <object data="http://red-hat-assets.s3.amazonaws.com/global-assets/images/logos/rh-logo.svg"></object>
+    </div><!--.rh-logo-->
+
+    <div class="rh-logo-triangle" style="height: 18vw; width: 18vw;">
+      <object data="http://red-hat-assets.s3.amazonaws.com/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg"
+              style="height: 18vw; width: 18vw;">
+      </object>
+    </div><!--.rh-logo-triangle-->
+
+    <div style="display: none" id="baseUrl" data-base-url="http://red-hat-assets.s3.amazonaws.com"></div>
+    <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
+    <!-- Params we may expose -->
+    <div style="display: none" id="zoom" data-zoom="14"></div>
+    <!-- /Params we may expose -->
+
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/lodash.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/leaflet.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/d3.v3.min.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/d3-topojson.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/javascripts/print-map-vector-full-page.js?v1408666839732'></script>
+  </body>
+</html>

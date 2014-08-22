@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="charset" content="utf-8" />
+    <link href='http://red-hat-assets.s3.amazonaws.com/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+    <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/vendor/leaflet.css?v1408666839732' rel='stylesheet' />
+    <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/map.css?v1408666839732' rel='stylesheet' />
+    <link rel="stylesheet" type="text/css" href="http://red-hat-assets.s3.amazonaws.com/templates/forum/booths/sponsor-booth-panel-0p5mx1m/css/main.css" />
+    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+  </head>
+
+  <body style="width: {{ width }}mm; height: {{ height }}mm;">
+    <main>
+      <div id="map" class="display-map-bg-{{ display-map }}"></div>
+      <div class="logo-area"
+        style="width: 70vw; height: 57.11vw; position: absolute; z-index: 1; top:30%; transform: translateY(-50%); left:50%; transform: translateX(-50%);"
+      >
+        <object data='http://red-hat-assets.s3.amazonaws.com/templates/forum/booths/sponsor-booth-panel-0p5mx1m/images/logo/sponsor-logo-filler.svg'
+          style="width: 70vw; height: 57.11vw; position: absolute;"
+        ></object>
+      </div><!--.logo-area-->
+      <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
+    </main>
+
+    <div style="display: none" id="baseUrl" data-base-url="http://red-hat-assets.s3.amazonaws.com"></div>
+    <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
+    <!-- Params we may expose -->
+    <div style="display: none" id="zoom" data-zoom="14"></div>
+    <!-- /Params we may expose -->
+
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/lodash.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/leaflet.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/d3.v3.min.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/d3-topojson.js'></script>
+    <script src='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/javascripts/print-map-vector.js?v1408666839732'></script>
+  </body>
+</html>
