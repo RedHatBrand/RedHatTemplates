@@ -3,31 +3,31 @@
 <html>
   <head>
   <meta name="charset" content="utf-8" />
-    <link href='http://red-hat-assets.s3.amazonaws.com/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
-    <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/vendor/leaflet.css?v1408666839732' rel='stylesheet' />
-    <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/events-list.css?v1408666839732' rel='stylesheet' />
-    <link href='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/stylesheets/map.css?v1408666839732' rel='stylesheet' />
-    <link rel="stylesheet" type="text/css" href="http://red-hat-assets.s3.amazonaws.com/templates/forum/key-card-holder-1b/css/main.css">
+    <link href='http://redhatbrand.github.io/RedHatTemplates/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+    <link href='http://redhatbrand.github.io/RedHatTemplates/templates/forum/assets/stylesheets/vendor/leaflet.css?v1408669620956' rel='stylesheet' />
+    <link href='http://redhatbrand.github.io/RedHatTemplates/templates/forum/assets/stylesheets/events-list.css?v1408669620956' rel='stylesheet' />
+    <link href='http://redhatbrand.github.io/RedHatTemplates/templates/forum/assets/stylesheets/map.css?v1408669620956' rel='stylesheet' />
+    <link rel="stylesheet" type="text/css" href="http://redhatbrand.github.io/RedHatTemplates/templates/forum/key-card-holder-1b/css/main.css">
     <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
   </head>
 
   <body class="theme-{{ theme }}" style="width: {{width}}mm; height: {{height}}mm;">
     <main>
       <section class="front">
-        <object class="rhf-marker-only" data="http://red-hat-assets.s3.amazonaws.com/global-assets/images/logos/red-hat-forum-marker.svg"></object>
-        <object class="bg-pattern" data="http://red-hat-assets.s3.amazonaws.com/global-assets/images/category-shapes/pattern-stripe-corporate.svg"></object>
-        <object class="bg-solid-stripe" data="http://red-hat-assets.s3.amazonaws.com/global-assets/images/category-shapes/solid-stripe-corporate.svg"></object>
+        <object class="rhf-marker-only" data="http://redhatbrand.github.io/RedHatTemplates/global-assets/images/logos/red-hat-forum-marker.svg"></object>
+        <object class="bg-pattern" data="http://redhatbrand.github.io/RedHatTemplates/global-assets/images/category-shapes/pattern-stripe-corporate.svg"></object>
+        <object class="bg-solid-stripe" data="http://redhatbrand.github.io/RedHatTemplates/global-assets/images/category-shapes/solid-stripe-corporate.svg"></object>
       </section><!--.front-->
 
       <section class="back-gray">
         <div id="map"></div>
 
         <div class='corner-logo'>
-          <img class="triangle" src='http://red-hat-assets.s3.amazonaws.com/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg' />
+          <img class="triangle" src='http://redhatbrand.github.io/RedHatTemplates/global-assets/images/basic-shapes/bottom/triangle-with-logo-bottom.svg' />
         </div>
       </section><!--.back-->
 
-      <div style="display: none" id="baseUrl" data-base-url="http://red-hat-assets.s3.amazonaws.com"></div>
+      <div style="display: none" id="baseUrl" data-base-url="http://redhatbrand.github.io/RedHatTemplates"></div>
       <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
       <div style="display: none" id="eventLogo" data-event-logo='<svg
          xmlns:cc="http://creativecommons.org/ns#"
@@ -152,13 +152,13 @@
       <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
     </main>
 
-    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/jquery.js'></script>
-    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/lodash.js'></script>
-    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/leaflet.js'></script>
-    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/d3.v3.min.js'></script>
-    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
-    <script src='http://red-hat-assets.s3.amazonaws.com/global-assets/javascripts/vendor/d3-topojson.js'></script>
-    <script src='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/javascripts/print-map-vector-full-page.js?v1408666839732'></script>
-    <script src='http://red-hat-assets.s3.amazonaws.com/templates/forum/assets/javascripts/print-events-list.js?v1408666839732'></script>
+    <script src='http://redhatbrand.github.io/RedHatTemplates/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='http://redhatbrand.github.io/RedHatTemplates/global-assets/javascripts/vendor/lodash.js'></script>
+    <script src='http://redhatbrand.github.io/RedHatTemplates/global-assets/javascripts/vendor/leaflet.js'></script>
+    <script src='http://redhatbrand.github.io/RedHatTemplates/global-assets/javascripts/vendor/d3.v3.min.js'></script>
+    <script src='http://redhatbrand.github.io/RedHatTemplates/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
+    <script src='http://redhatbrand.github.io/RedHatTemplates/global-assets/javascripts/vendor/d3-topojson.js'></script>
+    <script src='http://redhatbrand.github.io/RedHatTemplates/templates/forum/assets/javascripts/print-map-vector-full-page.js?v1408669620956'></script>
+    <script src='http://redhatbrand.github.io/RedHatTemplates/templates/forum/assets/javascripts/print-events-list.js?v1408669620956'></script>
   </body>
 </html>
