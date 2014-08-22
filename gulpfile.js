@@ -7,7 +7,8 @@ var gulp               = require('gulp'),
     livereload         = require('gulp-livereload'),
     express            = require('express'),
     argv               = require('yargs').argv,
-    app                = express();
+    app                = express(),
+    deploy             = require("gulp-gh-pages");
 
 var MetalSmith         = require('metalsmith'),
     autoprefixer       = require('metalsmith-autoprefixer'),
@@ -156,6 +157,11 @@ gulp.task('publish', function () {
     .pipe(publisher.sync())
     .pipe(publisher.cache())
     .pipe(deploy.reporter());
+});
+
+gulp.task('deploy', function () {
+  gulp.src('./build/**/*')
+    .pipe(deploy());
 });
 
 gulp.task('default', ['serve']);
