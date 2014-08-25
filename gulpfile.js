@@ -108,12 +108,12 @@ gulp.task('smith', function () {
 });
 
 gulp.task('build', ['smith'], function () {
-  var htmlFilter = gulpFilter('**/*.html');
+  var xmlFilter = gulpFilter(['**/*.html', '**/*.svg']);
 
   return gulp.src(tmp + '/**/*', { base: './.tmp' })
-    .pipe(htmlFilter)
+    .pipe(xmlFilter)
     .pipe(ejs({ baseUrl: base['development'], version: Date.now() }).on('error', gutil.log))
-    .pipe(htmlFilter.restore())
+    .pipe(xmlFilter.restore())
     .pipe(gulp.dest(tmp));
 });
 

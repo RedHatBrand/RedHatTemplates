@@ -9,20 +9,43 @@ height: 600px
     <meta charset='utf-8'>
     <meta content='IE=edge' http-equiv='X-UA-Compatible'>
     <link href='<%= baseUrl %>/templates/web-advertisement/stylesheets/main.css' rel='stylesheet'>
+    <style>
+      .background { background-image: url({{{ background-image }}}); }
+    </style>
   </head>
-  <body class='size-120-600 rh-theme-{{category}}' style='width: 120px; height: 600px'>
-    <div class='brand'>
-      <% include /templates/shared/backgrounds/brand.svg %>
-    </div>
-    <div class='campaign'>
-      <% include /templates/shared/backgrounds/campaign.svg %>
-    </div>
-    <main class='outer-wrapper'>
-      <div class='branding'>
-        <div class='rh-logo'>
-          <% include /templates/shared/logos/rh-logo.svg %>
-        </div>
+  <body class='size-120-600' style='width: 120px; height: 600px'>
+    <% include /shared-partials/patterns/patterns.svg %>
+    <% include /shared-partials/logos/all-product.svg %>
+
+    <div class='background background-shapes brand-pattern-{{ group }}'>
+      <div class="corner-shape multiplied">
+        <% include /shared-partials/shapes/triangle.svg %>
       </div>
+      
+      <div class="corner-shape" style="bottom: -5em; right: -5em">
+        <% include /shared-partials/shapes/triangle.svg %>
+      </div>
+
+      <div class="corner-shape brand-pattern {{ group }}">
+        <% include /shared-partials/shapes/stripe.svg %>
+      </div>
+
+      <div class="center-shape multiplied">
+        <% include /shared-partials/shapes/bar.svg %>
+      </div>
+    </div>
+
+    <main class='outer-wrapper'>
+      <div class="product-branding">
+        <svg width="200" height="50" viewBox="0 0 200 50" preserveAspectRatio="xMinYMin meet">
+          <use xlink:href="#product-{{ product }}"></use>
+        </svg>
+      </div>
+
+      <div class='branding'>
+        <% include /shared-partials/logos/redhat-logo.svg %>
+      </div>
+      
       <div class='text-wrapper'>
         <div class='text'>
           {{{ long-message }}}

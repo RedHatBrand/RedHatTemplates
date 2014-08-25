@@ -1,5 +1,9 @@
 @import '../../../global-assets/scss/fonts/overpass';
 @import '../../../global-assets/scss/colors/base_color_palette';
+@import '../../../global-assets/scss/components/background_shapes';
+@import 'patterns';
+@import 'shapes';
+
 
 html {
   font-family: 'Overpass', 'Interstate', 'Helvetica', 'Arial', sans-serif;
@@ -14,34 +18,23 @@ body {
   padding: 0;
   margin: 0;
   color: $color-white;
-
-  &[class*="campaign"] {
-    background-size: 600px 600px;
-    background-position: 50% 100%;
-  }
 }
 
-.background-wrapper {
+.background {
   position: absolute;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  top: 0;
-  overflow: hidden;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
-.brand svg,
-.campaign svg {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.background-shapes .corner-shape {
+  width: 250px;
+  height: 250px;
 }
-.brand,
-.campaign { display: none }
-.rh-theme-brand .brand { display: block; }
-.rh-theme-campaign .campaign { display: block; }
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
@@ -77,9 +70,9 @@ h3 { font-size: 1.25em; }
   right: 0;
   height: 3em;
 }
-.branding svg {
-  height: 3em;
-  min-width: 8em;
+.branding .redhat-logo {
+  width: 8em;
+  fill: $color-white;
 }
 
 .call-to-action {
@@ -88,14 +81,6 @@ h3 { font-size: 1.25em; }
   text-transform: uppercase;
   line-height: 1em;
   display: inline-block;
-}
-
-[class*="brand"][class*="campaign"] {
-  .call-to-action {
-    border: none;
-    background-color: $color-rh-red;
-    color: $color-white;
-  }
 }
 
 /* 300 X 600 The base style */
@@ -375,10 +360,6 @@ h3 { font-size: 1.25em; }
   height: 300px;
   font-size: 18px;
   line-height: 1.5em;
-
-  &[class*="campaign"] {
-    background-size: 720px 720px;
-  }
 }
 
 .size-720-300 .text-wrapper {
