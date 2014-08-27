@@ -6,30 +6,21 @@ height: 300px
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8' />
-    <meta content='IE=edge' http-equiv='X-UA-Compatible' />
-    <link href='<%= baseUrl %>/templates/product/web-advertisement/stylesheets/main.css?v<%=version%>' rel='stylesheet' />
-    <style>
-      body.brand {
-        background-image:
-          url('{{{ background-image }}}'),
-          url('<%= baseUrl %>/global-assets/images/category-shapes/solid-center-bar-corporate.svg');
-        background-position: 50% 50%, 50% 50%;
-      }
-
-      body.campaign {
-        background-image:
-          url('{{{ background-image }}}'),
-          url('<%= baseUrl %>/global-assets/images/basic-shapes/triangle.svg');
-        background-position: 50% 50%, 100% 100%;
-        background-size: cover, 250% 200%;
-      }
-    </style>
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <link href='<%= baseUrl %>/templates/web-advertisement/stylesheets/main.css' rel='stylesheet'>
   </head>
-  <body class='size-720-300 {{ purpose }}' style='width: 720px; height: 300px'>
+  <body class='size-720-300 rh-theme-{{ category }}' style='width: 720px; height: 300px'>
+    <div class='brand'>
+      <% include /templates/shared/backgrounds/brand.svg %>
+    </div>
+    <div class='campaign'>
+      <% include /templates/shared/backgrounds/campaign.svg %>
+    </div>
     <main class='outer-wrapper'>
       <div class='branding'>
         <div class='rh-logo'>
+          <% include /templates/shared/logos/rh-logo.svg %>
         </div>
       </div>
       <div class='text-wrapper'>
@@ -39,9 +30,6 @@ height: 300px
             {{ call-to-action }}
           </div>
         </div>
-      </div>
-      <div class="product-wrapper">
-        {{{ product }}}
       </div>
     </main>
   </body>

@@ -34,11 +34,6 @@ body {
   height: 250px;
 }
 
-.product-branding svg {
-  width: 100%;
-  fill: $color-white;
-}
-
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   line-height: 1.25em;
@@ -57,12 +52,9 @@ h3 { font-size: 1.25em; }
 
 .text-wrapper {
   position: absolute;
+  top: 50%;
   left: 0;
-  right: 0;
-  top: 0;
-  bottom: 6em;
-  display: flex;
-  align-items: center;
+  transform: translateY(-50%);
   -webkit-hyphens: manual;
 }
 
@@ -73,6 +65,7 @@ h3 { font-size: 1.25em; }
   right: 0;
   height: 3em;
 }
+
 .branding .redhat-logo {
   width: 8em;
   fill: $color-white;
@@ -121,13 +114,6 @@ h3 { font-size: 1.25em; }
   right: auto;
 }
 
-.size-300-100 .text-wrapper {
-  align-items: flex-start;
-  bottom: 3em;
-  top: -0.2em;
-}
-
-
 /* 125 X 125 */
 
 .size-125-125 {
@@ -169,7 +155,6 @@ h3 { font-size: 1.25em; }
 
 .size-468-60 .text-wrapper {
   right: 11em;
-  bottom: auto;
 }
 
 .size-468-60 .branding {
@@ -190,16 +175,10 @@ h3 { font-size: 1.25em; }
   height: 90px;
   font-size: 15px;
   line-height: 1.5em;
-
-
-  &[class*="campaign"] {
-    background-size: 728px 728px;
-  }
 }
 
 .size-728-90 .text-wrapper {
   right: 9.5em;
-  bottom: 0;
 }
 
 .size-728-90 .call-to-action {
@@ -229,11 +208,6 @@ h3 { font-size: 1.25em; }
   height: 90px;
   font-size: 10px;
   line-height: 1.5em;
-}
-.size-180-90 .text-wrapper {
-  align-items: flex-start;
-  bottom: 3em;
-  top: -0.2em;
 }
 
 .size-180-90 .text { font-size: 0.8em; }
@@ -268,10 +242,6 @@ h3 { font-size: 1.25em; }
   line-height: 1.5em;
 }
 
-.size-160-600 .text-wrapper {
-  bottom: 8em;
-}
-
 .size-160-600 .call-to-action {
   left: 0;
   right: 0;
@@ -285,10 +255,6 @@ h3 { font-size: 1.25em; }
   height: 600px;
   font-size: 10px;
   line-height: 1.5em;
-}
-
-.size-120-600 .text-wrapper {
-  bottom: 8em;
 }
 
 .size-120-600 .branding {
@@ -314,11 +280,6 @@ h3 { font-size: 1.25em; }
   line-height: 1.5em;
 }
 
-.size-240-400 .text-wrapper {
-  bottom: 8em;
-  top: 1em;
-}
-
 .size-240-400 .branding {
   height: 3em;
 }
@@ -337,11 +298,6 @@ h3 { font-size: 1.25em; }
   height: 280px;
   font-size: 14px;
   line-height: 1.5em;
-}
-
-.size-336-280 .text-wrapper {
-  bottom: 2em;
-  top: 1em;
 }
 
 .size-336-280 .branding {
@@ -363,11 +319,6 @@ h3 { font-size: 1.25em; }
   height: 300px;
   font-size: 18px;
   line-height: 1.5em;
-}
-
-.size-720-300 .text-wrapper {
-  bottom: 2em;
-  top: 2em;
 }
 
 .size-720-300 .branding {

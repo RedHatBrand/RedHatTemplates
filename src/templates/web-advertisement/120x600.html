@@ -6,41 +6,72 @@ height: 600px
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8'>
-    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
-    <link href='<%= baseUrl %>/templates/web-advertisement/stylesheets/main.css' rel='stylesheet'>
+    <meta charset='utf-8' />
+    <meta content='IE=edge' http-equiv='X-UA-Compatible' />
+    <link href='<%= baseUrl %>/templates/web-advertisement/stylesheets/main.css' rel='stylesheet' />
     <style>
       .background { background-image: url({{{ background-image }}}); }
     </style>
   </head>
-  <body class='size-120-600' style='width: 120px; height: 600px'>
+  <body class='size-120-600 background-style-{{ background-style }}' style='width: 120px; height: 600px'>
     <% include /shared-partials/patterns/patterns.svg %>
+    <% include /shared-partials/shapes/shapes.svg %>
     <% include /shared-partials/logos/all-product.svg %>
 
-    <div class='background background-shapes brand-pattern-{{ group }}'>
+    <div class='background background-shapes brand-pattern-{{ brand-pattern }}'>
       <div class="corner-shape multiplied">
-        <% include /shared-partials/shapes/triangle.svg %>
+        <svg 
+          class="shape shape-filled" 
+          preserveAspectRatio="xMidYMid slice" 
+          width="500" 
+          height="500" 
+          viewBox="0 0 500 500">
+          <use xlink:href="#shape-triangle"></use>
+        </svg>
       </div>
       
-      <div class="corner-shape" style="bottom: -5em; right: -5em">
-        <% include /shared-partials/shapes/triangle.svg %>
+      <div class="corner-shape">
+        <svg 
+          class="shape shape-filled" 
+          preserveAspectRatio="xMidYMid slice" 
+          width="500" 
+          height="500" 
+          viewBox="-90 -90 500 500">
+          <use xlink:href="#shape-triangle"></use>
+        </svg>
       </div>
 
-      <div class="corner-shape brand-pattern {{ group }}">
-        <% include /shared-partials/shapes/stripe.svg %>
+      <div class="corner-shape">
+        <svg 
+          class="shape brand-pattern {{ brand-pattern }}" 
+          preserveAspectRatio="xMidYMid slice" 
+          width="500" 
+          height="500" 
+          viewBox="0 0 500 500">
+          <use xlink:href="#shape-stripe"></use>
+        </svg>
       </div>
 
-      <div class="center-shape multiplied">
-        <% include /shared-partials/shapes/bar.svg %>
+      <div class="center-shape shape-multiplied">
+        <svg 
+          class="shape shape-filled" 
+          preserveAspectRatio="xMidYMid slice" 
+          width="500" 
+          height="500" 
+          viewBox="0 0 500 500">
+          <use xlink:href="#shape-bar"></use>
+        </svg>
       </div>
     </div>
 
     <main class='outer-wrapper'>
+      {{#product}}
       <div class="product-branding">
         <svg width="200" height="50" viewBox="0 0 200 50" preserveAspectRatio="xMinYMin meet">
           <use xlink:href="#product-{{ product }}"></use>
         </svg>
       </div>
+      {{/product}}
 
       <div class='branding'>
         <% include /shared-partials/logos/redhat-logo.svg %>

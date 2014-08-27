@@ -14,16 +14,9 @@ height: 600px
     </style>
   </head>
   <body class='size-120-600 background-style-{{ background-style }}' style='width: 120px; height: 600px'>
-    <% include /shared-partials/logos/all-product.svg %>
     <% include /shared-partials/backgrounds/general-backgrounds.html %>
 
     <main class='outer-wrapper'>
-      <div class="product-branding">
-        <svg width="200" height="50" viewBox="0 0 200 50" preserveAspectRatio="xMinYMin meet">
-          <use xlink:href="#product-{{ product }}"></use>
-        </svg>
-      </div>
-
       <div class='branding'>
         <% include /shared-partials/logos/redhat-logo.svg %>
       </div>
@@ -36,6 +29,6 @@ height: 600px
           </div>
         </div>
       </div>
-    </main>
+    </main> 
   </body>
 </html>

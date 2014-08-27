@@ -1,0 +1,38 @@
+pattern.normal use {
+  stroke: #c00; 
+  fill: none;
+}
+
+pattern.light use {
+  stroke: #fff; 
+  fill: none;
+}
+
+pattern.dark use {
+  stroke: #000; 
+  fill: none;
+}
+
+.brand-pattern-paths path,
+.pattern-path {
+  stroke-width: 1; 
+  fill: none; 
+}
+
+.brand-pattern { display: none }
+
+$groups:  'corporate' 
+          'storage' 
+          'infrastructure' 
+          'cloud-infrastructure' 
+          'development' 
+          'cloud-development' 
+          'business-process' 
+          'services'
+          'partners'
+          'community';
+
+@each $group in $groups {
+  .brand-pattern-#{$group} .brand-pattern.#{$group} { display: block; }
+}
+

@@ -1,29 +1,22 @@
 ---
 width: 120px
-height: 600px
+height: 90px
 ---
 
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8' />
-    <meta content='IE=edge' http-equiv='X-UA-Compatible' />
-    <link href='<%= baseUrl %>/templates/web-advertisement/stylesheets/main.css' rel='stylesheet' />
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <link href="<%= baseUrl %>/templates/miscellaneous/web-advertisement/stylesheets/main.css" rel='stylesheet'>
     <style>
       .background { background-image: url({{{ background-image }}}); }
     </style>
   </head>
-  <body class='size-120-600 background-style-{{ background-style }}' style='width: 120px; height: 600px'>
-    <% include /shared-partials/logos/all-product.svg %>
+  <body class='size-120-90 background-style-{{ background-style }}' style='width: 120px; height: 90px'>
     <% include /shared-partials/backgrounds/general-backgrounds.html %>
 
     <main class='outer-wrapper'>
-      <div class="product-branding">
-        <svg width="200" height="50" viewBox="0 0 200 50" preserveAspectRatio="xMinYMin meet">
-          <use xlink:href="#product-{{ product }}"></use>
-        </svg>
-      </div>
-
       <div class='branding'>
         <% include /shared-partials/logos/redhat-logo.svg %>
       </div>

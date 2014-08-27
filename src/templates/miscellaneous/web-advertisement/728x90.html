@@ -1,0 +1,34 @@
+---
+width: 728px
+height: 90px
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <link href='<%= baseUrl %>/templates/miscellaneous/web-advertisement/stylesheets/main.css' rel='stylesheet'>
+    <style>
+      .background { background-image: url({{{ background-image }}}); }
+    </style>
+  </head>
+  <body class='size-728-90 background-style-{{ background-style }}' style='width: 728px; height: 90px'>
+    <% include /shared-partials/backgrounds/general-backgrounds.html %>
+
+    <main class='outer-wrapper'>
+      <div class='branding'>
+        <% include /shared-partials/logos/redhat-logo.svg %>
+      </div>
+
+      <div class='text-wrapper'>
+        <div class='text'>
+          {{{ long-message }}}
+          <div class='call-to-action'>
+            {{ call-to-action }}
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
