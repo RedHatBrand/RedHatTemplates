@@ -2,11 +2,10 @@ var gulp               = require('gulp'),
     gulpFilter         = require('gulp-filter'),
     gutil              = require('gulp-util'),
     debug              = require('gulp-debug'),
-    deploy             = require('gulp-awspublish'),
+    deployS3          = require('gulp-awspublish'),
     ejs                = require('gulp-ejs'),
     livereload         = require('gulp-livereload'),
     express            = require('express'),
-    argv               = require('yargs').argv,
     app                = express(),
     deploy             = require("gulp-gh-pages");
 
@@ -23,8 +22,8 @@ var MetalSmith         = require('metalsmith'),
 var tmp                = './.tmp';
 var prod               = './build';
 var base = {
-  production: 'http://red-hat-assets.s3.amazonaws.com',
-  ghPages: 'http://redhatbrand.github.io/RedHatTemplates',
+  productionS3: 'http://red-hat-assets.s3.amazonaws.com',
+  production: 'http://redhatbrand.github.io/RedHatTemplates',
   development: '/RedHatTemplates'
 }
 
@@ -103,13 +102,13 @@ gulp.task('smith', function () {
     }))
     .destination(tmp + '/RedHatTemplates')
     .build(function () {
-      return defered.resolve.call(defered, arguments);
+      return defered.resolve.apply(defered, arguments);
     });
 
   return defered.promise;
 });
 
-gulp.task('build', ['smith'], function () {
+gulp.task('build-tmp', ['smith'], function () {
   var htmlFilter = gulpFilter('**/*.html');
 
   return gulp.src(tmp + '/**/*', { base: './.tmp' })
@@ -119,17 +118,17 @@ gulp.task('build', ['smith'], function () {
     .pipe(gulp.dest(tmp));
 });
 
-gulp.task('build-production', ['smith'], function () {
+gulp.task('build-s3', ['smith'], function () {
   var htmlFilter = gulpFilter('**/*.html');
 
   return gulp.src(tmp + '/RedHatTemplates' + '/**/*', { base: './.tmp/RedHatTemplates' })
     .pipe(htmlFilter)
-    .pipe(ejs({ baseUrl: base['production'], version: Date.now() }).on('error', gutil.log))
+    .pipe(ejs({ baseUrl: base['productionS3'], version: Date.now() }).on('error', gutil.log))
     .pipe(htmlFilter.restore())
     .pipe(gulp.dest(prod));
 });
 
-gulp.task('watch', ['build'], function() {
+gulp.task('watch', ['build-tmp'], function() {
   gulp.watch('./src/**/*.*', ['build']);
 });
 
@@ -141,8 +140,8 @@ gulp.task('serve', ['watch'], function () {
     });
 });
 
-gulp.task('publish', function () {
-  var publisher = deploy.create({
+gulp.task('publish-s3', function () {
+  var publisher = deployS3.create({
     key: process.env.RH_AWS_KEY,
     secret: process.env.RH_AWS_SECRET,
     bucket: 'red-hat-assets',
@@ -160,17 +159,17 @@ gulp.task('publish', function () {
     .pipe(deploy.reporter());
 });
 
-gulp.task('build-gh-pages', ['smith'], function () {
+gulp.task('build', ['smith'], function () {
   var htmlFilter = gulpFilter('**/*.html');
 
   return gulp.src(tmp + '/RedHatTemplates' + '/**/*', { base: './.tmp/RedHatTemplates' })
     .pipe(htmlFilter)
-    .pipe(ejs({ baseUrl: base['ghPages'], version: Date.now() }).on('error', gutil.log))
+    .pipe(ejs({ baseUrl: base['production'], version: Date.now() }).on('error', gutil.log))
     .pipe(htmlFilter.restore())
     .pipe(gulp.dest(prod));
 });
 
-gulp.task('deploy', function () {
+gulp.task('publish', function () {
   return gulp.src('./build/**/*.*')
     .pipe(deploy());
 });
