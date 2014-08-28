@@ -119,17 +119,17 @@ gulp.task('build-tmp', ['smith'], function () {
 });
 
 gulp.task('build-s3', ['smith'], function () {
-  var htmlFilter = gulpFilter('**/*.html');
+  var xmlFilter = gulpFilter(['**/*.html', '**/*.svg']);
 
   return gulp.src(tmp + '/RedHatTemplates' + '/**/*', { base: './.tmp/RedHatTemplates' })
-    .pipe(htmlFilter)
+    .pipe(xmlFilter)
     .pipe(ejs({ baseUrl: base['productionS3'], version: Date.now() }).on('error', gutil.log))
-    .pipe(htmlFilter.restore())
+    .pipe(xmlFilter.restore())
     .pipe(gulp.dest(prod));
 });
 
 gulp.task('watch', ['build-tmp'], function() {
-  gulp.watch('./src/**/*.*', ['build']);
+  gulp.watch('./src/**/*.*', ['build-tmp']);
 });
 
 gulp.task('serve', ['watch'], function () {
@@ -159,13 +159,18 @@ gulp.task('publish-s3', function () {
     .pipe(deploy.reporter());
 });
 
-gulp.task('build', ['smith'], function () {
-  var htmlFilter = gulpFilter('**/*.html');
+gulp.task('ejs', ['smith'], function () {
+  var xmlFilter = gulpFilter(['**/*.html', '**/*.svg']);
 
-  return gulp.src(tmp + '/RedHatTemplates' + '/**/*', { base: './.tmp/RedHatTemplates' })
-    .pipe(htmlFilter)
+  return gulp.src(tmp + '/**/*', { base: './.tmp' })
+    .pipe(xmlFilter)
     .pipe(ejs({ baseUrl: base['production'], version: Date.now() }).on('error', gutil.log))
-    .pipe(htmlFilter.restore())
+    .pipe(xmlFilter.restore())
+    .pipe(gulp.dest(tmp));
+});
+
+gulp.task('build', ['ejs'], function () {
+  return gulp.src(tmp + '/RedHatTemplates/**/*', { base: './.tmp/RedHatTemplates' })
     .pipe(gulp.dest(prod));
 });
 
