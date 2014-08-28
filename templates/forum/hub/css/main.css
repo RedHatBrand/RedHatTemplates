@@ -602,8 +602,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     bottom: 0.4em; }
   .events-list .location .outer-letter svg {
     height: 100%; }
-.events-list .location .outer-letter .space, .events-list .event .date .space {
-  content: url("../images/letters/space.svg"); }
 .events-list .location .outer-letter svg text, .events-list .event .date svg text {
   font-family: 'Overpass', 'Helvetica', 'Verdana', sans-serif; }
 .events-list .event .date {

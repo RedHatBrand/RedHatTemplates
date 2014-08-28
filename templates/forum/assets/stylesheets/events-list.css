@@ -37,9 +37,6 @@
   display: block;
   position: relative;
   float: left; }
-  .events-list .location .outer-letter img {
-    width: 100%;
-    display: block; }
   .events-list .location .outer-letter .svgs {
     position: absolute;
     top: 0;
@@ -64,9 +61,6 @@
   color: white;
   text-align: center;
   position: relative; }
-  .events-list .event .date img {
-    width: 100%;
-    display: block; }
   .events-list .event .date .text-content {
     position: absolute;
     top: 0;

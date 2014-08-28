@@ -19,6 +19,103 @@
   font-weight: 600;
   font-style: normal; }
 
+.background-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat; }
+
+.background-shapes .corner-shape {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+  .background-shapes .corner-shape .shape {
+    width: 100%;
+    height: 100%; }
+
+.background-shapes .center-shape {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  .background-shapes .center-shape .shape {
+    width: 100%;
+    height: 100%; }
+
+.shape-filled {
+  fill: #c00; }
+
+.shape-multiplied {
+  mix-blend-mode: multiply; }
+
+.center-shape, .corner-shape {
+  display: none; }
+
+.background-style-center .center-shape {
+  display: block; }
+
+.background-style-corner .corner-shape {
+  display: block; }
+
+pattern.normal use {
+  stroke: #c00;
+  fill: none; }
+
+pattern.light use {
+  stroke: #fff;
+  fill: none; }
+
+pattern.dark use {
+  stroke: #000;
+  fill: none; }
+
+.brand-pattern-paths path, .pattern-path {
+  stroke-width: 1;
+  fill: none; }
+
+.brand-pattern {
+  display: none; }
+
+.brand-pattern-corporate .brand-pattern.corporate {
+  display: block; }
+
+.brand-pattern-storage .brand-pattern.storage {
+  display: block; }
+
+.brand-pattern-infrastructure .brand-pattern.infrastructure {
+  display: block; }
+
+.brand-pattern-cloud-infrastructure .brand-pattern.cloud-infrastructure {
+  display: block; }
+
+.brand-pattern-development .brand-pattern.development {
+  display: block; }
+
+.brand-pattern-cloud-development .brand-pattern.cloud-development {
+  display: block; }
+
+.brand-pattern-business-process .brand-pattern.business-process {
+  display: block; }
+
+.brand-pattern-services .brand-pattern.services {
+  display: block; }
+
+.brand-pattern-partners .brand-pattern.partners {
+  display: block; }
+
+.brand-pattern-community .brand-pattern.community {
+  display: block; }
+
 html {
   font-family: 'Overpass', 'Interstate', 'Helvetica', 'Arial', sans-serif;
   font-size: 20px;
@@ -30,15 +127,25 @@ body {
   position: relative;
   padding: 0;
   margin: 0;
-  color: white;
-  background-blend-mode: multiply;
+  color: white; }
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: 50% 50%;
   background-repeat: no-repeat; }
 
-.rh-logo:before {
-  content: url('/global-assets/images/logos/rh-logo.svg');
-  display: block;
-  font-size: 0;
-  line-height: 0; }
+.background-shapes .corner-shape {
+  width: 250px;
+  height: 250px; }
+
+.product-branding svg {
+  width: 100%;
+  fill: white; }
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
@@ -81,12 +188,11 @@ h3 {
   bottom: 0;
   left: auto;
   right: 0;
-  height: 3em;
-  min-width: 8em; }
+  height: 3em; }
 
-.branding svg {
-  height: 3em;
-  min-width: 8em; }
+.branding .redhat-logo {
+  width: 8em;
+  fill: white; }
 
 .call-to-action {
   padding: 0.5em 0.75em;
@@ -94,10 +200,6 @@ h3 {
   text-transform: uppercase;
   line-height: 1em;
   display: inline-block; }
-
-.product-wrapper svg {
-  fill: white;
-  width: 100%; }
 
 /* 300 X 600 The base style */
 .size-300-600 {
@@ -127,25 +229,31 @@ h3 {
   right: auto; }
 
 .size-300-100 .text-wrapper {
-  display: none; }
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  bottom: 3em;
+  top: -0.2em; }
 
 /* 125 X 125 */
 .size-125-125 {
   width: 125px;
   height: 125px; }
 
-.size-125-125 .text-wrapper, .size-125-125 .call-to-action, .size-125-125 .branding {
+.size-125-125 .text-wrapper, .size-125-125 .call-to-action {
   display: none; }
 
-.size-125-125 .product-wrapper {
+.size-125-125 .branding {
+  left: -1.75em;
+  right: 0;
   top: 50%;
-  bottom: auto;
-  height: auto;
-  left: 0.25em;
-  right: 0.25em;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  bottom: 0;
+  height: 1.5em;
+  margin-top: -0.8em; }
+
+.size-125-125 .branding svg {
+  height: 1.5em; }
 
 /* 468 X 60 */
 .size-468-60 {
@@ -177,6 +285,8 @@ h3 {
   height: 90px;
   font-size: 15px;
   line-height: 1.5em; }
+  .size-728-90[class*="campaign"] {
+    background-size: 728px 728px; }
 
 .size-728-90 .text-wrapper {
   right: 9.5em;
@@ -207,7 +317,12 @@ h3 {
   line-height: 1.5em; }
 
 .size-180-90 .text-wrapper {
-  display: none; }
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  bottom: 3em;
+  top: -0.2em; }
 
 .size-180-90 .text {
   font-size: 0.8em; }
@@ -337,13 +452,9 @@ h3 {
   left: 0; }
 
 .size-120-90 .branding {
-  height: auto;
-  left: 0.5em;
-  right: 0.5em;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  height: 3.5em;
+  left: 0;
+  top: 1.8em; }
 
 .size-120-90 .branding svg {
   height: 3.5em; }
