@@ -1,0 +1,43 @@
+---
+width: 206mm
+height: 106mm
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8' />
+    <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+
+    <link href='<%= baseUrl %>/templates/bangalore/carousel/stylesheets/main.css?v<%= version %>' rel='stylesheet' />
+    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+
+    <style>
+      .background { background-image: url({{{ background-image }}}); }
+    </style>
+  </head>
+
+  <body class="background-style-{{ background-style }}" style="width: {{#add}}{{width}}+6{{/add}}mm; height: {{#add}}{{height}}+6{{/add}}mm">
+    <main>
+      <!-- Design here -->
+      <% include /shared-partials/backgrounds/general-backgrounds.html %>
+
+      <article id="content">
+        <section class="text-content">
+          <h1><span class="highlighted">{{{ message }}}</span></h1>
+        </section>
+
+        <div class='branding'>
+          <% include /shared-partials/logos/redhat-logo.svg %>
+        </div> 
+      </article>
+      <!-- /Design here -->
+
+      <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
+    </main>
+  </body>
+</html>
+
