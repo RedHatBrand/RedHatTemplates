@@ -1,0 +1,124 @@
+@import '../../../../global-assets/scss/utils/grid';
+@import '../../../../global-assets/scss/fonts/overpass';
+@import '../../../../global-assets/scss/colors/base_color_palette';
+@import '../../../../global-assets/scss/components/background_shapes';
+@import '../../../../global-assets/scss/components/patterns';
+
+$page-margin: 4em;
+
+body {
+  position: relative;
+  font-family: 'Overpass';
+  font-weight: 400;
+  line-height: 1.5em;
+  background-color: white;
+  font-size: 1vw;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+main {
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  top: 3mm; bottom: 3mm;
+  left: 3mm; right: 3mm;
+}
+
+p { margin: 0.333em 0 0.75em; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+ul { margin: 0; }
+
+#content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 3mm solid transparent;
+  border-left: 3mm solid transparent;
+  border-right: 3mm solid transparent;
+  border-bottom: 3mm solid transparent;
+}
+
+span.highlighted {
+  display: inline;
+  color: $color-white;
+  background: rgba(0, 0, 0, 0.8);
+  padding-top: 0.5em;
+  padding-bottom: 0.4em;
+}
+
+.text-content {
+  width: 33.333%;
+  padding: $page-margin;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  font-size: 0.667em;
+
+  h1 {
+    font-size: 3em;
+    margin: 0;
+    line-height: 1.5em;
+
+    span.highlighted {
+      padding-top: 0.07em;
+      padding-bottom: 0.02em;
+    }
+  }
+}
+
+.background-shapes .corner-shape {
+  max-width: 50%;
+}
+
+.panel-half .text-content { 
+  width: 100%;
+  font-size: 2em; 
+}
+
+$logo-ratio: 0.36437247;
+$logo-width: 16em;
+
+.branding {
+  position: absolute;
+  right: $page-margin;
+  bottom: $page-margin;
+  width: $logo-width;
+
+  .redhat-logo {
+    width: 100%;
+    height: $logo-width * $logo-ratio;
+    display: block;
+
+    .logotext {
+      fill: $color-white;
+    }
+  }
+}
+.panel-half .branding { font-size: 2em; }
+
+.call-to-action {
+  position: absolute;
+  top: $page-margin;
+  right: $page-margin;
+  padding: 1.5em;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: $color-white;
+
+  span {
+    font-size: 1.25em;
+    display: inline-block;
+  }
+}
+.panel-half .call-to-action { font-size: 2em; }

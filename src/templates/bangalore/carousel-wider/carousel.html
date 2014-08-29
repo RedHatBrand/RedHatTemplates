@@ -1,0 +1,64 @@
+---
+width: 612mm
+height: 212mm
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8' />
+    <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+
+    <link href='<%= baseUrl %>/templates/bangalore/carousel-wider/stylesheets/main.css?v<%= version %>' rel='stylesheet' />
+    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+
+    <style>
+      .background-style-corner .background { 
+      	background-image: 
+      		url('{{{ background-image }}}'),
+      		url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/category-shapes/solid-corner-corporate.svg'); 
+      	background-size: cover, 52em 52em;
+        background-position: 50% 50%, 100% 100%;
+        background-blend-mode: multiply;
+      }
+      
+      .background-style-center .background { 
+      	background-image: 
+      		url('{{{ background-image }}}'),
+      		url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/category-shapes/solid-center-bar-corporate.svg'); 
+      	background-size: cover, cover;
+        background-position: 50% 50%, 100% 100%;
+        background-blend-mode: multiply;
+      }
+    </style>
+  </head>
+
+  <body class="background-style-{{ background-style }}" style="width: {{#add}}{{width}}+12{{/add}}mm; height: {{#add}}{{height}}+12{{/add}}mm">
+    <main>
+      <!-- Design here -->
+      <div class='background background-shapes'>
+      </div>
+
+      <article id="content">
+        <section class="text-content">
+          <h1><span class="highlighted">{{{ message }}}</span></h1>
+        </section>
+
+        <div class="call-to-action">
+          <span>{{ call-to-action }}</span>
+        </div>
+
+        <div class='branding'>
+          <% include /shared-partials/logos/redhat-logo.svg %>
+        </div> 
+      </article>
+      <!-- /Design here -->
+
+      <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
+    </main>
+  </body>
+</html>
+
