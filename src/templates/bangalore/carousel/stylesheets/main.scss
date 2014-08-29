@@ -14,6 +14,7 @@ body {
   background-color: white;
   font-size: 1vw;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 main {
@@ -53,9 +54,6 @@ span.highlighted {
   background: rgba(0, 0, 0, 0.8);
   padding-top: 0.5em;
   padding-bottom: 0.4em;
-  box-shadow:
-    0.5em 0 0 rgba(0, 0, 0, 0.8),
-    -0.5em 0 0 rgba(0, 0, 0, 0.8);
 }
 
 .text-content {
@@ -75,25 +73,26 @@ span.highlighted {
     span.highlighted {
       padding-top: 0.07em;
       padding-bottom: 0.02em;
-      box-shadow:
-        0.25em 0 0 rgba(0, 0, 0, 0.8),
-        -0.25em 0 0 rgba(0, 0, 0, 0.8);
     }
   }
 }
 
-
 .background-shapes .corner-shape {
-  width: 33.333%;
+  max-width: 50%;
+}
+
+.panel-half .text-content { 
+  width: 100%;
+  font-size: 2em; 
 }
 
 $logo-ratio: 0.36437247;
-$logo-width: 12em;
+$logo-width: 16em;
 
 .branding {
   position: absolute;
-  right: 1em;
-  bottom: 1em;
+  right: $page-margin;
+  bottom: $page-margin;
   width: $logo-width;
 
   .redhat-logo {
@@ -106,3 +105,19 @@ $logo-width: 12em;
     }
   }
 }
+.panel-half .branding { font-size: 2em; }
+
+.call-to-action {
+  position: absolute;
+  top: $page-margin;
+  right: $page-margin;
+  padding: 1.5em;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: $color-white;
+
+  span {
+    font-size: 1.25em;
+    display: inline-block;
+  }
+}
+.panel-half .call-to-action { font-size: 2em; }

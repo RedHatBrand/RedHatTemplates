@@ -1,5 +1,5 @@
 ---
-width: 212mm
+width: 112mm
 height: 112mm
 ---
 
@@ -17,7 +17,7 @@ height: 112mm
       	background-image: 
       		url('{{{ background-image }}}'),
       		url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/category-shapes/solid-corner-corporate.svg'); 
-      	background-size: cover, 52em 52em;
+      	background-size: cover, 104em 104em;
         background-position: 50% 50%, 100% 100%;
         background-blend-mode: multiply;
       }
@@ -27,30 +27,22 @@ height: 112mm
       		url('{{{ background-image }}}'),
       		url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/category-shapes/solid-center-bar-corporate.svg'); 
       	background-size: cover, cover;
-        background-position: 50% 50%, 100% 100%;
+        background-position: 50% 50%, auto;
         background-blend-mode: multiply;
       }
     </style>
   </head>
 
-  <body class="background-style-{{ background-style }}" style="width: {{#add}}{{width}}+12{{/add}}mm; height: {{#add}}{{height}}+12{{/add}}mm">
+  <body class="panel-half background-style-{{ background-style }}" style="width: {{#add}}{{#divide}}{{width}}/2{{/divide}}+12{{/add}}mm; height: {{#add}}{{height}}+12{{/add}}mm">
     <main>
       <!-- Design here -->
-      <div class='background background-shapes'>
+      <div style="width: {{#add}}{{width}}+6{{/add}}mm" class='background background-shapes'>
       </div>
 
       <article id="content">
         <section class="text-content">
           <h1><span class="highlighted">{{{ message }}}</span></h1>
-        </section>
-
-        <div class="call-to-action">
-          <span>{{ call-to-action }}</span>
-        </div>
-
-        <div class='branding'>
-          <% include /shared-partials/logos/redhat-logo.svg %>
-        </div> 
+        </section> 
       </article>
       <!-- /Design here -->
 
@@ -61,4 +53,3 @@ height: 112mm
     </main>
   </body>
 </html>
-

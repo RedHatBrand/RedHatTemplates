@@ -9,6 +9,9 @@ var gulp               = require('gulp'),
     app                = express(),
     deploy             = require("gulp-gh-pages");
 
+var diff = require('gulp-diff').diff;
+var diffReporter = require('gulp-diff').reporter;
+
 var MetalSmith         = require('metalsmith'),
     autoprefixer       = require('metalsmith-autoprefixer'),
     collection         = require('metalsmith-collections'),
@@ -156,7 +159,7 @@ gulp.task('publish-s3', function () {
     .pipe(publisher.publish(headers))
     .pipe(publisher.sync())
     .pipe(publisher.cache())
-    .pipe(deploy.reporter());
+    .pipe(deployS3.reporter());
 });
 
 gulp.task('ejs', ['smith'], function () {
@@ -174,7 +177,7 @@ gulp.task('build', ['ejs'], function () {
     .pipe(gulp.dest(prod));
 });
 
-gulp.task('publish', function () {
+gulp.task('deploy', function () {
   return gulp.src('./build/**/*.*')
     .pipe(deploy());
 });
