@@ -9,9 +9,6 @@ var gulp               = require('gulp'),
     app                = express(),
     deploy             = require("gulp-gh-pages");
 
-var diff = require('gulp-diff').diff;
-var diffReporter = require('gulp-diff').reporter;
-
 var MetalSmith         = require('metalsmith'),
     autoprefixer       = require('metalsmith-autoprefixer'),
     collection         = require('metalsmith-collections'),
@@ -27,7 +24,7 @@ var prod               = './build';
 var base = {
   productionS3: 'http://red-hat-assets.s3.amazonaws.com',
   production: 'http://redhatbrand.github.io/RedHatTemplates',
-  development: '/RedHatTemplates'
+  development: ''
 }
 
 handlebars.registerHelper('json', function(context) {
@@ -37,7 +34,7 @@ handlebars.registerHelper('json', function(context) {
 function url(){
   return function addUrl(files, metalsmith, done){
     for (var file in files) {
-      files[file].url = '/RedHatTemplates/' + file;
+      files[file].url = file;
     }
     done();
   };
@@ -103,7 +100,7 @@ gulp.task('smith', function () {
       engine: 'handlebars',
       directory: 'layouts'
     }))
-    .destination(tmp + '/RedHatTemplates')
+    .destination(tmp)
     .build(function () {
       return defered.resolve.apply(defered, arguments);
     });
@@ -114,7 +111,7 @@ gulp.task('smith', function () {
 gulp.task('build-tmp', ['smith'], function () {
   var xmlFilter = gulpFilter(['**/*.html', '**/*.svg']);
 
-  return gulp.src(tmp + '/**/*', { base: './.tmp' })
+  return gulp.src(tmp + '/**/*', { base: tmp })
     .pipe(xmlFilter)
     .pipe(ejs({ baseUrl: base['development'], version: Date.now() }).on('error', gutil.log))
     .pipe(xmlFilter.restore())
@@ -124,7 +121,7 @@ gulp.task('build-tmp', ['smith'], function () {
 gulp.task('build-s3', ['smith'], function () {
   var xmlFilter = gulpFilter(['**/*.html', '**/*.svg']);
 
-  return gulp.src(tmp + '/RedHatTemplates' + '/**/*', { base: './.tmp/RedHatTemplates' })
+  return gulp.src(tmp + '/**/*', { base: tmp })
     .pipe(xmlFilter)
     .pipe(ejs({ baseUrl: base['productionS3'], version: Date.now() }).on('error', gutil.log))
     .pipe(xmlFilter.restore())
@@ -173,12 +170,12 @@ gulp.task('ejs', ['smith'], function () {
 });
 
 gulp.task('build', ['ejs'], function () {
-  return gulp.src(tmp + '/RedHatTemplates/**/*', { base: './.tmp/RedHatTemplates' })
+  return gulp.src(tmp + '/**/*', { base: tmp })
     .pipe(gulp.dest(prod));
 });
 
 gulp.task('deploy', function () {
-  return gulp.src('./build/**/*.*')
+  return gulp.src(prod + '/**/*.*')
     .pipe(deploy());
 });
 
