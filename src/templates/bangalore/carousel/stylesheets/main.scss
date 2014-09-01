@@ -4,7 +4,7 @@
 @import '../../../../global-assets/scss/components/background_shapes';
 @import '../../../../global-assets/scss/components/patterns';
 
-$page-margin: 4em;
+$page-margin: 2em;
 
 body {
   position: relative;
@@ -12,21 +12,26 @@ body {
   font-weight: 400;
   line-height: 1.5em;
   background-color: white;
-  font-size: 90pt;
+  font-size: 150pt;
   box-sizing: border-box;
   overflow: hidden;
+
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 main {
-  background-size: cover;
-  background-repeat: no-repeat;
-
   position: absolute;
   top: 3mm; bottom: 3mm;
   left: 3mm; right: 3mm;
 }
 
 p { margin: 0.333em 0 0.75em; }
+ul { 
+  list-style: none; 
+  padding: 0;
+}
+ul li { padding: 0; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -34,7 +39,6 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   font-weight: 700;
 }
-ul { margin: 0; }
 
 #content {
   position: absolute;
@@ -48,12 +52,15 @@ ul { margin: 0; }
   border-bottom: 3mm solid transparent;
 }
 
-span.highlighted {
-  display: inline;
+.highlighted span {
   color: $color-white;
   background: rgba(0, 0, 0, 0.8);
-  padding-top: 0.5em;
-  padding-bottom: 0.4em;
+  padding-top: 0.25em;
+  padding-bottom: 0.125em;
+}
+.highlighted h1 span {
+  padding-top: 0.1em;
+  padding-bottom: 0.05em;
 }
 
 .text-content {
@@ -65,29 +72,27 @@ span.highlighted {
   top: 0;
   bottom: 0;
 
+  text-transform: uppercase;
+
   h1 {
     font-size: 3em;
-    margin: 0;
-    line-height: 1.5em;
+    line-height: 1.6em;
+    margin-bottom: 0.667em;
+  }
 
-    span.highlighted {
-      padding-top: 0.07em;
-      padding-bottom: 0.02em;
-    }
+  h2 {
+    font-size: 2em;
+    line-height: 1.6em;
+    margin-bottom: 1em;
+  }
+
+  p, ul {
+    margin-bottom: 2em;
   }
 }
 
-.background-shapes .corner-shape {
-  max-width: 50%;
-}
-
-.panel-half .text-content { 
-  width: 100%;
-  font-size: 2em; 
-}
-
 $logo-ratio: 0.36437247;
-$logo-width: 16em;
+$logo-width: 24em;
 
 .branding {
   position: absolute;
@@ -105,19 +110,22 @@ $logo-width: 16em;
     }
   }
 }
-.panel-half .branding { font-size: 2em; }
 
 .call-to-action {
-  position: absolute;
-  top: $page-margin;
-  right: $page-margin;
-  padding: 1.5em;
-  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.5em;
+  padding-bottom: 0.25em;
+  background-color: $color-rh-red;
   color: $color-white;
-
-  span {
-    font-size: 1.25em;
-    display: inline-block;
-  }
+  display: inline-block;
 }
-.panel-half .call-to-action { font-size: 2em; }
+
+.background-style-center .pattern-stripe { display: none; }
+
+.pattern-stripe {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
