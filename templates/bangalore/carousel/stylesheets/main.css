@@ -192,14 +192,14 @@ body {
   font-weight: 400;
   line-height: 1.5em;
   background-color: white;
-  font-size: 90pt;
+  font-size: 150pt;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  overflow: hidden; }
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 main {
-  background-size: cover;
-  background-repeat: no-repeat;
   position: absolute;
   top: 3mm;
   bottom: 3mm;
@@ -209,14 +209,18 @@ main {
 p {
   margin: 0.333em 0 0.75em; }
 
+ul {
+  list-style: none;
+  padding: 0; }
+
+ul li {
+  padding: 0; }
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   line-height: 1.2em;
   text-transform: uppercase;
   font-weight: 700; }
-
-ul {
-  margin: 0; }
 
 #content {
   position: absolute;
@@ -229,62 +233,62 @@ ul {
   border-right: 3mm solid transparent;
   border-bottom: 3mm solid transparent; }
 
-span.highlighted {
-  display: inline;
+.highlighted span {
   color: white;
   background: rgba(0, 0, 0, 0.8);
-  padding-top: 0.5em;
-  padding-bottom: 0.4em; }
+  padding-top: 0.25em;
+  padding-bottom: 0.125em; }
+
+.highlighted h1 span {
+  padding-top: 0.1em;
+  padding-bottom: 0.05em; }
 
 .text-content {
   width: 50%;
-  padding: 4em;
+  padding: 2em;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: absolute;
   left: 0;
   top: 0;
-  bottom: 0; }
+  bottom: 0;
+  text-transform: uppercase; }
   .text-content h1 {
     font-size: 3em;
-    margin: 0;
-    line-height: 1.5em; }
-    .text-content h1 span.highlighted {
-      padding-top: 0.07em;
-      padding-bottom: 0.02em; }
-
-.background-shapes .corner-shape {
-  max-width: 50%; }
-
-.panel-half .text-content {
-  width: 100%;
-  font-size: 2em; }
+    line-height: 1.6em;
+    margin-bottom: 0.667em; }
+  .text-content h2 {
+    font-size: 2em;
+    line-height: 1.6em;
+    margin-bottom: 1em; }
+  .text-content p, .text-content ul {
+    margin-bottom: 2em; }
 
 .branding {
   position: absolute;
-  right: 4em;
-  bottom: 4em;
-  width: 16em; }
+  right: 2em;
+  bottom: 2em;
+  width: 24em; }
   .branding .redhat-logo {
     width: 100%;
-    height: 5.82996em;
+    height: 8.74494em;
     display: block; }
     .branding .redhat-logo .logotext {
       fill: white; }
 
-.panel-half .branding {
-  font-size: 2em; }
-
 .call-to-action {
-  position: absolute;
-  top: 4em;
-  right: 4em;
-  padding: 1.5em;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white; }
-  .call-to-action span {
-    font-size: 1.25em;
-    display: inline-block; }
+  padding: 0.5em;
+  padding-bottom: 0.25em;
+  background-color: #b90c20;
+  color: white;
+  display: inline-block; }
 
-.panel-half .call-to-action {
-  font-size: 2em; }
+.background-style-center .pattern-stripe {
+  display: none; }
+
+.pattern-stripe {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0; }
