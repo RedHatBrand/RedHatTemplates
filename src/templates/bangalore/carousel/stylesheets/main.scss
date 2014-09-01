@@ -4,15 +4,15 @@
 @import '../../../../global-assets/scss/components/background_shapes';
 @import '../../../../global-assets/scss/components/patterns';
 
-$page-margin: 2em;
+$page-margin: 3em;
 
 body {
   position: relative;
   font-family: 'Overpass';
   font-weight: 400;
-  line-height: 1.5em;
+  line-height: 1.6em;
   background-color: white;
-  font-size: 150pt;
+  font-size: 180pt;
   box-sizing: border-box;
   overflow: hidden;
 
@@ -35,7 +35,7 @@ ul li { padding: 0; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  line-height: 1.2em;
+  line-height: 1.6em;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -91,6 +91,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.wider .text-content { width: 33.333%; }
+
 $logo-ratio: 0.36437247;
 $logo-width: 24em;
 
@@ -108,6 +110,17 @@ $logo-width: 24em;
     .logotext {
       fill: $color-white;
     }
+  }
+}
+
+.wider .branding {
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  width: 33.333%;
+
+  .redhat-logo {
+    height: 100%;
   }
 }
 
