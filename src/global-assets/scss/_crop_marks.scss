@@ -5,8 +5,8 @@
 /* Default 3mm bleed @ 300dpi */
 
 .crop-mark {
-  width: 71px;
-  height: 71px;
+  width: 6mm;
+  height: 6mm;
   position: absolute;
   z-index:2;
 }
@@ -16,7 +16,8 @@
   content: '';
   display: block;
   position: absolute;
-  background-color: black;
+  color: black;
+  border: thin solid;
 }
 
 .crop-mark.top-left {
@@ -28,14 +29,12 @@
 .crop-mark.top-left:after {
   bottom: 0;
   left: 0;
-  height: 1px;
   width: 50%;
 }
 
 .crop-mark.top-left:before {
   top: 0;
   right: 0;
-  width: 1px;
   height: 50%;
 }
 
@@ -48,14 +47,12 @@
 .crop-mark.top-right:after {
   bottom: 0;
   right: 0;
-  height: 1px;
   width: 50%;
 }
 
 .crop-mark.top-right:before {
   top: 0;
   left: 0;
-  width: 1px;
   height: 50%;
 }
 
@@ -70,14 +67,12 @@
 .crop-mark.bottom-left:after {
   top: 0;
   left: 0;
-  height: 1px;
   width: 50%;
 }
 
 .crop-mark.bottom-left:before {
   bottom: 0;
   right: 0;
-  width: 1px;
   height: 50%;
 }
 
@@ -90,13 +85,11 @@
 .crop-mark.bottom-right:after {
   top: 0;
   right: 0;
-  height: 1px;
   width: 50%;
 }
 
 .crop-mark.bottom-right:before {
   bottom: 0;
   left: 0;
-  width: 1px;
   height: 50%;
 }

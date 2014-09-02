@@ -3,26 +3,24 @@
 @import '../../../../global-assets/scss/components/background_shapes';
 @import '../../../../global-assets/scss/components/patterns';
 
-$page-margin: 3em;
+$page-margin: 1.333em;
 
 body {
   position: relative;
   font-family: 'Overpass';
   font-weight: 400;
-  line-height: 1.6em;
+  line-height: 1.4em;
   background-color: white;
-  font-size: 180pt;
+  font-size: 36pt;
   box-sizing: border-box;
   overflow: hidden;
-
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 main {
   position: absolute;
   top: 3mm; bottom: 3mm;
   left: 3mm; right: 3mm;
+  background-repeat: no-repeat;
 }
 
 p { margin: 0.333em 0 0.75em; }
@@ -31,6 +29,7 @@ ul {
   padding: 0;
 }
 ul li { padding: 0; }
+blockquote { margin: 0; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -45,33 +44,25 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   left: 0;
   right: 0;
-  border-top: 3mm solid transparent;
-  border-left: 3mm solid transparent;
-  border-right: 3mm solid transparent;
-  border-bottom: 3mm solid transparent;
+
+  text-align: right;
 }
 
 .highlighted span {
   color: $color-white;
   background: rgba(0, 0, 0, 0.8);
-  padding-top: 0.25em;
-  padding-bottom: 0.125em;
-}
-.highlighted h1 span {
   padding-top: 0.1em;
   padding-bottom: 0.05em;
 }
 
 .text-content {
-  width: 50%;
   padding: $page-margin;
   box-sizing: border-box;
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 25%;
+  right: 0;
   bottom: 0;
-
-  text-transform: uppercase;
+  top: auto;
 
   h1 {
     font-size: 3em;
@@ -86,20 +77,44 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   p, ul {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
+  }
+
+  blockquote {
+    text-transform: uppercase;
+    font-weight: bold; 
+    font-size: 1.5em; 
+    line-height: 1em;
   }
 }
 
-.wider .text-content { width: 33.333%; }
+cite {
+  display: block;
+
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  font-size: 0.5em;
+  line-height: 1.5em;
+}
+
+.author-info {
+  display: block;
+  line-height: 1.5em;
+
+  font-size: 0.5em;
+  text-transform: none;
+}
 
 $logo-ratio: 0.36437247;
-$logo-width: 24em;
+$logo-width: 5em;
 
 .branding {
   position: absolute;
-  right: $page-margin;
-  bottom: $page-margin;
   width: $logo-width;
+  top: $page-margin;
+  left: $page-margin;
 
   .redhat-logo {
     width: 100%;
@@ -111,33 +126,3 @@ $logo-width: 24em;
     }
   }
 }
-
-.wider .branding {
-  top: 50%;
-  bottom: auto;
-  transform: translateY(-50%);
-  width: 33.333%;
-
-  .redhat-logo {
-    height: 100%;
-  }
-}
-
-.call-to-action {
-  padding: 0.5em;
-  padding-bottom: 0.25em;
-  background-color: $color-rh-red;
-  color: $color-white;
-  display: inline-block;
-}
-
-.background-style-center .pattern-stripe { display: none; }
-
-.pattern-stripe {
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
-}
-
