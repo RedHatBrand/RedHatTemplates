@@ -15,28 +15,98 @@ body {
     position: relative;
     .info-container {
       max-width: 40%;
-      position: absolute; top:20%; transform: translateY(-50%); left:60%; transform: translateX(-50%);
-      //border: 1px dotted #0f0;
       .info {
         margin: auto;
         h1 {
-          font-size: 4.5em;
-          line-height: 1em;
           text-transform: uppercase;
         }
-        p {
-          margin-top: 1em;
-          font-size: 1.4em;
-          line-height: 1.3em;
-        }
         p.call-to-action {
-          margin-top: 1.5em;
-          padding: 0.3em 0.7em 0.1em 0.7em;
-          font-size: 1em;
           background: #E12434;
           display: inline-block;
         }
       }
+    }
+  }
+}
+
+.info-container.twitter {
+  max-width: 30%;
+  position: absolute; top:15%; transform: translateY(-50%); left:53%; transform: translateX(-50%);
+  .info {
+    h1 {
+      font-size: 4.5em;
+      line-height: 1em;
+    }
+    p {
+      margin-top: 1em;
+      font-size: 1.4em;
+      line-height: 1.3em;
+    }
+    p.call-to-action {
+      margin-top: 1.5em;
+      padding: 0.3em 0.7em 0.1em 0.7em;
+      font-size: 1.5em;
+    }
+  }
+}
+
+.info-container.facebook {
+  position: absolute; top:13%; transform: translateY(-50%); left:55%; transform: translateX(-50%);
+  .info {
+    h1 {
+      font-size: 3em;
+      line-height: 1em;
+    }
+    p {
+      margin-top: 1em;
+      font-size: 1em;
+      line-height: 1.2em;
+    }
+    p.call-to-action {
+      margin-top: 1.5em;
+      padding: 0.3em 0.7em 0.1em 0.7em;
+      font-size: 1em;
+    }
+  }
+}
+
+.info-container.linkedin {
+  position: absolute; top:16%; transform: translateY(-50%); left:55%; transform: translateX(-50%);
+  .info {
+    h1 {
+      font-size: 2em;
+      line-height: 1em;
+    }
+    p {
+      margin-top: 1em;
+      font-size: 1em;
+      line-height: 1.2em;
+    }
+    p.call-to-action {
+      margin-top: 1.5em;
+      padding: 0.3em 0.7em 0.1em 0.7em;
+      font-size: 1em;
+      display: none;
+    }
+  }
+}
+
+.info-container.googleplus {
+  position: absolute; top:16%; transform: translateY(-50%); left:55%; transform: translateX(-50%);
+  .info {
+    h1 {
+      font-size: 4.5em;
+      line-height: 1em;
+    }
+    p {
+      margin-top: 1em;
+      font-size: 1.4em;
+      line-height: 1.3em;
+    }
+    p.call-to-action {
+      margin-top: 1.5em;
+      padding: 0.3em 0.7em 0.1em 0.7em;
+      font-size: 1.5em;
     }
   }
 }
