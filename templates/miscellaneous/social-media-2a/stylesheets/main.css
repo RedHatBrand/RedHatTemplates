@@ -1,0 +1,229 @@
+@font-face {
+  font-family: 'Overpass';
+  src: url('/global-assets/fonts/overpass/overpass_bold-webfont.eot');
+  src: url('/global-assets/fonts/overpass/overpass_bold-webfont.eot?#iefix') format('embedded-opentype'), url('/global-assets/fonts/overpass/overpass_bold-webfont.woff') format('woff'), url('/global-assets/fonts/overpass/overpass_bold-webfont.ttf') format('truetype'), url('/global-assets/fonts/overpass/overpass_bold-webfont.svg#overpassbold') format('svg');
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('/global-assets/fonts/overpass/overpass_light-webfont.eot');
+  src: url('/global-assets/fonts/overpass/overpass_light-webfont.eot?#iefix') format('embedded-opentype'), url('/global-assets/fonts/overpass/overpass_light-webfont.woff') format('woff'), url('/global-assets/fonts/overpass/overpass_light-webfont.ttf') format('truetype'), url('/global-assets/fonts/overpass/overpass_light-webfont.svg#overpasslight') format('svg');
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('/global-assets/fonts/overpass/overpass_regular-webfont.eot');
+  src: url('/global-assets/fonts/overpass/overpass_regular-webfont.eot?#iefix') format('embedded-opentype'), url('/global-assets/fonts/overpass/overpass_regular-webfont.woff') format('woff'), url('/global-assets/fonts/overpass/overpass_regular-webfont.ttf') format('truetype'), url('/global-assets/fonts/overpass/overpass_regular-webfont.svg#overpassregular') format('svg');
+  font-weight: 600;
+  font-style: normal; }
+
+.rh-color-theme-white-red {
+  color: white;
+  fill: white;
+  background-color: #b90c20; }
+  .rh-color-theme-white-red #hat {
+    fill: #b90c20; }
+  .rh-color-theme-white-red #shadowman-face {
+    fill: white; }
+  .rh-color-theme-white-red #background {
+    fill: black; }
+  .rh-color-theme-white-red #registered, .rh-color-theme-white-red #text {
+    fill: white; }
+
+.rh-color-theme-red-white {
+  color: #b90c20;
+  fill: #b90c20;
+  background-color: white; }
+  .rh-color-theme-red-white #hat {
+    fill: #b90c20; }
+  .rh-color-theme-red-white #shadowman-face {
+    fill: white; }
+  .rh-color-theme-red-white #background {
+    fill: black; }
+  .rh-color-theme-red-white #registered, .rh-color-theme-red-white #text {
+    fill: black; }
+
+.rh-color-theme-white-red-dark {
+  color: white;
+  fill: white;
+  background-color: #8d1c0d; }
+  .rh-color-theme-white-red-dark #hat {
+    fill: #b90c20; }
+  .rh-color-theme-white-red-dark #shadowman-face {
+    fill: white; }
+  .rh-color-theme-white-red-dark #background {
+    fill: black; }
+  .rh-color-theme-white-red-dark #registered, .rh-color-theme-white-red-dark #text {
+    fill: white; }
+
+.rh-color-theme-red-light-grey {
+  color: #b90c20;
+  fill: #b90c20;
+  background-color: #5b6770; }
+  .rh-color-theme-red-light-grey #hat {
+    fill: #b90c20; }
+  .rh-color-theme-red-light-grey #shadowman-face {
+    fill: white; }
+  .rh-color-theme-red-light-grey #background {
+    fill: black; }
+  .rh-color-theme-red-light-grey #registered, .rh-color-theme-red-light-grey #text {
+    fill: black; }
+
+.rh-color-theme-light-grey-red {
+  color: #5b6770;
+  fill: #5b6770;
+  background-color: #b90c20; }
+  .rh-color-theme-light-grey-red #hat {
+    fill: #b90c20; }
+  .rh-color-theme-light-grey-red #shadowman-face {
+    fill: white; }
+  .rh-color-theme-light-grey-red #background {
+    fill: black; }
+  .rh-color-theme-light-grey-red #registered, .rh-color-theme-light-grey-red #text {
+    fill: black; }
+
+.rh-color-theme-white-black {
+  color: white;
+  fill: white;
+  background-color: black; }
+  .rh-color-theme-white-black #hat {
+    fill: #b90c20; }
+  .rh-color-theme-white-black #shadowman-face {
+    fill: white; }
+  .rh-color-theme-white-black #background {
+    fill: black; }
+  .rh-color-theme-white-black #registered, .rh-color-theme-white-black #text {
+    fill: black; }
+
+.rh-color-theme-red-grey-lighter {
+  color: #b90c20;
+  fill: #b90c20;
+  background-color: #cccccc; }
+  .rh-color-theme-red-grey-lighter #hat {
+    fill: #b90c20; }
+  .rh-color-theme-red-grey-lighter #shadowman-face {
+    fill: white; }
+  .rh-color-theme-red-grey-lighter #background {
+    fill: black; }
+  .rh-color-theme-red-grey-lighter #registered, .rh-color-theme-red-grey-lighter #text {
+    fill: black; }
+
+.rh-color-theme-red-grey-dark {
+  color: #b90c20;
+  fill: #b90c20;
+  background-color: #222222; }
+  .rh-color-theme-red-grey-dark #hat {
+    fill: #b90c20; }
+  .rh-color-theme-red-grey-dark #shadowman-face {
+    fill: white; }
+  .rh-color-theme-red-grey-dark #background {
+    fill: black; }
+  .rh-color-theme-red-grey-dark #registered, .rh-color-theme-red-grey-dark #text {
+    fill: black; }
+
+h1, p {
+  margin: 0; }
+
+body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1em;
+  font-family: 'Overpass', 'Helvetica', 'Airal', sans-serif;
+  overflow: hidden;
+  color: white; }
+  body main {
+    width: inherit;
+    height: inherit;
+    position: relative; }
+    body main .info-container {
+      width: 40%;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      word-wrap: break-word; }
+      body main .info-container .info {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); }
+        body main .info-container .info span {
+          vertical-align: middle; }
+          body main .info-container .info span h1 {
+            text-transform: uppercase; }
+          body main .info-container .info span p.call-to-action {
+            background: #E12434;
+            display: inline-block; }
+
+.info-container.twitter .info h1 {
+  font-size: 4.5em;
+  line-height: 1em; }
+.info-container.twitter .info p {
+  margin-top: 1em;
+  font-size: 1.4em;
+  line-height: 1.3em; }
+.info-container.twitter .info p.call-to-action {
+  margin-top: 1.5em;
+  padding: 0.3em 0.7em 0.1em 0.7em;
+  font-size: 1.5em; }
+
+.info-container.facebook {
+  max-width: 50%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%); }
+  .info-container.facebook .info h1 {
+    font-size: 3em;
+    line-height: 1em; }
+  .info-container.facebook .info p {
+    margin-top: 1em;
+    font-size: 1em;
+    line-height: 1.2em; }
+  .info-container.facebook .info p.call-to-action {
+    margin-top: 1.5em;
+    padding: 0.3em 0.7em 0.1em 0.7em;
+    font-size: 1em; }
+
+.info-container.linkedin {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%); }
+  .info-container.linkedin .info h1 {
+    font-size: 2em;
+    line-height: 1em; }
+  .info-container.linkedin .info p {
+    margin-top: 1em;
+    font-size: 1em;
+    line-height: 1.2em; }
+  .info-container.linkedin .info p.call-to-action {
+    margin-top: 1.5em;
+    padding: 0.3em 0.7em 0.1em 0.7em;
+    font-size: 1em;
+    display: none; }
+
+.info-container.googleplus {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%); }
+  .info-container.googleplus .info h1 {
+    font-size: 4.5em;
+    line-height: 1em; }
+  .info-container.googleplus .info p {
+    margin-top: 1em;
+    font-size: 1.4em;
+    line-height: 1.3em; }
+  .info-container.googleplus .info p.call-to-action {
+    margin-top: 1.5em;
+    padding: 0.3em 0.7em 0.1em 0.7em;
+    font-size: 1.5em; }
