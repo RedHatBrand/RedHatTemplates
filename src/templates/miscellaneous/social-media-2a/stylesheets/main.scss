@@ -1,0 +1,128 @@
+@import '../../../../global-assets/scss/fonts/overpass';
+@import '../../../../global-assets/scss/colors/flat_color_themes';
+
+h1, p, { margin: 0; }
+
+body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1em;
+  font-family: 'Overpass', 'Helvetica', 'Airal', sans-serif;
+  overflow: hidden;
+  color: white;
+  main {
+    width: inherit; height: inherit;
+    position: relative;
+    .info-container {
+      width: 40%;
+      height: 100%;
+      position: absolute;
+      left:50%;
+      transform: translateX(-50%);
+      word-wrap: break-word;
+      .info {
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        span {
+          vertical-align:middle;
+          h1 {
+            text-transform: uppercase;
+          }
+          p.call-to-action {
+            background: #E12434;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.info-container.twitter {
+
+  .info {
+    h1 {
+      font-size: 4.5em;
+      line-height: 1em;
+    }
+    p {
+      margin-top: 1em;
+      font-size: 1.4em;
+      line-height: 1.3em;
+    }
+    p.call-to-action {
+      margin-top: 1.5em;
+      padding: 0.3em 0.7em 0.1em 0.7em;
+      font-size: 1.5em;
+    }
+  }
+}
+
+.info-container.facebook {
+  max-width: 50%;
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  .info {
+    h1 {
+      font-size: 3em;
+      line-height: 1em;
+    }
+    p {
+      margin-top: 1em;
+      font-size: 1em;
+      line-height: 1.2em;
+    }
+    p.call-to-action {
+      margin-top: 1.5em;
+      padding: 0.3em 0.7em 0.1em 0.7em;
+      font-size: 1em;
+    }
+  }
+}
+
+.info-container.linkedin {
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  .info {
+    h1 {
+      font-size: 2em;
+      line-height: 1em;
+    }
+    p {
+      margin-top: 1em;
+      font-size: 1em;
+      line-height: 1.2em;
+    }
+    p.call-to-action {
+      margin-top: 1.5em;
+      padding: 0.3em 0.7em 0.1em 0.7em;
+      font-size: 1em;
+      display: none;
+    }
+  }
+}
+
+.info-container.googleplus {
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  .info {
+    h1 {
+      font-size: 4.5em;
+      line-height: 1em;
+    }
+    p {
+      margin-top: 1em;
+      font-size: 1.4em;
+      line-height: 1.3em;
+    }
+    p.call-to-action {
+      margin-top: 1.5em;
+      padding: 0.3em 0.7em 0.1em 0.7em;
+      font-size: 1.5em;
+    }
+  }
+}

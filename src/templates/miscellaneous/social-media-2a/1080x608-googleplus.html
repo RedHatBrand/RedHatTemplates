@@ -1,0 +1,38 @@
+---
+width: 1080px
+height: 608px
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <link href='<%= baseUrl %>/templates/miscellaneous/social-media-2a/stylesheets/main.css' rel='stylesheet'>
+  </head>
+  <body
+    style="
+      width: 1080px;
+      height: 608px;
+      background-image: url('<%= baseUrl %>/global-assets/images/category-shapes/solid-stripe-corporate.svg'),
+                        url('<%= baseUrl %>/global-assets/images/category-shapes/pattern-stripe-corporate.svg'),
+                        url('<%= baseUrl %>/global-assets/images/category-shapes/solid-center-bar-corporate-820000.svg'),
+                        url('{{bg-social-media}}');
+      background-blend-mode: hard-light, normal, multiply, multiply;
+      background-size: 130%, 67%, 140%, cover;
+      background-position: 50% 84%, -45% 100%, center, center;
+      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    ">
+    <main>
+      <div class="info-container googleplus">
+        <div class="info">
+          <span>
+            <h1>{{title}}</h1>
+            <p>{{{description}}}</p>
+            <p class="call-to-action">{{call-to-action}}</p>
+          </span>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
