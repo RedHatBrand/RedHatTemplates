@@ -15,14 +15,23 @@ body {
     position: relative;
     .info-container {
       max-width: 40%;
+      height: 100%;
+      word-wrap: break-word;
       .info {
-        margin: auto;
-        h1 {
-          text-transform: uppercase;
-        }
-        p.call-to-action {
-          background: #E12434;
-          display: inline-block;
+        height: 100%;
+        width: 100%;
+        display: table;
+        table-layout: fixed;
+        span {
+          vertical-align:middle;
+          display: table-cell;
+          h1 {
+            text-transform: uppercase;
+          }
+          p.call-to-action {
+            background: #E12434;
+            display: inline-block;
+          }
         }
       }
     }
@@ -30,8 +39,9 @@ body {
 }
 
 .info-container.twitter {
-  max-width: 30%;
-  position: absolute; top:15%; transform: translateY(-50%); left:53%; transform: translateX(-50%);
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
   .info {
     h1 {
       font-size: 4.5em;
@@ -51,7 +61,10 @@ body {
 }
 
 .info-container.facebook {
-  position: absolute; top:13%; transform: translateY(-50%); left:55%; transform: translateX(-50%);
+  max-width: 50%;
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
   .info {
     h1 {
       font-size: 3em;
@@ -71,7 +84,9 @@ body {
 }
 
 .info-container.linkedin {
-  position: absolute; top:16%; transform: translateY(-50%); left:55%; transform: translateX(-50%);
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
   .info {
     h1 {
       font-size: 2em;
@@ -92,7 +107,9 @@ body {
 }
 
 .info-container.googleplus {
-  position: absolute; top:16%; transform: translateY(-50%); left:55%; transform: translateX(-50%);
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
   .info {
     h1 {
       font-size: 4.5em;
