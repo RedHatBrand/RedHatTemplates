@@ -14,17 +14,18 @@ body {
     width: inherit; height: inherit;
     position: relative;
     .info-container {
-      max-width: 40%;
+      width: 40%;
       height: 100%;
+      position: absolute;
+      left:50%;
+      transform: translateX(-50%);
       word-wrap: break-word;
       .info {
-        height: 100%;
-        width: 100%;
-        display: table;
-        table-layout: fixed;
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
         span {
           vertical-align:middle;
-          display: table-cell;
           h1 {
             text-transform: uppercase;
           }
@@ -39,9 +40,7 @@ body {
 }
 
 .info-container.twitter {
-  position: absolute;
-  left:50%;
-  transform: translateX(-50%);
+
   .info {
     h1 {
       font-size: 4.5em;
