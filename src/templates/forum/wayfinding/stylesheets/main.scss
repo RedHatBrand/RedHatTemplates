@@ -150,6 +150,9 @@ h1 {  font-size: 3em; }
 
 .events-list .event .letter { fill: white; }
 
+$logo-width: 16em;
+$logo-ratio: 0.36437247;
+
 .corner-logo {
   position: absolute;
   bottom: 100%;
@@ -157,20 +160,19 @@ h1 {  font-size: 3em; }
   width: 50%;
   max-height: 100vh;
 
-  img.triangle {
-    display: block;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%
+  .redhat-logo {
+    fill: white;
+    position: absolute;
+    right: 2.5em;
+    bottom: 2.5em;
+
+    width: $logo-width;
+    height: $logo-width * $logo-ratio;
   }
 
-  img.logo {
+  .triangles-with-pattern {
     position: absolute;
-    right: $page-margin / 2;
-    bottom: $page-margin / 2;
-    margin: 0;
-    height: auto;
-    width: 40%;
+    right: 0;
+    bottom: 0;
   }
 }
