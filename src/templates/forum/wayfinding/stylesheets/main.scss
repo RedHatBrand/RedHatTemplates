@@ -148,17 +148,24 @@ h1 {  font-size: 3em; }
   }
 }
 
-.events-list .event .letter { fill: white; }
+.event-logo {
+  position: absolute;
+  top: 25%;
+  transform: translateY(-50%);
+  left: 6em;
+  width: 30em;
+}
 
-$logo-width: 16em;
+
+$logo-width: 12em;
 $logo-ratio: 0.36437247;
 
 .corner-logo {
   position: absolute;
-  bottom: 100%;
+  bottom: 50%;
   right: 0;
   width: 50%;
-  max-height: 100vh;
+  height: 50%;
 
   .redhat-logo {
     fill: white;
