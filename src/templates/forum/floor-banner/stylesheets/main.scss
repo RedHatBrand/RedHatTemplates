@@ -45,16 +45,8 @@ ul { margin:0; }
   box-sizing: border-box;
 }
 
-.all-apac #map {
-  transform: scale(0.9) translate(-50%, -50%);
-  left: 44.45%;
-  top: 44.45%;
-  width: 111%;
-  height: 111%;
-}
-
 #map .event-marker-icon-current {
-  width: 40% !important;
+  width: 45% !important;
   max-height: 40%;
   svg { transform: translateY(-50%); }
 }
