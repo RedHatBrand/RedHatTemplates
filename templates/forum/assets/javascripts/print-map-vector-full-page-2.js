@@ -100,7 +100,10 @@ function initMap (events, selectedLocation) {
       selectedLocation.longitude
     ], [-(mapWidth / 3), -(contentHeight / 2)]);
   } else {
-    map.fitBounds(markers.getBounds(), { padding: [90, 90] });
+    var bounds = markers.getBounds();
+    var center = bounds.getCenter();
+     
+    map.setView(center, 6);
   }
 
   return map;
