@@ -129,34 +129,38 @@ h1 {  font-size: 3em; }
   }
 }
 
-.events-list { margin-bottom: 3em; }
-.events-list .event,
-.events-list .event .date,
-.events-list .event .location { height: inherit; }
+.event-logo {
+  position: absolute;
+  top: 4em;
+  left: 4em;
+  width: 24em;
+}
 
-.events-list .event .letter { fill: white; }
+$logo-width: 8em;
+$logo-ratio: 0.36437247;
 
 .corner-logo {
   position: absolute;
-  bottom: 100%;
+  bottom: 75%;
   right: 0;
   width: 33.333%;
-  max-height: 100vh;
+  height: 25%;
 
-  img.triangle {
-    display: block;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%
+  .redhat-logo {
+    fill: white;
+    position: absolute;
+    right: 2em;
+    bottom: 2em;
+
+    width: $logo-width;
+    height: $logo-width * $logo-ratio;
   }
 
-  img.logo {
+  .triangles-with-pattern {
     position: absolute;
-    right: $page-margin / 2;
-    bottom: $page-margin / 2;
-    margin: 0;
-    height: auto;
-    width: 40%;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
   }
 }
