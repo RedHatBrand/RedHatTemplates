@@ -6,7 +6,7 @@
 }
 .theme-light #content {
   color: $color-grey-dark;
-  background-color: rgba($color-grey-lighter, 0.85);
+  background-color: rgba($color-white, 0.85);
 }
 
 #map {
@@ -22,7 +22,7 @@
 }
 
 .theme-light #map {
-  &.leaflet-container { background-color: rgba($color-grey-lighter, 0.4); }
+  &.leaflet-container { background-color: rgba($color-grey-lighter, 0.6); }
 
   path.road {
     stroke: $color-grey-lighter;
