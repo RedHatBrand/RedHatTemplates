@@ -21,6 +21,13 @@ height: 2012mm
         background-repeat: no-repeat;
       }
     </style>
+
+    <script type="text/javascript" charset="utf-8">
+      var mapSettings = {
+        zoom: 13,
+        locationName: '{{ location }}'
+      };
+    </script>
   </head>
 
   <body class="theme-{{ theme }}" style="width: 862mm; height: 2012mm">
@@ -31,6 +38,12 @@ height: 2012mm
       {{^location}}
         <div class="event-logo">
           <% include /templates/forum/shared-partials/forum-logo.svg %>
+        </div>
+      {{/location}}
+
+      {{#location}}
+        <div class="event-logo">
+          <% include /templates/forum/shared-partials/forum-logo-dynamic.svg %>
         </div>
       {{/location}}
 
@@ -48,14 +61,6 @@ height: 2012mm
       <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
       <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
     </main>
-
-    <div style="display: none" id="baseUrl" data-base-url="<%=baseUrl%>"></div>
-    <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
-    <div style="display: none" id="eventLogo" data-event-logo='<% include /templates/forum/shared-partials/forum-logo-dynamic.svg %>'>
-    </div>
-    <!-- Params we may expose -->
-    <div style="display: none" id="zoom" data-zoom="13"></div>
-    <!-- /Params we may expose -->
 
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>

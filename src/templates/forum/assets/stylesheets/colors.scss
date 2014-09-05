@@ -64,5 +64,10 @@
 .theme-light.lower-contrast #map.leaflet-container { background-color: rgba(255, 255, 255, 0.95); }
 
 .theme-light .center-logo:before { content: url('/global-assets/images/logos/rh-logo-black.svg'); }
+.theme-dark .center-logo .redhat-logo .logotext { fill: $color-white; }
+.theme-light .center-logo .redhat-logo .logotext { fill: $color-black; }
+
+.theme-dark .redhat-logo-container .redhat-logo .logotext { fill: $color-white; }
+.theme-light .redhat-logo-container .redhat-logo .logotext { fill: $color-black; }
 
 .theme-light .event-logo .text { fill: $color-black !important; }

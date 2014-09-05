@@ -8,16 +8,15 @@ function parseRespose(data) {
 }
 
 function initMap (events, selectedLocation) {
-  var zoom = parseFloat($('#zoom').data('zoom'));
-  var eventlogo = $('#eventLogo').data('event-logo') || '';
-  var offsetLat = parseFloat($('#offsetLatitude').data('offset-lat'));
-  var offsetLon = parseFloat($('#offsetLongitude').data('offset-lon'));
+  var zoom = parseInt(mapSettings.zoom);
   var isPreview = !!$('#preview').get(0);
 
   var map = L.map('map', {
     scrollWheelZoom: false,
     zoomControl: false,
-    attributionControl: false
+    attributionControl: false,
+    displayOutsideMaxExtent: true,
+    wrapDateLine: true,
   });
   map.dragging.disable();
 
@@ -28,6 +27,8 @@ function initMap (events, selectedLocation) {
   // Water Areas from OpenStreetMap
   var water = new L.TileLayer.d3_topoJSON("http://tile.openstreetmap.us/vectiles-water-areas/{z}/{x}/{y}.topojson", {
     class: "water",
+    displayOutsideMaxExtent: true,
+    wrapDateLine: true,
     layerName: "vectile",
     style: ""
   })
@@ -53,11 +54,7 @@ function initMap (events, selectedLocation) {
   var markersList = map.markersList = {};
   var markers = L.featureGroup();
 
-  var icon =  L.divIcon({className: 'event-marker-icon'});
-  var currentIcon = L.divIcon({
-    className: 'event-marker-icon-current',
-    html: eventlogo
-  });
+  var icon =  L.divIcon({ className: 'event-marker-icon' });
 
   $.each(events, function(i, eventData) {
     if(!(eventData.latitude && eventData.longitude)) return;
@@ -71,7 +68,7 @@ function initMap (events, selectedLocation) {
     });
 
     var marker = new customMarker(latlng, {
-      icon: eventData.location === (selectedLocation && selectedLocation.location) ? currentIcon : icon
+      icon: icon
     });
 
     markers.addLayer(marker);
@@ -101,16 +98,18 @@ function initMap (events, selectedLocation) {
     ], [-(mapWidth / 3), -(contentHeight / 2)]);
   } else {
     var bounds = markers.getBounds();
-    var center = bounds.getCenter();
      
-    map.setView(center, 6);
+    map.fitBounds(bounds, { 
+      paddingTopLeft: mapSettings.paddingTopLeft || [0, 0],
+      paddingBottomRight: mapSettings.paddingBottomRight || [0, 0]
+    });
   }
 
   return map;
 }
 
 $(function () {
-  var locationName = $('#locationName').data('location-name');
+  var locationName = mapSettings.locationName;
 
   getEvents().then(function (data) {
     var events = parseRespose(data);
