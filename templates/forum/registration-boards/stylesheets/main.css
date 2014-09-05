@@ -561,6 +561,21 @@
 .theme-light .center-logo:before {
   content: url('/global-assets/images/logos/rh-logo-black.svg'); }
 
+.theme-dark .center-logo .redhat-logo .logotext {
+  fill: white; }
+
+.theme-light .center-logo .redhat-logo .logotext {
+  fill: black; }
+
+.theme-dark .redhat-logo-container .redhat-logo .logotext {
+  fill: white; }
+
+.theme-light .redhat-logo-container .redhat-logo .logotext {
+  fill: black; }
+
+.theme-light .event-logo .text {
+  fill: black !important; }
+
 body {
   position: relative;
   font-size: 2vw;
@@ -619,6 +634,7 @@ h2 {
 
 #content {
   position: absolute;
+  top: 50%;
   bottom: 0;
   left: 0;
   right: 0;
@@ -626,44 +642,31 @@ h2 {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.events-list {
-  width: 100%; }
-
-.events-list .event .letter {
-  fill: white; }
+.event-logo {
+  position: absolute;
+  top: 25%;
+  left: 5em;
+  width: 30em;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
 
 .corner-logo {
   position: absolute;
-  bottom: 100%;
+  bottom: 50%;
   right: 0;
   width: 50%;
-  max-height: 100vh; }
-  .corner-logo img.triangle {
-    display: block;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%; }
-  .corner-logo img.logo {
+  height: 50%; }
+  .corner-logo .redhat-logo {
+    fill: white;
     position: absolute;
     right: 2em;
     bottom: 2em;
-    margin: 0;
-    height: auto;
-    width: 40%; }
-
-.sponsors .hdr-title-sponsor {
-  padding-bottom: 1.25em;
-  margin-bottom: 1.5em;
-  border-bottom: thin solid; }
-  .sponsors .hdr-title-sponsor h1, .sponsors .hdr-title-sponsor h2, .sponsors .hdr-title-sponsor h3, .sponsors .hdr-title-sponsor h4, .sponsors .hdr-title-sponsor h5, .sponsors .hdr-title-sponsor h6 {
-    margin: 0;
-    line-height: 1em; }
-.sponsors .sponsor-image {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 0.5em;
-  max-width: 4em; }
-.sponsors img {
-  max-width: 100%;
-  max-height: 2em; }
+    width: 8em;
+    height: 2.91498em; }
+  .corner-logo .triangles-with-pattern {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; }

@@ -6,26 +6,39 @@
   <head>
     <meta charset='utf-8' />
 
-    <link href='http://redhatbrand.github.io/RedHatTemplates/templates/forum/assets/stylesheets/vendor/leaflet.css?v1409799620498' rel='stylesheet' />
-    <link href='http://redhatbrand.github.io/RedHatTemplates/templates/forum/assets/stylesheets/map.css?v1409799620498' rel='stylesheet' />
+    <link href='http://redhatbrand.github.io/RedHatTemplates/templates/forum/assets/stylesheets/vendor/leaflet.css?v1409881076997' rel='stylesheet' />
+    <link href='http://redhatbrand.github.io/RedHatTemplates/templates/forum/assets/stylesheets/map.css?v1409881076997' rel='stylesheet' />
 
-    <link href='http://redhatbrand.github.io/RedHatTemplates/templates/forum/slides/stylesheets/main.css?v1409799620498' rel='stylesheet' />
+    <link href='http://redhatbrand.github.io/RedHatTemplates/templates/forum/slides/stylesheets/main.css?v1409881076997' rel='stylesheet' />
     <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+
+    <style>
+      main { 
+        background-image: url('{{{ background-image }}}');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    </style>
+
+    <script type="text/javascript" charset="utf-8">
+      var mapSettings = {
+        zoom: 13,
+        locationName: '{{ location }}',
+        paddingTopLeft: [{{#divide}}{{width}}/8{{/divide}}, 0],
+        paddingBottomRight: [0, 0]
+      };
+    </script>
   </head>
 
-  <body class="theme-{{ theme }}  {{ contrast }}-contrast" style="width: {{width}}px; height: {{#multiply}}{{width}}*{{ratio}}{{/multiply}}px">
+  <body 
+    class="theme-{{ theme }} show-markers-{{ show-markers }} {{ contrast }}-contrast" 
+    style="width: {{width}}px; height: {{#multiply}}{{width}}*{{ratio}}{{/multiply}}px">
+    
     <main>
       <!-- Design here -->
-      <div id="background-image" style="background-image: url({{{ background-image }}})"></div>
       <div id="map"></div>
       <!-- /Design here -->
     </main>
-
-    <div style="display: none" id="baseUrl" data-base-url="http://redhatbrand.github.io/RedHatTemplates"></div>
-    <div style="display: none" id="locationName" data-location-name="{{ location }}"></div>
-    <!-- Params we may expose -->
-    <div style="display: none" id="zoom" data-zoom="13"></div>
-    <!-- /Params we may expose -->
 
     <script src='http://redhatbrand.github.io/RedHatTemplates/global-assets/javascripts/vendor/jquery.js'></script>
     <script src='http://redhatbrand.github.io/RedHatTemplates/global-assets/javascripts/vendor/lodash.js'></script>
@@ -33,6 +46,6 @@
     <script src='http://redhatbrand.github.io/RedHatTemplates/global-assets/javascripts/vendor/d3.v3.min.js'></script>
     <script src='http://redhatbrand.github.io/RedHatTemplates/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
     <script src='http://redhatbrand.github.io/RedHatTemplates/global-assets/javascripts/vendor/d3-topojson.js'></script>
-    <script src='http://redhatbrand.github.io/RedHatTemplates/templates/forum/assets/javascripts/print-map-vector.js?v1409799620498'></script>
+    <script src='http://redhatbrand.github.io/RedHatTemplates/templates/forum/assets/javascripts/print-map-vector-full-page-2.js?v1409881076997'></script>
   </body>
 </html>

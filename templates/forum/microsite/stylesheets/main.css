@@ -607,6 +607,21 @@ table {
 .theme-light .center-logo:before {
   content: url('/global-assets/images/logos/rh-logo-black.svg'); }
 
+.theme-dark .center-logo .redhat-logo .logotext {
+  fill: white; }
+
+.theme-light .center-logo .redhat-logo .logotext {
+  fill: black; }
+
+.theme-dark .redhat-logo-container .redhat-logo .logotext {
+  fill: white; }
+
+.theme-light .redhat-logo-container .redhat-logo .logotext {
+  fill: black; }
+
+.theme-light .event-logo .text {
+  fill: black !important; }
+
 .clearfix, form footer, .buttons {
   zoom: 1; }
   .clearfix:before, form footer:before, .buttons:before, .clearfix:after, form footer:after, .buttons:after {

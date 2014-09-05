@@ -561,6 +561,21 @@
 .theme-light .center-logo:before {
   content: url('/global-assets/images/logos/rh-logo-black.svg'); }
 
+.theme-dark .center-logo .redhat-logo .logotext {
+  fill: white; }
+
+.theme-light .center-logo .redhat-logo .logotext {
+  fill: black; }
+
+.theme-dark .redhat-logo-container .redhat-logo .logotext {
+  fill: white; }
+
+.theme-light .redhat-logo-container .redhat-logo .logotext {
+  fill: black; }
+
+.theme-light .event-logo .text {
+  fill: black !important; }
+
 body {
   position: relative;
   font-size: 1.2vw;
@@ -669,31 +684,28 @@ h1 {
     opacity: 0.75;
     font-weight: bold; }
 
-.events-list {
-  margin-bottom: 3em; }
-
-.events-list .event, .events-list .event .date, .events-list .event .location {
-  height: inherit; }
-
-.events-list .event .letter {
-  fill: white; }
+.event-logo {
+  position: absolute;
+  top: 4em;
+  left: 4em;
+  width: 24em; }
 
 .corner-logo {
   position: absolute;
-  bottom: 100%;
+  bottom: 75%;
   right: 0;
   width: 33.333%;
-  max-height: 100vh; }
-  .corner-logo img.triangle {
-    display: block;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%; }
-  .corner-logo img.logo {
+  height: 25%; }
+  .corner-logo .redhat-logo {
+    fill: white;
     position: absolute;
     right: 2em;
     bottom: 2em;
-    margin: 0;
-    height: auto;
-    width: 40%; }
+    width: 8em;
+    height: 2.91498em; }
+  .corner-logo .triangles-with-pattern {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; }

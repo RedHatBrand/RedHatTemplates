@@ -561,6 +561,21 @@
 .theme-light .center-logo:before {
   content: url('/global-assets/images/logos/rh-logo-black.svg'); }
 
+.theme-dark .center-logo .redhat-logo .logotext {
+  fill: white; }
+
+.theme-light .center-logo .redhat-logo .logotext {
+  fill: black; }
+
+.theme-dark .redhat-logo-container .redhat-logo .logotext {
+  fill: white; }
+
+.theme-light .redhat-logo-container .redhat-logo .logotext {
+  fill: black; }
+
+.theme-light .event-logo .text {
+  fill: black !important; }
+
 body {
   position: relative;
   font-size: 1.2vw;
@@ -729,22 +744,28 @@ h1 {
   -ms-flex: 1 1 50%;
   flex: 1 1 50%; }
 
-.events-list .event .letter {
-  fill: white; }
+.event-logo {
+  position: absolute;
+  top: 25%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 6em;
+  width: 30em; }
 
 .corner-logo {
   position: absolute;
-  bottom: 100%;
+  bottom: 50%;
   right: 0;
   width: 50%;
-  max-height: 100vh; }
+  height: 50%; }
   .corner-logo .redhat-logo {
     fill: white;
     position: absolute;
     right: 2.5em;
     bottom: 2.5em;
-    width: 16em;
-    height: 5.82996em; }
+    width: 12em;
+    height: 4.37247em; }
   .corner-logo .triangles-with-pattern {
     position: absolute;
     right: 0;
