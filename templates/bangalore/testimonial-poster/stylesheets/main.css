@@ -171,7 +171,7 @@ body {
   font-weight: 400;
   line-height: 1.4em;
   background-color: white;
-  font-size: 36pt;
+  font-size: 24pt;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   overflow: hidden; }
@@ -218,7 +218,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 0.05em; }
 
 .text-content {
-  padding: 1.333em;
+  padding: 1.75em;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: absolute;
@@ -228,26 +228,25 @@ h1, h2, h3, h4, h5, h6 {
   top: auto; }
   .text-content h1 {
     font-size: 3em;
-    line-height: 1.6em;
-    margin-bottom: 0.667em; }
+    line-height: 1.1em;
+    margin-bottom: 0.333em; }
   .text-content h2 {
     font-size: 2em;
-    line-height: 1.6em;
-    margin-bottom: 1em; }
+    line-height: 1.1em;
+    margin-bottom: 0.667em; }
   .text-content p, .text-content ul {
     margin-bottom: 1em; }
   .text-content blockquote {
-    text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 300;
     font-size: 1em;
-    line-height: 1.1em; }
+    line-height: 1.5em; }
 
 cite {
   display: block;
   font-style: normal;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 0.5em;
+  font-size: 1.5em;
   line-height: 1.5em; }
 
 .author-info {
@@ -259,8 +258,8 @@ cite {
 .branding {
   position: absolute;
   width: 5em;
-  top: 1.333em;
-  left: 1.333em; }
+  top: 1.75em;
+  left: 1.75em; }
   .branding .redhat-logo {
     width: 100%;
     height: 1.82186em;
@@ -270,4 +269,12 @@ cite {
 
 @media (min-width: 1000mm) {
   body {
-    font-size: 140pt; } }
+    font-size: 96pt; } }
+
+.background-position-top-left .corner-shape {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  width: 50%;
+  left: 0;
+  right: auto; }
