@@ -1,37 +1,22 @@
-<% include /shared-partials/patterns/patterns.svg %>
-<% include /shared-partials/shapes/shapes.svg %>
-
 <div class='background background-shapes brand-pattern-{{ brand-pattern }}'>
   <div class="corner-shape">
-    <svg 
-      class="shape shape-filled" 
-      preserveAspectRatio="xMaxYMax meet" 
-      width="500" 
-      height="500" 
-      viewBox="-90 -90 500 500">
-      <use xlink:href="#shape-triangle"></use>
-    </svg>
+    <% include /shared-partials/shapes/triangle.svg %>
   </div>
 
   <div class="corner-shape">
-    <svg 
-      class="shape brand-pattern {{ brand-pattern }}" 
-      preserveAspectRatio="xMaxYMax meet" 
-      width="500" 
-      height="500" 
-      viewBox="0 0 500 500">
-      <use xlink:href="#shape-stripe"></use>
-    </svg>
+    <% include /shared-partials/patterns/business-process.svg %>
+    <% include /shared-partials/patterns/cloud-development.svg %>
+    <% include /shared-partials/patterns/cloud-infrastructure.svg %>
+    <% include /shared-partials/patterns/community.svg %>
+    <% include /shared-partials/patterns/corporate.svg %>
+    <% include /shared-partials/patterns/development.svg %>
+    <% include /shared-partials/patterns/infrastructure.svg %>
+    <% include /shared-partials/patterns/partners.svg %>
+    <% include /shared-partials/patterns/services.svg %>
+    <% include /shared-partials/patterns/storage.svg %>
   </div>
 
   <div class="center-shape shape-multiplied">
-    <svg 
-      class="shape shape-filled" 
-      preserveAspectRatio="xMidYMid slice" 
-      width="500" 
-      height="500" 
-      viewBox="0 0 500 500">
-      <use xlink:href="#shape-bar"></use>
-    </svg>
+    <% include /shared-partials/shapes/bar.svg %>
   </div>
 </div>
