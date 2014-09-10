@@ -98,18 +98,18 @@ If you add new files and you can't see them in the list at  [http://lvh.me:4000]
 ## Putting them in Outfit
 
 To get your work live, **first** you need to build for production
+
 ```
-gulp build-production
+gulp build
 ```
 
-Notice the `/build` folder is checked into this repo, double check all your changes (`git status`) and commit them before publishing
+Then publish to gh-pages
 
-To publish to s3 (first you'll need to get the key and secret from me :))
 ```
-gulp publish
+gulp deploy
 ```
 
-Sweet, everything is up in the cloud. You can now add template files from the `/build` folder to outfit.
+Sweet, everything is up. You can now add template files from the `/build` folder to outfit.
 
 ## If you get a "too many open files" error
 
