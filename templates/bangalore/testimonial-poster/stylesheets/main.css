@@ -271,10 +271,42 @@ cite {
   body {
     font-size: 96pt; } }
 
-.background-position-top-left .corner-shape {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  width: 50%;
+.pattern-stripe {
+  width: 100vw;
+  height: 1.75em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -121.25%) rotate(-45deg);
+  -ms-transform: translate(-50%, -121.25%) rotate(-45deg);
+  transform: translate(-50%, -121.25%) rotate(-45deg); }
+
+.pattern-stripe svg {
+  stroke: #c00;
+  display: block;
+  width: 1.75em;
+  height: 1.75em; }
+
+.background-shapes {
+  position: absolute;
+  top: 0;
   left: 0;
-  right: auto; }
+  width: 50vw;
+  height: 50vw;
+  overflow: hidden; }
+
+.corner-shape-top {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; }
+
+.corner-shape-top-offset {
+  -webkit-transform: translate(-2.75em, -2.75em);
+  -ms-transform: translate(-2.75em, -2.75em);
+  transform: translate(-2.75em, -2.75em); }
+
+.corner-shape-top > svg {
+  width: 100%;
+  height: 100%; }
