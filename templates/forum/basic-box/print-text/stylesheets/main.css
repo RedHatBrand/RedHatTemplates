@@ -605,14 +605,6 @@ h1, h2, h3, h4, h5, h6 {
 ul {
   margin: 0; }
 
-h1 {
-  font-size: 3em;
-  margin-bottom: 12%; }
-
-h2 {
-  font-size: 0.8em;
-  font-weight: 300; }
-
 #background-image {
   position: absolute;
   left: 0;
