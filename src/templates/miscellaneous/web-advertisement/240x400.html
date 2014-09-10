@@ -8,13 +8,34 @@ height: 400px
   <head>
     <meta charset='utf-8'>
     <meta content='IE=edge' http-equiv='X-UA-Compatible'>
-    <link href='<%= baseUrl %>/templates/miscellaneous/web-advertisement/stylesheets/main.css' rel='stylesheet'>
+    <link href='<%= baseUrl %>/global-assets/stylesheets/general/tile-pattern-fill.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/miscellaneous/web-advertisement/stylesheets/main.css' rel='stylesheet' />
     <style>
-      .background { background-image: url({{{ background-image }}}); }
+      body { 
+        background-image: url({{{ background-image }}}); 
+        background-size: cover;
+        background-position: 50% 50%;
+      }
     </style>
   </head>
   <body class='size-240-400 background-style-{{ background-style }}' style='width: 240px; height: 400px'>
-    <% include /shared-partials/backgrounds/general-backgrounds.html %>
+    <div class='background background-shapes'>
+      <div class="corner-shape shape-multiplied">
+        <% include /shared-partials/shapes/triangle.svg %>
+      </div>
+
+      <div class="corner-shape"> 
+        <div class="pattern-stripe js-pattern-fill"></div>
+      </div>
+
+      <div class="center-shape shape-darker shape-multiplied">
+        <% include /shared-partials/shapes/bar-narrow.svg %>
+      </div>
+
+      <div class="center-shape shape-multiplied">
+        <% include /shared-partials/shapes/bar.svg %>
+      </div>
+    </div>
 
     <main class='outer-wrapper'>
       <div class='branding'>
@@ -30,5 +51,10 @@ height: 400px
         </div>
       </div>
     </main>
+
+    <script type="text/javascript" charset="utf-8">
+      var redhatBrandPattern = '{{ brand-pattern }}';
+    </script>
+    <script src="<%=baseUrl%>/global-assets/javascripts/tile-pattern.js"></script>
   </body>
 </html>

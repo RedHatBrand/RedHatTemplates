@@ -16,16 +16,6 @@ height: 600px
         background-size: cover;
         background-position: 50% 50%;
       }
-
-      .pattern-stripe {
-        width: 540px;
-        height: 60px;
-
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, 20%) rotate(-45deg);
-      }
     </style>
   </head>
   <body class='size-120-600 background-style-{{ background-style }}' style='width: 120px; height: 600px'>
@@ -36,6 +26,14 @@ height: 600px
 
       <div class="corner-shape"> 
         <div class="pattern-stripe js-pattern-fill"></div>
+      </div>
+
+      <div class="center-shape shape-darker shape-multiplied">
+        <% include /shared-partials/shapes/bar-narrow.svg %>
+      </div>
+
+      <div class="center-shape shape-multiplied">
+        <% include /shared-partials/shapes/bar.svg %>
       </div>
     </div>
 

@@ -40,13 +40,27 @@
   fill: #c00;
 }
 
-.shape-multiplied {
-  mix-blend-mode: multiply;
+.shape-darker {
+  .shape-filled {
+    fill: darken(#c00, 10%);
+  }
 }
+
+.shape-multiplied { mix-blend-mode: multiply; }
+.shape-lightened { mix-blend-mode: lighten; }
+.shape-darkened { mix-blend-mode: darken; }
+.shape-screened { mix-blend-mode: screen; }
 
 .center-shape,
 .corner-shape { display: none; }
 
 .background-style-center .center-shape { display: block; }
 .background-style-corner .corner-shape { display: block; }
+
+.background-style-center,
+.background-style-corner {
+  .shape-show-both {
+    display: block;
+  }
+}
 
