@@ -53,7 +53,10 @@ height: 600px
         </div>
       </div>
     </main> 
-
-    <% include /shared-partials/patterns/js-pattern-tiles.html %>
+    
+    <script type="text/javascript" charset="utf-8">
+      var redhatBrandPattern = '{{ brand-pattern }}';
+    </script>
+    <script src="<%=baseUrl%>/global-assets/javascripts/tile-pattern.js"></script>
   </body>
 </html>
