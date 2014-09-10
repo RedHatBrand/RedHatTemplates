@@ -15,11 +15,10 @@ height: 422mm
     <style>
       .layout-bottom {
       	background-image: 
-      	  url('{{{ background-image }}}'),
-          url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20viewBox%3D%220%200%201000%201000%22%20width%3D%221000%22%20height%3D%221000%22%3E%3Cpolygon%20points%3D%220%2C1000%201000%2C1000%201000%2C0%22%20fill%3D%22%23c00%22%20%2F%3E%3C%2Fsvg%3E');
-      	background-size: cover, contain;
-        background-position: center center, right bottom;
-        background-blend-mode: multiply;
+          url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20viewBox%3D%220%200%201000%201000%22%20width%3D%221000%22%20height%3D%221000%22%3E%3Cpolygon%20points%3D%220%2C1000%201000%2C1000%201000%2C0%22%20fill%3D%22%23c00%22%20%2F%3E%3C%2Fsvg%3E'),
+          url('{{{ background-image }}}');
+      	background-size: contain, cover;
+        background-position: right bottom, center center;
 
         color: white;
       }
@@ -31,11 +30,12 @@ height: 422mm
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -123%) rotate(-45deg);
+        transform: translate(-50%, -120%) rotate(-45deg);
       }
 
       .pattern-stripe svg { 
-        stroke: #c00; display: block; 
+        stroke: #c00; 
+        display: block; 
         width: 1.75em;
         height: 1.75em;
       }
@@ -71,10 +71,6 @@ height: 422mm
 
   	<main class="layout-bottom background-style-corner background-position-top-left">
       <div class='background background-shapes'>
-        <div class="corner-shape-top shape-multiplied">
-          <% include /shared-partials/shapes/triangle-top.svg %>
-        </div>
-
         <div class="corner-shape-top corner-shape-top-offset">
           <% include /shared-partials/shapes/triangle-top.svg %>
         </div>
@@ -103,7 +99,10 @@ height: 422mm
       </article>
       <!-- /Design here -->
       
-      <% include /shared-partials/patterns/js-pattern-tiles.html %>
+      <script type="text/javascript" charset="utf-8">
+        var redhatBrandPattern = '{{ brand-pattern }}';
+      </script>
+      <script src="<%=baseUrl%>/global-assets/javascripts/tile-pattern.js"></script>
       <script src='<%= baseUrl %>/templates/bangalore/assets/javascripts/main.js?v<%= version %>'></script>
 
       <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
