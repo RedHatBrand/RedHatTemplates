@@ -132,11 +132,45 @@ $logo-width: 5em;
   }
 }
 
-.background-position-top-left {
-  .corner-shape {
-    transform: rotate(180deg);
-    width: 50%;
-    left: 0;
-    right: auto;
-  }
+.pattern-stripe {
+  width: 100vw;
+  height: 1.75em;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -121.25%) rotate(-45deg);
+}
+
+.pattern-stripe svg { 
+  stroke: #c00; 
+  display: block; 
+  width: 1.75em;
+  height: 1.75em;
+}
+
+.background-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 50vw;
+  overflow: hidden;
+}
+
+.corner-shape-top {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.corner-shape-top-offset {
+  transform: translate(-2.75em, -2.75em)
+}
+
+.corner-shape-top > svg {
+  width: 100%;
+  height: 100%;
 }
