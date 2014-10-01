@@ -28,7 +28,7 @@ height: 100vh
   <body>
     <div class='wrapper'>
       <header class='header' role='banner'>
-        <figure class='hero'>
+        <figure class='hero' style='height: 100%'>
           <div class='hero-layer' style='background-image: url({{{ hero-image }}})'></div>
           <div class='container layer-three'>
             <h1 class='title'>{{ title }}</h1>
@@ -69,8 +69,19 @@ height: 100vh
           </ul>
         </div>
       </nav>
+      <section class='section-intro askew'>
+        <div class='container'>
+          <div class='two-thirds first'>
+            {{{ intro }}}
+          </div>
+          <div class='one-third last'>
+            <img src='{{{ intro-author }}}' alt='author' class='intro-author' />
+            {{{ author-signature }}}
+          </div>
+        </div>
+      </section>
       {{#section}}
-      <section class='section-{{ name }} main {{ section-theme }}' id='{{ slug }}'>
+      <section class='section-{{ name }} main {{ section-theme }} askew' id='{{ slug }}'>
         <div class='container'>
           {{{ content }}}
         </div>
@@ -135,35 +146,35 @@ height: 100vh
 
                   {{#track-a}}
                   <div class="track-a">
-                    <h6>Track A</h6>
+                    <h5>Track A</h5>
                     <p>{{track-a}}</p>
                   </div>
                   {{/track-a}}
 
                   {{#track-b}}
                   <div class="track-b">
-                    <h6>Track B</h6>
+                    <h5>Track B</h5>
                     <p>{{track-b}}</p>
                   </div>
                   {{/track-b}}
 
                   {{#track-c}}
                   <div class="track-c">
-                    <h6>Track C</h6>
+                    <h5>Track C</h5>
                     <p>{{track-c}}</p>
                   </div>
                   {{/track-c}}
 
                   {{#track-d}}
                   <div class="track-d">
-                    <h6>Track D</h6>
+                    <h5>Track D</h5>
                     <p>{{track-d}}</p>
                   </div>
                   {{/track-d}}
 
                   {{#track-e}}
                   <div class="track-e">
-                    <h6>Track E</h6>
+                    <h5>Track E</h5>
                     <p>{{track-e}}</p>
                   </div>
                   {{/track-e}}

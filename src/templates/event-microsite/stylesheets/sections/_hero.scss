@@ -1,7 +1,8 @@
 .hero-layer {
   background-color: rgba(0,0,0,0.1);
-  background-position: 50% 50%;
+  background-position: top 50%;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .hero {
@@ -9,6 +10,7 @@
   position: relative;
   overflow: hidden;
   background-color: white;
+  padding-bottom: 7em;
 
   a.top-right {
     position: absolute;
@@ -94,8 +96,7 @@ h1.title {
 
   }
 
-  background-color: $white;
-  padding: $gutter / 2;
+  padding: $gutter / 2 0;
   display: inline-block;
 
   @media screen and (max-width: $breakpoint-small) {
@@ -109,5 +110,11 @@ h1.title {
   font-size: 1.25em;
   line-height: 1em;
   padding: 1em 0em; width: 100%; text-align:center;
-  background-color:$color-primary;
+  border: 2px solid $color-primary;
+  background: $color-primary;
+  
+  &:hover {
+    background: none;
+    border: 2px solid $color-primary;
+  }
 }
