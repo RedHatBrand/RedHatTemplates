@@ -24,24 +24,39 @@ height: 100vh
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.smooth-scroll.js'></script>
     <script src='<%= baseUrl %>/templates/event-microsite/javascripts/main.js'></script>
     <!--[if lt IE 9]> <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script> <![endif]-->
+
+    <style>
+      .hero {
+        background-image: url('{{{ fallback-hero-image }}}');
+      }
+      @supports (background-blend-mode: multiply) {
+        .hero {
+          background-image: 
+            url('{{{ hero-image }}}'),
+            linear-gradient(-45deg, transparent 0%, transparent 25%, #C00 25%, #C00 75%, transparent 75%);
+          background-blend-mode: multiply;
+        }
+      }
+    
+    </style>
   </head>
   <body>
     <div class='wrapper'>
       <header class='header' role='banner'>
-        <figure class='hero' style='height: 100%'>
-          <div class='hero-layer' style='background-image: url({{{ hero-image }}})'></div>
+        <figure class='hero'>
           <div class='container layer-three'>
             <h1 class='title'>{{ title }}</h1>
             {{#event-logo}}
             <img class='event-logo' src='{{{ event-logo }}}'>
             {{/event-logo}}
+
             <div class='event-details'>
-              <div class='dates'>
-                <h4>{{ dates }}</h4>
-              </div>
-              <div class='location'>
-                <h4>{{ location }}</h4>
-              </div>
+              <h3 class="dates">
+                {{ dates }}
+              </h3>
+              <h4 class='location'>
+                  {{ location }}
+              </h4>
               <div class='registration'>
                 <a class='button register-button' href='{{{ register-link }}}'>Register</a>
               </div>
@@ -69,19 +84,31 @@ height: 100vh
           </ul>
         </div>
       </nav>
-      <section class='section-intro askew'>
+      <section class='section-intro'>
         <div class='container'>
-          <div class='two-thirds first'>
-            {{{ intro }}}
-          </div>
-          <div class='one-third last'>
-            <img src='{{{ intro-author }}}' alt='author' class='intro-author' />
-            {{{ author-signature }}}
+          <div class="grid-container">
+            <div class='two-thirds first'>
+              {{{ intro }}}
+            </div>
+            <div class='one-third last author-signoff'>
+              <div class='intro-author' style="background-image: url('{{{ author-image }}}')">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt='author' />
+              </div>
+              <p>{{ author-signoff }}</p>
+              {{#author-signature}}
+              <img src='{{ author-signature }}' alt='author signature' class='author-signature' />
+              {{/author-signature}}
+              <p class="author-name">{{ author-name }}</p>
+              {{#author-position}}
+              <p><em>{{ author-position }}</em></p>
+              {{/author-position}}
+              <p><strong>{{ author-company }}</strong></p>
+            </div>
           </div>
         </div>
       </section>
       {{#section}}
-      <section class='section-{{ name }} main {{ section-theme }} askew' id='{{ slug }}'>
+      <section style="background-image: url('{{{ background-image }}}')" class='section-{{ name }} main {{ section-theme }}' id='{{ slug }}'>
         <div class='container'>
           {{{ content }}}
         </div>
