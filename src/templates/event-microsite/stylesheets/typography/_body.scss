@@ -1,13 +1,15 @@
 html {
-  font-size: $font-size;
-  font-family: $font-family-body;
-  line-height: $line-height;
+  background-color: $white;
+  color: $black;
+}
+
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-
-  background-color: $white;
-  color: $black;
+  font-size: $font-size;
+  font-family: $font-family-body;
+  line-height: $line-height;
 }
 
 @if $baseline-grid {

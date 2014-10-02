@@ -1,0 +1,27 @@
+.section-intro {
+  .intro-author {
+    border-radius: 50%;
+    margin-bottom: 1em;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    img {
+      width: 100%;
+    }
+  }
+  
+  .author-signoff {
+    text-align: center;
+
+    p { margin-bottom: 1em; }
+
+    .author-name {
+      font-size: 1.5em;
+      margin-bottom: 0.6em;
+    }
+    
+    .author-signature {
+      margin: 1em 0;
+    }
+  }
+}

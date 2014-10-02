@@ -24,24 +24,39 @@ height: 100vh
     <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.smooth-scroll.js'></script>
     <script src='<%= baseUrl %>/templates/event-microsite/javascripts/main.js'></script>
     <!--[if lt IE 9]> <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script> <![endif]-->
+
+    <style>
+      .hero {
+        background-image: url('{{{ fallback-hero-image }}}');
+      }
+      @supports (background-blend-mode: multiply) {
+        .hero {
+          background-image: 
+            url('{{{ hero-image }}}'),
+            linear-gradient(-45deg, transparent 0%, transparent 25%, #C00 25%, #C00 75%, transparent 75%);
+          background-blend-mode: multiply;
+        }
+      }
+    
+    </style>
   </head>
   <body>
     <div class='wrapper'>
       <header class='header' role='banner'>
         <figure class='hero'>
-          <div class='hero-layer' style='background-image: url({{{ hero-image }}})'></div>
           <div class='container layer-three'>
             <h1 class='title'>{{ title }}</h1>
             {{#event-logo}}
             <img class='event-logo' src='{{{ event-logo }}}'>
             {{/event-logo}}
+
             <div class='event-details'>
-              <div class='dates'>
-                <h4>{{ dates }}</h4>
-              </div>
-              <div class='location'>
-                <h4>{{ location }}</h4>
-              </div>
+              <h3 class="dates">
+                {{ dates }}
+              </h3>
+              <h4 class='location'>
+                  {{ location }}
+              </h4>
               <div class='registration'>
                 <a class='button register-button' href='{{{ register-link }}}'>Register</a>
               </div>
@@ -69,9 +84,32 @@ height: 100vh
           </ul>
         </div>
       </nav>
-      {{#section}}
-      <section class='section-{{ name }} main {{ section-theme }}' id='{{ slug }}'>
+      <section class='section-intro'>
         <div class='container'>
+          <div class="grid-container">
+            <div class='two-thirds first'>
+              {{{ intro }}}
+            </div>
+            <div class='one-third last author-signoff'>
+              <div class='intro-author' style="background-image: url('{{{ author-image }}}')">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt='author' />
+              </div>
+              <p>{{ author-signoff }}</p>
+              {{#author-signature}}
+              <img src='{{ author-signature }}' alt='author signature' class='author-signature' />
+              {{/author-signature}}
+              <p class="author-name">{{ author-name }}</p>
+              {{#author-position}}
+              <p><em>{{ author-position }}</em></p>
+              {{/author-position}}
+              <p><strong>{{ author-company }}</strong></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {{#section}}
+      <section style="background-image: url('{{{ background-image }}}')" class='section-{{ name }} main {{ section-theme }}' id='{{ slug }}'>
+        <div class='container section-layout-{{ section-layout }}'>
           {{{ content }}}
         </div>
       </section>
@@ -135,35 +173,35 @@ height: 100vh
 
                   {{#track-a}}
                   <div class="track-a">
-                    <h6>Track A</h6>
+                    <h5>Track A</h5>
                     <p>{{track-a}}</p>
                   </div>
                   {{/track-a}}
 
                   {{#track-b}}
                   <div class="track-b">
-                    <h6>Track B</h6>
+                    <h5>Track B</h5>
                     <p>{{track-b}}</p>
                   </div>
                   {{/track-b}}
 
                   {{#track-c}}
                   <div class="track-c">
-                    <h6>Track C</h6>
+                    <h5>Track C</h5>
                     <p>{{track-c}}</p>
                   </div>
                   {{/track-c}}
 
                   {{#track-d}}
                   <div class="track-d">
-                    <h6>Track D</h6>
+                    <h5>Track D</h5>
                     <p>{{track-d}}</p>
                   </div>
                   {{/track-d}}
 
                   {{#track-e}}
                   <div class="track-e">
-                    <h6>Track E</h6>
+                    <h5>Track E</h5>
                     <p>{{track-e}}</p>
                   </div>
                   {{/track-e}}

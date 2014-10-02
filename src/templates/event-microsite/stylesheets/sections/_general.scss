@@ -40,15 +40,12 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
-.container {
-  // @include transition(left .5s ease);
-}
-
 @media screen and (min-width: $breakpoint-large) {
   .container {
     position: relative;
-    left: -10%;
   }
+  
+  .wrapper { height: 100%; }
 }
 
 .page-title {
@@ -133,3 +130,22 @@ button.full-width {
 .light-grey-background {
   background-color: rgb(230,230,230);
 }
+
+.custom-background {
+  background-position: top 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  color: $white;
+  
+  .container { 
+    background-color: rgba($black, 0.75);
+  }
+}
+
+@media screen and (min-width: $breakpoint-small) {
+  .section-layout-two-columns {
+    column-count: 2;
+    column-gap: 2.4em;
+  }
+}
+

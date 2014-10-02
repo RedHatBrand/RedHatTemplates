@@ -1,14 +1,12 @@
-.hero-layer {
-  background-color: rgba(0,0,0,0.1);
-  background-position: 50% 50%;
-  background-size: cover;
-}
-
 .hero {
   color: white;
   position: relative;
   overflow: hidden;
   background-color: white;
+  padding-bottom: $line-height;
+  background-position: 50%;
+  background-size: cover;
+  background-attachment: fixed;
 
   a.top-right {
     position: absolute;
@@ -39,27 +37,22 @@
       left: 2em;
     }
   }
-}
 
-.hero-layer {
-  position: absolute;
-  left:0; right: 0;
-  top:0; bottom: 0;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 1300px) {
-  .hero-layer {
-    width: 1300px;
-    left: 50%;
-    margin-left: -650px;
-  }
+  &:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.25);
+	}
 }
 
 h1.title {
   margin: 1em 0 0.75em;
   line-height: 1em;
-  max-width: 8em;
+  max-width: 6.125em;
   font-size: 4.5em;
   color: $white;
   text-transform: uppercase;
@@ -81,11 +74,27 @@ h1.title {
   width: 100%;
   box-sizing: border-box;
 
-  h2,h4 {
-    font-weight: 300;
+  background-color: $white;
+  padding: 1.4em;
+  display: inline-block;
+
+  h3, h4 { 
     color: $black;
+    text-transform: uppercase;
   }
-  h2{letter-spacing:.082em; display:none}
+
+  h3 {
+    font-weight: 300;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.25em;
+  }
+
+  h4 {
+    font-size: 1.25em;  
+    margin-bottom: 0.5em;
+    line-height: 1.25em;
+  }
 
   .name {
     padding-bottom: 0.5em;
@@ -93,10 +102,6 @@ h1.title {
     text-transform: uppercase;
 
   }
-
-  background-color: $white;
-  padding: $gutter / 2;
-  display: inline-block;
 
   @media screen and (max-width: $breakpoint-small) {
     font-size: 0.8em;
@@ -108,6 +113,23 @@ h1.title {
   text-transform: uppercase;
   font-size: 1.25em;
   line-height: 1em;
-  padding: 1em 0em; width: 100%; text-align:center;
-  background-color:$color-primary;
+  padding: 1em 0em; 
+  width: 100%; 
+  text-align:center;
+  border: 2px solid $color-primary;
+  background: $color-primary;
+  
+  &:hover {
+    background: none;
+    border: 2px solid $color-primary;
+    color: $color-primary;
+  }
+
+  &.button:hover {
+    color: $color-primary;
+  }
+
+  &.button:visited:hover {
+    color: $color-primary;
+  }
 }
