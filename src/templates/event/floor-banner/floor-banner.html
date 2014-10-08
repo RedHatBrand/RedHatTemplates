@@ -1,0 +1,73 @@
+---
+width: 862mm
+height: 2012mm
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8' />
+    <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+
+    <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/vendor/leaflet.css?v<%= version %>' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/assets/stylesheets/events-list.css?v<%= version %>' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/forum/floor-banner/stylesheets/main.css?v<%= version %>' rel='stylesheet' />
+    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+
+    <style>
+      main {
+        background-image: url('{{{ background-image }}}');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    </style>
+
+    <script type="text/javascript" charset="utf-8">
+      var mapSettings = {
+        zoom: 13,
+        locationName: '{{ location }}'
+      };
+    </script>
+  </head>
+
+  <body class="theme-{{ theme }}" style="width: 862mm; height: 2012mm">
+    <main>
+      <!-- Design here -->
+      <div id="map"></div>
+
+      {{^location}}
+        <div class="event-logo">
+          <% include /templates/forum/shared-partials/forum-logo.svg %>
+        </div>
+      {{/location}}
+
+      {{#location}}
+        <div class="event-logo">
+          <% include /templates/forum/shared-partials/forum-logo-dynamic.svg %>
+        </div>
+      {{/location}}
+
+      <article id="content"> 
+      </article>
+
+      <div class='corner-logo'>
+        <% include /shared-partials/shapes/triangles-with-pattern.svg %>
+        <% include /shared-partials/logos/redhat-logo.svg %>
+      </div>
+      <!-- /Design here -->
+
+      <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
+    </main>
+
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/lodash.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/leaflet.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3.v3.min.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
+    <script src='<%= baseUrl %>/global-assets/javascripts/vendor/d3-topojson.js'></script>
+    <script src='<%= baseUrl %>/templates/forum/assets/javascripts/print-map-vector-full-page-2.js?v<%= version %>'></script>
+  </body>
+</html>

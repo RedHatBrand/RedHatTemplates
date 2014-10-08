@@ -1,0 +1,9 @@
+<svg version="1.1"
+     baseProfile="full"
+     width="1200" height="1200"
+     viewBox="0 0 1200 1200"
+     preserveAspectRatio="xMidYMid slice"
+     xmlns="http://www.w3.org/2000/svg">
+  
+  <polygon fill="hsl(0, 100%, 30%)" points="-200,1200 1200,-200 1400,0 0,1400" />
+</svg>

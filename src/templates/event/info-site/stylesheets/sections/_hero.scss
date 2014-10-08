@@ -1,0 +1,135 @@
+.hero {
+  color: white;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  padding-bottom: $line-height;
+  background-position: 50%;
+  background-size: cover;
+  background-attachment: fixed;
+
+  a.top-right {
+    position: absolute;
+    top: $line-height * 1.5;
+    right: 0;
+    font-family: $font-family-input;
+    color: white;
+    max-width: 9em;
+    line-height: 1.2em;
+    padding: 1em;
+    padding-left: 2.5em;
+    margin-top: -0.5em;
+
+    &:hover {
+      background-color: rgba(white, 0.4);
+    }
+
+    &:before {
+      position: absolute;
+      left: 1em;
+      top: 1.05em;
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+      top: auto;
+      bottom: 1em;
+      font-size: 90%;
+      left: 2em;
+    }
+  }
+
+  &:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.25);
+	}
+}
+
+h1.title {
+  margin: 1em 0 0.75em;
+  line-height: 1em;
+  max-width: 6.125em;
+  font-size: 4.5em;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: bold ;
+  @media screen and (max-width: $breakpoint-medium) {
+    font-size: 3em;
+    margin-top: 0.25em;
+  }
+
+  @media screen and (max-width: $breakpoint-small) {
+    font-size: 2em;
+    margin-top: 1.75em;
+    font-weight: bold ;
+  }
+}
+
+.event-details {
+  max-width: 25em;
+  width: 100%;
+  box-sizing: border-box;
+
+  background-color: $white;
+  padding: 1.4em;
+  display: inline-block;
+
+  h3, h4 { 
+    color: $black;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-weight: 300;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.25em;
+  }
+
+  h4 {
+    font-size: 1.25em;  
+    margin-bottom: 0.5em;
+    line-height: 1.25em;
+  }
+
+  .name {
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+
+  }
+
+  @media screen and (max-width: $breakpoint-small) {
+    font-size: 0.8em;
+  }
+}
+
+.register-button {
+  margin-top: 0.5em;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  line-height: 1em;
+  padding: 1em 0em; 
+  width: 100%; 
+  text-align:center;
+  border: 2px solid $color-primary;
+  background: $color-primary;
+  
+  &:hover {
+    background: none;
+    border: 2px solid $color-primary;
+    color: $color-primary;
+  }
+
+  &.button:hover {
+    color: $color-primary;
+  }
+
+  &.button:visited:hover {
+    color: $color-primary;
+  }
+}

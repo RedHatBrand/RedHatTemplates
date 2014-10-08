@@ -1,0 +1,39 @@
+---
+{
+  "width": "1000px",
+  "height": "250px"
+}
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="<%=baseUrl%>/templates/event/email-header/stylesheets/main.css" />
+  <style>
+
+    body {
+      background-image: 
+        url('{{{ background-image }}}'),
+        url('<%=baseUrl%>/global-assets/images/shapes/red/grid-08-04.svg');
+      background-blend-mode: multiply;
+      background-size: cover, cover;
+      background-position: 50% 50%;
+    }
+  </style>
+  </head>
+  <body style="width: 1000px; height: 250px">
+    <header role="banner" class="main-header">
+      <div class="main-header_logo main-header_logo_event">
+        <img alt="Event Logo" src="{{{ event-logo }}}" />
+      </div>
+      <div class="main-header_logo main-header_logo_red-hat">
+        <% include /shared-partials/logos/redhat-logo.svg %>
+      </div>
+    </header>
+
+    <main>
+      <article>
+      </article>
+    </main>
+  </body>
+</html>
