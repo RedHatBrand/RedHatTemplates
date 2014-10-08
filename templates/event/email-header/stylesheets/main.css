@@ -30,3 +30,71 @@ blockquote:before, blockquote:after, q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+body {
+  position: relative;
+  color: white;
+  font-family: Overpass; }
+  body:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0; }
+
+.main-header {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  left: 50%; }
+
+.main-header_logo_red-hat .logotext {
+  fill: white; }
+
+.main-header {
+  font-size: 0; }
+  .main-header > * {
+    font-size: 1rem; }
+
+.main-header_logo_event, .main-header_logo_red-hat {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top; }
+
+.main-header_logo_red-hat svg {
+  width: 80%;
+  height: 100%;
+  display: block; }
+
+.main-text {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  right: 50%; }
+
+.main-text_title {
+  display: inline;
+  text-transform: uppercase;
+  font-size: 3em;
+  line-height: 1.3em;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.secondary-text {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  left: 50%; }
+
+.secondary-text_dates {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 2em;
+  line-height: 1.25em; }
+
+.secondary-text_location {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 1.25em; }
