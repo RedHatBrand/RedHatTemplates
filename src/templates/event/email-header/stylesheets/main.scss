@@ -6,22 +6,13 @@ body {
   position: relative;
   color: white;
   font-family: Overpass;
-
-  &:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
 }
 
 .main-header {
   position: absolute;
   right: $margin;
   bottom: $margin;
-  left: 50%;
+  left: 55%;
 }
 
 .main-header_logo_red-hat .logotext {
@@ -43,11 +34,16 @@ body {
   vertical-align: top;
 }
 
+.main-header_logo_event img {
+  display: block;
+}
+
 .main-header_logo_red-hat {
   svg {
     width: 80%;
     height: 100%;
     display: block;
+    float: right
   }
 }
 
@@ -59,12 +55,24 @@ body {
 }
 
 .main-text_title {
-  display: inline;
+  margin-bottom: 0;
   text-transform: uppercase;
-  font-size: 3em;
-  line-height: 1.3em;
+  font-size: 3.25em;
+  line-height: 1em;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  padding: 0.05em 0.125em;
+}
+
+.main-text_call-to-action {
+  font-weight: 300;
+  background-color: white;
+  display: inline-block;
+  color: black;
+  line-height: 1.5em;
+  font-size: 1.25em;
+  padding: 0.25em 0.6em 0.125em;
 }
 
 .secondary-text {
@@ -72,6 +80,7 @@ body {
   right: $margin;
   top: $margin;
   left: 50%;
+  text-align: right;
 }
 
 .secondary-text_dates {
