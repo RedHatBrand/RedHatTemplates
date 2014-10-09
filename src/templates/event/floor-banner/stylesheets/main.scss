@@ -1,101 +1,100 @@
-@import '../../../../global-assets/scss/utils/grid';
-@import '../../../../global-assets/scss/fonts/overpass';
-@import '../../../../global-assets/scss/colors/base_color_palette';
-
 @import '../../../../global-assets/scss/reset';
 
-$page-margin: 4em;
+$margin: 2rem;
+
+html { font-size: 90pt; }
 
 body {
   position: relative;
-  font-family: 'Overpass';
-  font-weight: 400;
-  line-height: 1.5em;
-  background-color: white;
-  font-size: 24pt;
+  color: white;
+  font-family: Overpass;
 }
 
 main {
-  background-size: cover;
-  background-repeat: no-repeat;
-
   position: absolute;
-  top: 3mm; bottom: 3mm;
-  left: 3mm; right: 3mm;
+  left: 6mm;
+  right: 6mm;
+  top: 6mm; 
+  bottom: 6mm;
+  padding: ($margin * 2) $margin;
 }
 
-p { margin: 0.333em 0 0.75em; }
-
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  line-height: 1.2em;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-ul { margin:0; }
-
-#map .leaflet-tile-pane {
-  background-color: transparent;
-}
-
-#map {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-}
-
-#map .event-marker-icon-current {
-  width: 45% !important;
-  max-height: 40%;
-  svg { transform: translateY(-50%); }
-}
-
-#content {
+.main-header {
   position: absolute;
-  bottom: 0;
-  height: 12.5%;
-  left: 0;
-  right: 0;
-  background: transparent; 
+  right: $margin;
+  bottom: $margin;
+  left: $margin;
 }
 
-.event-logo {
-  position: absolute;
-  top: 8em;
-  left: 8em;
-  width: 54em;
+.main-header_logo_red-hat .logotext {
+  fill: white;
 }
 
-$logo-width: 36em;
-$logo-ratio: 0.36437247;
+.main-header {
+  font-size: 0;
 
-.corner-logo {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  max-height: 100vh;
-
-  .redhat-logo {
-    fill: white;
-    position: absolute;
-    right: 8em;
-    bottom: 4em;
-
-    width: $logo-width;
-    height: $logo-width * $logo-ratio;
+  > * {
+    font-size: 1rem;
   }
+}
 
-  .triangles-with-pattern {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 100%;
+.main-header_logo_event,
+.main-header_logo_red-hat {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.main-header_logo_event img {
+  display: block;
+}
+
+.main-header_logo_red-hat {
+  svg {
+    width: 80%;
     height: 100%;
+    display: block;
+    float: right
   }
 }
 
-#map .event-marker-icon-current {
-  width: 60% !important;
+.main-text { margin-bottom: 1.5em; }
+
+.main-text_title {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: 3.25em;
+  line-height: 1em;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  padding: 0.05em 0.125em;
 }
+
+.main-text_call-to-action {
+  font-weight: 300;
+  background-color: white;
+  display: inline-block;
+  color: black;
+  line-height: 1.5em;
+  font-size: 1.25em;
+  padding: 0.25em 0.6em 0.125em;
+}
+
+.secondary-text {
+}
+
+.secondary-text_dates {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 2em;
+  line-height: 1.25em;
+}
+
+.secondary-text_location {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 1.25em;
+}
+
