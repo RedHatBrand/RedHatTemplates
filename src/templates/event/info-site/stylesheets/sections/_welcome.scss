@@ -1,0 +1,23 @@
+.welcome-avatar {
+  width: 100%;
+  margin: 0;
+  margin-bottom: $line-height;
+  max-width: 12em;
+  border-radius: 50%;
+
+  @media screen and (max-width: $breakpoint-small) {
+    margin: $line-height * 2 auto;
+  }
+}
+
+.welcome-sig { max-width: 12em; margin: .5em auto;}
+
+.sign-off {
+  padding-top: $line-height;
+  border-top: 1px solid lightgray;
+
+  @media screen and (max-width: $breakpoint-small) {
+
+    text-align: center;
+  }
+}

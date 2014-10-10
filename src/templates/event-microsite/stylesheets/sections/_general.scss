@@ -40,16 +40,16 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
-.container {
-  // @include transition(left .5s ease);
-}
-
 @media screen and (min-width: $breakpoint-large) {
   .container {
     position: relative;
   }
   
+<<<<<<< HEAD
   .wrapper, header, hero { height: 100%; }
+=======
+  .wrapper { height: 100%; }
+>>>>>>> 14b1a78dae1e6e0dac29c097958147a9196e87ad
 }
 
 .page-title {
@@ -165,11 +165,15 @@ button.full-width {
 }
 
 .custom-background {
+<<<<<<< HEAD
   background-image: url('http://www.successfulworkplace.org/wp-content/uploads/2013/11/Chulture-change-is-a-bear.jpg');
+=======
+>>>>>>> 14b1a78dae1e6e0dac29c097958147a9196e87ad
   background-position: top 50%;
   background-size: cover;
   background-attachment: fixed;
   color: $white;
+<<<<<<< HEAD
 }
 
 .section-layout-two-columns {
@@ -180,3 +184,18 @@ button.full-width {
   -moz-column-gap: 2.4em;
   column-gap: 2.4em;
 }
+=======
+  
+  .container { 
+    background-color: rgba($black, 0.75);
+  }
+}
+
+@media screen and (min-width: $breakpoint-small) {
+  .section-layout-two-columns {
+    column-count: 2;
+    column-gap: 2.4em;
+  }
+}
+
+>>>>>>> 14b1a78dae1e6e0dac29c097958147a9196e87ad

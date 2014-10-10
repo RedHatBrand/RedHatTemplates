@@ -1,0 +1,10 @@
+.section-faq ol {
+  -webkit-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: $gutter;
+  column-gap: $gutter;
+}
+
+.section-faq ol li {
+  padding-bottom: $line-height;
+}

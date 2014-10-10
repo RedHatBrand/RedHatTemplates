@@ -1,0 +1,59 @@
+---
+{
+  "width": "1003px",
+  "height": "279px"
+}
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+    <link href="<%=baseUrl%>/templates/event/email-header/stylesheets/main.css"  rel="stylesheet" />
+    <style>
+      body {
+        background-image: 
+          url('{{{ background-image }}}'),
+          url('<%=baseUrl%>/global-assets/images/shapes/yellow/grid-10-02.svg'),
+          url('<%=baseUrl%>/global-assets/images/shapes/red/grid-12-12.svg');
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        background-size: cover, cover, cover;
+        background-position: 50% 50%, 100% 100%, 50% 50%;
+      }
+    </style>
+  </head>
+  <body style="width: 1003px; height: 279px">
+    <header role="banner" class="main-header">
+      <div class="main-header_logo main-header_logo_event">
+        <img alt="Event Logo" src="{{{ event-logo }}}" />
+      </div>
+      <div class="main-header_logo main-header_logo_red-hat">
+        <% include /shared-partials/logos/redhat-logo.svg %>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <section class="main-text">
+          <h1 class="main-text_title">
+            {{{ title }}}
+          </h1>
+          <br />
+          <h4 class="main-text_call-to-action">
+            {{ call-to-action }}
+          </h4>
+        </section>
+
+        <section class="secondary-text">
+          <h2 class="secondary-text_dates">
+            {{ dates }}
+          </h2>
+          <h3 class="secondary-text_location">
+            {{ location }}
+          </h3>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+.section-agenda {
+  .container {
+    position: relative;
+  }
+
+  table,
+  table thead tr,
+  table tr:first-child {
+    border: none;
+  }
+
+  table thead th, table tbody th {
+    background-color: transparent;
+  }
+}
+
+.calendar {
+  table-layout: fixed;
+
+  .time, .duration {
+    width: 25%;
+  }
+
+  .icon-user:before {
+    color:lighten($color-shade,40%)
+  }
+
+  .break {
+    background-image: linear-gradient(-45deg, #fafafa 25%, transparent 25%, transparent 50%, #fafafa 50%, #fafafa 75%, transparent 75%, transparent);
+    background-size: 20px 20px;
+    background-position: 0 0;
+    color: $color-shade;
+
+    td {
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: smaller;
+      letter-spacing:.1em;
+    }
+
+  }
+}
+
+
+@media screen and (max-width: 42em) {
+  .calendar tr{
+    display:block;
+    padding: $line-height/2 0;
+    width: 100%;
+  }
+
+  .calendar td,
+  .calendar th,
+  .calendar tbody,
+  .calendar {
+    width: 100%;
+    box-sizing: border-box;
+    display:inline-block;
+
+    .duration{display:none}
+
+    tr.headings{display:none;}
+
+    .time{
+      display:block;
+      width: 100%;
+      color:$color-shade;
+      font-size:2em;
+      font-weight:300;
+      padding-left: .5em
+    }
+  }
+
+  .calendar tr {
+    position:relative;
+  }
+  td.duration {
+    display:inline-block;
+    position:absolute;
+    left: 0em;
+    top:$line-height;
+    opacity:.5;
+    width:100%;
+    color:$color-shade;
+    text-align:right;
+  }
+
+  .duration:after {
+    content:" minutes";
+    text-transform: uppercase;
+    font-size: .8em;
+  }
+
+  .calendar {
+    .icon-user,
+    .topic {
+      display:inline-block;
+      width: auto;
+    }
+
+
+    tr:after {
+      content:"";
+      display: block;
+      width: 100% !important;
+      float:none;
+      clear:both;
+    }
+
+    i {
+      color:$color-shade;
+      opacity:.5
+    }
+  }
+}
+
+
+.section-agenda input[type="radio"]{
+  position:absolute;
+  top:-100%;
+  left: -100%;
+  visibility: hidden;
+  z-index:-1;
+  opacity:0;
+}
+
+
+.time-table-Monday,
+.time-table-Tuesday,
+.time-table-Wednesday,
+.time-table-Thursday,
+.time-table-Friday,
+.time-table-Saturday,
+.time-table-Sunday {
+  display:none;
+}
+
+input#Monday:checked ~ .time-table-Monday,
+input#Tuesday:checked ~ .time-table-Tuesday,
+input#Wednesday:checked ~ .time-table-Wednesday,
+input#Thursday:checked ~ .time-table-Thursday,
+input#Friday:checked ~ .time-table-Friday,
+input#Saturday:checked ~ .time-table-Saturday,
+input#Sunday:checked ~ .time-table-Sunday {
+  display:block;
+}
+
+.section-agenda input[type="radio"] + label {
+  box-shadow: inset 0 -.2em 0 $color-primary;
+  color: $color-primary;
+  display: block;
+  padding: $line-height 0em;
+  letter-spacing:.1em;
+  margin: 0;
+  margin-bottom: $line-height;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: -0.25em;
+}
+
+.section-agenda.agenda-1 input[type="radio"] + label {
+  width: 100%;
+}
+.section-agenda.agenda-2 input[type="radio"] + label {
+  width: 50%;
+}
+.section-agenda.agenda-3 input[type="radio"] + label {
+  width: 33.333%;
+}
+.section-agenda.agenda-4 input[type="radio"] + label {
+  width: 25%;
+}
+.section-agenda.agenda-5 input[type="radio"] + label {
+  width: 20%;
+}
+.section-agenda.agenda-6 input[type="radio"] + label {
+  width: 16.667%;
+}
+
+input#Monday:checked ~ label[for="Monday"],
+input#Tuesday:checked ~ label[for="Tuesday"],
+input#Wednesday:checked ~ label[for="Wednesday"],
+input#Thursday:checked ~ label[for="Thursday"],
+input#Friday:checked ~ label[for="Friday"],
+input#Saturday:checked ~ label[for="Saturday"],
+input#Sunday:checked ~ label[for="Sunday"] {
+  background-color: $color-primary;
+  color: white;
+}

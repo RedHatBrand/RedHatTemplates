@@ -1,0 +1,151 @@
+@mixin selection {
+    ::-moz-selection { @content; }
+    ::selection { @content; }
+}
+
+// use it
+@include selection {
+    color: white !important;
+    background: $color-shade;
+    text-shadow: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  background-color: whitesmoke;
+  color:darken($color-shade,20%);
+}
+
+body {
+  letter-spacing:.0666666;
+  font-weight: 300;
+  a {
+    font-weight:  normal
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  outline: none;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: $breakpoint-large) {
+  .container {
+    position: relative;
+  }
+  
+  .wrapper { height: 100%; }
+}
+
+.page-title {
+  font-size: 2.25em;
+  line-height: 1.2em;
+}
+
+.scroll-anchor {
+  display: block;
+  position: relative;
+  top: -6em;
+
+  & + h1, & + h2 { margin-top: 0; }
+}
+
+.highlight {
+  background: #eee;
+  color: #555;
+  border-color: #bbb;
+
+  + tr { border-color: #bbb; }
+}
+
+.container {
+  table th, table td {
+    padding: .5em 1em;
+  }
+}
+
+
+button.full-width {
+  display: block;
+  width: 100%;
+  margin: 0 0 $line-height;
+  text-transform: uppercase;
+  letter-spacing: .13333em;
+
+  &.active {
+    background-color: #444;
+  }
+}
+
+.big-number {
+  font-size: 3em;
+  line-height: 1.25em;
+  margin-bottom: $line-height / 3;
+}
+
+.promo-box {
+  padding: 1em;
+  background-color: $white;
+  margin-bottom: $line-height;
+  border-bottom: 0.5em solid $gray-dark;
+
+  .promo-box-title {
+    font-size: 1em;
+    margin: -1em -1em 1em;
+    padding: 1em;
+    background-color: $color-primary;
+    color: $white;
+
+    h1, h2, h3 {
+      margin-bottom: 0;
+    }
+  }
+
+  .promo-box-footer {
+    margin: 0 -1em -1em;
+    padding: 1em;
+    border-top: 1px solid $gray-light;
+
+    .button {
+      margin-right: 0.5em;
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.light-grey-background {
+  background-color: rgb(230,230,230);
+}
+
+.custom-background {
+  background-position: top 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  color: $white;
+  
+  .container { 
+    background-color: rgba($black, 0.75);
+  }
+}
+
+@media screen and (min-width: $breakpoint-small) {
+  .section-layout-two-columns {
+    column-count: 2;
+    column-gap: 2.4em;
+  }
+}
+

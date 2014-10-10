@@ -1,0 +1,12 @@
+.section-hotel {
+  img {
+    width: 50%;
+    float: right;
+    margin-left: $gutter;
+  }
+  @media screen and (max-width: $breakpoint-small) {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+  }
+}

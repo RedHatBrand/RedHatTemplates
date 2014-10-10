@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .hero-layer {
   background-color: rgba(0,0,0,0.1);
   background-position: top 50%;
@@ -5,12 +6,21 @@
   background-attachment: fixed;
 }
 
+=======
+>>>>>>> 14b1a78dae1e6e0dac29c097958147a9196e87ad
 .hero {
   color: white;
   position: relative;
   overflow: hidden;
   background-color: white;
+<<<<<<< HEAD
   padding-bottom: 7em;
+=======
+  padding-bottom: $line-height;
+  background-position: 50%;
+  background-size: cover;
+  background-attachment: fixed;
+>>>>>>> 14b1a78dae1e6e0dac29c097958147a9196e87ad
 
   a.top-right {
     position: absolute;
@@ -41,27 +51,22 @@
       left: 2em;
     }
   }
-}
 
-.hero-layer {
-  position: absolute;
-  left:0; right: 0;
-  top:0; bottom: 0;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 1300px) {
-  .hero-layer {
-    width: 1300px;
-    left: 50%;
-    margin-left: -650px;
-  }
+  &:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.25);
+	}
 }
 
 h1.title {
   margin: 1em 0 0.75em;
   line-height: 1em;
-  max-width: 8em;
+  max-width: 6.125em;
   font-size: 4.5em;
   color: $white;
   text-transform: uppercase;
@@ -83,11 +88,27 @@ h1.title {
   width: 100%;
   box-sizing: border-box;
 
-  h2,h4 {
-    font-weight: 300;
+  background-color: $white;
+  padding: 1.4em;
+  display: inline-block;
+
+  h3, h4 { 
     color: $black;
+    text-transform: uppercase;
   }
-  h2{letter-spacing:.082em; display:none}
+
+  h3 {
+    font-weight: 300;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.25em;
+  }
+
+  h4 {
+    font-size: 1.25em;  
+    margin-bottom: 0.5em;
+    line-height: 1.25em;
+  }
 
   .name {
     padding-bottom: 0.5em;
@@ -96,9 +117,12 @@ h1.title {
 
   }
 
+<<<<<<< HEAD
   padding: $gutter / 2 0;
   display: inline-block;
 
+=======
+>>>>>>> 14b1a78dae1e6e0dac29c097958147a9196e87ad
   @media screen and (max-width: $breakpoint-small) {
     font-size: 0.8em;
   }
@@ -109,12 +133,30 @@ h1.title {
   text-transform: uppercase;
   font-size: 1.25em;
   line-height: 1em;
+<<<<<<< HEAD
   padding: 1em 0em; width: 100%; text-align:center;
+=======
+  padding: 1em 0em; 
+  width: 100%; 
+  text-align:center;
+>>>>>>> 14b1a78dae1e6e0dac29c097958147a9196e87ad
   border: 2px solid $color-primary;
   background: $color-primary;
   
   &:hover {
     background: none;
     border: 2px solid $color-primary;
+<<<<<<< HEAD
+=======
+    color: $color-primary;
+  }
+
+  &.button:hover {
+    color: $color-primary;
+  }
+
+  &.button:visited:hover {
+    color: $color-primary;
+>>>>>>> 14b1a78dae1e6e0dac29c097958147a9196e87ad
   }
 }

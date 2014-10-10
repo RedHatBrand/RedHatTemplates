@@ -1,0 +1,67 @@
+---
+width: 862mm
+height: 2012mm
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8' />
+    <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+
+    <head>
+    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+    <link href="<%=baseUrl%>/templates/event/floor-banner/stylesheets/main.css"  rel="stylesheet" />
+    <style>
+      body {
+        background-image: 
+          url('{{{ background-image }}}'),
+          url('<%=baseUrl%>/global-assets/images/shapes/yellow/grid-10-02.svg'),
+          url('<%=baseUrl%>/global-assets/images/shapes/red/grid-12-12.svg');
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        background-size: cover, cover, cover;
+        background-position: 50% 50%, 100% 100%, 50% 50%;
+      }
+    </style>
+  </head>
+
+  <body class="theme-{{ theme }}" style="width: 862mm; height: 2012mm">
+    <header role="banner" class="main-header">
+      <div class="main-header_logo main-header_logo_event">
+        <img alt="Event Logo" src="{{{ event-logo }}}" />
+      </div>
+      <div class="main-header_logo main-header_logo_red-hat">
+        <% include /shared-partials/logos/redhat-logo.svg %>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <section class="main-text">
+          <h1 class="main-text_title">
+            {{{ title }}}
+          </h1>
+          <br />
+          <h4 class="main-text_call-to-action">
+            {{ call-to-action }}
+          </h4>
+        </section>
+
+        <section class="secondary-text">
+          <h2 class="secondary-text_dates">
+            {{ dates }}
+          </h2>
+          <h3 class="secondary-text_location">
+            {{ location }}
+          </h3>
+        </section>
+      </article>
+
+      <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark top-right' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-left' style="width: 6mm; height: 6mm"></div>
+      <div class='crop-mark bottom-right' style="width: 6mm; height: 6mm"></div>
+    </main>
+  </body>
+</html>

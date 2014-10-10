@@ -9,6 +9,8 @@ var gulp               = require('gulp'),
     app                = express(),
     deploy             = require("gulp-gh-pages");
 
+var es                 = require('event-stream');
+
 var MetalSmith         = require('metalsmith'),
     autoprefixer       = require('metalsmith-autoprefixer'),
     collection         = require('metalsmith-collections'),
@@ -25,7 +27,7 @@ var base = {
   productionS3: 'http://red-hat-assets.s3.amazonaws.com',
   production: 'http://redhatbrand.github.io/RedHatTemplates',
   development: ''
-}
+};
 
 handlebars.registerHelper('json', function(context) {
   return JSON.stringify(context);
@@ -59,11 +61,11 @@ function tree() {
           }
         }
 
-        return files[file].siblings = siblings;
+        files[file].siblings = siblings;
       })(file, files);
     }
     done();
-  }
+  };
 }
 
 function previewIndexes () {
@@ -71,13 +73,13 @@ function previewIndexes () {
     for (var file in files) {
       (function (file, files) {
         if ((file.split('/').pop() === 'index.html') && !(files[file].hasOwnProperty('template'))) {
-          return files[file].template = 'preview.hbt';
+          files[file].template = 'preview.hbt';
         }
       })(file, files);
     }
 
     done();
-  }
+  };
 }
 
 
@@ -113,7 +115,12 @@ gulp.task('build-tmp', ['smith'], function () {
 
   return gulp.src(tmp + '/**/*', { base: tmp })
     .pipe(xmlFilter)
-    .pipe(ejs({ baseUrl: base['development'], version: Date.now() }).on('error', gutil.log))
+    .pipe(ejs({ 
+        baseUrl: base.development, 
+        version: Date.now(),
+        color: 'hsl(0, 100%, 30%)'
+      })
+      .on('error', gutil.log))
     .pipe(xmlFilter.restore())
     .pipe(gulp.dest(tmp));
 });
@@ -123,7 +130,12 @@ gulp.task('build-s3', ['smith'], function () {
 
   return gulp.src(tmp + '/**/*', { base: tmp })
     .pipe(xmlFilter)
-    .pipe(ejs({ baseUrl: base['productionS3'], version: Date.now() }).on('error', gutil.log))
+    .pipe(ejs({ 
+        baseUrl: base.productionS3, 
+        version: Date.now(),
+        color: 'hsl(0, 100%, 30%)'
+      })
+      .on('error', gutil.log))
     .pipe(xmlFilter.restore())
     .pipe(gulp.dest(prod));
 });
@@ -164,7 +176,12 @@ gulp.task('ejs', ['smith'], function () {
 
   return gulp.src(tmp + '/**/*', { base: './.tmp' })
     .pipe(xmlFilter)
-    .pipe(ejs({ baseUrl: base['production'], version: Date.now() }).on('error', gutil.log))
+    .pipe(ejs({ 
+        baseUrl: base.production, 
+        version: Date.now(),
+        color: 'hsl(0, 100%, 30%)'
+      })
+      .on('error', gutil.log))
     .pipe(xmlFilter.restore())
     .pipe(gulp.dest(tmp));
 });
@@ -180,3 +197,29 @@ gulp.task('deploy', function () {
 });
 
 gulp.task('default', ['serve']);
+
+gulp.task('shapes', function () {
+  var colors = [
+    { name: 'red', value: 'hsl(0, 100%, 30%)' },
+    { name: 'yellow', value: 'hsl(42, 100%, 54%)' },
+    { name: 'blue', value: 'hsl(206, 68%, 59%)' },
+    { name: 'blue-mid', value: 'hsl(206, 54%, 39%)' },
+    { name: 'green', value: 'hsl(79, 100%, 42%)' },
+    { name: 'green-mid', value: 'hsl(79, 100%, 38%)' },
+    { name: 'green-dark', value: 'hsl(79, 100%, 24%)' },
+    { name: 'grey', value: 'hsl(0, 0%, 30%)' },
+    { name: 'grey-light', value: 'hsl(0, 0%, 69%)' },
+    { name: 'navy', value: 'hsl(201, 100%, 14%)' }
+  ];
+  var streams = [];
+
+  colors.forEach(function (color) {
+    var colorStream = gulp.src('src/global-assets/images/shapes/*.svg')
+      .pipe(ejs({ color: color.value }, { ext: '.svg' }))
+      .pipe(gulp.dest('src/global-assets/images/shapes/' + color.name));
+
+    streams.push(colorStream);
+  });
+
+  return es.merge.apply(null, streams);
+});
