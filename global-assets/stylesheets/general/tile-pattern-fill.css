@@ -1,0 +1,8 @@
+.tile-pattern-container {
+  overflow: hidden; }
+
+.tile-pattern-tile {
+  float: left;
+  stroke: #c00; }
+  .tile-pattern-tile svg {
+    display: block; }

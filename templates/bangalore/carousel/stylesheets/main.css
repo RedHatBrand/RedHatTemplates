@@ -104,8 +104,20 @@
 .shape-filled {
   fill: #c00; }
 
+.shape-darker .shape-filled {
+  fill: #990000; }
+
 .shape-multiplied {
   mix-blend-mode: multiply; }
+
+.shape-lightened {
+  mix-blend-mode: lighten; }
+
+.shape-darkened {
+  mix-blend-mode: darken; }
+
+.shape-screened {
+  mix-blend-mode: screen; }
 
 .center-shape, .corner-shape {
   display: none; }
@@ -114,6 +126,9 @@
   display: block; }
 
 .background-style-corner .corner-shape {
+  display: block; }
+
+.background-style-center .shape-show-both, .background-style-corner .shape-show-both {
   display: block; }
 
 pattern.normal use {

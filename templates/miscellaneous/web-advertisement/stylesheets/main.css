@@ -55,8 +55,20 @@
 .shape-filled {
   fill: #c00; }
 
+.shape-darker .shape-filled {
+  fill: #990000; }
+
 .shape-multiplied {
   mix-blend-mode: multiply; }
+
+.shape-lightened {
+  mix-blend-mode: lighten; }
+
+.shape-darkened {
+  mix-blend-mode: darken; }
+
+.shape-screened {
+  mix-blend-mode: screen; }
 
 .center-shape, .corner-shape {
   display: none; }
@@ -65,6 +77,9 @@
   display: block; }
 
 .background-style-corner .corner-shape {
+  display: block; }
+
+.background-style-center .shape-show-both, .background-style-corner .shape-show-both {
   display: block; }
 
 pattern.normal use {
@@ -143,6 +158,19 @@ body {
   width: 250px;
   height: 250px; }
 
+.pattern-stripe {
+  width: 540px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, 20%) rotate(-45deg);
+  -ms-transform: translate(-50%, 20%) rotate(-45deg);
+  transform: translate(-50%, 20%) rotate(-45deg); }
+  .pattern-stripe svg {
+    height: 40px;
+    width: 40px; }
+
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   line-height: 1.25em; }
@@ -181,14 +209,15 @@ h3 {
 
 .branding .redhat-logo {
   width: 8em;
+  height: 100%;
   fill: white; }
 
 .call-to-action {
-  padding: 0.5em 0.75em;
-  border: thin solid;
+  padding: 0.5em 0.75em 0.25em;
   text-transform: uppercase;
   line-height: 1em;
-  display: inline-block; }
+  display: inline-block;
+  background: #b90c20; }
 
 /* 300 X 600 The base style */
 .size-300-600 {
