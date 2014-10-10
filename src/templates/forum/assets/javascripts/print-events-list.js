@@ -37,7 +37,7 @@ function initList () {
             width: elemWidth + '%'
           });
 
-          elem.append('<object data="' + baseUrl +'/templates/forum/assets/images/space.svg" type="image/svg+xml"></object>');
+          elem.append('<img src="' + baseUrl +'/templates/forum/assets/images/space.svg" />');
 
           svgContainer = $('<div class="svgs">');
           elem.append(svgContainer);

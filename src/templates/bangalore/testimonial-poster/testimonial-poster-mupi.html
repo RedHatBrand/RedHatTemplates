@@ -8,16 +8,18 @@ height: 1812mm
   <head>
     <meta charset="utf-8" />
     <link href='<%= baseUrl %>/global-assets/stylesheets/print/crop-marks.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/global-assets/stylesheets/general/tile-pattern-fill.css' rel='stylesheet' />
     <link href="<%= baseUrl %>/templates/bangalore/testimonial-poster/stylesheets/main.css?v<%= version %>" rel="stylesheet" />
     <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
 
     <style>
-      .layout-bottom {
+      main {
       	background-image: 
-      	  url('{{{ background-image }}}'),
-          url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20viewBox%3D%220%200%201000%201000%22%20width%3D%221000%22%20height%3D%221000%22%3E%3Cpolygon%20points%3D%220%2C1000%201000%2C1000%201000%2C0%22%20fill%3D%22%23c00%22%20%2F%3E%3C%2Fsvg%3E');
-      	background-size: cover, contain;
-        background-position: center center, right bottom;
+          url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20viewBox%3D%220%200%201000%201000%22%20width%3D%221000%22%20height%3D%221000%22%3E%3Cpolygon%20points%3D%220%2C500%20500%2C0%200%2C0%22%20fill%3D%22%23c00%22%20%2F%3E%3C%2Fsvg%3E'),
+          url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20viewBox%3D%220%200%201000%201000%22%20width%3D%221000%22%20height%3D%221000%22%3E%3Cpolygon%20points%3D%220%2C1000%201000%2C1000%201000%2C0%22%20fill%3D%22%23c00%22%20%2F%3E%3C%2Fsvg%3E'),
+          url('{{{ background-image }}}');
+      	background-size: 100vw 100vw, contain, cover;
+        background-position: top left, right bottom, center center;
         background-blend-mode: multiply;
 
         color: white;
@@ -26,8 +28,17 @@ height: 1812mm
   </head>
 
   <body style="width: 1212mm; height: 1812mm;">
-  	<main class="layout-bottom background-style-corner background-position-top-left">
-      <% include /shared-partials/backgrounds/general-backgrounds.html %>
+  	<main>
+      <div class='background background-shapes'>
+        <div class="corner-shape-top corner-shape-top-offset">
+          <% include /shared-partials/shapes/triangle-top.svg %>
+        </div>
+
+        <div class="corner-shape-top"> 
+          <div class="pattern-stripe js-pattern-fill"></div>
+        </div>
+      </div>
+
     	<!-- Design here -->
       <article id="content">
         <section class="text-content">
@@ -46,7 +57,11 @@ height: 1812mm
         </div> 
       </article>
       <!-- /Design here -->
-      
+     
+      <script type="text/javascript" charset="utf-8">
+        var redhatBrandPattern = '{{ brand-pattern }}';
+      </script>
+      <script src="<%=baseUrl%>/global-assets/javascripts/tile-pattern.js"></script> 
       <script src='<%= baseUrl %>/templates/bangalore/assets/javascripts/main.js?v<%= version %>'></script>
 
       <div class='crop-mark top-left' style="width: 6mm; height: 6mm"></div>
