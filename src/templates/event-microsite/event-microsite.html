@@ -43,7 +43,12 @@ height: 100vh
   <body>
     <div class='wrapper'>
       <header class='header' role='banner'>
+<<<<<<< HEAD
+        <figure class='hero' style='height: 100%'>
+          <div class='hero-layer' style='background-image: url({{{ hero-image }}})'></div>
+=======
         <figure class='hero'>
+>>>>>>> 14b1a78dae1e6e0dac29c097958147a9196e87ad
           <div class='container layer-three'>
             <h1 class='title'>{{ title }}</h1>
             {{#event-logo}}
@@ -84,7 +89,23 @@ height: 100vh
           </ul>
         </div>
       </nav>
+<<<<<<< HEAD
+      <section class='section-intro askew'>
+        <div class='container'>
+          <div class='two-thirds first'>
+            {{{ intro }}}
+          </div>
+          <div class='one-third last'>
+            <img src='{{{ intro-author }}}' alt='author' class='intro-author' />
+            {{{ author-signature }}}
+          </div>
+        </div>
+      </section>
+      {{#section}}
+      <section class='section-{{ name }} main {{ section-theme }} askew' id='{{ slug }}'>
+=======
       <section class='section-intro'>
+>>>>>>> 14b1a78dae1e6e0dac29c097958147a9196e87ad
         <div class='container'>
           <div class="grid-container">
             <div class='two-thirds first'>

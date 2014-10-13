@@ -1,12 +1,26 @@
+<<<<<<< HEAD
+.hero-layer {
+  background-color: rgba(0,0,0,0.1);
+  background-position: top 50%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+=======
+>>>>>>> 14b1a78dae1e6e0dac29c097958147a9196e87ad
 .hero {
   color: white;
   position: relative;
   overflow: hidden;
   background-color: white;
+<<<<<<< HEAD
+  padding-bottom: 7em;
+=======
   padding-bottom: $line-height;
   background-position: 50%;
   background-size: cover;
   background-attachment: fixed;
+>>>>>>> 14b1a78dae1e6e0dac29c097958147a9196e87ad
 
   a.top-right {
     position: absolute;
@@ -103,6 +117,12 @@ h1.title {
 
   }
 
+<<<<<<< HEAD
+  padding: $gutter / 2 0;
+  display: inline-block;
+
+=======
+>>>>>>> 14b1a78dae1e6e0dac29c097958147a9196e87ad
   @media screen and (max-width: $breakpoint-small) {
     font-size: 0.8em;
   }
@@ -113,15 +133,21 @@ h1.title {
   text-transform: uppercase;
   font-size: 1.25em;
   line-height: 1em;
+<<<<<<< HEAD
+  padding: 1em 0em; width: 100%; text-align:center;
+=======
   padding: 1em 0em; 
   width: 100%; 
   text-align:center;
+>>>>>>> 14b1a78dae1e6e0dac29c097958147a9196e87ad
   border: 2px solid $color-primary;
   background: $color-primary;
   
   &:hover {
     background: none;
     border: 2px solid $color-primary;
+<<<<<<< HEAD
+=======
     color: $color-primary;
   }
 
@@ -131,5 +157,6 @@ h1.title {
 
   &.button:visited:hover {
     color: $color-primary;
+>>>>>>> 14b1a78dae1e6e0dac29c097958147a9196e87ad
   }
 }

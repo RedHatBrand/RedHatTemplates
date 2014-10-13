@@ -1,4 +1,19 @@
 .section-intro {
+<<<<<<< HEAD
+  line-height: 150%;
+  
+  .container { margin-top: 4em; }
+  
+  .intro-author {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin-bottom: 1em;
+  }
+  
+  .one-third {
+    p { margin-bottom: 1em; }
+=======
   .intro-author {
     border-radius: 50%;
     margin-bottom: 1em;
@@ -19,9 +34,14 @@
       font-size: 1.5em;
       margin-bottom: 0.6em;
     }
+>>>>>>> 14b1a78dae1e6e0dac29c097958147a9196e87ad
     
     .author-signature {
       margin: 1em 0;
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 14b1a78dae1e6e0dac29c097958147a9196e87ad
