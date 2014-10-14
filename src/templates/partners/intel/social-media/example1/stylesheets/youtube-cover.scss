@@ -1,0 +1,20 @@
+body { font-size: 48pt; }
+
+.background-shapes {
+  
+  &.top { width: 71.2vw; }
+  
+  &.center { 
+    width: 101%;
+    left: -0.25em; 
+  }
+  
+  &.bottom {
+    bottom: -0.3em;
+    right: 0.1em;
+    .pattern-stripe { left: 38.5%; }
+  }
+}
+
+.branding { top: 30%; }
+.action { top: 60%; }
