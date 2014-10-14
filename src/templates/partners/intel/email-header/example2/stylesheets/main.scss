@@ -1,0 +1,132 @@
+$page-margin: 1.75em;
+
+body {
+  position: relative;
+  font-family: 'Overpass';
+  font-weight: 400;
+  line-height: 1.4em;
+  background-color: white;
+  font-size: 14pt;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: white;
+}
+
+.text-content {
+  display: inline-block;
+  position: absolute;
+  top: 10%;
+  left: 3%;
+  text-transform: uppercase;
+  font-weight: 600;
+  
+  h2 {
+    line-height: 1.3em;
+    font-size: 12pt;
+  }
+  
+  p { 
+    width: 15em; 
+    font-size: 18pt;
+    line-height: 1.2em;
+  }
+}
+
+.background-shapes.center {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: -0.25em;
+  top: -0.5em;
+  width: 81.5vw;
+  height: 50vw;
+  
+  .corner-shape-center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    
+    & > svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.background-shapes.bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 71.5vw;
+  height: 50vw;
+  
+  .corner-shape-bottom {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    
+    & > svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  .pattern-stripe {
+    width: 160vw;
+    height: 3em;
+    position: absolute;
+    left: 70%;
+    top: 0;
+    transform: translate(-50%, -121.25%) rotate(-45deg);
+    
+    svg { 
+      stroke: #1171b8; 
+      display: block; 
+    }
+  }
+}
+
+.branding {
+  position: absolute;
+  right: 3%;
+  bottom: 40%;
+  
+  .red-hat { 
+    width: 10em;
+    display: inline-block;
+    margin-right: 1.75em;
+    border-right: 2px solid white;
+    padding-right: 1.54em;
+  }
+  
+  .intel {
+    display: inline-block;
+    
+    img { width: 6em; }
+  }
+}
+
+.action {
+  position: absolute;
+  right: 3%;
+  bottom: 20%;
+  
+  .button {
+    background: white;
+    color: #1171b8;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.5em 0.8em;
+    font-weight: 600;
+    border: 2px solid white;
+    
+    &:hover {
+      background: none;
+      color: white;
+    }
+  }
+}
