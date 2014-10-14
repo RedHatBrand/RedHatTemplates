@@ -94,6 +94,11 @@ body {
   left: 30%;
   top: 25%;
   
+  &.small {
+    top: 35%;
+    left: 16%;
+  }
+  
   .red-hat { 
     width: 10em;
     display: inline-block;
@@ -113,6 +118,11 @@ body {
   position: absolute;
   left: 30.5%;
   top: 65%;
+  
+  &.small {
+    top: 55%;
+    left: 16.5%;
+  }
   
   .button {
     background: white;
