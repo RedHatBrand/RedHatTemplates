@@ -1,0 +1,53 @@
+$page-margin: 1.75em;
+
+// Font Sizes
+
+$font-size-smaller: 9pt;
+$font-size-small: 12pt;
+$font-size-default: 14pt;
+$font-size-medium: 18pt;
+$font-size-big: 24pt;
+$font-size-large: 40pt;
+$font-size-larger: 48pt;
+
+// Layout Sizes
+
+body.layout-small {
+  font-size: $font-size-smaller;
+  .text-content {
+    h2 { font-size: $font-size-smaller; }
+    p { font-size: $font-size-small; }
+  }
+}
+
+body.layout-default {
+  font-size: $font-size-default;
+  .text-content {
+    h2 { font-size: $font-size-small; }
+    p { font-size: $font-size-medium; }
+  }
+}
+
+body.layout-medium {
+  font-size: $font-size-medium;
+  .text-content {
+    h2 { font-size: $font-size-default; }
+    p { font-size: $font-size-big; }
+  }
+}
+
+body.layout-big {
+  font-size: $font-size-big;
+  .text-content {
+    h2 { font-size: $font-size-medium; }
+    p { font-size: $font-size-big; }
+  }
+}
+
+body.layout-large {
+  font-size: $font-size-large;
+  .text-content {
+    h2 { font-size: $font-size-large; }
+    p { font-size: $font-size-larger; }
+  }
+}

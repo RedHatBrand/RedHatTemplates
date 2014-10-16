@@ -1,12 +1,10 @@
-$page-margin: 1.75em;
-
 body {
   position: relative;
   font-family: 'Overpass';
   font-weight: 400;
   line-height: 1.4em;
   background-color: white;
-  font-size: 14pt;
+  
   box-sizing: border-box;
   overflow: hidden;
   color: white;
@@ -20,14 +18,10 @@ body {
   text-transform: uppercase;
   font-weight: 600;
   
-  h2 {
-    line-height: 1.3em;
-    font-size: 12pt;
-  }
+  h2 { line-height: 1.3em; }
   
   p { 
     width: 15em; 
-    font-size: 18pt;
     line-height: 1.2em;
   }
 }
@@ -41,7 +35,7 @@ body {
   width: 81.5vw;
   height: 50vw;
   
-  .corner-shape-center {
+  .shape-center {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -111,6 +105,8 @@ body {
     
     img { width: 6em; }
   }
+  
+  &.boxed { bottom: 20%; }
 }
 
 .action {
@@ -130,6 +126,89 @@ body {
     &:hover {
       background: none;
       color: white;
+    }
+  }
+  
+  &.boxed { bottom: 10%; }
+}
+
+
+
+// Boxed Layout
+
+.boxed {
+  &.center {
+    width: 100%;
+    height: 100%;
+  }
+  
+  &.bottom {
+    width: 100%;
+    height: 100%;
+    .corner-shape-bottom { width: 103%; }
+    .corner-shape-bottom.pattern { 
+      top: 0;
+      left: 0;
+    }
+    .pattern-stripe { 
+      width: 200%;
+      top: 42%;
+      left: 53.5%; 
+      height: 2em; 
+    }
+  }
+}
+
+
+// Specific styles
+
+.facebook-share-template {
+  .boxed {
+    &.bottom {
+      .corner-shape-bottom { width: 101.5%; }
+      .pattern-stripe {
+        top: 27%;
+        left: 69%;
+      }
+    }
+  }
+}
+
+.twitter-cover-template {
+  .corner-shape-bottom {
+    .pattern-stripe { 
+      height: 2em; 
+      left: 70.5%;
+    }
+  }
+}
+
+.twitter-share-template {
+  .boxed {
+    &.bottom {
+      .corner-shape-bottom { width: 101%; }
+      .pattern-stripe {
+        top: 42%;
+        left: 55.5%;
+      }
+    }
+  }
+}
+
+.youtube-cover-template {
+  .background-shapes {
+    &.center {
+      width: 100%;
+      height: 102%;
+    }
+    &.bottom {
+      width: 80vw;
+      height: 80vw;
+      .pattern-stripe {
+        height: 2em;
+        top: 50%;
+        left: 50%;
+      }
     }
   }
 }

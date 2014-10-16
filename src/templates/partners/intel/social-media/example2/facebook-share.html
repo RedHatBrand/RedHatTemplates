@@ -1,7 +1,7 @@
 ---
 {
-  "width": "784px",
-  "height": "803px"
+  "width": "618px",
+  "height": "618px"
 }
 ---
 
@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8" />
     <link href='<%= baseUrl %>/global-assets/stylesheets/general/tile-pattern-fill.css' rel='stylesheet' />
+    <link type="text/css" href="<%= baseUrl %>/templates/partners/intel/social-media/example2/stylesheets/settings.css" rel="stylesheet" />
     <link type="text/css" href="<%= baseUrl %>/templates/partners/intel/social-media/example2/stylesheets/main.css" rel="stylesheet" />
-    <link type="text/css" href="<%= baseUrl %>/templates/partners/intel/social-media/example2/stylesheets/facebook-event.css" rel="stylesheet" />
     <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
 
     <style>
@@ -28,10 +28,10 @@
     </style>
   </head>
 
-  <body style="width: 784px; height: 803px;">
+  <body style="width: 618px; height: 618px;" class="facebook-share-template layout-default">
   	<main>
-      <div class='background background-shapes center'>
-        <div class="corner-shape-center corner-shape-bottom-center">
+      <div class='background background-shapes boxed center'>
+        <div class="shape-center">
           <svg version="1.1" baseProfile="full" width="1200" height="1200" viewBox="0 0 1200 1200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
   
             <polygon fill="rgba(17, 113, 184, 0.2)" points="-600,1200 1200,-600 1800,0 0,1800"></polygon>
@@ -39,8 +39,8 @@
         </div>
       </div>
       
-      <div class='background background-shapes bottom'>
-        <div class="corner-shape-bottom corner-shape-bottom-offset">
+      <div class='background background-shapes boxed bottom'>
+        <div class="corner-shape-bottom">
           <svg version="1.1" baseProfile="full" width="1200" height="1200" viewBox="0 0 1200 1200" preserveAspectRatio="xMaxYMax slice" xmlns="http://www.w3.org/2000/svg">
             
           <linearGradient y2="0.68" x2="1" id="gradient-fill" spreadMethod="reflect" x1="0" y1="1">
@@ -55,7 +55,7 @@
           </svg>
         </div>
 
-        <div class="corner-shape-bottom"> 
+        <div class="corner-shape-bottom pattern"> 
           <div class="pattern-stripe js-pattern-fill"></div>
         </div>
       </div>
@@ -67,7 +67,7 @@
           <p>{{{ insight }}}</p>
         </section>
 
-        <div class='branding'>
+        <div class='branding boxed'>
           <div class="red-hat">
             <% include /global-assets/images/logos/rh-logo.svg %>
           </div>
@@ -76,7 +76,7 @@
           </div>
         </div>
           
-        <div class="action">
+        <div class="action boxed">
           <a class='button' href='{{{ register-link }}}' target='_blank'>Find Out More</a>
         </div>
           
