@@ -1,0 +1,218 @@
+$page-margin: 1.75em;
+
+// Font size
+
+$font-size-tiny: 9pt;
+$font-size-smaller: 12pt;
+$font-size-small: 14pt;
+$font-size-default: 18pt;
+$font-size-big: 24pt;
+$font-size-large: 48pt;
+
+body.layout-smaller { 
+  font-size: $font-size-tiny; 
+  .author, .resource { font-size: $font-size-tiny; }
+}
+body.layout-small { 
+  font-size: $font-size-small; 
+  .author, .resource { font-size: $font-size-smaller; }
+}
+body.layout-default { 
+  font-size: $font-size-default; 
+  .author, .resource { font-size: $font-size-small; }
+}
+body.layout-big { 
+  font-size: $font-size-big; 
+  .author, .resource { font-size: $font-size-default; }
+}
+body.layout-large { 
+  font-size: $font-size-large; 
+  .author, .resource { font-size: $font-size-big; }
+}
+
+body {
+  position: relative;
+  font-family: 'Overpass';
+  font-weight: 400;
+  line-height: 1.4em;
+  background-color: white;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: white;
+}
+
+.text-content {
+  display: inline-block;
+  position: absolute;
+  font-weight: 600;
+  
+  &:first-child {
+    left: 5%;
+    top: 20%;
+    color: #1171b8;
+    
+    .text { width: 15em; }
+  }
+  
+  &:last-child {
+    right: 5%;
+    color: white;
+    
+    &.last { top: 20%; }
+    
+    .text { width: 15em; }
+  }
+  
+  .author, .resource { 
+    text-transform: uppercase;
+  }
+}
+
+.background-shapes.top {
+  position: absolute;
+  top: -1em;
+  left: -1em;
+  width: 75.5vw;
+  height: 50vw;
+  
+  .corner-shape-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    
+    & > svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.background-shapes.bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 75.5vw;
+  height: 50vw;
+  
+  .corner-shape-bottom {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    
+    & > svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.pattern-background {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 95%;
+  height: 50vw;
+  
+  .corner-shape-bottom {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    
+    & > svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  .pattern-stripe {
+    width: 160vw;
+    height: 3em;
+    position: absolute;
+    left: 83%;
+    top: 0;
+    transform: translate(-50%, -121.25%) rotate(-45deg);
+    
+    svg { 
+      stroke: #1171b8; 
+      display: block; 
+    }
+  }
+}
+
+// Boxed Layout common styles
+
+.boxed {
+  &.top, &.bottom {
+    width: 108.5%;
+    height: 108.5%;
+  }
+  &.pattern-background {
+    width: 100%;
+    .pattern-stripe { 
+      left: 50%;
+      height: 2.5em;
+    }
+  }
+  
+  .text-content { 
+    &:first-child { top: 10%; } 
+    &:last-child { bottom: 10%; } 
+  }
+}
+
+// Specific Styles
+
+.facebook-share-layout {
+  .boxed.pattern-background .pattern-stripe { left: 52.5%; }
+}
+
+.profile-layout {
+  .boxed.pattern-background .pattern-stripe { left: 52%; }
+}
+
+.twitter-cover-layout {
+  .background-shapes {
+    &.top, &.bottom {
+      width: 73.5vw;
+    }
+  }
+  
+  .pattern-background { width: 83.5%; }
+}
+
+.twitter-share-layout {
+  .boxed.pattern-background { 
+    width: 97%; 
+    
+    .pattern-stripe {
+      left: 50%;
+      height: 2em;
+    }
+  } 
+}
+
+.youtube-cover-layout {
+  .background-shapes {
+    &.top { width: 85vw; }
+    &.bottom { 
+      width: 85vw; 
+      height: 85vw; 
+    }
+  }
+  
+  .pattern-background { 
+    width: 150%; 
+    
+    .pattern-stripe {
+      height: 2.4em;
+      left: 82.5%;
+    }
+  }
+  
+  .text-content:last-child.last { top: 40%; }
+}
