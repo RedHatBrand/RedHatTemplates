@@ -1,0 +1,73 @@
+---
+width: 120px
+height: 600px
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link href='<%= baseUrl %>/global-assets/stylesheets/general/tile-pattern-fill.css' rel='stylesheet' />
+    <link type="text/css" href="<%= baseUrl %>/templates/partners/intel/web-advertisement/example3/stylesheets/main.css" rel="stylesheet" />
+    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+
+    <style>
+      body {
+        background-image: 
+          url('/global-assets/images/shapes/red/grid-00-00.svg'),
+          url('/global-assets/images/shapes/blue/grid-12-12.svg'),
+          url('{{{ background-image }}}');
+
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        background-size: 150% auto, 170% auto, cover;
+        background-position: top left, bottom right, center center;
+      }
+    </style>
+  </head>
+
+  <body style="width: 120px; height: 600px;" class="size-120-600">
+  	<main>
+      
+      <div class='background background-shapes bottom long'>
+        <div class="corner-shape-bottom">
+          <svg version="1.1" baseProfile="full" width="1200" height="1200" viewBox="0 0 1200 1200" preserveAspectRatio="xMaxYMax slice" xmlns="http://www.w3.org/2000/svg">
+                      
+          <polygon fill="rgba(17, 113, 184, 0.6)" points="1200,0 1200,1200 0,1200"></polygon>
+          </svg>
+        </div>
+
+      </div>
+      
+      <div class='pattern-background'>
+        <div class="pattern-bottom"> 
+          <div class="pattern-stripe js-pattern-fill"></div>
+        </div>
+      </div>
+      
+      <!-- Design here -->
+      <article id="content">
+
+        <div class='branding'>
+          <div class="red-hat">
+            <% include /global-assets/images/logos/rh-logo.svg %>
+          </div>
+          <div class="intel">
+            <img src="images/intel.png" alt="intel" />
+          </div>
+        </div>
+          
+        <div class="action">
+          <a class='button' href='{{{ register-link }}}' target='_blank'>Find Out More</a>
+        </div>
+          
+      </article>
+      <!-- /Design here -->
+      
+      <script type="text/javascript" charset="utf-8">
+        var redhatBrandPattern = '{{ brand-pattern }}';
+      </script>
+      <script src="http://redhatbrand.github.io/RedHatTemplates/global-assets/javascripts/tile-pattern.js"></script>
+    </main>
+  </body>
+</html>

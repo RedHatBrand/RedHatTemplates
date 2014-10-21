@@ -1,0 +1,266 @@
+$page-margin: 1.75em;
+
+body {
+  position: relative;
+  font-family: 'Overpass';
+  font-weight: 400;
+  line-height: 1.4em;
+  background-color: white;
+  font-size: 14pt;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: white;
+  margin: 0;
+}
+
+body.size-120-90,
+body.size-180-90,
+body.size-125-125 { font-size: 7pt; }
+
+.border {
+  margin-right: 5px;
+  padding-right: 5px;
+  border-right: 1px solid white;
+}
+
+.background-shapes.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130%;
+  height: 50vw;
+  
+  .corner-shape-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    
+    & > svg {
+      width: 41.5%;
+      height: 100%;
+    }
+  }
+}
+
+.background-shapes.center {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  
+  .shape-center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    
+    & > svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.background-shapes.bottom {
+  position: absolute;
+  bottom: -0.5em;
+  right: 0;
+  width: 150%;
+  height: 50vw;
+  
+  .corner-shape-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 37.2%;
+    
+    & > svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  .pattern-stripe {
+    width: 160vw;
+    height: 3em;
+    position: absolute;
+    left: 60%;
+    top: 0;
+    transform: translate(-50%, -121.25%) rotate(-45deg);
+    
+    svg { 
+      stroke: #004689; 
+      display: block; 
+    }
+  }
+}
+
+.branding {
+  position: absolute;
+  top: 40%;
+  left: 9%;
+  
+  .red-hat { 
+    width: 10em;
+    display: inline-block;
+  }
+  
+  .intel {
+    display: inline-block;
+    
+    img { width: 5em; }
+  }
+}
+
+.action {
+  position: absolute;
+  top: 60%;
+  left: 9%;
+  
+  .button {
+    background: white;
+    color: #1171b8;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.5em 0.8em;
+    font-weight: 600;
+    border: 2px solid white;
+    
+    &:hover {
+      background: none;
+      color: white;
+    }
+  }
+}
+
+// Size 120 X 90
+
+body.size-120-90 {
+  .branding { top: 10%; }
+}
+
+// Size 120 X 600
+
+body.size-120-600 {
+  font-size: 8pt;
+}
+
+// Size 125 X 125
+
+body.size-125-125 {
+  .branding { top: 20%; }
+}
+
+// Size 160 X 600
+
+body.size-160-600 {
+  font-size: 10.5pt;
+  
+  .branding { top: 35%; }
+}
+
+// Size 180 X 90
+
+body.size-180-90 {
+  .branding {
+    top: 30%;
+    left: 7%; 
+  }
+}
+
+// Size 240 X 400
+
+body.size-240-400 {
+  font-size: 9pt;
+  
+  .background-shapes.bottom .pattern-stripe {
+    left: 35%;
+    width: 130vw;
+  }
+}
+
+// Size 300 X 100 & 300 X 600
+
+body.size-300-100,
+body.size-300-600, {
+  font-size: 11.5pt;
+}
+
+body.size-300-600 {
+  .background-shapes.bottom .pattern-stripe { left: 35%; }
+}
+
+body.size-300-100 {
+  .branding { top: 20%; }
+}
+
+// Size 336 X 280
+
+body.size-336-280 {
+  font-size: 12pt;
+  
+  .branding { top: 30%; }
+  .action { top: 65%; }
+  
+  .background-shapes {
+    &.top { width: 100%; }
+    &.bottom { 
+      width: 110%; 
+      
+      .pattern-stripe { left: 45%; }
+    }
+  }
+}
+
+// Size 468 X 60
+
+body.size-468-60 {
+  font-size: 9pt;
+  
+  .branding { top: 10%; }
+  
+  .action {
+    top: 37%;
+    left: 65%;
+  }
+}
+
+// Size 720 X 300
+
+body.size-720-300 {
+  
+  .branding { 
+    top: 30%; 
+    left: 30%; 
+  }
+  .action { 
+    top: 70%; 
+    left: 30%; 
+  }
+  
+  .background-shapes {
+    &.top { width: 60%; }
+    &.bottom { 
+      width: 68%; 
+      
+      .pattern-stripe { left: 40%; }
+    }
+  }
+}
+
+// Size 728 X 90
+
+body.size-728-90 {
+  
+  .branding { top: 9%; }
+  
+  .action {
+    top: 37%;
+    left: 65%;
+  }
+}
