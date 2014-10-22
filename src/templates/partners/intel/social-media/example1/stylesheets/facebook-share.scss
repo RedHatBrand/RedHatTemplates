@@ -1,0 +1,7 @@
+.background-shapes {
+  &.top { width: 84vw; }
+  &.bottom { 
+    width: 82vw;
+    .pattern-stripe { left: 37%; }
+  }
+}

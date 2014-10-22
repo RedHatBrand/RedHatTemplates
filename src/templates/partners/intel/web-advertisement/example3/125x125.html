@@ -1,0 +1,64 @@
+---
+width: 125px
+height: 125px
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link type="text/css" href="<%= baseUrl %>/templates/partners/intel/web-advertisement/example3/stylesheets/main.css" rel="stylesheet" />
+    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+ 
+    <style>
+      body {
+        background-image: 
+          url('/global-assets/images/shapes/red/grid-00-00.svg'),
+          url('/global-assets/images/shapes/blue/grid-12-12.svg'),
+          url('{{{ background-image }}}');
+
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        background-size: 100% auto, 100% auto, cover;
+        background-position: top left, bottom right, center center;
+      }
+    </style>
+  </head>
+
+  <body style="width: 125px; height: 125px;" class="size-125-125">
+  	<main>
+            
+      <div class='background background-shapes center'>
+        <div class="shape-center">
+          <svg width="125" height="125" viewPort="0 0 125 125" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <linearGradient y2="0.68" x2="1" id="center-fill" spreadMethod="reflect" x1="0" y1="1">
+            <stop stop-color="#1171b8" offset="0" stop-opacity="0"/>
+            <stop stop-color="#1171b8" offset="0.2733" stop-opacity="0.4"/>
+            <stop stop-color="#1171b8" offset="0.52" stop-opacity="0.7"/>
+            <stop stop-color="#1171b8" offset="0.6967" stop-opacity="0.9"/>
+            <stop stop-color="#1171b8" offset="0.89" stop-opacity="1"/>
+            </linearGradient>
+ 
+            <rect width="125" height="125" fill="url(#center-fill)" />
+          </svg>
+        </div>
+      </div>
+      
+      <!-- Design here -->
+      <article id="content">
+
+        <div class='branding'>
+          <div class="red-hat">
+            <% include /global-assets/images/logos/rh-logo.svg %>
+          </div>
+          <div class="intel">
+            <img src="images/intel.png" alt="intel" />
+          </div>
+        </div>
+          
+      </article>
+      <!-- /Design here -->
+
+    </main>
+  </body>
+</html>

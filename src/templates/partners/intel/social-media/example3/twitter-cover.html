@@ -1,0 +1,82 @@
+---
+{
+  "width": "1500px",
+  "height": "500px"
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link href='<%= baseUrl %>/global-assets/stylesheets/general/tile-pattern-fill.css' rel='stylesheet' />
+    <link type="text/css" href="<%= baseUrl %>/templates/partners/intel/social-media/example3/stylesheets/main.css" rel="stylesheet" />
+    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+
+    <style>
+      body {
+        background-image: 
+          url('/global-assets/images/shapes/red/grid-00-00.svg'),
+          url('/global-assets/images/shapes/blue/grid-12-12.svg'),
+          url('{{{ background-image }}}');
+
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        background-size: 60% auto, 70% auto, cover;
+        background-position: top left, bottom right, center center;
+      }
+    </style>
+  </head>
+
+  <body style="width: 1500px; height: 500px;" class="layout-big">
+  	<main>
+      <div class='background background-shapes'>
+        <div class="corner-shape-bottom corner-shape-bottom-offset">
+          <svg version="1.1" baseProfile="full" width="1200" height="1200" viewBox="0 0 1200 1200" preserveAspectRatio="xMaxYMax slice" xmlns="http://www.w3.org/2000/svg">
+            
+          <linearGradient y2="0.68" x2="1" id="gradient-fill" spreadMethod="reflect" x1="0" y1="1">
+          <stop stop-color="#1171b8" offset="0" stop-opacity="0"/>
+          <stop stop-color="#1171b8" offset="0.2733" stop-opacity="0.4"/>
+          <stop stop-color="#1171b8" offset="0.52" stop-opacity="0.7"/>
+          <stop stop-color="#1171b8" offset="0.6967" stop-opacity="0.9"/>
+          <stop stop-color="#1171b8" offset="0.89" stop-opacity="1"/>
+          </linearGradient>
+            
+          <polygon fill="url(#gradient-fill)" points="1200,0 1200,1200 0,1200"></polygon>
+          </svg>
+        </div>
+
+        <div class="corner-shape-bottom"> 
+          <div class="pattern-stripe js-pattern-fill"></div>
+        </div>
+      </div>
+
+      <!-- Design here -->
+      <article id="content">
+        <section class="text-content">
+          <h2>{{{ heading }}}</h2>
+        </section>
+
+        <div class='branding'>
+          <div class="red-hat">
+            <% include /global-assets/images/logos/rh-logo.svg %>
+          </div>
+          <div class="intel">
+            <img src="images/intel.png" alt="intel" />
+          </div>
+        </div>
+          
+        <div class="action">
+          <a class='button' href='{{{ register-link }}}' target='_blank'>Find Out More</a>
+        </div>
+          
+      </article>
+      <!-- /Design here -->
+      
+      <script type="text/javascript" charset="utf-8">
+        var redhatBrandPattern = '{{ brand-pattern }}';
+      </script>
+      <script src="http://redhatbrand.github.io/RedHatTemplates/global-assets/javascripts/tile-pattern.js"></script>
+    </main>
+  </body>
+</html>
