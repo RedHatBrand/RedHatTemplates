@@ -105,7 +105,7 @@ body.size-125-125 { font-size: 7pt; }
 
 .pattern-background {
   
-  .pattern-bottom {
+  .pattern-bottom, pattern-top {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -127,6 +127,13 @@ body.size-125-125 { font-size: 7pt; }
     svg {
       stroke: #1171b8; 
       display: block; 
+    }
+  }
+  
+  .pattern-top {
+    .pattern-stripe {
+      left: 40%;
+      top: 12%;
     }
   }
 }
@@ -182,10 +189,12 @@ body.size-120-90 {
 body.size-120-600 {
   font-size: 8pt;
   
-  .pattern-background .pattern-stripe {
-    left: 87%;
-    top: 90%;
-  }
+  .background-shapes.bottom.long { width: 600%; }
+  
+  .background-shapes.top { width: 117%; }
+  
+  .branding { top: 75%; }
+  .action { top: 93%; }
 }
 
 // Size 125 X 125
@@ -199,12 +208,12 @@ body.size-125-125 {
 body.size-160-600 {
   font-size: 10.5pt;
   
-  .branding { top: 35%; }
+  .background-shapes.bottom.long { width: 600%; }
   
-  .pattern-background .pattern-stripe {
-    left: 75%;
-    top: 90%;
-  }
+  .background-shapes.top { width: 102%; }
+  
+  .branding { top: 65%; }
+  .action { top: 90%; }
 }
 
 // Size 180 X 90
@@ -221,11 +230,13 @@ body.size-180-90 {
 body.size-240-400 {
   font-size: 9pt;
   
-  .pattern-background .pattern-stripe {
-    width: 220vw;
-    left: 88%;
-    top: 60%;
-  }
+  .background-shapes.bottom.long { width: 380%; }
+  
+  .background-shapes.top { width: 70%; }
+  
+  .branding { top: 70%; }
+  .action { top: 90%; }
+  
 }
 
 // Size 300 X 100 & 300 X 600
@@ -263,12 +274,20 @@ body.size-300-100 {
 // Size 336 X 280
 
 body.size-336-280 {
-  font-size: 12pt;
+  font-size: 10pt;
   
-  .branding { top: 30%; }
-  .action { top: 65%; }
+  .branding { 
+    top: 55%;
+    left: 33%;
+  }
+  .action {
+    top: 85%;
+    left: 59%;
+  }
   
-  .background-shapes.bottom.long { width: 225%; }
+  .background-shapes.top { width: 57.5vw; }
+  
+  .background-shapes.bottom.long { width: 290%; }
 
 }
 
