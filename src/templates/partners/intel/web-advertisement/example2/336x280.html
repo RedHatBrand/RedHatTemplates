@@ -19,7 +19,7 @@ height: 280px
 
         background-repeat: no-repeat;
         background-blend-mode: multiply;
-        background-size: 90% auto, cover;
+        background-size: 50% auto, cover;
         background-position: top left, center center;
       }
     </style>
@@ -28,7 +28,7 @@ height: 280px
   <body style="width: 336px; height: 280px;" class="size-336-280">
   	<main>
       
-      <div class='background background-shapes bottom'>
+      <div class='background background-shapes bottom long'>
         <div class="corner-shape-bottom">
           <svg version="1.1" baseProfile="full" width="1200" height="1200" viewBox="0 0 1200 1200" preserveAspectRatio="xMaxYMax slice" xmlns="http://www.w3.org/2000/svg">
                       
@@ -39,7 +39,7 @@ height: 280px
       </div>
       
       <div class='pattern-background'>
-        <div class="pattern-bottom"> 
+        <div class="pattern-top"> 
           <div class="pattern-stripe js-pattern-fill"></div>
         </div>
       </div>
@@ -52,7 +52,7 @@ height: 280px
             <% include /global-assets/images/logos/rh-logo.svg %>
           </div>
           <div class="intel">
-            <img src="images/intel.png" alt="intel" />
+            <img src="<%= baseUrl %>/templates/partners/intel/assets/images/intel-logo.png" alt="intel" />
           </div>
         </div>
           
@@ -66,7 +66,7 @@ height: 280px
       <script type="text/javascript" charset="utf-8">
         var redhatBrandPattern = '{{ brand-pattern }}';
       </script>
-      <script src="http://redhatbrand.github.io/RedHatTemplates/global-assets/javascripts/tile-pattern.js"></script>
+      <script src="<%=baseUrl%>/global-assets/javascripts/tile-pattern.js"></script>
     </main>
   </body>
 </html>

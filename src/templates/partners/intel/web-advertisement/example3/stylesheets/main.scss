@@ -85,6 +85,13 @@ body.size-125-125 { font-size: 7pt; }
     right: 0;
   }
   
+  .pattern-center {
+    position: absolute;
+    top: 64.5%;
+    left: 0;
+    right: 0;
+  }
+  
   .pattern-stripe {
     width: 160vw;
     height: 3em;
@@ -154,12 +161,16 @@ body.size-120-90 {
 body.size-120-600 {
   font-size: 8pt;
   
-  .background-shapes.bottom.long { width: 256%; }
+  .background-shapes.bottom.long { width: 600%; }
   
   .pattern-background .pattern-stripe {
     left: 55%;
     top: 90%;
   }
+  
+  .branding { top: 75%; }
+  
+  .action { top: 93%; }
 }
 
 // Size 125 X 125
@@ -173,14 +184,18 @@ body.size-125-125 {
 body.size-160-600 {
   font-size: 10.5pt;
   
-  .branding { top: 35%; }
+  .background-shapes.bottom.long { width: 600%; }
   
-  .background-shapes.bottom.long { width: 210%; }
+  .pattern-background .pattern-center { top: 53%; }
   
   .pattern-background .pattern-stripe {
-    left: 60%;
-    top: 90%;
+    left: 55%;
+    top: 50%;
   }
+  
+  .branding { top: 65%; }
+  
+  .action { top: 90%; }
 }
 
 // Size 180 X 90
@@ -205,9 +220,9 @@ body.size-240-400 {
     top: 90%;
   }
   
-  .branding { top: 60%; }
+  .branding { top: 85%; }
   
-  .action { top: 80%; }
+  .action { top: 30%; }
   
   .text-content {
     left: 9%;
@@ -238,9 +253,9 @@ body.size-300-600 {
     top: 80%;
   }
   
-  .branding { top: 63%; }
+  .branding { top: 85%; }
   
-  .action { top: 80%; }
+  .action { top: 25%; }
 }
 
 body.size-300-100 {  
@@ -250,17 +265,25 @@ body.size-300-100 {
 // Size 336 X 280
 
 body.size-336-280 {
-  font-size: 12pt;
+  font-size: 10pt;
   
-  .branding { top: 30%; }
-  .action { top: 65%; }
+  .background-shapes.bottom { width: 170%; }
   
-  .background-shapes.bottom { width: 100%; }
-  
-  .pattern-background .pattern-stripe {
-    left: 105%;
+  .pattern-background .pattern-bottom {
+    right: 25%;
+    
+    .pattern-stripe { left: 105%; }
   }
-
+  
+  .branding { 
+    top: 55%;
+    left: 32%;
+  }
+  
+  .action {
+    top: 85%;
+    left: 58%;
+  }
 }
 
 // Size 468 X 60

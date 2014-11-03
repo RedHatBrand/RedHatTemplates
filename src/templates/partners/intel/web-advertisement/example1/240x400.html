@@ -72,7 +72,7 @@ height: 400px
             <% include /global-assets/images/logos/rh-logo.svg %>
           </div>
           <div class="intel">
-            <img src="images/intel.png" alt="intel" />
+            <img src="<%= baseUrl %>/templates/partners/intel/assets/images/intel-logo.png" alt="intel" />
           </div>
         </div>
           
@@ -86,7 +86,7 @@ height: 400px
       <script type="text/javascript" charset="utf-8">
         var redhatBrandPattern = '{{ brand-pattern }}';
       </script>
-      <script src="http://redhatbrand.github.io/RedHatTemplates/global-assets/javascripts/tile-pattern.js"></script>
+      <script src="<%=baseUrl%>/global-assets/javascripts/tile-pattern.js"></script>
     </main>
   </body>
 </html>
