@@ -1,0 +1,183 @@
+body.layout-smaller {
+  font-size: 9pt; }
+
+body.layout-small {
+  font-size: 11pt; }
+
+body.layout-default {
+  font-size: 18pt; }
+
+body.layout-big {
+  font-size: 24pt; }
+
+body.layout-large {
+  font-size: 48pt; }
+
+body {
+  position: relative;
+  font-family: 'Overpass';
+  font-weight: 400;
+  line-height: 1.4em;
+  background-color: white;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: white; }
+
+.text-content {
+  display: inline-block;
+  position: absolute;
+  top: 10%;
+  left: 3%; }
+  .text-content h2 {
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.3em; }
+    .text-content h2 span {
+      display: block;
+      font-weight: 700; }
+
+.background-shapes {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60vw;
+  height: 50vw; }
+  .background-shapes .corner-shape-bottom {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; }
+    .background-shapes .corner-shape-bottom > svg {
+      width: 100%;
+      height: 100%; }
+  .background-shapes .pattern-stripe {
+    width: 160vw;
+    height: 1.75em;
+    position: absolute;
+    left: 83.5%;
+    top: 0;
+    -webkit-transform: translate(-50%, -121.25%) rotate(-45deg);
+    -ms-transform: translate(-50%, -121.25%) rotate(-45deg);
+    transform: translate(-50%, -121.25%) rotate(-45deg); }
+    .background-shapes .pattern-stripe svg {
+      stroke: #1171b8;
+      display: block; }
+
+.pattern-background {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60vw;
+  height: 50vw; }
+  .pattern-background .corner-shape-bottom {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; }
+    .pattern-background .corner-shape-bottom > svg {
+      width: 100%;
+      height: 100%; }
+  .pattern-background .pattern-stripe {
+    width: 160vw;
+    height: 1.75em;
+    position: absolute;
+    left: 83.5%;
+    top: 0;
+    -webkit-transform: translate(-50%, -121.25%) rotate(-45deg);
+    -ms-transform: translate(-50%, -121.25%) rotate(-45deg);
+    transform: translate(-50%, -121.25%) rotate(-45deg); }
+    .pattern-background .pattern-stripe svg {
+      stroke: #1171b8;
+      display: block; }
+
+.branding {
+  position: absolute;
+  right: 3%;
+  bottom: 40%; }
+  .branding .red-hat {
+    width: 10em;
+    display: inline-block;
+    margin-right: 1.75em;
+    border-right: 2px solid white;
+    padding-right: 1.54em; }
+  .branding .intel {
+    display: inline-block; }
+    .branding .intel img {
+      width: 6em; }
+
+.action {
+  position: absolute;
+  right: 3%;
+  bottom: 20%; }
+  .action .button {
+    background: white;
+    color: #1171b8;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.5em 0.8em;
+    font-weight: 600;
+    border: 2px solid white; }
+    .action .button:hover {
+      background: none;
+      color: white; }
+
+.background-shape {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80vw;
+  height: 80vw; }
+  .background-shape .corner-shape-bottom {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; }
+    .background-shape .corner-shape-bottom > svg {
+      width: 100%;
+      height: 100%; }
+
+.pattern-background {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60vw;
+  height: 50vw; }
+  .pattern-background .corner-shape-bottom {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; }
+    .pattern-background .corner-shape-bottom > svg {
+      width: 100%;
+      height: 100%; }
+  .pattern-background .pattern-stripe {
+    width: 160vw;
+    height: 2em;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translate(-50%, -121.25%) rotate(-45deg);
+    -ms-transform: translate(-50%, -121.25%) rotate(-45deg);
+    transform: translate(-50%, -121.25%) rotate(-45deg); }
+    .pattern-background .pattern-stripe svg {
+      stroke: #1171b8;
+      display: block; }
+
+.boxed .branding {
+  bottom: 20%;
+  right: 4%; }
+.boxed .action {
+  bottom: 10%;
+  right: 4%; }
+
+.youtube-cover-layout .background-shape {
+  width: 75vw;
+  height: 75vw; }
+.youtube-cover-layout .pattern-stripe {
+  left: 58.5%;
+  height: 1.75em; }

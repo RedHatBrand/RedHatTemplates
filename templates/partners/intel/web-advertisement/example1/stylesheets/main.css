@@ -1,0 +1,181 @@
+body {
+  position: relative;
+  font-family: 'Overpass';
+  font-weight: 400;
+  line-height: 1.4em;
+  background-color: white;
+  font-size: 14pt;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: white;
+  margin: 0; }
+
+body.size-120-90, body.size-180-90, body.size-125-125 {
+  font-size: 7pt; }
+
+.border {
+  margin-right: 5px;
+  padding-right: 5px;
+  border-right: 1px solid white; }
+
+.background-shapes.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130%;
+  height: 50vw; }
+  .background-shapes.top .corner-shape-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0; }
+    .background-shapes.top .corner-shape-top > svg {
+      width: 41.5%;
+      height: 100%; }
+
+.background-shapes.center {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto; }
+  .background-shapes.center .shape-center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; }
+    .background-shapes.center .shape-center > svg {
+      width: 100%;
+      height: 100%; }
+
+.background-shapes.bottom {
+  position: absolute;
+  bottom: -0.5em;
+  right: 0;
+  width: 150%;
+  height: 50vw; }
+  .background-shapes.bottom .corner-shape-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 37.2%; }
+    .background-shapes.bottom .corner-shape-bottom > svg {
+      width: 100%;
+      height: 100%; }
+  .background-shapes.bottom .pattern-stripe {
+    width: 160vw;
+    height: 3em;
+    position: absolute;
+    left: 60%;
+    top: 0;
+    -webkit-transform: translate(-50%, -121.25%) rotate(-45deg);
+    -ms-transform: translate(-50%, -121.25%) rotate(-45deg);
+    transform: translate(-50%, -121.25%) rotate(-45deg); }
+    .background-shapes.bottom .pattern-stripe svg {
+      stroke: #004689;
+      display: block; }
+
+.branding {
+  position: absolute;
+  top: 40%;
+  left: 9%; }
+  .branding .red-hat {
+    width: 10em;
+    display: inline-block; }
+  .branding .intel {
+    display: inline-block; }
+    .branding .intel img {
+      width: 5em; }
+
+.action {
+  position: absolute;
+  top: 60%;
+  left: 9%; }
+  .action .button {
+    background: white;
+    color: #1171b8;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.5em 0.8em;
+    font-weight: 600;
+    border: 2px solid white; }
+    .action .button:hover {
+      background: none;
+      color: white; }
+
+body.size-120-90 .branding {
+  top: 10%; }
+
+body.size-120-600 {
+  font-size: 8pt; }
+
+body.size-125-125 .branding {
+  top: 20%; }
+
+body.size-160-600 {
+  font-size: 10.5pt; }
+  body.size-160-600 .branding {
+    top: 35%; }
+
+body.size-180-90 .branding {
+  top: 30%;
+  left: 7%; }
+
+body.size-240-400 {
+  font-size: 9pt; }
+  body.size-240-400 .background-shapes.bottom .pattern-stripe {
+    left: 35%;
+    width: 130vw; }
+
+body.size-300-100, body.size-300-600 {
+  font-size: 11.5pt; }
+
+body.size-300-600 .background-shapes.bottom .pattern-stripe {
+  left: 35%; }
+
+body.size-300-100 .branding {
+  top: 20%; }
+
+body.size-336-280 {
+  font-size: 12pt; }
+  body.size-336-280 .branding {
+    top: 30%; }
+  body.size-336-280 .action {
+    top: 65%; }
+  body.size-336-280 .background-shapes.top {
+    width: 100%; }
+  body.size-336-280 .background-shapes.bottom {
+    width: 110%; }
+    body.size-336-280 .background-shapes.bottom .pattern-stripe {
+      left: 45%; }
+
+body.size-468-60 {
+  font-size: 9pt; }
+  body.size-468-60 .branding {
+    top: 10%; }
+  body.size-468-60 .action {
+    top: 37%;
+    left: 65%; }
+
+body.size-720-300 .branding {
+  top: 30%;
+  left: 30%; }
+body.size-720-300 .action {
+  top: 70%;
+  left: 30%; }
+body.size-720-300 .background-shapes.top {
+  width: 60%; }
+body.size-720-300 .background-shapes.bottom {
+  width: 68%; }
+  body.size-720-300 .background-shapes.bottom .pattern-stripe {
+    left: 40%; }
+
+body.size-728-90 .branding {
+  top: 9%; }
+body.size-728-90 .action {
+  top: 37%;
+  left: 65%; }

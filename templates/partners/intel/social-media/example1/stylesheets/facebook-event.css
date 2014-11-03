@@ -1,0 +1,11 @@
+body {
+  font-size: 20pt; }
+
+.background-shapes.center {
+  left: -0.25em; }
+.background-shapes.top {
+  width: 95vw; }
+.background-shapes.bottom {
+  width: 91vw; }
+  .background-shapes.bottom .pattern-stripe {
+    left: 38.3%; }
