@@ -1,0 +1,393 @@
+---
+width: 210mm
+height: 297mm
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <link href='http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/global-assets/stylesheets/general/tile-pattern-fill.css' rel='stylesheet' />
+    <link href='<%= baseUrl %>/templates/partners/intel/white-paper/assets/stylesheets/main.css' rel='stylesheet' />
+
+    <style>
+      #front-page .page-header {
+        background-image: 
+          url('<%=baseUrl%>/global-assets/images/shapes/blue/grid-00-00.svg'),
+          url('{{{ background-image }}}');
+
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        background-size: 58% auto, cover;
+        background-position: top left, center center;
+      }
+
+      #last-page .page-header {
+        background-image: 
+          url('<%=baseUrl%>/global-assets/images/shapes/blue/grid-00-00.svg'),
+          url('{{{ background-image }}}');
+
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        background-size: 51.5% auto, cover;
+        background-position: top left, center center;
+      }
+    </style>
+  </head>
+
+  <body style="width: 210mm; height: 297mm;">
+    <article id="content">
+      {{{ content }}}
+    </article>
+
+    <main>
+      <!-- Design here -->
+      <section id="front-page" class="page">
+        <header class="page-header">
+          <div class='background background-shapes center'>
+            <div class="corner-shape-center corner-shape-bottom-center">
+              <svg version="1.1" baseProfile="full" width="1200" height="1200" viewBox="0 0 1200 1200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+
+                <polygon fill="rgba(17, 113, 184, 0.2)" points="-600,1200 1200,-600 1800,0 0,1800"></polygon>
+              </svg>
+            </div>
+          </div>
+
+          <div class='background background-shapes bottom'>
+            <div class="corner-shape-bottom corner-shape-bottom-offset">
+              <svg version="1.1" baseProfile="full" width="1200" height="1200" viewBox="0 0 1200 1200" preserveAspectRatio="xMaxYMax slice" xmlns="http://www.w3.org/2000/svg">
+
+                <linearGradient y2="0.68" x2="1" id="gradient-fill" spreadMethod="reflect" x1="0" y1="1">
+                <stop stop-color="#1171b8" offset="0" stop-opacity="0"/>
+                <stop stop-color="#1171b8" offset="0.2733" stop-opacity="0.4"/>
+                <stop stop-color="#1171b8" offset="0.52" stop-opacity="0.7"/>
+                <stop stop-color="#1171b8" offset="0.6967" stop-opacity="0.9"/>
+                <stop stop-color="#1171b8" offset="0.89" stop-opacity="1"/>
+                </linearGradient>
+
+                <polygon fill="url(#gradient-fill)" points="1200,0 1200,1200 0,1200"></polygon>
+              </svg>
+            </div>
+
+            <div class="corner-shape-bottom"> 
+              <div class="pattern-stripe js-pattern-fill"></div>
+            </div>
+          </div>
+
+          <div class="header-title">
+            <h2>Customer Case Study</h2>
+            <h1>{{ title }}</h1>
+          </div>
+          <div class="header-right">
+            <div class='branding'>
+              <div class="red-hat">
+                <% include /global-assets/images/logos/rh-logo.svg %>
+              </div>
+              <div class="intel">
+                <img src="<%= baseUrl %>/global-assets/images/logos/partners/intel/intel-reverse.svg" alt="intel" />
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="page-margin">
+          <aside class="column-main-left border-right text-right">
+            <div class="content-area tight-left tight-top border-bottom">
+              <img src="{{{ customer-logo }}}" />
+            </div>
+            <div class="content-area tight-left border-bottom">
+              <h2>Software and Services</h2>
+              {{{ software-and-services  }}}
+
+              <h2>Hardware</h2>
+              {{{ hardware }}}
+            </div>
+            <div class="content-area tight-left border-bottom">
+              {{#customer-statistics}}
+              <div class="statistic">
+                <figure>{{ value }}</figure>
+                <figcaption>{{ description }}</figcaption>
+              </div>
+              {{/customer-statistics}}
+            </div>
+
+            <div class="content-area tight-left border-bottom">
+              <h2>Customer Since</h2>
+              <figure class="big-fig">{{ customer-since }}</figure>
+            </div>
+            
+            <div class="content-area">
+              <p class="social-icons">
+                <img class="social-icon" src="<%= baseUrl %>/global-assets/images/social-icons/facebook-grey.svg" />
+                <img class="social-icon" src="<%= baseUrl %>/global-assets/images/social-icons/twitter-grey.svg" />
+                <img class="social-icon" src="<%= baseUrl %>/global-assets/images/social-icons/linkedin-grey.svg" />
+              </p>
+
+              <small>
+                <p>
+                  {{ rh-facebook-link }}<br/>
+                  {{ rh-twitter-link }}<br/>
+                  {{ rh-linkedin-link }}
+                </p>
+              </small>
+            </div>
+          </aside>
+          <div class="column-main-right flex-container flex-column">
+            <div class="content-area tight-top flex-item-fixed border-bottom">
+              {{{ customer-summary }}}
+            </div>
+            <div class="flex-container flex-row flex-item-fill">
+              <div class="flex-item-two-thirds border-right">
+                <div id="map" class="border-bottom"></div>
+                <div class="content-area text-right">
+                  <blockquote>
+                    {{ customer-representative-quote }}
+                  </blockquote>
+                  <cite>
+                    <p><strong>{{ customer-representative-name }}</strong></p>
+                    <p>{{ customer-representative-title }}</p>
+                    <p>{{ customer }}</p>
+                  </cite>
+                </div>
+              </div>
+
+              <div class="flex-item-one-third">
+                <div class="content-area tight-right border-bottom">
+                  <div class="industry-icon-{{ customer-industry }}"></div>
+                  <h2>{{ customer-industry }} Industry</h2>
+                </div>
+
+                <div class="content-area tight-right">
+                  <h2>Benefits</h2>
+                  {{{ benefits }}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="page-footer">
+          <div class="column-main-left">
+            <div class="content-area tight-bottom">
+              <p>
+                <span class="heavier">redhat.com</span><br />
+              </p>
+            </div>
+          </div>
+          <div class="column-main-right"></div>
+          <div class="page-number"></div>
+        </footer>
+      </section>
+
+
+      <section class="page">
+        <header class="page-header">
+          <div class="header-right">
+            <div class='branding'>
+              <div class="red-hat">
+                <% include /global-assets/images/logos/rh-logo-black.svg %>
+              </div>
+              <div class="intel">
+                <img src="<%= baseUrl %>/global-assets/images/logos/partners/intel/intel-standard.svg" alt="intel" />
+              </div>
+            </div>
+          </div>
+        </header>
+        
+        <div class="page-margin">
+          <div class="column-main-left"></div>
+          <div class="column-main-right page-content"></div>
+        </div>
+
+        <footer class="page-footer">
+          <div class="column-main-left">
+            <div class="content-area tight-bottom">
+              <p>
+                <span class="heavier">redhat.com</span><br />
+              </p>
+            </div>
+          </div>
+          <div class="column-main-right">
+            <div class="content-area">
+              <p>
+                <strong class="text-uppercase">Customer Case Study</strong>
+                {{ title }}
+              </p>
+            </div>
+          </div>
+          <div class="page-number"></div>
+        </footer>
+      </section>
+
+      <section class="page">
+        <header class="page-header">
+          <div class="header-right">
+            <div class='branding'>
+              <div class="red-hat">
+                <% include /global-assets/images/logos/rh-logo-black.svg %>
+              </div>
+              <div class="intel">
+                <img src="<%= baseUrl %>/global-assets/images/logos/partners/intel/intel-standard.svg" alt="intel" />
+              </div>
+            </div>
+          </div>
+        </header>
+        
+        <div class="page-margin">
+          <div class="column-main-left"></div>
+          <div class="column-main-right page-content"></div>
+        </div>
+
+        <footer class="page-footer">
+          <div class="column-main-left">
+            <div class="content-area tight-bottom">
+              <p>
+                <span class="heavier">redhat.com</span><br />
+              </p>
+            </div>
+          </div>
+          <div class="column-main-right">
+            <div class="content-area">
+              <p>
+                <strong class="text-uppercase">Customer Case Study</strong>
+                {{ title }}
+              </p>
+            </div>
+          </div>
+          <div class="page-number"></div>
+        </footer>
+      </section>
+
+      <section id="last-page" class="page">
+        <header class="page-header">
+          <div class='background background-shapes center'>
+            <div class="corner-shape-center corner-shape-bottom-center">
+              <svg version="1.1" baseProfile="full" width="1200" height="1200" viewBox="0 0 1200 1200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+
+                <polygon fill="rgba(17, 113, 184, 0.2)" points="-600,1200 1200,-600 1800,0 0,1800"></polygon>
+              </svg>
+            </div>
+          </div>
+
+          <div class='background background-shapes bottom'>
+            <div class="corner-shape-bottom corner-shape-bottom-offset">
+              <svg version="1.1" baseProfile="full" width="1200" height="1200" viewBox="0 0 1200 1200" preserveAspectRatio="xMaxYMax slice" xmlns="http://www.w3.org/2000/svg">
+
+                <linearGradient y2="0.68" x2="1" id="gradient-fill" spreadMethod="reflect" x1="0" y1="1">
+                <stop stop-color="#1171b8" offset="0" stop-opacity="0"/>
+                <stop stop-color="#1171b8" offset="0.2733" stop-opacity="0.4"/>
+                <stop stop-color="#1171b8" offset="0.52" stop-opacity="0.7"/>
+                <stop stop-color="#1171b8" offset="0.6967" stop-opacity="0.9"/>
+                <stop stop-color="#1171b8" offset="0.89" stop-opacity="1"/>
+                </linearGradient>
+
+                <polygon fill="url(#gradient-fill)" points="1200,0 1200,1200 0,1200"></polygon>
+              </svg>
+            </div>
+
+            <div class="corner-shape-bottom"> 
+              <div class="pattern-stripe js-pattern-fill"></div>
+            </div>
+          </div>
+
+          <div class="header-title">
+            <h4>Customer Case Study</h4>
+            <p>{{ title }}</p>
+          </div>
+          <div class="header-right">
+            <div class='branding'>
+              <div class="red-hat">
+                <% include /global-assets/images/logos/rh-logo.svg %>
+              </div>
+              <div class="intel">
+                <img src="<%= baseUrl %>/global-assets/images/logos/partners/intel/intel-reverse.svg" alt="intel" />
+              </div>
+            </div>
+          </div>
+        </header>
+        
+        <div class="page-margin">
+          <div class="column-main-left">
+          </div>
+          <div class="column-main-right">
+            {{{ last-page-content }}}
+          </div>
+        </div>
+
+        <footer class="page-footer page-footer-auto-height">
+          <div class="column-main-left">
+            <div class="content-area">
+              <p class="social-icons">
+                <img class="social-icon" src="<%= baseUrl %>/global-assets/images/social-icons/facebook-grey.svg" />
+                <img class="social-icon" src="<%= baseUrl %>/global-assets/images/social-icons/twitter-grey.svg" />
+                <img class="social-icon" src="<%= baseUrl %>/global-assets/images/social-icons/linkedin-grey.svg" />
+              </p>
+
+              <small class="small-block">
+                <p>
+                  {{ rh-facebook-link }}<br/>
+                  {{ rh-twitter-link }}<br/>
+                  {{ rh-linkedin-link }}
+                </p>
+              </small>
+            </div>
+            <div class="content-area tight-bottom">
+              <p>
+                <span class="heavier">redhat.com</span><br />
+                #12263117_v4_1014
+              </p>
+            </div>
+          </div>
+          <div class="column-main-right">
+            <div class="content-area">
+              {{{ about-red-hat }}}
+
+              <hr />
+
+              <ul class="contact-blocks">
+                {{#regions}}
+                <li class="contact-block">
+                  <h2>{{ name }}</h2>
+
+                  <p>
+                    {{ phone }}</br>
+                    {{ email }}
+                  </p>
+                </li>
+                {{/regions}}
+              </ul>
+
+              <small>
+                {{{ disclaimers-and-copyrights }}}
+              </small>
+            </div>
+          </div>
+          <div class="page-number"></div>
+        </footer>
+      </section>
+      
+      <!-- /Design here -->
+    </main>
+
+    <script src="<%= baseUrl %>/templates/partners/intel/white-paper/assets/javascripts/cssregions.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      var redhatBrandPattern = 'partners';
+    </script>
+    <script src="<%=baseUrl%>/global-assets/javascripts/tile-pattern.js"></script>
+    <script src='<%=baseUrl%>/global-assets/javascripts/vendor/jquery.js'></script>
+    <script src='<%=baseUrl%>/global-assets/javascripts/vendor/leaflet.js'></script>
+    <script src='<%=baseUrl%>/global-assets/javascripts/vendor/d3.v3.min.js'></script>
+    <script src='<%=baseUrl%>/global-assets/javascripts/vendor/topojson.v1.min.js'></script>
+    <script src='<%=baseUrl%>/global-assets/javascripts/vendor/d3-topojson.js'></script>
+
+    <script>
+      var mapSettings = {
+        zoom: 12,
+        address: '{{ customer-location }}',
+        locationLabel: '{{ customer-location-label }}'
+      };
+    </script>
+    <script src="<%= baseUrl %>/templates/partners/intel/white-paper/assets/javascripts/main.js"></script>
+  </body>
+</html>
