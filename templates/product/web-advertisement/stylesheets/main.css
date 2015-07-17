@@ -188,11 +188,9 @@ h3 {
   right: 0;
   top: 0;
   bottom: 6em;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
@@ -244,7 +242,6 @@ h3 {
   right: auto; }
 
 .size-300-100 .text-wrapper {
-  -webkit-box-align: start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
@@ -332,7 +329,6 @@ h3 {
   line-height: 1.5em; }
 
 .size-180-90 .text-wrapper {
-  -webkit-box-align: start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;

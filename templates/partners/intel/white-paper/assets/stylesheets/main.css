@@ -114,18 +114,16 @@
 /* zoom and fade animations */
 .leaflet-fade-anim .leaflet-tile, .leaflet-fade-anim .leaflet-popup {
   opacity: 0;
-  -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear; }
 
 .leaflet-fade-anim .leaflet-tile-loaded, .leaflet-fade-anim .leaflet-map-pane .leaflet-popup {
   opacity: 1; }
 
 .leaflet-zoom-anim .leaflet-zoom-animated {
-  -webkit-transition: -webkit-transform 0.25s cubic-bezier(0, 0, 0.25, 1);
+  transition: -webkit-transform 0.25s cubic-bezier(0, 0, 0.25, 1);
   transition: transform 0.25s cubic-bezier(0, 0, 0.25, 1); }
 
 .leaflet-zoom-anim .leaflet-tile, .leaflet-pan-anim .leaflet-tile, .leaflet-touching .leaflet-zoom-animated {
-  -webkit-transition: none;
   transition: none; }
 
 .leaflet-zoom-anim .leaflet-zoom-hide {
@@ -757,7 +755,6 @@ strong {
   padding-bottom: 0; }
 
 .flex-container {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
@@ -773,43 +770,36 @@ strong {
   flex-flow: column; }
 
 .flex-item-fixed {
-  -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto; }
 
 .flex-item-fill {
-  -webkit-box-flex: 1;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%; }
 
 .flex-item-one-half {
-  -webkit-box-flex: 1;
   -webkit-flex: 1 1 50%;
   -ms-flex: 1 1 50%;
   flex: 1 1 50%; }
 
 .flex-item-one-third {
-  -webkit-box-flex: 1;
   -webkit-flex: 1 1 33.333%;
   -ms-flex: 1 1 33.333%;
   flex: 1 1 33.333%; }
 
 .flex-item-two-thirds {
-  -webkit-box-flex: 1;
   -webkit-flex: 1 1 66.667%;
   -ms-flex: 1 1 66.667%;
   flex: 1 1 66.667%; }
 
 .flex-item-one-quarter {
-  -webkit-box-flex: 1;
   -webkit-flex: 1 1 25%;
   -ms-flex: 1 1 25%;
   flex: 1 1 25%; }
 
 .contact-blocks {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -818,7 +808,6 @@ strong {
   line-height: 1.19em; }
 
 .contact-block {
-  -webkit-box-flex: 1;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%; }

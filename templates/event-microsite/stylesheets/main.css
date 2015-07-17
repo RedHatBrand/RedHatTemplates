@@ -625,7 +625,6 @@ table {
 a {
   color: #c12;
   text-decoration: none;
-  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
   transition: background-color 0.5s ease, color 0.5s ease; }
   a:hover {
     color: #c12; }
@@ -767,7 +766,6 @@ input[type="checkbox"] + label, input[type="radio"] + label {
   vertical-align: top;
   margin-bottom: 1.6em;
   margin-right: 3.2em;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
 
 .checkbox-list li, .radio-list li {
@@ -818,7 +816,6 @@ select {
   background-position: right 0.4em center;
   background-size: 0.8em;
   background-image: url("data:image/svg+xml;utf8, <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><path fill=\"#171717\" d=\"M8 12l8 8 8-8z\" /></svg>");
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-appearance: none; }
   select:visited {
@@ -959,7 +956,6 @@ progress, meter {
 
 progress {
   background: #d6d6d6;
-  background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
   background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
   background-size: 1.6em 1.6em;
   -webkit-animation: progress 1.5s infinite;
@@ -1158,7 +1154,7 @@ input[type="file"]::-webkit-file-upload-button {
     margin-left: -14px;
     margin-top: -2px;
     border-radius: 0.25em;
-    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
     transition: transform 0.2s ease; }
     .nav-toggle > span:before, .nav-toggle > span:after {
       content: '';
@@ -1167,7 +1163,7 @@ input[type="file"]::-webkit-file-upload-button {
       width: 100%;
       height: 4px;
       background-color: #c12;
-      -webkit-transition: -webkit-transform 0.2s ease;
+      transition: -webkit-transform 0.2s ease;
       transition: transform 0.2s ease;
       border-radius: 0.25em; }
     .nav-toggle > span:before {
@@ -1315,7 +1311,6 @@ input[type="file"]::-webkit-file-upload-button {
     visibility: visible; }
 
 .modal-overlay {
-  -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
   opacity: 0; }
 
@@ -1382,7 +1377,6 @@ input[type="file"]::-webkit-file-upload-button {
 
 .flyout-menu-wrap .flyout-menu {
   opacity: 0;
-  -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease; }
 
 .flyout-menu-wrap.active .flyout-menu {
@@ -1625,7 +1619,6 @@ h1.title {
           text-transform: none; }
 
 .nav-menu, .nav-toggle {
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
 @media screen and (min-width: 48em) {
@@ -1654,7 +1647,6 @@ h1.title {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     opacity: 0;
-    -webkit-transition: opacity 0.5s ease;
     transition: opacity 0.5s ease; }
   .menu-push-toright {
     overflow: hidden; }
@@ -1846,7 +1838,6 @@ button.full-width {
   .calendar .icon-user:before {
     color: #c0c5c8; }
   .calendar .break {
-    background-image: -webkit-linear-gradient(135deg, #fafafa 25%, transparent 25%, transparent 50%, #fafafa 50%, #fafafa 75%, transparent 75%, transparent);
     background-image: linear-gradient(-45deg, #fafafa 25%, transparent 25%, transparent 50%, #fafafa 50%, #fafafa 75%, transparent 75%, transparent);
     background-size: 20px 20px;
     background-position: 0 0;

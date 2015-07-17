@@ -218,7 +218,6 @@ h2 {
   height: 20em;
   width: 20em;
   height: 20em;
-  background-image: -webkit-linear-gradient(315deg, transparent 0%, transparent 50%, #b90c20 50%, #b90c20 100%);
   background-image: linear-gradient(135deg, transparent 0%, transparent 50%, #b90c20 50%, #b90c20 100%);
   z-index: 3; }
   .corner-logo img {

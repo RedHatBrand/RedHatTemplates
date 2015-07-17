@@ -240,7 +240,6 @@ h2 {
   height: 15em;
   width: 15em;
   height: 15em;
-  background-image: -webkit-linear-gradient(315deg, transparent 0%, transparent 50%, #b90c20 50%, #b90c20 100%);
   background-image: linear-gradient(135deg, transparent 0%, transparent 50%, #b90c20 50%, #b90c20 100%); }
   .corner-logo img {
     position: absolute;
